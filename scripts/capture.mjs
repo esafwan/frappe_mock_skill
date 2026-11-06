@@ -2,7 +2,9 @@ import fs from 'fs'; import path from 'path';
 import { chromium } from 'playwright';
 import { BASE, ROOT, open, go } from './lib.mjs';
 import { extractInPage, harnessDoc, fill } from './engine.mjs';
-import { specs } from './specs.mjs';
+import { specs as deskSpecs } from './specs.mjs';
+const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
+const specs = [...deskSpecs, ...posSpecs];
 
 const only = process.argv.slice(2);
 const sprite = fs.readFileSync(ROOT + 'tokens/icons/sprite.svg.html', 'utf8');
@@ -37,6 +39,7 @@ for (const spec of specs) {
         return page.screenshot({ path: pth, fullPage: true, clip: { x: Math.max(0, r.x - pad.l), y: Math.max(0, r.y - pad.t), width: Math.ceil(r.w + pad.l + pad.r), height: Math.ceil(r.h + pad.t + pad.b) } }); };
       await shot(shotPath);
       if (dark || rtl) continue;
+      const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); data.rootFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) };
       data.pad = pad; data.clip = spec.pad ? { w: Math.ceil(data.size.w + pad.l + pad.r), h: Math.ceil(data.size.h + pad.t + pad.b) } : null;
       Object.assign(out, data);
       // states
@@ -77,7 +80,7 @@ for (const spec of specs) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
     fs.writeFileSync(dir + 'component.html', bodyHtml + '\n');
     const slots = {}; for (const s of out.slots) slots[s.name] = { type: s.type, sample: s.sample, maxLength: s.maxLength, where: s.where, element: s.element };
