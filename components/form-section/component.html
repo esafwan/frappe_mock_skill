@@ -1,4 +1,4 @@
-<div class="form-section card-section visible-section" data-fieldname="__section_2" data-ui="form-section"><div class="section-body"><div class="form-column col-sm-4" data-fieldname="__column_2">
+<div class="form-section card-section visible-section" data-fieldname="basic_info" data-ui="form-section"><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_2">
 				<form>
 				<div class="frappe-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="naming_series">
 				<div class="form-group horizontal">
@@ -12,52 +12,76 @@
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="item_code">
+			<span class="tooltip-content">{{tooltip_content}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="customer_name">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label reqd" style="padding-right: 5px;">{{reqd}}</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
-						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Data" data-fieldname="item_code" placeholder="" data-doctype="Item" data-ui="form-section.input-1" value="{{bold_value}}"></div>
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Data" data-fieldname="customer_name" placeholder="" data-doctype="Customer" data-ui="form-section.input-1" value="{{bold_value}}"></div>
 						<div class="control-value like-disabled-input hide bold">{{bold}}</div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content_2}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="item_name">
-				<div class="form-group horizontal">
-					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">{{control_label}}</label>
-						<span class="help"></span>
-					<a class="btn-translation no-decoration text-muted" title="{{text_muted_title}}" data-ui="form-section.link-2">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-globe">
-			</use>
-		</svg>
-			</a></div>
-					<div class="control-input-wrapper">
-						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Data" data-fieldname="item_name" placeholder="" data-doctype="Item" data-ui="form-section.input-3" value="{{bold_value_2}}"></div>
-						<div class="control-value like-disabled-input hide bold">{{bold_2}}</div>
-						<div class="help-box small text-extra-muted hide"></div>
-					</div>
-				</div>
-			<span class="tooltip-content">{{tooltip_content_3}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="item_group">
+			<span class="tooltip-content">{{tooltip_content_2}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="customer_type">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label reqd" style="padding-right: 5px;">{{reqd_2}}</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
+						<div class="control-input flex align-center"><select type="text" autocomplete="off" class="input-with-feedback form-control ellipsis bold" maxlength="140" data-fieldtype="Select" data-fieldname="customer_type" placeholder="" data-doctype="Customer" data-ui="form-section.select-2"><option value="{{bold_value_2}}" selected="">{{bold_2}}</option><option value="{{bold_value_3}}">{{bold_3}}</option><option value="{{bold_value_4}}">{{bold_4}}</option></select><div class="select-icon ">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevrons-up-down">
+			</use>
+		</svg>
+			</div></div>
+						<div class="control-value like-disabled-input hide bold">{{bold_5}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_3}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="mobile_number">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="mobile_number" placeholder="" data-doctype="Customer" data-ui="form-section.input-3"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_4}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="alias">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_2}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="alias" placeholder="" data-doctype="Customer" data-ui="form-section.input-4"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_5}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="gender">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_3}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
 						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
-			<div class="awesomplete"><input type="text" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Link" data-fieldname="item_group" placeholder="" data-doctype="Item" data-target="Item Group" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-4" value="{{bold_value_3}}"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden}}</span></div>
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="gender" placeholder="" data-doctype="Customer" data-target="Gender" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-5"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden}}</span></div>
 			<span class="link-btn">
-				<a class="btn-clear" style="display: inline-flex;" title="{{btn_clear_title}}" data-ui="form-section.link-5">
+				<a class="btn-clear" style="display: inline-flex;" title="{{btn_clear_title}}" data-ui="form-section.link-6">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-x">
 			</use>
 		</svg>
 				</a>
-				<a class="btn-open" style="display: inline-flex;" title="{{btn_open_title}}" data-ui="form-section.link-6">
+				<a class="btn-open" style="display: inline-flex;" title="{{btn_open_title}}" data-ui="form-section.link-7">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-arrow-right">
 			</use>
@@ -65,19 +89,22 @@
 				</a>
 			</span>
 		</div></div>
-						<div class="control-value like-disabled-input hide bold"><a href="#" data-doctype="Item Group" data-name="Disposable" data-value="Disposable" data-ui="form-section.link-7">{{bold_3}}</a></div>
+						<div class="control-value like-disabled-input hide"></div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content_4}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="stock_uom">
+			<span class="tooltip-content">{{tooltip_content_6}}</span></div></form>
+			</div><div class="form-column col-sm-6" data-fieldname="column_break0">
+				<form>
+				<div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="customer_group">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label reqd" style="padding-right: 5px;">{{reqd_3}}</label>
+						<label class="control-label" style="padding-right: 5px;">{{control_label_4}}</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
-			<div class="awesomplete"><input type="text" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Link" data-fieldname="stock_uom" placeholder="" data-doctype="Item" data-target="UOM" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-8" value="{{bold_value_4}}"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden_2}}</span></div>
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="customer_group" placeholder="" data-doctype="Customer" data-target="Customer Group" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-8" value="{{form_control_value}}"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden_2}}</span></div>
 			<span class="link-btn">
 				<a class="btn-clear" style="display: inline-flex;" title="{{btn_clear_title_2}}" data-ui="form-section.link-9">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
@@ -93,222 +120,39 @@
 				</a>
 			</span>
 		</div></div>
-						<div class="control-value like-disabled-input hide bold"><a href="#" data-doctype="UOM" data-name="Nos" data-value="Nos" data-ui="form-section.link-11">{{bold_4}}</a></div>
+						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Customer Group" data-name="Government" data-value="Government" data-ui="form-section.link-11">{{hide}}</a></div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content_5}}</span></div><div class="frappe-control form-group" data-fieldtype="Table" data-fieldname="custom_opportunity_costs"><span class="tooltip-content">{{tooltip_content_6}}</span><div class="grid-field">
-				<label class="control-label">{{control_label_2}}</label>
-				<span class="help"></span>
-				<p class="text-muted small grid-description" style="display: none;"></p>
-				<div class="grid-custom-buttons"></div>
-				<div class="form-grid-container">
-					<div class="form-grid">
-						<div class="grid-heading-row"><div class="grid-row"><div class="data-row row m-0"><div class="row-check sortable-handle col">
-					<input type="checkbox" class="grid-row-check" tabindex="-1" data-ui="form-section.input-12">
-				</div><div class="row-index sortable-handle grid-static-col col">
-					<span>{{grid_static_col}}</span>
-				</div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="branch" data-fieldtype="Link" title="{{grid_static_col_title}}" tabindex="0" data-ui="form-section.div-13"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis reqd">{{reqd_4}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col text-right grid-data-last" style="flex: 1 0 100px; width: 100px;" data-fieldname="cost" data-fieldtype="Currency" title="{{grid_data_last_title}}"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col pointer">
-					<a data-ui="form-section.link-14"><svg class="icon  icon-sm" style="filter: opacity(0.5)" aria-hidden="true">
-			<use class="" href="#icon-settings">
-			</use>
-		</svg></a>
-				</div></div></div></div>
-						<div class="grid-body">
-							<div class="rows"></div>
-							<div class="grid-empty text-center text-extra-muted">
-								{{text_extra_muted}}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="small form-clickable-section grid-footer">
-					<div class="flex justify-between">
-						<div class="grid-buttons">
-							<button class="es-button grid-remove-rows hidden" type="button" data-theme="red" data-action="delete_rows" data-ui="form-section.button-15"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">{{es_button_loading_label}}</span><span class="es-button__label">{{es_button_label}}</span></button>
-							<button class="es-button grid-edit-rows hidden" type="button" data-action="bulk_edit_rows" data-ui="form-section.button-16"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_2}}</span></button>
-							<button class="es-button grid-remove-all-rows hidden" type="button" data-theme="red" data-action="delete_all_rows" data-ui="form-section.button-17"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_3}}</span></button>
-							<button class="es-button grid-duplicate-rows hidden" type="button" data-action="duplicate_rows" data-ui="form-section.button-18"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_4}}</span></button>
-							
-							<button class="es-button grid-add-row" type="button" data-ui="form-section.button-19"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_5}}</span></button>
-							<button class="es-button grid-add-multiple-rows hidden" type="button" data-ui="form-section.button-20"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_6}}</span></button>
-						</div>
-						<div class="grid-pagination"></div>
-						<div class="grid-bulk-actions text-right">
-							<button class="es-button grid-download hidden" type="button" data-ui="form-section.button-21"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_7}}</span></button>
-							<button class="es-button grid-upload hidden" type="button" data-ui="form-section.button-22"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_8}}</span></button>
-						</div>
-					</div>
-				</div>
-			</div></div><div class="frappe-control form-group" data-fieldtype="Table" data-fieldname="disposable_items"><span class="tooltip-content">{{tooltip_content_7}}</span><div class="grid-field">
-				<label class="control-label">{{control_label_3}}</label>
-				<span class="help"></span>
-				<p class="text-muted small grid-description" style="display: none;"></p>
-				<div class="grid-custom-buttons"></div>
-				<div class="form-grid-container">
-					<div class="form-grid">
-						<div class="grid-heading-row"><div class="grid-row"><div class="data-row row m-0"><div class="row-check sortable-handle col">
-					<input type="checkbox" class="grid-row-check" tabindex="-1" data-ui="form-section.input-23">
-				</div><div class="row-index sortable-handle grid-static-col col">
-					<span>{{grid_static_col_2}}</span>
-				</div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item" data-fieldtype="Link" title="{{grid_static_col_title_2}}" tabindex="0" data-ui="form-section.div-24"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis reqd">{{reqd_5}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item_name" data-fieldtype="Read Only" title="{{grid_static_col_title_3}}"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis_2}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col text-right grid-data-last" style="flex: 1 0 100px; width: 100px;" data-fieldname="qty" data-fieldtype="Float" title="{{grid_data_last_title_2}}"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis reqd">{{reqd_6}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col pointer">
-					<a data-ui="form-section.link-25"><svg class="icon  icon-sm" style="filter: opacity(0.5)" aria-hidden="true">
-			<use class="" href="#icon-settings">
-			</use>
-		</svg></a>
-				</div></div></div></div>
-						<div class="grid-body">
-							<div class="rows"></div>
-							<div class="grid-empty text-center text-extra-muted">
-								{{text_extra_muted_2}}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="small form-clickable-section grid-footer">
-					<div class="flex justify-between">
-						<div class="grid-buttons">
-							<button class="es-button grid-remove-rows hidden" type="button" data-theme="red" data-action="delete_rows" data-ui="form-section.button-26"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">{{es_button_loading_label_2}}</span><span class="es-button__label">{{es_button_label_9}}</span></button>
-							<button class="es-button grid-edit-rows hidden" type="button" data-action="bulk_edit_rows" data-ui="form-section.button-27"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_10}}</span></button>
-							<button class="es-button grid-remove-all-rows hidden" type="button" data-theme="red" data-action="delete_all_rows" data-ui="form-section.button-28"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_11}}</span></button>
-							<button class="es-button grid-duplicate-rows hidden" type="button" data-action="duplicate_rows" data-ui="form-section.button-29"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_12}}</span></button>
-							
-							<button class="es-button grid-add-row" type="button" data-ui="form-section.button-30"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_13}}</span></button>
-							<button class="es-button grid-add-multiple-rows hidden" type="button" data-ui="form-section.button-31"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_14}}</span></button>
-						</div>
-						<div class="grid-pagination"></div>
-						<div class="grid-bulk-actions text-right">
-							<button class="es-button grid-download hidden" type="button" data-ui="form-section.button-32"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_15}}</span></button>
-							<button class="es-button grid-upload hidden" type="button" data-ui="form-section.button-33"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_16}}</span></button>
-						</div>
-					</div>
-				</div>
-			</div></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="is_disposable">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_disposable" placeholder="" data-doctype="Item" data-ui="form-section.input-34"></span>
-					<span class="disp-area hide"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-35"></span>
-					<span class="label-area">{{label_area}}</span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted"></p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_8}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Percent" data-fieldname="custom_yield_percent">
-				<div class="form-group horizontal">
-					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">{{control_label_4}}</label>
-						<span class="help"></span>
-					</div>
-					<div class="control-input-wrapper">
-						<div class="control-input"><input type="text" inputmode="decimal" autocomplete="off" class="input-with-feedback form-control" data-fieldtype="Percent" data-fieldname="custom_yield_percent" placeholder="" data-doctype="Item" data-ui="form-section.input-36" value="{{form_control_value}}"></div>
-						<div class="control-value like-disabled-input hide">{{hide}}</div>
-						<div class="help-box small text-extra-muted">{{text_extra_muted_3}}</div>
-					</div>
-				</div>
-			<span class="tooltip-content">{{tooltip_content_9}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="custom_yield_tracked">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="custom_yield_tracked" placeholder="" data-doctype="Item" data-ui="form-section.input-37"></span>
-					<span class="disp-area hide"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-38"></span>
-					<span class="label-area">{{label_area_2}}</span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted"></p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_10}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="custom_yield_check_cadence">
+			<span class="tooltip-content">{{tooltip_content_7}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="territory">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">{{control_label_5}}</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
-						<div class="control-input flex align-center"><select type="text" autocomplete="off" class="input-with-feedback form-control ellipsis" maxlength="140" data-fieldtype="Select" data-fieldname="custom_yield_check_cadence" placeholder="" data-doctype="Item" data-ui="form-section.select-39"><option></option><option value="{{ellipsis_value}}" selected="">{{ellipsis_3}}</option><option value="{{ellipsis_value_2}}">{{ellipsis_4}}</option><option value="{{ellipsis_value_3}}">{{ellipsis_5}}</option><option value="{{ellipsis_value_4}}">{{ellipsis_6}}</option></select><div class="select-icon ">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-chevrons-up-down">
+						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="territory" placeholder="" data-doctype="Customer" data-target="Territory" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-12" value="{{form_control_value_2}}"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden_3}}</span></div>
+			<span class="link-btn">
+				<a class="btn-clear" style="display: inline-flex;" title="{{btn_clear_title_3}}" data-ui="form-section.link-13">
+					<svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
 			</use>
 		</svg>
-			</div></div>
-						<div class="control-value like-disabled-input hide">{{hide_2}}</div>
+				</a>
+				<a class="btn-open" style="display: inline-flex;" title="{{btn_open_title_3}}" data-ui="form-section.link-14">
+					<svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-arrow-right">
+			</use>
+		</svg>
+				</a>
+			</span>
+		</div></div>
+						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Territory" data-name="Rest Of The World" data-value="Rest Of The World" data-ui="form-section.link-15">{{hide_2}}</a></div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content_11}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Int" data-fieldname="custom_yield_check_interval_days">
-				<div class="form-group horizontal">
-					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">{{control_label_6}}</label>
-						<span class="help"></span>
-					</div>
-					<div class="control-input-wrapper">
-						<div class="control-input"><input type="text" inputmode="numeric" autocomplete="off" class="input-with-feedback form-control" data-fieldtype="Int" data-fieldname="custom_yield_check_interval_days" placeholder="" data-doctype="Item" data-ui="form-section.input-40" value="{{form_control_value_2}}"></div>
-						<div class="control-value like-disabled-input hide">{{hide_3}}</div>
-						<div class="help-box small text-extra-muted">{{text_extra_muted_4}}</div>
-					</div>
-				</div>
-			<span class="tooltip-content">{{tooltip_content_12}}</span></div></form>
-			</div><div class="form-column col-sm-4" data-fieldname="column_break0">
-				<form>
-				<div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="disabled">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="disabled" placeholder="" data-doctype="Item" data-ui="form-section.input-41"></span>
-					<span class="disp-area hide"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-42"></span>
-					<span class="label-area" style="display: flex; gap: 6px; align-items: center; white-space: nowrap;">{{label_area_3}}<svg class="icon cursor-pointer m-0 info-trigger card-icons icon-xs" style="" aria-hidden="true" role="button" data-ui="form-section.svg-43">
-			<use class="" href="#icon-info">
-			</use>
-		</svg><div class="info-card" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(682.5px, 139.5px, 0px);" data-popper-placement="bottom"><div class="frappe-card d-inline-flex flex-column px-2 py-2" style="gap: 0px;">              <div class="frappe-card-title-container frappe-card-close-button">                          <span class="flex flex-column w-100">                 <div class="frappe-card-title"></div>                 <div class="frappe-card-description">{{frappe_card_description}}</div>             </span>             <span class="frappe-card-header-slot flex"></span>             <button type="button" class="close-button btn btn-default icon-btn" data-ui="form-section.button-44">                 <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-x">
-			</use>
-		</svg>             </button>          </div>          <div class="frappe-card-actions flex">                  </div> </div></div></span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted"></p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_13}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="allow_alternative_item">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="allow_alternative_item" placeholder="" data-doctype="Item" data-ui="form-section.input-45"></span>
-					<span class="disp-area hide"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-46"></span>
-					<span class="label-area" style="display: flex; gap: 6px; align-items: center; white-space: nowrap;">{{label_area_4}}<svg class="icon cursor-pointer m-0 info-trigger card-icons icon-xs" style="" aria-hidden="true" role="button" data-ui="form-section.svg-47">
-			<use class="" href="#icon-info">
-			</use>
-		</svg><div class="info-card" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(-689.5px, 166px, 0px);" data-popper-placement="left"><div class="frappe-card d-inline-flex flex-column px-2 py-2" style="gap: 0px;">              <div class="frappe-card-title-container frappe-card-close-button">                          <span class="flex flex-column w-100">                 <div class="frappe-card-title"></div>                 <div class="frappe-card-description">{{frappe_card_description_2}}</div>             </span>             <span class="frappe-card-header-slot flex"></span>             <button type="button" class="close-button btn btn-default icon-btn" data-ui="form-section.button-48">                 <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-x">
-			</use>
-		</svg>             </button>          </div>          <div class="frappe-card-actions flex">                  </div> </div></div></span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted"></p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_14}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="is_stock_item">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback bold" data-fieldtype="Check" data-fieldname="is_stock_item" placeholder="" data-doctype="Item" data-ui="form-section.input-49"></span>
-					<span class="disp-area hide bold"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-50"></span>
-					<span class="label-area">{{label_area_5}}</span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted">{{text_extra_muted_5}}</p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_15}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="has_variants">
-			<div class="checkbox">
-				<label>
-					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="has_variants" placeholder="" data-doctype="Item" data-ui="form-section.input-51"></span>
-					<span class="disp-area hide"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="form-section.input-52"></span>
-					<span class="label-area" style="display: flex; gap: 6px; align-items: center; white-space: nowrap;">{{label_area_6}}<svg class="icon cursor-pointer m-0 info-trigger card-icons icon-xs" style="" aria-hidden="true" role="button" data-ui="form-section.svg-53">
-			<use class="" href="#icon-info">
-			</use>
-		</svg><div class="info-card" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(721px, 330px, 0px);" data-popper-placement="right"><div class="frappe-card d-inline-flex flex-column px-2 py-2" style="gap: 0px;">              <div class="frappe-card-title-container frappe-card-close-button">                          <span class="flex flex-column w-100">                 <div class="frappe-card-title"></div>                 <div class="frappe-card-description">{{frappe_card_description_3}}</div>             </span>             <span class="frappe-card-header-slot flex"></span>             <button type="button" class="close-button btn btn-default icon-btn" data-ui="form-section.button-54">                 <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-x">
-			</use>
-		</svg>             </button>          </div>          <div class="frappe-card-actions flex">                  </div> </div></div></span>
-					<span class="ml-1 help"></span>
-				</label>
-				<p class="help-box small text-extra-muted"></p>
-			</div>
-		<span class="tooltip-content">{{tooltip_content_16}}</span></div></form>
-			</div><div class="form-column col-sm-4" data-fieldname="column_break_kpmi">
-				<form>
-				<div class="frappe-control input-max-width hide-control" data-fieldtype="Float" data-fieldname="opening_stock">
+			<span class="tooltip-content">{{tooltip_content_8}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Attach Image" data-fieldname="image">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;"></label>
@@ -320,5 +164,5 @@
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
-			<span class="tooltip-content">{{tooltip_content_17}}</span></div></form>
+			<span class="tooltip-content">{{tooltip_content_9}}</span></div></form>
 			</div></div></div>

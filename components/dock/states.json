@@ -1,0 +1,69 @@
+{
+  "component": "dock",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":hover",
+      "target": "dock.button-2",
+      "changes": [
+        {
+          "element": "dock.button-2",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-describedby": "es-tooltip-1"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(124, 124, 124)",
+          "to": "rgb(56, 56, 56)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(243, 243, 243)"
+        },
+        "borderColor": {
+          "from": "rgb(124, 124, 124)",
+          "to": "rgb(56, 56, 56)"
+        },
+        "outline": {
+          "from": "rgb(124, 124, 124) none 3px",
+          "to": "rgb(56, 56, 56) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

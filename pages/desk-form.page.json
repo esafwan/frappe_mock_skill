@@ -1,0 +1,24 @@
+{
+ "id": "desk-form",
+ "title": "Desk form view (Customer)",
+ "system": "frappe-desk",
+ "url": "/desk/customer/Direct",
+ "components": [
+  "dock",
+  "sidebar",
+  "form-title",
+  "form-sidebar",
+  "form-tabs",
+  "form-section"
+ ],
+ "inlineCssFrom": [
+  "dock",
+  "sidebar",
+  "form-title",
+  "form-sidebar",
+  "form-tabs",
+  "form-section"
+ ],
+ "shell": "<!--component:dock--><!--component:sidebar--><div class=\"main-section\"><div id=\"body\"><div id=\"page-Customer\" class=\"content page-container editable-form\"><!--component:form-title--><div class=\"container page-body\"><div class=\"page-wrapper\"><div class=\"page-content\"><div class=\"layout-main layout-two-column\"><div class=\"layout-main-section-wrapper\"><div class=\"layout-main-section\"><div><div class=\"std-form-layout\"><div class=\"form-layout\"><div class=\"form-page\"><!--component:form-tabs--><div class=\"form-tab-content tab-content\"><div id=\"customer-details\" class=\"tab-pane fade show active\"><!--component:form-section--></div></div></div></div></div></div></div></div><!--component:form-sidebar--></div></div></div></div></div></div>",
+ "bodyFrom": "form-title"
+}

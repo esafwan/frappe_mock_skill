@@ -1,0 +1,10 @@
+import { open, go } from './lib.mjs';
+const { browser, ctx, page } = await open(); await go(page, '/pos/orders'); await page.waitForTimeout(2500);
+ctx.on('page', p => console.log('popup', p.url()));
+await page.locator('text=Unbilled').first().click(); await page.waitForTimeout(1200);
+await page.locator('.grid > div:first-child').click(); await page.waitForTimeout(1200);
+page.on('request', r => { if (r.method()==='POST') console.log('POST', r.url()); });
+await page.locator('.w-96 button:has(svg.lucide-printer)').first().click(); await page.waitForTimeout(3000);
+await page.locator('button:has-text("Payment")').first().click(); await page.waitForTimeout(2000);
+console.log(await page.evaluate(()=>{const d=document.querySelector("[role=dialog]");return d?d.outerHTML.slice(0,300)+" PARENT "+d.parentElement.outerHTML.slice(0,200):"none"}));await page.screenshot({ path: '/tmp/o5.png' });
+await browser.close();

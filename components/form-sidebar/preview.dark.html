@@ -1,0 +1,205 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="dark">
+<head><meta charset="utf-8"><title>Form side panel (assignments, tags, shared)</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container editable-form" id="page-Customer" data-page-route="Customer" data-state="clean" style="width:1159px;box-sizing:border-box"><div class="container page-body" style="width:1159px;box-sizing:border-box"><div class="page-wrapper" style="width:1159px;box-sizing:border-box"><div class="page-content" style="width:1159px;box-sizing:border-box"><div class="layout-main layout-two-column" style="width:1159px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-camera">
+      <path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"></path>
+      <circle cx="12" cy="13" r="3"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-square-pen">
+      <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+      <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-printer">
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+      <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"></path>
+      <rect x="6" y="14" width="12" height="8" rx="1"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heart">
+      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-link-2">
+      <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+      <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+      <line x1="8" x2="16" y1="12" y2="12"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-paperclip">
+      <path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-tag">
+      <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path>
+      <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-share-2">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
+      <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
+    </symbol></svg><div class="layout-side-section right" data-ui="form-sidebar"><div class="form-sidebar overlay-sidebar hidden-xs hidden-sm"><div class="flex justify-between sidebar-image-section sidebar-section">  <div class="sidebar-image-wrapper">   <img class="sidebar-image hide">   <div class="sidebar-standard-image">    <div class="standard-image">D</div>   </div>      <div class="sidebar-image-actions">    <div class="sidebar-image-upload-hint">     <svg class="icon icon-sm"><use href="#icon-camera"></use></svg>    </div>    <a class="sidebar-image-remove" data-ui="form-sidebar.link-1" style="display: none;">     <svg class="icon icon-sm"><use href="#icon-x"></use></svg>    </a>   </div>     </div>    <div class="align-items-baseline flex form-stats-likes">   <div class="form-title-edit"><button class="text-muted btn btn-default icon-btn p-0" title="" data-original-title="Edit" style="background-color: transparent;" data-ui="form-sidebar.button-2">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-square-pen">
+			</use>
+		</svg>
+			</button></div>   <div class="form-print"><button class="text-muted btn btn-default icon-btn p-0" title="" data-original-title="Print" style="background-color: transparent;" data-ui="form-sidebar.button-3">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-printer">
+			</use>
+		</svg>
+			</button></div>   <span class="liked-by like-action d-flex align-items-center not-liked" data-doctype="Customer" data-name="Direct">    <svg class="icon icon-sm like-icon pointer">     <use href="#icon-heart"></use>    </svg>   </span>  </div>   </div> <div class="sidebar-section sidebar-meta-details border-bottom">  <div class="flex justify-between overflow-hidden">   <div class="ellipsis">        <div class="form-details flex justify-between form-title-text" data-copy="Direct" data-original-title="" title="">     <span class="bold ellipsis mr-3 text-medium">Direct</span>    </div>               </div>     </div> </div> <div class="sidebar-section sidebar-rating hide border-bottom">  <div style="position: relative;">   <a class="strong badge-hover" data-ui="form-sidebar.link-4">    <span>Feedback</span>   </a>  </div>  <div class="rating-icons"></div> </div> <div class="sidebar-section hidden border-bottom">   </div> <div class="sidebar-section user-actions hidden border-bottom">  <div class="form-sidebar-items user-actions-header">   <div class="form-sidebar-label">    <svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-link-2">
+			</use>
+		</svg>    <span class="ellipsis">Links</span>   </div>  </div>  <div class="user-actions-list"></div> </div> <div class="sidebar-section form-assignments">  <div>   <span class="form-sidebar-items">    <span class="add-assignment-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-users">
+			</use>
+		</svg>     <span class="ellipsis">Assign</span>    </span>    <button class="es-button add-assignment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Assign" aria-label="Assign" data-ui="form-sidebar.button-5"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg></button>   </span>   <div class="assignments" style="display: none;"></div>  </div> </div> <div class="sidebar-section form-attachments">  <div class="attachments-actions">   <span class="form-sidebar-items">    <span>     <a class="pill-label ellipsis form-sidebar-label explore-link" data-ui="form-sidebar.link-6">      <svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-paperclip">
+			</use>
+		</svg>      Attachments     </a>    </span>    <button class="es-button add-attachment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Add attachment" aria-label="Add attachment" data-ui="form-sidebar.button-7"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg></button>   </span>  </div>  <a class="show-all-btn hidden" href="" data-ui="form-sidebar.link-8">   <span class="pill-label ellipsis">    Show All   </span>  </a> </div> <div class="sidebar-section form-tags">  <div>   <span class="form-sidebar-items">    <div class="form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-tag">
+			</use>
+		</svg>     <span class="tags-label ellipsis">Tags</span>    </div>   <button type="button" class="es-button add-tags-btn" data-variant="ghost" data-icon-button="true" title="Add Tags" aria-label="Add Tags" data-ui="form-sidebar.button-9">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg>
+			</button></span>  </div> <div class="" style="display: none;"><div class="awesomplete"><input class="tags-input form-control mt-2" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-sidebar.input-10"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div></div></div> <div class="sidebar-section form-shared border-bottom">  <div>   <span class="form-sidebar-items">    <span class="share-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-share-2">
+			</use>
+		</svg>     <span class="ellipsis">Share</span>    </span>    <button class="es-button share-doc-btn" type="button" data-variant="ghost" data-icon-button="true" title="Share" aria-label="Share" data-ui="form-sidebar.button-11"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg></button>   </span>   <div class="shares" style="display: none;"></div>  </div> </div> <div class="sidebar-section hidden">  <a data-ui="form-sidebar.link-12"><li class="indicator blue auto-repeat-status" style="display: none;"></li></a> </div> <div class="sidebar-section text-muted pt-3">  <ul class="list-unstyled sidebar-menu text-muted">   <li class="modified-by">Last Edited By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="created-by">Created By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="pageview-count"></li>  </ul> </div>   </div><div class="attachment-preview hidden"></div></div></div></div></div></div></div></div></div>
+</div>
+</body></html>

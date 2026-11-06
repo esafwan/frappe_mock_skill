@@ -1,0 +1,66 @@
+{
+  "component": "pos-bottom-nav",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "pos-bottom-nav.link-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(97, 97, 107)",
+          "to": "rgb(36, 87, 197)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 245, 255)"
+        },
+        "outline": {
+          "from": "rgb(97, 97, 107) none 3px",
+          "to": "rgb(36, 87, 197) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "pos-bottom-nav.link-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(97, 97, 107) none 3px",
+          "to": "rgb(0, 95, 204) auto 1px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

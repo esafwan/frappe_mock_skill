@@ -4,96 +4,7 @@
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
 <style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:224px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
-<style>:root { --selectionColor: #e1f2ff; --inlineSelectionColor: #d4ecff; --bg-light: #eff2f5; --grayText: #707684; --color-dark: #1D202B; --color-active-icon: #388AE5; --color-gray-border: rgba(201, 201, 204, .48); --content-width: 650px; --narrow-mode-right-padding: 50px; --toolbox-buttons-size: 26px; --toolbox-buttons-size--mobile: 36px; --icon-size: 20px; --icon-size--mobile: 28px; --block-padding-vertical: .4em; --color-line-gray: #EFF0F1; }
-@-webkit-keyframes fade-in { 
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes fade-in { 
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-webkit-keyframes bounceIn { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  0% { transform: scale3d(0.9, 0.9, 0.9); }
-  20% { transform: scale3d(1.03, 1.03, 1.03); }
-  60% { transform: scaleZ(1); }
-}
-@keyframes bounceIn { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  0% { transform: scale3d(0.9, 0.9, 0.9); }
-  20% { transform: scale3d(1.03, 1.03, 1.03); }
-  60% { transform: scaleZ(1); }
-}
-@-webkit-keyframes selectionBounce { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  50% { transform: scale3d(1.01, 1.01, 1.01); }
-  70% { transform: scaleZ(1); }
-}
-@keyframes selectionBounce { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  50% { transform: scale3d(1.01, 1.01, 1.01); }
-  70% { transform: scaleZ(1); }
-}
-@-webkit-keyframes buttonClicked { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  0% { transform: scale3d(0.95, 0.95, 0.95); }
-  60% { transform: scale3d(1.02, 1.02, 1.02); }
-  80% { transform: scaleZ(1); }
-}
-@keyframes buttonClicked { 
-  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  0% { transform: scale3d(0.95, 0.95, 0.95); }
-  60% { transform: scale3d(1.02, 1.02, 1.02); }
-  80% { transform: scaleZ(1); }
-}
-@-webkit-keyframes cdxRotation { 
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@keyframes cdxRotation { 
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@-webkit-keyframes panelShowing { 
-  0% { opacity: 0; transform: translateY(-8px) scale(0.9); }
-  70% { opacity: 1; transform: translateY(2px); }
-  100% { transform: translateY(0px); }
-}
-@keyframes panelShowing { 
-  0% { opacity: 0; transform: translateY(-8px) scale(0.9); }
-  70% { opacity: 1; transform: translateY(2px); }
-  100% { transform: translateY(0px); }
-}
-@-webkit-keyframes panelShowingMobile { 
-  0% { opacity: 0; transform: translateY(14px) scale(0.98); }
-  70% { opacity: 1; transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
-}
-@keyframes panelShowingMobile { 
-  0% { opacity: 0; transform: translateY(14px) scale(0.98); }
-  70% { opacity: 1; transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
-}
-@-webkit-keyframes wobble { 
-  0% { transform: translateZ(0px); }
-  15% { transform: translate3d(-9%, 0px, 0px); }
-  30% { transform: translate3d(9%, 0px, 0px); }
-  45% { transform: translate3d(-4%, 0px, 0px); }
-  60% { transform: translate3d(4%, 0px, 0px); }
-  75% { transform: translate3d(-1%, 0px, 0px); }
-  100% { transform: translateZ(0px); }
-}
-@keyframes wobble { 
-  0% { transform: translateZ(0px); }
-  15% { transform: translate3d(-9%, 0px, 0px); }
-  30% { transform: translate3d(9%, 0px, 0px); }
-  45% { transform: translate3d(-4%, 0px, 0px); }
-  60% { transform: translate3d(4%, 0px, 0px); }
-  75% { transform: translate3d(-1%, 0px, 0px); }
-  100% { transform: translateZ(0px); }
-}
-@keyframes bounceIn { 
+<style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
   70% { transform: scale(0.9); }
@@ -210,7 +121,7 @@
   50% { transform: translateX(-1.8px); }
 }
 </style></head>
-<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Workspaces/Selling" data-sidebar="0">
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open no-list-sidebar" data-route="List/Customer/List" data-sidebar="1">
 <div id="ui-kit-stage">
 <svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol id="icon-storefront-soft" viewBox="0 0 24 24" class="soft-icon">
 		<path d="M4.5 11v7.5a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V11" class="soft-body"></path>
@@ -301,13 +212,13 @@
 		</svg>                     </span>                                  <span class="sidebar-item-label">Search</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-notification" item-name="Notification" data-id="Notification">     <div class="standard-sidebar-item ">                       <a class="item-anchor" data-link-type="" data-ui="sidebar.link-4">                                      <span class="sidebar-item-icon" item-icon="bell">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-bell">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Notification</span>                                       <span class="sidebar-item-suffix"><span class="notification-count" aria-live="polite" aria-label="6 unread notifications">6</span></span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div>    <div class="body-sidebar-top">     <div class="sidebar-items"><div class="sidebar-item-container  " item-name="Home" data-id="Home">     <div class="standard-sidebar-item active-sidebar">                       <a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-5">                                      <span class="sidebar-item-icon" item-icon="house">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">Notification</span>                                       <span class="sidebar-item-suffix"><span class="notification-count" aria-live="polite" aria-label="6 unread notifications">6</span></span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div>    <div class="body-sidebar-top">     <div class="sidebar-items"><div class="sidebar-item-container  " item-name="Home" data-id="Home">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-5">                                      <span class="sidebar-item-icon" item-icon="house">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-house">
 			</use>
 		</svg>                     </span>                                  <span class="sidebar-item-label">Home</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Dashboard" data-id="Dashboard">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-6">                                      <span class="sidebar-item-icon" item-icon="chart-column">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chart-column">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Dashboard</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Customer" data-id="Customer">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-7">                                      <span class="sidebar-item-icon" item-icon="user-round">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">Dashboard</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Customer" data-id="Customer">     <div class="standard-sidebar-item active-sidebar">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-7">                                      <span class="sidebar-item-icon" item-icon="user-round">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-user-round">
 			</use>
 		</svg>                     </span>                                  <span class="sidebar-item-label">Customer</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Quotation" data-id="Quotation">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-8">                                      <span class="sidebar-item-icon" item-icon="file-text">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
