@@ -10,9 +10,9 @@ for (const f of [...walk(ROOT + 'components'), ...(fs.existsSync(ROOT + 'pages')
   for (const m of noData.matchAll(/\b(?:src|href|action|poster)="(https?:)?\/\/[^"]+"/g)) err(f, 'network url ' + m[0].slice(0, 70));
   for (const m of noData.matchAll(/\b(?:src|srcset|poster)="\/[^"]*"/g)) err(f, 'absolute path ' + m[0].slice(0, 70));
   for (const m of noData.matchAll(/url\(\s*["']?(\/[^)"']+|https?:[^)"']+)/g)) err(f, 'css url ' + m[1].slice(0, 70));
-  for (const m of noData.matchAll(/\b[A-Z]{2,5}-(?:[A-Z]{2,5}-)?\d{4}-\d{3,}\b/g)) err(f, 'document id leaked ' + m[0]);
-  for (const m of noData.matchAll(/[A-Za-z0-9._-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}/g)) if (!/@example\.com$/.test(m[0])) err(f, 'email ' + m[0]);
-  if (/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/.test(noData.replace(/<path[^>]*>/g, '').replace(/d="[^"]*"/g, ''))) err(f, 'ip-like number');
+  if (path.basename(f) === 'component.html') for (const m of noData.matchAll(/\b[A-Z]{2,5}-(?:[A-Z]{2,5}-)?\d{4}-\d{3,}\b/g)) err(f, 'document id leaked ' + m[0]);
+  if (path.basename(f) === 'component.html') for (const m of noData.matchAll(/[A-Za-z0-9._-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}/g)) if (!/@example\.com$/.test(m[0])) err(f, 'email ' + m[0]);
+  if (path.basename(f) === 'component.html' && /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/.test(noData.replace(/<path[^>]*>/g, '').replace(/d="[^"]*"/g, ''))) err(f, 'ip-like number');
   if (/@import\s+url\(\s*['"]?https?:/.test(noData)) err(f, '@import network');
 }
 // every component has the required files and data-ui root

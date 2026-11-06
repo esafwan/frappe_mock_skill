@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Dashboard number card</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}[data-ui="number-card"]{width:292.65625px!important;flex:none!important;box-sizing:border-box}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>:root { --selectionColor: #e1f2ff; --inlineSelectionColor: #d4ecff; --bg-light: #eff2f5; --grayText: #707684; --color-dark: #1D202B; --color-active-icon: #388AE5; --color-gray-border: rgba(201, 201, 204, .48); --content-width: 650px; --narrow-mode-right-padding: 50px; --toolbox-buttons-size: 26px; --toolbox-buttons-size--mobile: 36px; --icon-size: 20px; --icon-size--mobile: 28px; --block-padding-vertical: .4em; --color-line-gray: #EFF0F1; }
 .codex-editor { position: relative; box-sizing: border-box; z-index: 1; }
 @-webkit-keyframes fade-in { 
@@ -116,6 +116,47 @@
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
 }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -171,47 +212,6 @@
   65% { transform: scale(1.3); opacity: 1; }
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
-}
-@keyframes briefcase-carry { 
-  0%, 100% { transform: translateY(-1px) rotate(0deg); }
-  25% { transform: translateY(-1.4px) rotate(5deg); }
-  50% { transform: translateY(-1px) rotate(0deg); }
-  75% { transform: translateY(-1.4px) rotate(-5deg); }
-}
-@keyframes tenure-sweep { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes recruitment-scan { 
-  0%, 100% { transform: translate(0px, 0px); }
-  25% { transform: translate(1.4px, -0.8px); }
-  50% { transform: translate(0px, -1.4px); }
-  75% { transform: translate(-1.4px, -0.8px); }
-}
-@keyframes tax-flip { 
-  0%, 15% { transform: scaleX(1); }
-  32.5% { transform: scaleX(0); }
-  50%, 100% { transform: scaleX(1); }
-}
-@keyframes attendance-punch { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(3.2px); }
-}
-@keyframes leaves-swing { 
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(9deg); }
-  75% { transform: rotate(-9deg); }
-}
-@keyframes performance-hop { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.6px); }
-}
-@keyframes payroll-rise { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.8px); }
-}
-@keyframes expenses-swipe { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(-1.8px); }
 }
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Workspaces/Manufacturing" data-sidebar="0">

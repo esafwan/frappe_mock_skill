@@ -4,7 +4,7 @@ POS top bar.
 
 **When to use:** Use at the top of every POS screen.
 
-**Slots people usually change:** `font_medium` (text, e.g. "Administrator"). All 4 slots are in `slots.json`.
+**Slots people usually change:** `font_medium` (text, e.g. "Administrator"). All 5 slots are in `slots.json`.
 
 **States:** default (none), hover (css-pseudo), focus (css-pseudo). Details and class/attribute changes in `states.json`.
 

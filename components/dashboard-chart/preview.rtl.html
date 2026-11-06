@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Dashboard chart</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}[data-ui="dashboard-chart"]{width:878px!important;flex:none!important;box-sizing:border-box}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>:root { --selectionColor: #e1f2ff; --inlineSelectionColor: #d4ecff; --bg-light: #eff2f5; --grayText: #707684; --color-dark: #1D202B; --color-active-icon: #388AE5; --color-gray-border: rgba(201, 201, 204, .48); --content-width: 650px; --narrow-mode-right-padding: 50px; --toolbox-buttons-size: 26px; --toolbox-buttons-size--mobile: 36px; --icon-size: 20px; --icon-size--mobile: 28px; --block-padding-vertical: .4em; --color-line-gray: #EFF0F1; }
 .codex-editor { position: relative; box-sizing: border-box; z-index: 1; }
 .codex-editor svg { max-height: 100%; }
@@ -115,18 +115,6 @@
 .graph-svg-tip.comparison { text-align: left; padding: 0px; pointer-events: none; }
 .graph-svg-tip.comparison .title { display: block; padding: 16px; margin: 0px; color: var(--charts-tooltip-title); font-weight: 600; line-height: 1; pointer-events: none; text-transform: uppercase; }
 .graph-svg-tip.comparison ul { margin: 0px; white-space: nowrap; list-style: none; }
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
-}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -182,6 +170,18 @@
   65% { transform: scale(1.3); opacity: 1; }
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
 }
 @keyframes briefcase-carry { 
   0%, 100% { transform: translateY(-1px) rotate(0deg); }

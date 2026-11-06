@@ -1030,7 +1030,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 7,
+      "slotCount": 9,
       "slots": {
         "control_label": {
           "type": "text",
@@ -1065,6 +1065,16 @@
         "btn_open_title": {
           "type": "text",
           "sample": "Open Link",
+          "maxLength": 20
+        },
+        "hide_dataname": {
+          "type": "text",
+          "sample": "Government",
+          "maxLength": 20
+        },
+        "hide_datavalue": {
+          "type": "text",
+          "sample": "Government",
           "maxLength": 20
         }
       },
@@ -1236,7 +1246,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 37,
+      "slotCount": 47,
       "slots": {
         "tooltip_content": {
           "type": "text",
@@ -1413,10 +1423,60 @@
           "sample": "Warehouse",
           "maxLength": 20
         },
+        "grid_row_dataname": {
+          "type": "text",
+          "sample": "cd2cbbrvh8",
+          "maxLength": 20
+        },
+        "ellipsis_dataname": {
+          "type": "text",
+          "sample": "SZF",
+          "maxLength": 20
+        },
+        "ellipsis_datavalue": {
+          "type": "text",
+          "sample": "SZF",
+          "maxLength": 20
+        },
+        "ellipsis_dataname_2": {
+          "type": "text",
+          "sample": "Kitchen - U",
+          "maxLength": 22
+        },
+        "ellipsis_datavalue_2": {
+          "type": "text",
+          "sample": "Kitchen - U",
+          "maxLength": 22
+        },
         "btn_open_row_dataoriginaltitle": {
           "type": "text",
           "sample": "Edit",
           "maxLength": 20
+        },
+        "grid_row_dataname_2": {
+          "type": "text",
+          "sample": "cd2cb1597n",
+          "maxLength": 20
+        },
+        "ellipsis_dataname_3": {
+          "type": "text",
+          "sample": "GVC",
+          "maxLength": 20
+        },
+        "ellipsis_datavalue_3": {
+          "type": "text",
+          "sample": "GVC",
+          "maxLength": 20
+        },
+        "ellipsis_dataname_4": {
+          "type": "text",
+          "sample": "Kitchen - U",
+          "maxLength": 22
+        },
+        "ellipsis_datavalue_4": {
+          "type": "text",
+          "sample": "Kitchen - U",
+          "maxLength": 22
         },
         "btn_open_row_dataoriginaltitle_2": {
           "type": "text",
@@ -1605,7 +1665,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 136,
+      "slotCount": 261,
       "slots": {
         "control_label": {
           "type": "text",
@@ -1625,6 +1685,71 @@
         "ql_picker_label_arialabel": {
           "type": "text",
           "sample": "Text style",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue": {
+          "type": "number",
+          "sample": "1",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel": {
+          "type": "text",
+          "sample": "Heading 1",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_2": {
+          "type": "number",
+          "sample": "2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_2": {
+          "type": "text",
+          "sample": "Heading 2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_3": {
+          "type": "number",
+          "sample": "3",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_3": {
+          "type": "text",
+          "sample": "Heading 3",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_4": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_4": {
+          "type": "text",
+          "sample": "Heading 4",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_5": {
+          "type": "number",
+          "sample": "5",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_5": {
+          "type": "text",
+          "sample": "Heading 5",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_6": {
+          "type": "number",
+          "sample": "6",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_6": {
+          "type": "text",
+          "sample": "Heading 6",
+          "maxLength": 20
+        },
+        "ql_selected_datalabel": {
+          "type": "text",
+          "sample": "Paragraph",
           "maxLength": 20
         },
         "ql_header_value": {
@@ -1660,6 +1785,121 @@
         "ql_picker_label_arialabel_2": {
           "type": "text",
           "sample": "Font size",
+          "maxLength": 20
+        },
+        "ql_picker_label_datavalue": {
+          "type": "text",
+          "sample": "---",
+          "maxLength": 20
+        },
+        "ql_selected_datavalue": {
+          "type": "text",
+          "sample": "---",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_7": {
+          "type": "text",
+          "sample": "8px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_8": {
+          "type": "text",
+          "sample": "9px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_9": {
+          "type": "text",
+          "sample": "10px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_10": {
+          "type": "text",
+          "sample": "11px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_11": {
+          "type": "text",
+          "sample": "12px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_12": {
+          "type": "text",
+          "sample": "13px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_13": {
+          "type": "text",
+          "sample": "14px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_14": {
+          "type": "text",
+          "sample": "15px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_15": {
+          "type": "text",
+          "sample": "16px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_16": {
+          "type": "text",
+          "sample": "18px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_17": {
+          "type": "text",
+          "sample": "20px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_18": {
+          "type": "text",
+          "sample": "22px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_19": {
+          "type": "text",
+          "sample": "24px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_20": {
+          "type": "text",
+          "sample": "32px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_21": {
+          "type": "text",
+          "sample": "36px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_22": {
+          "type": "text",
+          "sample": "40px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_23": {
+          "type": "text",
+          "sample": "48px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_24": {
+          "type": "text",
+          "sample": "54px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_25": {
+          "type": "text",
+          "sample": "64px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_26": {
+          "type": "text",
+          "sample": "96px",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_27": {
+          "type": "text",
+          "sample": "128px",
           "maxLength": 20
         },
         "ql_size_value": {
@@ -1795,6 +2035,176 @@
         "ql_picker_label_arialabel_3": {
           "type": "text",
           "sample": "Text color",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue": {
+          "type": "text",
+          "sample": "#e60000",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_2": {
+          "type": "text",
+          "sample": "#ff9900",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_3": {
+          "type": "text",
+          "sample": "#ffff00",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_4": {
+          "type": "text",
+          "sample": "#008a00",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_5": {
+          "type": "text",
+          "sample": "#0066cc",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_6": {
+          "type": "text",
+          "sample": "#9933ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_28": {
+          "type": "text",
+          "sample": "#ffffff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_29": {
+          "type": "text",
+          "sample": "#facccc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_30": {
+          "type": "text",
+          "sample": "#ffebcc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_31": {
+          "type": "text",
+          "sample": "#ffffcc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_32": {
+          "type": "text",
+          "sample": "#cce8cc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_33": {
+          "type": "text",
+          "sample": "#cce0f5",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_34": {
+          "type": "text",
+          "sample": "#ebd6ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_35": {
+          "type": "text",
+          "sample": "#bbbbbb",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_36": {
+          "type": "text",
+          "sample": "#f06666",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_37": {
+          "type": "text",
+          "sample": "#ffc266",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_38": {
+          "type": "text",
+          "sample": "#ffff66",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_39": {
+          "type": "text",
+          "sample": "#66b966",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_40": {
+          "type": "text",
+          "sample": "#66a3e0",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_41": {
+          "type": "text",
+          "sample": "#c285ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_42": {
+          "type": "text",
+          "sample": "#888888",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_43": {
+          "type": "text",
+          "sample": "#a10000",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_44": {
+          "type": "text",
+          "sample": "#b26b00",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_45": {
+          "type": "text",
+          "sample": "#b2b200",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_46": {
+          "type": "text",
+          "sample": "#006100",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_47": {
+          "type": "text",
+          "sample": "#0047b2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_48": {
+          "type": "text",
+          "sample": "#6b24b2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_49": {
+          "type": "text",
+          "sample": "#444444",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_50": {
+          "type": "text",
+          "sample": "#5c0000",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_51": {
+          "type": "text",
+          "sample": "#663d00",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_52": {
+          "type": "text",
+          "sample": "#666600",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_53": {
+          "type": "text",
+          "sample": "#003700",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_54": {
+          "type": "text",
+          "sample": "#002966",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_55": {
+          "type": "text",
+          "sample": "#3d1466",
           "maxLength": 20
         },
         "ql_color_value": {
@@ -1971,6 +2381,176 @@
           "type": "text",
           "sample": "Background color",
           "maxLength": 32
+        },
+        "ql_primary_datavalue_7": {
+          "type": "text",
+          "sample": "#000000",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_8": {
+          "type": "text",
+          "sample": "#e60000",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_9": {
+          "type": "text",
+          "sample": "#ff9900",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_10": {
+          "type": "text",
+          "sample": "#ffff00",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_11": {
+          "type": "text",
+          "sample": "#008a00",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_12": {
+          "type": "text",
+          "sample": "#0066cc",
+          "maxLength": 20
+        },
+        "ql_primary_datavalue_13": {
+          "type": "text",
+          "sample": "#9933ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_56": {
+          "type": "text",
+          "sample": "#facccc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_57": {
+          "type": "text",
+          "sample": "#ffebcc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_58": {
+          "type": "text",
+          "sample": "#ffffcc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_59": {
+          "type": "text",
+          "sample": "#cce8cc",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_60": {
+          "type": "text",
+          "sample": "#cce0f5",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_61": {
+          "type": "text",
+          "sample": "#ebd6ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_62": {
+          "type": "text",
+          "sample": "#bbbbbb",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_63": {
+          "type": "text",
+          "sample": "#f06666",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_64": {
+          "type": "text",
+          "sample": "#ffc266",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_65": {
+          "type": "text",
+          "sample": "#ffff66",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_66": {
+          "type": "text",
+          "sample": "#66b966",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_67": {
+          "type": "text",
+          "sample": "#66a3e0",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_68": {
+          "type": "text",
+          "sample": "#c285ff",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_69": {
+          "type": "text",
+          "sample": "#888888",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_70": {
+          "type": "text",
+          "sample": "#a10000",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_71": {
+          "type": "text",
+          "sample": "#b26b00",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_72": {
+          "type": "text",
+          "sample": "#b2b200",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_73": {
+          "type": "text",
+          "sample": "#006100",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_74": {
+          "type": "text",
+          "sample": "#0047b2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_75": {
+          "type": "text",
+          "sample": "#6b24b2",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_76": {
+          "type": "text",
+          "sample": "#444444",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_77": {
+          "type": "text",
+          "sample": "#5c0000",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_78": {
+          "type": "text",
+          "sample": "#663d00",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_79": {
+          "type": "text",
+          "sample": "#666600",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_80": {
+          "type": "text",
+          "sample": "#003700",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_81": {
+          "type": "text",
+          "sample": "#002966",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_82": {
+          "type": "text",
+          "sample": "#3d1466",
+          "maxLength": 20
         },
         "ql_background_value": {
           "type": "text",
@@ -2207,6 +2787,21 @@
           "sample": "Alignment",
           "maxLength": 20
         },
+        "ql_picker_item_datavalue_83": {
+          "type": "text",
+          "sample": "center",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_84": {
+          "type": "text",
+          "sample": "right",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_85": {
+          "type": "text",
+          "sample": "justify",
+          "maxLength": 20
+        },
         "ql_align_value": {
           "type": "text",
           "sample": "center",
@@ -2246,6 +2841,96 @@
           "type": "text",
           "sample": "Table",
           "maxLength": 20
+        },
+        "ql_picker_label_datavalue_2": {
+          "type": "text",
+          "sample": "insert-table",
+          "maxLength": 24
+        },
+        "ql_picker_label_datatitle": {
+          "type": "text",
+          "sample": "Table",
+          "maxLength": 20
+        },
+        "ql_selected_datavalue_2": {
+          "type": "text",
+          "sample": "insert-table",
+          "maxLength": 24
+        },
+        "ql_selected_datalabel_2": {
+          "type": "text",
+          "sample": "Insert Table",
+          "maxLength": 24
+        },
+        "ql_picker_item_datavalue_86": {
+          "type": "text",
+          "sample": "insert-row-above",
+          "maxLength": 32
+        },
+        "ql_picker_item_datalabel_7": {
+          "type": "text",
+          "sample": "Insert Row Above",
+          "maxLength": 32
+        },
+        "ql_picker_item_datavalue_87": {
+          "type": "text",
+          "sample": "insert-row-below",
+          "maxLength": 32
+        },
+        "ql_picker_item_datalabel_8": {
+          "type": "text",
+          "sample": "Insert Row Below",
+          "maxLength": 32
+        },
+        "ql_picker_item_datavalue_88": {
+          "type": "text",
+          "sample": "insert-column-right",
+          "maxLength": 38
+        },
+        "ql_picker_item_datalabel_9": {
+          "type": "text",
+          "sample": "Insert Column Right",
+          "maxLength": 38
+        },
+        "ql_picker_item_datavalue_89": {
+          "type": "text",
+          "sample": "insert-column-left",
+          "maxLength": 36
+        },
+        "ql_picker_item_datalabel_10": {
+          "type": "text",
+          "sample": "Insert Column Left",
+          "maxLength": 36
+        },
+        "ql_picker_item_datavalue_90": {
+          "type": "text",
+          "sample": "delete-row",
+          "maxLength": 20
+        },
+        "ql_picker_item_datalabel_11": {
+          "type": "text",
+          "sample": "Delete Row",
+          "maxLength": 20
+        },
+        "ql_picker_item_datavalue_91": {
+          "type": "text",
+          "sample": "delete-column",
+          "maxLength": 26
+        },
+        "ql_picker_item_datalabel_12": {
+          "type": "text",
+          "sample": "Delete Column",
+          "maxLength": 26
+        },
+        "ql_picker_item_datavalue_92": {
+          "type": "text",
+          "sample": "delete-table",
+          "maxLength": 24
+        },
+        "ql_picker_item_datalabel_13": {
+          "type": "text",
+          "sample": "Delete Table",
+          "maxLength": 24
         },
         "ql_table_value": {
           "type": "text",
@@ -2568,7 +3253,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 38,
+      "slotCount": 42,
       "slots": {
         "tooltip_content": {
           "type": "text",
@@ -2745,6 +3430,16 @@
           "sample": "Open Link",
           "maxLength": 20
         },
+        "hide_dataname": {
+          "type": "text",
+          "sample": "Government",
+          "maxLength": 20
+        },
+        "hide_datavalue": {
+          "type": "text",
+          "sample": "Government",
+          "maxLength": 20
+        },
         "form_control_value_2": {
           "type": "text",
           "sample": "Rest Of The World",
@@ -2759,6 +3454,16 @@
           "type": "text",
           "sample": "Open Link",
           "maxLength": 20
+        },
+        "hide_dataname_2": {
+          "type": "text",
+          "sample": "Rest Of The World",
+          "maxLength": 34
+        },
+        "hide_datavalue_2": {
+          "type": "text",
+          "sample": "Rest Of The World",
+          "maxLength": 34
         }
       },
       "states": {
@@ -3321,7 +4026,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 62,
+      "slotCount": 104,
       "slots": {
         "es_breadcrumbs_label": {
           "type": "text",
@@ -3613,6 +4318,66 @@
           "sample": "Search",
           "maxLength": 20
         },
+        "inner_group_button_datalabel": {
+          "type": "text",
+          "sample": "View",
+          "maxLength": 20
+        },
+        "dropdown_item_datalabel": {
+          "type": "text",
+          "sample": "Accounts%20Receivable",
+          "maxLength": 42
+        },
+        "dropdown_item_datalabel_2": {
+          "type": "text",
+          "sample": "Accounting%20Ledger",
+          "maxLength": 38
+        },
+        "inner_group_button_datalabel_2": {
+          "type": "text",
+          "sample": "Create",
+          "maxLength": 20
+        },
+        "dropdown_item_datalabel_3": {
+          "type": "text",
+          "sample": "Quotation",
+          "maxLength": 20
+        },
+        "dropdown_item_datalabel_4": {
+          "type": "text",
+          "sample": "Sales%20Order",
+          "maxLength": 26
+        },
+        "dropdown_item_datalabel_5": {
+          "type": "text",
+          "sample": "Opportunity",
+          "maxLength": 22
+        },
+        "dropdown_item_datalabel_6": {
+          "type": "text",
+          "sample": "Payment%20Entry",
+          "maxLength": 30
+        },
+        "dropdown_item_datalabel_7": {
+          "type": "text",
+          "sample": "Pricing%20Rule",
+          "maxLength": 28
+        },
+        "dropdown_item_datalabel_8": {
+          "type": "text",
+          "sample": "Bank%20Account",
+          "maxLength": 28
+        },
+        "inner_group_button_datalabel_3": {
+          "type": "text",
+          "sample": "Actions",
+          "maxLength": 20
+        },
+        "dropdown_item_datalabel_9": {
+          "type": "text",
+          "sample": "Get%20Customer%20Group%20Details",
+          "maxLength": 64
+        },
         "icon_btn_dataoriginaltitle": {
           "type": "text",
           "sample": "Previous Document",
@@ -3631,6 +4396,156 @@
         "menu_more_button_dataoriginaltitle": {
           "type": "text",
           "sample": "Menu",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel": {
+          "type": "text",
+          "sample": "View%20%3E%20Accounts%20Receivable",
+          "maxLength": 68
+        },
+        "menu_item_label_datalabel_2": {
+          "type": "text",
+          "sample": "View%20%3E%20Accounting%20Ledger",
+          "maxLength": 64
+        },
+        "menu_item_label_datalabel_3": {
+          "type": "text",
+          "sample": "Create%20%3E%20Quotation",
+          "maxLength": 48
+        },
+        "menu_item_label_datalabel_4": {
+          "type": "text",
+          "sample": "Create%20%3E%20Sales%20Order",
+          "maxLength": 56
+        },
+        "menu_item_label_datalabel_5": {
+          "type": "text",
+          "sample": "Create%20%3E%20Opportunity",
+          "maxLength": 52
+        },
+        "menu_item_label_datalabel_6": {
+          "type": "text",
+          "sample": "Create%20%3E%20Payment%20Entry",
+          "maxLength": 60
+        },
+        "menu_item_label_datalabel_7": {
+          "type": "text",
+          "sample": "Create%20%3E%20Pricing%20Rule",
+          "maxLength": 58
+        },
+        "menu_item_label_datalabel_8": {
+          "type": "text",
+          "sample": "Create%20%3E%20Bank%20Account",
+          "maxLength": 58
+        },
+        "menu_item_label_datalabel_9": {
+          "type": "text",
+          "sample": "Actions%20%3E%20Get%20Customer%20Group%20Details",
+          "maxLength": 96
+        },
+        "menu_item_label_datalabel_10": {
+          "type": "text",
+          "sample": "Print",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_11": {
+          "type": "text",
+          "sample": "Toggle%20Sidebar",
+          "maxLength": 32
+        },
+        "menu_item_label_datalabel_12": {
+          "type": "text",
+          "sample": "Email",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_13": {
+          "type": "text",
+          "sample": "Rename",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_14": {
+          "type": "text",
+          "sample": "Reload",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_15": {
+          "type": "text",
+          "sample": "Delete",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_16": {
+          "type": "text",
+          "sample": "Duplicate",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_17": {
+          "type": "text",
+          "sample": "New%20Customer",
+          "maxLength": 28
+        },
+        "menu_item_label_datalabel_18": {
+          "type": "text",
+          "sample": "Jump%20to%20field",
+          "maxLength": 34
+        },
+        "menu_item_label_datalabel_19": {
+          "type": "text",
+          "sample": "Show%20Links",
+          "maxLength": 24
+        },
+        "menu_item_label_datalabel_20": {
+          "type": "text",
+          "sample": "Copy%20to%20Clipboard",
+          "maxLength": 42
+        },
+        "menu_item_label_datalabel_21": {
+          "type": "text",
+          "sample": "Remind%20Me",
+          "maxLength": 22
+        },
+        "menu_item_label_datalabel_22": {
+          "type": "text",
+          "sample": "Undo",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_23": {
+          "type": "text",
+          "sample": "Redo",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_24": {
+          "type": "text",
+          "sample": "Settings",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_25": {
+          "type": "text",
+          "sample": "Customize",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_26": {
+          "type": "text",
+          "sample": "Edit%20DocType",
+          "maxLength": 28
+        },
+        "menu_item_label_datalabel_27": {
+          "type": "text",
+          "sample": "Documentation",
+          "maxLength": 26
+        },
+        "actions_btn_group_label_datalabel": {
+          "type": "text",
+          "sample": "Actions",
+          "maxLength": 20
+        },
+        "primary_action_datalabel": {
+          "type": "text",
+          "sample": "Save",
+          "maxLength": 20
+        },
+        "es_button_label_datalabel": {
+          "type": "text",
+          "sample": "Save",
           "maxLength": 20
         }
       },
@@ -7291,7 +8206,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 37,
+      "slotCount": 64,
       "slots": {
         "menu_item_label": {
           "type": "text",
@@ -7477,6 +8392,141 @@
           "type": "text",
           "sample": "Menu",
           "maxLength": 20
+        },
+        "menu_item_label_datalabel": {
+          "type": "text",
+          "sample": "View%20%3E%20Accounts%20Receivable",
+          "maxLength": 68
+        },
+        "menu_item_label_datalabel_2": {
+          "type": "text",
+          "sample": "View%20%3E%20Accounting%20Ledger",
+          "maxLength": 64
+        },
+        "menu_item_label_datalabel_3": {
+          "type": "text",
+          "sample": "Create%20%3E%20Quotation",
+          "maxLength": 48
+        },
+        "menu_item_label_datalabel_4": {
+          "type": "text",
+          "sample": "Create%20%3E%20Sales%20Order",
+          "maxLength": 56
+        },
+        "menu_item_label_datalabel_5": {
+          "type": "text",
+          "sample": "Create%20%3E%20Opportunity",
+          "maxLength": 52
+        },
+        "menu_item_label_datalabel_6": {
+          "type": "text",
+          "sample": "Create%20%3E%20Payment%20Entry",
+          "maxLength": 60
+        },
+        "menu_item_label_datalabel_7": {
+          "type": "text",
+          "sample": "Create%20%3E%20Pricing%20Rule",
+          "maxLength": 58
+        },
+        "menu_item_label_datalabel_8": {
+          "type": "text",
+          "sample": "Create%20%3E%20Bank%20Account",
+          "maxLength": 58
+        },
+        "menu_item_label_datalabel_9": {
+          "type": "text",
+          "sample": "Actions%20%3E%20Get%20Customer%20Group%20Details",
+          "maxLength": 96
+        },
+        "menu_item_label_datalabel_10": {
+          "type": "text",
+          "sample": "Print",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_11": {
+          "type": "text",
+          "sample": "Toggle%20Sidebar",
+          "maxLength": 32
+        },
+        "menu_item_label_datalabel_12": {
+          "type": "text",
+          "sample": "Email",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_13": {
+          "type": "text",
+          "sample": "Rename",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_14": {
+          "type": "text",
+          "sample": "Reload",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_15": {
+          "type": "text",
+          "sample": "Delete",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_16": {
+          "type": "text",
+          "sample": "Duplicate",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_17": {
+          "type": "text",
+          "sample": "New%20Customer",
+          "maxLength": 28
+        },
+        "menu_item_label_datalabel_18": {
+          "type": "text",
+          "sample": "Jump%20to%20field",
+          "maxLength": 34
+        },
+        "menu_item_label_datalabel_19": {
+          "type": "text",
+          "sample": "Show%20Links",
+          "maxLength": 24
+        },
+        "menu_item_label_datalabel_20": {
+          "type": "text",
+          "sample": "Copy%20to%20Clipboard",
+          "maxLength": 42
+        },
+        "menu_item_label_datalabel_21": {
+          "type": "text",
+          "sample": "Remind%20Me",
+          "maxLength": 22
+        },
+        "menu_item_label_datalabel_22": {
+          "type": "text",
+          "sample": "Undo",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_23": {
+          "type": "text",
+          "sample": "Redo",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_24": {
+          "type": "text",
+          "sample": "Settings",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_25": {
+          "type": "text",
+          "sample": "Customize",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_26": {
+          "type": "text",
+          "sample": "Edit%20DocType",
+          "maxLength": 28
+        },
+        "menu_item_label_datalabel_27": {
+          "type": "text",
+          "sample": "Documentation",
+          "maxLength": 26
         }
       },
       "states": {
@@ -7907,7 +8957,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 33,
+      "slotCount": 55,
       "slots": {
         "es_breadcrumbs_label": {
           "type": "text",
@@ -8073,6 +9123,116 @@
           "type": "text",
           "sample": "Menu",
           "maxLength": 20
+        },
+        "menu_item_label_datalabel": {
+          "type": "text",
+          "sample": "Refresh",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_2": {
+          "type": "text",
+          "sample": "Import",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_3": {
+          "type": "text",
+          "sample": "User%20Permissions",
+          "maxLength": 36
+        },
+        "menu_item_label_datalabel_4": {
+          "type": "text",
+          "sample": "Role%20Permissions%20Manager",
+          "maxLength": 56
+        },
+        "menu_item_label_datalabel_5": {
+          "type": "text",
+          "sample": "Customize",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_6": {
+          "type": "text",
+          "sample": "Settings",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_7": {
+          "type": "text",
+          "sample": "Edit%20DocType",
+          "maxLength": 28
+        },
+        "menu_item_label_datalabel_8": {
+          "type": "text",
+          "sample": "Customize%20Quick%20Filters",
+          "maxLength": 54
+        },
+        "menu_item_label_datalabel_9": {
+          "type": "text",
+          "sample": "List%20Settings",
+          "maxLength": 30
+        },
+        "menu_item_label_datalabel_10": {
+          "type": "text",
+          "sample": "Documentation",
+          "maxLength": 26
+        },
+        "actions_btn_group_label_datalabel": {
+          "type": "text",
+          "sample": "Actions",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_11": {
+          "type": "text",
+          "sample": "Copy%20to%20Clipboard",
+          "maxLength": 42
+        },
+        "menu_item_label_datalabel_12": {
+          "type": "text",
+          "sample": "Edit",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_13": {
+          "type": "text",
+          "sample": "Export",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_14": {
+          "type": "text",
+          "sample": "Assign%20To",
+          "maxLength": 22
+        },
+        "menu_item_label_datalabel_15": {
+          "type": "text",
+          "sample": "Clear%20Assignment",
+          "maxLength": 36
+        },
+        "menu_item_label_datalabel_16": {
+          "type": "text",
+          "sample": "Apply%20Assignment%20Rule",
+          "maxLength": 50
+        },
+        "menu_item_label_datalabel_17": {
+          "type": "text",
+          "sample": "Add%20Tags",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_18": {
+          "type": "text",
+          "sample": "Print",
+          "maxLength": 20
+        },
+        "menu_item_label_datalabel_19": {
+          "type": "text",
+          "sample": "Delete",
+          "maxLength": 20
+        },
+        "primary_action_datalabel": {
+          "type": "text",
+          "sample": "Add Customer",
+          "maxLength": 24
+        },
+        "hidden_xs_datalabel": {
+          "type": "text",
+          "sample": "Add%20Customer",
+          "maxLength": 28
         }
       },
       "states": {
@@ -10470,7 +11630,7 @@
         "fonts.css",
         "ury-pos.css"
       ],
-      "slotCount": 4,
+      "slotCount": 5,
       "slots": {
         "text_gray_400": {
           "type": "text",
@@ -10491,6 +11651,11 @@
           "type": "text",
           "sample": "Search Menu",
           "maxLength": 22
+        },
+        "image_1": {
+          "type": "image",
+          "sample": "assets/image_1.png",
+          "maxLength": 0
         }
       },
       "states": {
@@ -11523,7 +12688,7 @@
         "frappe-report.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 630,
+      "slotCount": 824,
       "slots": {
         "dropdown_item": {
           "type": "text",
@@ -13265,6 +14430,116 @@
           "sample": "descending",
           "maxLength": 20
         },
+        "btn_order_datavalue": {
+          "type": "text",
+          "sample": "desc",
+          "maxLength": 20
+        },
+        "option_datavalue": {
+          "type": "text",
+          "sample": "modified",
+          "maxLength": 20
+        },
+        "option_datavalue_2": {
+          "type": "text",
+          "sample": "creation",
+          "maxLength": 20
+        },
+        "option_datavalue_3": {
+          "type": "text",
+          "sample": "customer_name",
+          "maxLength": 26
+        },
+        "option_datavalue_4": {
+          "type": "text",
+          "sample": "name",
+          "maxLength": 20
+        },
+        "option_datavalue_5": {
+          "type": "text",
+          "sample": "idx",
+          "maxLength": 20
+        },
+        "option_datavalue_6": {
+          "type": "text",
+          "sample": "naming_series",
+          "maxLength": 26
+        },
+        "option_datavalue_7": {
+          "type": "text",
+          "sample": "customer",
+          "maxLength": 20
+        },
+        "option_datavalue_8": {
+          "type": "text",
+          "sample": "company",
+          "maxLength": 20
+        },
+        "option_datavalue_9": {
+          "type": "text",
+          "sample": "posting_date",
+          "maxLength": 24
+        },
+        "option_datavalue_10": {
+          "type": "text",
+          "sample": "due_date",
+          "maxLength": 20
+        },
+        "option_datavalue_11": {
+          "type": "text",
+          "sample": "currency",
+          "maxLength": 20
+        },
+        "option_datavalue_12": {
+          "type": "text",
+          "sample": "conversion_rate",
+          "maxLength": 30
+        },
+        "option_datavalue_13": {
+          "type": "text",
+          "sample": "selling_price_list",
+          "maxLength": 36
+        },
+        "option_datavalue_14": {
+          "type": "text",
+          "sample": "price_list_currency",
+          "maxLength": 38
+        },
+        "option_datavalue_15": {
+          "type": "text",
+          "sample": "plc_conversion_rate",
+          "maxLength": 38
+        },
+        "option_datavalue_16": {
+          "type": "text",
+          "sample": "base_net_total",
+          "maxLength": 28
+        },
+        "option_datavalue_17": {
+          "type": "text",
+          "sample": "base_grand_total",
+          "maxLength": 32
+        },
+        "option_datavalue_18": {
+          "type": "text",
+          "sample": "grand_total",
+          "maxLength": 22
+        },
+        "option_datavalue_19": {
+          "type": "text",
+          "sample": "rounded_total",
+          "maxLength": 26
+        },
+        "option_datavalue_20": {
+          "type": "text",
+          "sample": "debit_to",
+          "maxLength": 20
+        },
+        "option_datavalue_21": {
+          "type": "text",
+          "sample": "status",
+          "maxLength": 20
+        },
         "dt_cell_content_header_2_title": {
           "type": "text",
           "sample": "ID",
@@ -13345,6 +14620,11 @@
           "sample": "Filter based on ID",
           "maxLength": 36
         },
+        "dt_input_dataname": {
+          "type": "text",
+          "sample": "ID",
+          "maxLength": 20
+        },
         "text_muted_title_3": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13354,6 +14634,11 @@
           "type": "text",
           "sample": "Filter based on Customer Name",
           "maxLength": 58
+        },
+        "dt_input_dataname_2": {
+          "type": "text",
+          "sample": "Customer Name",
+          "maxLength": 26
         },
         "text_muted_title_4": {
           "type": "text",
@@ -13365,6 +14650,11 @@
           "sample": "Filter based on Customer",
           "maxLength": 48
         },
+        "dt_input_dataname_3": {
+          "type": "text",
+          "sample": "Customer",
+          "maxLength": 20
+        },
         "text_muted_title_5": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13374,6 +14664,11 @@
           "type": "text",
           "sample": "Filter based on Company",
           "maxLength": 46
+        },
+        "dt_input_dataname_4": {
+          "type": "text",
+          "sample": "Company",
+          "maxLength": 20
         },
         "text_muted_title_6": {
           "type": "text",
@@ -13385,6 +14680,11 @@
           "sample": "Filter based on Posting Date",
           "maxLength": 56
         },
+        "dt_input_dataname_5": {
+          "type": "text",
+          "sample": "Posting Date",
+          "maxLength": 24
+        },
         "text_muted_title_7": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13394,6 +14694,11 @@
           "type": "text",
           "sample": "Filter based on Payment Due Date",
           "maxLength": 64
+        },
+        "dt_input_dataname_6": {
+          "type": "text",
+          "sample": "Payment Due Date",
+          "maxLength": 32
         },
         "text_muted_title_8": {
           "type": "text",
@@ -13405,6 +14710,11 @@
           "sample": "Filter based on Grand Total",
           "maxLength": 54
         },
+        "dt_input_dataname_7": {
+          "type": "text",
+          "sample": "Grand Total",
+          "maxLength": 22
+        },
         "text_muted_title_9": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13414,6 +14724,11 @@
           "type": "text",
           "sample": "Filter based on Status",
           "maxLength": 44
+        },
+        "dt_input_dataname_8": {
+          "type": "text",
+          "sample": "Status",
+          "maxLength": 20
         },
         "text_muted_title_10": {
           "type": "text",
@@ -13425,6 +14740,11 @@
           "sample": "Filter based on Currency",
           "maxLength": 48
         },
+        "dt_input_dataname_9": {
+          "type": "text",
+          "sample": "Currency",
+          "maxLength": 20
+        },
         "text_muted_title_11": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13434,6 +14754,11 @@
           "type": "text",
           "sample": "Filter based on Grand Total",
           "maxLength": 54
+        },
+        "dt_input_dataname_10": {
+          "type": "text",
+          "sample": "Grand Total",
+          "maxLength": 22
         },
         "text_muted_title_12": {
           "type": "text",
@@ -13445,6 +14770,11 @@
           "sample": "Filter based on Outstanding Amount",
           "maxLength": 68
         },
+        "dt_input_dataname_11": {
+          "type": "text",
+          "sample": "Outstanding Amount",
+          "maxLength": 36
+        },
         "text_muted_title_13": {
           "type": "text",
           "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
@@ -13454,6 +14784,11 @@
           "type": "text",
           "sample": "Filter based on Is Return (Credit Note)",
           "maxLength": 78
+        },
+        "dt_input_dataname_12": {
+          "type": "text",
+          "sample": "Is Return (Credit Note)",
+          "maxLength": 46
         },
         "text_muted_title_14": {
           "type": "text",
@@ -13470,6 +14805,16 @@
           "sample": "ACC-SINV-2026-01325",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01325",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01325",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title": {
           "type": "text",
           "sample": "Alex",
@@ -13480,7 +14825,27 @@
           "sample": "Alex",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname": {
+          "type": "text",
+          "sample": "Alex",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue": {
+          "type": "text",
+          "sample": "Alex",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13510,6 +14875,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title": {
           "type": "currency",
           "sample": "₹ 300.00",
@@ -13530,6 +14905,16 @@
           "sample": "ACC-SINV-2026-01324",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_2": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01324",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_2": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01324",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_2": {
           "type": "text",
           "sample": "fairooz",
@@ -13540,7 +14925,27 @@
           "sample": "fairooz",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_2": {
+          "type": "text",
+          "sample": "fairooz",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_2": {
+          "type": "text",
+          "sample": "fairooz",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_2": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_2": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_2": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13570,6 +14975,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_2": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_2": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_2": {
           "type": "currency",
           "sample": "₹ 460.00",
@@ -13590,6 +15005,16 @@
           "sample": "ACC-SINV-2026-01323",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_3": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01323",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_3": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01323",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_3": {
           "type": "text",
           "sample": "Paige",
@@ -13600,7 +15025,27 @@
           "sample": "Paige",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_3": {
+          "type": "text",
+          "sample": "Paige",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_3": {
+          "type": "text",
+          "sample": "Paige",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_3": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_3": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_3": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13630,6 +15075,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_3": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_3": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_3": {
           "type": "currency",
           "sample": "₹ 3,120.00",
@@ -13650,6 +15105,16 @@
           "sample": "ACC-SINV-2026-01322",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_4": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01322",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_4": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01322",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_4": {
           "type": "text",
           "sample": "Maria",
@@ -13660,7 +15125,27 @@
           "sample": "Maria",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_4": {
+          "type": "text",
+          "sample": "Maria",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_4": {
+          "type": "text",
+          "sample": "Maria",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_4": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_4": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_4": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13690,6 +15175,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_4": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_4": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_4": {
           "type": "currency",
           "sample": "₹ 310.00",
@@ -13710,6 +15205,16 @@
           "sample": "ACC-SINV-2026-01321",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_5": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01321",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_5": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01321",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_5": {
           "type": "text",
           "sample": "Priya Iyer",
@@ -13720,7 +15225,27 @@
           "sample": "Priya Iyer",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_5": {
+          "type": "text",
+          "sample": "Priya Iyer",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_5": {
+          "type": "text",
+          "sample": "Priya Iyer",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_5": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_5": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_5": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13750,6 +15275,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_5": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_5": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_5": {
           "type": "currency",
           "sample": "₹ 780.00",
@@ -13770,6 +15305,16 @@
           "sample": "ACC-SINV-2026-01320",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_6": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01320",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_6": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01320",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_6": {
           "type": "text",
           "sample": "Shahzad",
@@ -13780,7 +15325,27 @@
           "sample": "Shahzad",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_6": {
+          "type": "text",
+          "sample": "Shahzad",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_6": {
+          "type": "text",
+          "sample": "Shahzad",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_6": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_6": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_6": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13810,6 +15375,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_6": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_6": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_6": {
           "type": "currency",
           "sample": "₹ 845.00",
@@ -13830,6 +15405,16 @@
           "sample": "ACC-SINV-2026-01319",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_7": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01319",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_7": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01319",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_7": {
           "type": "text",
           "sample": "fairooz",
@@ -13840,7 +15425,27 @@
           "sample": "fairooz - 1",
           "maxLength": 22
         },
+        "dt_cell_content_col_4_dataname_7": {
+          "type": "text",
+          "sample": "fairooz - 1",
+          "maxLength": 22
+        },
+        "dt_cell_content_col_4_datavalue_7": {
+          "type": "text",
+          "sample": "fairooz - 1",
+          "maxLength": 22
+        },
         "dt_cell_content_col_5_title_7": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_7": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_7": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13870,6 +15475,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_7": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_7": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_7": {
           "type": "currency",
           "sample": "₹ 1,170.00",
@@ -13890,6 +15505,16 @@
           "sample": "ACC-SINV-2026-01318",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_8": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01318",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_8": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01318",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_8": {
           "type": "text",
           "sample": "Fairooz",
@@ -13900,7 +15525,27 @@
           "sample": "Fairooz - 2",
           "maxLength": 22
         },
+        "dt_cell_content_col_4_dataname_8": {
+          "type": "text",
+          "sample": "Fairooz - 2",
+          "maxLength": 22
+        },
+        "dt_cell_content_col_4_datavalue_8": {
+          "type": "text",
+          "sample": "Fairooz - 2",
+          "maxLength": 22
+        },
         "dt_cell_content_col_5_title_8": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_8": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_8": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13930,6 +15575,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_8": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_8": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_8": {
           "type": "currency",
           "sample": "₹ 970.00",
@@ -13950,6 +15605,16 @@
           "sample": "ACC-SINV-2026-01317",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_9": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01317",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_9": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01317",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_9": {
           "type": "text",
           "sample": "Beyrooj",
@@ -13960,7 +15625,27 @@
           "sample": "Beyrooj",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_9": {
+          "type": "text",
+          "sample": "Beyrooj",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_9": {
+          "type": "text",
+          "sample": "Beyrooj",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_9": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_9": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_9": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -13990,6 +15675,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_9": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_9": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_9": {
           "type": "currency",
           "sample": "₹ 0.00",
@@ -14010,6 +15705,16 @@
           "sample": "ACC-SINV-2026-01316",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_10": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01316",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_10": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01316",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_10": {
           "type": "text",
           "sample": "Shahzad",
@@ -14020,7 +15725,27 @@
           "sample": "Shahzad",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_10": {
+          "type": "text",
+          "sample": "Shahzad",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_10": {
+          "type": "text",
+          "sample": "Shahzad",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_10": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_10": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_10": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14050,6 +15775,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_10": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_10": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_10": {
           "type": "currency",
           "sample": "₹ 1,006.00",
@@ -14070,6 +15805,16 @@
           "sample": "ACC-SINV-2026-01315",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_11": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01315",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_11": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01315",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_11": {
           "type": "text",
           "sample": "Paige",
@@ -14080,7 +15825,27 @@
           "sample": "Paige",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_11": {
+          "type": "text",
+          "sample": "Paige",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_11": {
+          "type": "text",
+          "sample": "Paige",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_11": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_11": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_11": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14110,6 +15875,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_11": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_11": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_11": {
           "type": "currency",
           "sample": "₹ 3,262.00",
@@ -14130,6 +15905,16 @@
           "sample": "ACC-SINV-2026-01314",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_12": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01314",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_12": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01314",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_12": {
           "type": "text",
           "sample": "Jane",
@@ -14140,7 +15925,27 @@
           "sample": "Jane",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_12": {
+          "type": "text",
+          "sample": "Jane",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_12": {
+          "type": "text",
+          "sample": "Jane",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_12": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_12": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_12": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14170,6 +15975,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_12": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_12": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_12": {
           "type": "currency",
           "sample": "₹ 1,528.00",
@@ -14190,6 +16005,16 @@
           "sample": "ACC-SINV-2026-01313",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_13": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01313",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_13": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01313",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_13": {
           "type": "text",
           "sample": "fairooz",
@@ -14200,7 +16025,27 @@
           "sample": "fairooz",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_13": {
+          "type": "text",
+          "sample": "fairooz",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_13": {
+          "type": "text",
+          "sample": "fairooz",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_13": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_13": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_13": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14230,6 +16075,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_13": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_13": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_13": {
           "type": "currency",
           "sample": "₹ 3,757.00",
@@ -14250,6 +16105,16 @@
           "sample": "ACC-SINV-2026-01312",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_14": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01312",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_14": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01312",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_14": {
           "type": "text",
           "sample": "John",
@@ -14260,7 +16125,27 @@
           "sample": "John",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_14": {
+          "type": "text",
+          "sample": "John",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_14": {
+          "type": "text",
+          "sample": "John",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_14": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_14": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_14": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14290,6 +16175,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_14": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_14": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_14": {
           "type": "currency",
           "sample": "₹ 649.00",
@@ -14310,6 +16205,16 @@
           "sample": "ACC-SINV-2026-01311",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_15": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01311",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_15": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01311",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_15": {
           "type": "text",
           "sample": "Maria",
@@ -14320,7 +16225,27 @@
           "sample": "Maria",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_15": {
+          "type": "text",
+          "sample": "Maria",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_15": {
+          "type": "text",
+          "sample": "Maria",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_15": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_15": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_15": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14350,6 +16275,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_15": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_15": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_15": {
           "type": "currency",
           "sample": "₹ 375.00",
@@ -14370,6 +16305,16 @@
           "sample": "ACC-SINV-2026-01310",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_16": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01310",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_16": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01310",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_16": {
           "type": "text",
           "sample": "swafa",
@@ -14380,7 +16325,27 @@
           "sample": "swafa",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_16": {
+          "type": "text",
+          "sample": "swafa",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_16": {
+          "type": "text",
+          "sample": "swafa",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_16": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_16": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_16": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14410,6 +16375,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_16": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_16": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_16": {
           "type": "currency",
           "sample": "₹ 2,875.00",
@@ -14430,6 +16405,16 @@
           "sample": "ACC-SINV-2026-01309",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_17": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01309",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_17": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01309",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_17": {
           "type": "text",
           "sample": "Swiggy",
@@ -14440,7 +16425,27 @@
           "sample": "Swiggy",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_17": {
+          "type": "text",
+          "sample": "Swiggy",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_17": {
+          "type": "text",
+          "sample": "Swiggy",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_17": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_17": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_17": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14470,6 +16475,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_17": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_17": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_17": {
           "type": "currency",
           "sample": "₹ 3,512.00",
@@ -14490,6 +16505,16 @@
           "sample": "ACC-SINV-2026-01308",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_18": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01308",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_18": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01308",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_18": {
           "type": "text",
           "sample": "Tom",
@@ -14500,7 +16525,27 @@
           "sample": "Tom",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_18": {
+          "type": "text",
+          "sample": "Tom",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_18": {
+          "type": "text",
+          "sample": "Tom",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_18": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_18": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_18": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14530,6 +16575,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_18": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_18": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_18": {
           "type": "currency",
           "sample": "₹ 358.00",
@@ -14550,6 +16605,16 @@
           "sample": "ACC-SINV-2026-01307",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_19": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01307",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_19": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01307",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_19": {
           "type": "text",
           "sample": "Milo",
@@ -14560,7 +16625,27 @@
           "sample": "Milo",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_19": {
+          "type": "text",
+          "sample": "Milo",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_19": {
+          "type": "text",
+          "sample": "Milo",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_19": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_19": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_19": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14590,6 +16675,16 @@
           "sample": "INR",
           "maxLength": 20
         },
+        "dt_cell_content_col_10_dataname_19": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_19": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
         "dt_cell_content_col_11_title_19": {
           "type": "currency",
           "sample": "₹ 918.00",
@@ -14610,6 +16705,16 @@
           "sample": "ACC-SINV-2026-01306",
           "maxLength": 38
         },
+        "dt_cell_content_col_2_dataname_20": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01306",
+          "maxLength": 38
+        },
+        "dt_cell_content_col_2_datavalue_20": {
+          "type": "text",
+          "sample": "ACC-SINV-2026-01306",
+          "maxLength": 38
+        },
         "dt_cell_content_col_3_title_20": {
           "type": "text",
           "sample": "Vaishna",
@@ -14620,7 +16725,27 @@
           "sample": "Vaishna",
           "maxLength": 20
         },
+        "dt_cell_content_col_4_dataname_20": {
+          "type": "text",
+          "sample": "Vaishna",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_4_datavalue_20": {
+          "type": "text",
+          "sample": "Vaishna",
+          "maxLength": 20
+        },
         "dt_cell_content_col_5_title_20": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_dataname_20": {
+          "type": "text",
+          "sample": "URY",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_5_datavalue_20": {
           "type": "text",
           "sample": "URY",
           "maxLength": 20
@@ -14646,6 +16771,16 @@
           "maxLength": 20
         },
         "dt_cell_content_col_10_title_20": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_dataname_20": {
+          "type": "text",
+          "sample": "INR",
+          "maxLength": 20
+        },
+        "dt_cell_content_col_10_datavalue_20": {
           "type": "text",
           "sample": "INR",
           "maxLength": 20
@@ -22006,6 +24141,8 @@
       "title": "Desk form view (Customer)",
       "system": "frappe-desk",
       "html": "pages/desk-form.html",
+      "verifiedAgainstLive": true,
+      "liveReference": "pages/desk-form.png",
       "components": [
         "dock",
         "sidebar",
@@ -22013,6 +24150,28 @@
         "form-sidebar",
         "form-tabs",
         "form-section"
+      ],
+      "variants": [
+        {
+          "file": "pages/desk-form.ar-AED.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-form.dark.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-form.en-EUR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-form.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        }
       ]
     },
     "desk-list": {
@@ -22020,11 +24179,35 @@
       "title": "Desk list view (Customer)",
       "system": "frappe-desk",
       "html": "pages/desk-list.html",
+      "verifiedAgainstLive": true,
+      "liveReference": "pages/desk-list.png",
       "components": [
         "dock",
         "sidebar",
         "page-head",
         "list-view"
+      ],
+      "variants": [
+        {
+          "file": "pages/desk-list.ar-AED.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-list.dark.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-list.en-EUR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/desk-list.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        }
       ]
     },
     "pos-register": {
@@ -22032,6 +24215,8 @@
       "title": "URY POS register (order screen)",
       "system": "ury-pos",
       "html": "pages/pos-register.html",
+      "verifiedAgainstLive": true,
+      "liveReference": "pages/pos-register.png",
       "components": [
         "pos-navbar",
         "pos-category-sidebar",
@@ -22039,6 +24224,63 @@
         "pos-item-grid",
         "pos-cart",
         "pos-bottom-nav"
+      ],
+      "variants": [
+        {
+          "file": "pages/pos-register.ar-AED.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.cafe-USD.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.dark.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.en-EUR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.fine-dine-EUR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.mediterranean-ar-AED.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.mediterranean-ar-SAR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.north-indian-INR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.qsr-USD.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        },
+        {
+          "file": "pages/pos-register.south-indian-INR.html",
+          "verifiedAgainstLive": false,
+          "note": "derived variant (theme/locale/menu); same components, not compared to a live reference"
+        }
       ]
     }
   },

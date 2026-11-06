@@ -478,123 +478,6 @@
   100% { transform: scale(1); }
 }
 :root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
-@keyframes factory-smoke { 
-  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
-  15% { opacity: 1; }
-  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
-}
-@keyframes calculator-digit { 
-  0%, 5% { opacity: 0; }
-  10%, 75% { opacity: 1; }
-  80%, 100% { opacity: 0; }
-}
-@keyframes gantt-bar { 
-  0% { transform: scaleX(0); }
-  25%, 85% { transform: scaleX(1); }
-  100% { transform: scaleX(1); }
-}
-@keyframes cart-roll { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(1.5px); }
-}
-@keyframes cart-load { 
-  0%, 45%, 100% { transform: translateY(0px); }
-  55% { transform: translateY(-1px); }
-  65% { transform: translateY(0px); }
-}
-@keyframes shelf-stock { 
-  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
-  15% { opacity: 1; }
-  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
-  50%, 85% { transform: translateX(0px); opacity: 1; }
-  100% { transform: translateX(0px); opacity: 0; }
-}
-@keyframes asset-hand-drop { 
-  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
-  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
-  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
-  32%, 85% { transform: translateY(0px); opacity: 1; }
-  100% { transform: translateY(0px); opacity: 0; }
-}
-@keyframes plug-cord { 
-  0% { transform: translateY(0px); opacity: 0; }
-  5% { opacity: 1; }
-  28% { transform: translateY(-2.7px); opacity: 1; }
-  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
-}
-@keyframes plug-prong { 
-  0%, 30% { transform: translateY(0px); opacity: 0; }
-  34% { opacity: 1; }
-  55% { transform: translateY(-3.4px); opacity: 1; }
-  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
-}
-@keyframes plug-spark { 
-  0%, 55% { transform: scale(0); opacity: 0; }
-  65% { transform: scale(1.3); opacity: 1; }
-  80% { transform: scale(1); opacity: 1; }
-  92%, 100% { transform: scale(0); opacity: 0; }
-}
-@keyframes briefcase-carry { 
-  0%, 100% { transform: translateY(-1px) rotate(0deg); }
-  25% { transform: translateY(-1.4px) rotate(5deg); }
-  50% { transform: translateY(-1px) rotate(0deg); }
-  75% { transform: translateY(-1.4px) rotate(-5deg); }
-}
-@keyframes tenure-sweep { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes recruitment-scan { 
-  0%, 100% { transform: translate(0px, 0px); }
-  25% { transform: translate(1.4px, -0.8px); }
-  50% { transform: translate(0px, -1.4px); }
-  75% { transform: translate(-1.4px, -0.8px); }
-}
-@keyframes tax-flip { 
-  0%, 15% { transform: scaleX(1); }
-  32.5% { transform: scaleX(0); }
-  50%, 100% { transform: scaleX(1); }
-}
-@keyframes attendance-punch { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(3.2px); }
-}
-@keyframes leaves-swing { 
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(9deg); }
-  75% { transform: rotate(-9deg); }
-}
-@keyframes performance-hop { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.6px); }
-}
-@keyframes payroll-rise { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.8px); }
-}
-@keyframes expenses-swipe { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(-1.8px); }
-}
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
-}
-
-@keyframes bounceIn { 
-  0% { opacity: 0; transform: scale(0.3); }
-  50% { opacity: 1; transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); }
-}
-:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
 @keyframes system-trace { 
   100% { transform: translateX(-13px); }
 }
@@ -724,6 +607,47 @@
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
 }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -780,6 +704,26 @@
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
 }
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
 @keyframes briefcase-carry { 
   0%, 100% { transform: translateY(-1px) rotate(0deg); }
   25% { transform: translateY(-1.4px) rotate(5deg); }
@@ -820,6 +764,62 @@
 @keyframes expenses-swipe { 
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
 }
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">

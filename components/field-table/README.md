@@ -4,7 +4,7 @@ Child table (grid) with rows.
 
 **When to use:** Use for line items.
 
-**Slots people usually change:** `reqd_3` (currency, e.g. "₹ 524.70"), `reqd_4` (currency, e.g. "₹ 524.70"), `reqd_5` (currency, e.g. "₹ 316.80"), `reqd_6` (currency, e.g. "₹ 316.80"), `ellipsis_4` (text, e.g. "SZF: Sizzling Arabian Chicken "), `ellipsis_7` (text, e.g. "GVC: Grilled Veal Chops"). All 37 slots are in `slots.json`.
+**Slots people usually change:** `reqd_3` (currency, e.g. "₹ 524.70"), `reqd_4` (currency, e.g. "₹ 524.70"), `reqd_5` (currency, e.g. "₹ 316.80"), `reqd_6` (currency, e.g. "₹ 316.80"), `ellipsis_4` (text, e.g. "SZF: Sizzling Arabian Chicken "), `ellipsis_7` (text, e.g. "GVC: Grilled Veal Chops"). All 47 slots are in `slots.json`.
 
 **States:** default (none), hover (css-pseudo), focus (css-pseudo). Details and class/attribute changes in `states.json`.
 

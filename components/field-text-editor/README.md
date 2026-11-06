@@ -4,7 +4,7 @@ Rich text editor field with toolbar.
 
 **When to use:** Use for descriptions and notes.
 
-**Slots people usually change:** `text_extra_muted` (text, e.g. "Help: To link to another recor"), `control_label` (text, e.g. "Content"), `tooltip_content` (text, e.g. "content"). All 136 slots are in `slots.json`.
+**Slots people usually change:** `text_extra_muted` (text, e.g. "Help: To link to another recor"), `control_label` (text, e.g. "Content"), `tooltip_content` (text, e.g. "content"). All 261 slots are in `slots.json`.
 
 **States:** default (none), focus (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
 
