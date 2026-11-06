@@ -17,6 +17,8 @@ export const specs = [
     targets: { active: 'a:nth-child(2)' }, prepare: clean, states: { hover: { target: 'a:nth-child(3)' }, focus: { target: 'a:nth-child(3)' } } },
   { id: 'pos-category-tabs', name: 'Menu category tabs (pills)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.flex.items-center.gap-2.overflow-x-auto.overflow-y-hidden', settle: 1500,
     prepare: clean, targets: { all: 'button:nth-child(1)', special: 'button:nth-child(2)' }, states: hover('special') },
+  { id: 'pos-filter-bar', name: 'Order type tabs, search and category pills (filter bar)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.p-4.bg-white.border-b.border-border', settle: 1500,
+    prepare: clean, targets: {}, states: { hover: { target: 'button:nth-child(2)' }, focus: { target: 'button:nth-child(2)' } } },
   { id: 'pos-item-grid', name: 'Menu item grid', group: 'pos', css: CSS, url: '/pos/register', root: CARDS, settle: 2500,
     prepare: async (p) => { await register(p); await clean(p); await trim(10)(p); }, targets: {}, states: { hover: { target: 'div.cursor-pointer' } } },
   { id: 'pos-item-card', name: 'Menu item card', group: 'pos', css: CSS, url: '/pos/register', root: `${CARDS} > div:first-child`, settle: 2500,
@@ -43,3 +45,8 @@ export const specs = [
     prepare: async (p) => { await p.waitForSelector('div.p-6 > .grid > div', { timeout: 15000 }); }, targets: {},
     states: { hover: { target: 'div.cursor-pointer' } } },
 ];
+
+// page-level preparation (used by scripts/pages.mjs to reproduce the exact live state the components were captured in)
+export const prepares = {
+  registerPage: async (p) => { await addFirst(p); await clean(p); await trim(10)(p); await p.waitForTimeout(800); },
+};

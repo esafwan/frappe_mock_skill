@@ -361,6 +361,62 @@
   100% { transform: scale(1); }
 }
 :root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
 @keyframes system-trace { 
   100% { transform: translateX(-13px); }
 }
@@ -373,6 +429,55 @@
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
 }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -469,6 +574,18 @@
 @keyframes expenses-swipe { 
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
 }
 
 @keyframes bounceIn { 
@@ -607,62 +724,6 @@
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
 }
-@keyframes factory-smoke { 
-  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
-  15% { opacity: 1; }
-  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
-}
-@keyframes calculator-digit { 
-  0%, 5% { opacity: 0; }
-  10%, 75% { opacity: 1; }
-  80%, 100% { opacity: 0; }
-}
-@keyframes gantt-bar { 
-  0% { transform: scaleX(0); }
-  25%, 85% { transform: scaleX(1); }
-  100% { transform: scaleX(1); }
-}
-@keyframes cart-roll { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(1.5px); }
-}
-@keyframes cart-load { 
-  0%, 45%, 100% { transform: translateY(0px); }
-  55% { transform: translateY(-1px); }
-  65% { transform: translateY(0px); }
-}
-@keyframes shelf-stock { 
-  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
-  15% { opacity: 1; }
-  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
-  50%, 85% { transform: translateX(0px); opacity: 1; }
-  100% { transform: translateX(0px); opacity: 0; }
-}
-@keyframes asset-hand-drop { 
-  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
-  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
-  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
-  32%, 85% { transform: translateY(0px); opacity: 1; }
-  100% { transform: translateY(0px); opacity: 0; }
-}
-@keyframes plug-cord { 
-  0% { transform: translateY(0px); opacity: 0; }
-  5% { opacity: 1; }
-  28% { transform: translateY(-2.7px); opacity: 1; }
-  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
-}
-@keyframes plug-prong { 
-  0%, 30% { transform: translateY(0px); opacity: 0; }
-  34% { opacity: 1; }
-  55% { transform: translateY(-3.4px); opacity: 1; }
-  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
-}
-@keyframes plug-spark { 
-  0%, 55% { transform: scale(0); opacity: 0; }
-  65% { transform: scale(1.3); opacity: 1; }
-  80% { transform: scale(1); opacity: 1; }
-  92%, 100% { transform: scale(0); opacity: 0; }
-}
 @keyframes briefcase-carry { 
   0%, 100% { transform: translateY(-1px) rotate(0deg); }
   25% { transform: translateY(-1.4px) rotate(5deg); }
@@ -703,26 +764,6 @@
 @keyframes expenses-swipe { 
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
-}
-
-@keyframes bounceIn { 
-  0% { opacity: 0; transform: scale(0.3); }
-  50% { opacity: 1; transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); }
-}
-:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
 }
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
@@ -779,47 +820,6 @@
   65% { transform: scale(1.3); opacity: 1; }
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
-}
-@keyframes briefcase-carry { 
-  0%, 100% { transform: translateY(-1px) rotate(0deg); }
-  25% { transform: translateY(-1.4px) rotate(5deg); }
-  50% { transform: translateY(-1px) rotate(0deg); }
-  75% { transform: translateY(-1.4px) rotate(-5deg); }
-}
-@keyframes tenure-sweep { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes recruitment-scan { 
-  0%, 100% { transform: translate(0px, 0px); }
-  25% { transform: translate(1.4px, -0.8px); }
-  50% { transform: translate(0px, -1.4px); }
-  75% { transform: translate(-1.4px, -0.8px); }
-}
-@keyframes tax-flip { 
-  0%, 15% { transform: scaleX(1); }
-  32.5% { transform: scaleX(0); }
-  50%, 100% { transform: scaleX(1); }
-}
-@keyframes attendance-punch { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(3.2px); }
-}
-@keyframes leaves-swing { 
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(9deg); }
-  75% { transform: rotate(-9deg); }
-}
-@keyframes performance-hop { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.6px); }
-}
-@keyframes payroll-rise { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.8px); }
-}
-@keyframes expenses-swipe { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(-1.8px); }
 }
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">
@@ -993,72 +993,72 @@
       <circle cx="18" cy="19" r="3"></circle>
       <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
       <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
-    </symbol></svg><div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+    </symbol></svg><div class="dock" id="desk-dock" role="navigation" aria-label="التطبيقات" aria-hidden="false" data-ui="dock">
 			<div class="dock-logo">
-				<a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1">
+				<a class="shell-header" href="#" aria-label="جميع التطبيقات" data-ui="dock.link-1">
 					<div class="header-logo"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMC42MjIwNyAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03Mi4wNTA2IDBIMjkuMTkzNUMxMy40MTM5IDAgMC42MjIwNyAxMi43OTE5IDAuNjIyMDcgMjguNTcxNFY3MS40Mjg2QzAuNjIyMDcgODcuMjA4MSAxMy40MTM5IDEwMCAyOS4xOTM1IDEwMEg3Mi4wNTA2Qzg3LjgzMDIgMTAwIDEwMC42MjIgODcuMjA4MSAxMDAuNjIyIDcxLjQyODZWMjguNTcxNEMxMDAuNjIyIDEyLjc5MTkgODcuODMwMiAwIDcyLjA1MDYgMFoiIGZpbGw9IiMwMDg5RkYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02OC4wMDY3IDMyLjk0NUg2Ni4zMjkzSDQ0LjUyMzVIMzMuNjIwNVYyMy45OTlINjguMDA2N1YzMi45NDVaTTQ0LjUyMzMgNTMuOTEyMlY2Ni4yMTI5SDY4LjI4NjFWNzUuMTU4OUgzMy42MjA0VjQ0Ljk2NjJINDQuNTIzM0g2Ni4zMjkxVjUzLjkxMjJINDQuNTIzM1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="ERPNext"></div>
 					<div class="title-container">
 						<div class="header-title">ERPNext</div>
 					</div>
 				</a>
 			</div>
-			<div class="dock-items"><button class="dock-item  " aria-label="Setup" data-ui="dock.button-2">
+			<div class="dock-items"><button class="dock-item  " aria-label="الإعداد" data-ui="dock.button-2">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-sliders-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Setup</span>
-		</button><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-3">
+			<span class="dock-item-label">الإعداد</span>
+		</button><button class="dock-item  " aria-label="الحسابات" data-ui="dock.button-3">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-calculator-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Accounts</span>
-		</button><button class="dock-item active " aria-label="Selling" aria-current="page" data-ui="dock.button-4">
+			<span class="dock-item-label">الحسابات</span>
+		</button><button class="dock-item active " aria-label="المبيعات" aria-current="page" data-ui="dock.button-4">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-storefront-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Selling</span>
-		</button><button class="dock-item  " aria-label="Buying" data-ui="dock.button-5">
+			<span class="dock-item-label">المبيعات</span>
+		</button><button class="dock-item  " aria-label="المشتريات" data-ui="dock.button-5">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-shopping-cart-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Buying</span>
+			<span class="dock-item-label">المشتريات</span>
 		</button><button class="dock-item  " aria-label="المخزون" data-ui="dock.button-6">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-shelf-rack-soft">
 			</use>
 		</svg></span>
 			<span class="dock-item-label">المخزون</span>
-		</button><button class="dock-item  " aria-label="Manufacturing" data-ui="dock.button-7">
+		</button><button class="dock-item  " aria-label="التصنيع" data-ui="dock.button-7">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-factory-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Manufacturing</span>
-		</button><button class="dock-item  " aria-label="Projects" data-ui="dock.button-8">
+			<span class="dock-item-label">التصنيع</span>
+		</button><button class="dock-item  " aria-label="المشاريع" data-ui="dock.button-8">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-gantt-chart-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Projects</span>
-		</button><button class="dock-item  " aria-label="Assets" data-ui="dock.button-9">
+			<span class="dock-item-label">المشاريع</span>
+		</button><button class="dock-item  " aria-label="الأصول" data-ui="dock.button-9">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-asset-hand-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Assets</span>
-		</button><button class="dock-item  " aria-label="Quality" data-ui="dock.button-10">
+			<span class="dock-item-label">الأصول</span>
+		</button><button class="dock-item  " aria-label="الجودة" data-ui="dock.button-10">
 			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
 			<use class="" href="#icon-quality-seal-soft">
 			</use>
 		</svg></span>
-			<span class="dock-item-label">Quality</span>
+			<span class="dock-item-label">الجودة</span>
 		</button></div>
 			<div class="dock-user" aria-haspopup="menu" aria-expanded="false">
-				<button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-11">
+				<button class="dock-item dock-user-button" aria-label="قائمة المستخدم" data-ui="dock.button-11">
 					<span class="avatar avatar-medium">
 			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">
 					A
@@ -1070,7 +1070,7 @@
 <div class="body-sidebar-container expanded" style="" data-ui="sidebar">   <div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"> <div class="header-logo"><svg class="icon  icon-md" style="" aria-hidden="true">
 			<use class="" href="#icon-storefront-soft">
 			</use>
-		</svg></div> <div class="title-container">     <div class="sidebar-item-label header-title" data-name-style="">Selling</div> </div> <button class="btn-reset drop-icon" aria-label="Sidebar Menu" data-ui="sidebar.button-2">     <svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg></div> <div class="title-container">     <div class="sidebar-item-label header-title" data-name-style="">المبيعات</div> </div> <button class="btn-reset drop-icon" aria-label="قائمة الشريط الجانبي" data-ui="sidebar.button-2">     <svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-down">
 			</use>
 		</svg> </button> </a>        <div class="standard-items-band"><div class="navbar-modal-search-mobile" item-name="Search" data-id="Search">     <div class="standard-sidebar-item ">                       <a class="item-anchor" data-link-type="" data-ui="sidebar.link-3">                                      <span class="sidebar-item-icon" item-icon="search">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
@@ -1091,13 +1091,13 @@
 		</svg>                     </span>                                  <span class="sidebar-item-label">العميل</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Quotation" data-id="Quotation">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-8">                                      <span class="sidebar-item-icon" item-icon="file-text">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-file-text">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Quotation</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Order" data-id="Sales Order">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-9">                                      <span class="sidebar-item-icon" item-icon="shopping-cart">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">عرض سعر</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Order" data-id="Sales Order">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-9">                                      <span class="sidebar-item-icon" item-icon="shopping-cart">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-shopping-cart">
 			</use>
 		</svg>                     </span>                                  <span class="sidebar-item-label">أمر بيع</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Delivery Note" data-id="Delivery Note">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-10">                                      <span class="sidebar-item-icon" item-icon="truck">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-truck">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Delivery Note</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Invoice" data-id="Sales Invoice">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-11">                                      <span class="sidebar-item-icon" item-icon="receipt-text">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">إشعار التسليم</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Invoice" data-id="Sales Invoice">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-11">                                      <span class="sidebar-item-icon" item-icon="receipt-text">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-receipt-text">
 			</use>
 		</svg>                     </span>                                  <span class="sidebar-item-label">فاتورة مبيعات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  section-item" item-name="Reports" data-id="Reports">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-12">                                      <span class="sidebar-item-icon" item-icon="sheet">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
@@ -1106,39 +1106,39 @@
 		</svg>                     </span>                                  <span class="sidebar-item-label">التقارير</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-13"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-right" stroke="#7c7c7c">
 			</use>
-		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Sales Analytics" data-id="Sales Analytics">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-14">                                  <span class="sidebar-item-label">Sales Analytics</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Register" data-id="Sales Register">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-15">                                  <span class="sidebar-item-label">Sales Register</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Accounts Receivable" data-id="Accounts Receivable">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-16">                                  <span class="sidebar-item-label">Accounts Receivable</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Accounts Receivable Summary" data-id="Accounts Receivable Summary">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-17">                                  <span class="sidebar-item-label">Accounts Receivable Summary</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Gross Profit" data-id="Gross Profit">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-18">                                  <span class="sidebar-item-label">Gross Profit</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="Items" data-id="Items">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-19">                                      <span class="sidebar-item-icon" item-icon="package">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Sales Analytics" data-id="Sales Analytics">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-14">                                  <span class="sidebar-item-label">تحليلات المبيعات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Register" data-id="Sales Register">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-15">                                  <span class="sidebar-item-label">سجل المبيعات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Accounts Receivable" data-id="Accounts Receivable">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-16">                                  <span class="sidebar-item-label">الذمم المدينة</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Accounts Receivable Summary" data-id="Accounts Receivable Summary">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-17">                                  <span class="sidebar-item-label">ملخص الذمم المدينة</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Gross Profit" data-id="Gross Profit">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Report" data-ui="sidebar.link-18">                                  <span class="sidebar-item-label">إجمالي الربح</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="Items" data-id="Items">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-19">                                      <span class="sidebar-item-icon" item-icon="package">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-package">
 			</use>
 		</svg>                     </span>                                  <span class="sidebar-item-label">الأصناف</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-20"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-right" stroke="#7c7c7c">
 			</use>
-		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Item" data-id="Item">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-21">                                  <span class="sidebar-item-label">الصنف</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Price List" data-id="Price List">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-22">                                  <span class="sidebar-item-label">Price List</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Pricing Rule" data-id="Pricing Rule">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-23">                                  <span class="sidebar-item-label">Pricing Rule</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="POS" data-id="POS">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-24">                                      <span class="sidebar-item-icon" item-icon="monitor">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Item" data-id="Item">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-21">                                  <span class="sidebar-item-label">الصنف</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Price List" data-id="Price List">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-22">                                  <span class="sidebar-item-label">قائمة الأسعار</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Pricing Rule" data-id="Pricing Rule">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-23">                                  <span class="sidebar-item-label">قاعدة التسعير</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="POS" data-id="POS">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-24">                                      <span class="sidebar-item-icon" item-icon="monitor">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-monitor">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">POS</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-25"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">نقطة البيع</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-25"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-right" stroke="#7c7c7c">
 			</use>
-		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="POS" data-id="POS">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-26">                                  <span class="sidebar-item-label">POS</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="POS Profile" data-id="POS Profile">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-27">                                  <span class="sidebar-item-label">POS Profile</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="POS Invoice" data-id="POS Invoice">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-28">                                  <span class="sidebar-item-label">فاتورة نقاط البيع</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="Setup" data-id="Setup">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-29">                                      <span class="sidebar-item-icon" item-icon="database">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="POS" data-id="POS">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-26">                                  <span class="sidebar-item-label">نقطة البيع</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="POS Profile" data-id="POS Profile">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-27">                                  <span class="sidebar-item-label">ملف نقطة البيع</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="POS Invoice" data-id="POS Invoice">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-28">                                  <span class="sidebar-item-label">فاتورة نقاط البيع</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div><div class="sidebar-item-container  section-item" item-name="Setup" data-id="Setup">     <div class="standard-sidebar-item indent">                       <a class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-29">                                      <span class="sidebar-item-icon" item-icon="database">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-database">
 			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Setup</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-30"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
+		</svg>                     </span>                                  <span class="sidebar-item-label">الإعداد</span>                                                   <div class="sidebar-item-control"><button class="btn-reset drop-icon" data-state="closed" data-ui="sidebar.button-30"><svg class="icon  icon-sm" stroke="#7c7c7c" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-right" stroke="#7c7c7c">
 			</use>
-		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Customer Group" data-id="Customer Group">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-31">                                  <span class="sidebar-item-label">Customer Group</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Territory" data-id="Territory">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-32">                                  <span class="sidebar-item-label">Territory</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Person" data-id="Sales Person">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-33">                                  <span class="sidebar-item-label">Sales Person</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Settings" data-id="Settings">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-34">                                  <span class="sidebar-item-label">الإعدادات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div></div>    </div>    <div class="body-sidebar-cards"></div>    <div class="body-sidebar-bottom">     <div class="promotional-banners" style="display: none;"></div>     <div class="nav-item dropdown-navbar-user dropdown-mobile mt-3" aria-haspopup="menu" aria-expanded="false">      <a class="align-center btn-reset flex nav-link sidebar-user-button" style="width: 100%; min-height: 40px;" aria-label="User Menu" data-ui="sidebar.link-35">       <div> <span class="avatar avatar-medium" title="Administrator">
+		</svg></button></div>                              </a>              </div>     <div class="sidebar-child-item nested-container hidden"><div class="sidebar-item-container  " item-name="Customer Group" data-id="Customer Group">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-31">                                  <span class="sidebar-item-label">مجموعة العملاء</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Territory" data-id="Territory">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-32">                                  <span class="sidebar-item-label">المنطقة</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Sales Person" data-id="Sales Person">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-33">                                  <span class="sidebar-item-label">مندوب المبيعات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-item-container  " item-name="Settings" data-id="Settings">     <div class="standard-sidebar-item ">                       <a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-34">                                  <span class="sidebar-item-label">الإعدادات</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div> </div></div>    </div>    <div class="body-sidebar-cards"></div>    <div class="body-sidebar-bottom">     <div class="promotional-banners" style="display: none;"></div>     <div class="nav-item dropdown-navbar-user dropdown-mobile mt-3" aria-haspopup="menu" aria-expanded="false">      <a class="align-center btn-reset flex nav-link sidebar-user-button" style="width: 100%; min-height: 40px;" aria-label="قائمة المستخدم" data-ui="sidebar.link-35">       <div> <span class="avatar avatar-medium" title="Administrator">
 			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
 					A
 			</div>
-		</span> </div>              <div class="avatar-name-email overflow-hidden" style="margin-left: 8px;">        <span class="d-block text-truncate">         Administrator        </span>        <span class="d-block text-truncate">         admin@example.com        </span>       </div>      </a>     </div>    </div>   </div>      <div class="sidebar-edge" aria-hidden="true"></div>   <button class="btn-reset sidebar-collapse-arrow" type="button" title="Collapse sidebar" aria-label="Collapse sidebar" data-ui="sidebar.button-36">    <svg class="icon current-color icon-xs" stroke="currentColor" style="" aria-hidden="true">
+		</span> </div>              <div class="avatar-name-email overflow-hidden" style="margin-left: 8px;">        <span class="d-block text-truncate">         Administrator        </span>        <span class="d-block text-truncate">         admin@example.com        </span>       </div>      </a>     </div>    </div>   </div>      <div class="sidebar-edge" aria-hidden="true"></div>   <button class="btn-reset sidebar-collapse-arrow" type="button" title="طي الشريط الجانبي" aria-label="طي الشريط الجانبي" data-ui="sidebar.button-36">    <svg class="icon current-color icon-xs" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-left">
 			</use>
 		</svg>   </button>   <div class="overlay" style="z-index: 1021;"></div>  <div class="sidebar-panel hidden sidebar-panel-notifications"><div class="panel-header">
 			<div class="panel-header-top">
 				<div class="panel-title">الإشعارات</div>
 				<div class="panel-header-actions">
-					<div class="panel-actions"><span class="notification-settings" title="" data-original-title="Notification Settings"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+					<div class="panel-actions"><span class="notification-settings" title="" data-original-title="إعدادات الإشعارات"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-settings">
 			</use>
-		</svg></span><span class="mark-all-read" title="" data-original-title="Mark all as read"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg></span><span class="mark-all-read" title="" data-original-title="تحديد الكل كمقروء"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-check-check">
 			</use>
 		</svg></span></div>
@@ -1149,7 +1149,7 @@
 		</svg>
 			</span></div>
 			</div>
-			<div class="panel-items"><div class="es-tab-buttons" role="radiogroup" aria-label="Notification categories"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="sidebar.button-38">All</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="sidebar.button-39">Events</button></div></div>
+			<div class="panel-items"><div class="es-tab-buttons" role="radiogroup" aria-label="فئات الإشعارات"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="sidebar.button-38">الكل</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="sidebar.button-39">الأحداث</button></div></div>
 		</div><div class="sidebar-panel-body"><div class="notification-list-body">
 				<div class="panel-notifications"><div style=""><a class="recent-item notification-item unread" href="#" data-name="r67s8bvbc9" data-ui="sidebar.link-40">
 				<div class="notification-body">
@@ -1355,7 +1355,7 @@
 			</div>
 		</span>
 					<div class="message">
-			<div>Day close completed</div>
+			<div>تم إقفال اليوم</div>
 			<div class="notification-timestamp text-muted">
 				<span class="frappe-timestamp " data-timestamp="2026-10-20 10:59:36.135047" title="20-10-2026 10:59:36"></span>
 			</div>
@@ -1432,31 +1432,31 @@
 		</div>
 				</div>
 			</a><a class="list-footer" href="#" data-ui="sidebar.link-60">
-						<div class="full-log-btn">See all Activity</div>
+						<div class="full-log-btn">عرض كل النشاط</div>
 					</a></div></div>
 				<div class="panel-events"><div style="display: none;"></div></div>
 			</div></div></div></div>
-<div class="main-section"><div id="body"><div id="page-Customer" class="content page-container editable-form"><div class="page-head flex" data-ui="form-title">  <div class="container">   <div class="row flex-nowrap align-center page-head-content justify-between">    <div class="page-title">     <button class="btn-reset sidebar-toggle-btn navbar-brand" data-ui="form-title.button-1">      <svg class="icon icon-md sidebar-toggle-placeholder">       <use href="#icon-menu"></use>      </svg>      <span class="sidebar-toggle-icon">       <svg class="icon icon-md">        <use href="#icon-panel-left-close">        </use>       </svg>      </span>     </button>     <div class="flex title-area ellipsis editable-title" data-ui="form-title.title">      <nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumb"><ol><li><a class="es-breadcrumbs__item" href="#" data-ui="form-title.link-2"><span class="es-breadcrumbs__label">العميل</span></a></li><li><span class="es-breadcrumbs__item" title="Direct" aria-current="page"><span class="es-breadcrumbs__label">Direct</span></span></li></ol></nav>      <button class="btn btn-default more-button hide" data-ui="form-title.button-3">       <svg class="icon icon-sm">        <use href="#icon-ellipsis">        </use>       </svg>      </button>      <span class="es-badge page-indicator-pill" data-testid="page-status" data-theme="blue" data-ui="form-title.status"><span>مفعل</span></span>     </div>    </div>    <div class="align-center flex standard-items-section">     <button id="small-search-button" class="btn-reset search-bar navbar-modal-search-mobile hidden" aria-label="بحث" data-ui="form-title.button-4">      <span class="search-icon">       <svg class="icon icon-sm"><use href="#icon-search"></use></svg>      </span>     </button>     <div class="flex col page-actions justify-content-end "><div class="form-viewers d-flex" data-original-title="" title=""></div>            <div class="filters flex"></div>      <div class="custom-actions hidden-xs hidden-md"><div class="inner-group-button" data-label="View"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-5"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">View</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+<div class="main-section"><div id="body"><div id="page-Customer" class="content page-container editable-form"><div class="page-head flex" data-ui="form-title">  <div class="container">   <div class="row flex-nowrap align-center page-head-content justify-between">    <div class="page-title">     <button class="btn-reset sidebar-toggle-btn navbar-brand" data-ui="form-title.button-1">      <svg class="icon icon-md sidebar-toggle-placeholder">       <use href="#icon-menu"></use>      </svg>      <span class="sidebar-toggle-icon">       <svg class="icon icon-md">        <use href="#icon-panel-left-close">        </use>       </svg>      </span>     </button>     <div class="flex title-area ellipsis editable-title" data-ui="form-title.title">      <nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="مسار التنقل"><ol><li><a class="es-breadcrumbs__item" href="#" data-ui="form-title.link-2"><span class="es-breadcrumbs__label">العميل</span></a></li><li><span class="es-breadcrumbs__item" title="مباشر" aria-current="page"><span class="es-breadcrumbs__label">مباشر</span></span></li></ol></nav>      <button class="btn btn-default more-button hide" data-ui="form-title.button-3">       <svg class="icon icon-sm">        <use href="#icon-ellipsis">        </use>       </svg>      </button>      <span class="es-badge page-indicator-pill" data-testid="page-status" data-theme="blue" data-ui="form-title.status"><span>مفعل</span></span>     </div>    </div>    <div class="align-center flex standard-items-section">     <button id="small-search-button" class="btn-reset search-bar navbar-modal-search-mobile hidden" aria-label="بحث" data-ui="form-title.button-4">      <span class="search-icon">       <svg class="icon icon-sm"><use href="#icon-search"></use></svg>      </span>     </button>     <div class="flex col page-actions justify-content-end "><div class="form-viewers d-flex" data-original-title="" title=""></div>            <div class="filters flex"></div>      <div class="custom-actions hidden-xs hidden-md"><div class="inner-group-button" data-label="View"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-5"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">عرض</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
 		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Accounts%20Receivable" data-ui="form-title.link-6">Accounts Receivable</a><a class="dropdown-item" href="#" data-label="Accounting%20Ledger" data-ui="form-title.link-7">Accounting Ledger</a></div>
-				</div><div class="inner-group-button" data-label="Create"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-8"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Create</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Accounts%20Receivable" data-ui="form-title.link-6">الذمم المدينة</a><a class="dropdown-item" href="#" data-label="Accounting%20Ledger" data-ui="form-title.link-7">دفتر الأستاذ</a></div>
+				</div><div class="inner-group-button" data-label="Create"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-8"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">إنشاء</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
 		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Quotation" data-ui="form-title.link-9">Quotation</a><a class="dropdown-item" href="#" data-label="Sales%20Order" data-ui="form-title.link-10">أمر بيع</a><a class="dropdown-item" href="#" data-label="Opportunity" data-ui="form-title.link-11">Opportunity</a><a class="dropdown-item" href="#" data-label="Payment%20Entry" data-ui="form-title.link-12">Payment Entry</a><a class="dropdown-item" href="#" data-label="Pricing%20Rule" data-ui="form-title.link-13">Pricing Rule</a><a class="dropdown-item" href="#" data-label="Bank%20Account" data-ui="form-title.link-14">Bank Account</a></div>
+					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Quotation" data-ui="form-title.link-9">عرض سعر</a><a class="dropdown-item" href="#" data-label="Sales%20Order" data-ui="form-title.link-10">أمر بيع</a><a class="dropdown-item" href="#" data-label="Opportunity" data-ui="form-title.link-11">فرصة</a><a class="dropdown-item" href="#" data-label="Payment%20Entry" data-ui="form-title.link-12">قيد الدفع</a><a class="dropdown-item" href="#" data-label="Pricing%20Rule" data-ui="form-title.link-13">قاعدة التسعير</a><a class="dropdown-item" href="#" data-label="Bank%20Account" data-ui="form-title.link-14">الحساب البنكي</a></div>
 				</div><div class="inner-group-button" data-label="Actions"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-15"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">إجراءات</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
 		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Get%20Customer%20Group%20Details" data-ui="form-title.link-16">Get Customer Group Details</a></div>
-				</div></div>      <div class="custom-mobile-actions"></div>      <div class="standard-actions flex">       <span class="page-icon-group hidden-xs hidden-sm"><button class="text-muted btn btn-default prev-doc icon-btn" title="" data-original-title="Previous Document" data-ui="form-title.button-17">
+					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Get%20Customer%20Group%20Details" data-ui="form-title.link-16">جلب تفاصيل مجموعة العملاء</a></div>
+				</div></div>      <div class="custom-mobile-actions"></div>      <div class="standard-actions flex">       <span class="page-icon-group hidden-xs hidden-sm"><button class="text-muted btn btn-default prev-doc icon-btn" title="" data-original-title="المستند السابق" data-ui="form-title.button-17">
 				<svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-left">
 			</use>
 		</svg>
-			</button><button class="text-muted btn btn-default next-doc icon-btn" title="" data-original-title="Next Document" data-ui="form-title.button-18">
+			</button><button class="text-muted btn btn-default next-doc icon-btn" title="" data-original-title="المستند التالي" data-ui="form-title.button-18">
 				<svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-right">
 			</use>
@@ -1467,47 +1467,47 @@
 		</svg></button>                <ul class="dropdown-menu dropdown-menu-right" role="presentation"><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-19">
 						
-						<span class="menu-item-label" data-label="View%20%3E%20Accounts%20Receivable">View > Accounts Receivable</span>
+						<span class="menu-item-label" data-label="View%20%3E%20Accounts%20Receivable">عرض > الذمم المدينة</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-20">
 						
-						<span class="menu-item-label" data-label="View%20%3E%20Accounting%20Ledger">View > Accounting Ledger</span>
+						<span class="menu-item-label" data-label="View%20%3E%20Accounting%20Ledger">عرض > دفتر الأستاذ</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-21">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Quotation">Create > Quotation</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Quotation">إنشاء > عرض سعر</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-22">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Sales%20Order">Create > Sales Order</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Sales%20Order">إنشاء > أمر مبيعات</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-23">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Opportunity">Create > Opportunity</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Opportunity">إنشاء > فرصة</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-24">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Payment%20Entry">Create > Payment Entry</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Payment%20Entry">إنشاء > قيد دفع</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-25">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Pricing%20Rule">Create > Pricing Rule</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Pricing%20Rule">إنشاء > قاعدة تسعير</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-26">
 						
-						<span class="menu-item-label" data-label="Create%20%3E%20Bank%20Account">Create > Bank Account</span>
+						<span class="menu-item-label" data-label="Create%20%3E%20Bank%20Account">إنشاء > حساب بنكي</span>
 					</a>
 				</li><li class="user-action hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-27">
 						
-						<span class="menu-item-label" data-label="Actions%20%3E%20Get%20Customer%20Group%20Details">Actions > Get Customer Group Details</span>
+						<span class="menu-item-label" data-label="Actions%20%3E%20Get%20Customer%20Group%20Details">الإجراءات > جلب تفاصيل مجموعة العملاء</span>
 					</a>
 				</li><li class="dropdown-divider user-action visible-xs"></li><li class="hidden-xl">
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-28">
@@ -1517,7 +1517,7 @@
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-29">
 						
-						<span class="menu-item-label" data-label="Toggle%20Sidebar">Toggle Sidebar</span>
+						<span class="menu-item-label" data-label="Toggle%20Sidebar">تبديل الشريط الجانبي</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-30">
@@ -1528,12 +1528,12 @@
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-31">
 						
-						<span class="menu-item-label" data-label="Rename">Rename</span>
+						<span class="menu-item-label" data-label="Rename">إعادة تسمية</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-32">
 						
-						<span class="menu-item-label" data-label="Reload">Reload</span>
+						<span class="menu-item-label" data-label="Reload">إعادة تحميل</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-33">
@@ -1544,47 +1544,47 @@
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-34">
 						
-						<span class="menu-item-label" data-label="Duplicate">Duplicate</span>
+						<span class="menu-item-label" data-label="Duplicate">تكرار</span>
 						<span class="menu-item-shortcut">⇧D</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-35">
 						
-						<span class="menu-item-label" data-label="New%20Customer">New Customer</span>
+						<span class="menu-item-label" data-label="New%20Customer">عميل جديد</span>
 						<span class="menu-item-shortcut">⌘B</span>
 					</a>
 				</li><li class="dropdown-divider"></li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-36">
 						
-						<span class="menu-item-label" data-label="Jump%20to%20field">Jump to field</span>
+						<span class="menu-item-label" data-label="Jump%20to%20field">انتقل إلى الحقل</span>
 						<span class="menu-item-shortcut">⌘J</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-37">
 						
-						<span class="menu-item-label" data-label="Show%20Links">Show Links</span>
+						<span class="menu-item-label" data-label="Show%20Links">عرض الروابط</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-38">
 						
-						<span class="menu-item-label" data-label="Copy%20to%20Clipboard">Copy to Clipboard</span>
+						<span class="menu-item-label" data-label="Copy%20to%20Clipboard">نسخ إلى الحافظة</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-39">
 						
-						<span class="menu-item-label" data-label="Remind%20Me">Remind Me</span>
+						<span class="menu-item-label" data-label="Remind%20Me">ذكّرني</span>
 						<span class="menu-item-shortcut">⇧R</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-40">
 						
-						<span class="menu-item-label" data-label="Undo">Undo</span>
+						<span class="menu-item-label" data-label="Undo">تراجع</span>
 						<span class="menu-item-shortcut">⌘Z</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-41">
 						
-						<span class="menu-item-label" data-label="Redo">Redo</span>
+						<span class="menu-item-label" data-label="Redo">إعادة</span>
 						<span class="menu-item-shortcut">⌘Y</span>
 					</a>
 				</li><li class="dropdown-divider"></li><li>
@@ -1595,34 +1595,34 @@
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-43">
 						
-						<span class="menu-item-label" data-label="Customize">Customize</span>
+						<span class="menu-item-label" data-label="Customize">تخصيص</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-44">
 						
-						<span class="menu-item-label" data-label="Edit%20DocType">Edit DocType</span>
+						<span class="menu-item-label" data-label="Edit%20DocType">تعديل نوع المستند</span>
 					</a>
 				</li><li>
 					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-45">
 						
-						<span class="menu-item-label" data-label="Documentation">Documentation</span>
+						<span class="menu-item-label" data-label="Documentation">الوثائق</span>
 					</a>
 				</li></ul>       </div>       <button class="es-button secondary-action hide" type="button" data-ui="form-title.button-46"><span class="es-spinner" aria-hidden="true"></span></button>       <div class="actions-btn-group hide">        <button class="es-button" type="button" data-variant="solid" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-47"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label hidden-xs actions-btn-group-label" data-label="Actions"><span><span class="alt-underline">A</span>ctions</span></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
-		</svg></button>        <ul class="dropdown-menu dropdown-menu-right" role="presentation">        </ul>       </div>       <button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form-title.save"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">Saving...</span><span class="es-button__label" data-label="Save"><span><span class="alt-underline">S</span>ave</span></span></button>      </div>     </div>    </div>   </div>  </div> </div>
+		</svg></button>        <ul class="dropdown-menu dropdown-menu-right" role="presentation">        </ul>       </div>       <button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form-title.save"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">جارٍ الحفظ...</span><span class="es-button__label" data-label="Save"><span><span class="alt-underline">S</span>ave</span></span></button>      </div>     </div>    </div>   </div>  </div> </div>
 <div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main layout-two-column"><div class="layout-main-section-wrapper"><div class="layout-main-section"><div><div class="std-form-layout"><div class="form-layout"><div class="form-page"><div class="form-tabs-list" data-ui="form-tabs">
 				<ul class="nav form-tabs" id="form-tabs" role="tablist"><li class="nav-item show">
 				<button class="nav-link active" id="customer-__details-tab" data-toggle="tab" data-fieldname="__details" type="button" role="tab" aria-controls="customer-__details" data-ui="form-tabs.button-1">
-						Details
+						التفاصيل
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-contact_and_address_tab-tab" data-toggle="tab" data-fieldname="contact_and_address_tab" type="button" role="tab" aria-controls="customer-contact_and_address_tab" data-ui="form-tabs.button-2">
-						Address &amp; Contact
+						العنوان والاتصال
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-accounting_tab-tab" data-toggle="tab" data-fieldname="accounting_tab" type="button" role="tab" aria-controls="customer-accounting_tab" data-ui="form-tabs.button-3">
-						Accounting
+						المحاسبة
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-tax_tab-tab" data-toggle="tab" data-fieldname="tax_tab" type="button" role="tab" aria-controls="customer-tax_tab" data-ui="form-tabs.button-4">
@@ -1634,19 +1634,19 @@
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-sales_team_tab-tab" data-toggle="tab" data-fieldname="sales_team_tab" type="button" role="tab" aria-controls="customer-sales_team_tab" data-ui="form-tabs.button-6">
-						Sales Team
+						فريق المبيعات
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-portal_users_tab-tab" data-toggle="tab" data-fieldname="portal_users_tab" type="button" role="tab" aria-controls="customer-portal_users_tab" data-ui="form-tabs.button-7">
-						Portal Users
+						مستخدمو البوابة
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-more_info_tab-tab" data-toggle="tab" data-fieldname="more_info_tab" type="button" role="tab" aria-controls="customer-more_info_tab" data-ui="form-tabs.button-8">
-						More Info
+						مزيد من المعلومات
 				</button>
 			</li><li class="nav-item show">
 				<button class="nav-link" id="customer-connections_tab-tab" data-toggle="tab" data-fieldname="connections_tab" type="button" role="tab" aria-controls="customer-connections_tab" data-ui="form-tabs.button-9">
-						Connections
+						الروابط
 				</button>
 			</li></ul>
 			</div>
@@ -1667,23 +1667,23 @@
 			<span class="tooltip-content">naming_series</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="customer_name">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label reqd" style="padding-right: 5px;">Customer Name</label>
+						<label class="control-label reqd" style="padding-right: 5px;">اسم العميل</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
-						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Data" data-fieldname="customer_name" placeholder="" data-doctype="Customer" data-ui="form-section.input-1" value="Direct"></div>
-						<div class="control-value like-disabled-input hide bold">Direct</div>
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control bold" maxlength="140" data-fieldtype="Data" data-fieldname="customer_name" placeholder="" data-doctype="Customer" data-ui="form-section.input-1" value="مباشر"></div>
+						<div class="control-value like-disabled-input hide bold">مباشر</div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
 			<span class="tooltip-content">customer_name</span></div><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="customer_type">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label reqd" style="padding-right: 5px;">Customer Type</label>
+						<label class="control-label reqd" style="padding-right: 5px;">نوع العميل</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
-						<div class="control-input flex align-center"><select type="text" autocomplete="off" class="input-with-feedback form-control ellipsis bold" maxlength="140" data-fieldtype="Select" data-fieldname="customer_type" placeholder="" data-doctype="Customer" data-ui="form-section.select-2"><option value="الشركة" selected="">الشركة</option><option value="Individual">Individual</option><option value="Partnership">Partnership</option></select><div class="select-icon ">
+						<div class="control-input flex align-center"><select type="text" autocomplete="off" class="input-with-feedback form-control ellipsis bold" maxlength="140" data-fieldtype="Select" data-fieldname="customer_type" placeholder="" data-doctype="Customer" data-ui="form-section.select-2"><option value="الشركة" selected="">الشركة</option><option value="فرد">فرد</option><option value="شراكة">شراكة</option></select><div class="select-icon ">
 				<svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
@@ -1696,7 +1696,7 @@
 			<span class="tooltip-content">customer_type</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="mobile_number">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">Mobile Number</label>
+						<label class="control-label" style="padding-right: 5px;">رقم الجوال</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
@@ -1708,7 +1708,7 @@
 			<span class="tooltip-content">mobile_number</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="alias">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">Alias</label>
+						<label class="control-label" style="padding-right: 5px;">الاسم المستعار</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
@@ -1720,20 +1720,20 @@
 			<span class="tooltip-content">alias</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="gender">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">Gender</label>
+						<label class="control-label" style="padding-right: 5px;">الجنس</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
-			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="gender" placeholder="" data-doctype="Customer" data-target="Gender" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-5"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="gender" placeholder="" data-doctype="Customer" data-target="Gender" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-5"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">ابدأ الكتابة لعرض النتائج.</span></div>
 			<span class="link-btn">
-				<a class="btn-clear" style="display: inline-flex;" title="Clear Link" data-ui="form-section.link-6">
+				<a class="btn-clear" style="display: inline-flex;" title="إزالة الرابط" data-ui="form-section.link-6">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-x">
 			</use>
 		</svg>
 				</a>
-				<a class="btn-open" style="display: inline-flex;" title="Open Link" data-ui="form-section.link-7">
+				<a class="btn-open" style="display: inline-flex;" title="فتح الرابط" data-ui="form-section.link-7">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-arrow-right">
 			</use>
@@ -1751,20 +1751,20 @@
 				<div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="customer_group">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">Customer Group</label>
+						<label class="control-label" style="padding-right: 5px;">مجموعة العملاء</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
-			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="customer_group" placeholder="" data-doctype="Customer" data-target="Customer Group" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-8" value="Government"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="customer_group" placeholder="" data-doctype="Customer" data-target="Customer Group" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-8" value="حكومي"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">ابدأ الكتابة لعرض النتائج.</span></div>
 			<span class="link-btn">
-				<a class="btn-clear" style="display: inline-flex;" title="Clear Link" data-ui="form-section.link-9">
+				<a class="btn-clear" style="display: inline-flex;" title="إزالة الرابط" data-ui="form-section.link-9">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-x">
 			</use>
 		</svg>
 				</a>
-				<a class="btn-open" style="display: inline-flex;" title="Open Link" data-ui="form-section.link-10">
+				<a class="btn-open" style="display: inline-flex;" title="فتح الرابط" data-ui="form-section.link-10">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-arrow-right">
 			</use>
@@ -1772,27 +1772,27 @@
 				</a>
 			</span>
 		</div></div>
-						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Customer Group" data-name="Government" data-value="Government" data-ui="form-section.link-11">Government</a></div>
+						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Customer Group" data-name="Government" data-value="Government" data-ui="form-section.link-11">حكومي</a></div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
 			<span class="tooltip-content">customer_group</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="territory">
 				<div class="form-group horizontal">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 5px;">Territory</label>
+						<label class="control-label" style="padding-right: 5px;">المنطقة</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
-			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="territory" placeholder="" data-doctype="Customer" data-target="Territory" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-12" value="Rest Of The World"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="territory" placeholder="" data-doctype="Customer" data-target="Territory" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-section.input-12" value="باقي العالم"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">ابدأ الكتابة لعرض النتائج.</span></div>
 			<span class="link-btn">
-				<a class="btn-clear" style="display: inline-flex;" title="Clear Link" data-ui="form-section.link-13">
+				<a class="btn-clear" style="display: inline-flex;" title="إزالة الرابط" data-ui="form-section.link-13">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-x">
 			</use>
 		</svg>
 				</a>
-				<a class="btn-open" style="display: inline-flex;" title="Open Link" data-ui="form-section.link-14">
+				<a class="btn-open" style="display: inline-flex;" title="فتح الرابط" data-ui="form-section.link-14">
 					<svg class="icon  icon-xs" style="" aria-hidden="true">
 			<use class="" href="#icon-arrow-right">
 			</use>
@@ -1800,7 +1800,7 @@
 				</a>
 			</span>
 		</div></div>
-						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Territory" data-name="Rest Of The World" data-value="Rest Of The World" data-ui="form-section.link-15">Rest Of The World</a></div>
+						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="Territory" data-name="Rest Of The World" data-value="Rest Of The World" data-ui="form-section.link-15">باقي العالم</a></div>
 						<div class="help-box small text-extra-muted hide"></div>
 					</div>
 				</div>
@@ -1828,36 +1828,36 @@
 			<use class="" href="#icon-printer">
 			</use>
 		</svg>
-			</button></div>   <span class="liked-by like-action d-flex align-items-center not-liked" data-doctype="Customer" data-name="Direct">    <svg class="icon icon-sm like-icon pointer">     <use href="#icon-heart"></use>    </svg>   </span>  </div>   </div> <div class="sidebar-section sidebar-meta-details border-bottom">  <div class="flex justify-between overflow-hidden">   <div class="ellipsis">        <div class="form-details flex justify-between form-title-text" data-copy="Direct" data-original-title="" title="">     <span class="bold ellipsis mr-3 text-medium">Direct</span>    </div>               </div>     </div> </div> <div class="sidebar-section sidebar-rating hide border-bottom">  <div style="position: relative;">   <a class="strong badge-hover" data-ui="form-sidebar.link-4">    <span>Feedback</span>   </a>  </div>  <div class="rating-icons"></div> </div> <div class="sidebar-section hidden border-bottom">   </div> <div class="sidebar-section user-actions hidden border-bottom">  <div class="form-sidebar-items user-actions-header">   <div class="form-sidebar-label">    <svg class="icon  icon-sm" style="" aria-hidden="true">
+			</button></div>   <span class="liked-by like-action d-flex align-items-center not-liked" data-doctype="Customer" data-name="Direct">    <svg class="icon icon-sm like-icon pointer">     <use href="#icon-heart"></use>    </svg>   </span>  </div>   </div> <div class="sidebar-section sidebar-meta-details border-bottom">  <div class="flex justify-between overflow-hidden">   <div class="ellipsis">        <div class="form-details flex justify-between form-title-text" data-copy="Direct" data-original-title="" title="">     <span class="bold ellipsis mr-3 text-medium">مباشر</span>    </div>               </div>     </div> </div> <div class="sidebar-section sidebar-rating hide border-bottom">  <div style="position: relative;">   <a class="strong badge-hover" data-ui="form-sidebar.link-4">    <span>الملاحظات</span>   </a>  </div>  <div class="rating-icons"></div> </div> <div class="sidebar-section hidden border-bottom">   </div> <div class="sidebar-section user-actions hidden border-bottom">  <div class="form-sidebar-items user-actions-header">   <div class="form-sidebar-label">    <svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-link-2">
 			</use>
-		</svg>    <span class="ellipsis">Links</span>   </div>  </div>  <div class="user-actions-list"></div> </div> <div class="sidebar-section form-assignments">  <div>   <span class="form-sidebar-items">    <span class="add-assignment-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+		</svg>    <span class="ellipsis">الروابط</span>   </div>  </div>  <div class="user-actions-list"></div> </div> <div class="sidebar-section form-assignments">  <div>   <span class="form-sidebar-items">    <span class="add-assignment-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-users">
 			</use>
-		</svg>     <span class="ellipsis">Assign</span>    </span>    <button class="es-button add-assignment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Assign" aria-label="Assign" data-ui="form-sidebar.button-5"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>     <span class="ellipsis">تعيين</span>    </span>    <button class="es-button add-assignment-btn" type="button" data-variant="ghost" data-icon-button="true" title="تعيين" aria-label="تعيين" data-ui="form-sidebar.button-5"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-plus">
 			</use>
 		</svg></button>   </span>   <div class="assignments" style="display: none;"></div>  </div> </div> <div class="sidebar-section form-attachments">  <div class="attachments-actions">   <span class="form-sidebar-items">    <span>     <a class="pill-label ellipsis form-sidebar-label explore-link" data-ui="form-sidebar.link-6">      <svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-paperclip">
 			</use>
-		</svg>      Attachments     </a>    </span>    <button class="es-button add-attachment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Add attachment" aria-label="Add attachment" data-ui="form-sidebar.button-7"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>      المرفقات     </a>    </span>    <button class="es-button add-attachment-btn" type="button" data-variant="ghost" data-icon-button="true" title="إضافة مرفق" aria-label="إضافة مرفق" data-ui="form-sidebar.button-7"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-plus">
 			</use>
-		</svg></button>   </span>  </div>  <a class="show-all-btn hidden" href="" data-ui="form-sidebar.link-8">   <span class="pill-label ellipsis">    Show All   </span>  </a> </div> <div class="sidebar-section form-tags">  <div>   <span class="form-sidebar-items">    <div class="form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+		</svg></button>   </span>  </div>  <a class="show-all-btn hidden" href="" data-ui="form-sidebar.link-8">   <span class="pill-label ellipsis">    عرض الكل   </span>  </a> </div> <div class="sidebar-section form-tags">  <div>   <span class="form-sidebar-items">    <div class="form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-tag">
 			</use>
-		</svg>     <span class="tags-label ellipsis">Tags</span>    </div>   <button type="button" class="es-button add-tags-btn" data-variant="ghost" data-icon-button="true" title="Add Tags" aria-label="Add Tags" data-ui="form-sidebar.button-9">
+		</svg>     <span class="tags-label ellipsis">الوسوم</span>    </div>   <button type="button" class="es-button add-tags-btn" data-variant="ghost" data-icon-button="true" title="إضافة وسوم" aria-label="إضافة وسوم" data-ui="form-sidebar.button-9">
 				<svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-plus">
 			</use>
 		</svg>
-			</button></span>  </div> <div class="" style="display: none;"><div class="awesomplete"><input class="tags-input form-control mt-2" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-sidebar.input-10"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div></div></div> <div class="sidebar-section form-shared border-bottom">  <div>   <span class="form-sidebar-items">    <span class="share-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
+			</button></span>  </div> <div class="" style="display: none;"><div class="awesomplete"><input class="tags-input form-control mt-2" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-sidebar.input-10"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">ابدأ الكتابة لعرض النتائج.</span></div></div></div> <div class="sidebar-section form-shared border-bottom">  <div>   <span class="form-sidebar-items">    <span class="share-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-share-2">
 			</use>
-		</svg>     <span class="ellipsis">Share</span>    </span>    <button class="es-button share-doc-btn" type="button" data-variant="ghost" data-icon-button="true" title="Share" aria-label="Share" data-ui="form-sidebar.button-11"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+		</svg>     <span class="ellipsis">مشاركة</span>    </span>    <button class="es-button share-doc-btn" type="button" data-variant="ghost" data-icon-button="true" title="مشاركة" aria-label="مشاركة" data-ui="form-sidebar.button-11"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-plus">
 			</use>
-		</svg></button>   </span>   <div class="shares" style="display: none;"></div>  </div> </div> <div class="sidebar-section hidden">  <a data-ui="form-sidebar.link-12"><li class="indicator blue auto-repeat-status" style="display: none;"></li></a> </div> <div class="sidebar-section text-muted pt-3">  <ul class="list-unstyled sidebar-menu text-muted">   <li class="modified-by">Last Edited By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="created-by">Created By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="pageview-count"></li>  </ul> </div>   </div><div class="attachment-preview hidden"></div></div>
+		</svg></button>   </span>   <div class="shares" style="display: none;"></div>  </div> </div> <div class="sidebar-section hidden">  <a data-ui="form-sidebar.link-12"><li class="indicator blue auto-repeat-status" style="display: none;"></li></a> </div> <div class="sidebar-section text-muted pt-3">  <ul class="list-unstyled sidebar-menu text-muted">   <li class="modified-by">آخر تعديل بواسطتك <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="created-by">أنشأته أنت <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="pageview-count"></li>  </ul> </div>   </div><div class="attachment-preview hidden"></div></div>
 </div></div></div></div></div></div>
 </div>
 </body></html>

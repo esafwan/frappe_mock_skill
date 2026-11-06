@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Menu dropdown</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(23, 23, 23);min-height:358px}#ui-kit-stage{position:absolute;left:200.516px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(23, 23, 23);min-height:358px}#ui-kit-stage{position:absolute;left:200.938px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -22,6 +22,47 @@
 }
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
 }
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
@@ -79,51 +120,10 @@
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
 }
-@keyframes briefcase-carry { 
-  0%, 100% { transform: translateY(-1px) rotate(0deg); }
-  25% { transform: translateY(-1.4px) rotate(5deg); }
-  50% { transform: translateY(-1px) rotate(0deg); }
-  75% { transform: translateY(-1.4px) rotate(-5deg); }
-}
-@keyframes tenure-sweep { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes recruitment-scan { 
-  0%, 100% { transform: translate(0px, 0px); }
-  25% { transform: translate(1.4px, -0.8px); }
-  50% { transform: translate(0px, -1.4px); }
-  75% { transform: translate(-1.4px, -0.8px); }
-}
-@keyframes tax-flip { 
-  0%, 15% { transform: scaleX(1); }
-  32.5% { transform: scaleX(0); }
-  50%, 100% { transform: scaleX(1); }
-}
-@keyframes attendance-punch { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(3.2px); }
-}
-@keyframes leaves-swing { 
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(9deg); }
-  75% { transform: rotate(-9deg); }
-}
-@keyframes performance-hop { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.6px); }
-}
-@keyframes payroll-rise { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.8px); }
-}
-@keyframes expenses-swipe { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(-1.8px); }
-}
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">
 <div id="ui-kit-stage">
-<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container editable-form" id="page-Customer" data-page-route="Customer" data-state="clean" style="width:1159px;box-sizing:border-box"><div class="page-head flex" style="width:1159px;box-sizing:border-box"><div class="container" style="width:1159px;box-sizing:border-box"><div class="row flex-nowrap align-center page-head-content justify-between" style="width:1159px;box-sizing:border-box"><div class="align-center flex standard-items-section" style="width:472.05px;box-sizing:border-box"><div class="flex col page-actions justify-content-end " style="width:472.05px;box-sizing:border-box"><div class="standard-actions flex" style="width:174.48px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+<div class="main-section" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div id="body" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="content page-container editable-form" id="page-Customer" data-page-route="Customer" data-state="clean" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="page-head flex" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="container" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="row flex-nowrap align-center page-head-content justify-between" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="align-center flex standard-items-section" style="width:472.05px;flex:none;max-width:none;box-sizing:border-box"><div class="flex col page-actions justify-content-end " style="width:472.05px;flex:none;max-width:none;box-sizing:border-box"><div class="standard-actions flex" style="width:174.48px;flex:none;max-width:none;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-ellipsis">
       <circle cx="12" cy="12" r="1"></circle>
       <circle cx="19" cy="12" r="1"></circle>
       <circle cx="5" cy="12" r="1"></circle>
@@ -273,6 +273,7 @@
 						
 						<span class="menu-item-label" data-label="Documentation">Documentation</span>
 					</a>
-				</li></ul>       </div></div></div></div></div></div></div></div></div></div>
+				</li></ul>       </div>
+</div></div></div></div></div></div></div></div></div>
 </div>
 </body></html>

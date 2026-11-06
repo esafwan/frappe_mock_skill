@@ -21,7 +21,20 @@
       "pseudo": ":focus",
       "target": "input, select, textarea, .ql-editor",
       "changes": [],
-      "computedStyleDelta": {},
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(124, 124, 124, 0.25) 0px 0px 0px 2px"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
       "screenshot": "states/focus.png"
     },
     "active": {
@@ -62,8 +75,7 @@
           "addClass": [],
           "removeClass": [],
           "attrs": {
-            "data-ui": null,
-            "data-keep": null
+            "data-ui": null
           }
         }
       ],

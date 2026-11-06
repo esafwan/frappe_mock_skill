@@ -1,0 +1,13 @@
+{
+  "component": "pos-item-card",
+  "note": "slot -> menu expression; applied by tools/render.mjs when --menu is given. items[i] wraps around the menu length.",
+  "bind": {
+    "text_gray_900": "menu.items[0].name",
+    "text_gray_500": "menu.items[0].category",
+    "text_gray_900_2": "menu.items[0].price",
+    "div_arialabel": "menu.items[0].name",
+    "object_cover_alt": "menu.items[0].name",
+    "text_gray_900_title": "menu.items[0].name",
+    "text_gray_500_title": "menu.items[0].category"
+  }
+}

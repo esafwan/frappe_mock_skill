@@ -38,7 +38,7 @@ export const specs = [
   { id: 'alert', name: 'Alert banner (form message)', group: 'desk', url: '/desk/customer/Direct', root: '.form-message-container .form-message',
     prepare: async (p) => { await p.evaluate(() => cur_frm.set_intro('This customer has unpaid invoices.', 'yellow')); await p.waitForTimeout(400); }, states: {} },
   { id: 'modal-dialog', name: 'Modal dialog', group: 'desk', url: '/desk/customer', root: '.modal.show .modal-dialog',
-    prepare: async (p) => { await p.evaluate(() => frappe.confirm('Are you sure you want to delete this customer?', () => {})); await p.waitForTimeout(900); await hideBackdrop(p); }, targets: {}, states: { hover: { target: '.modal-footer .btn' }, focus: { target: '.modal-footer .btn' } } },
+    prepare: async (p) => { await p.evaluate(() => frappe.confirm('Are you sure you want to delete this customer?', () => {})); await p.waitForTimeout(900); await hideBackdrop(p); }, targets: {}, states: { hover: { target: '.btn-modal-primary' }, focus: { target: '.btn-modal-primary' } } },
   { id: 'comment-timeline', name: 'Comment timeline', group: 'desk', url: '/desk/customer/Direct', root: '.new-timeline', settle: 1500, targets: {}, states: {} },
   { id: 'report-view', name: 'Report view', group: 'desk', url: '/desk/sales-invoice/view/report', root: '.layout-main-section-wrapper', css: ['frappe-desk.css', 'frappe-report.css', 'erpnext-erpnext.css'], settle: 2500, targets: {}, states: {} },
   { id: 'number-card', name: 'Dashboard number card', group: 'desk', url: '/desk/manufacturing', root: '.layout-main-section .ce-block:has(.number-widget-box)', settle: 2500, targets: {}, states: {} },

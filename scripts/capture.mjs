@@ -39,6 +39,8 @@ for (const spec of specs) {
       const shot = async (pth) => { if (!spec.pad) return loc.screenshot({ path: pth, animations: 'disabled' });
         const r = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY, w: b.width, h: b.height }; });
         return page.screenshot({ path: pth, fullPage: true, clip: { x: Math.max(0, r.x - pad.l), y: Math.max(0, r.y - pad.t), width: Math.ceil(r.w + pad.l + pad.r), height: Math.ceil(r.h + pad.t + pad.b) } }); };
+      if (spec.pad && rtl) await page.evaluate(({ padL, sel }) => { const x = document.querySelector(sel).getBoundingClientRect().x; if (x < padL) document.body.style.transform = `translateX(${padL - x}px)`; }, { padL: pad.l, sel: `[data-ui="${spec.id}"]` }); // RTL root sits near the left edge: shift page so the left pad is not clamped (preview always has pad.l of room)
+      if (spec.pad) await page.evaluate((sel) => { const r = document.querySelector(sel); document.querySelectorAll('[data-keep]').forEach(e => e.removeAttribute('data-keep')); r.setAttribute('data-keep', ''); r.querySelectorAll('*').forEach(e => e.setAttribute('data-keep', '')); for (let a = r.parentElement; a; a = a.parentElement) a.setAttribute('data-keep', ''); const s = document.createElement('style'); s.dataset.uikit = '1'; s.textContent = 'body :not([data-keep]){visibility:hidden!important}'; document.head.appendChild(s); }, `[data-ui="${spec.id}"]`);
       await shot(shotPath);
       if (dark) darkBg = data.bg;
       if (dark) { const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); darkFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) }; }

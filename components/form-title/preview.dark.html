@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Form title, status indicator and actions</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(23, 23, 23);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -11,18 +11,6 @@
   100% { transform: scale(1); }
 }
 :root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
-}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -79,6 +67,18 @@
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
 }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
 @keyframes briefcase-carry { 
   0%, 100% { transform: translateY(-1px) rotate(0deg); }
   25% { transform: translateY(-1.4px) rotate(5deg); }
@@ -123,7 +123,7 @@
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">
 <div id="ui-kit-stage">
-<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container editable-form" id="page-Customer" data-page-route="Customer" data-state="clean" style="width:1159px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-menu">
+<div class="main-section" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div id="body" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="content page-container editable-form" id="page-Customer" data-page-route="Customer" data-state="clean" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-menu">
       <path d="M4 5h16"></path>
       <path d="M4 12h16"></path>
       <path d="M4 19h16"></path>
@@ -319,6 +319,7 @@
 				</li></ul>       </div>       <button class="es-button secondary-action hide" type="button" data-ui="form-title.button-46"><span class="es-spinner" aria-hidden="true"></span></button>       <div class="actions-btn-group hide">        <button class="es-button" type="button" data-variant="solid" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-47"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label hidden-xs actions-btn-group-label" data-label="Actions"><span><span class="alt-underline">A</span>ctions</span></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
 			<use class="" href="#icon-chevrons-up-down">
 			</use>
-		</svg></button>        <ul class="dropdown-menu dropdown-menu-right" role="presentation">        </ul>       </div>       <button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form-title.save"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">Saving...</span><span class="es-button__label" data-label="Save"><span><span class="alt-underline">S</span>ave</span></span></button>      </div>     </div>    </div>   </div>  </div> </div></div></div></div>
+		</svg></button>        <ul class="dropdown-menu dropdown-menu-right" role="presentation">        </ul>       </div>       <button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form-title.save"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">Saving...</span><span class="es-button__label" data-label="Save"><span><span class="alt-underline">S</span>ave</span></span></button>      </div>     </div>    </div>   </div>  </div> </div>
+</div></div></div>
 </div>
 </body></html>

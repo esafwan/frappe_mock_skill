@@ -96,7 +96,7 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   while (p) { const rb = p.getBoundingClientRect(); const o = { tag: p.tagName.toLowerCase(), attrs: {}, w: +rb.width.toFixed(2), x: rb.x + scrollX, y: rb.y + scrollY, display: getComputedStyle(p).display, position: getComputedStyle(p).position }; for (const a of p.attributes) if (!/^on|^data-ui$/i.test(a.name) && !(a.name === 'style' && p.tagName === 'BODY')) o.attrs[a.name] = a.value;
     ancestors.unshift(o); if (p.tagName === 'HTML') break; p = p.parentElement; }
   // effective background behind root
-  let bg = 'rgba(0,0,0,0)'; p = root;
+  let bg = 'rgba(0,0,0,0)'; p = root.parentElement;
   while (p) { const c = getComputedStyle(p).backgroundColor; if (c && c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') { bg = c; break; } p = p.parentElement; }
   const cs = getComputedStyle(root);
   const relevant = (sel) => { try { if (root.matches(sel) || root.querySelector(sel)) return true; let a = root.parentElement; while (a) { if (a.matches(sel)) return true; a = a.parentElement; } } catch {} return false; };
@@ -112,7 +112,7 @@ export function chain(ancestors, inner, { skipHtml = false } = {}) {
   const VOID = new Set(['img', 'input', 'br', 'hr']);
   const html = ancestors.find(a => a.tag === 'html'); const body = ancestors.find(a => a.tag === 'body');
   const mid = ancestors.filter(a => a.tag !== 'html' && a.tag !== 'body');
-  const attrs = (o) => { const at = { ...o.attrs }; if (o.w && o.tag !== 'html' && o.tag !== 'body' && !/^(inline|contents|none|table-)/.test(o.display || '') && o.position !== 'fixed') at.style = (at.style ? at.style.replace(/;?\s*$/, ';') : '') + `width:${o.w}px;box-sizing:border-box`; return Object.entries(at).map(([k, v]) => ` ${k}="${String(v).replace(/"/g, '&quot;')}"`).join(''); };
+  const attrs = (o) => { const at = { ...o.attrs }; if (o.w && o.tag !== 'html' && o.tag !== 'body' && !/^(inline|contents|none|table-)/.test(o.display || '') && o.position !== 'fixed') at.style = (at.style ? at.style.replace(/;?\s*$/, ';') : '') + `width:${o.w}px;flex:none;max-width:none;box-sizing:border-box`; return Object.entries(at).map(([k, v]) => ` ${k}="${String(v).replace(/"/g, '&quot;')}"`).join(''); };
   let s = inner;
   for (const a of [...mid].reverse()) s = `<${a.tag}${attrs(a)}>${s}</${a.tag}>`;
   return { htmlAttrs: html ? attrs(html) : '', bodyAttrs: body ? attrs(body) : '', body: s };

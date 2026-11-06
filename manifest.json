@@ -8167,6 +8167,328 @@
       ],
       "dataBindings": null
     },
+    "pos-cart": {
+      "id": "pos-cart",
+      "name": "Order cart (lines, totals, actions)",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-cart/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 384,
+        "h": 836
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 21,
+      "slots": {
+        "hover_bg_gray_50": {
+          "type": "text",
+          "sample": "Dine In",
+          "maxLength": 20
+        },
+        "hover_bg_primary_50": {
+          "type": "text",
+          "sample": "Take Away",
+          "maxLength": 20
+        },
+        "hover_bg_gray_50_2": {
+          "type": "text",
+          "sample": "Delivery",
+          "maxLength": 20
+        },
+        "hover_bg_gray_50_3": {
+          "type": "text",
+          "sample": "Phone In",
+          "maxLength": 20
+        },
+        "hover_bg_gray_50_4": {
+          "type": "text",
+          "sample": "Aggregators",
+          "maxLength": 22
+        },
+        "text_gray_700": {
+          "type": "text",
+          "sample": "Pax",
+          "maxLength": 20
+        },
+        "rounded_full": {
+          "type": "text",
+          "sample": "-",
+          "maxLength": 20
+        },
+        "text_center": {
+          "type": "number",
+          "sample": "1",
+          "maxLength": 20
+        },
+        "rounded_full_2": {
+          "type": "text",
+          "sample": "+",
+          "maxLength": 20
+        },
+        "text_sm": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_sm_2": {
+          "type": "currency",
+          "sample": "₹ 60",
+          "maxLength": 20
+        },
+        "rounded_full_3": {
+          "type": "text",
+          "sample": "-",
+          "maxLength": 20
+        },
+        "text_center_2": {
+          "type": "number",
+          "sample": "1",
+          "maxLength": 20
+        },
+        "rounded_full_4": {
+          "type": "text",
+          "sample": "+",
+          "maxLength": 20
+        },
+        "hover_text_gray_800": {
+          "type": "text",
+          "sample": "Clear cart",
+          "maxLength": 20
+        },
+        "font_semibold": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "font_semibold_2": {
+          "type": "currency",
+          "sample": "₹ 60",
+          "maxLength": 20
+        },
+        "w_full": {
+          "type": "text",
+          "sample": "Add New Order",
+          "maxLength": 26
+        },
+        "rounded_7px_placeholder": {
+          "type": "text",
+          "sample": "Search customer...",
+          "maxLength": 36
+        },
+        "hover_text_blue_700_title": {
+          "type": "text",
+          "sample": "Edit item",
+          "maxLength": 20
+        },
+        "hover_text_gray_700_title": {
+          "type": "text",
+          "sample": "Add comment",
+          "maxLength": 22
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "class-attr"
+      },
+      "targets": [
+        {
+          "id": "pos-cart",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 384,
+            "h": 836
+          }
+        },
+        {
+          "id": "pos-cart.button-1",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 16,
+            "w": 95.66,
+            "h": 34
+          }
+        },
+        {
+          "id": "pos-cart.button-2",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 120.66,
+            "y": 16,
+            "w": 121.14,
+            "h": 34
+          }
+        },
+        {
+          "id": "pos-cart.button-3",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 249.8,
+            "y": 16,
+            "w": 104.41,
+            "h": 34
+          }
+        },
+        {
+          "id": "pos-cart.button-4",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 362.2,
+            "y": 16,
+            "w": 107.81,
+            "h": 34
+          }
+        },
+        {
+          "id": "pos-cart.button-5",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 478.02,
+            "y": 16,
+            "w": 132.27,
+            "h": 34
+          }
+        },
+        {
+          "id": "pos-cart.input-6",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 70,
+            "w": 351,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-cart.qty-1",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 264,
+            "y": 118,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-cart.qty-2",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 336,
+            "y": 118,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-cart.qty-3",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 152,
+            "y": 183,
+            "w": 44,
+            "h": 44
+          }
+        },
+        {
+          "id": "pos-cart.qty-4",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 204,
+            "y": 189,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-cart.qty-5",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 276,
+            "y": 189,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-cart.qty-6",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 316,
+            "y": 183,
+            "w": 44,
+            "h": 44
+          }
+        },
+        {
+          "id": "pos-cart.qty-7",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 25,
+            "y": 260,
+            "w": 335,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-cart.qty-8",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 736,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-cart.qty-9",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 784,
+            "w": 351,
+            "h": 36
+          }
+        }
+      ],
+      "dataBindings": "components/pos-cart/bindings.json"
+    },
     "pos-category-tabs": {
       "id": "pos-category-tabs",
       "name": "Menu category tabs (pills)",
@@ -8246,6 +8568,1117 @@
             "y": 0,
             "w": 137.58,
             "h": 32
+          }
+        }
+      ],
+      "dataBindings": null
+    },
+    "pos-item-card": {
+      "id": "pos-item-card",
+      "name": "Menu item card",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-item-card/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 144,
+        "h": 240
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 8,
+      "slots": {
+        "text_gray_900": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_500": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        },
+        "text_gray_900_2": {
+          "type": "currency",
+          "sample": "₹ 60",
+          "maxLength": 20
+        },
+        "font_normal": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "div_arialabel": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "object_cover_alt": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_900_title": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_500_title": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-item-card",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        }
+      ],
+      "dataBindings": "components/pos-item-card/bindings.json"
+    },
+    "pos-item-grid": {
+      "id": "pos-item-grid",
+      "name": "Menu item grid",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-item-grid/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 768,
+        "h": 492
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 80,
+      "slots": {
+        "text_gray_900": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_500": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        },
+        "text_gray_900_2": {
+          "type": "currency",
+          "sample": "₹ 60",
+          "maxLength": 20
+        },
+        "font_normal": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_3": {
+          "type": "text",
+          "sample": "Chicken 65 Dry",
+          "maxLength": 28
+        },
+        "text_gray_500_2": {
+          "type": "text",
+          "sample": "Starters",
+          "maxLength": 20
+        },
+        "text_gray_900_4": {
+          "type": "currency",
+          "sample": "₹ 240",
+          "maxLength": 20
+        },
+        "font_normal_2": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_5": {
+          "type": "text",
+          "sample": "Chicken Dum Biryani",
+          "maxLength": 38
+        },
+        "text_gray_500_3": {
+          "type": "text",
+          "sample": "Biryani & Rice",
+          "maxLength": 28
+        },
+        "text_gray_900_6": {
+          "type": "currency",
+          "sample": "₹ 290",
+          "maxLength": 20
+        },
+        "font_normal_3": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_7": {
+          "type": "text",
+          "sample": "Chicken Shawarma Roll",
+          "maxLength": 42
+        },
+        "text_gray_500_4": {
+          "type": "text",
+          "sample": "Grills & BBQ",
+          "maxLength": 24
+        },
+        "text_gray_900_8": {
+          "type": "currency",
+          "sample": "₹ 180",
+          "maxLength": 20
+        },
+        "font_normal_4": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_9": {
+          "type": "text",
+          "sample": "Chicken Tikka (6 pcs)",
+          "maxLength": 42
+        },
+        "text_gray_500_5": {
+          "type": "text",
+          "sample": "Grills & BBQ",
+          "maxLength": 24
+        },
+        "text_gray_900_10": {
+          "type": "currency",
+          "sample": "₹ 290",
+          "maxLength": 20
+        },
+        "font_normal_5": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_11": {
+          "type": "text",
+          "sample": "Crispy Onion Bhaji",
+          "maxLength": 36
+        },
+        "text_gray_500_6": {
+          "type": "text",
+          "sample": "Starters",
+          "maxLength": 20
+        },
+        "text_gray_900_12": {
+          "type": "currency",
+          "sample": "₹ 150",
+          "maxLength": 20
+        },
+        "font_normal_6": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_13": {
+          "type": "text",
+          "sample": "Dal Tadka",
+          "maxLength": 20
+        },
+        "text_gray_500_7": {
+          "type": "text",
+          "sample": "Curries",
+          "maxLength": 20
+        },
+        "text_gray_900_14": {
+          "type": "currency",
+          "sample": "₹ 190",
+          "maxLength": 20
+        },
+        "font_normal_7": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_15": {
+          "type": "text",
+          "sample": "Fresh Orange Juice",
+          "maxLength": 36
+        },
+        "text_gray_500_8": {
+          "type": "text",
+          "sample": "Beverages",
+          "maxLength": 20
+        },
+        "text_gray_900_16": {
+          "type": "currency",
+          "sample": "₹ 120",
+          "maxLength": 20
+        },
+        "font_normal_8": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_17": {
+          "type": "text",
+          "sample": "Garlic Naan",
+          "maxLength": 22
+        },
+        "text_gray_500_9": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        },
+        "text_gray_900_18": {
+          "type": "currency",
+          "sample": "₹ 75",
+          "maxLength": 20
+        },
+        "font_normal_9": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "text_gray_900_19": {
+          "type": "text",
+          "sample": "Gulab Jamun Pair",
+          "maxLength": 32
+        },
+        "text_gray_500_10": {
+          "type": "text",
+          "sample": "Desserts",
+          "maxLength": 20
+        },
+        "text_gray_900_20": {
+          "type": "currency",
+          "sample": "₹ 100",
+          "maxLength": 20
+        },
+        "font_normal_10": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "object_cover_alt": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_900_title": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_gray_500_title": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_2": {
+          "type": "text",
+          "sample": "Chicken 65 Dry",
+          "maxLength": 28
+        },
+        "object_cover_alt_2": {
+          "type": "text",
+          "sample": "Chicken 65 Dry",
+          "maxLength": 28
+        },
+        "text_gray_900_title_2": {
+          "type": "text",
+          "sample": "Chicken 65 Dry",
+          "maxLength": 28
+        },
+        "text_gray_500_title_2": {
+          "type": "text",
+          "sample": "Starters",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_3": {
+          "type": "text",
+          "sample": "Chicken Dum Biryani",
+          "maxLength": 38
+        },
+        "object_cover_alt_3": {
+          "type": "text",
+          "sample": "Chicken Dum Biryani",
+          "maxLength": 38
+        },
+        "text_gray_900_title_3": {
+          "type": "text",
+          "sample": "Chicken Dum Biryani",
+          "maxLength": 38
+        },
+        "text_gray_500_title_3": {
+          "type": "text",
+          "sample": "Biryani & Rice",
+          "maxLength": 28
+        },
+        "hover_shadow_md_arialabel_4": {
+          "type": "text",
+          "sample": "Chicken Shawarma Roll",
+          "maxLength": 42
+        },
+        "object_cover_alt_4": {
+          "type": "text",
+          "sample": "Chicken Shawarma Roll",
+          "maxLength": 42
+        },
+        "text_gray_900_title_4": {
+          "type": "text",
+          "sample": "Chicken Shawarma Roll",
+          "maxLength": 42
+        },
+        "text_gray_500_title_4": {
+          "type": "text",
+          "sample": "Grills & BBQ",
+          "maxLength": 24
+        },
+        "hover_shadow_md_arialabel_5": {
+          "type": "text",
+          "sample": "Chicken Tikka (6 pcs)",
+          "maxLength": 42
+        },
+        "object_cover_alt_5": {
+          "type": "text",
+          "sample": "Chicken Tikka (6 pcs)",
+          "maxLength": 42
+        },
+        "text_gray_900_title_5": {
+          "type": "text",
+          "sample": "Chicken Tikka (6 pcs)",
+          "maxLength": 42
+        },
+        "text_gray_500_title_5": {
+          "type": "text",
+          "sample": "Grills & BBQ",
+          "maxLength": 24
+        },
+        "hover_shadow_md_arialabel_6": {
+          "type": "text",
+          "sample": "Crispy Onion Bhaji",
+          "maxLength": 36
+        },
+        "object_cover_alt_6": {
+          "type": "text",
+          "sample": "Crispy Onion Bhaji",
+          "maxLength": 36
+        },
+        "text_gray_900_title_6": {
+          "type": "text",
+          "sample": "Crispy Onion Bhaji",
+          "maxLength": 36
+        },
+        "text_gray_500_title_6": {
+          "type": "text",
+          "sample": "Starters",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_7": {
+          "type": "text",
+          "sample": "Dal Tadka",
+          "maxLength": 20
+        },
+        "object_cover_alt_7": {
+          "type": "text",
+          "sample": "Dal Tadka",
+          "maxLength": 20
+        },
+        "text_gray_900_title_7": {
+          "type": "text",
+          "sample": "Dal Tadka",
+          "maxLength": 20
+        },
+        "text_gray_500_title_7": {
+          "type": "text",
+          "sample": "Curries",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_8": {
+          "type": "text",
+          "sample": "Fresh Orange Juice",
+          "maxLength": 36
+        },
+        "object_cover_alt_8": {
+          "type": "text",
+          "sample": "Fresh Orange Juice",
+          "maxLength": 36
+        },
+        "text_gray_900_title_8": {
+          "type": "text",
+          "sample": "Fresh Orange Juice",
+          "maxLength": 36
+        },
+        "text_gray_500_title_8": {
+          "type": "text",
+          "sample": "Beverages",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_9": {
+          "type": "text",
+          "sample": "Garlic Naan",
+          "maxLength": 22
+        },
+        "object_cover_alt_9": {
+          "type": "text",
+          "sample": "Garlic Naan",
+          "maxLength": 22
+        },
+        "text_gray_900_title_9": {
+          "type": "text",
+          "sample": "Garlic Naan",
+          "maxLength": 22
+        },
+        "text_gray_500_title_9": {
+          "type": "text",
+          "sample": "Breads",
+          "maxLength": 20
+        },
+        "hover_shadow_md_arialabel_10": {
+          "type": "text",
+          "sample": "Gulab Jamun Pair",
+          "maxLength": 32
+        },
+        "object_cover_alt_10": {
+          "type": "text",
+          "sample": "Gulab Jamun Pair",
+          "maxLength": 32
+        },
+        "text_gray_900_title_10": {
+          "type": "text",
+          "sample": "Gulab Jamun Pair",
+          "maxLength": 32
+        },
+        "text_gray_500_title_10": {
+          "type": "text",
+          "sample": "Desserts",
+          "maxLength": 20
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "n/a",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-item-grid",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 492
+          }
+        },
+        {
+          "id": "pos-item-grid.div-1",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-2",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 156,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-3",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 312,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-4",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 468,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-5",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 624,
+            "y": 0,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-6",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 0,
+            "y": 252,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-7",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 156,
+            "y": 252,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-8",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 312,
+            "y": 252,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-9",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 468,
+            "y": 252,
+            "w": 144,
+            "h": 240
+          }
+        },
+        {
+          "id": "pos-item-grid.div-10",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 624,
+            "y": 252,
+            "w": 144,
+            "h": 240
+          }
+        }
+      ],
+      "dataBindings": "components/pos-item-grid/bindings.json"
+    },
+    "pos-kot-view": {
+      "id": "pos-kot-view",
+      "name": "Kitchen / KOT production-unit overview (Mosaic)",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-kot-view/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 1392,
+        "h": 651.5
+      },
+      "css": [
+        "fonts.css",
+        "ury-mosaic.css"
+      ],
+      "slotCount": 81,
+      "slots": {
+        "font_semibold": {
+          "type": "text",
+          "sample": "Bar",
+          "maxLength": 20
+        },
+        "text_xs": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_2": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_2": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_3": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_3": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_4": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_4": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_5": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_5": {
+          "type": "text",
+          "sample": "Beverage Bar",
+          "maxLength": 24
+        },
+        "text_xs_6": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_6": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_7": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_7": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_8": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_8": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_9": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_10": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_9": {
+          "type": "text",
+          "sample": "Beverage Station",
+          "maxLength": 32
+        },
+        "text_xs_11": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_10": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_12": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_11": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_13": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_12": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_14": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_15": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_13": {
+          "type": "text",
+          "sample": "Chinese",
+          "maxLength": 20
+        },
+        "text_xs_16": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_14": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_17": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_15": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_18": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_16": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_19": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_20": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_17": {
+          "type": "text",
+          "sample": "Grill & Tandoor",
+          "maxLength": 30
+        },
+        "text_xs_21": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_18": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_22": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_19": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_23": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_20": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_24": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_25": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_21": {
+          "type": "text",
+          "sample": "Indian Kitchen",
+          "maxLength": 28
+        },
+        "text_xs_26": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_22": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_27": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_23": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_28": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_24": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_29": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_30": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_25": {
+          "type": "text",
+          "sample": "Kitchen",
+          "maxLength": 20
+        },
+        "text_xs_31": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_26": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_32": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_27": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_33": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_28": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_34": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_35": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_29": {
+          "type": "text",
+          "sample": "Main Kitchen",
+          "maxLength": 24
+        },
+        "text_xs_36": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_30": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_37": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_31": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_38": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_32": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_39": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_40": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        },
+        "font_semibold_33": {
+          "type": "text",
+          "sample": "Tandoor",
+          "maxLength": 20
+        },
+        "text_xs_41": {
+          "type": "text",
+          "sample": "Production Unit",
+          "maxLength": 30
+        },
+        "font_semibold_34": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_42": {
+          "type": "text",
+          "sample": "Active",
+          "maxLength": 20
+        },
+        "font_semibold_35": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_43": {
+          "type": "text",
+          "sample": "Served",
+          "maxLength": 20
+        },
+        "font_semibold_36": {
+          "type": "number",
+          "sample": "0",
+          "maxLength": 20
+        },
+        "text_xs_44": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_xs_45": {
+          "type": "text",
+          "sample": "Click to view KOTs",
+          "maxLength": 36
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "n/a",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-kot-view",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1392,
+            "h": 651.5
           }
         }
       ],
@@ -8351,6 +9784,953 @@
             "y": 10,
             "w": 173.47,
             "h": 28
+          }
+        }
+      ],
+      "dataBindings": null
+    },
+    "pos-order-status-chips": {
+      "id": "pos-order-status-chips",
+      "name": "Order status filter chips",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-order-status-chips/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 207,
+        "h": 178
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 4,
+      "slots": {
+        "tracking_wide": {
+          "type": "text",
+          "sample": "Order Status",
+          "maxLength": 24
+        },
+        "ms_1": {
+          "type": "text",
+          "sample": "Draft",
+          "maxLength": 20
+        },
+        "ms_1_2": {
+          "type": "text",
+          "sample": "Unbilled",
+          "maxLength": 20
+        },
+        "ms_1_3": {
+          "type": "text",
+          "sample": "Recently Paid",
+          "maxLength": 26
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-order-status-chips",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 207,
+            "h": 178
+          }
+        },
+        {
+          "id": "pos-order-status-chips.button-1",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 45,
+            "w": 173,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-order-status-chips.button-2",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 85,
+            "w": 173,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-order-status-chips.button-3",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 17,
+            "y": 125,
+            "w": 173,
+            "h": 36
+          }
+        }
+      ],
+      "dataBindings": null
+    },
+    "pos-payment-dialog": {
+      "id": "pos-payment-dialog",
+      "name": "Payment dialog",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-payment-dialog/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 896,
+        "h": 456
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 24,
+      "slots": {
+        "text_gray_900": {
+          "type": "text",
+          "sample": "Payment",
+          "maxLength": 20
+        },
+        "gap_2": {
+          "type": "text",
+          "sample": "Apply Discount",
+          "maxLength": 28
+        },
+        "rounded_md": {
+          "type": "text",
+          "sample": "Apply",
+          "maxLength": 20
+        },
+        "font_semibold": {
+          "type": "text",
+          "sample": "Payment Methods",
+          "maxLength": 30
+        },
+        "font_medium": {
+          "type": "text",
+          "sample": "Cash",
+          "maxLength": 20
+        },
+        "font_medium_2": {
+          "type": "text",
+          "sample": "UPI",
+          "maxLength": 20
+        },
+        "font_medium_3": {
+          "type": "text",
+          "sample": "Debit Card",
+          "maxLength": 20
+        },
+        "font_medium_4": {
+          "type": "text",
+          "sample": "Total Entered",
+          "maxLength": 26
+        },
+        "gap_1": {
+          "type": "currency",
+          "sample": "₹ 1,110",
+          "maxLength": 20
+        },
+        "gap_1_2": {
+          "type": "text",
+          "sample": "/",
+          "maxLength": 20
+        },
+        "gap_1_3": {
+          "type": "currency",
+          "sample": "₹ 1,110",
+          "maxLength": 20
+        },
+        "font_semibold_2": {
+          "type": "text",
+          "sample": "Order Summary",
+          "maxLength": 26
+        },
+        "text_gray_600": {
+          "type": "text",
+          "sample": "Table Name",
+          "maxLength": 20
+        },
+        "font_medium_5": {
+          "type": "text",
+          "sample": "F2",
+          "maxLength": 20
+        },
+        "text_gray_600_2": {
+          "type": "text",
+          "sample": "Subtotal",
+          "maxLength": 20
+        },
+        "justify_between": {
+          "type": "currency",
+          "sample": "₹ 1,110",
+          "maxLength": 20
+        },
+        "text_lg": {
+          "type": "text",
+          "sample": "Total",
+          "maxLength": 20
+        },
+        "text_lg_2": {
+          "type": "currency",
+          "sample": "₹ 1,110",
+          "maxLength": 20
+        },
+        "w_full": {
+          "type": "text",
+          "sample": "Pay ₹ 1,110",
+          "maxLength": 22
+        },
+        "flex_1_placeholder": {
+          "type": "text",
+          "sample": "Enter %",
+          "maxLength": 20
+        },
+        "flex_1_placeholder_2": {
+          "type": "text",
+          "sample": "Amount",
+          "maxLength": 20
+        },
+        "flex_1_value": {
+          "type": "number",
+          "sample": "1110",
+          "maxLength": 20
+        },
+        "flex_1_placeholder_3": {
+          "type": "text",
+          "sample": "Amount",
+          "maxLength": 20
+        },
+        "flex_1_placeholder_4": {
+          "type": "text",
+          "sample": "Amount",
+          "maxLength": 20
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-payment-dialog",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 896,
+            "h": 456
+          }
+        },
+        {
+          "id": "pos-payment-dialog.button-1",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 379,
+            "y": 24,
+            "w": 44,
+            "h": 44
+          }
+        },
+        {
+          "id": "pos-payment-dialog.input-2",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 24,
+            "y": 136,
+            "w": 329.11,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-payment-dialog.button-3",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 361.11,
+            "y": 136,
+            "w": 61.89,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-payment-dialog.input-4",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 132,
+            "y": 240,
+            "w": 291,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-payment-dialog.input-5",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 132,
+            "y": 288,
+            "w": 291,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-payment-dialog.input-6",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 132,
+            "y": 336,
+            "w": 291,
+            "h": 36
+          }
+        },
+        {
+          "id": "pos-payment-dialog.button-7",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 472,
+            "y": 185,
+            "w": 400,
+            "h": 36
+          }
+        }
+      ],
+      "dataBindings": null
+    },
+    "pos-table-picker": {
+      "id": "pos-table-picker",
+      "name": "Table picker grid (available / occupied tables)",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-table-picker/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "size": {
+        "w": 1280,
+        "h": 684
+      },
+      "css": [
+        "fonts.css",
+        "ury-pos.css"
+      ],
+      "slotCount": 73,
+      "slots": {
+        "text_gray_900": {
+          "type": "text",
+          "sample": "F1",
+          "maxLength": 20
+        },
+        "whitespace_nowrap": {
+          "type": "text",
+          "sample": "Occupied",
+          "maxLength": 20
+        },
+        "font_medium": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_2": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_2": {
+          "type": "time",
+          "sample": "12:10",
+          "maxLength": 20
+        },
+        "font_medium_3": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "hover_bg_amber_100": {
+          "type": "text",
+          "sample": "Preview",
+          "maxLength": 20
+        },
+        "disabled_opacity_60": {
+          "type": "text",
+          "sample": "Print",
+          "maxLength": 20
+        },
+        "text_gray_900_2": {
+          "type": "text",
+          "sample": "F2",
+          "maxLength": 20
+        },
+        "whitespace_nowrap_2": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_4": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_3": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_5": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_4": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_6": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_2": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_gray_900_3": {
+          "type": "text",
+          "sample": "F3",
+          "maxLength": 20
+        },
+        "whitespace_nowrap_3": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_7": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_5": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_8": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_6": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_9": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_3": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_gray_900_4": {
+          "type": "text",
+          "sample": "F4",
+          "maxLength": 20
+        },
+        "whitespace_nowrap_4": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_10": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_7": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_11": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_8": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_12": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_4": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_gray_900_5": {
+          "type": "text",
+          "sample": "F5",
+          "maxLength": 20
+        },
+        "whitespace_nowrap_5": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_13": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_9": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_14": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_10": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_15": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_5": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_gray_900_6": {
+          "type": "text",
+          "sample": "Takeaway Table 2",
+          "maxLength": 32
+        },
+        "whitespace_nowrap_6": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_16": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_11": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_17": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_12": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_18": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_6": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_xs": {
+          "type": "text",
+          "sample": "Take away",
+          "maxLength": 20
+        },
+        "text_gray_900_7": {
+          "type": "text",
+          "sample": "Waiting Table",
+          "maxLength": 26
+        },
+        "whitespace_nowrap_7": {
+          "type": "text",
+          "sample": "Available",
+          "maxLength": 20
+        },
+        "font_medium_19": {
+          "type": "text",
+          "sample": "Room",
+          "maxLength": 20
+        },
+        "justify_between_13": {
+          "type": "text",
+          "sample": "AC",
+          "maxLength": 20
+        },
+        "font_medium_20": {
+          "type": "text",
+          "sample": "Started at:",
+          "maxLength": 22
+        },
+        "justify_between_14": {
+          "type": "text",
+          "sample": "—",
+          "maxLength": 20
+        },
+        "font_medium_21": {
+          "type": "text",
+          "sample": "Seats",
+          "maxLength": 20
+        },
+        "gap_1_7": {
+          "type": "number",
+          "sample": "4",
+          "maxLength": 20
+        },
+        "text_gray_900_title": {
+          "type": "text",
+          "sample": "F1",
+          "maxLength": 20
+        },
+        "before_content_arialabel": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_2": {
+          "type": "text",
+          "sample": "F2",
+          "maxLength": 20
+        },
+        "before_content_arialabel_2": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_3": {
+          "type": "text",
+          "sample": "F3",
+          "maxLength": 20
+        },
+        "before_content_arialabel_3": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_4": {
+          "type": "text",
+          "sample": "F4",
+          "maxLength": 20
+        },
+        "before_content_arialabel_4": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_5": {
+          "type": "text",
+          "sample": "F5",
+          "maxLength": 20
+        },
+        "before_content_arialabel_5": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_6": {
+          "type": "text",
+          "sample": "Takeaway Table 2",
+          "maxLength": 32
+        },
+        "before_content_arialabel_6": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        },
+        "text_gray_900_title_7": {
+          "type": "text",
+          "sample": "Waiting Table",
+          "maxLength": 26
+        },
+        "before_content_arialabel_7": {
+          "type": "text",
+          "sample": "Table actions",
+          "maxLength": 26
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "n/a",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-table-picker",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1280,
+            "h": 684
+          }
+        },
+        {
+          "id": "pos-table-picker.div-1",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 243.19,
+            "h": 248
+          }
+        },
+        {
+          "id": "pos-table-picker.button-2",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 193.19,
+            "y": 18,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.button-3",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 18,
+            "y": 198,
+            "w": 99.59,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.button-4",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 125.59,
+            "y": 198,
+            "w": 99.59,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-5",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 259.19,
+            "y": 0,
+            "w": 243.2,
+            "h": 248
+          }
+        },
+        {
+          "id": "pos-table-picker.button-6",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 452.39,
+            "y": 18,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-7",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 518.39,
+            "y": 0,
+            "w": 243.2,
+            "h": 248
+          }
+        },
+        {
+          "id": "pos-table-picker.button-8",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 711.59,
+            "y": 18,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-9",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 777.59,
+            "y": 0,
+            "w": 243.2,
+            "h": 248
+          }
+        },
+        {
+          "id": "pos-table-picker.button-10",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 970.8,
+            "y": 18,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-11",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 1036.8,
+            "y": 0,
+            "w": 243.19,
+            "h": 248
+          }
+        },
+        {
+          "id": "pos-table-picker.button-12",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1229.98,
+            "y": 18,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-13",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 0,
+            "y": 264,
+            "w": 243.19,
+            "h": 260
+          }
+        },
+        {
+          "id": "pos-table-picker.button-14",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 193.19,
+            "y": 282,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "pos-table-picker.div-15",
+          "tag": "div",
+          "interactive": true,
+          "box": {
+            "x": 259.19,
+            "y": 264,
+            "w": 243.2,
+            "h": 260
+          }
+        },
+        {
+          "id": "pos-table-picker.button-16",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 452.39,
+            "y": 282,
+            "w": 32,
+            "h": 32
           }
         }
       ],
@@ -18884,10 +21264,34 @@
         "page-head",
         "list-view"
       ]
+    },
+    "pos-register": {
+      "id": "pos-register",
+      "title": "URY POS register (order screen)",
+      "system": "ury-pos",
+      "html": "pages/pos-register.html",
+      "components": [
+        "pos-navbar",
+        "pos-filter-bar",
+        "pos-item-grid",
+        "pos-cart",
+        "pos-bottom-nav"
+      ]
     }
   },
   "data": {
     "menus": [
+      {
+        "id": "cafe",
+        "format": "cafe",
+        "cuisine": "coffee",
+        "defaultCurrency": "USD",
+        "languages": [
+          "en"
+        ],
+        "items": 28,
+        "path": "data/menus/cafe.json"
+      },
       {
         "id": "fine-dine",
         "format": "fine-dine",
@@ -18910,6 +21314,17 @@
         ],
         "items": 32,
         "path": "data/menus/mediterranean.json"
+      },
+      {
+        "id": "north-indian",
+        "format": "casual",
+        "cuisine": "north-indian",
+        "defaultCurrency": "INR",
+        "languages": [
+          "en"
+        ],
+        "items": 27,
+        "path": "data/menus/north-indian.json"
       },
       {
         "id": "qsr-chicken-burger",

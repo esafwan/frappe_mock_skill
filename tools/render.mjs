@@ -43,7 +43,7 @@ export function slotValues(id, opts = {}) {
   const lang = opts.lang || loc?.language || 'en'; const currency = opts.currency || loc?.currency || null;
   const i18n = lang !== 'en' ? universals.i18n(lang) : {};
   const vals = {}; const menu = opts.menu ? loadMenu(opts.menu) : null;
-  const bind = exists(`components/${id}/bindings.json`) ? J(`components/${id}/bindings.json`) : {};
+  const bind = exists(`components/${id}/bindings.json`) ? (J(`components/${id}/bindings.json`).bind || {}) : {};
   for (const [name, s] of Object.entries(slots)) {
     let v = s.sample;
     if (i18n[v]) v = i18n[v];                                           // fixed UI vocabulary -> language
@@ -51,9 +51,10 @@ export function slotValues(id, opts = {}) {
     if (bind[name] && menu) {                                            // data-driven (menu JSON)
       const b = bind[name]; const exprs = typeof b === 'string' ? { expr: b } : b;
       const m = exprs.expr.match(/^menu\.items\[(\d+)\]\.(\w+)$/);
-      if (m) { const it = menu.items[+m[1]] ?? menu.items[+m[1] % menu.items.length];
+      if (m) { const ix = (+m[1] + (opts.itemOffset || 0)) % menu.items.length; const it = menu.items[ix];
         if (m[2] === 'name' || m[2] === 'description') v = pick(it[m[2]], lang);
         else if (m[2] === 'price') { const code = currency || menu.defaultCurrency; v = formatMoney(it.prices?.[code] ?? Object.values(it.prices)[0], code, { lang }); }
+        else if (m[2] === 'category') v = pick(menu.categories.find(c => c.id === it.category)?.name, lang) ?? it.category;
         else if (m[2] === 'image') v = it.image.startsWith('data/') ? path.posix.relative(opts.base || `components/${id}`, it.image) : it.image;
         else if (it[m[2]] !== undefined) v = String(pick(it[m[2]], lang)); }
       const c = exprs.expr.match(/^menu\.categories\[(\d+)\]\.name$/); if (c) v = pick(menu.categories[+c[1] % menu.categories.length].name, lang);
@@ -79,7 +80,7 @@ export function renderComponent(id, opts = {}) {
 if (process.argv[1] && process.argv[1].endsWith('render.mjs')) {
   const a = process.argv.slice(2); const id = a[0]; const o = { set: {} };
   for (let i = 1; i < a.length; i++) { const k = a[i]; const v = a[i + 1];
-    if (k === '--locale') o.locale = v; else if (k === '--theme') o.theme = v; else if (k === '--menu') o.menu = v; else if (k === '--lang') o.lang = v; else if (k === '--currency') o.currency = v;
+    if (k === '--locale') o.locale = v; else if (k === '--theme') o.theme = v; else if (k === '--menu') o.menu = v; else if (k === '--lang') o.lang = v; else if (k === '--currency') o.currency = v; else if (k === '--offset') o.itemOffset = +v;
     else if (k === '--set') { const [s, ...r] = v.split('='); o.set[s] = r.join('='); } else if (k === '--out') o.out = v; else continue; i++; }
   if (!id) { console.error('usage: render.mjs <component-id> [--locale ar-AE/AED] [--theme dark] [--menu id] [--set slot=value] [--out file]'); process.exit(1); }
   const doc = renderComponent(id, o); if (o.out) fs.writeFileSync(o.out, doc); else process.stdout.write(doc);

@@ -1,0 +1,61 @@
+{
+  "component": "modal-dialog",
+  "slots": {
+    "modal_title": {
+      "type": "text",
+      "sample": "Confirm",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "frappe_confirm_message": {
+      "type": "text",
+      "sample": "Are you sure you want to delete this customer?",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "No",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Yes",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hide_title": {
+      "type": "text",
+      "sample": "Minimize",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "modal-dialog.button-1"
+    },
+    "hide_arialabel": {
+      "type": "text",
+      "sample": "Minimize",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "modal-dialog.button-1"
+    },
+    "icon_btn_title": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "modal-dialog.button-2"
+    },
+    "icon_btn_arialabel": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "modal-dialog.button-2"
+    }
+  }
+}

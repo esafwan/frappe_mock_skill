@@ -1,0 +1,164 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="light" dir="rtl">
+<head><meta charset="utf-8"><title>Modal dialog</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1440px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open no-list-sidebar modal-open" data-route="List/Customer/List" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="modal fade show" style="overflow: auto; display: block;" tabindex="-1" aria-modal="true" role="dialog"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-minimize-2">
+      <path d="m14 10 7-7"></path>
+      <path d="M20 10h-6V4"></path>
+      <path d="m3 21 7-7"></path>
+      <path d="M4 14h6v6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol></svg><div class="modal-dialog" data-ui="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="fill-width flex title-section">
+						<span class="indicator hidden"></span>
+						<h4 class="modal-title">Confirm</h4>
+					</div>
+					<div class="modal-actions d-flex">
+						<button class="es-button btn-modal-minimize icon-btn hide" type="button" data-variant="ghost" data-icon-button="true" title="Minimize" aria-label="Minimize" data-ui="modal-dialog.button-1"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-minimize-2">
+			</use>
+		</svg></button>
+						<button class="es-button btn-modal-close icon-btn" type="button" data-variant="ghost" data-icon-button="true" title="Close" aria-label="Close" data-dismiss="modal" data-ui="modal-dialog.button-2"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
+			</use>
+		</svg></button>
+					</div>
+				</div>
+				<div class="modal-body ui-front"><div><p class="frappe-confirm-message">Are you sure you want to delete this customer?</p></div><div class="hide modal-message"></div></div>
+				<div class="modal-footer">
+					<div class="custom-actions"></div>
+					<div class="standard-actions">
+						<button class="es-button btn-modal-secondary" type="button" data-ui="modal-dialog.button-3"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">No</span></button>
+						<button class="es-button btn-modal-primary" type="button" data-variant="solid" data-ui="modal-dialog.button-4"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Yes</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+</div>
+</body></html>

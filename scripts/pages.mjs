@@ -23,7 +23,7 @@ if (cmd === 'build' || cmd === 'verify') for (const p of specs) { const { doc, u
 if (cmd === 'verify') {
   const { browser, page } = await open(); const b2 = await chromium.launch(); let fail = 0;
   for (const p of specs) {
-    await go(page, p.url, { dark: p.theme === 'dark' }); if (p.prepare) await eval(p.prepare)(page); await page.waitForTimeout(1500); await page.mouse.move(0, 0);
+    await go(page, p.url, { dark: p.theme === 'dark' }); if (p.prepareFn) await (await import('./specs-pos.mjs')).prepares[p.prepareFn](page); else if (p.prepare) await eval(p.prepare)(page); await page.waitForTimeout(1500); await page.mouse.move(0, 0);
     await page.evaluate(() => document.querySelectorAll('#ury-return-to-app').forEach(e => e.remove()));
     const live = await page.screenshot({ path: ROOT + `pages/${p.id}.png` });
     const ctx = await b2.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, javaScriptEnabled: false }); const pg = await ctx.newPage(); await pg.goto('file://' + ROOT + `pages/${p.id}.html`); await pg.waitForTimeout(300);

@@ -1,0 +1,9 @@
+{
+  "component": "pos-cart",
+  "note": "slot -> menu expression; applied by tools/render.mjs when --menu is given. items[i] wraps around the menu length.",
+  "bind": {
+    "text_sm": "menu.items[0].name",
+    "text_sm_2": "menu.items[0].price",
+    "font_semibold_2": "menu.items[0].price"
+  }
+}
