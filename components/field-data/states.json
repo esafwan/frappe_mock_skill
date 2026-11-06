@@ -1,0 +1,113 @@
+{
+  "component": "field-data",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "field-data.input-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "field-data.input-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(124, 124, 124, 0.25) 0px 0px 0px 2px"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-data",
+      "changes": [
+        {
+          "element": "#path:6",
+          "addClass": [
+            "hide"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-data.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "disabled": ""
+          }
+        },
+        {
+          "element": "#path:8",
+          "addClass": [],
+          "removeClass": [
+            "hide"
+          ],
+          "attrs": {}
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "df read_only=1"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-data",
+      "changes": [
+        {
+          "element": "field-data",
+          "addClass": [
+            "has-error"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-data.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-invalid": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/error.png",
+      "description": "validation failure"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

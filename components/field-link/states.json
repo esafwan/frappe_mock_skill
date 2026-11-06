@@ -1,0 +1,121 @@
+{
+  "component": "field-link",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "input, select, textarea, .ql-editor",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "input, select, textarea, .ql-editor",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(124, 124, 124, 0.25) 0px 0px 0px 2px"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-link",
+      "changes": [
+        {
+          "element": "#path:6",
+          "addClass": [
+            "hide"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-link.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "disabled": ""
+          }
+        },
+        {
+          "element": "#path:19",
+          "addClass": [],
+          "removeClass": [
+            "hide"
+          ],
+          "attrs": {}
+        },
+        {
+          "element": "#path:20",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "data-ui": null
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "df read_only=1"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-link",
+      "changes": [
+        {
+          "element": "field-link",
+          "addClass": [
+            "has-error"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-link.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-invalid": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/error.png",
+      "description": "validation failure"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

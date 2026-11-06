@@ -1,0 +1,58 @@
+{
+  "component": "form-title",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "form-title.save",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(56, 56, 56)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "form-title.save",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgba(201, 201, 201, 0.898) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

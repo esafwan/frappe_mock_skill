@@ -1,0 +1,109 @@
+{
+  "component": "page-head",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "page-head.primary",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(56, 56, 56)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "page-head.primary",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgba(201, 201, 201, 0.898) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "page-head.primary",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(82, 82, 82)"
+        },
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgb(255, 255, 255) none 0px"
+        }
+      },
+      "screenshot": "states/active.png"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "page-head.primary",
+      "changes": [
+        {
+          "element": "page-head.primary",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": ""
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(255, 255, 255)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "backgroundColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(243, 243, 243)"
+        },
+        "borderColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(226, 226, 226)"
+        },
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgb(153, 153, 153) none 3px"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "disabled attribute + .disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

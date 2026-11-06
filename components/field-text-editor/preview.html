@@ -1,0 +1,387 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><title>Field: Text Editor</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Note/new-note-mtkwayqbgu" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container editable-form" id="page-Note" data-page-route="Note" data-state="dirty" style="width:1159px;box-sizing:border-box"><div class="container page-body" style="width:1159px;box-sizing:border-box"><div class="page-wrapper" style="width:1159px;box-sizing:border-box"><div class="page-content" style="width:1159px;box-sizing:border-box"><div class="layout-main layout-two-column" style="width:1159px;box-sizing:border-box"><div class="layout-main-section-wrapper" style="width:1159px;box-sizing:border-box"><div class="layout-main-section" style="width:1159px;box-sizing:border-box"><div style="width:1159px;box-sizing:border-box"><div class="std-form-layout" style="width:1159px;box-sizing:border-box"><div class="form-layout" style="width:1159px;box-sizing:border-box"><div class="form-page" style="width:1159px;box-sizing:border-box"><div class="form-section card-section visible-section" data-fieldname="__section_1" style="width:1159px;box-sizing:border-box"><div class="section-body" style="width:900px;box-sizing:border-box"><div class="form-column col-sm-12" data-fieldname="__column_1" style="width:900px;box-sizing:border-box"><form style="width:870px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-type">
+      <path d="M12 4v16"></path>
+      <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2"></path>
+      <path d="M9 20h6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-1">
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+      <path d="M12 18V6"></path>
+      <path d="m17 12 3-2v8"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-2">
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+      <path d="M12 18V6"></path>
+      <path d="M21 18h-4c0-4 4-3 4-6 0-1.5-2-2.5-4-1"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-3">
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+      <path d="M12 18V6"></path>
+      <path d="M17.5 10.5c1.7-1 3.5 0 3.5 1.5a2 2 0 0 1-2 2"></path>
+      <path d="M17 17.5c2 1.5 4 .3 4-1.5a2 2 0 0 0-2-2"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-4">
+      <path d="M12 18V6"></path>
+      <path d="M17 10v3a1 1 0 0 0 1 1h3"></path>
+      <path d="M21 10v8"></path>
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-5">
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+      <path d="M12 18V6"></path>
+      <path d="M17 13v-3h4"></path>
+      <path d="M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heading-6">
+      <path d="M4 12h8"></path>
+      <path d="M4 18V6"></path>
+      <path d="M12 18V6"></path>
+      <circle cx="19" cy="16" r="2"></circle>
+      <path d="M20 10c-2 2-3 3.5-3 6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-a-large-small">
+      <path d="m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16"></path>
+      <path d="M15.697 14h5.606"></path>
+      <path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16"></path>
+      <path d="M3.304 13h6.392"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-bold">
+      <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-italic">
+      <line x1="19" x2="10" y1="4" y2="4"></line>
+      <line x1="14" x2="5" y1="20" y2="20"></line>
+      <line x1="15" x2="9" y1="4" y2="20"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-underline">
+      <path d="M6 4v6a6 6 0 0 0 12 0V4"></path>
+      <line x1="4" x2="20" y1="20" y2="20"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-strikethrough">
+      <path d="M16 4H9a3 3 0 0 0-2.83 4"></path>
+      <path d="M14 12a4 4 0 0 1 0 8H6"></path>
+      <line x1="4" x2="20" y1="12" y2="12"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-eraser">
+      <path d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"></path>
+      <path d="m5.082 11.09 8.828 8.828"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-paint-bucket">
+      <path d="M11 7 6 2"></path>
+      <path d="M18.992 12H2.041"></path>
+      <path d="M21.145 18.38A3.34 3.34 0 0 1 20 16.5a3.3 3.3 0 0 1-1.145 1.88c-.575.46-.855 1.02-.855 1.595A2 2 0 0 0 20 22a2 2 0 0 0 2-2.025c0-.58-.285-1.13-.855-1.595"></path>
+      <path d="m8.5 4.5 2.148-2.148a1.205 1.205 0 0 1 1.704 0l7.296 7.296a1.205 1.205 0 0 1 0 1.704l-7.592 7.592a3.615 3.615 0 0 1-5.112 0l-3.888-3.888a3.615 3.615 0 0 1 0-5.112L5.67 7.33"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-highlighter">
+      <path d="m9 11-6 6v3h9l3-3"></path>
+      <path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-quote">
+      <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+      <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-code">
+      <path d="m16 18 6-6-6-6"></path>
+      <path d="m8 6-6 6 6 6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-pilcrow-right">
+      <path d="M10 3v11"></path>
+      <path d="M10 9H7a1 1 0 0 1 0-6h8"></path>
+      <path d="M14 3v11"></path>
+      <path d="m18 14 4 4H2"></path>
+      <path d="m22 18-4 4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-pilcrow-left">
+      <path d="M14 3v11"></path>
+      <path d="M14 9h-3a3 3 0 0 1 0-6h9"></path>
+      <path d="M18 3v11"></path>
+      <path d="M22 18H2l4-4"></path>
+      <path d="m6 22-4-4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-link-2">
+      <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+      <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+      <line x1="8" x2="16" y1="12" y2="12"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-image-plus">
+      <path d="M16 5h6"></path>
+      <path d="M19 2v6"></path>
+      <path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5"></path>
+      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+      <circle cx="9" cy="9" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list-ordered">
+      <path d="M11 5h10"></path>
+      <path d="M11 12h10"></path>
+      <path d="M11 19h10"></path>
+      <path d="M4 4h1v5"></path>
+      <path d="M4 9h2"></path>
+      <path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list">
+      <path d="M3 5h.01"></path>
+      <path d="M3 12h.01"></path>
+      <path d="M3 19h.01"></path>
+      <path d="M8 5h13"></path>
+      <path d="M8 12h13"></path>
+      <path d="M8 19h13"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list-check">
+      <path d="M16 5H3"></path>
+      <path d="M16 12H3"></path>
+      <path d="M11 19H3"></path>
+      <path d="m15 18 2 2 4-4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-text-align-start">
+      <path d="M21 5H3"></path>
+      <path d="M15 12H3"></path>
+      <path d="M17 19H3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-text-align-center">
+      <path d="M21 5H3"></path>
+      <path d="M17 12H7"></path>
+      <path d="M19 19H5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-text-align-end">
+      <path d="M21 5H3"></path>
+      <path d="M21 12H9"></path>
+      <path d="M21 19H7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-text-align-justify">
+      <path d="M3 5h18"></path>
+      <path d="M3 12h18"></path>
+      <path d="M3 19h18"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list-indent-decrease">
+      <path d="M21 5H11"></path>
+      <path d="M21 12H11"></path>
+      <path d="M21 19H11"></path>
+      <path d="m7 8-4 4 4 4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list-indent-increase">
+      <path d="M21 5H11"></path>
+      <path d="M21 12H11"></path>
+      <path d="M21 19H11"></path>
+      <path d="m3 8 4 4-4 4"></path>
+    </symbol></svg><div class="frappe-control" data-fieldtype="Text Editor" data-fieldname="content" data-ui="field-text-editor">
+				<div class="form-group">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">Content</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><div role="toolbar" class="ql-toolbar ql-snow"><span class="ql-formats"><span class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-1" aria-label="Text style" data-ui="field-text-editor.span-1"><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="p">
+				<use href="#icon-type"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="1">
+				<use href="#icon-heading-1"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="2">
+				<use href="#icon-heading-2"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="3">
+				<use href="#icon-heading-3"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="4">
+				<use href="#icon-heading-4"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="5">
+				<use href="#icon-heading-5"></use>
+			</svg><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon" data-level="6">
+				<use href="#icon-heading-6"></use>
+			</svg><svg class="ql-picker-caret" aria-hidden="true" stroke="currentColor" fill="none">
+					<use href="#icon-chevron-down"></use>
+				</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-1" data-ui="field-text-editor.span-2"><span tabindex="0" role="button" class="ql-picker-item" data-value="1" data-label="Heading 1" data-ui="field-text-editor.span-3"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-1"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="2" data-label="Heading 2" data-ui="field-text-editor.span-4"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-2"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="3" data-label="Heading 3" data-ui="field-text-editor.span-5"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-3"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="4" data-label="Heading 4" data-ui="field-text-editor.span-6"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-4"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="5" data-label="Heading 5" data-ui="field-text-editor.span-7"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-5"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="6" data-label="Heading 6" data-ui="field-text-editor.span-8"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-heading-6"></use>
+			</svg></span><span tabindex="0" role="button" class="ql-picker-item ql-selected" data-label="Paragraph" data-ui="field-text-editor.span-9"><svg aria-hidden="true" stroke="currentColor" fill="none">
+				<use href="#icon-type"></use>
+			</svg></span></span></span><select class="ql-header" style="display: none;" data-ui="field-text-editor.select-10"><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option><option value="6"></option><option selected=""></option></select></span><span class="ql-formats"><span class="ql-size ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-2" data-value="---" aria-label="Font size" data-ui="field-text-editor.span-11"><svg aria-hidden="true" stroke="currentColor" fill="none" class="ql-label-icon">
+				<use href="#icon-a-large-small"></use>
+			</svg><svg class="ql-picker-caret" aria-hidden="true" stroke="currentColor" fill="none">
+					<use href="#icon-chevron-down"></use>
+				</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-2" data-ui="field-text-editor.span-12"><span tabindex="0" role="button" class="ql-picker-item ql-selected" data-value="---" data-ui="field-text-editor.span-13"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="8px" data-ui="field-text-editor.span-14"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="9px" data-ui="field-text-editor.span-15"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="10px" data-ui="field-text-editor.span-16"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="11px" data-ui="field-text-editor.span-17"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="12px" data-ui="field-text-editor.span-18"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="13px" data-ui="field-text-editor.span-19"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="14px" data-ui="field-text-editor.span-20"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="15px" data-ui="field-text-editor.span-21"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="16px" data-ui="field-text-editor.span-22"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="18px" data-ui="field-text-editor.span-23"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="20px" data-ui="field-text-editor.span-24"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="22px" data-ui="field-text-editor.span-25"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="24px" data-ui="field-text-editor.span-26"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="32px" data-ui="field-text-editor.span-27"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="36px" data-ui="field-text-editor.span-28"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="40px" data-ui="field-text-editor.span-29"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="48px" data-ui="field-text-editor.span-30"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="54px" data-ui="field-text-editor.span-31"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="64px" data-ui="field-text-editor.span-32"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="96px" data-ui="field-text-editor.span-33"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="128px" data-ui="field-text-editor.span-34"></span></span></span><select class="ql-size" style="display: none;" data-ui="field-text-editor.select-35"><option selected=""></option><option value="8px"></option><option value="9px"></option><option value="10px"></option><option value="11px"></option><option value="12px"></option><option value="13px"></option><option value="14px"></option><option value="15px"></option><option value="16px"></option><option value="18px"></option><option value="20px"></option><option value="22px"></option><option value="24px"></option><option value="32px"></option><option value="36px"></option><option value="40px"></option><option value="48px"></option><option value="54px"></option><option value="64px"></option><option value="96px"></option><option value="128px"></option></select></span><span class="ql-formats"><button type="button" class="ql-bold" aria-pressed="false" aria-label="bold" data-ui="field-text-editor.button-36"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-bold">
+			</use>
+		</svg></button><button type="button" class="ql-italic" aria-pressed="false" aria-label="italic" data-ui="field-text-editor.button-37"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-italic">
+			</use>
+		</svg></button><button type="button" class="ql-underline" aria-pressed="false" aria-label="underline" data-ui="field-text-editor.button-38"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-underline">
+			</use>
+		</svg></button><button type="button" class="ql-strike" aria-pressed="false" aria-label="strike" data-ui="field-text-editor.button-39"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-strikethrough">
+			</use>
+		</svg></button><button type="button" class="ql-clean" aria-pressed="false" aria-label="clean" data-ui="field-text-editor.button-40"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-eraser">
+			</use>
+		</svg></button></span><span class="ql-formats"><span class="ql-color ql-picker ql-color-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-3" aria-label="Text color" data-ui="field-text-editor.span-41"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-paint-bucket">
+			</use>
+		</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-3" data-ui="field-text-editor.span-42"><span tabindex="0" role="button" class="ql-picker-item ql-selected ql-primary" data-ui="field-text-editor.span-43"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#e60000" data-ui="field-text-editor.span-44" style="background-color: rgb(230, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ff9900" data-ui="field-text-editor.span-45" style="background-color: rgb(255, 153, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ffff00" data-ui="field-text-editor.span-46" style="background-color: rgb(255, 255, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#008a00" data-ui="field-text-editor.span-47" style="background-color: rgb(0, 138, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#0066cc" data-ui="field-text-editor.span-48" style="background-color: rgb(0, 102, 204);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#9933ff" data-ui="field-text-editor.span-49" style="background-color: rgb(153, 51, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffff" data-ui="field-text-editor.span-50" style="background-color: rgb(255, 255, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#facccc" data-ui="field-text-editor.span-51" style="background-color: rgb(250, 204, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffebcc" data-ui="field-text-editor.span-52" style="background-color: rgb(255, 235, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffcc" data-ui="field-text-editor.span-53" style="background-color: rgb(255, 255, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce8cc" data-ui="field-text-editor.span-54" style="background-color: rgb(204, 232, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce0f5" data-ui="field-text-editor.span-55" style="background-color: rgb(204, 224, 245);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ebd6ff" data-ui="field-text-editor.span-56" style="background-color: rgb(235, 214, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#bbbbbb" data-ui="field-text-editor.span-57" style="background-color: rgb(187, 187, 187);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#f06666" data-ui="field-text-editor.span-58" style="background-color: rgb(240, 102, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffc266" data-ui="field-text-editor.span-59" style="background-color: rgb(255, 194, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffff66" data-ui="field-text-editor.span-60" style="background-color: rgb(255, 255, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66b966" data-ui="field-text-editor.span-61" style="background-color: rgb(102, 185, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66a3e0" data-ui="field-text-editor.span-62" style="background-color: rgb(102, 163, 224);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#c285ff" data-ui="field-text-editor.span-63" style="background-color: rgb(194, 133, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#888888" data-ui="field-text-editor.span-64" style="background-color: rgb(136, 136, 136);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#a10000" data-ui="field-text-editor.span-65" style="background-color: rgb(161, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b26b00" data-ui="field-text-editor.span-66" style="background-color: rgb(178, 107, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b2b200" data-ui="field-text-editor.span-67" style="background-color: rgb(178, 178, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#006100" data-ui="field-text-editor.span-68" style="background-color: rgb(0, 97, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#0047b2" data-ui="field-text-editor.span-69" style="background-color: rgb(0, 71, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#6b24b2" data-ui="field-text-editor.span-70" style="background-color: rgb(107, 36, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#444444" data-ui="field-text-editor.span-71" style="background-color: rgb(68, 68, 68);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#5c0000" data-ui="field-text-editor.span-72" style="background-color: rgb(92, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#663d00" data-ui="field-text-editor.span-73" style="background-color: rgb(102, 61, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#666600" data-ui="field-text-editor.span-74" style="background-color: rgb(102, 102, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#003700" data-ui="field-text-editor.span-75" style="background-color: rgb(0, 55, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#002966" data-ui="field-text-editor.span-76" style="background-color: rgb(0, 41, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#3d1466" data-ui="field-text-editor.span-77" style="background-color: rgb(61, 20, 102);"></span></span></span><select class="ql-color" style="display: none;" data-ui="field-text-editor.select-78"><option selected=""></option><option value="#e60000"></option><option value="#ff9900"></option><option value="#ffff00"></option><option value="#008a00"></option><option value="#0066cc"></option><option value="#9933ff"></option><option value="#ffffff"></option><option value="#facccc"></option><option value="#ffebcc"></option><option value="#ffffcc"></option><option value="#cce8cc"></option><option value="#cce0f5"></option><option value="#ebd6ff"></option><option value="#bbbbbb"></option><option value="#f06666"></option><option value="#ffc266"></option><option value="#ffff66"></option><option value="#66b966"></option><option value="#66a3e0"></option><option value="#c285ff"></option><option value="#888888"></option><option value="#a10000"></option><option value="#b26b00"></option><option value="#b2b200"></option><option value="#006100"></option><option value="#0047b2"></option><option value="#6b24b2"></option><option value="#444444"></option><option value="#5c0000"></option><option value="#663d00"></option><option value="#666600"></option><option value="#003700"></option><option value="#002966"></option><option value="#3d1466"></option></select><span class="ql-background ql-picker ql-color-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-4" aria-label="Background color" data-ui="field-text-editor.span-79"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-highlighter">
+			</use>
+		</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-4" data-ui="field-text-editor.span-80"><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#000000" data-ui="field-text-editor.span-81" style="background-color: rgb(0, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#e60000" data-ui="field-text-editor.span-82" style="background-color: rgb(230, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ff9900" data-ui="field-text-editor.span-83" style="background-color: rgb(255, 153, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#ffff00" data-ui="field-text-editor.span-84" style="background-color: rgb(255, 255, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#008a00" data-ui="field-text-editor.span-85" style="background-color: rgb(0, 138, 0);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#0066cc" data-ui="field-text-editor.span-86" style="background-color: rgb(0, 102, 204);"></span><span tabindex="0" role="button" class="ql-picker-item ql-primary" data-value="#9933ff" data-ui="field-text-editor.span-87" style="background-color: rgb(153, 51, 255);"></span><span tabindex="0" role="button" class="ql-picker-item ql-selected" data-ui="field-text-editor.span-88"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#facccc" data-ui="field-text-editor.span-89" style="background-color: rgb(250, 204, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffebcc" data-ui="field-text-editor.span-90" style="background-color: rgb(255, 235, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffffcc" data-ui="field-text-editor.span-91" style="background-color: rgb(255, 255, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce8cc" data-ui="field-text-editor.span-92" style="background-color: rgb(204, 232, 204);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#cce0f5" data-ui="field-text-editor.span-93" style="background-color: rgb(204, 224, 245);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ebd6ff" data-ui="field-text-editor.span-94" style="background-color: rgb(235, 214, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#bbbbbb" data-ui="field-text-editor.span-95" style="background-color: rgb(187, 187, 187);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#f06666" data-ui="field-text-editor.span-96" style="background-color: rgb(240, 102, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffc266" data-ui="field-text-editor.span-97" style="background-color: rgb(255, 194, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#ffff66" data-ui="field-text-editor.span-98" style="background-color: rgb(255, 255, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66b966" data-ui="field-text-editor.span-99" style="background-color: rgb(102, 185, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#66a3e0" data-ui="field-text-editor.span-100" style="background-color: rgb(102, 163, 224);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#c285ff" data-ui="field-text-editor.span-101" style="background-color: rgb(194, 133, 255);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#888888" data-ui="field-text-editor.span-102" style="background-color: rgb(136, 136, 136);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#a10000" data-ui="field-text-editor.span-103" style="background-color: rgb(161, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b26b00" data-ui="field-text-editor.span-104" style="background-color: rgb(178, 107, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#b2b200" data-ui="field-text-editor.span-105" style="background-color: rgb(178, 178, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#006100" data-ui="field-text-editor.span-106" style="background-color: rgb(0, 97, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#0047b2" data-ui="field-text-editor.span-107" style="background-color: rgb(0, 71, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#6b24b2" data-ui="field-text-editor.span-108" style="background-color: rgb(107, 36, 178);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#444444" data-ui="field-text-editor.span-109" style="background-color: rgb(68, 68, 68);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#5c0000" data-ui="field-text-editor.span-110" style="background-color: rgb(92, 0, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#663d00" data-ui="field-text-editor.span-111" style="background-color: rgb(102, 61, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#666600" data-ui="field-text-editor.span-112" style="background-color: rgb(102, 102, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#003700" data-ui="field-text-editor.span-113" style="background-color: rgb(0, 55, 0);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#002966" data-ui="field-text-editor.span-114" style="background-color: rgb(0, 41, 102);"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="#3d1466" data-ui="field-text-editor.span-115" style="background-color: rgb(61, 20, 102);"></span></span></span><select class="ql-background" style="display: none;" data-ui="field-text-editor.select-116"><option value="#000000"></option><option value="#e60000"></option><option value="#ff9900"></option><option value="#ffff00"></option><option value="#008a00"></option><option value="#0066cc"></option><option value="#9933ff"></option><option selected=""></option><option value="#facccc"></option><option value="#ffebcc"></option><option value="#ffffcc"></option><option value="#cce8cc"></option><option value="#cce0f5"></option><option value="#ebd6ff"></option><option value="#bbbbbb"></option><option value="#f06666"></option><option value="#ffc266"></option><option value="#ffff66"></option><option value="#66b966"></option><option value="#66a3e0"></option><option value="#c285ff"></option><option value="#888888"></option><option value="#a10000"></option><option value="#b26b00"></option><option value="#b2b200"></option><option value="#006100"></option><option value="#0047b2"></option><option value="#6b24b2"></option><option value="#444444"></option><option value="#5c0000"></option><option value="#663d00"></option><option value="#666600"></option><option value="#003700"></option><option value="#002966"></option><option value="#3d1466"></option></select></span><span class="ql-formats"><button type="button" class="ql-blockquote" aria-pressed="false" aria-label="blockquote" data-ui="field-text-editor.button-117"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-quote">
+			</use>
+		</svg></button><button type="button" class="ql-code-block" aria-pressed="false" aria-label="code-block" data-ui="field-text-editor.button-118"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-code">
+			</use>
+		</svg></button></span><span class="ql-formats"><button type="button" class="ql-direction" aria-pressed="false" value="rtl" aria-label="direction: rtl" data-ui="field-text-editor.button-119"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-pilcrow-right">
+			</use>
+		</svg><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-pilcrow-left">
+			</use>
+		</svg></button></span><span class="ql-formats"><button type="button" class="ql-link" aria-pressed="false" aria-label="link" data-ui="field-text-editor.button-120"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-link-2">
+			</use>
+		</svg></button><button type="button" class="ql-image" aria-pressed="false" aria-label="image" data-ui="field-text-editor.button-121"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-image-plus">
+			</use>
+		</svg></button></span><span class="ql-formats"><button type="button" class="ql-list" aria-pressed="false" value="ordered" aria-label="list: ordered" data-ui="field-text-editor.button-122"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-list-ordered">
+			</use>
+		</svg></button><button type="button" class="ql-list" aria-pressed="false" value="bullet" aria-label="list: bullet" data-ui="field-text-editor.button-123"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-list">
+			</use>
+		</svg></button><button type="button" class="ql-list" aria-pressed="false" value="check" aria-label="list: check" data-ui="field-text-editor.button-124"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-list-check">
+			</use>
+		</svg></button></span><span class="ql-formats"><span class="ql-align ql-picker ql-icon-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-5" aria-label="Alignment" data-ui="field-text-editor.span-125"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-text-align-start">
+			</use>
+		</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-5" data-ui="field-text-editor.span-126"><span tabindex="0" role="button" class="ql-picker-item ql-selected" data-ui="field-text-editor.span-127"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-text-align-start">
+			</use>
+		</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="center" data-ui="field-text-editor.span-128"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-text-align-center">
+			</use>
+		</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="right" data-ui="field-text-editor.span-129"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-text-align-end">
+			</use>
+		</svg></span><span tabindex="0" role="button" class="ql-picker-item" data-value="justify" data-ui="field-text-editor.span-130"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-text-align-justify">
+			</use>
+		</svg></span></span></span><select class="ql-align" style="display: none;" data-ui="field-text-editor.select-131"><option selected=""></option><option value="center"></option><option value="right"></option><option value="justify"></option></select></span><span class="ql-formats"><button type="button" class="ql-indent" aria-pressed="false" value="-1" aria-label="indent: -1" data-ui="field-text-editor.button-132"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-list-indent-decrease">
+			</use>
+		</svg></button><button type="button" class="ql-indent" aria-pressed="false" value="+1" aria-label="indent: +1" data-ui="field-text-editor.button-133"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-list-indent-increase">
+			</use>
+		</svg></button></span><span class="ql-formats"><span class="ql-table ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-6" data-value="insert-table" aria-label="Table" data-title="Table" data-ui="field-text-editor.span-134"><svg class="ql-picker-caret" aria-hidden="true" stroke="currentColor" fill="none">
+					<use href="#icon-chevron-down"></use>
+				</svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-6" data-ui="field-text-editor.span-135"><span tabindex="0" role="button" class="ql-picker-item ql-selected" data-value="insert-table" data-label="Insert Table" data-ui="field-text-editor.span-136"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="insert-row-above" data-label="Insert Row Above" data-ui="field-text-editor.span-137"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="insert-row-below" data-label="Insert Row Below" data-ui="field-text-editor.span-138"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="insert-column-right" data-label="Insert Column Right" data-ui="field-text-editor.span-139"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="insert-column-left" data-label="Insert Column Left" data-ui="field-text-editor.span-140"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="delete-row" data-label="Delete Row" data-ui="field-text-editor.span-141"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="delete-column" data-label="Delete Column" data-ui="field-text-editor.span-142"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="delete-table" data-label="Delete Table" data-ui="field-text-editor.span-143"></span></span></span><select class="ql-table" style="display: none;" data-ui="field-text-editor.select-144"><option value="insert-table" selected=""></option><option value="insert-row-above"></option><option value="insert-row-below"></option><option value="insert-column-right"></option><option value="insert-column-left"></option><option value="delete-row"></option><option value="delete-column"></option><option value="delete-table"></option></select></span></div><div class="ql-container ql-snow" style="position: relative;"><div class="ql-editor ql-blank" contenteditable="true" data-placeholder="Type something..."><p><br></p></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank" data-ui="field-text-editor.link-145"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL" data-ui="field-text-editor.input-146"><a class="ql-action" data-ui="field-text-editor.link-147"></a><a class="ql-remove" data-ui="field-text-editor.link-148"></a></div></div></div>
+						<div class="control-value like-disabled-input hide for-description bold" style="white-space-collapse: preserve;"><div class="ql-editor read-mode"></div></div>
+						<div class="help-box small text-extra-muted">Help: To link to another record in the system, use &quot;/desk/note/[Note Name]&quot; as the Link URL. (don't use &quot;http://&quot;)</div>
+					</div>
+				</div>
+			<span class="tooltip-content">content</span></div></form></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</div>
+</body></html>

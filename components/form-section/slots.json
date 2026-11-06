@@ -1,0 +1,691 @@
+{
+  "component": "form-section",
+  "slots": {
+    "tooltip_content": {
+      "type": "text",
+      "sample": "naming_series",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd": {
+      "type": "text",
+      "sample": "Item Code",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "bold": {
+      "type": "text",
+      "sample": "110CUP",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_2": {
+      "type": "text",
+      "sample": "item_code",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "bold_2": {
+      "type": "text",
+      "sample": "110ml Print (Paper Cup)",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_3": {
+      "type": "text",
+      "sample": "item_name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd_2": {
+      "type": "text",
+      "sample": "Item Group",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "visually_hidden": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "bold_3": {
+      "type": "text",
+      "sample": "Disposable",
+      "maxLength": 20,
+      "where": "text",
+      "element": "form-section.link-7"
+    },
+    "tooltip_content_4": {
+      "type": "text",
+      "sample": "item_group",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd_3": {
+      "type": "text",
+      "sample": "Default Unit of Measure",
+      "maxLength": 46,
+      "where": "text",
+      "element": "label"
+    },
+    "visually_hidden_2": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "bold_4": {
+      "type": "text",
+      "sample": "Nos",
+      "maxLength": 20,
+      "where": "text",
+      "element": "form-section.link-11"
+    },
+    "tooltip_content_5": {
+      "type": "text",
+      "sample": "stock_uom",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_6": {
+      "type": "text",
+      "sample": "custom_opportunity_costs",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_2": {
+      "type": "text",
+      "sample": "Opportunity Costs",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "grid_static_col": {
+      "type": "text",
+      "sample": "No.",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd_4": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis": {
+      "type": "text",
+      "sample": "Cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_extra_muted": {
+      "type": "text",
+      "sample": "No rows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_loading_label": {
+      "type": "text",
+      "sample": "Deleting...",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_3": {
+      "type": "text",
+      "sample": "Delete all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_4": {
+      "type": "text",
+      "sample": "Duplicate rows",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_5": {
+      "type": "text",
+      "sample": "Add row",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_6": {
+      "type": "text",
+      "sample": "Add multiple",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_7": {
+      "type": "text",
+      "sample": "Download",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_8": {
+      "type": "text",
+      "sample": "Upload",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_7": {
+      "type": "text",
+      "sample": "disposable_items",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_3": {
+      "type": "text",
+      "sample": "Disposable Items",
+      "maxLength": 32,
+      "where": "text",
+      "element": "label"
+    },
+    "grid_static_col_2": {
+      "type": "text",
+      "sample": "No.",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd_5": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "reqd_6": {
+      "type": "text",
+      "sample": "Qty",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_extra_muted_2": {
+      "type": "text",
+      "sample": "No rows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_loading_label_2": {
+      "type": "text",
+      "sample": "Deleting...",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_9": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_10": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_11": {
+      "type": "text",
+      "sample": "Delete all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_12": {
+      "type": "text",
+      "sample": "Duplicate rows",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_13": {
+      "type": "text",
+      "sample": "Add row",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_14": {
+      "type": "text",
+      "sample": "Add multiple",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_15": {
+      "type": "text",
+      "sample": "Download",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_16": {
+      "type": "text",
+      "sample": "Upload",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area": {
+      "type": "text",
+      "sample": "Is Disposable",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_8": {
+      "type": "text",
+      "sample": "is_disposable",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_4": {
+      "type": "text",
+      "sample": "Yield Percent",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "hide": {
+      "type": "number",
+      "sample": "0%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_extra_muted_3": {
+      "type": "text",
+      "sample": "Standard expected yield: output qty / input qty x 100. E.g. 85 means 85% usable, 15% expected loss.",
+      "maxLength": 198,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_9": {
+      "type": "text",
+      "sample": "custom_yield_percent",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_2": {
+      "type": "text",
+      "sample": "Yield Tracked",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_10": {
+      "type": "text",
+      "sample": "custom_yield_tracked",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_5": {
+      "type": "text",
+      "sample": "Yield Check Cadence",
+      "maxLength": 38,
+      "where": "text",
+      "element": "label"
+    },
+    "ellipsis_3": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "Every Issue",
+      "maxLength": 22,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "Interval",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_6": {
+      "type": "text",
+      "sample": "Sampled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "hide_2": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_11": {
+      "type": "text",
+      "sample": "custom_yield_check_cadence",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_6": {
+      "type": "text",
+      "sample": "Yield Check Interval (Days)",
+      "maxLength": 54,
+      "where": "text",
+      "element": "label"
+    },
+    "hide_3": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_extra_muted_4": {
+      "type": "text",
+      "sample": "Days between required yield checks when cadence is Interval.",
+      "maxLength": 120,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_12": {
+      "type": "text",
+      "sample": "custom_yield_check_interval_days",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_3": {
+      "type": "text",
+      "sample": "Disabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "frappe_card_description": {
+      "type": "text",
+      "sample": "Disabled items cannot be selected in any transaction.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_13": {
+      "type": "text",
+      "sample": "disabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_4": {
+      "type": "text",
+      "sample": "Allow Alternative Item",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "frappe_card_description_2": {
+      "type": "text",
+      "sample": "Allow substituting this item with an alternative from the Item Alternative list when stock is unavailable.",
+      "maxLength": 212,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_14": {
+      "type": "text",
+      "sample": "allow_alternative_item",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_5": {
+      "type": "text",
+      "sample": "Maintain Stock",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_extra_muted_5": {
+      "type": "text",
+      "sample": "ERPNext will make a stock ledger entry for each transaction of this item. Keep unchecked for non-stock or service items.",
+      "maxLength": 240,
+      "where": "text",
+      "element": "p"
+    },
+    "tooltip_content_15": {
+      "type": "text",
+      "sample": "is_stock_item",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_6": {
+      "type": "text",
+      "sample": "Has Variants",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "frappe_card_description_3": {
+      "type": "text",
+      "sample": "If this item has variants, then it cannot be selected in sales orders etc.",
+      "maxLength": 148,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_16": {
+      "type": "text",
+      "sample": "has_variants",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_17": {
+      "type": "text",
+      "sample": "opening_stock",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "bold_value": {
+      "type": "text",
+      "sample": "110CUP",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "form-section.input-1"
+    },
+    "text_muted_title": {
+      "type": "text",
+      "sample": "Open Translation",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "form-section.link-2"
+    },
+    "bold_value_2": {
+      "type": "text",
+      "sample": "110ml Print (Paper Cup)",
+      "maxLength": 46,
+      "where": "attr:value",
+      "element": "form-section.input-3"
+    },
+    "bold_value_3": {
+      "type": "text",
+      "sample": "Disposable",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "form-section.input-4"
+    },
+    "btn_clear_title": {
+      "type": "text",
+      "sample": "Clear Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.link-5"
+    },
+    "btn_open_title": {
+      "type": "text",
+      "sample": "Open Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.link-6"
+    },
+    "bold_value_4": {
+      "type": "text",
+      "sample": "Nos",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "form-section.input-8"
+    },
+    "btn_clear_title_2": {
+      "type": "text",
+      "sample": "Clear Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.link-9"
+    },
+    "btn_open_title_2": {
+      "type": "text",
+      "sample": "Open Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.link-10"
+    },
+    "grid_static_col_title": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.div-13"
+    },
+    "grid_data_last_title": {
+      "type": "text",
+      "sample": "Cost",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "grid_static_col_title_2": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "form-section.div-24"
+    },
+    "grid_static_col_title_3": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "grid_data_last_title_2": {
+      "type": "text",
+      "sample": "Qty",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "form_control_value": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "form-section.input-36"
+    },
+    "ellipsis_value": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_2": {
+      "type": "text",
+      "sample": "Every Issue",
+      "maxLength": 22,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_3": {
+      "type": "text",
+      "sample": "Interval",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_4": {
+      "type": "text",
+      "sample": "Sampled",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "form_control_value_2": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "form-section.input-40"
+    }
+  }
+}

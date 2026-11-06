@@ -1,0 +1,103 @@
+{
+  "component": "field-check",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "capture failed: locator.hover: Element is not visible"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "input, select, textarea, .ql-editor",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-check",
+      "changes": [
+        {
+          "element": "#path:3",
+          "addClass": [
+            "hide"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-check.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "disabled": ""
+          }
+        },
+        {
+          "element": "#path:5",
+          "addClass": [],
+          "removeClass": [
+            "hide"
+          ],
+          "attrs": {}
+        },
+        {
+          "element": "#path:6",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "data-ui": null
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "df read_only=1"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-check",
+      "changes": [
+        {
+          "element": "field-check",
+          "addClass": [
+            "has-error"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-check.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-invalid": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/error.png",
+      "description": "validation failure"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

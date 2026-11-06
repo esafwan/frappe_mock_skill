@@ -1,0 +1,831 @@
+{
+  "component": "workspace-shortcuts",
+  "slots": {
+    "ellipsis": {
+      "type": "text",
+      "sample": "Sales Order Analysis",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "dropdown_item": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-2"
+    },
+    "dropdown_item_2": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-3"
+    },
+    "dropdown_item_3": {
+      "type": "text",
+      "sample": "Reset Chart",
+      "maxLength": 22,
+      "where": "text",
+      "element": "workspace-shortcuts.link-4"
+    },
+    "dropdown_item_4": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-5"
+    },
+    "dropdown_item_5": {
+      "type": "text",
+      "sample": "Sales Order Analysis Report",
+      "maxLength": 54,
+      "where": "text",
+      "element": "workspace-shortcuts.link-6"
+    },
+    "text_extra_muted": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "max_w_sm": {
+      "type": "text",
+      "sample": "Sales orders still waiting to be delivered or billed.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "Sales Orders to Deliver",
+      "maxLength": 46,
+      "where": "text",
+      "element": "span"
+    },
+    "pull_right": {
+      "type": "text",
+      "sample": "...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-8"
+    },
+    "dropdown_item_6": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-9"
+    },
+    "dropdown_item_7": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-10"
+    },
+    "number": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_3": {
+      "type": "text",
+      "sample": "Sales Orders to Bill",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "pull_right_2": {
+      "type": "text",
+      "sample": "...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-11"
+    },
+    "dropdown_item_8": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-12"
+    },
+    "dropdown_item_9": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-13"
+    },
+    "number_2": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "Annual Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "pull_right_3": {
+      "type": "text",
+      "sample": "...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-14"
+    },
+    "dropdown_item_10": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-15"
+    },
+    "dropdown_item_11": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "workspace-shortcuts.link-16"
+    },
+    "number_3": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "Sales Reports",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text": {
+      "type": "text",
+      "sample": "Sales Analytics",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_2": {
+      "type": "text",
+      "sample": "Sales Register",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_3": {
+      "type": "text",
+      "sample": "Gross Profit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_4": {
+      "type": "text",
+      "sample": "Item-wise Sales Register",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_5": {
+      "type": "text",
+      "sample": "Item-wise Sales History",
+      "maxLength": 46,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_6": {
+      "type": "text",
+      "sample": "Sales Order Analysis",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_7": {
+      "type": "text",
+      "sample": "Sales Order Trends",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_8": {
+      "type": "text",
+      "sample": "Quotation Trends",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_9": {
+      "type": "text",
+      "sample": "Sales Invoice Trends",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_10": {
+      "type": "text",
+      "sample": "Territory-wise Sales",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_11": {
+      "type": "text",
+      "sample": "Lost Quotations",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_6": {
+      "type": "text",
+      "sample": "Customer Reports",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_12": {
+      "type": "text",
+      "sample": "Accounts Receivable",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_13": {
+      "type": "text",
+      "sample": "Accounts Receivable Summary",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_14": {
+      "type": "text",
+      "sample": "Customer Credit Balance",
+      "maxLength": 46,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_15": {
+      "type": "text",
+      "sample": "Inactive Customers",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_16": {
+      "type": "text",
+      "sample": "Customers Without Any Sales Transactions",
+      "maxLength": 80,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_17": {
+      "type": "text",
+      "sample": "Customer Acquisition and Loyalty",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_18": {
+      "type": "text",
+      "sample": "Payment Terms Status for Sales Order",
+      "maxLength": 72,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_19": {
+      "type": "text",
+      "sample": "Customer-wise Item Price",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_7": {
+      "type": "text",
+      "sample": "Sales Team Reports",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_20": {
+      "type": "text",
+      "sample": "Sales Person-wise Transaction Summary",
+      "maxLength": 74,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_21": {
+      "type": "text",
+      "sample": "Sales Person Commission Summary",
+      "maxLength": 62,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_22": {
+      "type": "text",
+      "sample": "Sales Partners Commission",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_23": {
+      "type": "text",
+      "sample": "Sales Partner Commission Summary",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_24": {
+      "type": "text",
+      "sample": "Sales Partner Transaction Summary",
+      "maxLength": 66,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_25": {
+      "type": "text",
+      "sample": "Sales Person Target Variance Based On Item Group",
+      "maxLength": 96,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_26": {
+      "type": "text",
+      "sample": "Territory Target Variance Based On Item Group",
+      "maxLength": 90,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_27": {
+      "type": "text",
+      "sample": "Sales Partner Target Variance based on Item Group",
+      "maxLength": 98,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_8": {
+      "type": "text",
+      "sample": "Pricing",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_28": {
+      "type": "text",
+      "sample": "Promotional Scheme",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_29": {
+      "type": "text",
+      "sample": "Coupon Code",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_30": {
+      "type": "text",
+      "sample": "Product Bundle",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_31": {
+      "type": "text",
+      "sample": "Blanket Order",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_9": {
+      "type": "text",
+      "sample": "Point of Sale",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_32": {
+      "type": "text",
+      "sample": "POS Opening Entry",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_33": {
+      "type": "text",
+      "sample": "POS Closing Entry",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_34": {
+      "type": "text",
+      "sample": "Loyalty Program",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_35": {
+      "type": "text",
+      "sample": "POS Settings",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_10": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_36": {
+      "type": "text",
+      "sample": "Tax Template",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_37": {
+      "type": "text",
+      "sample": "Terms Template",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_38": {
+      "type": "text",
+      "sample": "Shipping Rule",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "link_text_39": {
+      "type": "text",
+      "sample": "Sales Partner",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "widget_title_title": {
+      "type": "text",
+      "sample": "Sales Order Analysis",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "ellipsis_title": {
+      "type": "text",
+      "sample": "Sales Order Analysis",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_2": {
+      "type": "text",
+      "sample": "Sales Orders to Deliver",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_3": {
+      "type": "text",
+      "sample": "Sales Orders to Bill",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_4": {
+      "type": "text",
+      "sample": "Annual Sales",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_5": {
+      "type": "text",
+      "sample": "Sales Reports",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title": {
+      "type": "text",
+      "sample": "Sales Analytics",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-17"
+    },
+    "link_item_title_2": {
+      "type": "text",
+      "sample": "Sales Register",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-18"
+    },
+    "link_item_title_3": {
+      "type": "text",
+      "sample": "Gross Profit",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-19"
+    },
+    "link_item_title_4": {
+      "type": "text",
+      "sample": "Item-wise Sales Register",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-20"
+    },
+    "link_item_title_5": {
+      "type": "text",
+      "sample": "Item-wise Sales History",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-21"
+    },
+    "link_item_title_6": {
+      "type": "text",
+      "sample": "Sales Order Analysis",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-22"
+    },
+    "link_item_title_7": {
+      "type": "text",
+      "sample": "Sales Order Trends",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-23"
+    },
+    "link_item_title_8": {
+      "type": "text",
+      "sample": "Quotation Trends",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-24"
+    },
+    "link_item_title_9": {
+      "type": "text",
+      "sample": "Sales Invoice Trends",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-25"
+    },
+    "link_item_title_10": {
+      "type": "text",
+      "sample": "Territory-wise Sales",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-26"
+    },
+    "link_item_title_11": {
+      "type": "text",
+      "sample": "Lost Quotations",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-27"
+    },
+    "ellipsis_title_6": {
+      "type": "text",
+      "sample": "Customer Reports",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title_12": {
+      "type": "text",
+      "sample": "Accounts Receivable",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-28"
+    },
+    "link_item_title_13": {
+      "type": "text",
+      "sample": "Accounts Receivable Summary",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-29"
+    },
+    "link_item_title_14": {
+      "type": "text",
+      "sample": "Customer Credit Balance",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-30"
+    },
+    "link_item_title_15": {
+      "type": "text",
+      "sample": "Inactive Customers",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-31"
+    },
+    "link_item_title_16": {
+      "type": "text",
+      "sample": "Customers Without Any Sales Transactions",
+      "maxLength": 80,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-32"
+    },
+    "link_item_title_17": {
+      "type": "text",
+      "sample": "Customer Acquisition and Loyalty",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-33"
+    },
+    "link_item_title_18": {
+      "type": "text",
+      "sample": "Payment Terms Status for Sales Order",
+      "maxLength": 72,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-34"
+    },
+    "link_item_title_19": {
+      "type": "text",
+      "sample": "Customer-wise Item Price",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-35"
+    },
+    "ellipsis_title_7": {
+      "type": "text",
+      "sample": "Sales Team Reports",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title_20": {
+      "type": "text",
+      "sample": "Sales Person-wise Transaction Summary",
+      "maxLength": 74,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-36"
+    },
+    "link_item_title_21": {
+      "type": "text",
+      "sample": "Sales Person Commission Summary",
+      "maxLength": 62,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-37"
+    },
+    "link_item_title_22": {
+      "type": "text",
+      "sample": "Sales Partners Commission",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-38"
+    },
+    "link_item_title_23": {
+      "type": "text",
+      "sample": "Sales Partner Commission Summary",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-39"
+    },
+    "link_item_title_24": {
+      "type": "text",
+      "sample": "Sales Partner Transaction Summary",
+      "maxLength": 66,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-40"
+    },
+    "link_item_title_25": {
+      "type": "text",
+      "sample": "Sales Person Target Variance Based On Item Group",
+      "maxLength": 96,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-41"
+    },
+    "link_item_title_26": {
+      "type": "text",
+      "sample": "Territory Target Variance Based On Item Group",
+      "maxLength": 90,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-42"
+    },
+    "link_item_title_27": {
+      "type": "text",
+      "sample": "Sales Partner Target Variance based on Item Group",
+      "maxLength": 98,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-43"
+    },
+    "ellipsis_title_8": {
+      "type": "text",
+      "sample": "Pricing",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title_28": {
+      "type": "text",
+      "sample": "Promotional Scheme",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-44"
+    },
+    "link_item_title_29": {
+      "type": "text",
+      "sample": "Coupon Code",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-45"
+    },
+    "link_item_title_30": {
+      "type": "text",
+      "sample": "Product Bundle",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-46"
+    },
+    "link_item_title_31": {
+      "type": "text",
+      "sample": "Blanket Order",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-47"
+    },
+    "ellipsis_title_9": {
+      "type": "text",
+      "sample": "Point of Sale",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title_32": {
+      "type": "text",
+      "sample": "POS Opening Entry",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-48"
+    },
+    "link_item_title_33": {
+      "type": "text",
+      "sample": "POS Closing Entry",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-49"
+    },
+    "link_item_title_34": {
+      "type": "text",
+      "sample": "Loyalty Program",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-50"
+    },
+    "link_item_title_35": {
+      "type": "text",
+      "sample": "POS Settings",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-51"
+    },
+    "ellipsis_title_10": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "link_item_title_36": {
+      "type": "text",
+      "sample": "Tax Template",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-52"
+    },
+    "link_item_title_37": {
+      "type": "text",
+      "sample": "Terms Template",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-53"
+    },
+    "link_item_title_38": {
+      "type": "text",
+      "sample": "Shipping Rule",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-54"
+    },
+    "link_item_title_39": {
+      "type": "text",
+      "sample": "Sales Partner",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "workspace-shortcuts.link-55"
+    }
+  }
+}

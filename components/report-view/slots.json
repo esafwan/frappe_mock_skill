@@ -1,0 +1,4415 @@
+{
+  "component": "report-view",
+  "slots": {
+    "dropdown_item": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_2": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "visually_hidden": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_2": {
+      "type": "text",
+      "sample": "customer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "dropdown_item_3": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_4": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content_3": {
+      "type": "text",
+      "sample": "customer_name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "visually_hidden_2": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_4": {
+      "type": "text",
+      "sample": "company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_5": {
+      "type": "text",
+      "sample": "posting_date",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "Return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_3": {
+      "type": "text",
+      "sample": "Credit Note Issued",
+      "maxLength": 36,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_6": {
+      "type": "text",
+      "sample": "Partly Paid",
+      "maxLength": 22,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_7": {
+      "type": "text",
+      "sample": "Unpaid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_8": {
+      "type": "text",
+      "sample": "Unpaid and Discounted",
+      "maxLength": 42,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_9": {
+      "type": "text",
+      "sample": "Partly Paid and Discounted",
+      "maxLength": 52,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_10": {
+      "type": "text",
+      "sample": "Overdue and Discounted",
+      "maxLength": 44,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_11": {
+      "type": "text",
+      "sample": "Overdue",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_12": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "ellipsis_13": {
+      "type": "text",
+      "sample": "Internal Transfer",
+      "maxLength": 34,
+      "where": "text",
+      "element": "option"
+    },
+    "tooltip_content_6": {
+      "type": "text",
+      "sample": "status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "xs": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs": {
+      "type": "text",
+      "sample": "Filter",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_2": {
+      "type": "text",
+      "sample": "Add Group",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_sm": {
+      "type": "text",
+      "sample": "Created On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "option": {
+      "type": "text",
+      "sample": "Last Updated On",
+      "maxLength": 30,
+      "where": "text",
+      "element": "report-view.link-15"
+    },
+    "option_2": {
+      "type": "text",
+      "sample": "Created On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-16"
+    },
+    "option_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "report-view.link-17"
+    },
+    "option_4": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-18"
+    },
+    "option_5": {
+      "type": "text",
+      "sample": "Most Used",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-19"
+    },
+    "option_6": {
+      "type": "text",
+      "sample": "Series",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-20"
+    },
+    "option_7": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-21"
+    },
+    "option_8": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-22"
+    },
+    "option_9": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "text",
+      "element": "report-view.link-23"
+    },
+    "option_10": {
+      "type": "text",
+      "sample": "Payment Due Date",
+      "maxLength": 32,
+      "where": "text",
+      "element": "report-view.link-24"
+    },
+    "option_11": {
+      "type": "text",
+      "sample": "Currency",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-25"
+    },
+    "option_12": {
+      "type": "text",
+      "sample": "Exchange Rate",
+      "maxLength": 26,
+      "where": "text",
+      "element": "report-view.link-26"
+    },
+    "option_13": {
+      "type": "text",
+      "sample": "Price List",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-27"
+    },
+    "option_14": {
+      "type": "text",
+      "sample": "Price List Currency",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-28"
+    },
+    "option_15": {
+      "type": "text",
+      "sample": "Price List Exchange Rate",
+      "maxLength": 48,
+      "where": "text",
+      "element": "report-view.link-29"
+    },
+    "option_16": {
+      "type": "text",
+      "sample": "Net Total (Company Currency)",
+      "maxLength": 56,
+      "where": "text",
+      "element": "report-view.link-30"
+    },
+    "option_17": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "text",
+      "element": "report-view.link-31"
+    },
+    "option_18": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "text",
+      "element": "report-view.link-32"
+    },
+    "option_19": {
+      "type": "text",
+      "sample": "Rounded Total",
+      "maxLength": 26,
+      "where": "text",
+      "element": "report-view.link-33"
+    },
+    "option_20": {
+      "type": "text",
+      "sample": "Debit To",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-34"
+    },
+    "option_21": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-35"
+    },
+    "btn_chart_configure": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.button-36"
+    },
+    "dt_cell_content_header_2": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_4": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_5": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_6": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_7": {
+      "type": "text",
+      "sample": "Payment Due Date",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_8": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_9": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_10": {
+      "type": "text",
+      "sample": "Currency",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_11": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_12": {
+      "type": "text",
+      "sample": "Outstanding Amount",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_header_13": {
+      "type": "text",
+      "sample": "Is Return (Credit Note)",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01325",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-84"
+    },
+    "dt_cell_content_col_3": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-87"
+    },
+    "dt_cell_content_col_5": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-89"
+    },
+    "dt_cell_content_col_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8": {
+      "type": "currency",
+      "sample": "₹ 300.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-95"
+    },
+    "dt_cell_content_col_11": {
+      "type": "currency",
+      "sample": "₹ 300.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_2": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01324",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-104"
+    },
+    "dt_cell_content_col_3_2": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_2": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-107"
+    },
+    "dt_cell_content_col_5_2": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-109"
+    },
+    "dt_cell_content_col_6_2": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_2": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_2": {
+      "type": "currency",
+      "sample": "₹ 460.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_2": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_2": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-115"
+    },
+    "dt_cell_content_col_11_2": {
+      "type": "currency",
+      "sample": "₹ 460.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_2": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_3": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_3": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01323",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-124"
+    },
+    "dt_cell_content_col_3_3": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_3": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-127"
+    },
+    "dt_cell_content_col_5_3": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-129"
+    },
+    "dt_cell_content_col_6_3": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_3": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_3": {
+      "type": "currency",
+      "sample": "₹ 3,120.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_3": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_3": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-135"
+    },
+    "dt_cell_content_col_11_3": {
+      "type": "currency",
+      "sample": "₹ 3,120.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_3": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_4": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_4": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01322",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-144"
+    },
+    "dt_cell_content_col_3_4": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_4": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-147"
+    },
+    "dt_cell_content_col_5_4": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-149"
+    },
+    "dt_cell_content_col_6_4": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_4": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_4": {
+      "type": "currency",
+      "sample": "₹ 310.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_4": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_4": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-155"
+    },
+    "dt_cell_content_col_11_4": {
+      "type": "currency",
+      "sample": "₹ 310.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_4": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_5": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_5": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01321",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-164"
+    },
+    "dt_cell_content_col_3_5": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_5": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-167"
+    },
+    "dt_cell_content_col_5_5": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-169"
+    },
+    "dt_cell_content_col_6_5": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_5": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_5": {
+      "type": "currency",
+      "sample": "₹ 780.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_5": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_5": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-175"
+    },
+    "dt_cell_content_col_11_5": {
+      "type": "currency",
+      "sample": "₹ 780.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_5": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_6": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_6": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01320",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-184"
+    },
+    "dt_cell_content_col_3_6": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_6": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-187"
+    },
+    "dt_cell_content_col_5_6": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-189"
+    },
+    "dt_cell_content_col_6_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_6": {
+      "type": "currency",
+      "sample": "₹ 845.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_6": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_6": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-195"
+    },
+    "dt_cell_content_col_11_6": {
+      "type": "currency",
+      "sample": "₹ 845.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_6": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_7": {
+      "type": "number",
+      "sample": "7",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_7": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01319",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-204"
+    },
+    "dt_cell_content_col_3_7": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_7": {
+      "type": "text",
+      "sample": "fairooz - 1",
+      "maxLength": 22,
+      "where": "text",
+      "element": "report-view.link-207"
+    },
+    "dt_cell_content_col_5_7": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-209"
+    },
+    "dt_cell_content_col_6_7": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_7": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_7": {
+      "type": "currency",
+      "sample": "₹ 1,170.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_7": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_7": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-215"
+    },
+    "dt_cell_content_col_11_7": {
+      "type": "currency",
+      "sample": "₹ 1,170.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_7": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_8": {
+      "type": "number",
+      "sample": "8",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_8": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01318",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-224"
+    },
+    "dt_cell_content_col_3_8": {
+      "type": "text",
+      "sample": "Fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_8": {
+      "type": "text",
+      "sample": "Fairooz - 2",
+      "maxLength": 22,
+      "where": "text",
+      "element": "report-view.link-227"
+    },
+    "dt_cell_content_col_5_8": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-229"
+    },
+    "dt_cell_content_col_6_8": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_8": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_8": {
+      "type": "currency",
+      "sample": "₹ 970.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_8": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_8": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-235"
+    },
+    "dt_cell_content_col_11_8": {
+      "type": "currency",
+      "sample": "₹ 970.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_8": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_9": {
+      "type": "number",
+      "sample": "9",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_9": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01317",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-244"
+    },
+    "dt_cell_content_col_3_9": {
+      "type": "text",
+      "sample": "Beyrooj",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_9": {
+      "type": "text",
+      "sample": "Beyrooj",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-247"
+    },
+    "dt_cell_content_col_5_9": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-249"
+    },
+    "dt_cell_content_col_6_9": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_9": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_9": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_9": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-255"
+    },
+    "dt_cell_content_col_11_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_10": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_10": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01316",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-264"
+    },
+    "dt_cell_content_col_3_10": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_10": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-267"
+    },
+    "dt_cell_content_col_5_10": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-269"
+    },
+    "dt_cell_content_col_6_10": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_10": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_10": {
+      "type": "currency",
+      "sample": "₹ 1,006.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_10": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_10": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-275"
+    },
+    "dt_cell_content_col_11_10": {
+      "type": "currency",
+      "sample": "₹ 1,006.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_10": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_11": {
+      "type": "number",
+      "sample": "11",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_11": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01315",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-284"
+    },
+    "dt_cell_content_col_3_11": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_11": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-287"
+    },
+    "dt_cell_content_col_5_11": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-289"
+    },
+    "dt_cell_content_col_6_11": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_11": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_11": {
+      "type": "currency",
+      "sample": "₹ 3,262.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_11": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_11": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-295"
+    },
+    "dt_cell_content_col_11_11": {
+      "type": "currency",
+      "sample": "₹ 3,262.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_11": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_12": {
+      "type": "number",
+      "sample": "12",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_12": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01314",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-304"
+    },
+    "dt_cell_content_col_3_12": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_12": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-307"
+    },
+    "dt_cell_content_col_5_12": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-309"
+    },
+    "dt_cell_content_col_6_12": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_12": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_12": {
+      "type": "currency",
+      "sample": "₹ 1,528.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_12": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_12": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-315"
+    },
+    "dt_cell_content_col_11_12": {
+      "type": "currency",
+      "sample": "₹ 1,528.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_12": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_13": {
+      "type": "number",
+      "sample": "13",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_13": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01313",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-324"
+    },
+    "dt_cell_content_col_3_13": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_13": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-327"
+    },
+    "dt_cell_content_col_5_13": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-329"
+    },
+    "dt_cell_content_col_6_13": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_13": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_13": {
+      "type": "currency",
+      "sample": "₹ 3,757.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_13": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_13": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-335"
+    },
+    "dt_cell_content_col_11_13": {
+      "type": "currency",
+      "sample": "₹ 3,757.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_13": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_14": {
+      "type": "number",
+      "sample": "14",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_14": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01312",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-344"
+    },
+    "dt_cell_content_col_3_14": {
+      "type": "text",
+      "sample": "John",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_14": {
+      "type": "text",
+      "sample": "John",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-347"
+    },
+    "dt_cell_content_col_5_14": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-349"
+    },
+    "dt_cell_content_col_6_14": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_14": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_14": {
+      "type": "currency",
+      "sample": "₹ 649.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_14": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_14": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-355"
+    },
+    "dt_cell_content_col_11_14": {
+      "type": "currency",
+      "sample": "₹ 649.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_14": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_15": {
+      "type": "number",
+      "sample": "15",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_15": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01311",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-364"
+    },
+    "dt_cell_content_col_3_15": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_15": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-367"
+    },
+    "dt_cell_content_col_5_15": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-369"
+    },
+    "dt_cell_content_col_6_15": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_15": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_15": {
+      "type": "currency",
+      "sample": "₹ 375.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_15": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_15": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-375"
+    },
+    "dt_cell_content_col_11_15": {
+      "type": "currency",
+      "sample": "₹ 375.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_15": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_16": {
+      "type": "number",
+      "sample": "16",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_16": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01310",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-384"
+    },
+    "dt_cell_content_col_3_16": {
+      "type": "text",
+      "sample": "swafa",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_16": {
+      "type": "text",
+      "sample": "swafa",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-387"
+    },
+    "dt_cell_content_col_5_16": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-389"
+    },
+    "dt_cell_content_col_6_16": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_16": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_16": {
+      "type": "currency",
+      "sample": "₹ 2,875.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_16": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_16": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-395"
+    },
+    "dt_cell_content_col_11_16": {
+      "type": "currency",
+      "sample": "₹ 2,875.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_16": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_17": {
+      "type": "number",
+      "sample": "17",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_17": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01309",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-404"
+    },
+    "dt_cell_content_col_3_17": {
+      "type": "text",
+      "sample": "Swiggy",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_17": {
+      "type": "text",
+      "sample": "Swiggy",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-407"
+    },
+    "dt_cell_content_col_5_17": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-409"
+    },
+    "dt_cell_content_col_6_17": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_17": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_17": {
+      "type": "currency",
+      "sample": "₹ 3,512.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_17": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_17": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-415"
+    },
+    "dt_cell_content_col_11_17": {
+      "type": "currency",
+      "sample": "₹ 3,512.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_17": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_18": {
+      "type": "number",
+      "sample": "18",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_18": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01308",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-424"
+    },
+    "dt_cell_content_col_3_18": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_18": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-427"
+    },
+    "dt_cell_content_col_5_18": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-429"
+    },
+    "dt_cell_content_col_6_18": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_18": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_18": {
+      "type": "currency",
+      "sample": "₹ 358.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_18": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_18": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-435"
+    },
+    "dt_cell_content_col_11_18": {
+      "type": "currency",
+      "sample": "₹ 358.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_18": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_19": {
+      "type": "number",
+      "sample": "19",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_19": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01307",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-444"
+    },
+    "dt_cell_content_col_3_19": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_19": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-447"
+    },
+    "dt_cell_content_col_5_19": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-449"
+    },
+    "dt_cell_content_col_6_19": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_19": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_19": {
+      "type": "currency",
+      "sample": "₹ 918.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_19": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_19": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-455"
+    },
+    "dt_cell_content_col_11_19": {
+      "type": "currency",
+      "sample": "₹ 918.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_19": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_20": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_20": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01306",
+      "maxLength": 38,
+      "where": "text",
+      "element": "report-view.link-464"
+    },
+    "dt_cell_content_col_3_20": {
+      "type": "text",
+      "sample": "Vaishna",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_20": {
+      "type": "text",
+      "sample": "Vaishna",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-467"
+    },
+    "dt_cell_content_col_5_20": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-469"
+    },
+    "dt_cell_content_col_6_20": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_20": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_20": {
+      "type": "currency",
+      "sample": "₹ 171.44",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_20": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_20": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.link-475"
+    },
+    "dt_cell_content_col_11_20": {
+      "type": "currency",
+      "sample": "₹ 171.44",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_20": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_dropdown_list_item": {
+      "type": "text",
+      "sample": "Sort Ascending",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_dropdown_list_item_2": {
+      "type": "text",
+      "sample": "Sort Descending",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_dropdown_list_item_3": {
+      "type": "text",
+      "sample": "Reset sorting",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_dropdown_list_item_4": {
+      "type": "text",
+      "sample": "Remove column",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_hidden": {
+      "type": "text",
+      "sample": "Freeze",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_hidden_2": {
+      "type": "text",
+      "sample": "Unfreeze",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "dt_dropdown_list_item_5": {
+      "type": "text",
+      "sample": "Add Column",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_gray_8": {
+      "type": "text",
+      "sample": "No Sales Invoice created",
+      "maxLength": 48,
+      "where": "text",
+      "element": "div"
+    },
+    "max_w_sm": {
+      "type": "text",
+      "sample": "A bill to a customer for what you sold.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Import",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_3": {
+      "type": "text",
+      "sample": "Documentation",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "es_pill": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.button-484"
+    },
+    "es_pill_2": {
+      "type": "number",
+      "sample": "100",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.button-485"
+    },
+    "es_pill_3": {
+      "type": "number",
+      "sample": "500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.button-486"
+    },
+    "es_pill_4": {
+      "type": "number",
+      "sample": "2500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "report-view.button-487"
+    },
+    "list_count": {
+      "type": "text",
+      "sample": "20 of 1,000+",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_4": {
+      "type": "text",
+      "sample": "Load More",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "input_max_width_dataoriginaltitle": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "report-view.input-1"
+    },
+    "input_max_width_dataoriginaltitle_2": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_2": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "report-view.input-3"
+    },
+    "input_max_width_dataoriginaltitle_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "report-view.input-4"
+    },
+    "input_max_width_dataoriginaltitle_4": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_4": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "report-view.input-6"
+    },
+    "input_max_width_dataoriginaltitle_5": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_5": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "attr:placeholder",
+      "element": "report-view.input-7"
+    },
+    "input_max_width_dataoriginaltitle_6": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "ellipsis_placeholder": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "report-view.select-8"
+    },
+    "ellipsis_value": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_2": {
+      "type": "text",
+      "sample": "Return",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_3": {
+      "type": "text",
+      "sample": "Credit Note Issued",
+      "maxLength": 36,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_4": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_5": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_6": {
+      "type": "text",
+      "sample": "Partly Paid",
+      "maxLength": 22,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_7": {
+      "type": "text",
+      "sample": "Unpaid",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_8": {
+      "type": "text",
+      "sample": "Unpaid and Discounted",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_9": {
+      "type": "text",
+      "sample": "Partly Paid and Discounted",
+      "maxLength": 52,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_10": {
+      "type": "text",
+      "sample": "Overdue and Discounted",
+      "maxLength": 44,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_11": {
+      "type": "text",
+      "sample": "Overdue",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_12": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ellipsis_value_13": {
+      "type": "text",
+      "sample": "Internal Transfer",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "filter_x_button_title": {
+      "type": "text",
+      "sample": "Clear all filters",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "report-view.button-11"
+    },
+    "btn_order_title": {
+      "type": "text",
+      "sample": "descending",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "report-view.button-13"
+    },
+    "dt_cell_content_header_2_title": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_3_title": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_4_title": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_5_title": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_6_title": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_7_title": {
+      "type": "text",
+      "sample": "Payment Due Date",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_8_title": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_9_title": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_10_title": {
+      "type": "text",
+      "sample": "Currency",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_11_title": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_12_title": {
+      "type": "text",
+      "sample": "Outstanding Amount",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_header_13_title": {
+      "type": "text",
+      "sample": "Is Return (Credit Note)",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_muted_title": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title": {
+      "type": "text",
+      "sample": "Filter based on Index",
+      "maxLength": 42,
+      "where": "attr:title",
+      "element": "report-view.input-55"
+    },
+    "text_muted_title_2": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_2": {
+      "type": "text",
+      "sample": "Filter based on ID",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "report-view.input-57"
+    },
+    "text_muted_title_3": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_3": {
+      "type": "text",
+      "sample": "Filter based on Customer Name",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "report-view.input-59"
+    },
+    "text_muted_title_4": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_4": {
+      "type": "text",
+      "sample": "Filter based on Customer",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "report-view.input-61"
+    },
+    "text_muted_title_5": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_5": {
+      "type": "text",
+      "sample": "Filter based on Company",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "report-view.input-63"
+    },
+    "text_muted_title_6": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_6": {
+      "type": "text",
+      "sample": "Filter based on Posting Date",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "report-view.input-65"
+    },
+    "text_muted_title_7": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_7": {
+      "type": "text",
+      "sample": "Filter based on Payment Due Date",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "report-view.input-67"
+    },
+    "text_muted_title_8": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_8": {
+      "type": "text",
+      "sample": "Filter based on Grand Total",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "report-view.input-69"
+    },
+    "text_muted_title_9": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_9": {
+      "type": "text",
+      "sample": "Filter based on Status",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "report-view.input-71"
+    },
+    "text_muted_title_10": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_10": {
+      "type": "text",
+      "sample": "Filter based on Currency",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "report-view.input-73"
+    },
+    "text_muted_title_11": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_11": {
+      "type": "text",
+      "sample": "Filter based on Grand Total",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "report-view.input-75"
+    },
+    "text_muted_title_12": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_12": {
+      "type": "text",
+      "sample": "Filter based on Outstanding Amount",
+      "maxLength": 68,
+      "where": "attr:title",
+      "element": "report-view.input-77"
+    },
+    "text_muted_title_13": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_input_title_13": {
+      "type": "text",
+      "sample": "Filter based on Is Return (Credit Note)",
+      "maxLength": 78,
+      "where": "attr:title",
+      "element": "report-view.input-79"
+    },
+    "text_muted_title_14": {
+      "type": "text",
+      "sample": "For comparison, use >5, <10 or =324.\nFor ranges, use 5:10 (for values between 5 & 10).",
+      "maxLength": 172,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "dt_cell_content_col_1_title": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01325",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title": {
+      "type": "currency",
+      "sample": "₹ 300.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title": {
+      "type": "currency",
+      "sample": "₹ 300.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_2": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01324",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_2": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_2": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_2": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_2": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_2": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_2": {
+      "type": "currency",
+      "sample": "₹ 460.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_2": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_2": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_2": {
+      "type": "currency",
+      "sample": "₹ 460.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_2": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_3": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_3": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01323",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_3": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_3": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_3": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_3": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_3": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_3": {
+      "type": "currency",
+      "sample": "₹ 3,120.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_3": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_3": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_3": {
+      "type": "currency",
+      "sample": "₹ 3,120.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_3": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_4": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_4": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01322",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_4": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_4": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_4": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_4": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_4": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_4": {
+      "type": "currency",
+      "sample": "₹ 310.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_4": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_4": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_4": {
+      "type": "currency",
+      "sample": "₹ 310.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_4": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_5": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_5": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01321",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_5": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_5": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_5": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_5": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_5": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_5": {
+      "type": "currency",
+      "sample": "₹ 780.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_5": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_5": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_5": {
+      "type": "currency",
+      "sample": "₹ 780.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_5": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_6": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_6": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01320",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_6": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_6": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_6": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_6": {
+      "type": "currency",
+      "sample": "₹ 845.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_6": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_6": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_6": {
+      "type": "currency",
+      "sample": "₹ 845.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_6": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_7": {
+      "type": "number",
+      "sample": "7",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_7": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01319",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_7": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_7": {
+      "type": "text",
+      "sample": "fairooz - 1",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_7": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_7": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_7": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_7": {
+      "type": "currency",
+      "sample": "₹ 1,170.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_7": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_7": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_7": {
+      "type": "currency",
+      "sample": "₹ 1,170.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_7": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_8": {
+      "type": "number",
+      "sample": "8",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_8": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01318",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_8": {
+      "type": "text",
+      "sample": "Fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_8": {
+      "type": "text",
+      "sample": "Fairooz - 2",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_8": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_8": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_8": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_8": {
+      "type": "currency",
+      "sample": "₹ 970.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_8": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_8": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_8": {
+      "type": "currency",
+      "sample": "₹ 970.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_8": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_9": {
+      "type": "number",
+      "sample": "9",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_9": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01317",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_9": {
+      "type": "text",
+      "sample": "Beyrooj",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_9": {
+      "type": "text",
+      "sample": "Beyrooj",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_9": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_9": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_9": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_9": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_9": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_9": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_10": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_10": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01316",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_10": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_10": {
+      "type": "text",
+      "sample": "Shahzad",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_10": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_10": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_10": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_10": {
+      "type": "currency",
+      "sample": "₹ 1,006.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_10": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_10": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_10": {
+      "type": "currency",
+      "sample": "₹ 1,006.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_10": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_11": {
+      "type": "number",
+      "sample": "11",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_11": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01315",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_11": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_11": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_11": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_11": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_11": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_11": {
+      "type": "currency",
+      "sample": "₹ 3,262.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_11": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_11": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_11": {
+      "type": "currency",
+      "sample": "₹ 3,262.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_11": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_12": {
+      "type": "number",
+      "sample": "12",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_12": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01314",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_12": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_12": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_12": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_12": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_12": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_12": {
+      "type": "currency",
+      "sample": "₹ 1,528.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_12": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_12": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_12": {
+      "type": "currency",
+      "sample": "₹ 1,528.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_12": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_13": {
+      "type": "number",
+      "sample": "13",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_13": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01313",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_13": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_13": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_13": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_13": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_13": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_13": {
+      "type": "currency",
+      "sample": "₹ 3,757.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_13": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_13": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_13": {
+      "type": "currency",
+      "sample": "₹ 3,757.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_13": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_14": {
+      "type": "number",
+      "sample": "14",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_14": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01312",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_14": {
+      "type": "text",
+      "sample": "John",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_14": {
+      "type": "text",
+      "sample": "John",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_14": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_14": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_14": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_14": {
+      "type": "currency",
+      "sample": "₹ 649.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_14": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_14": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_14": {
+      "type": "currency",
+      "sample": "₹ 649.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_14": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_15": {
+      "type": "number",
+      "sample": "15",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_15": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01311",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_15": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_15": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_15": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_15": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_15": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_15": {
+      "type": "currency",
+      "sample": "₹ 375.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_15": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_15": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_15": {
+      "type": "currency",
+      "sample": "₹ 375.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_15": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_16": {
+      "type": "number",
+      "sample": "16",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_16": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01310",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_16": {
+      "type": "text",
+      "sample": "swafa",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_16": {
+      "type": "text",
+      "sample": "swafa",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_16": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_16": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_16": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_16": {
+      "type": "currency",
+      "sample": "₹ 2,875.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_16": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_16": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_16": {
+      "type": "currency",
+      "sample": "₹ 2,875.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_16": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_17": {
+      "type": "number",
+      "sample": "17",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_17": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01309",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_17": {
+      "type": "text",
+      "sample": "Swiggy",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_17": {
+      "type": "text",
+      "sample": "Swiggy",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_17": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_17": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_17": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_17": {
+      "type": "currency",
+      "sample": "₹ 3,512.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_17": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_17": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_17": {
+      "type": "currency",
+      "sample": "₹ 3,512.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_17": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_18": {
+      "type": "number",
+      "sample": "18",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_18": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01308",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_18": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_18": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_18": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_18": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_18": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_18": {
+      "type": "currency",
+      "sample": "₹ 358.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_18": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_18": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_18": {
+      "type": "currency",
+      "sample": "₹ 358.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_18": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_19": {
+      "type": "number",
+      "sample": "19",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_19": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01307",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_19": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_19": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_19": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_19": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_19": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_19": {
+      "type": "currency",
+      "sample": "₹ 918.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_19": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_19": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_19": {
+      "type": "currency",
+      "sample": "₹ 918.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_19": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_1_title_20": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_2_title_20": {
+      "type": "text",
+      "sample": "ACC-SINV-2026-01306",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_3_title_20": {
+      "type": "text",
+      "sample": "Vaishna",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_4_title_20": {
+      "type": "text",
+      "sample": "Vaishna",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_5_title_20": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_6_title_20": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_7_title_20": {
+      "type": "date",
+      "sample": "17-08-2026",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_8_title_20": {
+      "type": "currency",
+      "sample": "₹ 171.44",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_9_title_20": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_10_title_20": {
+      "type": "text",
+      "sample": "INR",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_11_title_20": {
+      "type": "currency",
+      "sample": "₹ 171.44",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "dt_cell_content_col_12_title_20": {
+      "type": "currency",
+      "sample": "₹ 0.00",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "es_tab_buttons_arialabel": {
+      "type": "text",
+      "sample": "Page Size",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "list_count_title": {
+      "type": "text",
+      "sample": "The count shown is an estimated count. Click here to see the accurate count.",
+      "maxLength": 152,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "list_count_dataoriginaltitle": {
+      "type": "text",
+      "sample": "The count shown is an estimated count. Click here to see the accurate count.",
+      "maxLength": 152,
+      "where": "attr:data-original-title",
+      "element": "span"
+    }
+  }
+}

@@ -1,0 +1,4226 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="light" dir="rtl">
+<head><meta charset="utf-8"><title>Report view</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+.dt-instance-1 .dt-cell--col-1.dt-cell--sticky { left: 34px; }
+.dt-instance-1 .dt-cell--col-0.dt-cell--sticky { left: 0px; }
+.dt-instance-1 .dt-cell__content--col-13 { width: 120px; }
+.dt-instance-1 .dt-cell--col-13 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-12 { width: 120px; }
+.dt-instance-1 .dt-cell--col-12 { text-align: right; }
+.dt-instance-1 .dt-cell__content--col-11 { width: 120px; }
+.dt-instance-1 .dt-cell--col-11 { text-align: right; }
+.dt-instance-1 .dt-cell__content--col-10 { width: 120px; }
+.dt-instance-1 .dt-cell--col-10 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-9 { width: 120px; }
+.dt-instance-1 .dt-cell--col-9 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-8 { width: 120px; }
+.dt-instance-1 .dt-cell--col-8 { text-align: right; }
+.dt-instance-1 .dt-cell__content--col-7 { width: 120px; }
+.dt-instance-1 .dt-cell--col-7 { text-align: right; }
+.dt-instance-1 .dt-cell__content--col-6 { width: 120px; }
+.dt-instance-1 .dt-cell--col-6 { text-align: right; }
+.dt-instance-1 .dt-cell__content--col-5 { width: 120px; }
+.dt-instance-1 .dt-cell--col-5 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-4 { width: 120px; }
+.dt-instance-1 .dt-cell--col-4 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-3 { width: 120px; }
+.dt-instance-1 .dt-cell--col-3 { text-align: left; }
+.dt-instance-1 .dt-cell__content--col-2 { width: 120px; }
+.dt-instance-1 .dt-cell--col-2 { text-align: left; }
+.dt-instance-1 .dt-cell__edit--col-1 { width: 40px; }
+.dt-instance-1 .dt-cell__content--col-1 { width: 40px; }
+.dt-instance-1 .dt-cell--col-1 { text-align: center; }
+.dt-instance-1 .dt-cell__edit--col-0 { width: 32px; }
+.dt-instance-1 .dt-cell__content--col-0 { width: 32px; }
+.dt-instance-1 .dt-cell--col-0 { text-align: left; }
+.dt-instance-1 .dt-cell { height: 35px; }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open no-list-sidebar" data-route="List/Sales Invoice/Report" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container" id="page-List/Sales Invoice/Report" data-page-route="List/Sales Invoice/Report" style="width:1159px;box-sizing:border-box"><div class="container page-body" style="width:1159px;box-sizing:border-box"><div class="page-wrapper" style="width:1159px;box-sizing:border-box"><div class="page-content" style="width:1159px;box-sizing:border-box"><div class="layout-main layout-two-column" style="width:1159px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-equal-approximately">
+      <path d="M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+      <path d="M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-funnel">
+      <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-folder">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-down-wide-narrow">
+      <path d="m3 16 4 4 4-4"></path>
+      <path d="M7 20V4"></path>
+      <path d="M11 4h10"></path>
+      <path d="M11 8h7"></path>
+      <path d="M11 12h4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-info">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M12 16v-4"></path>
+      <path d="M12 8h.01"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-import">
+      <path d="M12 3v12"></path>
+      <path d="m8 11 4 4 4-4"></path>
+      <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-external-link">
+      <path d="M15 3h6v6"></path>
+      <path d="M10 14 21 3"></path>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    </symbol></svg><div class="layout-main-section-wrapper report-view" data-ui="report-view">
+						<div class="layout-main-section layout-main-list"><div class="page-form flex list-page-form"><div class="standard-filter-section flex"><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="name" title="" data-original-title="ID"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="name" placeholder="ID" data-ui="report-view.input-1"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="report-view.button-2">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">name</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="customer" title="" data-original-title="Customer"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Link" data-fieldname="customer" placeholder="Customer" data-target="Customer" autocomplete="off" aria-expanded="false" role="combobox" data-ui="report-view.input-3"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			
+		</div><span class="tooltip-content">customer</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="customer_name" title="" data-original-title="Customer Name"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="customer_name" placeholder="Customer Name" data-ui="report-view.input-4"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="report-view.button-5">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">customer_name</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="company" title="" data-original-title="Company"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Link" data-fieldname="company" placeholder="Company" data-target="Company" autocomplete="off" aria-expanded="false" role="combobox" data-ui="report-view.input-6"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			
+		</div><span class="tooltip-content">company</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Date" data-fieldname="posting_date" title="" data-original-title="Posting Date"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" data-fieldtype="Date" data-fieldname="posting_date" placeholder="Posting Date" data-ui="report-view.input-7"><span class="tooltip-content">posting_date</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Select" data-fieldname="status" title="" data-original-title="Status"><select type="text" autocomplete="off" class="input-with-feedback form-control input-xs ellipsis" maxlength="140" data-fieldtype="Select" data-fieldname="status" placeholder="Status" data-ui="report-view.select-8"><option selected=""></option><option value="Draft">Draft</option><option value="Return">Return</option><option value="Credit Note Issued">Credit Note Issued</option><option value="Submitted">Submitted</option><option value="Paid">Paid</option><option value="Partly Paid">Partly Paid</option><option value="Unpaid">Unpaid</option><option value="Unpaid and Discounted">Unpaid and Discounted</option><option value="Partly Paid and Discounted">Partly Paid and Discounted</option><option value="Overdue and Discounted">Overdue and Discounted</option><option value="Overdue">Overdue</option><option value="Cancelled">Cancelled</option><option value="Internal Transfer">Internal Transfer</option></select><span class="tooltip-content">status</span><div class="select-icon xs">
+				<svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-chevrons-up-down">
+			</use>
+		</svg>
+			</div><div class="placeholder ellipsis text-extra-muted xs">
+				<span>Status</span>
+			</div></div></div><div class="filter-section flex"><div class="mobile-id-filter hidden-lg"></div><div class="filter-selector"><button class="filter-toggle btn btn-default btn-sm hidden-lg" data-ui="report-view.button-9">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevrons-up-down">
+			</use>
+		</svg>
+					</span>
+				</button>
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm filter-button" data-original-title="" title="" data-ui="report-view.button-10">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-funnel">
+			</use>
+		</svg>
+					</span>
+					<span class="button-label hidden-xs">
+					Filter
+					<span>
+				</span></span></button>
+				<button class="btn btn-default btn-sm filter-x-button" title="Clear all filters" data-ui="report-view.button-11">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
+			</use>
+		</svg>
+					</span>
+				</button>
+			</div>
+		</div><div class="group-by-selector">
+				<button class="btn btn-default btn-sm group-by-button ellipsis" data-original-title="" title="" data-ui="report-view.button-12">
+					<span class="group-by-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-folder">
+			</use>
+		</svg>
+					</span>
+					<span class="button-label hidden-xs">
+						Add Group
+					</span>
+				</button>
+			</div><div class="sort-selector">  <div class="btn-group">   <button class="btn btn-default btn-sm btn-order" data-value="desc" title="descending" data-ui="report-view.button-13">    <span class="sort-order">     <svg class="icon icon-sm">      <use href="#icon-arrow-down-wide-narrow"></use>     </svg>    </span>   </button>   <button type="button" class="btn btn-default btn-sm sort-selector-button text-nowrap" data-toggle="dropdown" data-ui="report-view.button-14">    <span class="dropdown-text hidden-sm">Created On</span>    <span><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevron-down">
+			</use>
+		</svg></span>    <ul class="dropdown-menu dropdown-menu-right">          <li>      <a class="dropdown-item option" data-value="modified" data-ui="report-view.link-15">       Last Updated On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="creation" data-ui="report-view.link-16">       Created On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_name" data-ui="report-view.link-17">       Customer Name      </a>     </li>          <li>      <a class="dropdown-item option" data-value="name" data-ui="report-view.link-18">       ID      </a>     </li>          <li>      <a class="dropdown-item option" data-value="idx" data-ui="report-view.link-19">       Most Used      </a>     </li>          <li>      <a class="dropdown-item option" data-value="naming_series" data-ui="report-view.link-20">       Series      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer" data-ui="report-view.link-21">       Customer      </a>     </li>          <li>      <a class="dropdown-item option" data-value="company" data-ui="report-view.link-22">       Company      </a>     </li>          <li>      <a class="dropdown-item option" data-value="posting_date" data-ui="report-view.link-23">       Posting Date      </a>     </li>          <li>      <a class="dropdown-item option" data-value="due_date" data-ui="report-view.link-24">       Payment Due Date      </a>     </li>          <li>      <a class="dropdown-item option" data-value="currency" data-ui="report-view.link-25">       Currency      </a>     </li>          <li>      <a class="dropdown-item option" data-value="conversion_rate" data-ui="report-view.link-26">       Exchange Rate      </a>     </li>          <li>      <a class="dropdown-item option" data-value="selling_price_list" data-ui="report-view.link-27">       Price List      </a>     </li>          <li>      <a class="dropdown-item option" data-value="price_list_currency" data-ui="report-view.link-28">       Price List Currency      </a>     </li>          <li>      <a class="dropdown-item option" data-value="plc_conversion_rate" data-ui="report-view.link-29">       Price List Exchange Rate      </a>     </li>          <li>      <a class="dropdown-item option" data-value="base_net_total" data-ui="report-view.link-30">       Net Total (Company Currency)      </a>     </li>          <li>      <a class="dropdown-item option" data-value="base_grand_total" data-ui="report-view.link-31">       Grand Total      </a>     </li>          <li>      <a class="dropdown-item option" data-value="grand_total" data-ui="report-view.link-32">       Grand Total      </a>     </li>          <li>      <a class="dropdown-item option" data-value="rounded_total" data-ui="report-view.link-33">       Rounded Total      </a>     </li>          <li>      <a class="dropdown-item option" data-value="debit_to" data-ui="report-view.link-34">       Debit To      </a>     </li>          <li>      <a class="dropdown-item option" data-value="status" data-ui="report-view.link-35">       Status      </a>     </li>         </ul>   </button>  </div> </div></div></div><div class="frappe-list"><div class="result"><div class="charts-wrapper hidden">
+			<div class="text-right"><button class="btn btn-default btn-xs btn-chart-configure" style="margin-right: 15px; margin-top: 15px" data-ui="report-view.button-36">Configure</button></div>
+			<div class="charts-inner-wrapper"></div>
+		</div><div class="datatable-wrapper">
+            <div class="datatable dt-instance-1" dir="ltr">
+                <div class="dt-header"><div>
+            <div class="dt-row dt-row-header" data-is-header="1">
+                
+            <div class="dt-cell dt-cell--col-0   dt-cell--header dt-cell--header-0   dt-cell--sticky dt-cell--sticky-top " data-col-index="0" data-is-header="1" tabindex="0" data-ui="report-view.div-37">
+                
+            <div class="dt-cell__content dt-cell__content--header-0" title="" style="width: 32px;">
+                <input type="checkbox" data-ui="report-view.input-38">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1   dt-cell--header dt-cell--header-1   dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last" data-col-index="1" data-is-header="1" tabindex="0" data-ui="report-view.div-39">
+                
+            <div class="dt-cell__content dt-cell__content--header-1" title="" style="width: 40px;">
+                
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2   dt-cell--header dt-cell--header-2     " data-col-index="2" data-is-header="1" tabindex="0" data-ui="report-view.div-40">
+                
+            <div class="dt-cell__content dt-cell__content--header-2" title="ID" style="width: 120px;">
+                ID
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3   dt-cell--header dt-cell--header-3     " data-col-index="3" data-is-header="1" tabindex="0" data-ui="report-view.div-41">
+                
+            <div class="dt-cell__content dt-cell__content--header-3" title="Customer Name" style="width: 120px;">
+                Customer Name
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4   dt-cell--header dt-cell--header-4     " data-col-index="4" data-is-header="1" tabindex="0" data-ui="report-view.div-42">
+                
+            <div class="dt-cell__content dt-cell__content--header-4" title="Customer" style="width: 120px;">
+                Customer
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5   dt-cell--header dt-cell--header-5     " data-col-index="5" data-is-header="1" tabindex="0" data-ui="report-view.div-43">
+                
+            <div class="dt-cell__content dt-cell__content--header-5" title="Company" style="width: 120px;">
+                Company
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6   dt-cell--header dt-cell--header-6     " data-col-index="6" data-is-header="1" tabindex="0" data-ui="report-view.div-44">
+                
+            <div class="dt-cell__content dt-cell__content--header-6" title="Posting Date" style="width: 120px;">
+                Posting Date
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7   dt-cell--header dt-cell--header-7     " data-col-index="7" data-is-header="1" tabindex="0" data-ui="report-view.div-45">
+                
+            <div class="dt-cell__content dt-cell__content--header-7" title="Payment Due Date" style="width: 120px;">
+                Payment Due Date
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8   dt-cell--header dt-cell--header-8     " data-col-index="8" data-is-header="1" tabindex="0" data-ui="report-view.div-46">
+                
+            <div class="dt-cell__content dt-cell__content--header-8" title="Grand Total" style="width: 120px;">
+                Grand Total
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9   dt-cell--header dt-cell--header-9     " data-col-index="9" data-is-header="1" tabindex="0" data-ui="report-view.div-47">
+                
+            <div class="dt-cell__content dt-cell__content--header-9" title="Status" style="width: 120px;">
+                Status
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10   dt-cell--header dt-cell--header-10     " data-col-index="10" data-is-header="1" tabindex="0" data-ui="report-view.div-48">
+                
+            <div class="dt-cell__content dt-cell__content--header-10" title="Currency" style="width: 120px;">
+                Currency
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11   dt-cell--header dt-cell--header-11     " data-col-index="11" data-is-header="1" tabindex="0" data-ui="report-view.div-49">
+                
+            <div class="dt-cell__content dt-cell__content--header-11" title="Grand Total" style="width: 120px;">
+                Grand Total
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12   dt-cell--header dt-cell--header-12     " data-col-index="12" data-is-header="1" tabindex="0" data-ui="report-view.div-50">
+                
+            <div class="dt-cell__content dt-cell__content--header-12" title="Outstanding Amount" style="width: 120px;">
+                Outstanding Amount
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13   dt-cell--header dt-cell--header-13     " data-col-index="13" data-is-header="1" tabindex="0" data-ui="report-view.div-51">
+                
+            <div class="dt-cell__content dt-cell__content--header-13" title="Is Return (Credit Note)" style="width: 120px;">
+                Is Return (Credit Note)
+                <span class="sort-indicator">
+                
+            </span>
+                <span class="dt-cell__resize-handle"></span>
+                
+            <div class="dt-dropdown">
+                <div class="dt-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+            </div>
+      
+            </div>
+            
+        
+            </div>
+        
+            </div>
+        
+            <div class="dt-row dt-row-filter" data-is-filter="1" style="display: none;">
+                
+            <div class="dt-cell dt-cell--col-0     dt-cell--filter  dt-cell--sticky dt-cell--sticky-top " data-col-index="0" data-is-filter="1" tabindex="0" data-ui="report-view.div-52">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="0" tabindex="1" disabled="" data-ui="report-view.input-53"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1     dt-cell--filter  dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last" data-col-index="1" data-is-filter="1" tabindex="0" data-ui="report-view.div-54">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="1" tabindex="1" title="Filter based on Index" data-ui="report-view.input-55"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2     dt-cell--filter    " data-col-index="2" data-is-filter="1" tabindex="0" data-ui="report-view.div-56">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="2" data-name="ID" tabindex="1" title="Filter based on ID" data-ui="report-view.input-57"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3     dt-cell--filter    " data-col-index="3" data-is-filter="1" tabindex="0" data-ui="report-view.div-58">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="3" data-name="Customer Name" tabindex="1" title="Filter based on Customer Name" data-ui="report-view.input-59"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4     dt-cell--filter    " data-col-index="4" data-is-filter="1" tabindex="0" data-ui="report-view.div-60">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="4" data-name="Customer" tabindex="1" title="Filter based on Customer" data-ui="report-view.input-61"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5     dt-cell--filter    " data-col-index="5" data-is-filter="1" tabindex="0" data-ui="report-view.div-62">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="5" data-name="Company" tabindex="1" title="Filter based on Company" data-ui="report-view.input-63"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6     dt-cell--filter    " data-col-index="6" data-is-filter="1" tabindex="0" data-ui="report-view.div-64">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="6" data-name="Posting Date" tabindex="1" title="Filter based on Posting Date" data-ui="report-view.input-65"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7     dt-cell--filter    " data-col-index="7" data-is-filter="1" tabindex="0" data-ui="report-view.div-66">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="7" data-name="Payment Due Date" tabindex="1" title="Filter based on Payment Due Date" data-ui="report-view.input-67"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8     dt-cell--filter    " data-col-index="8" data-is-filter="1" tabindex="0" data-ui="report-view.div-68">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="8" data-name="Grand Total" tabindex="1" title="Filter based on Grand Total" data-ui="report-view.input-69"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9     dt-cell--filter    " data-col-index="9" data-is-filter="1" tabindex="0" data-ui="report-view.div-70">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="9" data-name="Status" tabindex="1" title="Filter based on Status" data-ui="report-view.input-71"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10     dt-cell--filter    " data-col-index="10" data-is-filter="1" tabindex="0" data-ui="report-view.div-72">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="10" data-name="Currency" tabindex="1" title="Filter based on Currency" data-ui="report-view.input-73"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11     dt-cell--filter    " data-col-index="11" data-is-filter="1" tabindex="0" data-ui="report-view.div-74">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="11" data-name="Grand Total" tabindex="1" title="Filter based on Grand Total" data-ui="report-view.input-75"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12     dt-cell--filter    " data-col-index="12" data-is-filter="1" tabindex="0" data-ui="report-view.div-76">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="12" data-name="Outstanding Amount" tabindex="1" title="Filter based on Outstanding Amount" data-ui="report-view.input-77"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13     dt-cell--filter    " data-col-index="13" data-is-filter="1" tabindex="0" data-ui="report-view.div-78">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input class="dt-filter dt-input" type="text" data-col-index="13" data-name="Is Return (Credit Note)" tabindex="1" title="Filter based on Is Return (Credit Note)" data-ui="report-view.input-79"><span class="comparison-help-icon text-muted" title="For comparison, use >5, &lt;10 or =324.
+For ranges, use 5:10 (for values between 5 &amp; 10)."><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-info">
+			</use>
+		</svg></span>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div>
+        </div></div>
+                <div class="dt-scrollable" style="width: 1129px; overflow: auto; position: relative;"><tr style="opacity: 0; position: absolute; width: 1px; height: 700px;"></tr><div class="dt-row dt-row-0 vrow" data-row-index="0" style="position: absolute; top: 0px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-0 dt-cell--row-0     dt-cell--sticky  " data-row-index="0" data-col-index="0" tabindex="0" data-ui="report-view.div-80">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-81">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-0 dt-cell--row-0     dt-cell--sticky  dt-cell--sticky-last" data-row-index="0" data-col-index="1" tabindex="0" data-ui="report-view.div-82">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="1">
+                1
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-0 dt-cell--row-0       " data-row-index="0" data-col-index="2" tabindex="0" data-ui="report-view.div-83">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01325">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01325" data-value="ACC-SINV-2026-01325" data-ui="report-view.link-84">ACC-SINV-2026-01325</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-0 dt-cell--row-0       " data-row-index="0" data-col-index="3" tabindex="0" data-ui="report-view.div-85">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Alex">
+                Alex
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-0 dt-cell--row-0       " data-row-index="0" data-col-index="4" tabindex="0" data-ui="report-view.div-86">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Alex">
+                <a href="#" data-doctype="Customer" data-name="Alex" data-value="Alex" data-ui="report-view.link-87">Alex</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-0 dt-cell--row-0       " data-row-index="0" data-col-index="5" tabindex="0" data-ui="report-view.div-88">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-89">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-0 dt-cell--row-0       " data-row-index="0" data-col-index="6" tabindex="0" data-ui="report-view.div-90">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-0 dt-cell--row-0       " data-row-index="0" data-col-index="7" tabindex="0" data-ui="report-view.div-91">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-0 dt-cell--row-0       " data-row-index="0" data-col-index="8" tabindex="0" data-ui="report-view.div-92">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 300.00">
+                <div style="text-align: right">₹ 300.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-0 dt-cell--row-0       " data-row-index="0" data-col-index="9" tabindex="0" data-ui="report-view.div-93">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-0 dt-cell--row-0       " data-row-index="0" data-col-index="10" tabindex="0" data-ui="report-view.div-94">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-95">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-0 dt-cell--row-0       " data-row-index="0" data-col-index="11" tabindex="0" data-ui="report-view.div-96">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 300.00">
+                <div style="text-align: right">₹ 300.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-0 dt-cell--row-0       " data-row-index="0" data-col-index="12" tabindex="0" data-ui="report-view.div-97">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-0 dt-cell--row-0       " data-row-index="0" data-col-index="13" tabindex="0" data-ui="report-view.div-98">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-99">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-1 vrow" data-row-index="1" style="position: absolute; top: 35px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-1 dt-cell--row-1     dt-cell--sticky  " data-row-index="1" data-col-index="0" tabindex="0" data-ui="report-view.div-100">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-101">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-1 dt-cell--row-1     dt-cell--sticky  dt-cell--sticky-last" data-row-index="1" data-col-index="1" tabindex="0" data-ui="report-view.div-102">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="2">
+                2
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-1 dt-cell--row-1       " data-row-index="1" data-col-index="2" tabindex="0" data-ui="report-view.div-103">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01324">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01324" data-value="ACC-SINV-2026-01324" data-ui="report-view.link-104">ACC-SINV-2026-01324</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-1 dt-cell--row-1       " data-row-index="1" data-col-index="3" tabindex="0" data-ui="report-view.div-105">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="fairooz">
+                fairooz
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-1 dt-cell--row-1       " data-row-index="1" data-col-index="4" tabindex="0" data-ui="report-view.div-106">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="fairooz">
+                <a href="#" data-doctype="Customer" data-name="fairooz" data-value="fairooz" data-ui="report-view.link-107">fairooz</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-1 dt-cell--row-1       " data-row-index="1" data-col-index="5" tabindex="0" data-ui="report-view.div-108">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-109">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-1 dt-cell--row-1       " data-row-index="1" data-col-index="6" tabindex="0" data-ui="report-view.div-110">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-1 dt-cell--row-1       " data-row-index="1" data-col-index="7" tabindex="0" data-ui="report-view.div-111">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-1 dt-cell--row-1       " data-row-index="1" data-col-index="8" tabindex="0" data-ui="report-view.div-112">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 460.00">
+                <div style="text-align: right">₹ 460.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-1 dt-cell--row-1       " data-row-index="1" data-col-index="9" tabindex="0" data-ui="report-view.div-113">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-1 dt-cell--row-1       " data-row-index="1" data-col-index="10" tabindex="0" data-ui="report-view.div-114">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-115">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-1 dt-cell--row-1       " data-row-index="1" data-col-index="11" tabindex="0" data-ui="report-view.div-116">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 460.00">
+                <div style="text-align: right">₹ 460.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-1 dt-cell--row-1       " data-row-index="1" data-col-index="12" tabindex="0" data-ui="report-view.div-117">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-1 dt-cell--row-1       " data-row-index="1" data-col-index="13" tabindex="0" data-ui="report-view.div-118">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-119">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-2 vrow" data-row-index="2" style="position: absolute; top: 70px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-2 dt-cell--row-2     dt-cell--sticky  " data-row-index="2" data-col-index="0" tabindex="0" data-ui="report-view.div-120">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-121">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-2 dt-cell--row-2     dt-cell--sticky  dt-cell--sticky-last" data-row-index="2" data-col-index="1" tabindex="0" data-ui="report-view.div-122">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="3">
+                3
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-2 dt-cell--row-2       " data-row-index="2" data-col-index="2" tabindex="0" data-ui="report-view.div-123">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01323">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01323" data-value="ACC-SINV-2026-01323" data-ui="report-view.link-124">ACC-SINV-2026-01323</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-2 dt-cell--row-2       " data-row-index="2" data-col-index="3" tabindex="0" data-ui="report-view.div-125">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Paige">
+                Paige
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-2 dt-cell--row-2       " data-row-index="2" data-col-index="4" tabindex="0" data-ui="report-view.div-126">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Paige">
+                <a href="#" data-doctype="Customer" data-name="Paige" data-value="Paige" data-ui="report-view.link-127">Paige</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-2 dt-cell--row-2       " data-row-index="2" data-col-index="5" tabindex="0" data-ui="report-view.div-128">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-129">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-2 dt-cell--row-2       " data-row-index="2" data-col-index="6" tabindex="0" data-ui="report-view.div-130">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-2 dt-cell--row-2       " data-row-index="2" data-col-index="7" tabindex="0" data-ui="report-view.div-131">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-2 dt-cell--row-2       " data-row-index="2" data-col-index="8" tabindex="0" data-ui="report-view.div-132">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 3,120.00">
+                <div style="text-align: right">₹ 3,120.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-2 dt-cell--row-2       " data-row-index="2" data-col-index="9" tabindex="0" data-ui="report-view.div-133">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-2 dt-cell--row-2       " data-row-index="2" data-col-index="10" tabindex="0" data-ui="report-view.div-134">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-135">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-2 dt-cell--row-2       " data-row-index="2" data-col-index="11" tabindex="0" data-ui="report-view.div-136">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 3,120.00">
+                <div style="text-align: right">₹ 3,120.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-2 dt-cell--row-2       " data-row-index="2" data-col-index="12" tabindex="0" data-ui="report-view.div-137">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-2 dt-cell--row-2       " data-row-index="2" data-col-index="13" tabindex="0" data-ui="report-view.div-138">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-139">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-3 vrow" data-row-index="3" style="position: absolute; top: 105px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-3 dt-cell--row-3     dt-cell--sticky  " data-row-index="3" data-col-index="0" tabindex="0" data-ui="report-view.div-140">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-141">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-3 dt-cell--row-3     dt-cell--sticky  dt-cell--sticky-last" data-row-index="3" data-col-index="1" tabindex="0" data-ui="report-view.div-142">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="4">
+                4
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-3 dt-cell--row-3       " data-row-index="3" data-col-index="2" tabindex="0" data-ui="report-view.div-143">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01322">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01322" data-value="ACC-SINV-2026-01322" data-ui="report-view.link-144">ACC-SINV-2026-01322</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-3 dt-cell--row-3       " data-row-index="3" data-col-index="3" tabindex="0" data-ui="report-view.div-145">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Maria">
+                Maria
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-3 dt-cell--row-3       " data-row-index="3" data-col-index="4" tabindex="0" data-ui="report-view.div-146">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Maria">
+                <a href="#" data-doctype="Customer" data-name="Maria" data-value="Maria" data-ui="report-view.link-147">Maria</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-3 dt-cell--row-3       " data-row-index="3" data-col-index="5" tabindex="0" data-ui="report-view.div-148">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-149">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-3 dt-cell--row-3       " data-row-index="3" data-col-index="6" tabindex="0" data-ui="report-view.div-150">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-3 dt-cell--row-3       " data-row-index="3" data-col-index="7" tabindex="0" data-ui="report-view.div-151">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-3 dt-cell--row-3       " data-row-index="3" data-col-index="8" tabindex="0" data-ui="report-view.div-152">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 310.00">
+                <div style="text-align: right">₹ 310.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-3 dt-cell--row-3       " data-row-index="3" data-col-index="9" tabindex="0" data-ui="report-view.div-153">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-3 dt-cell--row-3       " data-row-index="3" data-col-index="10" tabindex="0" data-ui="report-view.div-154">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-155">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-3 dt-cell--row-3       " data-row-index="3" data-col-index="11" tabindex="0" data-ui="report-view.div-156">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 310.00">
+                <div style="text-align: right">₹ 310.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-3 dt-cell--row-3       " data-row-index="3" data-col-index="12" tabindex="0" data-ui="report-view.div-157">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-3 dt-cell--row-3       " data-row-index="3" data-col-index="13" tabindex="0" data-ui="report-view.div-158">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-159">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-4 vrow" data-row-index="4" style="position: absolute; top: 140px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-4 dt-cell--row-4     dt-cell--sticky  " data-row-index="4" data-col-index="0" tabindex="0" data-ui="report-view.div-160">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-161">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-4 dt-cell--row-4     dt-cell--sticky  dt-cell--sticky-last" data-row-index="4" data-col-index="1" tabindex="0" data-ui="report-view.div-162">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="5">
+                5
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-4 dt-cell--row-4       " data-row-index="4" data-col-index="2" tabindex="0" data-ui="report-view.div-163">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01321">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01321" data-value="ACC-SINV-2026-01321" data-ui="report-view.link-164">ACC-SINV-2026-01321</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-4 dt-cell--row-4       " data-row-index="4" data-col-index="3" tabindex="0" data-ui="report-view.div-165">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Priya Iyer">
+                Priya Iyer
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-4 dt-cell--row-4       " data-row-index="4" data-col-index="4" tabindex="0" data-ui="report-view.div-166">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Priya Iyer">
+                <a href="#" data-doctype="Customer" data-name="Priya Iyer" data-value="Priya Iyer" data-ui="report-view.link-167">Priya Iyer</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-4 dt-cell--row-4       " data-row-index="4" data-col-index="5" tabindex="0" data-ui="report-view.div-168">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-169">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-4 dt-cell--row-4       " data-row-index="4" data-col-index="6" tabindex="0" data-ui="report-view.div-170">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-4 dt-cell--row-4       " data-row-index="4" data-col-index="7" tabindex="0" data-ui="report-view.div-171">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-4 dt-cell--row-4       " data-row-index="4" data-col-index="8" tabindex="0" data-ui="report-view.div-172">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 780.00">
+                <div style="text-align: right">₹ 780.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-4 dt-cell--row-4       " data-row-index="4" data-col-index="9" tabindex="0" data-ui="report-view.div-173">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-4 dt-cell--row-4       " data-row-index="4" data-col-index="10" tabindex="0" data-ui="report-view.div-174">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-175">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-4 dt-cell--row-4       " data-row-index="4" data-col-index="11" tabindex="0" data-ui="report-view.div-176">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 780.00">
+                <div style="text-align: right">₹ 780.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-4 dt-cell--row-4       " data-row-index="4" data-col-index="12" tabindex="0" data-ui="report-view.div-177">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-4 dt-cell--row-4       " data-row-index="4" data-col-index="13" tabindex="0" data-ui="report-view.div-178">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-179">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-5 vrow" data-row-index="5" style="position: absolute; top: 175px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-5 dt-cell--row-5     dt-cell--sticky  " data-row-index="5" data-col-index="0" tabindex="0" data-ui="report-view.div-180">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-181">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-5 dt-cell--row-5     dt-cell--sticky  dt-cell--sticky-last" data-row-index="5" data-col-index="1" tabindex="0" data-ui="report-view.div-182">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="6">
+                6
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-5 dt-cell--row-5       " data-row-index="5" data-col-index="2" tabindex="0" data-ui="report-view.div-183">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01320">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01320" data-value="ACC-SINV-2026-01320" data-ui="report-view.link-184">ACC-SINV-2026-01320</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-5 dt-cell--row-5       " data-row-index="5" data-col-index="3" tabindex="0" data-ui="report-view.div-185">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Shahzad">
+                Shahzad
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-5 dt-cell--row-5       " data-row-index="5" data-col-index="4" tabindex="0" data-ui="report-view.div-186">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Shahzad">
+                <a href="#" data-doctype="Customer" data-name="Shahzad" data-value="Shahzad" data-ui="report-view.link-187">Shahzad</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-5 dt-cell--row-5       " data-row-index="5" data-col-index="5" tabindex="0" data-ui="report-view.div-188">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-189">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-5 dt-cell--row-5       " data-row-index="5" data-col-index="6" tabindex="0" data-ui="report-view.div-190">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-5 dt-cell--row-5       " data-row-index="5" data-col-index="7" tabindex="0" data-ui="report-view.div-191">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-5 dt-cell--row-5       " data-row-index="5" data-col-index="8" tabindex="0" data-ui="report-view.div-192">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 845.00">
+                <div style="text-align: right">₹ 845.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-5 dt-cell--row-5       " data-row-index="5" data-col-index="9" tabindex="0" data-ui="report-view.div-193">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-5 dt-cell--row-5       " data-row-index="5" data-col-index="10" tabindex="0" data-ui="report-view.div-194">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-195">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-5 dt-cell--row-5       " data-row-index="5" data-col-index="11" tabindex="0" data-ui="report-view.div-196">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 845.00">
+                <div style="text-align: right">₹ 845.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-5 dt-cell--row-5       " data-row-index="5" data-col-index="12" tabindex="0" data-ui="report-view.div-197">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-5 dt-cell--row-5       " data-row-index="5" data-col-index="13" tabindex="0" data-ui="report-view.div-198">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-199">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-6 vrow" data-row-index="6" style="position: absolute; top: 210px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-6 dt-cell--row-6     dt-cell--sticky  " data-row-index="6" data-col-index="0" tabindex="0" data-ui="report-view.div-200">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-201">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-6 dt-cell--row-6     dt-cell--sticky  dt-cell--sticky-last" data-row-index="6" data-col-index="1" tabindex="0" data-ui="report-view.div-202">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="7">
+                7
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-6 dt-cell--row-6       " data-row-index="6" data-col-index="2" tabindex="0" data-ui="report-view.div-203">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01319">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01319" data-value="ACC-SINV-2026-01319" data-ui="report-view.link-204">ACC-SINV-2026-01319</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-6 dt-cell--row-6       " data-row-index="6" data-col-index="3" tabindex="0" data-ui="report-view.div-205">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="fairooz">
+                fairooz
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-6 dt-cell--row-6       " data-row-index="6" data-col-index="4" tabindex="0" data-ui="report-view.div-206">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="fairooz - 1">
+                <a href="#" data-doctype="Customer" data-name="fairooz - 1" data-value="fairooz - 1" data-ui="report-view.link-207">fairooz - 1</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-6 dt-cell--row-6       " data-row-index="6" data-col-index="5" tabindex="0" data-ui="report-view.div-208">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-209">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-6 dt-cell--row-6       " data-row-index="6" data-col-index="6" tabindex="0" data-ui="report-view.div-210">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-6 dt-cell--row-6       " data-row-index="6" data-col-index="7" tabindex="0" data-ui="report-view.div-211">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-6 dt-cell--row-6       " data-row-index="6" data-col-index="8" tabindex="0" data-ui="report-view.div-212">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 1,170.00">
+                <div style="text-align: right">₹ 1,170.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-6 dt-cell--row-6       " data-row-index="6" data-col-index="9" tabindex="0" data-ui="report-view.div-213">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-6 dt-cell--row-6       " data-row-index="6" data-col-index="10" tabindex="0" data-ui="report-view.div-214">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-215">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-6 dt-cell--row-6       " data-row-index="6" data-col-index="11" tabindex="0" data-ui="report-view.div-216">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 1,170.00">
+                <div style="text-align: right">₹ 1,170.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-6 dt-cell--row-6       " data-row-index="6" data-col-index="12" tabindex="0" data-ui="report-view.div-217">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-6 dt-cell--row-6       " data-row-index="6" data-col-index="13" tabindex="0" data-ui="report-view.div-218">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-219">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-7 vrow" data-row-index="7" style="position: absolute; top: 245px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-7 dt-cell--row-7     dt-cell--sticky  " data-row-index="7" data-col-index="0" tabindex="0" data-ui="report-view.div-220">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-221">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-7 dt-cell--row-7     dt-cell--sticky  dt-cell--sticky-last" data-row-index="7" data-col-index="1" tabindex="0" data-ui="report-view.div-222">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="8">
+                8
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-7 dt-cell--row-7       " data-row-index="7" data-col-index="2" tabindex="0" data-ui="report-view.div-223">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01318">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01318" data-value="ACC-SINV-2026-01318" data-ui="report-view.link-224">ACC-SINV-2026-01318</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-7 dt-cell--row-7       " data-row-index="7" data-col-index="3" tabindex="0" data-ui="report-view.div-225">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Fairooz">
+                Fairooz
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-7 dt-cell--row-7       " data-row-index="7" data-col-index="4" tabindex="0" data-ui="report-view.div-226">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Fairooz - 2">
+                <a href="#" data-doctype="Customer" data-name="Fairooz - 2" data-value="Fairooz - 2" data-ui="report-view.link-227">Fairooz - 2</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-7 dt-cell--row-7       " data-row-index="7" data-col-index="5" tabindex="0" data-ui="report-view.div-228">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-229">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-7 dt-cell--row-7       " data-row-index="7" data-col-index="6" tabindex="0" data-ui="report-view.div-230">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-7 dt-cell--row-7       " data-row-index="7" data-col-index="7" tabindex="0" data-ui="report-view.div-231">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="22-10-2026">
+                22-10-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-7 dt-cell--row-7       " data-row-index="7" data-col-index="8" tabindex="0" data-ui="report-view.div-232">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 970.00">
+                <div style="text-align: right">₹ 970.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-7 dt-cell--row-7       " data-row-index="7" data-col-index="9" tabindex="0" data-ui="report-view.div-233">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-7 dt-cell--row-7       " data-row-index="7" data-col-index="10" tabindex="0" data-ui="report-view.div-234">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-235">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-7 dt-cell--row-7       " data-row-index="7" data-col-index="11" tabindex="0" data-ui="report-view.div-236">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 970.00">
+                <div style="text-align: right">₹ 970.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-7 dt-cell--row-7       " data-row-index="7" data-col-index="12" tabindex="0" data-ui="report-view.div-237">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-7 dt-cell--row-7       " data-row-index="7" data-col-index="13" tabindex="0" data-ui="report-view.div-238">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-239">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-8 vrow" data-row-index="8" style="position: absolute; top: 280px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-8 dt-cell--row-8     dt-cell--sticky  " data-row-index="8" data-col-index="0" tabindex="0" data-ui="report-view.div-240">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-241">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-8 dt-cell--row-8     dt-cell--sticky  dt-cell--sticky-last" data-row-index="8" data-col-index="1" tabindex="0" data-ui="report-view.div-242">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="9">
+                9
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-8 dt-cell--row-8       " data-row-index="8" data-col-index="2" tabindex="0" data-ui="report-view.div-243">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01317">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01317" data-value="ACC-SINV-2026-01317" data-ui="report-view.link-244">ACC-SINV-2026-01317</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-8 dt-cell--row-8       " data-row-index="8" data-col-index="3" tabindex="0" data-ui="report-view.div-245">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Beyrooj">
+                Beyrooj
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-8 dt-cell--row-8       " data-row-index="8" data-col-index="4" tabindex="0" data-ui="report-view.div-246">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Beyrooj">
+                <a href="#" data-doctype="Customer" data-name="Beyrooj" data-value="Beyrooj" data-ui="report-view.link-247">Beyrooj</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-8 dt-cell--row-8       " data-row-index="8" data-col-index="5" tabindex="0" data-ui="report-view.div-248">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-249">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-8 dt-cell--row-8       " data-row-index="8" data-col-index="6" tabindex="0" data-ui="report-view.div-250">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-8 dt-cell--row-8       " data-row-index="8" data-col-index="7" tabindex="0" data-ui="report-view.div-251">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-8 dt-cell--row-8       " data-row-index="8" data-col-index="8" tabindex="0" data-ui="report-view.div-252">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-8 dt-cell--row-8       " data-row-index="8" data-col-index="9" tabindex="0" data-ui="report-view.div-253">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-8 dt-cell--row-8       " data-row-index="8" data-col-index="10" tabindex="0" data-ui="report-view.div-254">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-255">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-8 dt-cell--row-8       " data-row-index="8" data-col-index="11" tabindex="0" data-ui="report-view.div-256">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-8 dt-cell--row-8       " data-row-index="8" data-col-index="12" tabindex="0" data-ui="report-view.div-257">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-8 dt-cell--row-8       " data-row-index="8" data-col-index="13" tabindex="0" data-ui="report-view.div-258">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-259">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-9 vrow" data-row-index="9" style="position: absolute; top: 315px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-9 dt-cell--row-9     dt-cell--sticky  " data-row-index="9" data-col-index="0" tabindex="0" data-ui="report-view.div-260">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-261">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-9 dt-cell--row-9     dt-cell--sticky  dt-cell--sticky-last" data-row-index="9" data-col-index="1" tabindex="0" data-ui="report-view.div-262">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="10">
+                10
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-9 dt-cell--row-9       " data-row-index="9" data-col-index="2" tabindex="0" data-ui="report-view.div-263">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01316">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01316" data-value="ACC-SINV-2026-01316" data-ui="report-view.link-264">ACC-SINV-2026-01316</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-9 dt-cell--row-9       " data-row-index="9" data-col-index="3" tabindex="0" data-ui="report-view.div-265">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Shahzad">
+                Shahzad
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-9 dt-cell--row-9       " data-row-index="9" data-col-index="4" tabindex="0" data-ui="report-view.div-266">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Shahzad">
+                <a href="#" data-doctype="Customer" data-name="Shahzad" data-value="Shahzad" data-ui="report-view.link-267">Shahzad</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-9 dt-cell--row-9       " data-row-index="9" data-col-index="5" tabindex="0" data-ui="report-view.div-268">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-269">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-9 dt-cell--row-9       " data-row-index="9" data-col-index="6" tabindex="0" data-ui="report-view.div-270">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-9 dt-cell--row-9       " data-row-index="9" data-col-index="7" tabindex="0" data-ui="report-view.div-271">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-9 dt-cell--row-9       " data-row-index="9" data-col-index="8" tabindex="0" data-ui="report-view.div-272">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 1,006.00">
+                <div style="text-align: right">₹ 1,006.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-9 dt-cell--row-9       " data-row-index="9" data-col-index="9" tabindex="0" data-ui="report-view.div-273">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-9 dt-cell--row-9       " data-row-index="9" data-col-index="10" tabindex="0" data-ui="report-view.div-274">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-275">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-9 dt-cell--row-9       " data-row-index="9" data-col-index="11" tabindex="0" data-ui="report-view.div-276">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 1,006.00">
+                <div style="text-align: right">₹ 1,006.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-9 dt-cell--row-9       " data-row-index="9" data-col-index="12" tabindex="0" data-ui="report-view.div-277">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-9 dt-cell--row-9       " data-row-index="9" data-col-index="13" tabindex="0" data-ui="report-view.div-278">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-279">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-10 vrow" data-row-index="10" style="position: absolute; top: 350px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-10 dt-cell--row-10     dt-cell--sticky  " data-row-index="10" data-col-index="0" tabindex="0" data-ui="report-view.div-280">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-281">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-10 dt-cell--row-10     dt-cell--sticky  dt-cell--sticky-last" data-row-index="10" data-col-index="1" tabindex="0" data-ui="report-view.div-282">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="11">
+                11
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-10 dt-cell--row-10       " data-row-index="10" data-col-index="2" tabindex="0" data-ui="report-view.div-283">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01315">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01315" data-value="ACC-SINV-2026-01315" data-ui="report-view.link-284">ACC-SINV-2026-01315</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-10 dt-cell--row-10       " data-row-index="10" data-col-index="3" tabindex="0" data-ui="report-view.div-285">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Paige">
+                Paige
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-10 dt-cell--row-10       " data-row-index="10" data-col-index="4" tabindex="0" data-ui="report-view.div-286">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Paige">
+                <a href="#" data-doctype="Customer" data-name="Paige" data-value="Paige" data-ui="report-view.link-287">Paige</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-10 dt-cell--row-10       " data-row-index="10" data-col-index="5" tabindex="0" data-ui="report-view.div-288">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-289">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-10 dt-cell--row-10       " data-row-index="10" data-col-index="6" tabindex="0" data-ui="report-view.div-290">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-10 dt-cell--row-10       " data-row-index="10" data-col-index="7" tabindex="0" data-ui="report-view.div-291">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-10 dt-cell--row-10       " data-row-index="10" data-col-index="8" tabindex="0" data-ui="report-view.div-292">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 3,262.00">
+                <div style="text-align: right">₹ 3,262.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-10 dt-cell--row-10       " data-row-index="10" data-col-index="9" tabindex="0" data-ui="report-view.div-293">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-10 dt-cell--row-10       " data-row-index="10" data-col-index="10" tabindex="0" data-ui="report-view.div-294">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-295">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-10 dt-cell--row-10       " data-row-index="10" data-col-index="11" tabindex="0" data-ui="report-view.div-296">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 3,262.00">
+                <div style="text-align: right">₹ 3,262.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-10 dt-cell--row-10       " data-row-index="10" data-col-index="12" tabindex="0" data-ui="report-view.div-297">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-10 dt-cell--row-10       " data-row-index="10" data-col-index="13" tabindex="0" data-ui="report-view.div-298">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-299">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-11 vrow" data-row-index="11" style="position: absolute; top: 385px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-11 dt-cell--row-11     dt-cell--sticky  " data-row-index="11" data-col-index="0" tabindex="0" data-ui="report-view.div-300">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-301">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-11 dt-cell--row-11     dt-cell--sticky  dt-cell--sticky-last" data-row-index="11" data-col-index="1" tabindex="0" data-ui="report-view.div-302">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="12">
+                12
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-11 dt-cell--row-11       " data-row-index="11" data-col-index="2" tabindex="0" data-ui="report-view.div-303">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01314">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01314" data-value="ACC-SINV-2026-01314" data-ui="report-view.link-304">ACC-SINV-2026-01314</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-11 dt-cell--row-11       " data-row-index="11" data-col-index="3" tabindex="0" data-ui="report-view.div-305">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Jane">
+                Jane
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-11 dt-cell--row-11       " data-row-index="11" data-col-index="4" tabindex="0" data-ui="report-view.div-306">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Jane">
+                <a href="#" data-doctype="Customer" data-name="Jane" data-value="Jane" data-ui="report-view.link-307">Jane</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-11 dt-cell--row-11       " data-row-index="11" data-col-index="5" tabindex="0" data-ui="report-view.div-308">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-309">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-11 dt-cell--row-11       " data-row-index="11" data-col-index="6" tabindex="0" data-ui="report-view.div-310">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-11 dt-cell--row-11       " data-row-index="11" data-col-index="7" tabindex="0" data-ui="report-view.div-311">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-11 dt-cell--row-11       " data-row-index="11" data-col-index="8" tabindex="0" data-ui="report-view.div-312">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 1,528.00">
+                <div style="text-align: right">₹ 1,528.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-11 dt-cell--row-11       " data-row-index="11" data-col-index="9" tabindex="0" data-ui="report-view.div-313">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-11 dt-cell--row-11       " data-row-index="11" data-col-index="10" tabindex="0" data-ui="report-view.div-314">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-315">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-11 dt-cell--row-11       " data-row-index="11" data-col-index="11" tabindex="0" data-ui="report-view.div-316">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 1,528.00">
+                <div style="text-align: right">₹ 1,528.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-11 dt-cell--row-11       " data-row-index="11" data-col-index="12" tabindex="0" data-ui="report-view.div-317">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-11 dt-cell--row-11       " data-row-index="11" data-col-index="13" tabindex="0" data-ui="report-view.div-318">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-319">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-12 vrow" data-row-index="12" style="position: absolute; top: 420px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-12 dt-cell--row-12     dt-cell--sticky  " data-row-index="12" data-col-index="0" tabindex="0" data-ui="report-view.div-320">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-321">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-12 dt-cell--row-12     dt-cell--sticky  dt-cell--sticky-last" data-row-index="12" data-col-index="1" tabindex="0" data-ui="report-view.div-322">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="13">
+                13
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-12 dt-cell--row-12       " data-row-index="12" data-col-index="2" tabindex="0" data-ui="report-view.div-323">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01313">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01313" data-value="ACC-SINV-2026-01313" data-ui="report-view.link-324">ACC-SINV-2026-01313</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-12 dt-cell--row-12       " data-row-index="12" data-col-index="3" tabindex="0" data-ui="report-view.div-325">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="fairooz">
+                fairooz
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-12 dt-cell--row-12       " data-row-index="12" data-col-index="4" tabindex="0" data-ui="report-view.div-326">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="fairooz">
+                <a href="#" data-doctype="Customer" data-name="fairooz" data-value="fairooz" data-ui="report-view.link-327">fairooz</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-12 dt-cell--row-12       " data-row-index="12" data-col-index="5" tabindex="0" data-ui="report-view.div-328">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-329">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-12 dt-cell--row-12       " data-row-index="12" data-col-index="6" tabindex="0" data-ui="report-view.div-330">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-12 dt-cell--row-12       " data-row-index="12" data-col-index="7" tabindex="0" data-ui="report-view.div-331">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-12 dt-cell--row-12       " data-row-index="12" data-col-index="8" tabindex="0" data-ui="report-view.div-332">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 3,757.00">
+                <div style="text-align: right">₹ 3,757.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-12 dt-cell--row-12       " data-row-index="12" data-col-index="9" tabindex="0" data-ui="report-view.div-333">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-12 dt-cell--row-12       " data-row-index="12" data-col-index="10" tabindex="0" data-ui="report-view.div-334">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-335">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-12 dt-cell--row-12       " data-row-index="12" data-col-index="11" tabindex="0" data-ui="report-view.div-336">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 3,757.00">
+                <div style="text-align: right">₹ 3,757.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-12 dt-cell--row-12       " data-row-index="12" data-col-index="12" tabindex="0" data-ui="report-view.div-337">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-12 dt-cell--row-12       " data-row-index="12" data-col-index="13" tabindex="0" data-ui="report-view.div-338">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-339">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-13 vrow" data-row-index="13" style="position: absolute; top: 455px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-13 dt-cell--row-13     dt-cell--sticky  " data-row-index="13" data-col-index="0" tabindex="0" data-ui="report-view.div-340">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-341">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-13 dt-cell--row-13     dt-cell--sticky  dt-cell--sticky-last" data-row-index="13" data-col-index="1" tabindex="0" data-ui="report-view.div-342">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="14">
+                14
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-13 dt-cell--row-13       " data-row-index="13" data-col-index="2" tabindex="0" data-ui="report-view.div-343">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01312">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01312" data-value="ACC-SINV-2026-01312" data-ui="report-view.link-344">ACC-SINV-2026-01312</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-13 dt-cell--row-13       " data-row-index="13" data-col-index="3" tabindex="0" data-ui="report-view.div-345">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="John">
+                John
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-13 dt-cell--row-13       " data-row-index="13" data-col-index="4" tabindex="0" data-ui="report-view.div-346">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="John">
+                <a href="#" data-doctype="Customer" data-name="John" data-value="John" data-ui="report-view.link-347">John</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-13 dt-cell--row-13       " data-row-index="13" data-col-index="5" tabindex="0" data-ui="report-view.div-348">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-349">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-13 dt-cell--row-13       " data-row-index="13" data-col-index="6" tabindex="0" data-ui="report-view.div-350">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-13 dt-cell--row-13       " data-row-index="13" data-col-index="7" tabindex="0" data-ui="report-view.div-351">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-13 dt-cell--row-13       " data-row-index="13" data-col-index="8" tabindex="0" data-ui="report-view.div-352">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 649.00">
+                <div style="text-align: right">₹ 649.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-13 dt-cell--row-13       " data-row-index="13" data-col-index="9" tabindex="0" data-ui="report-view.div-353">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-13 dt-cell--row-13       " data-row-index="13" data-col-index="10" tabindex="0" data-ui="report-view.div-354">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-355">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-13 dt-cell--row-13       " data-row-index="13" data-col-index="11" tabindex="0" data-ui="report-view.div-356">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 649.00">
+                <div style="text-align: right">₹ 649.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-13 dt-cell--row-13       " data-row-index="13" data-col-index="12" tabindex="0" data-ui="report-view.div-357">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-13 dt-cell--row-13       " data-row-index="13" data-col-index="13" tabindex="0" data-ui="report-view.div-358">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-359">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-14 vrow" data-row-index="14" style="position: absolute; top: 490px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-14 dt-cell--row-14     dt-cell--sticky  " data-row-index="14" data-col-index="0" tabindex="0" data-ui="report-view.div-360">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-361">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-14 dt-cell--row-14     dt-cell--sticky  dt-cell--sticky-last" data-row-index="14" data-col-index="1" tabindex="0" data-ui="report-view.div-362">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="15">
+                15
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-14 dt-cell--row-14       " data-row-index="14" data-col-index="2" tabindex="0" data-ui="report-view.div-363">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01311">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01311" data-value="ACC-SINV-2026-01311" data-ui="report-view.link-364">ACC-SINV-2026-01311</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-14 dt-cell--row-14       " data-row-index="14" data-col-index="3" tabindex="0" data-ui="report-view.div-365">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Maria">
+                Maria
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-14 dt-cell--row-14       " data-row-index="14" data-col-index="4" tabindex="0" data-ui="report-view.div-366">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Maria">
+                <a href="#" data-doctype="Customer" data-name="Maria" data-value="Maria" data-ui="report-view.link-367">Maria</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-14 dt-cell--row-14       " data-row-index="14" data-col-index="5" tabindex="0" data-ui="report-view.div-368">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-369">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-14 dt-cell--row-14       " data-row-index="14" data-col-index="6" tabindex="0" data-ui="report-view.div-370">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-14 dt-cell--row-14       " data-row-index="14" data-col-index="7" tabindex="0" data-ui="report-view.div-371">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-14 dt-cell--row-14       " data-row-index="14" data-col-index="8" tabindex="0" data-ui="report-view.div-372">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 375.00">
+                <div style="text-align: right">₹ 375.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-14 dt-cell--row-14       " data-row-index="14" data-col-index="9" tabindex="0" data-ui="report-view.div-373">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-14 dt-cell--row-14       " data-row-index="14" data-col-index="10" tabindex="0" data-ui="report-view.div-374">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-375">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-14 dt-cell--row-14       " data-row-index="14" data-col-index="11" tabindex="0" data-ui="report-view.div-376">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 375.00">
+                <div style="text-align: right">₹ 375.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-14 dt-cell--row-14       " data-row-index="14" data-col-index="12" tabindex="0" data-ui="report-view.div-377">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-14 dt-cell--row-14       " data-row-index="14" data-col-index="13" tabindex="0" data-ui="report-view.div-378">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-379">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-15 vrow" data-row-index="15" style="position: absolute; top: 525px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-15 dt-cell--row-15     dt-cell--sticky  " data-row-index="15" data-col-index="0" tabindex="0" data-ui="report-view.div-380">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-381">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-15 dt-cell--row-15     dt-cell--sticky  dt-cell--sticky-last" data-row-index="15" data-col-index="1" tabindex="0" data-ui="report-view.div-382">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="16">
+                16
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-15 dt-cell--row-15       " data-row-index="15" data-col-index="2" tabindex="0" data-ui="report-view.div-383">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01310">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01310" data-value="ACC-SINV-2026-01310" data-ui="report-view.link-384">ACC-SINV-2026-01310</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-15 dt-cell--row-15       " data-row-index="15" data-col-index="3" tabindex="0" data-ui="report-view.div-385">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="swafa">
+                swafa
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-15 dt-cell--row-15       " data-row-index="15" data-col-index="4" tabindex="0" data-ui="report-view.div-386">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="swafa">
+                <a href="#" data-doctype="Customer" data-name="swafa" data-value="swafa" data-ui="report-view.link-387">swafa</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-15 dt-cell--row-15       " data-row-index="15" data-col-index="5" tabindex="0" data-ui="report-view.div-388">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-389">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-15 dt-cell--row-15       " data-row-index="15" data-col-index="6" tabindex="0" data-ui="report-view.div-390">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-15 dt-cell--row-15       " data-row-index="15" data-col-index="7" tabindex="0" data-ui="report-view.div-391">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-15 dt-cell--row-15       " data-row-index="15" data-col-index="8" tabindex="0" data-ui="report-view.div-392">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 2,875.00">
+                <div style="text-align: right">₹ 2,875.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-15 dt-cell--row-15       " data-row-index="15" data-col-index="9" tabindex="0" data-ui="report-view.div-393">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-15 dt-cell--row-15       " data-row-index="15" data-col-index="10" tabindex="0" data-ui="report-view.div-394">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-395">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-15 dt-cell--row-15       " data-row-index="15" data-col-index="11" tabindex="0" data-ui="report-view.div-396">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 2,875.00">
+                <div style="text-align: right">₹ 2,875.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-15 dt-cell--row-15       " data-row-index="15" data-col-index="12" tabindex="0" data-ui="report-view.div-397">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-15 dt-cell--row-15       " data-row-index="15" data-col-index="13" tabindex="0" data-ui="report-view.div-398">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-399">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-16 vrow" data-row-index="16" style="position: absolute; top: 560px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-16 dt-cell--row-16     dt-cell--sticky  " data-row-index="16" data-col-index="0" tabindex="0" data-ui="report-view.div-400">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-401">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-16 dt-cell--row-16     dt-cell--sticky  dt-cell--sticky-last" data-row-index="16" data-col-index="1" tabindex="0" data-ui="report-view.div-402">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="17">
+                17
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-16 dt-cell--row-16       " data-row-index="16" data-col-index="2" tabindex="0" data-ui="report-view.div-403">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01309">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01309" data-value="ACC-SINV-2026-01309" data-ui="report-view.link-404">ACC-SINV-2026-01309</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-16 dt-cell--row-16       " data-row-index="16" data-col-index="3" tabindex="0" data-ui="report-view.div-405">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Swiggy">
+                Swiggy
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-16 dt-cell--row-16       " data-row-index="16" data-col-index="4" tabindex="0" data-ui="report-view.div-406">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Swiggy">
+                <a href="#" data-doctype="Customer" data-name="Swiggy" data-value="Swiggy" data-ui="report-view.link-407">Swiggy</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-16 dt-cell--row-16       " data-row-index="16" data-col-index="5" tabindex="0" data-ui="report-view.div-408">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-409">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-16 dt-cell--row-16       " data-row-index="16" data-col-index="6" tabindex="0" data-ui="report-view.div-410">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-16 dt-cell--row-16       " data-row-index="16" data-col-index="7" tabindex="0" data-ui="report-view.div-411">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-16 dt-cell--row-16       " data-row-index="16" data-col-index="8" tabindex="0" data-ui="report-view.div-412">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 3,512.00">
+                <div style="text-align: right">₹ 3,512.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-16 dt-cell--row-16       " data-row-index="16" data-col-index="9" tabindex="0" data-ui="report-view.div-413">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-16 dt-cell--row-16       " data-row-index="16" data-col-index="10" tabindex="0" data-ui="report-view.div-414">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-415">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-16 dt-cell--row-16       " data-row-index="16" data-col-index="11" tabindex="0" data-ui="report-view.div-416">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 3,512.00">
+                <div style="text-align: right">₹ 3,512.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-16 dt-cell--row-16       " data-row-index="16" data-col-index="12" tabindex="0" data-ui="report-view.div-417">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-16 dt-cell--row-16       " data-row-index="16" data-col-index="13" tabindex="0" data-ui="report-view.div-418">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-419">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-17 vrow" data-row-index="17" style="position: absolute; top: 595px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-17 dt-cell--row-17     dt-cell--sticky  " data-row-index="17" data-col-index="0" tabindex="0" data-ui="report-view.div-420">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-421">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-17 dt-cell--row-17     dt-cell--sticky  dt-cell--sticky-last" data-row-index="17" data-col-index="1" tabindex="0" data-ui="report-view.div-422">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="18">
+                18
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-17 dt-cell--row-17       " data-row-index="17" data-col-index="2" tabindex="0" data-ui="report-view.div-423">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01308">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01308" data-value="ACC-SINV-2026-01308" data-ui="report-view.link-424">ACC-SINV-2026-01308</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-17 dt-cell--row-17       " data-row-index="17" data-col-index="3" tabindex="0" data-ui="report-view.div-425">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Tom">
+                Tom
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-17 dt-cell--row-17       " data-row-index="17" data-col-index="4" tabindex="0" data-ui="report-view.div-426">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Tom">
+                <a href="#" data-doctype="Customer" data-name="Tom" data-value="Tom" data-ui="report-view.link-427">Tom</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-17 dt-cell--row-17       " data-row-index="17" data-col-index="5" tabindex="0" data-ui="report-view.div-428">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-429">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-17 dt-cell--row-17       " data-row-index="17" data-col-index="6" tabindex="0" data-ui="report-view.div-430">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-17 dt-cell--row-17       " data-row-index="17" data-col-index="7" tabindex="0" data-ui="report-view.div-431">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-17 dt-cell--row-17       " data-row-index="17" data-col-index="8" tabindex="0" data-ui="report-view.div-432">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 358.00">
+                <div style="text-align: right">₹ 358.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-17 dt-cell--row-17       " data-row-index="17" data-col-index="9" tabindex="0" data-ui="report-view.div-433">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-17 dt-cell--row-17       " data-row-index="17" data-col-index="10" tabindex="0" data-ui="report-view.div-434">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-435">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-17 dt-cell--row-17       " data-row-index="17" data-col-index="11" tabindex="0" data-ui="report-view.div-436">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 358.00">
+                <div style="text-align: right">₹ 358.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-17 dt-cell--row-17       " data-row-index="17" data-col-index="12" tabindex="0" data-ui="report-view.div-437">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-17 dt-cell--row-17       " data-row-index="17" data-col-index="13" tabindex="0" data-ui="report-view.div-438">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-439">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-18 vrow" data-row-index="18" style="position: absolute; top: 630px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-18 dt-cell--row-18     dt-cell--sticky  " data-row-index="18" data-col-index="0" tabindex="0" data-ui="report-view.div-440">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-441">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-18 dt-cell--row-18     dt-cell--sticky  dt-cell--sticky-last" data-row-index="18" data-col-index="1" tabindex="0" data-ui="report-view.div-442">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="19">
+                19
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-18 dt-cell--row-18       " data-row-index="18" data-col-index="2" tabindex="0" data-ui="report-view.div-443">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01307">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01307" data-value="ACC-SINV-2026-01307" data-ui="report-view.link-444">ACC-SINV-2026-01307</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-18 dt-cell--row-18       " data-row-index="18" data-col-index="3" tabindex="0" data-ui="report-view.div-445">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Milo">
+                Milo
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-18 dt-cell--row-18       " data-row-index="18" data-col-index="4" tabindex="0" data-ui="report-view.div-446">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Milo">
+                <a href="#" data-doctype="Customer" data-name="Milo" data-value="Milo" data-ui="report-view.link-447">Milo</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-18 dt-cell--row-18       " data-row-index="18" data-col-index="5" tabindex="0" data-ui="report-view.div-448">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-449">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-18 dt-cell--row-18       " data-row-index="18" data-col-index="6" tabindex="0" data-ui="report-view.div-450">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-18 dt-cell--row-18       " data-row-index="18" data-col-index="7" tabindex="0" data-ui="report-view.div-451">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-18 dt-cell--row-18       " data-row-index="18" data-col-index="8" tabindex="0" data-ui="report-view.div-452">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 918.00">
+                <div style="text-align: right">₹ 918.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-18 dt-cell--row-18       " data-row-index="18" data-col-index="9" tabindex="0" data-ui="report-view.div-453">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-18 dt-cell--row-18       " data-row-index="18" data-col-index="10" tabindex="0" data-ui="report-view.div-454">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-455">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-18 dt-cell--row-18       " data-row-index="18" data-col-index="11" tabindex="0" data-ui="report-view.div-456">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 918.00">
+                <div style="text-align: right">₹ 918.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-18 dt-cell--row-18       " data-row-index="18" data-col-index="12" tabindex="0" data-ui="report-view.div-457">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-18 dt-cell--row-18       " data-row-index="18" data-col-index="13" tabindex="0" data-ui="report-view.div-458">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-459">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div><div class="dt-row dt-row-19 vrow" data-row-index="19" style="position: absolute; top: 665px;">
+                
+            <div class="dt-cell dt-cell--col-0 dt-cell--0-19 dt-cell--row-19     dt-cell--sticky  " data-row-index="19" data-col-index="0" tabindex="0" data-ui="report-view.div-460">
+                
+            <div class="dt-cell__content dt-cell__content--col-0" title="">
+                <input type="checkbox" data-ui="report-view.input-461">
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-0"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-1 dt-cell--1-19 dt-cell--row-19     dt-cell--sticky  dt-cell--sticky-last" data-row-index="19" data-col-index="1" tabindex="0" data-ui="report-view.div-462">
+                
+            <div class="dt-cell__content dt-cell__content--col-1" title="20">
+                20
+                
+                
+                
+            </div>
+            <div class="dt-cell__edit dt-cell__edit--col-1"></div>
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-2 dt-cell--2-19 dt-cell--row-19       " data-row-index="19" data-col-index="2" tabindex="0" data-ui="report-view.div-463">
+                
+            <div class="dt-cell__content dt-cell__content--col-2" title="ACC-SINV-2026-01306">
+                <a href="#" data-doctype="Sales Invoice" data-name="ACC-SINV-2026-01306" data-value="ACC-SINV-2026-01306" data-ui="report-view.link-464">ACC-SINV-2026-01306</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-3 dt-cell--3-19 dt-cell--row-19       " data-row-index="19" data-col-index="3" tabindex="0" data-ui="report-view.div-465">
+                
+            <div class="dt-cell__content dt-cell__content--col-3" title="Vaishna">
+                Vaishna
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-4 dt-cell--4-19 dt-cell--row-19       " data-row-index="19" data-col-index="4" tabindex="0" data-ui="report-view.div-466">
+                
+            <div class="dt-cell__content dt-cell__content--col-4" title="Vaishna">
+                <a href="#" data-doctype="Customer" data-name="Vaishna" data-value="Vaishna" data-ui="report-view.link-467">Vaishna</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-5 dt-cell--5-19 dt-cell--row-19       " data-row-index="19" data-col-index="5" tabindex="0" data-ui="report-view.div-468">
+                
+            <div class="dt-cell__content dt-cell__content--col-5" title="URY">
+                <a href="#" data-doctype="Company" data-name="URY" data-value="URY" data-ui="report-view.link-469">URY</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-6 dt-cell--6-19 dt-cell--row-19       " data-row-index="19" data-col-index="6" tabindex="0" data-ui="report-view.div-470">
+                
+            <div class="dt-cell__content dt-cell__content--col-6" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-7 dt-cell--7-19 dt-cell--row-19       " data-row-index="19" data-col-index="7" tabindex="0" data-ui="report-view.div-471">
+                
+            <div class="dt-cell__content dt-cell__content--col-7" title="17-08-2026">
+                17-08-2026
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-8 dt-cell--8-19 dt-cell--row-19       " data-row-index="19" data-col-index="8" tabindex="0" data-ui="report-view.div-472">
+                
+            <div class="dt-cell__content dt-cell__content--col-8" title="₹ 171.44">
+                <div style="text-align: right">₹ 171.44</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-9 dt-cell--9-19 dt-cell--row-19       " data-row-index="19" data-col-index="9" tabindex="0" data-ui="report-view.div-473">
+                
+            <div class="dt-cell__content dt-cell__content--col-9" title="Paid">
+                Paid
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-10 dt-cell--10-19 dt-cell--row-19       " data-row-index="19" data-col-index="10" tabindex="0" data-ui="report-view.div-474">
+                
+            <div class="dt-cell__content dt-cell__content--col-10" title="INR">
+                <a href="#" data-doctype="Currency" data-name="INR" data-value="INR" data-ui="report-view.link-475">INR</a>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-11 dt-cell--11-19 dt-cell--row-19       " data-row-index="19" data-col-index="11" tabindex="0" data-ui="report-view.div-476">
+                
+            <div class="dt-cell__content dt-cell__content--col-11" title="₹ 171.44">
+                <div style="text-align: right">₹ 171.44</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-12 dt-cell--12-19 dt-cell--row-19       " data-row-index="19" data-col-index="12" tabindex="0" data-ui="report-view.div-477">
+                
+            <div class="dt-cell__content dt-cell__content--col-12" title="₹ 0.00">
+                <div style="text-align: right">₹ 0.00</div>
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            <div class="dt-cell dt-cell--col-13 dt-cell--13-19 dt-cell--row-19       " data-row-index="19" data-col-index="13" tabindex="0" data-ui="report-view.div-478">
+                
+            <div class="dt-cell__content dt-cell__content--col-13" title="">
+                <input type="checkbox" disabled="" class="disabled-deselected" data-ui="report-view.input-479">
+                
+                
+                
+            </div>
+            
+        
+            </div>
+        
+            </div></div>
+                <div class="dt-footer"></div>
+                <div class="dt-freeze" style="display: none;">
+                    <span class="dt-freeze__message">
+                        
+                    </span>
+                </div>
+                <div class="dt-toast"></div>
+                <div class="dt-dropdown-container">
+        <div class="dt-dropdown__list" style="display: none;">
+        
+            <div class="dt-dropdown__list-item" data-index="0">
+                Sort Ascending
+            </div>
+        
+            <div class="dt-dropdown__list-item" data-index="1">
+                Sort Descending
+            </div>
+        
+            <div class="dt-dropdown__list-item" data-index="2">
+                Reset sorting
+            </div>
+        
+            <div class="dt-dropdown__list-item" data-index="3">
+                Remove column
+            </div>
+        
+            <div class="dt-dropdown__list-item dt-hidden" data-index="4">
+                Freeze
+            </div>
+        
+            <div class="dt-dropdown__list-item dt-hidden" data-index="5">
+                Unfreeze
+            </div>
+        
+            <div class="dt-dropdown__list-item" data-index="6">
+                Add Column
+            </div>
+        
+        </div>
+    </div>
+                <textarea class="dt-paste-target" data-ui="report-view.textarea-480"></textarea>
+            </div>
+        </div><div class="freeze flex justify-center align-center text-muted" style="display: none;"></div></div><div class="no-result text-muted flex justify-center align-center" style="display: none;">
+				<div class="flex flex-col items-center justify-center text-center gap-3 min-h-48"><div class="flex size-11 items-center justify-center rounded-full bg-surface-gray-2 text-ink-gray-5"><svg class="icon  icon-md" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-receipt-text">
+			</use>
+		</svg></div><div class="flex flex-col items-center gap-1"><div class="text-base-medium text-ink-gray-8">No Sales Invoice created</div><div class="text-p-sm text-ink-gray-5 max-w-sm">A bill to a customer for what you sold.</div></div><div class="flex flex-wrap items-center justify-center gap-2"><button class="es-button btn-new-doc" type="button" data-ui="report-view.button-481"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg><span class="es-button__label">Create</span></button><button class="es-button btn-import-doc" type="button" data-ui="report-view.button-482"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-import">
+			</use>
+		</svg><span class="es-button__label">Import</span></button><a class="es-button" data-variant="outline" href="#" target="_blank" rel="noreferrer noopener" data-ui="report-view.link-483"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-external-link">
+			</use>
+		</svg><span class="es-button__label">Documentation</span></a></div></div>
+			</div><div class="list-paging-area level" style="">
+				<div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page Size"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="report-view.button-484">20</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="report-view.button-485">100</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="report-view.button-486">500</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="report-view.button-487">2500</button></div></div>
+				<div class="level-right"><span class="text-muted list-count" title="The count shown is an estimated count. Click here to see the accurate count." style="white-space: nowrap; cursor: pointer;" data-original-title="The count shown is an estimated count. Click here to see the accurate count."><span>20 of 1,000+</span></span><button class="es-button btn-more" type="button" data-ui="report-view.button-488"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Load More</span></button></div>
+			</div></div></div>
+						<div class="layout-footer hide"></div>
+					</div></div></div></div></div></div></div></div>
+</div>
+</body></html>

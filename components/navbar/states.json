@@ -1,0 +1,72 @@
+{
+  "component": "navbar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "navbar.search",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(243, 243, 243)",
+          "to": "rgb(237, 237, 237)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "navbar.search",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(124, 124, 124) none 3px",
+          "to": "rgb(0, 95, 204) auto 1px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "navbar.search",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(243, 243, 243)",
+          "to": "rgb(237, 237, 237)"
+        },
+        "outline": {
+          "from": "rgb(124, 124, 124) none 3px",
+          "to": "rgb(124, 124, 124) none 0px"
+        }
+      },
+      "screenshot": "states/active.png"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

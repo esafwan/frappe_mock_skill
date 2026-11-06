@@ -1,0 +1,81 @@
+{
+  "component": "list-view",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": ".list-row-container",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(248, 248, 248)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "list-view.input-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(124, 124, 124, 0.25) 0px 0px 0px 2px"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "list-view.input-17",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(255, 255, 255)",
+          "to": "rgb(23, 23, 23)"
+        },
+        "borderColor": {
+          "from": "rgb(153, 153, 153)",
+          "to": "rgb(0, 0, 0)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "row checkbox ticked (also shows action bar)"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

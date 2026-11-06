@@ -1,0 +1,89 @@
+{
+  "component": "navbar",
+  "slots": {
+    "search_widget_icon": {
+      "type": "text",
+      "sample": "Search",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "search_widget_shortcut": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "notification_count": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "standard_image": {
+      "type": "text",
+      "sample": "A",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "navbar_home_alt": {
+      "type": "text",
+      "sample": "App Logo",
+      "maxLength": 20,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "search_widget_button_title": {
+      "type": "text",
+      "sample": "Search",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "navbar.search"
+    },
+    "hidden_title": {
+      "type": "text",
+      "sample": "Cloud settings",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "navbar.button-1"
+    },
+    "hidden_arialabel": {
+      "type": "text",
+      "sample": "Cloud settings",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "navbar.button-1"
+    },
+    "desktop_notification_icon_arialabel": {
+      "type": "text",
+      "sample": "Notifications",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "navbar.button-2"
+    },
+    "notification_count_arialabel": {
+      "type": "text",
+      "sample": "6 unread notifications",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "avatar_medium_title": {
+      "type": "text",
+      "sample": "Administrator",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "standard_image_title": {
+      "type": "text",
+      "sample": "Administrator",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "div"
+    }
+  }
+}

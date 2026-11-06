@@ -1,0 +1,1929 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="light" dir="rtl">
+<head><meta charset="utf-8"><title>List view (filters, sort, rows, checkboxes, pagination)</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open no-list-sidebar" data-route="List/Customer/List" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="main-section" style="width:1159px;box-sizing:border-box"><div id="body" style="width:1159px;box-sizing:border-box"><div class="content page-container" id="page-List/Customer/List" data-page-route="List/Customer/List" style="width:1159px;box-sizing:border-box"><div class="container page-body" style="width:1159px;box-sizing:border-box"><div class="page-wrapper" style="width:1159px;box-sizing:border-box"><div class="page-content" style="width:1159px;box-sizing:border-box"><div class="layout-main layout-two-column" style="width:1159px;box-sizing:border-box"><div class="layout-main-section-wrapper list-view" style="width:1159px;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-equal-approximately">
+      <path d="M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+      <path d="M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-funnel">
+      <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-down-wide-narrow">
+      <path d="m3 16 4 4 4-4"></path>
+      <path d="M7 20V4"></path>
+      <path d="M11 4h10"></path>
+      <path d="M11 8h7"></path>
+      <path d="M11 12h4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heart">
+      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-message-circle">
+      <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-user-round">
+      <circle cx="12" cy="8" r="5"></circle>
+      <path d="M20 21a8 8 0 0 0-16 0"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-import">
+      <path d="M12 3v12"></path>
+      <path d="m8 11 4 4 4-4"></path>
+      <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-external-link">
+      <path d="M15 3h6v6"></path>
+      <path d="M10 14 21 3"></path>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    </symbol></svg><div class="layout-main-section layout-main-list" data-ui="list-view"><div class="page-form flex list-page-form"><div class="standard-filter-section flex"><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="name" title="" data-original-title="ID"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="name" placeholder="ID" data-ui="list-view.input-1"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="list-view.button-2">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">name</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="customer_name" title="" data-original-title="Customer Name"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="customer_name" placeholder="Customer Name" data-ui="list-view.input-3"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="list-view.button-4">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">customer_name</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="customer_group" title="" data-original-title="Customer Group"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Link" data-fieldname="customer_group" placeholder="Customer Group" data-target="Customer Group" autocomplete="off" aria-expanded="false" role="combobox" data-ui="list-view.input-5"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			
+		</div><span class="tooltip-content">customer_group</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="territory" title="" data-original-title="Territory"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Link" data-fieldname="territory" placeholder="Territory" data-target="Territory" autocomplete="off" aria-expanded="false" role="combobox" data-ui="list-view.input-6"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>
+			
+		</div><span class="tooltip-content">territory</span></div></div><div class="filter-section flex"><div class="mobile-id-filter hidden-lg"></div><div class="filter-selector"><button class="filter-toggle btn btn-default btn-sm hidden-lg" data-ui="list-view.filter-1">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevrons-up-down">
+			</use>
+		</svg>
+					</span>
+				</button>
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm filter-button" data-original-title="" title="" data-ui="list-view.filter-2">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-funnel">
+			</use>
+		</svg>
+					</span>
+					<span class="button-label hidden-xs">
+					Filter
+					<span>
+				</span></span></button>
+				<button class="btn btn-default btn-sm filter-x-button" title="Clear all filters" data-ui="list-view.filter-3">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
+			</use>
+		</svg>
+					</span>
+				</button>
+			</div>
+		</div><div class="sort-selector">  <div class="btn-group">   <button class="btn btn-default btn-sm btn-order" data-value="desc" title="descending" data-ui="list-view.sort-1">    <span class="sort-order">     <svg class="icon icon-sm">      <use href="#icon-arrow-down-wide-narrow"></use>     </svg>    </span>   </button>   <button type="button" class="btn btn-default btn-sm sort-selector-button text-nowrap" data-toggle="dropdown" data-ui="list-view.sort-2">    <span class="dropdown-text hidden-sm">Created On</span>    <span><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevron-down">
+			</use>
+		</svg></span>    <ul class="dropdown-menu dropdown-menu-right">          <li>      <a class="dropdown-item option" data-value="modified" data-ui="list-view.link-7">       Last Updated On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="creation" data-ui="list-view.link-8">       Created On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_name" data-ui="list-view.link-9">       Customer Name      </a>     </li>          <li>      <a class="dropdown-item option" data-value="name" data-ui="list-view.link-10">       ID      </a>     </li>          <li>      <a class="dropdown-item option" data-value="idx" data-ui="list-view.link-11">       Most Used      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_type" data-ui="list-view.link-12">       Customer Type      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_group" data-ui="list-view.link-13">       Customer Group      </a>     </li>          <li>      <a class="dropdown-item option" data-value="territory" data-ui="list-view.link-14">       Territory      </a>     </li>          <li>      <a class="dropdown-item option" data-value="default_currency" data-ui="list-view.link-15">       Billing Currency      </a>     </li>         </ul>   </button>  </div> </div></div></div><div class="frappe-list"><div class="result-container" style="height: 754px;"><div class="result no-assign-to" data-comment-count-length="1" style="height: 850px; --list-right-width: 138.75px;">
+		<div class="list-row-container">
+			<header class="level list-row-head text-muted">
+				<div class="level-left list-header-subject">
+					<div class="list-row-col ellipsis list-subject level  " data-fieldname="customer_name">
+			<span class="level-item select-like">
+				<input class="list-header-checkbox list-check-all" type="checkbox" title="Select All" data-ui="list-view.select-all-1">
+			</span>
+			<span class="level-item" data-sort-by="customer_name" title="Click to sort by Customer Name">
+				Customer Name
+			</span>
+		<div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs tag-col hide  " data-fieldname="undefined"><span>Tag</span></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="status_field"><span>Status</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="customer_type"><span data-sort-by="customer_type" title="Click to sort by Customer Type">Customer Type</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="customer_group"><span data-sort-by="customer_group" title="Click to sort by Customer Group">Customer Group</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="territory"><span data-sort-by="territory" title="Click to sort by Territory">Territory</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="default_currency"><span data-sort-by="default_currency" title="Click to sort by Billing Currency">Billing Currency</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="name"><span data-sort-by="name" title="Click to sort by ID">ID</span><div class="list-col-resize-handle"></div></div>
+			
+				</div>
+				<div class="level-left checkbox-actions">
+					<div class="level list-subject">
+						<span class="level-item select-like">
+							<input class="list-header-checkbox list-check-all" type="checkbox" title="Select All" data-ui="list-view.select-all-2">
+						</span>
+						<span class="level-item list-header-meta"></span>
+					</div>
+				</div>
+				<div class="level-right">
+					
+			<span class="list-count" style="white-space: nowrap;"><span>20 of 33</span></span>
+			<span class="level-item list-liked-by-me hidden-xs">
+				<span title="Liked by me">
+					<svg class="icon icon-sm like-icon">
+						<use href="#icon-heart"></use>
+					</svg>
+				</span>
+			</span>
+		
+				</div>
+			</header>
+		</div>
+		<div class="freeze flex justify-center align-center text-muted" style="display: none;">
+				Loading...
+			</div>
+			
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-16">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Direct" data-ui="list-view.input-17"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Direct" href="#" title="Direct" data-ui="list-view.link-18">Direct</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-19">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-20">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-21">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Direct">
+				<a class=" filterable ellipsis" data-filter="name,=,Direct" data-ui="list-view.link-22">
+					Direct
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Direct" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-23">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Zomato" data-ui="list-view.input-24"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Zomato" href="#" title="Zomato" data-ui="list-view.link-25">Zomato</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-26">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-27">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-28">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Zomato">
+				<a class=" filterable ellipsis" data-filter="name,=,Zomato" data-ui="list-view.link-29">
+					Zomato
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:43.447606" title="21-10-2026 13:05:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Zomato" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-30">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Neha Kapoor" data-ui="list-view.input-31"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Neha Kapoor" href="#" title="Neha Kapoor" data-ui="list-view.link-32">Neha Kapoor</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-33">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-34">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-35">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Neha Kapoor">
+				<a class=" filterable ellipsis" data-filter="name,=,Neha Kapoor" data-ui="list-view.link-36">
+					Neha Kapoor
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.796299" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Neha Kapoor" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-37">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Arjun Rao" data-ui="list-view.input-38"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Arjun Rao" href="#" title="Arjun Rao" data-ui="list-view.link-39">Arjun Rao</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-40">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-41">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-42">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Arjun Rao">
+				<a class=" filterable ellipsis" data-filter="name,=,Arjun Rao" data-ui="list-view.link-43">
+					Arjun Rao
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.794275" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Arjun Rao" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-44">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Kavita Joshi" data-ui="list-view.input-45"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Kavita Joshi" href="#" title="Kavita Joshi" data-ui="list-view.link-46">Kavita Joshi</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-47">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-48">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-49">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Kavita Joshi">
+				<a class=" filterable ellipsis" data-filter="name,=,Kavita Joshi" data-ui="list-view.link-50">
+					Kavita Joshi
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.792116" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Kavita Joshi" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-51">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rohan Mehta" data-ui="list-view.input-52"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Rohan Mehta" href="#" title="Rohan Mehta" data-ui="list-view.link-53">Rohan Mehta</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-54">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-55">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-56">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Rohan Mehta">
+				<a class=" filterable ellipsis" data-filter="name,=,Rohan Mehta" data-ui="list-view.link-57">
+					Rohan Mehta
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.790015" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Rohan Mehta" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-58">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Anjali Nair" data-ui="list-view.input-59"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Anjali Nair" href="#" title="Anjali Nair" data-ui="list-view.link-60">Anjali Nair</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-61">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-62">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-63">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Anjali Nair">
+				<a class=" filterable ellipsis" data-filter="name,=,Anjali Nair" data-ui="list-view.link-64">
+					Anjali Nair
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.787874" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Anjali Nair" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-65">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Vikram Singh" data-ui="list-view.input-66"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Vikram Singh" href="#" title="Vikram Singh" data-ui="list-view.link-67">Vikram Singh</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-68">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-69">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-70">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Vikram Singh">
+				<a class=" filterable ellipsis" data-filter="name,=,Vikram Singh" data-ui="list-view.link-71">
+					Vikram Singh
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.785819" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Vikram Singh" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-72">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Sneha Reddy" data-ui="list-view.input-73"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Sneha Reddy" href="#" title="Sneha Reddy" data-ui="list-view.link-74">Sneha Reddy</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-75">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-76">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-77">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Sneha Reddy">
+				<a class=" filterable ellipsis" data-filter="name,=,Sneha Reddy" data-ui="list-view.link-78">
+					Sneha Reddy
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.783603" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Sneha Reddy" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-79">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Amit Verma" data-ui="list-view.input-80"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Amit Verma" href="#" title="Amit Verma" data-ui="list-view.link-81">Amit Verma</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-82">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-83">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-84">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Amit Verma">
+				<a class=" filterable ellipsis" data-filter="name,=,Amit Verma" data-ui="list-view.link-85">
+					Amit Verma
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.781446" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Amit Verma" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-86">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Priya Iyer" data-ui="list-view.input-87"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Priya Iyer" href="#" title="Priya Iyer" data-ui="list-view.link-88">Priya Iyer</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-89">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-90">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-91">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Priya Iyer">
+				<a class=" filterable ellipsis" data-filter="name,=,Priya Iyer" data-ui="list-view.link-92">
+					Priya Iyer
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.779110" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Priya Iyer" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-93">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rahul Sharma" data-ui="list-view.input-94"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Rahul Sharma" href="#" title="Rahul Sharma" data-ui="list-view.link-95">Rahul Sharma</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Individual">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">Individual</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: Government">
+				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-96">
+					Government
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: Rest Of The World">
+				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-97">
+					Rest Of The World
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-98">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Rahul Sharma">
+				<a class=" filterable ellipsis" data-filter="name,=,Rahul Sharma" data-ui="list-view.link-99">
+					Rahul Sharma
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-21 13:05:41.755068" title="21-10-2026 13:05:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Rahul Sharma" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-100">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Maria" data-ui="list-view.input-101"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Maria" href="#" title="Maria" data-ui="list-view.link-102">Maria</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-103">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-104">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-105">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Maria">
+				<a class=" filterable ellipsis" data-filter="name,=,Maria" data-ui="list-view.link-106">
+					Maria
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:44:10.112312" title="16-04-2026 10:44:10"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Maria" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-107">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Milo" data-ui="list-view.input-108"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Milo" href="#" title="Milo" data-ui="list-view.link-109">Milo</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-110">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-111">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-112">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Milo">
+				<a class=" filterable ellipsis" data-filter="name,=,Milo" data-ui="list-view.link-113">
+					Milo
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:43:26.655505" title="16-04-2026 10:43:26"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Milo" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-114">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Paige" data-ui="list-view.input-115"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Paige" href="#" title="Paige" data-ui="list-view.link-116">Paige</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-117">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-118">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-119">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Paige">
+				<a class=" filterable ellipsis" data-filter="name,=,Paige" data-ui="list-view.link-120">
+					Paige
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:42:47.235927" title="16-04-2026 10:42:47"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Paige" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-121">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Olivia" data-ui="list-view.input-122"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Olivia" href="#" title="Olivia" data-ui="list-view.link-123">Olivia</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-124">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-125">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-126">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Olivia">
+				<a class=" filterable ellipsis" data-filter="name,=,Olivia" data-ui="list-view.link-127">
+					Olivia
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:42:21.663228" title="16-04-2026 10:42:21"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Olivia" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-128">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Harry" data-ui="list-view.input-129"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Harry" href="#" title="Harry" data-ui="list-view.link-130">Harry</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-131">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-132">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-133">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Harry">
+				<a class=" filterable ellipsis" data-filter="name,=,Harry" data-ui="list-view.link-134">
+					Harry
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:41:53.517598" title="16-04-2026 10:41:53"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Harry" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-135">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Tom" data-ui="list-view.input-136"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Tom" href="#" title="Tom" data-ui="list-view.link-137">Tom</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-138">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-139">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-140">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Tom">
+				<a class=" filterable ellipsis" data-filter="name,=,Tom" data-ui="list-view.link-141">
+					Tom
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:41:43.761043" title="16-04-2026 10:41:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Tom" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-142">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Jane" data-ui="list-view.input-143"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Jane" href="#" title="Jane" data-ui="list-view.link-144">Jane</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-145">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-146">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-147">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Jane">
+				<a class=" filterable ellipsis" data-filter="name,=,Jane" data-ui="list-view.link-148">
+					Jane
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-16 10:41:08.289078" title="16-04-2026 10:41:08"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Jane" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="list-view.div-149">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Alex" data-ui="list-view.input-150"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Alex" href="#" title="Alex" data-ui="list-view.link-151">Alex</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
+				<span class="ellipsis" title="Customer Type: Company">
+				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">Company</span></span>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
+				<span class="ellipsis" title="Customer Group: ">
+				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-152">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
+				<span class="ellipsis" title="Territory: ">
+				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-153">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
+				<span class="ellipsis" title="Billing Currency: ">
+				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-154">
+					
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
+				<span class="ellipsis" title="ID: Alex">
+				<a class=" filterable ellipsis" data-filter="name,=,Alex" data-ui="list-view.link-155">
+					Alex
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-04-14 10:39:47.367559" title="14-04-2026 10:39:47"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="Customer" data-name="Alex" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document is in draft state" data-filter="disabled,=,0"><span class="es-badge__label">Enabled</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		</div></div><div class="no-result text-muted flex justify-center align-center" style="display: none; height: 900px;"><div class="flex flex-col items-center justify-center text-center gap-3 min-h-48"><div class="flex size-11 items-center justify-center rounded-full bg-surface-gray-2 text-ink-gray-5"><svg class="icon  icon-md" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-user-round">
+			</use>
+		</svg></div><div class="flex flex-col items-center gap-1"><div class="text-base-medium text-ink-gray-8">No Customer created</div><div class="text-p-sm text-ink-gray-5 max-w-sm">A company or person you sell goods or services to.</div></div><div class="flex flex-wrap items-center justify-center gap-2"><button class="es-button btn-new-doc" type="button" data-ui="list-view.button-156"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg><span class="es-button__label">Create</span></button><button class="es-button btn-import-doc" type="button" data-ui="list-view.button-157"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-import">
+			</use>
+		</svg><span class="es-button__label">Import</span></button><a class="es-button" data-variant="outline" href="#" target="_blank" rel="noreferrer noopener" data-ui="list-view.link-158"><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-external-link">
+			</use>
+		</svg><span class="es-button__label">Documentation</span></a></div></div></div><div class="list-paging-area level" style="" data-ui="list-view.paging">
+				<div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page Size"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="list-view.button-159">20</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="list-view.button-160">100</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="list-view.button-161">500</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="list-view.button-162">2500</button></div></div>
+				<div class="level-right"><button class="es-button btn-more" type="button" data-ui="list-view.button-163"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Load More</span></button></div>
+			</div></div></div></div></div></div></div></div></div></div></div>
+</div>
+</body></html>

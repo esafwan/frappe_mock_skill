@@ -1,0 +1,957 @@
+{
+  "component": "field-text-editor",
+  "slots": {
+    "control_label": {
+      "type": "text",
+      "sample": "Content",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_extra_muted": {
+      "type": "text",
+      "sample": "Help: To link to another record in the system, use \"/desk/note/[Note Name]\" as the Link URL. (don't use \"http://\")",
+      "maxLength": 228,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "content",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ql_picker_label_arialabel": {
+      "type": "text",
+      "sample": "Text style",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-1"
+    },
+    "ql_header_value": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_header_value_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_header_value_3": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_header_value_4": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_header_value_5": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_header_value_6": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_picker_label_arialabel_2": {
+      "type": "text",
+      "sample": "Font size",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-11"
+    },
+    "ql_size_value": {
+      "type": "text",
+      "sample": "8px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_2": {
+      "type": "text",
+      "sample": "9px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_3": {
+      "type": "text",
+      "sample": "10px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_4": {
+      "type": "text",
+      "sample": "11px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_5": {
+      "type": "text",
+      "sample": "12px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_6": {
+      "type": "text",
+      "sample": "13px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_7": {
+      "type": "text",
+      "sample": "14px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_8": {
+      "type": "text",
+      "sample": "15px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_9": {
+      "type": "text",
+      "sample": "16px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_10": {
+      "type": "text",
+      "sample": "18px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_11": {
+      "type": "text",
+      "sample": "20px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_12": {
+      "type": "text",
+      "sample": "22px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_13": {
+      "type": "text",
+      "sample": "24px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_14": {
+      "type": "text",
+      "sample": "32px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_15": {
+      "type": "text",
+      "sample": "36px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_16": {
+      "type": "text",
+      "sample": "40px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_17": {
+      "type": "text",
+      "sample": "48px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_18": {
+      "type": "text",
+      "sample": "54px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_19": {
+      "type": "text",
+      "sample": "64px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_20": {
+      "type": "text",
+      "sample": "96px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_size_value_21": {
+      "type": "text",
+      "sample": "128px",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_bold_arialabel": {
+      "type": "text",
+      "sample": "bold",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-36"
+    },
+    "ql_italic_arialabel": {
+      "type": "text",
+      "sample": "italic",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-37"
+    },
+    "ql_underline_arialabel": {
+      "type": "text",
+      "sample": "underline",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-38"
+    },
+    "ql_strike_arialabel": {
+      "type": "text",
+      "sample": "strike",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-39"
+    },
+    "ql_clean_arialabel": {
+      "type": "text",
+      "sample": "clean",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-40"
+    },
+    "ql_picker_label_arialabel_3": {
+      "type": "text",
+      "sample": "Text color",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-41"
+    },
+    "ql_color_value": {
+      "type": "text",
+      "sample": "#e60000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_2": {
+      "type": "text",
+      "sample": "#ff9900",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_3": {
+      "type": "text",
+      "sample": "#ffff00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_4": {
+      "type": "text",
+      "sample": "#008a00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_5": {
+      "type": "text",
+      "sample": "#0066cc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_6": {
+      "type": "text",
+      "sample": "#9933ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_7": {
+      "type": "text",
+      "sample": "#ffffff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_8": {
+      "type": "text",
+      "sample": "#facccc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_9": {
+      "type": "text",
+      "sample": "#ffebcc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_10": {
+      "type": "text",
+      "sample": "#ffffcc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_11": {
+      "type": "text",
+      "sample": "#cce8cc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_12": {
+      "type": "text",
+      "sample": "#cce0f5",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_13": {
+      "type": "text",
+      "sample": "#ebd6ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_14": {
+      "type": "text",
+      "sample": "#bbbbbb",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_15": {
+      "type": "text",
+      "sample": "#f06666",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_16": {
+      "type": "text",
+      "sample": "#ffc266",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_17": {
+      "type": "text",
+      "sample": "#ffff66",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_18": {
+      "type": "text",
+      "sample": "#66b966",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_19": {
+      "type": "text",
+      "sample": "#66a3e0",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_20": {
+      "type": "text",
+      "sample": "#c285ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_21": {
+      "type": "text",
+      "sample": "#888888",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_22": {
+      "type": "text",
+      "sample": "#a10000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_23": {
+      "type": "text",
+      "sample": "#b26b00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_24": {
+      "type": "text",
+      "sample": "#b2b200",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_25": {
+      "type": "text",
+      "sample": "#006100",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_26": {
+      "type": "text",
+      "sample": "#0047b2",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_27": {
+      "type": "text",
+      "sample": "#6b24b2",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_28": {
+      "type": "text",
+      "sample": "#444444",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_29": {
+      "type": "text",
+      "sample": "#5c0000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_30": {
+      "type": "text",
+      "sample": "#663d00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_31": {
+      "type": "text",
+      "sample": "#666600",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_32": {
+      "type": "text",
+      "sample": "#003700",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_33": {
+      "type": "text",
+      "sample": "#002966",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_color_value_34": {
+      "type": "text",
+      "sample": "#3d1466",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_picker_label_arialabel_4": {
+      "type": "text",
+      "sample": "Background color",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-79"
+    },
+    "ql_background_value": {
+      "type": "text",
+      "sample": "#000000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_2": {
+      "type": "text",
+      "sample": "#e60000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_3": {
+      "type": "text",
+      "sample": "#ff9900",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_4": {
+      "type": "text",
+      "sample": "#ffff00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_5": {
+      "type": "text",
+      "sample": "#008a00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_6": {
+      "type": "text",
+      "sample": "#0066cc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_7": {
+      "type": "text",
+      "sample": "#9933ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_8": {
+      "type": "text",
+      "sample": "#facccc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_9": {
+      "type": "text",
+      "sample": "#ffebcc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_10": {
+      "type": "text",
+      "sample": "#ffffcc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_11": {
+      "type": "text",
+      "sample": "#cce8cc",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_12": {
+      "type": "text",
+      "sample": "#cce0f5",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_13": {
+      "type": "text",
+      "sample": "#ebd6ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_14": {
+      "type": "text",
+      "sample": "#bbbbbb",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_15": {
+      "type": "text",
+      "sample": "#f06666",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_16": {
+      "type": "text",
+      "sample": "#ffc266",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_17": {
+      "type": "text",
+      "sample": "#ffff66",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_18": {
+      "type": "text",
+      "sample": "#66b966",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_19": {
+      "type": "text",
+      "sample": "#66a3e0",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_20": {
+      "type": "text",
+      "sample": "#c285ff",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_21": {
+      "type": "text",
+      "sample": "#888888",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_22": {
+      "type": "text",
+      "sample": "#a10000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_23": {
+      "type": "text",
+      "sample": "#b26b00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_24": {
+      "type": "text",
+      "sample": "#b2b200",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_25": {
+      "type": "text",
+      "sample": "#006100",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_26": {
+      "type": "text",
+      "sample": "#0047b2",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_27": {
+      "type": "text",
+      "sample": "#6b24b2",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_28": {
+      "type": "text",
+      "sample": "#444444",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_29": {
+      "type": "text",
+      "sample": "#5c0000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_30": {
+      "type": "text",
+      "sample": "#663d00",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_31": {
+      "type": "text",
+      "sample": "#666600",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_32": {
+      "type": "text",
+      "sample": "#003700",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_33": {
+      "type": "text",
+      "sample": "#002966",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_background_value_34": {
+      "type": "text",
+      "sample": "#3d1466",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_blockquote_arialabel": {
+      "type": "text",
+      "sample": "blockquote",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-117"
+    },
+    "ql_code_block_arialabel": {
+      "type": "text",
+      "sample": "code-block",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-118"
+    },
+    "ql_direction_arialabel": {
+      "type": "text",
+      "sample": "direction: rtl",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-119"
+    },
+    "ql_direction_value": {
+      "type": "text",
+      "sample": "rtl",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-119"
+    },
+    "ql_link_arialabel": {
+      "type": "text",
+      "sample": "link",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-120"
+    },
+    "ql_image_arialabel": {
+      "type": "text",
+      "sample": "image",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-121"
+    },
+    "ql_list_arialabel": {
+      "type": "text",
+      "sample": "list: ordered",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-122"
+    },
+    "ql_list_value": {
+      "type": "text",
+      "sample": "ordered",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-122"
+    },
+    "ql_list_arialabel_2": {
+      "type": "text",
+      "sample": "list: bullet",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-123"
+    },
+    "ql_list_value_2": {
+      "type": "text",
+      "sample": "bullet",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-123"
+    },
+    "ql_list_arialabel_3": {
+      "type": "text",
+      "sample": "list: check",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-124"
+    },
+    "ql_list_value_3": {
+      "type": "text",
+      "sample": "check",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-124"
+    },
+    "ql_picker_label_arialabel_5": {
+      "type": "text",
+      "sample": "Alignment",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-125"
+    },
+    "ql_align_value": {
+      "type": "text",
+      "sample": "center",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_align_value_2": {
+      "type": "text",
+      "sample": "right",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_align_value_3": {
+      "type": "text",
+      "sample": "justify",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_indent_arialabel": {
+      "type": "text",
+      "sample": "indent: -1",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-132"
+    },
+    "ql_indent_value": {
+      "type": "number",
+      "sample": "-1",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-132"
+    },
+    "ql_indent_arialabel_2": {
+      "type": "text",
+      "sample": "indent: +1",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.button-133"
+    },
+    "ql_indent_value_2": {
+      "type": "number",
+      "sample": "+1",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-text-editor.button-133"
+    },
+    "ql_picker_label_arialabel_6": {
+      "type": "text",
+      "sample": "Table",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "field-text-editor.span-134"
+    },
+    "ql_table_value": {
+      "type": "text",
+      "sample": "insert-table",
+      "maxLength": 24,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_2": {
+      "type": "text",
+      "sample": "insert-row-above",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_3": {
+      "type": "text",
+      "sample": "insert-row-below",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_4": {
+      "type": "text",
+      "sample": "insert-column-right",
+      "maxLength": 38,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_5": {
+      "type": "text",
+      "sample": "insert-column-left",
+      "maxLength": 36,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_6": {
+      "type": "text",
+      "sample": "delete-row",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_7": {
+      "type": "text",
+      "sample": "delete-column",
+      "maxLength": 26,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "ql_table_value_8": {
+      "type": "text",
+      "sample": "delete-table",
+      "maxLength": 24,
+      "where": "attr:value",
+      "element": "option"
+    }
+  }
+}

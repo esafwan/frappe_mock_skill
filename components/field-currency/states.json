@@ -1,0 +1,96 @@
+{
+  "component": "field-currency",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "capture failed: locator.hover: Element is outside of the viewport"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "input, select, textarea, .ql-editor",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-currency",
+      "changes": [
+        {
+          "element": "field-currency",
+          "addClass": [
+            "has-error-mandatory",
+            "has-error"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "#path:6",
+          "addClass": [
+            "hide"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-currency.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "disabled": ""
+          }
+        },
+        {
+          "element": "#path:8",
+          "addClass": [],
+          "removeClass": [
+            "hide"
+          ],
+          "attrs": {}
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "df read_only=1"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-currency",
+      "changes": [
+        {
+          "element": "field-currency.input-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-invalid": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/error.png",
+      "description": "validation failure"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

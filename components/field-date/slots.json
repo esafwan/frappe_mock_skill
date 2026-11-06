@@ -1,0 +1,33 @@
+{
+  "component": "field-date",
+  "slots": {
+    "reqd": {
+      "type": "text",
+      "sample": "Posting Date",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "bold": {
+      "type": "date",
+      "sample": "01-01-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "posting_date",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "bold_value": {
+      "type": "date",
+      "sample": "01-01-2026",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "field-date.input-1"
+    }
+  }
+}

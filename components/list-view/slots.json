@@ -1,0 +1,2966 @@
+{
+  "component": "list-view",
+  "slots": {
+    "dropdown_item": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_2": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "dropdown_item_3": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_4": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content_2": {
+      "type": "text",
+      "sample": "customer_name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "visually_hidden": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_3": {
+      "type": "text",
+      "sample": "customer_group",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "visually_hidden_2": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_4": {
+      "type": "text",
+      "sample": "territory",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs": {
+      "type": "text",
+      "sample": "Filter",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_sm": {
+      "type": "text",
+      "sample": "Created On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "option": {
+      "type": "text",
+      "sample": "Last Updated On",
+      "maxLength": 30,
+      "where": "text",
+      "element": "list-view.link-7"
+    },
+    "option_2": {
+      "type": "text",
+      "sample": "Created On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-8"
+    },
+    "option_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "list-view.link-9"
+    },
+    "option_4": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-10"
+    },
+    "option_5": {
+      "type": "text",
+      "sample": "Most Used",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-11"
+    },
+    "option_6": {
+      "type": "text",
+      "sample": "Customer Type",
+      "maxLength": 26,
+      "where": "text",
+      "element": "list-view.link-12"
+    },
+    "option_7": {
+      "type": "text",
+      "sample": "Customer Group",
+      "maxLength": 28,
+      "where": "text",
+      "element": "list-view.link-13"
+    },
+    "option_8": {
+      "type": "text",
+      "sample": "Territory",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-14"
+    },
+    "option_9": {
+      "type": "text",
+      "sample": "Billing Currency",
+      "maxLength": 32,
+      "where": "text",
+      "element": "list-view.link-15"
+    },
+    "level_item": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "hide": {
+      "type": "text",
+      "sample": "Tag",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_2": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_3": {
+      "type": "text",
+      "sample": "Customer Type",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_4": {
+      "type": "text",
+      "sample": "Customer Group",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_5": {
+      "type": "text",
+      "sample": "Territory",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_6": {
+      "type": "text",
+      "sample": "Billing Currency",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_7": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "list_count": {
+      "type": "text",
+      "sample": "20 of 33",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis": {
+      "type": "text",
+      "sample": "Direct",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-18"
+    },
+    "tags_empty": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_2": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-19"
+    },
+    "ellipsis_3": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-20"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "Direct",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-22"
+    },
+    "count": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_8": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_3": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "Zomato",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-25"
+    },
+    "tags_empty_2": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_4": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_5": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_6": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-26"
+    },
+    "ellipsis_7": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-27"
+    },
+    "ellipsis_8": {
+      "type": "text",
+      "sample": "Zomato",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-29"
+    },
+    "count_2": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_9": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_6": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_9": {
+      "type": "text",
+      "sample": "Neha Kapoor",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-32"
+    },
+    "tags_empty_3": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_7": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_8": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_10": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-33"
+    },
+    "ellipsis_11": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-34"
+    },
+    "ellipsis_12": {
+      "type": "text",
+      "sample": "Neha Kapoor",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-36"
+    },
+    "count_3": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_10": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_9": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_13": {
+      "type": "text",
+      "sample": "Arjun Rao",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-39"
+    },
+    "tags_empty_4": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_10": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_11": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_14": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-40"
+    },
+    "ellipsis_15": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-41"
+    },
+    "ellipsis_16": {
+      "type": "text",
+      "sample": "Arjun Rao",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-43"
+    },
+    "count_4": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_11": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_12": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_17": {
+      "type": "text",
+      "sample": "Kavita Joshi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-46"
+    },
+    "tags_empty_5": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_13": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_14": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_18": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-47"
+    },
+    "ellipsis_19": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-48"
+    },
+    "ellipsis_20": {
+      "type": "text",
+      "sample": "Kavita Joshi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-50"
+    },
+    "count_5": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_12": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_15": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_21": {
+      "type": "text",
+      "sample": "Rohan Mehta",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-53"
+    },
+    "tags_empty_6": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_16": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_17": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_22": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-54"
+    },
+    "ellipsis_23": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-55"
+    },
+    "ellipsis_24": {
+      "type": "text",
+      "sample": "Rohan Mehta",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-57"
+    },
+    "count_6": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_13": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_18": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_25": {
+      "type": "text",
+      "sample": "Anjali Nair",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-60"
+    },
+    "tags_empty_7": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_19": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_20": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_26": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-61"
+    },
+    "ellipsis_27": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-62"
+    },
+    "ellipsis_28": {
+      "type": "text",
+      "sample": "Anjali Nair",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-64"
+    },
+    "count_7": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_14": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_21": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_29": {
+      "type": "text",
+      "sample": "Vikram Singh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-67"
+    },
+    "tags_empty_8": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_22": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_23": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_30": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-68"
+    },
+    "ellipsis_31": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-69"
+    },
+    "ellipsis_32": {
+      "type": "text",
+      "sample": "Vikram Singh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-71"
+    },
+    "count_8": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_15": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_24": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_33": {
+      "type": "text",
+      "sample": "Sneha Reddy",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-74"
+    },
+    "tags_empty_9": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_25": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_26": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_34": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-75"
+    },
+    "ellipsis_35": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-76"
+    },
+    "ellipsis_36": {
+      "type": "text",
+      "sample": "Sneha Reddy",
+      "maxLength": 22,
+      "where": "text",
+      "element": "list-view.link-78"
+    },
+    "count_9": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_16": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_27": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_37": {
+      "type": "text",
+      "sample": "Amit Verma",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-81"
+    },
+    "tags_empty_10": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_28": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_29": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_38": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-82"
+    },
+    "ellipsis_39": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-83"
+    },
+    "ellipsis_40": {
+      "type": "text",
+      "sample": "Amit Verma",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-85"
+    },
+    "count_10": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_17": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_30": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_41": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-88"
+    },
+    "tags_empty_11": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_31": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_32": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_42": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-89"
+    },
+    "ellipsis_43": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-90"
+    },
+    "ellipsis_44": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-92"
+    },
+    "count_11": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_18": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_33": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_45": {
+      "type": "text",
+      "sample": "Rahul Sharma",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-95"
+    },
+    "tags_empty_12": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_34": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_35": {
+      "type": "text",
+      "sample": "Individual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_46": {
+      "type": "text",
+      "sample": "Government",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-96"
+    },
+    "ellipsis_47": {
+      "type": "text",
+      "sample": "Rest Of The World",
+      "maxLength": 34,
+      "where": "text",
+      "element": "list-view.link-97"
+    },
+    "ellipsis_48": {
+      "type": "text",
+      "sample": "Rahul Sharma",
+      "maxLength": 24,
+      "where": "text",
+      "element": "list-view.link-99"
+    },
+    "count_12": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_19": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_36": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_49": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-102"
+    },
+    "tags_empty_13": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_37": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_38": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_50": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-106"
+    },
+    "count_13": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_20": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_39": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_51": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-109"
+    },
+    "tags_empty_14": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_40": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_41": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_52": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-113"
+    },
+    "count_14": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_21": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_42": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_53": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-116"
+    },
+    "tags_empty_15": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_43": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_44": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_54": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-120"
+    },
+    "count_15": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_22": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_45": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_55": {
+      "type": "text",
+      "sample": "Olivia",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-123"
+    },
+    "tags_empty_16": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_46": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_47": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_56": {
+      "type": "text",
+      "sample": "Olivia",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-127"
+    },
+    "count_16": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_23": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_48": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_57": {
+      "type": "text",
+      "sample": "Harry",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-130"
+    },
+    "tags_empty_17": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_49": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_50": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_58": {
+      "type": "text",
+      "sample": "Harry",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-134"
+    },
+    "count_17": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_24": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_51": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_59": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-137"
+    },
+    "tags_empty_18": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_52": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_53": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_60": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-141"
+    },
+    "count_18": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_25": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_54": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_61": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-144"
+    },
+    "tags_empty_19": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_55": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_56": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_62": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-148"
+    },
+    "count_19": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_26": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_57": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_63": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-151"
+    },
+    "tags_empty_20": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_58": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_59": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_64": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.link-155"
+    },
+    "count_20": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_27": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_60": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_gray_8": {
+      "type": "text",
+      "sample": "No Customer created",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "max_w_sm": {
+      "type": "text",
+      "sample": "A company or person you sell goods or services to.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Import",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_3": {
+      "type": "text",
+      "sample": "Documentation",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "es_pill": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.button-159"
+    },
+    "es_pill_2": {
+      "type": "number",
+      "sample": "100",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.button-160"
+    },
+    "es_pill_3": {
+      "type": "number",
+      "sample": "500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.button-161"
+    },
+    "es_pill_4": {
+      "type": "number",
+      "sample": "2500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "list-view.button-162"
+    },
+    "es_button_label_4": {
+      "type": "text",
+      "sample": "Load More",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "input_max_width_dataoriginaltitle": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "list-view.input-1"
+    },
+    "input_max_width_dataoriginaltitle_2": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_2": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "list-view.input-3"
+    },
+    "input_max_width_dataoriginaltitle_3": {
+      "type": "text",
+      "sample": "Customer Group",
+      "maxLength": 28,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_3": {
+      "type": "text",
+      "sample": "Customer Group",
+      "maxLength": 28,
+      "where": "attr:placeholder",
+      "element": "list-view.input-5"
+    },
+    "input_max_width_dataoriginaltitle_4": {
+      "type": "text",
+      "sample": "Territory",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_4": {
+      "type": "text",
+      "sample": "Territory",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "list-view.input-6"
+    },
+    "filter_x_button_title": {
+      "type": "text",
+      "sample": "Clear all filters",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "list-view.filter-3"
+    },
+    "btn_order_title": {
+      "type": "text",
+      "sample": "descending",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.sort-1"
+    },
+    "level_item_title": {
+      "type": "text",
+      "sample": "Click to sort by Customer Name",
+      "maxLength": 60,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title": {
+      "type": "text",
+      "sample": "Click to sort by Customer Type",
+      "maxLength": 60,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_2": {
+      "type": "text",
+      "sample": "Click to sort by Customer Group",
+      "maxLength": 62,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_3": {
+      "type": "text",
+      "sample": "Click to sort by Territory",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_4": {
+      "type": "text",
+      "sample": "Click to sort by Billing Currency",
+      "maxLength": 66,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_5": {
+      "type": "text",
+      "sample": "Click to sort by ID",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_6": {
+      "type": "text",
+      "sample": "Liked by me",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title": {
+      "type": "text",
+      "sample": "Direct",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-18"
+    },
+    "ellipsis_title_2": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_3": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_4": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_5": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_6": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_7": {
+      "type": "text",
+      "sample": "ID: Direct",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_8": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_9": {
+      "type": "text",
+      "sample": "Zomato",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-25"
+    },
+    "ellipsis_title_10": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_11": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_12": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_13": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_14": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_15": {
+      "type": "text",
+      "sample": "ID: Zomato",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_2": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_16": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_17": {
+      "type": "text",
+      "sample": "Neha Kapoor",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "list-view.link-32"
+    },
+    "ellipsis_title_18": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_19": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_20": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_21": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_22": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_23": {
+      "type": "text",
+      "sample": "ID: Neha Kapoor",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_3": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_24": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_25": {
+      "type": "text",
+      "sample": "Arjun Rao",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-39"
+    },
+    "ellipsis_title_26": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_27": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_28": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_29": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_30": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_31": {
+      "type": "text",
+      "sample": "ID: Arjun Rao",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_4": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_32": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_33": {
+      "type": "text",
+      "sample": "Kavita Joshi",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "list-view.link-46"
+    },
+    "ellipsis_title_34": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_35": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_36": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_37": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_38": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_39": {
+      "type": "text",
+      "sample": "ID: Kavita Joshi",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_5": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_40": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_41": {
+      "type": "text",
+      "sample": "Rohan Mehta",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "list-view.link-53"
+    },
+    "ellipsis_title_42": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_43": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_44": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_45": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_46": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_47": {
+      "type": "text",
+      "sample": "ID: Rohan Mehta",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_6": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_48": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_49": {
+      "type": "text",
+      "sample": "Anjali Nair",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "list-view.link-60"
+    },
+    "ellipsis_title_50": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_51": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_52": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_53": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_54": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_55": {
+      "type": "text",
+      "sample": "ID: Anjali Nair",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_7": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_56": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_57": {
+      "type": "text",
+      "sample": "Vikram Singh",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "list-view.link-67"
+    },
+    "ellipsis_title_58": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_59": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_60": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_61": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_62": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_63": {
+      "type": "text",
+      "sample": "ID: Vikram Singh",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_8": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_64": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_65": {
+      "type": "text",
+      "sample": "Sneha Reddy",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "list-view.link-74"
+    },
+    "ellipsis_title_66": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_67": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_68": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_69": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_70": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_71": {
+      "type": "text",
+      "sample": "ID: Sneha Reddy",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_9": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_72": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_73": {
+      "type": "text",
+      "sample": "Amit Verma",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-81"
+    },
+    "ellipsis_title_74": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_75": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_76": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_77": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_78": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_79": {
+      "type": "text",
+      "sample": "ID: Amit Verma",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_10": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_80": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_81": {
+      "type": "text",
+      "sample": "Priya Iyer",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-88"
+    },
+    "ellipsis_title_82": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_83": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_84": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_85": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_86": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_87": {
+      "type": "text",
+      "sample": "ID: Priya Iyer",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_11": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_88": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_89": {
+      "type": "text",
+      "sample": "Rahul Sharma",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "list-view.link-95"
+    },
+    "ellipsis_title_90": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_91": {
+      "type": "text",
+      "sample": "Customer Type: Individual",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_92": {
+      "type": "text",
+      "sample": "Customer Group: Government",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_93": {
+      "type": "text",
+      "sample": "Territory: Rest Of The World",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_94": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_95": {
+      "type": "text",
+      "sample": "ID: Rahul Sharma",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_12": {
+      "type": "text",
+      "sample": "21-10-2026 13:05:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_96": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_97": {
+      "type": "text",
+      "sample": "Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-102"
+    },
+    "ellipsis_title_98": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_99": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_100": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_101": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_102": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_103": {
+      "type": "text",
+      "sample": "ID: Maria",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_13": {
+      "type": "text",
+      "sample": "16-04-2026 10:44:10",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_104": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_105": {
+      "type": "text",
+      "sample": "Milo",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-109"
+    },
+    "ellipsis_title_106": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_107": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_108": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_109": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_110": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_111": {
+      "type": "text",
+      "sample": "ID: Milo",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_14": {
+      "type": "text",
+      "sample": "16-04-2026 10:43:26",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_112": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_113": {
+      "type": "text",
+      "sample": "Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-116"
+    },
+    "ellipsis_title_114": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_115": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_116": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_117": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_118": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_119": {
+      "type": "text",
+      "sample": "ID: Paige",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_15": {
+      "type": "text",
+      "sample": "16-04-2026 10:42:47",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_120": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_121": {
+      "type": "text",
+      "sample": "Olivia",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-123"
+    },
+    "ellipsis_title_122": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_123": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_124": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_125": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_126": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_127": {
+      "type": "text",
+      "sample": "ID: Olivia",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_16": {
+      "type": "text",
+      "sample": "16-04-2026 10:42:21",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_128": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_129": {
+      "type": "text",
+      "sample": "Harry",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-130"
+    },
+    "ellipsis_title_130": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_131": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_132": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_133": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_134": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_135": {
+      "type": "text",
+      "sample": "ID: Harry",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_17": {
+      "type": "text",
+      "sample": "16-04-2026 10:41:53",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_136": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_137": {
+      "type": "text",
+      "sample": "Tom",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-137"
+    },
+    "ellipsis_title_138": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_139": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_140": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_141": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_142": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_143": {
+      "type": "text",
+      "sample": "ID: Tom",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_18": {
+      "type": "text",
+      "sample": "16-04-2026 10:41:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_144": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_145": {
+      "type": "text",
+      "sample": "Jane",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-144"
+    },
+    "ellipsis_title_146": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_147": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_148": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_149": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_150": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_151": {
+      "type": "text",
+      "sample": "ID: Jane",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_19": {
+      "type": "text",
+      "sample": "16-04-2026 10:41:08",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_152": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_153": {
+      "type": "text",
+      "sample": "Alex",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "list-view.link-151"
+    },
+    "ellipsis_title_154": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_155": {
+      "type": "text",
+      "sample": "Customer Type: Company",
+      "maxLength": 44,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_156": {
+      "type": "text",
+      "sample": "Customer Group: ",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_157": {
+      "type": "text",
+      "sample": "Territory: ",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_158": {
+      "type": "text",
+      "sample": "Billing Currency: ",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_159": {
+      "type": "text",
+      "sample": "ID: Alex",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "mini_title_20": {
+      "type": "text",
+      "sample": "14-04-2026 10:39:47",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title_160": {
+      "type": "text",
+      "sample": "Document is in draft state",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "es_tab_buttons_arialabel": {
+      "type": "text",
+      "sample": "Page Size",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    }
+  }
+}
