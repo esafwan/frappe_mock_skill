@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>App dock (left icon rail)</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:57px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(23, 23, 23);min-height:0px}#ui-kit-stage{position:absolute;left:0px;width:57px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -11,6 +11,18 @@
   100% { transform: scale(1); }
 }
 :root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -66,18 +78,6 @@
   65% { transform: scale(1.3); opacity: 1; }
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
-}
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
 }
 @keyframes briefcase-carry { 
   0%, 100% { transform: translateY(-1px) rotate(0deg); }
@@ -169,7 +169,7 @@
 	</symbol></svg><div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
 			<div class="dock-logo">
 				<a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1">
-					<div class="header-logo"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMC42MjIwNyAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03Mi4wNTA2IDBIMjkuMTkzNUMxMy40MTM5IDAgMC42MjIwNyAxMi43OTE5IDAuNjIyMDcgMjguNTcxNFY3MS40Mjg2QzAuNjIyMDcgODcuMjA4MSAxMy40MTM5IDEwMCAyOS4xOTM1IDEwMEg3Mi4wNTA2Qzg3LjgzMDIgMTAwIDEwMC42MjIgODcuMjA4MSAxMDAuNjIyIDcxLjQyODZWMjguNTcxNEMxMDAuNjIyIDEyLjc5MTkgODcuODMwMiAwIDcyLjA1MDYgMFoiIGZpbGw9IiMwMDg5RkYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02OC4wMDY3IDMyLjk0NUg2Ni4zMjkzSDQ0LjUyMzVIMzMuNjIwNVYyMy45OTlINjguMDA2N1YzMi45NDVaTTQ0LjUyMzMgNTMuOTEyMlY2Ni4yMTI5SDY4LjI4NjFWNzUuMTU4OUgzMy42MjA0VjQ0Ljk2NjJINDQuNTIzM0g2Ni4zMjkxVjUzLjkxMjJINDQuNTIzM1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="ERPNext"></div>
+					<div class="header-logo"><img src="assets/image_1.svg" alt="ERPNext"></div>
 					<div class="title-container">
 						<div class="header-title">ERPNext</div>
 					</div>

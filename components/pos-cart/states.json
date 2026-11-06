@@ -1,0 +1,64 @@
+{
+  "component": "pos-cart",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "pos-cart.qty-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "pos-cart.qty-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "pos-cart.qty-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "pos-cart",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 74,
+          "after": 56
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/empty.png",
+      "description": "Clear cart"
+    }
+  }
+}

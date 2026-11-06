@@ -1,0 +1,122 @@
+{
+  "id": "pos-table-picker",
+  "name": "Table picker grid (available / occupied tables)",
+  "group": "pos",
+  "source": "/pos/tables",
+  "ancestors": [
+    {
+      "tag": "html",
+      "attrs": {
+        "lang": "en",
+        "dir": "ltr",
+        "data-theme": "light"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "body",
+      "attrs": {},
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "id": "root"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "flex flex-col h-screen bg-gray-100 font-inter"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "flex",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "flex-1 overflow-hidden"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 49,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "flex flex-col h-full"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 49,
+      "display": "flex",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "flex-1 overflow-auto bg-gray-50 p-6"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 118,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "max-w-screen-xl mx-auto h-full"
+      },
+      "w": 1280,
+      "x": 80,
+      "y": 142,
+      "display": "block",
+      "position": "static"
+    }
+  ],
+  "bg": "rgb(252, 252, 253)",
+  "bgDark": "rgb(251, 251, 250)",
+  "size": {
+    "w": 1280,
+    "h": 684
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "stageW": 1440,
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "fonts.css",
+    "ury-pos.css"
+  ],
+  "fonts": "Geist, ui-sans-serif, system-ui, -apple-system, sans-serif",
+  "sprite": true,
+  "inlineCss": ":root { --toastify-color-light: #fff; --toastify-color-dark: #121212; --toastify-color-info: #3498db; --toastify-color-success: #07bc0c; --toastify-color-warning: #f1c40f; --toastify-color-error: hsl(6, 78%, 57%); --toastify-color-transparent: rgba(255, 255, 255, 0.7); --toastify-icon-color-info: var(--toastify-color-info); --toastify-icon-color-success: var(--toastify-color-success); --toastify-icon-color-warning: var(--toastify-color-warning); --toastify-icon-color-error: var(--toastify-color-error); --toastify-container-width: fit-content; --toastify-toast-width: 320px; --toastify-toast-offset: 16px; --toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top)); --toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right)); --toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left)); --toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom)); --toastify-toast-background: #fff; --toastify-toast-padding: 14px; --toastify-toast-min-height: 64px; --toastify-toast-max-height: 800px; --toastify-toast-bd-radius: 6px; --toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); --toastify-font-family: sans-serif; --toastify-z-index: 9999; --toastify-text-color-light: #757575; --toastify-text-color-dark: #fff; --toastify-text-color-info: #fff; --toastify-text-color-success: #fff; --toastify-text-color-warning: #fff; --toastify-text-color-error: #fff; --toastify-spinner-color: #616161; --toastify-spinner-color-empty-area: #e0e0e0; --toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55); --toastify-color-progress-dark: #bb86fc; --toastify-color-progress-info: var(--toastify-color-info); --toastify-color-progress-success: var(--toastify-color-success); --toastify-color-progress-warning: var(--toastify-color-warning); --toastify-color-progress-error: var(--toastify-color-error); --toastify-color-progress-bgo: 0.2; }\n@keyframes Toastify__trackProgress { \n  0% { transform: scaleX(1); }\n  100% { transform: scaleX(0); }\n}\n@keyframes Toastify__bounceInRight { \n  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n  0% { opacity: 0; transform: translate3d(3000px, 0px, 0px); }\n  60% { opacity: 1; transform: translate3d(-25px, 0px, 0px); }\n  75% { transform: translate3d(10px, 0px, 0px); }\n  90% { transform: translate3d(-5px, 0px, 0px); }\n  100% { transform: none; }\n}\n@keyframes Toastify__bounceOutRight { \n  20% { opacity: 1; transform: translate3d(-20px, var(--y), 0); }\n  100% { opacity: 0; transform: translate3d(2000px, var(--y), 0); }\n}\n@keyframes Toastify__bounceInLeft { \n  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n  0% { opacity: 0; transform: translate3d(-3000px, 0px, 0px); }\n  60% { opacity: 1; transform: translate3d(25px, 0px, 0px); }\n  75% { transform: translate3d(-10px, 0px, 0px); }\n  90% { transform: translate3d(5px, 0px, 0px); }\n  100% { transform: none; }\n}\n@keyframes Toastify__bounceOutLeft { \n  20% { opacity: 1; transform: translate3d(20px, var(--y), 0); }\n  100% { opacity: 0; transform: translate3d(-2000px, var(--y), 0); }\n}\n@keyframes Toastify__bounceInUp { \n  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n  0% { opacity: 0; transform: translate3d(0px, 3000px, 0px); }\n  60% { opacity: 1; transform: translate3d(0px, -20px, 0px); }\n  75% { transform: translate3d(0px, 10px, 0px); }\n  90% { transform: translate3d(0px, -5px, 0px); }\n  100% { transform: translate3d(0px, 0px, 0px); }\n}\n@keyframes Toastify__bounceOutUp { \n  20% { transform: translate3d(0, calc(var(--y) - 10px), 0); }\n  40%, 45% { opacity: 1; transform: translate3d(0, calc(var(--y) + 20px), 0); }\n  100% { opacity: 0; transform: translate3d(0px, -2000px, 0px); }\n}\n@keyframes Toastify__bounceInDown { \n  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }\n  0% { opacity: 0; transform: translate3d(0px, -3000px, 0px); }\n  60% { opacity: 1; transform: translate3d(0px, 25px, 0px); }\n  75% { transform: translate3d(0px, -10px, 0px); }\n  90% { transform: translate3d(0px, 5px, 0px); }\n  100% { transform: none; }\n}\n@keyframes Toastify__bounceOutDown { \n  20% { transform: translate3d(0, calc(var(--y) - 10px), 0); }\n  40%, 45% { opacity: 1; transform: translate3d(0, calc(var(--y) + 20px), 0); }\n  100% { opacity: 0; transform: translate3d(0px, 2000px, 0px); }\n}\n@keyframes Toastify__zoomIn { \n  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }\n  50% { opacity: 1; }\n}\n@keyframes Toastify__zoomOut { \n  0% { opacity: 1; }\n  50% { opacity: 0; transform: translate3d(0, var(--y), 0) scale3d(0.3, 0.3, 0.3); }\n  100% { opacity: 0; }\n}\n@keyframes Toastify__flipIn { \n  0% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); animation-timing-function: ease-in; opacity: 0; }\n  40% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in; }\n  60% { transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1; }\n  80% { transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }\n  100% { transform: perspective(400px); }\n}\n@keyframes Toastify__flipOut { \n  0% { transform: translate3d(0, var(--y), 0) perspective(400px); }\n  30% { transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, -20deg); opacity: 1; }\n  100% { transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, 90deg); opacity: 0; }\n}\n@keyframes Toastify__slideInRight { \n  0% { transform: translate3d(110%, 0px, 0px); visibility: visible; }\n  100% { transform: translate3d(0, var(--y), 0); }\n}\n@keyframes Toastify__slideInLeft { \n  0% { transform: translate3d(-110%, 0px, 0px); visibility: visible; }\n  100% { transform: translate3d(0, var(--y), 0); }\n}\n@keyframes Toastify__slideInUp { \n  0% { transform: translate3d(0px, 110%, 0px); visibility: visible; }\n  100% { transform: translate3d(0, var(--y), 0); }\n}\n@keyframes Toastify__slideInDown { \n  0% { transform: translate3d(0px, -110%, 0px); visibility: visible; }\n  100% { transform: translate3d(0, var(--y), 0); }\n}\n@keyframes Toastify__slideOutRight { \n  0% { transform: translate3d(0, var(--y), 0); }\n  100% { visibility: hidden; transform: translate3d(110%, var(--y), 0); }\n}\n@keyframes Toastify__slideOutLeft { \n  0% { transform: translate3d(0, var(--y), 0); }\n  100% { visibility: hidden; transform: translate3d(-110%, var(--y), 0); }\n}\n@keyframes Toastify__slideOutDown { \n  0% { transform: translate3d(0, var(--y), 0); }\n  100% { visibility: hidden; transform: translate3d(0px, 500px, 0px); }\n}\n@keyframes Toastify__slideOutUp { \n  0% { transform: translate3d(0, var(--y), 0); }\n  100% { visibility: hidden; transform: translate3d(0px, -500px, 0px); }\n}\n@keyframes Toastify__spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n",
+  "pad": {
+    "l": 0,
+    "t": 0,
+    "r": 0,
+    "b": 0
+  },
+  "clip": null
+}

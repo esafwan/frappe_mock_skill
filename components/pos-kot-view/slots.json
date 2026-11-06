@@ -1,0 +1,572 @@
+{
+  "component": "pos-kot-view",
+  "slots": {
+    "font_semibold": {
+      "type": "text",
+      "sample": "Bar",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_2": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_3": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_4": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_5": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_5": {
+      "type": "text",
+      "sample": "Beverage Bar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_6": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_6": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_7": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_7": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_8": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_8": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_9": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_10": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_9": {
+      "type": "text",
+      "sample": "Beverage Station",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_11": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_10": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_12": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_11": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_13": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_12": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_14": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_15": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_13": {
+      "type": "text",
+      "sample": "Chinese",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_16": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_14": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_17": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_15": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_18": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_16": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_19": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_20": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_17": {
+      "type": "text",
+      "sample": "Grill & Tandoor",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_21": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_18": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_22": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_19": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_23": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_20": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_24": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_25": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_21": {
+      "type": "text",
+      "sample": "Indian Kitchen",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_26": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_22": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_27": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_23": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_28": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_24": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_29": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_30": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_25": {
+      "type": "text",
+      "sample": "Kitchen",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_31": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_26": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_32": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_27": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_33": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_28": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_34": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_35": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_29": {
+      "type": "text",
+      "sample": "Main Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_36": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_30": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_37": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_31": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_38": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_32": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_39": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_40": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_33": {
+      "type": "text",
+      "sample": "Tandoor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_xs_41": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_34": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_42": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_35": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_43": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_semibold_36": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_44": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_45": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    }
+  }
+}

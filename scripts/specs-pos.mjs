@@ -36,7 +36,7 @@ export const specs = [
       await ordersPrep(p); await p.locator('.grid > div:has-text("URY-2026-2027-02784")').first().click(); await p.waitForTimeout(1200);
       const open = async () => { await p.locator('button:has-text("Payment")').first().click(); await p.waitForTimeout(1500); return p.locator('[role=dialog]').count(); };
       if (!(await open())) { await p.locator('.w-96 button:has(svg.lucide-printer)').first().click(); await p.waitForTimeout(3500); await open(); }
-      await p.evaluate(() => { const d = document.querySelector('[role=dialog]'); const card = d.querySelector(':scope > div.relative'); card.id = 'ui-pay-card'; card.style.cssText += ';position:absolute;left:80px;top:80px;margin:0;animation:none'; document.body.appendChild(card); d.remove(); });
+      await p.evaluate(() => { const d = document.querySelector('[role=dialog]'); const card = d.querySelector(':scope > div.relative'); const w = card.getBoundingClientRect().width; card.id = 'ui-pay-card'; card.style.width = w + 'px'; card.style.cssText += ';position:absolute;left:80px;top:80px;margin:0;animation:none'; document.body.appendChild(card); d.remove(); document.getElementById('root').style.display = 'none'; });
       await clean(p);
     }, targets: { }, states: { hover: { target: 'button:last-of-type' }, focus: { target: 'input' } } },
   { id: 'pos-kot-view', name: 'Kitchen / KOT production-unit overview (Mosaic)', group: 'pos', css: ['fonts.css', 'ury-mosaic.css'], url: '/mosaic/', root: 'div.p-6 > .grid', settle: 3000,

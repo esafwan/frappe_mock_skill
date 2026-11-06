@@ -1,0 +1,919 @@
+{
+  "id": "cafe",
+  "name": {
+    "en": "Brew & Bean Café"
+  },
+  "format": "cafe",
+  "cuisine": "coffee",
+  "defaultCurrency": "USD",
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    {
+      "id": "espresso",
+      "name": {
+        "en": "Espresso"
+      }
+    },
+    {
+      "id": "milk-coffee",
+      "name": {
+        "en": "Milk Coffee"
+      }
+    },
+    {
+      "id": "filter-cold-brew",
+      "name": {
+        "en": "Filter & Cold Brew"
+      }
+    },
+    {
+      "id": "iced",
+      "name": {
+        "en": "Iced"
+      }
+    },
+    {
+      "id": "tea-others",
+      "name": {
+        "en": "Tea & Others"
+      }
+    },
+    {
+      "id": "pastry",
+      "name": {
+        "en": "Pastry"
+      }
+    },
+    {
+      "id": "brunch",
+      "name": {
+        "en": "Sandwiches & Brunch"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "espresso",
+      "category": "espresso",
+      "name": {
+        "en": "Espresso"
+      },
+      "description": {
+        "en": "Double-extracted single-origin shot with thick golden crema."
+      },
+      "prices": {
+        "USD": 3.0,
+        "EUR": 2.8,
+        "INR": 200,
+        "AED": 12,
+        "SAR": 12,
+        "QAR": 12
+      },
+      "diet": "vegan",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/espresso.jpg",
+      "imageCredit": {
+        "author": "Vyacheslav Argenberg",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Huai_Nam_Dang_National_Park,_Espresso_coffee_cup,_Tree_stump,_Thailand.jpg",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "doppio",
+      "category": "espresso",
+      "name": {
+        "en": "Doppio"
+      },
+      "description": {
+        "en": "Two shots of our house blend, bold and syrupy."
+      },
+      "prices": {
+        "USD": 3.8,
+        "EUR": 3.5,
+        "INR": 250,
+        "AED": 15,
+        "SAR": 15,
+        "QAR": 15
+      },
+      "diet": "vegan",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/doppio.jpg",
+      "imageCredit": {
+        "author": "Pen Waggener",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Double_Espresso.jpg",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "americano",
+      "category": "espresso",
+      "name": {
+        "en": "Americano"
+      },
+      "description": {
+        "en": "Espresso lengthened with hot water for a clean, smooth cup."
+      },
+      "prices": {
+        "USD": 3.5,
+        "EUR": 3.2,
+        "INR": 230,
+        "AED": 14,
+        "SAR": 14,
+        "QAR": 14
+      },
+      "diet": "vegan",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/americano.jpg",
+      "imageCredit": {
+        "author": "Firzafp",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:A_cup_of_Americano_in_Lano_Coffee_(Palembang,_SS).jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "macchiato",
+      "category": "espresso",
+      "name": {
+        "en": "Macchiato"
+      },
+      "description": {
+        "en": "Espresso marked with a spoonful of silky steamed milk foam."
+      },
+      "prices": {
+        "USD": 3.5,
+        "EUR": 3.2,
+        "INR": 230,
+        "AED": 14,
+        "SAR": 14,
+        "QAR": 14
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/macchiato.jpg",
+      "imageCredit": {
+        "author": "Takeaway",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Espresso_macchiato_Chiang_Mai.JPG",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "cortado",
+      "category": "espresso",
+      "name": {
+        "en": "Cortado"
+      },
+      "description": {
+        "en": "Equal parts espresso and warm milk in a small glass."
+      },
+      "prices": {
+        "USD": 4.0,
+        "EUR": 3.7,
+        "INR": 260,
+        "AED": 16,
+        "SAR": 16,
+        "QAR": 16
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/cortado.jpg",
+      "imageCredit": {
+        "author": "Bex Walton",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cortado_and_doughnut_at_Stumptown%27s_gorgeous_Cobble_Hill_cafe_in_Brooklyn.jpg",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "flat-white",
+      "category": "milk-coffee",
+      "name": {
+        "en": "Flat White"
+      },
+      "description": {
+        "en": "Double ristretto with velvety microfoam milk."
+      },
+      "prices": {
+        "USD": 4.5,
+        "EUR": 4.1,
+        "INR": 290,
+        "AED": 18,
+        "SAR": 18,
+        "QAR": 18
+      },
+      "diet": "veg",
+      "tags": [
+        "hot",
+        "bestseller"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/flat-white.jpg",
+      "imageCredit": {
+        "author": "GeorgeMichaelFarewell",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Flat_white_coffee_with_pretty_feather_pattern.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "latte",
+      "category": "milk-coffee",
+      "name": {
+        "en": "Caffè Latte"
+      },
+      "description": {
+        "en": "Espresso and steamed milk topped with latte art."
+      },
+      "prices": {
+        "USD": 4.8,
+        "EUR": 4.4,
+        "INR": 310,
+        "AED": 19,
+        "SAR": 19,
+        "QAR": 19
+      },
+      "diet": "veg",
+      "tags": [
+        "hot",
+        "bestseller"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/latte.jpg",
+      "imageCredit": {
+        "author": "B adger1",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Caffe_Latte_at_Pulse_Cafe.jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "cappuccino",
+      "category": "milk-coffee",
+      "name": {
+        "en": "Cappuccino"
+      },
+      "description": {
+        "en": "Espresso with equal parts steamed milk and airy foam."
+      },
+      "prices": {
+        "USD": 4.5,
+        "EUR": 4.1,
+        "INR": 290,
+        "AED": 18,
+        "SAR": 18,
+        "QAR": 18
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/cappuccino.jpg",
+      "imageCredit": {
+        "author": "Jazzbobrown",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cappuccino_topped_with_nice_cap_of_milk_foam,_as_being_served_at_Ebel_Caf%C3%A9,_Prague.jpg",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "mocha",
+      "category": "milk-coffee",
+      "name": {
+        "en": "Mocha"
+      },
+      "description": {
+        "en": "Espresso, dark chocolate and steamed milk, finished with cocoa."
+      },
+      "prices": {
+        "USD": 5.2,
+        "EUR": 4.8,
+        "INR": 340,
+        "AED": 21,
+        "SAR": 21,
+        "QAR": 21
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 5,
+      "image": "data/images/cafe/mocha.jpg",
+      "imageCredit": {
+        "author": "No machine-readable author provided. Evilphil77 assumed (based on copyright clai",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Caff%C3%A8_Mocha_by_Phil.jpg",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "cold-brew",
+      "category": "filter-cold-brew",
+      "name": {
+        "en": "Cold Brew"
+      },
+      "description": {
+        "en": "Coffee steeped 18 hours and served over ice."
+      },
+      "prices": {
+        "USD": 4.8,
+        "EUR": 4.4,
+        "INR": 310,
+        "AED": 19,
+        "SAR": 19,
+        "QAR": 19
+      },
+      "diet": "vegan",
+      "tags": [
+        "cold",
+        "bestseller"
+      ],
+      "station": "cold",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/cold-brew.jpg",
+      "imageCredit": {
+        "author": "Challapramod",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Iced_Americano_1.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "pour-over",
+      "category": "filter-cold-brew",
+      "name": {
+        "en": "Pour Over"
+      },
+      "description": {
+        "en": "Hand-poured single-origin filter coffee, brewed to order."
+      },
+      "prices": {
+        "USD": 5.0,
+        "EUR": 4.6,
+        "INR": 320,
+        "AED": 20,
+        "SAR": 20,
+        "QAR": 20
+      },
+      "diet": "vegan",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 6,
+      "image": "data/images/cafe/pour-over.jpg",
+      "imageCredit": {
+        "author": "Kim Sanso",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Manual_drip_(pour-over)_coffee.jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "iced-latte",
+      "category": "iced",
+      "name": {
+        "en": "Iced Latte"
+      },
+      "description": {
+        "en": "Chilled espresso poured over ice and cold milk."
+      },
+      "prices": {
+        "USD": 5.0,
+        "EUR": 4.6,
+        "INR": 320,
+        "AED": 20,
+        "SAR": 20,
+        "QAR": 20
+      },
+      "diet": "veg",
+      "tags": [
+        "cold",
+        "bestseller"
+      ],
+      "station": "cold",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/iced-latte.jpg",
+      "imageCredit": {
+        "author": "Cun Cun",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Segelas_kopi_susu_di_Pangkalpinang_Oktober_2022.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "iced-americano",
+      "category": "iced",
+      "name": {
+        "en": "Iced Americano"
+      },
+      "description": {
+        "en": "Double espresso over ice and cold water, crisp and bold."
+      },
+      "prices": {
+        "USD": 4.2,
+        "EUR": 3.9,
+        "INR": 270,
+        "AED": 17,
+        "SAR": 17,
+        "QAR": 17
+      },
+      "diet": "vegan",
+      "tags": [
+        "cold"
+      ],
+      "station": "cold",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/iced-americano.jpg",
+      "imageCredit": {
+        "author": "Debbie Tingzon",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Iced_americano.jpg",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "iced-mocha",
+      "category": "iced",
+      "name": {
+        "en": "Iced Mocha"
+      },
+      "description": {
+        "en": "Espresso, chocolate sauce and cold milk over ice."
+      },
+      "prices": {
+        "USD": 5.5,
+        "EUR": 5.1,
+        "INR": 360,
+        "AED": 22,
+        "SAR": 22,
+        "QAR": 22
+      },
+      "diet": "veg",
+      "tags": [
+        "cold"
+      ],
+      "station": "cold",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/iced-mocha.jpg",
+      "imageCredit": {
+        "author": "Andy Li",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Iced_Mocha_-_Granny%27s_Caf%C3%A9_2024-08-21.jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "matcha-latte",
+      "category": "tea-others",
+      "name": {
+        "en": "Matcha Latte"
+      },
+      "description": {
+        "en": "Ceremonial-grade matcha whisked with steamed milk."
+      },
+      "prices": {
+        "USD": 5.2,
+        "EUR": 4.8,
+        "INR": 340,
+        "AED": 21,
+        "SAR": 21,
+        "QAR": 21
+      },
+      "diet": "veg",
+      "tags": [
+        "hot",
+        "popular"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/matcha-latte.jpg",
+      "imageCredit": {
+        "author": "Irvan Ary Maulana",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Matcha_tea_latte_with_rosetta_latte_art.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "chai-latte",
+      "category": "tea-others",
+      "name": {
+        "en": "Chai Latte"
+      },
+      "description": {
+        "en": "Spiced black tea simmered with milk and honey."
+      },
+      "prices": {
+        "USD": 4.8,
+        "EUR": 4.4,
+        "INR": 310,
+        "AED": 19,
+        "SAR": 19,
+        "QAR": 19
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/chai-latte.jpg",
+      "imageCredit": {
+        "author": "Andy Li",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Chai_Latte_-_The_Flour_Pot_Bakery_2026-05-20.jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "hot-chocolate",
+      "category": "tea-others",
+      "name": {
+        "en": "Hot Chocolate"
+      },
+      "description": {
+        "en": "Rich dark chocolate with steamed milk and marshmallows."
+      },
+      "prices": {
+        "USD": 4.5,
+        "EUR": 4.1,
+        "INR": 290,
+        "AED": 18,
+        "SAR": 18,
+        "QAR": 18
+      },
+      "diet": "veg",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/hot-chocolate.jpg",
+      "imageCredit": {
+        "author": "gran",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Hot_chocolate_with_marshmellow.jpg",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "tea",
+      "category": "tea-others",
+      "name": {
+        "en": "Pot of Tea"
+      },
+      "description": {
+        "en": "Loose-leaf black tea served hot, with milk on request."
+      },
+      "prices": {
+        "USD": 3.8,
+        "EUR": 3.5,
+        "INR": 250,
+        "AED": 15,
+        "SAR": 15,
+        "QAR": 15
+      },
+      "diet": "vegan",
+      "tags": [
+        "hot"
+      ],
+      "station": "bar",
+      "prepMinutes": 4,
+      "image": "data/images/cafe/tea.jpg",
+      "imageCredit": {
+        "author": "Sm faysal",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:A_cup_of_black_tea_from_Srimangal_Bangladesh.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "croissant",
+      "category": "pastry",
+      "name": {
+        "en": "Butter Croissant"
+      },
+      "description": {
+        "en": "Flaky all-butter croissant baked fresh each morning."
+      },
+      "prices": {
+        "USD": 3.5,
+        "EUR": 3.2,
+        "INR": 230,
+        "AED": 14,
+        "SAR": 14,
+        "QAR": 14
+      },
+      "diet": "veg",
+      "tags": [
+        "bestseller"
+      ],
+      "station": "pastry",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/croissant.jpg",
+      "imageCredit": {
+        "author": "Herry Wibisono (herryway)",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Croissants_au_beurre_(18953292873).jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "blueberry-muffin",
+      "category": "pastry",
+      "name": {
+        "en": "Blueberry Muffin"
+      },
+      "description": {
+        "en": "Soft, golden muffin bursting with blueberries."
+      },
+      "prices": {
+        "USD": 3.5,
+        "EUR": 3.2,
+        "INR": 230,
+        "AED": 14,
+        "SAR": 14,
+        "QAR": 14
+      },
+      "diet": "veg",
+      "tags": [],
+      "station": "pastry",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/blueberry-muffin.jpg",
+      "imageCredit": {
+        "author": "National Cancer Institute, Renee Comet (photographer)",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Muffin_NIH.jpg",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "chocolate-chip-cookie",
+      "category": "pastry",
+      "name": {
+        "en": "Chocolate Chip Cookie"
+      },
+      "description": {
+        "en": "Chewy cookie loaded with dark chocolate chunks."
+      },
+      "prices": {
+        "USD": 2.8,
+        "EUR": 2.6,
+        "INR": 180,
+        "AED": 11,
+        "SAR": 11,
+        "QAR": 11
+      },
+      "diet": "veg",
+      "tags": [],
+      "station": "pastry",
+      "prepMinutes": 1,
+      "image": "data/images/cafe/chocolate-chip-cookie.jpg",
+      "imageCredit": {
+        "author": "Evan-Amos",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Choc-Chip-Cookie.jpg",
+        "license": "Public domain"
+      }
+    },
+    {
+      "id": "cinnamon-roll",
+      "category": "pastry",
+      "name": {
+        "en": "Cinnamon Roll"
+      },
+      "description": {
+        "en": "Warm swirled roll with cream cheese icing."
+      },
+      "prices": {
+        "USD": 4.2,
+        "EUR": 3.9,
+        "INR": 270,
+        "AED": 17,
+        "SAR": 17,
+        "QAR": 17
+      },
+      "diet": "veg",
+      "tags": [
+        "popular"
+      ],
+      "station": "pastry",
+      "prepMinutes": 3,
+      "image": "data/images/cafe/cinnamon-roll.jpg",
+      "imageCredit": {
+        "author": "Andy Li",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cinnamon_Roll_-_Burnt,_Poyser_Street,_London_2026-06-04.jpg",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "banana-bread",
+      "category": "pastry",
+      "name": {
+        "en": "Banana Bread"
+      },
+      "description": {
+        "en": "Moist house-made banana loaf, served by the slice."
+      },
+      "prices": {
+        "USD": 3.8,
+        "EUR": 3.5,
+        "INR": 250,
+        "AED": 15,
+        "SAR": 15,
+        "QAR": 15
+      },
+      "diet": "veg",
+      "tags": [],
+      "station": "pastry",
+      "prepMinutes": 2,
+      "image": "data/images/cafe/banana-bread.jpg",
+      "imageCredit": {
+        "author": "Shisma",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Banana_bread_slices.jpg",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "id": "avocado-toast",
+      "category": "brunch",
+      "name": {
+        "en": "Avocado Toast"
+      },
+      "description": {
+        "en": "Smashed avocado and a fried egg on sourdough with greens."
+      },
+      "prices": {
+        "USD": 9.5,
+        "EUR": 8.7,
+        "INR": 620,
+        "AED": 38,
+        "SAR": 38,
+        "QAR": 38
+      },
+      "diet": "egg",
+      "tags": [
+        "bestseller"
+      ],
+      "station": "main",
+      "prepMinutes": 8,
+      "image": "data/images/cafe/avocado-toast.jpg",
+      "imageCredit": {
+        "author": "Pequeño mar",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Avocado_toast.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "bagel-lox",
+      "category": "brunch",
+      "name": {
+        "en": "Smoked Salmon Bagel"
+      },
+      "description": {
+        "en": "Sesame bagel with cream cheese, smoked salmon and capers."
+      },
+      "prices": {
+        "USD": 10.5,
+        "EUR": 9.7,
+        "INR": 680,
+        "AED": 42,
+        "SAR": 42,
+        "QAR": 42
+      },
+      "diet": "non-veg",
+      "tags": [],
+      "station": "main",
+      "prepMinutes": 6,
+      "image": "data/images/cafe/bagel-lox.jpg",
+      "imageCredit": {
+        "author": "FranHogan",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Bagel_and_salmon.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "grilled-cheese",
+      "category": "brunch",
+      "name": {
+        "en": "Grilled Cheese"
+      },
+      "description": {
+        "en": "Sourdough pressed with melted cheddar and mozzarella."
+      },
+      "prices": {
+        "USD": 7.5,
+        "EUR": 6.9,
+        "INR": 490,
+        "AED": 30,
+        "SAR": 30,
+        "QAR": 30
+      },
+      "diet": "veg",
+      "tags": [],
+      "station": "main",
+      "prepMinutes": 7,
+      "image": "data/images/cafe/grilled-cheese.jpg",
+      "imageCredit": {
+        "author": "Maggie Hoffman",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Grilled_cheese_sandwich.jpg",
+        "license": "CC BY 2.0"
+      }
+    },
+    {
+      "id": "breakfast-sandwich",
+      "category": "brunch",
+      "name": {
+        "en": "Breakfast Sandwich"
+      },
+      "description": {
+        "en": "Scrambled egg, cheese and bacon on toasted bread."
+      },
+      "prices": {
+        "USD": 8.5,
+        "EUR": 7.8,
+        "INR": 550,
+        "AED": 34,
+        "SAR": 34,
+        "QAR": 34
+      },
+      "diet": "non-veg",
+      "tags": [
+        "popular"
+      ],
+      "station": "main",
+      "prepMinutes": 8,
+      "image": "data/images/cafe/breakfast-sandwich.jpg",
+      "imageCredit": {
+        "author": "John Verive",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Egg_and_cheese_breakfast_sandwich.jpg",
+        "license": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "id": "pancakes",
+      "category": "brunch",
+      "name": {
+        "en": "Buttermilk Pancakes"
+      },
+      "description": {
+        "en": "Fluffy stack with whipped butter and maple syrup."
+      },
+      "prices": {
+        "USD": 8.8,
+        "EUR": 8.1,
+        "INR": 570,
+        "AED": 35,
+        "SAR": 35,
+        "QAR": 35
+      },
+      "diet": "veg",
+      "tags": [],
+      "station": "main",
+      "prepMinutes": 10,
+      "image": "data/images/cafe/pancakes.jpg",
+      "imageCredit": {
+        "author": "Maffeth.opiana",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Pancake_with_maple_syrup_1.jpg",
+        "license": "CC BY-SA 4.0"
+      }
+    }
+  ]
+}

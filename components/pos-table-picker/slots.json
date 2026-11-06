@@ -1,0 +1,516 @@
+{
+  "component": "pos-table-picker",
+  "slots": {
+    "text_gray_900": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap": {
+      "type": "text",
+      "sample": "Occupied",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_2": {
+      "type": "time",
+      "sample": "12:10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_amber_100": {
+      "type": "text",
+      "sample": "Preview",
+      "maxLength": 20,
+      "where": "text",
+      "element": "pos-table-picker.button-3"
+    },
+    "disabled_opacity_60": {
+      "type": "text",
+      "sample": "Print",
+      "maxLength": 20,
+      "where": "text",
+      "element": "pos-table-picker.button-4"
+    },
+    "text_gray_900_2": {
+      "type": "text",
+      "sample": "F2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_2": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_3": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_4": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_2": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_gray_900_3": {
+      "type": "text",
+      "sample": "F3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_3": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_5": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_6": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_3": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_gray_900_4": {
+      "type": "text",
+      "sample": "F4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_4": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_7": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_8": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_12": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_4": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_gray_900_5": {
+      "type": "text",
+      "sample": "F5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_5": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_13": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_9": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_14": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_10": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_15": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_gray_900_6": {
+      "type": "text",
+      "sample": "Takeaway Table 2",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_6": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_16": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_11": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_17": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_12": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_18": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_6": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Take away",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_7": {
+      "type": "text",
+      "sample": "Waiting Table",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "whitespace_nowrap_7": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_19": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_13": {
+      "type": "text",
+      "sample": "AC",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_20": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_between_14": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_21": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_7": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_gray_900_title": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-2"
+    },
+    "text_gray_900_title_2": {
+      "type": "text",
+      "sample": "F2",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_2": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-6"
+    },
+    "text_gray_900_title_3": {
+      "type": "text",
+      "sample": "F3",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_3": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-8"
+    },
+    "text_gray_900_title_4": {
+      "type": "text",
+      "sample": "F4",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_4": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-10"
+    },
+    "text_gray_900_title_5": {
+      "type": "text",
+      "sample": "F5",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_5": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-12"
+    },
+    "text_gray_900_title_6": {
+      "type": "text",
+      "sample": "Takeaway Table 2",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_6": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-14"
+    },
+    "text_gray_900_title_7": {
+      "type": "text",
+      "sample": "Waiting Table",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "before_content_arialabel_7": {
+      "type": "text",
+      "sample": "Table actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "pos-table-picker.button-16"
+    }
+  }
+}
