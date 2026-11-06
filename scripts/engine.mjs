@@ -96,7 +96,7 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   while (p) { const rb = p.getBoundingClientRect(); const o = { tag: p.tagName.toLowerCase(), attrs: {}, w: +rb.width.toFixed(2), x: rb.x + scrollX, y: rb.y + scrollY, display: getComputedStyle(p).display, position: getComputedStyle(p).position }; for (const a of p.attributes) if (!/^on|^data-ui$/i.test(a.name) && !(a.name === 'style' && p.tagName === 'BODY')) o.attrs[a.name] = a.value;
     ancestors.unshift(o); if (p.tagName === 'HTML') break; p = p.parentElement; }
   // effective background behind root
-  let bg = 'rgba(0,0,0,0)'; p = root;
+  let bg = 'rgba(0,0,0,0)'; p = root.parentElement;
   while (p) { const c = getComputedStyle(p).backgroundColor; if (c && c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') { bg = c; break; } p = p.parentElement; }
   const cs = getComputedStyle(root);
   const relevant = (sel) => { try { if (root.matches(sel) || root.querySelector(sel)) return true; let a = root.parentElement; while (a) { if (a.matches(sel)) return true; a = a.parentElement; } } catch {} return false; };
@@ -127,6 +127,6 @@ export function harnessDoc(meta, bodyHtml, { dark = false, rtl = false, title = 
   ha += ` data-theme="${dark ? 'dark' : 'light'}"` + (rtl ? ' dir="rtl"' : '');
   const css = ['frappe-desk.css', 'frappe-report.css', 'erpnext-erpnext.css', 'hrms-hrms.css'].filter(f => !meta.css || meta.css.includes(f));
   const links = (meta.css || css).map(f => `<link rel="stylesheet" href="${meta.cssBase}${f}">`).join('\n');
-  const pd = meta.pad || {}; const stub = `html,body{margin:0}body{background:${meta.bg};min-height:${meta.clip ? meta.clip.h : 0}px}#ui-kit-stage{position:absolute;left:${(pd.l || 0) + (meta.origin ? meta.origin.x : 0)}px;top:${(pd.t || 0) + (meta.origin ? meta.origin.y : 0)}px;width:${Math.ceil(meta.stageW || meta.size.w)}px}*{animation:none!important;transition:none!important;caret-color:transparent!important}`;
+  const pd = meta.pad || {}; const stub = `html,body{margin:0}body{background:${dark && meta.bgDark ? meta.bgDark : meta.bg};min-height:${meta.clip ? meta.clip.h : 0}px}#ui-kit-stage{position:absolute;left:${(pd.l || 0) + (meta.origin ? meta.origin.x : 0)}px;width:${Math.ceil(meta.stageW || meta.size.w)}px}*{animation:none!important;transition:none!important;caret-color:transparent!important}`;
   return `<!doctype html>\n<html${ha}>\n<head><meta charset="utf-8"><title>${title}</title>\n${links}\n<style>${stub}</style>\n${meta.inlineCss ? `<style>${meta.inlineCss}</style>` : ''}</head>\n<body${c.bodyAttrs}>\n<div id="ui-kit-stage">\n${c.body}\n</div>\n</body></html>\n`;
 }

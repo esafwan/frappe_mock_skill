@@ -5,6 +5,7 @@ import { extractInPage, harnessDoc, fill } from './engine.mjs';
 import { specs as deskSpecs } from './specs.mjs';
 const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
 const specs = [...deskSpecs, ...posSpecs];
+for (const s of specs) if (s.id === 'field-link') { const pr = s.prepare; s.prepare = async (p) => { await pr(p); await p.evaluate(() => document.activeElement && document.activeElement.blur()); }; }
 
 const only = process.argv.slice(2);
 const sprite = fs.readFileSync(ROOT + 'tokens/icons/sprite.svg.html', 'utf8');
@@ -18,7 +19,7 @@ const { browser, page } = await open();
 for (const spec of specs) {
   if (only.length && !only.includes(spec.id)) continue;
   const dir = ROOT + 'components/' + spec.id + '/'; fs.mkdirSync(dir + 'states', { recursive: true });
-  const out = { id: spec.id };
+  const out = { id: spec.id }; let bgDark;
   try {
     const modes = [['light', false, false], ['dark', true, false], ['rtl', false, true]];
     for (const [mode, dark, rtl] of modes) {
@@ -34,6 +35,9 @@ for (const spec of specs) {
       await page.mouse.move(0, 0);
       const pad = Object.assign({ l: 0, t: 0, r: 0, b: 0 }, spec.pad || {});
       const shotPath = dir + (dark ? 'screenshot.dark.png' : rtl ? 'screenshot.rtl.png' : 'screenshot.png');
+      if (spec.pad && rtl) await page.evaluate(({ padL, sel }) => { const x = document.querySelector(sel).getBoundingClientRect().x; if (x < padL) document.body.style.transform = `translateX(${padL - x}px)`; }, { padL: pad.l, sel: `[data-ui="${spec.id}"]` }); // RTL root sits near the left edge: shift page so the left pad is not clamped (preview always has pad.l of room)
+      if (spec.pad) await page.evaluate((sel) => { const r = document.querySelector(sel); document.querySelectorAll('[data-keep]').forEach(e => e.removeAttribute('data-keep')); r.setAttribute('data-keep', ''); r.querySelectorAll('*').forEach(e => e.setAttribute('data-keep', '')); for (let a = r.parentElement; a; a = a.parentElement) a.setAttribute('data-keep', ''); const s = document.createElement('style'); s.dataset.uikit = '1'; s.textContent = 'body :not([data-keep]){visibility:hidden!important}'; document.head.appendChild(s); }, `[data-ui="${spec.id}"]`);
+      if (dark) bgDark = await page.evaluate(() => { for (let p = document.body; p; p = p.parentElement) { const c = getComputedStyle(p).backgroundColor; if (c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') return c; } return 'rgb(255,255,255)'; });
       const shot = async (pth) => { if (!spec.pad) return loc.screenshot({ path: pth, animations: 'disabled' });
         const r = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY, w: b.width, h: b.height }; });
         return page.screenshot({ path: pth, fullPage: true, clip: { x: Math.max(0, r.x - pad.l), y: Math.max(0, r.y - pad.t), width: Math.ceil(r.w + pad.l + pad.r), height: Math.ceil(r.h + pad.t + pad.b) } }); };
@@ -80,7 +84,7 @@ for (const spec of specs) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, bgDark, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
     fs.writeFileSync(dir + 'component.html', bodyHtml + '\n');
     const slots = {}; for (const s of out.slots) slots[s.name] = { type: s.type, sample: s.sample, maxLength: s.maxLength, where: s.where, element: s.element };

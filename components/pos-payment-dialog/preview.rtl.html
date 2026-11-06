@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-theme="light" dir="rtl">
+<head><meta charset="utf-8"><title>Payment dialog</title>
+<link rel="stylesheet" href="../../tokens/css/fonts.css">
+<link rel="stylesheet" href="../../tokens/css/ury-pos.css">
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:896px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>:root { --toastify-color-light: #fff; --toastify-color-dark: #121212; --toastify-color-info: #3498db; --toastify-color-success: #07bc0c; --toastify-color-warning: #f1c40f; --toastify-color-error: hsl(6, 78%, 57%); --toastify-color-transparent: rgba(255, 255, 255, 0.7); --toastify-icon-color-info: var(--toastify-color-info); --toastify-icon-color-success: var(--toastify-color-success); --toastify-icon-color-warning: var(--toastify-color-warning); --toastify-icon-color-error: var(--toastify-color-error); --toastify-container-width: fit-content; --toastify-toast-width: 320px; --toastify-toast-offset: 16px; --toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top)); --toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right)); --toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left)); --toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom)); --toastify-toast-background: #fff; --toastify-toast-padding: 14px; --toastify-toast-min-height: 64px; --toastify-toast-max-height: 800px; --toastify-toast-bd-radius: 6px; --toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); --toastify-font-family: sans-serif; --toastify-z-index: 9999; --toastify-text-color-light: #757575; --toastify-text-color-dark: #fff; --toastify-text-color-info: #fff; --toastify-text-color-success: #fff; --toastify-text-color-warning: #fff; --toastify-text-color-error: #fff; --toastify-spinner-color: #616161; --toastify-spinner-color-empty-area: #e0e0e0; --toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55); --toastify-color-progress-dark: #bb86fc; --toastify-color-progress-info: var(--toastify-color-info); --toastify-color-progress-success: var(--toastify-color-success); --toastify-color-progress-warning: var(--toastify-color-warning); --toastify-color-progress-error: var(--toastify-color-error); --toastify-color-progress-bgo: 0.2; }
+@keyframes Toastify__trackProgress { 
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(0); }
+}
+@keyframes Toastify__bounceInRight { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(3000px, 0px, 0px); }
+  60% { opacity: 1; transform: translate3d(-25px, 0px, 0px); }
+  75% { transform: translate3d(10px, 0px, 0px); }
+  90% { transform: translate3d(-5px, 0px, 0px); }
+  100% { transform: none; }
+}
+@keyframes Toastify__bounceOutRight { 
+  20% { opacity: 1; transform: translate3d(-20px, var(--y), 0); }
+  100% { opacity: 0; transform: translate3d(2000px, var(--y), 0); }
+}
+@keyframes Toastify__bounceInLeft { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(-3000px, 0px, 0px); }
+  60% { opacity: 1; transform: translate3d(25px, 0px, 0px); }
+  75% { transform: translate3d(-10px, 0px, 0px); }
+  90% { transform: translate3d(5px, 0px, 0px); }
+  100% { transform: none; }
+}
+@keyframes Toastify__bounceOutLeft { 
+  20% { opacity: 1; transform: translate3d(20px, var(--y), 0); }
+  100% { opacity: 0; transform: translate3d(-2000px, var(--y), 0); }
+}
+@keyframes Toastify__bounceInUp { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(0px, 3000px, 0px); }
+  60% { opacity: 1; transform: translate3d(0px, -20px, 0px); }
+  75% { transform: translate3d(0px, 10px, 0px); }
+  90% { transform: translate3d(0px, -5px, 0px); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes Toastify__bounceOutUp { 
+  20% { transform: translate3d(0, calc(var(--y) - 10px), 0); }
+  40%, 45% { opacity: 1; transform: translate3d(0, calc(var(--y) + 20px), 0); }
+  100% { opacity: 0; transform: translate3d(0px, -2000px, 0px); }
+}
+@keyframes Toastify__bounceInDown { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(0px, -3000px, 0px); }
+  60% { opacity: 1; transform: translate3d(0px, 25px, 0px); }
+  75% { transform: translate3d(0px, -10px, 0px); }
+  90% { transform: translate3d(0px, 5px, 0px); }
+  100% { transform: none; }
+}
+@keyframes Toastify__bounceOutDown { 
+  20% { transform: translate3d(0, calc(var(--y) - 10px), 0); }
+  40%, 45% { opacity: 1; transform: translate3d(0, calc(var(--y) + 20px), 0); }
+  100% { opacity: 0; transform: translate3d(0px, 2000px, 0px); }
+}
+@keyframes Toastify__zoomIn { 
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  50% { opacity: 1; }
+}
+@keyframes Toastify__zoomOut { 
+  0% { opacity: 1; }
+  50% { opacity: 0; transform: translate3d(0, var(--y), 0) scale3d(0.3, 0.3, 0.3); }
+  100% { opacity: 0; }
+}
+@keyframes Toastify__flipIn { 
+  0% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  100% { transform: perspective(400px); }
+}
+@keyframes Toastify__flipOut { 
+  0% { transform: translate3d(0, var(--y), 0) perspective(400px); }
+  30% { transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, -20deg); opacity: 1; }
+  100% { transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, 90deg); opacity: 0; }
+}
+@keyframes Toastify__slideInRight { 
+  0% { transform: translate3d(110%, 0px, 0px); visibility: visible; }
+  100% { transform: translate3d(0, var(--y), 0); }
+}
+@keyframes Toastify__slideInLeft { 
+  0% { transform: translate3d(-110%, 0px, 0px); visibility: visible; }
+  100% { transform: translate3d(0, var(--y), 0); }
+}
+@keyframes Toastify__slideInUp { 
+  0% { transform: translate3d(0px, 110%, 0px); visibility: visible; }
+  100% { transform: translate3d(0, var(--y), 0); }
+}
+@keyframes Toastify__slideInDown { 
+  0% { transform: translate3d(0px, -110%, 0px); visibility: visible; }
+  100% { transform: translate3d(0, var(--y), 0); }
+}
+@keyframes Toastify__slideOutRight { 
+  0% { transform: translate3d(0, var(--y), 0); }
+  100% { visibility: hidden; transform: translate3d(110%, var(--y), 0); }
+}
+@keyframes Toastify__slideOutLeft { 
+  0% { transform: translate3d(0, var(--y), 0); }
+  100% { visibility: hidden; transform: translate3d(-110%, var(--y), 0); }
+}
+@keyframes Toastify__slideOutDown { 
+  0% { transform: translate3d(0, var(--y), 0); }
+  100% { visibility: hidden; transform: translate3d(0px, 500px, 0px); }
+}
+@keyframes Toastify__slideOutUp { 
+  0% { transform: translate3d(0, var(--y), 0); }
+  100% { visibility: hidden; transform: translate3d(0px, -500px, 0px); }
+}
+@keyframes Toastify__spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style></head>
+<body>
+<div id="ui-kit-stage">
+<div class="relative text-card-foreground rounded-xl shadow-xl max-h-[90vh] overflow-hidden animate-dialog-in mx-4 bg-white w-full max-w-4xl max-h-dialog-max-h flex flex-col md:flex-row p-0" id="ui-pay-card" data-ui="pos-payment-dialog" style="position: absolute; left: 80px; top: 80px; margin: 0px; animation: auto ease 0s 1 normal none running none;"><div class="md:w-1/2 p-6 border-b md:border-b-0 md:border-r border-border overflow-y-auto"><div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold text-gray-900">Payment</h2><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium leading-none tracking-[-0.006em] select-none touch-manipulation transition-[background-color,border-color,color,box-shadow,transform,filter,opacity] duration-150 ease-out active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:opacity-50 disabled:pointer-events-none disabled:shadow-none disabled:active:scale-100 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground active:bg-accent/80 h-11 w-11 p-2" data-ui="pos-payment-dialog.button-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-5 h-5" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><div class="space-y-4 mb-6"><h3 class="text-lg font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent w-5 h-5" aria-hidden="true"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>Apply Discount</h3><div class="flex gap-2"><input class="flex w-full rounded-md border bg-background shadow-sm touch-manipulation file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground transition-[border-color,box-shadow,background-color] duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-100 disabled:shadow-none border-gray-200 hover:border-gray-300 focus-visible:border-primary h-9 px-3 py-1.5 text-xs flex-1" placeholder="Enter %" type="number" value="" data-ui="pos-payment-dialog.input-2"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium leading-none tracking-[-0.006em] select-none touch-manipulation transition-[background-color,border-color,color,box-shadow,transform,filter,opacity] duration-150 ease-out active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:opacity-50 disabled:pointer-events-none disabled:shadow-none disabled:active:scale-100 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-foreground text-background shadow-sm hover:bg-foreground/90 active:bg-foreground active:brightness-90 active:shadow-none h-9 px-3 rounded-md" data-ui="pos-payment-dialog.button-3">Apply</button></div></div><div class="space-y-4 mb-6"><h3 class="text-lg font-semibold">Payment Methods</h3><div class="grid grid-cols-1 gap-3"><div class="flex items-center gap-3"><span class="w-24 font-medium">Cash</span><input class="flex w-full rounded-md border bg-background shadow-sm touch-manipulation file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground transition-[border-color,box-shadow,background-color] duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-100 disabled:shadow-none border-gray-200 hover:border-gray-300 focus-visible:border-primary h-9 px-3 py-1.5 text-xs flex-1" min="0" step="0.01" placeholder="Amount" type="number" value="1110" data-ui="pos-payment-dialog.input-4"></div><div class="flex items-center gap-3"><span class="w-24 font-medium">UPI</span><input class="flex w-full rounded-md border bg-background shadow-sm touch-manipulation file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground transition-[border-color,box-shadow,background-color] duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-100 disabled:shadow-none border-gray-200 hover:border-gray-300 focus-visible:border-primary h-9 px-3 py-1.5 text-xs flex-1" min="0" step="0.01" placeholder="Amount" type="number" value="" data-ui="pos-payment-dialog.input-5"></div><div class="flex items-center gap-3"><span class="w-24 font-medium">Debit Card</span><input class="flex w-full rounded-md border bg-background shadow-sm touch-manipulation file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground transition-[border-color,box-shadow,background-color] duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-100 disabled:shadow-none border-gray-200 hover:border-gray-300 focus-visible:border-primary h-9 px-3 py-1.5 text-xs flex-1" min="0" step="0.01" placeholder="Amount" type="number" value="" data-ui="pos-payment-dialog.input-6"></div></div><div class="flex justify-between mt-2 text-sm"><span class="font-medium">Total Entered</span><span class="text-green-600 font-semibold flex items-center gap-1">₹ 1,110 / ₹ 1,110</span></div></div></div><div class="md:w-1/2 p-6 overflow-y-auto"><div class="space-y-3 mb-6"><h3 class="text-lg font-semibold">Order Summary</h3><div class="flex justify-between text-sm"><span class="text-gray-600">Table Name</span><span class="font-medium">F2</span></div><div class="space-y-2 text-sm"><div class="flex justify-between"><span class="text-gray-600">Subtotal</span><span>₹ 1,110</span></div><div class="border-t pt-2"><div class="flex justify-between font-semibold text-lg"><span>Total</span><span>₹ 1,110</span></div></div></div></div><button class="inline-flex items-center justify-center whitespace-nowrap font-medium tracking-[-0.006em] select-none touch-manipulation transition-[background-color,border-color,color,box-shadow,transform,filter,opacity] duration-150 ease-out active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:opacity-50 disabled:pointer-events-none disabled:shadow-none disabled:active:scale-100 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 bg-foreground text-background shadow-sm hover:bg-foreground/90 active:bg-foreground active:brightness-90 active:shadow-none h-9 px-3.5 text-[13px] rounded-[7px] gap-1.5 w-full" data-ui="pos-payment-dialog.button-7">Pay ₹ 1,110</button></div></div>
+</div>
+</body></html>

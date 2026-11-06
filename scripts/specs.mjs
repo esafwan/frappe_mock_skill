@@ -24,7 +24,7 @@ export const specs = [
   { id: 'form-section', name: 'Form section with columns', group: 'desk', url: '/desk/customer/Direct', root: '.form-tab-content .form-section.card-section.visible-section', targets: {}, states: {} },
   { id: 'field-data', name: 'Field: Data', group: 'desk', url: '/desk/customer/Direct', root: field('customer_name'), states: formState('customer_name') },
   { id: 'field-link', name: 'Field: Link with awesomplete dropdown', group: 'desk', url: '/desk/customer/Direct', root: field('customer_group'), pad: { b: 220 },
-    prepare: async (p) => { await p.locator(field('customer_group') + ' input').click(); await p.waitForTimeout(1200); }, targets: {}, states: formState('customer_group') },
+    prepare: async (p) => { await p.locator(field('customer_group') + ' input').click(); await p.waitForTimeout(1200); await p.evaluate(() => document.activeElement && document.activeElement.blur && document.activeElement.blur()); await p.waitForTimeout(200); }, targets: {}, states: formState('customer_group') },
   { id: 'field-select', name: 'Field: Select', group: 'desk', url: '/desk/customer/Direct', root: field('customer_type'), states: formState('customer_type') },
   { id: 'field-check', name: 'Field: Check', group: 'desk', url: '/desk/item/110CUP', root: field('disabled'), states: formState('disabled') },
   { id: 'field-date', name: 'Field: Date', group: 'desk', url: '/desk/payment-entry/new', root: field('posting_date'), states: formState('posting_date') },
