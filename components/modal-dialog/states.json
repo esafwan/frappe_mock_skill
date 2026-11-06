@@ -35,24 +35,39 @@
       "screenshot": "states/focus.png"
     },
     "active": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "modal-dialog.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(226, 226, 226)"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
     },
     "disabled": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "error": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "loading": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     }
   }
 }

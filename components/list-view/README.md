@@ -4,7 +4,7 @@ Standard list: filter bar, sort selector, header with select-all, rows with chec
 
 **When to use:** Use for any DocType list scene (Customers, Items, Invoices).
 
-**Slots people usually change:** `es_pill_4` (number, e.g. "2500"), `es_pill_2` (number, e.g. "100"), `es_pill_3` (number, e.g. "500"), `es_pill` (number, e.g. "20"), `max_w_sm` (text, e.g. "A company or person you sell g"), `visually_hidden` (text, e.g. "Begin typing for results."). All 423 slots are in `slots.json`.
+**Slots people usually change:** `es_pill_4` (number, e.g. "2500"), `es_pill_2` (number, e.g. "100"), `es_pill_3` (number, e.g. "500"), `es_pill` (number, e.g. "20"), `max_w_sm` (text, e.g. "A company or person you sell g"), `visually_hidden` (text, e.g. "Begin typing for results."). All 613 slots are in `slots.json`.
 
 **States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
 

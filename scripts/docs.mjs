@@ -1,6 +1,8 @@
 // Generates per-component README.md and manifest.json from the captured artefacts + descriptions below.
-import fs from 'fs'; import path from 'path'; import { ROOT } from './lib.mjs';
+import crypto from 'crypto'; import fs from 'fs'; import path from 'path'; import { ROOT } from './lib.mjs';
 const WHEN = {
+  'kot-list': ['KOT list: every kitchen order ticket with status, production unit and time.', 'Use for kitchen / KOT list scenes in the desk.'],
+  'kot-form': ['A single Kitchen Order Ticket document (items, quantities, production unit, status).', 'Use to show what the kitchen receives for an order.'],
   navbar: ['Top bar of the desk home: logo, global search (Ctrl/⌘K), notifications bell, avatar.', 'Use on desk landing / app-launcher scenes and any shot that needs the global search bar.'],
   sidebar: ['Left workspace sidebar: app switcher, search, notifications, workspace links and shortcuts.', 'Use as the persistent left rail for every desk page.'],
   'workspace-shortcuts': ['Workspace page body with shortcut and link cards.', 'Use when showing a module landing page (Selling, Stock …).'],
@@ -48,7 +50,7 @@ for (const id of fs.readdirSync(ROOT + 'components').sort()) {
   const bindable = fs.existsSync(dir + 'bindings.json');
   manifest.components[id] = { id, name: h.name, system: groupToSystem[h.group] || h.group, group: h.group, path: `components/${id}/`,
     files: { html: 'component.html', states: 'states.json', slots: 'slots.json', screenshot: 'screenshot.png', screenshotDark: 'screenshot.dark.png', screenshotRtl: 'screenshot.rtl.png', measurements: 'measurements.json', preview: 'preview.html' },
-    size: { w: +h.size.w.toFixed(1), h: +h.size.h.toFixed(1) }, css: h.css, slotCount: Object.keys(slots).length, slots: Object.fromEntries(Object.entries(slots).map(([k, v]) => [k, { type: v.type, sample: v.sample, maxLength: v.maxLength }])),
+    contentHash: crypto.createHash('sha1').update(fs.readFileSync(dir + 'component.html')).digest('hex').slice(0, 12), size: { w: +h.size.w.toFixed(1), h: +h.size.h.toFixed(1) }, css: h.css, slotCount: Object.keys(slots).length, slots: Object.fromEntries(Object.entries(slots).map(([k, v]) => [k, { type: v.type, sample: v.sample, maxLength: v.maxLength }])),
     states, targets: ms.elements.map(e => ({ id: e.id, tag: e.tag, interactive: e.interactive, box: { x: e.x, y: e.y, w: e.w, h: e.h } })), dataBindings: bindable ? `components/${id}/bindings.json` : null };
   // README
   const [what, when] = WHEN[id] || [h.name, 'Use when a scene needs this element.'];
@@ -70,6 +72,6 @@ ${what}
   fs.writeFileSync(dir + 'README.md', readme);
 }
 for (const f of fs.existsSync(ROOT + 'data/menus') ? fs.readdirSync(ROOT + 'data/menus') : []) if (f.endsWith('.json')) { const m = JSON.parse(fs.readFileSync(ROOT + 'data/menus/' + f)); manifest.data.menus.push({ id: m.id, format: m.format, cuisine: m.cuisine, defaultCurrency: m.defaultCurrency, languages: m.languages, items: m.items.length, path: 'data/menus/' + f }); }
-if (fs.existsSync(ROOT + 'pages')) for (const f of fs.readdirSync(ROOT + 'pages')) if (f.endsWith('.page.json')) { const p = JSON.parse(fs.readFileSync(ROOT + 'pages/' + f)); const vars = fs.readdirSync(ROOT + 'pages').filter(x => x.startsWith(p.id + '.') && x.endsWith('.html')).map(x => ({ file: 'pages/' + x, verifiedAgainstLive: false, note: 'derived variant (theme/locale/menu); same components, not compared to a live reference' })); manifest.pages[p.id] = { id: p.id, title: p.title, system: p.system, html: `pages/${p.id}.html`, verifiedAgainstLive: true, liveReference: `pages/${p.id}.png`, components: p.components, variants: vars }; }
+if (fs.existsSync(ROOT + 'pages')) for (const f of fs.readdirSync(ROOT + 'pages')) if (f.endsWith('.page.json')) { const p = JSON.parse(fs.readFileSync(ROOT + 'pages/' + f)); const pv = fs.existsSync(ROOT + 'pages-verify-report.json') ? JSON.parse(fs.readFileSync(ROOT + 'pages-verify-report.json')) : {}; const vars = fs.readdirSync(ROOT + 'pages').filter(x => x.startsWith(p.id + '.') && x.endsWith('.html')).map(x => { const key = x.replace('.html', ''); const v = pv[key]; return { file: 'pages/' + x, verifiedAgainstLive: !!(v && v.ok), diffPct: v ? v.diffPct : undefined, note: v ? 'compared to a live capture of the same state' : 'derived variant (translated text / swapped currency / menu data): same components, no live equivalent exists to compare against' }; }); manifest.pages[p.id] = { id: p.id, title: p.title, system: p.system, html: `pages/${p.id}.html`, verifiedAgainstLive: true, liveReference: `pages/${p.id}.png`, components: p.components, variants: vars }; }
 fs.writeFileSync(ROOT + 'manifest.json', JSON.stringify(manifest, null, 2));
 console.log('manifest:', Object.keys(manifest.components).length, 'components', Object.keys(manifest.pages).length, 'pages', manifest.data.menus.length, 'menus');

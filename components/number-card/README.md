@@ -6,7 +6,7 @@ Dashboard number card.
 
 **Slots people usually change:** `number` (number, e.g. "131"), `percentage_stat_area` (text, e.g. "0 % since yesterday"), `ellipsis` (text, e.g. "Open Work Orders"), `dropdown_item` (text, e.g. "Refresh"), `dropdown_item_2` (text, e.g. "Edit"), `pull_right` (text, e.g. "..."). All 7 slots are in `slots.json`.
 
-**States:** default (none). Details and class/attribute changes in `states.json`.
+**States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="number-card"`; 1 interactive elements with measured boxes in `measurements.json` (e.g. `number-card.link-1`).
 

@@ -20,8 +20,19 @@
       "screenshot": "states/focus.png"
     },
     "active": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "field-text-editor.button-36",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(243, 243, 243)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
     },
     "disabled": {
       "applicable": true,
@@ -37,7 +48,7 @@
           "attrs": {}
         },
         {
-          "element": "#path:371",
+          "element": "#path:372",
           "addClass": [],
           "removeClass": [
             "hide"
@@ -69,11 +80,11 @@
     },
     "loading": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     }
   }
 }

@@ -33,28 +33,66 @@
       "screenshot": "states/hover.png"
     },
     "focus": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "toast.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgba(201, 201, 201, 0.898) solid 2px"
+        },
+        "opacity": {
+          "from": "1",
+          "to": "0.75"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
     },
     "active": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "toast.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(255, 255, 255)",
+          "to": "rgb(199, 199, 199)"
+        },
+        "borderColor": {
+          "from": "rgb(255, 255, 255)",
+          "to": "rgb(199, 199, 199)"
+        },
+        "outline": {
+          "from": "rgb(255, 255, 255) none 3px",
+          "to": "rgb(199, 199, 199) none 0px"
+        },
+        "opacity": {
+          "from": "1",
+          "to": "0.75"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
     },
     "disabled": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "error": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "loading": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     }
   }
 }

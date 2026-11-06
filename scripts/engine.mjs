@@ -2,11 +2,11 @@
 import fs from 'fs'; import path from 'path';
 import { open, go, ROOT } from './lib.mjs';
 
-export const SLOT_ATTRS = ['placeholder', 'title', 'aria-label', 'alt', 'value', 'data-original-title', 'data-name', 'data-value', 'data-label', 'data-title'];
+export const SLOT_ATTRS = ['placeholder', 'title', 'aria-label', 'alt', 'value', 'data-original-title', 'data-name', 'data-value', 'data-label', 'data-title', 'data-filter'];
 
 // runs in the page: returns {html, slots, ancestors, bg, boxes}
 export async function extractInPage({ rootSel, id, targets, names }) {
-  const SLOT_ATTRS = ['placeholder', 'title', 'aria-label', 'alt', 'value', 'data-original-title', 'data-name', 'data-value', 'data-label', 'data-title'];
+  const SLOT_ATTRS = ['placeholder', 'title', 'aria-label', 'alt', 'value', 'data-original-title', 'data-name', 'data-value', 'data-label', 'data-title', 'data-filter'];
   const root = document.querySelector(rootSel);
   if (!root) throw new Error('root not found ' + rootSel);
   root.setAttribute('data-ui', id);

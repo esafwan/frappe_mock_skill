@@ -6,7 +6,7 @@ Toast / desk alert shown after an action.
 
 **Slots people usually change:** `es_toast_message` (text, e.g. "Customer saved"). All 2 slots are in `slots.json`.
 
-**States:** default (none), hover (css-pseudo). Details and class/attribute changes in `states.json`.
+**States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="toast"`; 1 interactive elements with measured boxes in `measurements.json` (e.g. `toast.button-1`).
 

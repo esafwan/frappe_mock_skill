@@ -6,7 +6,7 @@ Currency field.
 
 **Slots people usually change:** `bold` (currency, e.g. "₹ 0.00"), `tooltip_content` (text, e.g. "price_list_rate"), `reqd` (text, e.g. "Rate"). All 3 slots are in `slots.json`.
 
-**States:** default (none), focus (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
+**States:** default (none), focus (css-pseudo), active (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="field-currency"`; 1 interactive elements with measured boxes in `measurements.json` (e.g. `field-currency.input-1`).
 

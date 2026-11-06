@@ -6,7 +6,7 @@ Date field.
 
 **Slots people usually change:** `bold` (date, e.g. "01-01-2026"), `reqd` (text, e.g. "Posting Date"), `tooltip_content` (text, e.g. "posting_date"). All 4 slots are in `slots.json`.
 
-**States:** default (none), hover (css-pseudo), focus (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
+**States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="field-date"`; 1 interactive elements with measured boxes in `measurements.json` (e.g. `field-date.input-1`).
 

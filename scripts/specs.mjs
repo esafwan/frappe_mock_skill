@@ -40,6 +40,8 @@ export const specs = [
   { id: 'modal-dialog', name: 'Modal dialog', group: 'desk', url: '/desk/customer', root: '.modal.show .modal-dialog',
     prepare: async (p) => { await p.evaluate(() => frappe.confirm('Are you sure you want to delete this customer?', () => {})); await p.waitForTimeout(900); await hideBackdrop(p); }, targets: {}, states: { hover: { target: '.btn-modal-primary' }, focus: { target: '.btn-modal-primary' } } },
   { id: 'comment-timeline', name: 'Comment timeline', group: 'desk', url: '/desk/customer/Direct', root: '.new-timeline', settle: 1500, targets: {}, states: {} },
+  { id: 'kot-list', name: 'KOT list (URY Kitchen Order Tickets)', group: 'desk', url: '/desk/ury-kot', root: '.layout-main-list', settle: 2000, targets: { 'select-all': '.list-row-head .list-check-all' }, states: { hover: { target: '.list-row-container' } } },
+  { id: 'kot-form', name: 'KOT form (kitchen order ticket document)', group: 'desk', url: '/desk/ury-kot/KOT-URY-00238', root: '.form-page', settle: 2000, targets: {}, states: {} },
   { id: 'report-view', name: 'Report view', group: 'desk', url: '/desk/sales-invoice/view/report', root: '.layout-main-section-wrapper', css: ['frappe-desk.css', 'frappe-report.css', 'erpnext-erpnext.css'], settle: 2500, targets: {}, states: {} },
   { id: 'number-card', name: 'Dashboard number card', group: 'desk', url: '/desk/manufacturing', root: '.layout-main-section .ce-block:has(.number-widget-box)', settle: 2500, targets: {}, states: {} },
   { id: 'dashboard-chart', name: 'Dashboard chart', group: 'desk', url: '/desk/manufacturing', root: '.layout-main-section .ce-block:has(.dashboard-widget-box)', settle: 3000, targets: {}, states: {} },

@@ -1,0 +1,3134 @@
+{
+  "component": "kot-list",
+  "slots": {
+    "dropdown_item": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_2": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "dropdown_item_3": {
+      "type": "text",
+      "sample": "Equals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "dropdown_item_4": {
+      "type": "text",
+      "sample": "Like",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "tooltip_content_2": {
+      "type": "text",
+      "sample": "order_status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs": {
+      "type": "text",
+      "sample": "Filter",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_sm": {
+      "type": "text",
+      "sample": "Last Updated On",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "option": {
+      "type": "text",
+      "sample": "Last Updated On",
+      "maxLength": 30,
+      "where": "text",
+      "element": "kot-list.link-10"
+    },
+    "option_2": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-11"
+    },
+    "option_3": {
+      "type": "text",
+      "sample": "Created On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-12"
+    },
+    "option_4": {
+      "type": "text",
+      "sample": "Most Used",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-13"
+    },
+    "option_5": {
+      "type": "text",
+      "sample": "Invoice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-14"
+    },
+    "option_6": {
+      "type": "text",
+      "sample": "Date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-15"
+    },
+    "level_item": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hide": {
+      "type": "text",
+      "sample": "Tag",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_2": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_3": {
+      "type": "text",
+      "sample": "Invoice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_4": {
+      "type": "text",
+      "sample": "Date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "list_count": {
+      "type": "text",
+      "sample": "20 of 265",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis": {
+      "type": "text",
+      "sample": "KOT-URY-00237",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-18"
+    },
+    "tags_empty": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "URY-2026-2027-02779",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-19"
+    },
+    "ellipsis_3": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-20"
+    },
+    "count": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_5": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_2": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "KOT-URY-00261",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-23"
+    },
+    "tags_empty_2": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_3": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "URY-2026-2027-02786",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-24"
+    },
+    "ellipsis_6": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-25"
+    },
+    "count_2": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_6": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_4": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_7": {
+      "type": "text",
+      "sample": "KOT-URY-00260",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-28"
+    },
+    "tags_empty_3": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_5": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_8": {
+      "type": "text",
+      "sample": "URY-2026-2027-02786",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-29"
+    },
+    "ellipsis_9": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-30"
+    },
+    "count_3": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_7": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_6": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_10": {
+      "type": "text",
+      "sample": "KOT-URY-00259",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-33"
+    },
+    "tags_empty_4": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_7": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_11": {
+      "type": "text",
+      "sample": "URY-2026-2027-02786",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-34"
+    },
+    "ellipsis_12": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-35"
+    },
+    "count_4": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_8": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_8": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_13": {
+      "type": "text",
+      "sample": "KOT-URY-00258",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-38"
+    },
+    "tags_empty_5": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_9": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_14": {
+      "type": "text",
+      "sample": "URY-2026-2027-02785",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-39"
+    },
+    "ellipsis_15": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-40"
+    },
+    "count_5": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_9": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_10": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_16": {
+      "type": "text",
+      "sample": "KOT-URY-00257",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-43"
+    },
+    "tags_empty_6": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_11": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_17": {
+      "type": "text",
+      "sample": "URY-2026-2027-02785",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-44"
+    },
+    "ellipsis_18": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-45"
+    },
+    "count_6": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_10": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_12": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_19": {
+      "type": "text",
+      "sample": "KOT-URY-00256",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-48"
+    },
+    "tags_empty_7": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_13": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_20": {
+      "type": "text",
+      "sample": "URY-2026-2027-02785",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-49"
+    },
+    "ellipsis_21": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-50"
+    },
+    "count_7": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_11": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_14": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_22": {
+      "type": "text",
+      "sample": "KOT-URY-00255",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-53"
+    },
+    "tags_empty_8": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_15": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_23": {
+      "type": "text",
+      "sample": "URY-2026-2027-02784",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-54"
+    },
+    "ellipsis_24": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-55"
+    },
+    "count_8": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_12": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_16": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_25": {
+      "type": "text",
+      "sample": "KOT-URY-00254",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-58"
+    },
+    "tags_empty_9": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_17": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_26": {
+      "type": "text",
+      "sample": "URY-2026-2027-02784",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-59"
+    },
+    "ellipsis_27": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-60"
+    },
+    "count_9": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_13": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_18": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_28": {
+      "type": "text",
+      "sample": "KOT-URY-00253",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-63"
+    },
+    "tags_empty_10": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_19": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_29": {
+      "type": "text",
+      "sample": "URY-2026-2027-02784",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-64"
+    },
+    "ellipsis_30": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-65"
+    },
+    "count_10": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_14": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_20": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_31": {
+      "type": "text",
+      "sample": "KOT-URY-00252",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-68"
+    },
+    "tags_empty_11": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_21": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_32": {
+      "type": "text",
+      "sample": "URY-2026-2027-02783",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-69"
+    },
+    "ellipsis_33": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-70"
+    },
+    "count_11": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_15": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_22": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_34": {
+      "type": "text",
+      "sample": "KOT-URY-00251",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-73"
+    },
+    "tags_empty_12": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_23": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_35": {
+      "type": "text",
+      "sample": "URY-2026-2027-02783",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-74"
+    },
+    "ellipsis_36": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-75"
+    },
+    "count_12": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_16": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_24": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_37": {
+      "type": "text",
+      "sample": "KOT-URY-00250",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-78"
+    },
+    "tags_empty_13": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_25": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_38": {
+      "type": "text",
+      "sample": "URY-2026-2027-02783",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-79"
+    },
+    "ellipsis_39": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-80"
+    },
+    "count_13": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_17": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_26": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_40": {
+      "type": "text",
+      "sample": "KOT-URY-00249",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-83"
+    },
+    "tags_empty_14": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_27": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_41": {
+      "type": "text",
+      "sample": "URY-2026-2027-02782",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-84"
+    },
+    "ellipsis_42": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-85"
+    },
+    "count_14": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_18": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_28": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_43": {
+      "type": "text",
+      "sample": "KOT-URY-00248",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-88"
+    },
+    "tags_empty_15": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_29": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_44": {
+      "type": "text",
+      "sample": "URY-2026-2027-02782",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-89"
+    },
+    "ellipsis_45": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-90"
+    },
+    "count_15": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_19": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_30": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_46": {
+      "type": "text",
+      "sample": "KOT-URY-00247",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-93"
+    },
+    "tags_empty_16": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_31": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_47": {
+      "type": "text",
+      "sample": "URY-2026-2027-02782",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-94"
+    },
+    "ellipsis_48": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-95"
+    },
+    "count_16": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_20": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_32": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_49": {
+      "type": "text",
+      "sample": "KOT-URY-00246",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-98"
+    },
+    "tags_empty_17": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_33": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_50": {
+      "type": "text",
+      "sample": "URY-2026-2027-02782",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-99"
+    },
+    "ellipsis_51": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-100"
+    },
+    "count_17": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_21": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_34": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_52": {
+      "type": "text",
+      "sample": "KOT-URY-00245",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-103"
+    },
+    "tags_empty_18": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_35": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_53": {
+      "type": "text",
+      "sample": "URY-2026-2027-02782",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-104"
+    },
+    "ellipsis_54": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-105"
+    },
+    "count_18": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_22": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_36": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_55": {
+      "type": "text",
+      "sample": "KOT-URY-00244",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-108"
+    },
+    "tags_empty_19": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_37": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_56": {
+      "type": "text",
+      "sample": "URY-2026-2027-02781",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-109"
+    },
+    "ellipsis_57": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-110"
+    },
+    "count_19": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_23": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_38": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_58": {
+      "type": "text",
+      "sample": "KOT-URY-00243",
+      "maxLength": 26,
+      "where": "text",
+      "element": "kot-list.link-113"
+    },
+    "tags_empty_20": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_badge_label_39": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_59": {
+      "type": "text",
+      "sample": "URY-2026-2027-02781",
+      "maxLength": 38,
+      "where": "text",
+      "element": "kot-list.link-114"
+    },
+    "ellipsis_60": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.link-115"
+    },
+    "count_20": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hidden_xs_24": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_badge_label_40": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_gray_8": {
+      "type": "text",
+      "sample": "No URY KOT created",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "max_w_sm": {
+      "type": "text",
+      "sample": "Create your first URY KOT to get started.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_pill": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.button-117"
+    },
+    "es_pill_2": {
+      "type": "number",
+      "sample": "100",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.button-118"
+    },
+    "es_pill_3": {
+      "type": "number",
+      "sample": "500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.button-119"
+    },
+    "es_pill_4": {
+      "type": "number",
+      "sample": "2500",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-list.button-120"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Load More",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "input_max_width_dataoriginaltitle": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder": {
+      "type": "text",
+      "sample": "ID",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "kot-list.input-1"
+    },
+    "input_max_width_dataoriginaltitle_2": {
+      "type": "text",
+      "sample": "Order Status",
+      "maxLength": 24,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "input_xs_placeholder_2": {
+      "type": "text",
+      "sample": "Order Status",
+      "maxLength": 24,
+      "where": "attr:placeholder",
+      "element": "kot-list.input-3"
+    },
+    "filter_x_button_title": {
+      "type": "text",
+      "sample": "Clear all filters",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "kot-list.button-7"
+    },
+    "btn_order_title": {
+      "type": "text",
+      "sample": "descending",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "kot-list.button-8"
+    },
+    "btn_order_datavalue": {
+      "type": "text",
+      "sample": "desc",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.button-8"
+    },
+    "option_datavalue": {
+      "type": "text",
+      "sample": "modified",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-10"
+    },
+    "option_datavalue_2": {
+      "type": "text",
+      "sample": "name",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-11"
+    },
+    "option_datavalue_3": {
+      "type": "text",
+      "sample": "creation",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-12"
+    },
+    "option_datavalue_4": {
+      "type": "text",
+      "sample": "idx",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-13"
+    },
+    "option_datavalue_5": {
+      "type": "text",
+      "sample": "invoice",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-14"
+    },
+    "option_datavalue_6": {
+      "type": "text",
+      "sample": "date",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-list.link-15"
+    },
+    "level_item_title": {
+      "type": "text",
+      "sample": "Click to sort by ID",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title": {
+      "type": "text",
+      "sample": "Click to sort by Invoice",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_2": {
+      "type": "text",
+      "sample": "Click to sort by Date",
+      "maxLength": 42,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "hidden_xs_title_3": {
+      "type": "text",
+      "sample": "Liked by me",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_title": {
+      "type": "text",
+      "sample": "KOT-URY-00237",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-18"
+    },
+    "ellipsis_dataname": {
+      "type": "text",
+      "sample": "KOT-URY-00237",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-18"
+    },
+    "ellipsis_title_2": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_3": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02779",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_2": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02779",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-19"
+    },
+    "ellipsis_title_4": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_3": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-20"
+    },
+    "mini_title": {
+      "type": "text",
+      "sample": "22-10-2026 13:49:41",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname": {
+      "type": "text",
+      "sample": "KOT-URY-00237",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_5": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_4": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_6": {
+      "type": "text",
+      "sample": "KOT-URY-00261",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-23"
+    },
+    "ellipsis_dataname_2": {
+      "type": "text",
+      "sample": "KOT-URY-00261",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-23"
+    },
+    "ellipsis_title_7": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_5": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_8": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02786",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_6": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02786",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-24"
+    },
+    "ellipsis_title_9": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_7": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-25"
+    },
+    "mini_title_2": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_2": {
+      "type": "text",
+      "sample": "KOT-URY-00261",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_10": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_8": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_11": {
+      "type": "text",
+      "sample": "KOT-URY-00260",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-28"
+    },
+    "ellipsis_dataname_3": {
+      "type": "text",
+      "sample": "KOT-URY-00260",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-28"
+    },
+    "ellipsis_title_12": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_9": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_13": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02786",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_10": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02786",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-29"
+    },
+    "ellipsis_title_14": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_11": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-30"
+    },
+    "mini_title_3": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_3": {
+      "type": "text",
+      "sample": "KOT-URY-00260",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_15": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_12": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_16": {
+      "type": "text",
+      "sample": "KOT-URY-00259",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-33"
+    },
+    "ellipsis_dataname_4": {
+      "type": "text",
+      "sample": "KOT-URY-00259",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-33"
+    },
+    "ellipsis_title_17": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_13": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_18": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02786",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_14": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02786",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-34"
+    },
+    "ellipsis_title_19": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_15": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-35"
+    },
+    "mini_title_4": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_4": {
+      "type": "text",
+      "sample": "KOT-URY-00259",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_20": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_16": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_21": {
+      "type": "text",
+      "sample": "KOT-URY-00258",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-38"
+    },
+    "ellipsis_dataname_5": {
+      "type": "text",
+      "sample": "KOT-URY-00258",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-38"
+    },
+    "ellipsis_title_22": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_17": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_23": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02785",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_18": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02785",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-39"
+    },
+    "ellipsis_title_24": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_19": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-40"
+    },
+    "mini_title_5": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_5": {
+      "type": "text",
+      "sample": "KOT-URY-00258",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_25": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_20": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_26": {
+      "type": "text",
+      "sample": "KOT-URY-00257",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-43"
+    },
+    "ellipsis_dataname_6": {
+      "type": "text",
+      "sample": "KOT-URY-00257",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-43"
+    },
+    "ellipsis_title_27": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_21": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_28": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02785",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_22": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02785",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-44"
+    },
+    "ellipsis_title_29": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_23": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-45"
+    },
+    "mini_title_6": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_6": {
+      "type": "text",
+      "sample": "KOT-URY-00257",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_30": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_24": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_31": {
+      "type": "text",
+      "sample": "KOT-URY-00256",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-48"
+    },
+    "ellipsis_dataname_7": {
+      "type": "text",
+      "sample": "KOT-URY-00256",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-48"
+    },
+    "ellipsis_title_32": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_25": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_33": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02785",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_26": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02785",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-49"
+    },
+    "ellipsis_title_34": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_27": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-50"
+    },
+    "mini_title_7": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_7": {
+      "type": "text",
+      "sample": "KOT-URY-00256",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_35": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_28": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_36": {
+      "type": "text",
+      "sample": "KOT-URY-00255",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-53"
+    },
+    "ellipsis_dataname_8": {
+      "type": "text",
+      "sample": "KOT-URY-00255",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-53"
+    },
+    "ellipsis_title_37": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_29": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_38": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02784",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_30": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02784",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-54"
+    },
+    "ellipsis_title_39": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_31": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-55"
+    },
+    "mini_title_8": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_8": {
+      "type": "text",
+      "sample": "KOT-URY-00255",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_40": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_32": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_41": {
+      "type": "text",
+      "sample": "KOT-URY-00254",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-58"
+    },
+    "ellipsis_dataname_9": {
+      "type": "text",
+      "sample": "KOT-URY-00254",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-58"
+    },
+    "ellipsis_title_42": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_33": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_43": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02784",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_34": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02784",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-59"
+    },
+    "ellipsis_title_44": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_35": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-60"
+    },
+    "mini_title_9": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_9": {
+      "type": "text",
+      "sample": "KOT-URY-00254",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_45": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_36": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_46": {
+      "type": "text",
+      "sample": "KOT-URY-00253",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-63"
+    },
+    "ellipsis_dataname_10": {
+      "type": "text",
+      "sample": "KOT-URY-00253",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-63"
+    },
+    "ellipsis_title_47": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_37": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_48": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02784",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_38": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02784",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-64"
+    },
+    "ellipsis_title_49": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_39": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-65"
+    },
+    "mini_title_10": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:44",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_10": {
+      "type": "text",
+      "sample": "KOT-URY-00253",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_50": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_40": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_51": {
+      "type": "text",
+      "sample": "KOT-URY-00252",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-68"
+    },
+    "ellipsis_dataname_11": {
+      "type": "text",
+      "sample": "KOT-URY-00252",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-68"
+    },
+    "ellipsis_title_52": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_41": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_53": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02783",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_42": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02783",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-69"
+    },
+    "ellipsis_title_54": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_43": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-70"
+    },
+    "mini_title_11": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_11": {
+      "type": "text",
+      "sample": "KOT-URY-00252",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_55": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_44": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_56": {
+      "type": "text",
+      "sample": "KOT-URY-00251",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-73"
+    },
+    "ellipsis_dataname_12": {
+      "type": "text",
+      "sample": "KOT-URY-00251",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-73"
+    },
+    "ellipsis_title_57": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_45": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_58": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02783",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_46": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02783",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-74"
+    },
+    "ellipsis_title_59": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_47": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-75"
+    },
+    "mini_title_12": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_12": {
+      "type": "text",
+      "sample": "KOT-URY-00251",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_60": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_48": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_61": {
+      "type": "text",
+      "sample": "KOT-URY-00250",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-78"
+    },
+    "ellipsis_dataname_13": {
+      "type": "text",
+      "sample": "KOT-URY-00250",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-78"
+    },
+    "ellipsis_title_62": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_49": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_63": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02783",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_50": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02783",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-79"
+    },
+    "ellipsis_title_64": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_51": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-80"
+    },
+    "mini_title_13": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_13": {
+      "type": "text",
+      "sample": "KOT-URY-00250",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_65": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_52": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_66": {
+      "type": "text",
+      "sample": "KOT-URY-00249",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-83"
+    },
+    "ellipsis_dataname_14": {
+      "type": "text",
+      "sample": "KOT-URY-00249",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-83"
+    },
+    "ellipsis_title_67": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_53": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_68": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02782",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_54": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02782",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-84"
+    },
+    "ellipsis_title_69": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_55": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-85"
+    },
+    "mini_title_14": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_14": {
+      "type": "text",
+      "sample": "KOT-URY-00249",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_70": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_56": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_71": {
+      "type": "text",
+      "sample": "KOT-URY-00248",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-88"
+    },
+    "ellipsis_dataname_15": {
+      "type": "text",
+      "sample": "KOT-URY-00248",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-88"
+    },
+    "ellipsis_title_72": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_57": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_73": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02782",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_58": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02782",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-89"
+    },
+    "ellipsis_title_74": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_59": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-90"
+    },
+    "mini_title_15": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_15": {
+      "type": "text",
+      "sample": "KOT-URY-00248",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_75": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_60": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_76": {
+      "type": "text",
+      "sample": "KOT-URY-00247",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-93"
+    },
+    "ellipsis_dataname_16": {
+      "type": "text",
+      "sample": "KOT-URY-00247",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-93"
+    },
+    "ellipsis_title_77": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_61": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_78": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02782",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_62": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02782",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-94"
+    },
+    "ellipsis_title_79": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_63": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-95"
+    },
+    "mini_title_16": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_16": {
+      "type": "text",
+      "sample": "KOT-URY-00247",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_80": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_64": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_81": {
+      "type": "text",
+      "sample": "KOT-URY-00246",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-98"
+    },
+    "ellipsis_dataname_17": {
+      "type": "text",
+      "sample": "KOT-URY-00246",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-98"
+    },
+    "ellipsis_title_82": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_65": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_83": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02782",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_66": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02782",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-99"
+    },
+    "ellipsis_title_84": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_67": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-100"
+    },
+    "mini_title_17": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_17": {
+      "type": "text",
+      "sample": "KOT-URY-00246",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_85": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_68": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_86": {
+      "type": "text",
+      "sample": "KOT-URY-00245",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-103"
+    },
+    "ellipsis_dataname_18": {
+      "type": "text",
+      "sample": "KOT-URY-00245",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-103"
+    },
+    "ellipsis_title_87": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_69": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_88": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02782",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_70": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02782",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-104"
+    },
+    "ellipsis_title_89": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_71": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-105"
+    },
+    "mini_title_18": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_18": {
+      "type": "text",
+      "sample": "KOT-URY-00245",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_90": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_72": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_91": {
+      "type": "text",
+      "sample": "KOT-URY-00244",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-108"
+    },
+    "ellipsis_dataname_19": {
+      "type": "text",
+      "sample": "KOT-URY-00244",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-108"
+    },
+    "ellipsis_title_92": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_73": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_93": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02781",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_74": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02781",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-109"
+    },
+    "ellipsis_title_94": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_75": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-110"
+    },
+    "mini_title_19": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_19": {
+      "type": "text",
+      "sample": "KOT-URY-00244",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_95": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_76": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_96": {
+      "type": "text",
+      "sample": "KOT-URY-00243",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "kot-list.link-113"
+    },
+    "ellipsis_dataname_20": {
+      "type": "text",
+      "sample": "KOT-URY-00243",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "kot-list.link-113"
+    },
+    "ellipsis_title_97": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_77": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "ellipsis_title_98": {
+      "type": "text",
+      "sample": "Invoice: URY-2026-2027-02781",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_78": {
+      "type": "text",
+      "sample": "invoice,=,URY-2026-2027-02781",
+      "maxLength": 58,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-114"
+    },
+    "ellipsis_title_99": {
+      "type": "text",
+      "sample": "Date: 2026-10-22",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_79": {
+      "type": "text",
+      "sample": "date,=,2026-10-22",
+      "maxLength": 34,
+      "where": "attr:data-filter",
+      "element": "kot-list.link-115"
+    },
+    "mini_title_20": {
+      "type": "text",
+      "sample": "22-10-2026 12:17:43",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "not_liked_dataname_20": {
+      "type": "text",
+      "sample": "KOT-URY-00243",
+      "maxLength": 26,
+      "where": "attr:data-name",
+      "element": "span"
+    },
+    "ellipsis_title_100": {
+      "type": "text",
+      "sample": "Document has been submitted",
+      "maxLength": 54,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "ellipsis_datafilter_80": {
+      "type": "text",
+      "sample": "docstatus,=,1",
+      "maxLength": 26,
+      "where": "attr:data-filter",
+      "element": "span"
+    },
+    "es_tab_buttons_arialabel": {
+      "type": "text",
+      "sample": "Page Size",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    }
+  }
+}

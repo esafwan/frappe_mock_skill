@@ -1,0 +1,747 @@
+{
+  "component": "kot-form",
+  "slots": {
+    "section_head": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.div-1"
+    },
+    "section_head_2": {
+      "type": "text",
+      "sample": "Graph",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.div-3"
+    },
+    "section_head_3": {
+      "type": "text",
+      "sample": "Stats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.div-5"
+    },
+    "tooltip_content": {
+      "type": "text",
+      "sample": "__newname",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label": {
+      "type": "text",
+      "sample": "Invoice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input": {
+      "type": "text",
+      "sample": "URY-2026-2027-02779",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_2": {
+      "type": "text",
+      "sample": "invoice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_2": {
+      "type": "text",
+      "sample": "Restaurant Table",
+      "maxLength": 32,
+      "where": "text",
+      "element": "label"
+    },
+    "visually_hidden": {
+      "type": "text",
+      "sample": "Begin typing for results.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "hide": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.link-10"
+    },
+    "tooltip_content_3": {
+      "type": "text",
+      "sample": "restaurant_table",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_3": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_2": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.link-11"
+    },
+    "tooltip_content_4": {
+      "type": "text",
+      "sample": "customer_name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_4": {
+      "type": "text",
+      "sample": "Original KOT",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_5": {
+      "type": "text",
+      "sample": "original_kot",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "reqd": {
+      "type": "text",
+      "sample": "Date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "bold": {
+      "type": "date",
+      "sample": "22-10-2026",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_6": {
+      "type": "text",
+      "sample": "date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_5": {
+      "type": "text",
+      "sample": "Time",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_3": {
+      "type": "time",
+      "sample": "12:11:12",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_7": {
+      "type": "text",
+      "sample": "time",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_6": {
+      "type": "text",
+      "sample": "Type",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_4": {
+      "type": "text",
+      "sample": "New Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_8": {
+      "type": "text",
+      "sample": "type",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_7": {
+      "type": "text",
+      "sample": "Order Status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_5": {
+      "type": "text",
+      "sample": "Ready For Prepare",
+      "maxLength": 34,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_9": {
+      "type": "text",
+      "sample": "order_status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_8": {
+      "type": "text",
+      "sample": "Production",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_6": {
+      "type": "text",
+      "sample": "Beverage Bar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "kot-form.link-12"
+    },
+    "tooltip_content_10": {
+      "type": "text",
+      "sample": "production",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_9": {
+      "type": "text",
+      "sample": "Start Time For Preparation",
+      "maxLength": 52,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_7": {
+      "type": "time",
+      "sample": "12:17:43",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_11": {
+      "type": "text",
+      "sample": "start_time_prep",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_10": {
+      "type": "text",
+      "sample": "Total Production Time",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_12": {
+      "type": "text",
+      "sample": "production_time",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_11": {
+      "type": "text",
+      "sample": "Served Time",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_13": {
+      "type": "text",
+      "sample": "start_time_serv",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_14": {
+      "type": "text",
+      "sample": "kot_items",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_12": {
+      "type": "text",
+      "sample": "KOT Items",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "grid_static_col": {
+      "type": "text",
+      "sample": "No.",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_2": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_3": {
+      "type": "text",
+      "sample": "Quantity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "grid_static_col_2": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "ellipsis_4": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "text",
+      "element": "kot-form.link-17"
+    },
+    "ellipsis_5": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "ellipsis_6": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "hidden": {
+      "type": "text",
+      "sample": "No rows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "es_button_loading_label": {
+      "type": "text",
+      "sample": "Deleting...",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_2": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_3": {
+      "type": "text",
+      "sample": "Delete all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_4": {
+      "type": "text",
+      "sample": "Duplicate rows",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_5": {
+      "type": "text",
+      "sample": "Add row",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_6": {
+      "type": "text",
+      "sample": "Add multiple",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_7": {
+      "type": "text",
+      "sample": "Download",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "es_button_label_8": {
+      "type": "text",
+      "sample": "Upload",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_15": {
+      "type": "text",
+      "sample": "naming_series",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_16": {
+      "type": "text",
+      "sample": "pos_profile",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_13": {
+      "type": "text",
+      "sample": "Comments",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_17": {
+      "type": "text",
+      "sample": "comments",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_14": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_8": {
+      "type": "text",
+      "sample": "URY Branch",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kot-form.link-27"
+    },
+    "tooltip_content_18": {
+      "type": "text",
+      "sample": "branch",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area": {
+      "type": "text",
+      "sample": "Verified",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_19": {
+      "type": "text",
+      "sample": "verified",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_15": {
+      "type": "text",
+      "sample": "Order No",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_9": {
+      "type": "number",
+      "sample": "28",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_20": {
+      "type": "text",
+      "sample": "order_no",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_16": {
+      "type": "text",
+      "sample": "Aggregator ID",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_21": {
+      "type": "text",
+      "sample": "aggregator_id",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_22": {
+      "type": "text",
+      "sample": "is_aggregator",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_17": {
+      "type": "text",
+      "sample": "verified_by",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_23": {
+      "type": "text",
+      "sample": "verified_by",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_18": {
+      "type": "text",
+      "sample": "Customer group",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_24": {
+      "type": "text",
+      "sample": "customer_group",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "label_area_2": {
+      "type": "text",
+      "sample": "Table Takeaway",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_25": {
+      "type": "text",
+      "sample": "table_takeaway",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_19": {
+      "type": "text",
+      "sample": "user",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "like_disabled_input_10": {
+      "type": "text",
+      "sample": "Administrator",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "tooltip_content_26": {
+      "type": "text",
+      "sample": "user",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "control_label_20": {
+      "type": "text",
+      "sample": "Amended From",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "tooltip_content_27": {
+      "type": "text",
+      "sample": "amended_from",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "tooltip_content_28": {
+      "type": "text",
+      "sample": "validation_dedup_key",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "form_control_value": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "kot-form.input-7"
+    },
+    "btn_clear_title": {
+      "type": "text",
+      "sample": "Clear Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "kot-form.link-8"
+    },
+    "btn_open_title": {
+      "type": "text",
+      "sample": "Open Link",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "kot-form.link-9"
+    },
+    "hide_dataname": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "attr:data-name",
+      "element": "kot-form.link-10"
+    },
+    "hide_datavalue": {
+      "type": "text",
+      "sample": "F1",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-form.link-10"
+    },
+    "like_disabled_input_dataname": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:data-name",
+      "element": "kot-form.link-11"
+    },
+    "like_disabled_input_datavalue": {
+      "type": "text",
+      "sample": "fairooz",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-form.link-11"
+    },
+    "like_disabled_input_dataname_2": {
+      "type": "text",
+      "sample": "Beverage Bar",
+      "maxLength": 24,
+      "where": "attr:data-name",
+      "element": "kot-form.link-12"
+    },
+    "like_disabled_input_datavalue_2": {
+      "type": "text",
+      "sample": "Beverage Bar",
+      "maxLength": 24,
+      "where": "attr:data-value",
+      "element": "kot-form.link-12"
+    },
+    "grid_static_col_title": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "kot-form.div-14"
+    },
+    "grid_static_col_title_2": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "grid_data_last_title": {
+      "type": "text",
+      "sample": "Quantity",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "grid_row_dataname": {
+      "type": "text",
+      "sample": "URYKOTITM00330",
+      "maxLength": 28,
+      "where": "attr:data-name",
+      "element": "div"
+    },
+    "ellipsis_dataname": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "attr:data-name",
+      "element": "kot-form.link-17"
+    },
+    "ellipsis_datavalue": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "attr:data-value",
+      "element": "kot-form.link-17"
+    },
+    "btn_open_row_dataoriginaltitle": {
+      "type": "text",
+      "sample": "Edit",
+      "maxLength": 20,
+      "where": "attr:data-original-title",
+      "element": "div"
+    },
+    "like_disabled_input_title": {
+      "type": "text",
+      "sample": "This value is fetched from Pos Profile's Branch field",
+      "maxLength": 106,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "like_disabled_input_dataname_3": {
+      "type": "text",
+      "sample": "URY Branch",
+      "maxLength": 20,
+      "where": "attr:data-name",
+      "element": "kot-form.link-27"
+    },
+    "like_disabled_input_datavalue_3": {
+      "type": "text",
+      "sample": "URY Branch",
+      "maxLength": 20,
+      "where": "attr:data-value",
+      "element": "kot-form.link-27"
+    },
+    "like_disabled_input_title_2": {
+      "type": "text",
+      "sample": "This value is fetched from Customer Name's Customer Group field",
+      "maxLength": 126,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "disp_area_title": {
+      "type": "text",
+      "sample": "This value is fetched from Restaurant Table's Is Take Away field",
+      "maxLength": 128,
+      "where": "attr:title",
+      "element": "span"
+    }
+  }
+}

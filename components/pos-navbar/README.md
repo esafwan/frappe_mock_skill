@@ -6,7 +6,7 @@ POS top bar.
 
 **Slots people usually change:** `font_medium` (text, e.g. "Administrator"). All 5 slots are in `slots.json`.
 
-**States:** default (none), hover (css-pseudo), focus (css-pseudo). Details and class/attribute changes in `states.json`.
+**States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="pos-navbar"`; 3 interactive elements with measured boxes in `measurements.json` (e.g. `pos-navbar.logo`, `pos-navbar.search`, `pos-navbar.user`).
 

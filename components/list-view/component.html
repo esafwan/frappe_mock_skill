@@ -57,10 +57,10 @@
 					</span>
 				</button>
 			</div>
-		</div><div class="sort-selector">  <div class="btn-group">   <button class="btn btn-default btn-sm btn-order" data-value="desc" title="{{btn_order_title}}" data-ui="list-view.sort-1">    <span class="sort-order">     <svg class="icon icon-sm">      <use href="#icon-arrow-down-wide-narrow"></use>     </svg>    </span>   </button>   <button type="button" class="btn btn-default btn-sm sort-selector-button text-nowrap" data-toggle="dropdown" data-ui="list-view.sort-2">    <span class="dropdown-text hidden-sm">{{hidden_sm}}</span>    <span><svg class="icon  icon-sm" style="" aria-hidden="true">
+		</div><div class="sort-selector">  <div class="btn-group">   <button class="btn btn-default btn-sm btn-order" data-value="{{btn_order_datavalue}}" title="{{btn_order_title}}" data-ui="list-view.sort-1">    <span class="sort-order">     <svg class="icon icon-sm">      <use href="#icon-arrow-down-wide-narrow"></use>     </svg>    </span>   </button>   <button type="button" class="btn btn-default btn-sm sort-selector-button text-nowrap" data-toggle="dropdown" data-ui="list-view.sort-2">    <span class="dropdown-text hidden-sm">{{hidden_sm}}</span>    <span><svg class="icon  icon-sm" style="" aria-hidden="true">
 			<use class="" href="#icon-chevron-down">
 			</use>
-		</svg></span>    <ul class="dropdown-menu dropdown-menu-right">          <li>      <a class="dropdown-item option" data-value="modified" data-ui="list-view.link-7">       {{option}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="creation" data-ui="list-view.link-8">       {{option_2}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_name" data-ui="list-view.link-9">       {{option_3}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="name" data-ui="list-view.link-10">       {{option_4}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="idx" data-ui="list-view.link-11">       {{option_5}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_type" data-ui="list-view.link-12">       {{option_6}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="customer_group" data-ui="list-view.link-13">       {{option_7}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="territory" data-ui="list-view.link-14">       {{option_8}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="default_currency" data-ui="list-view.link-15">       {{option_9}}      </a>     </li>         </ul>   </button>  </div> </div></div></div><div class="frappe-list"><div class="result-container" style="height: 754px;"><div class="result no-assign-to" data-comment-count-length="1" style="height: 850px; --list-right-width: 138.75px;">
+		</svg></span>    <ul class="dropdown-menu dropdown-menu-right">          <li>      <a class="dropdown-item option" data-value="{{option_datavalue}}" data-ui="list-view.link-7">       {{option}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_2}}" data-ui="list-view.link-8">       {{option_2}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_3}}" data-ui="list-view.link-9">       {{option_3}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_4}}" data-ui="list-view.link-10">       {{option_4}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_5}}" data-ui="list-view.link-11">       {{option_5}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_6}}" data-ui="list-view.link-12">       {{option_6}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_7}}" data-ui="list-view.link-13">       {{option_7}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_8}}" data-ui="list-view.link-14">       {{option_8}}      </a>     </li>          <li>      <a class="dropdown-item option" data-value="{{option_datavalue_9}}" data-ui="list-view.link-15">       {{option_9}}      </a>     </li>         </ul>   </button>  </div> </div></div></div><div class="frappe-list"><div class="result-container" style="height: 754px;"><div class="result no-assign-to" data-comment-count-length="1" style="height: 850px; --list-right-width: 138.75px;">
 		<div class="list-row-container">
 			<header class="level list-row-head text-muted">
 				<div class="level-left list-header-subject">
@@ -113,7 +113,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Direct" data-ui="list-view.input-17"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Direct" href="#" title="{{ellipsis_title}}" data-ui="list-view.link-18">{{ellipsis}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Direct" data-ui="list-view.input-17"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname}}" href="#" title="{{ellipsis_title}}" data-ui="list-view.link-18">{{ellipsis}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -121,18 +121,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_2}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_2}}" data-filter="{{ellipsis_datafilter}}"><span class="es-badge__label">{{es_badge_label}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_3}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_2}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_2}}"><span class="es-badge__label">{{es_badge_label_2}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_4}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-19">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_3}}" data-ui="list-view.link-19">
 					{{ellipsis_2}}
 				</a>
 			</span>
@@ -140,7 +140,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_5}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-20">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_4}}" data-ui="list-view.link-20">
 					{{ellipsis_3}}
 				</a>
 			</span>
@@ -148,7 +148,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_6}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-21">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_5}}" data-ui="list-view.link-21">
 					
 				</a>
 			</span>
@@ -156,7 +156,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_7}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Direct" data-ui="list-view.link-22">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_6}}" data-ui="list-view.link-22">
 					{{ellipsis_4}}
 				</a>
 			</span>
@@ -179,11 +179,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_8}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Direct" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_8}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_3}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_8}}" data-filter="{{ellipsis_datafilter_7}}"><span class="es-badge__label">{{es_badge_label_3}}</span></span>
 			</div>
 		
 					</div>
@@ -195,7 +195,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Zomato" data-ui="list-view.input-24"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Zomato" href="#" title="{{ellipsis_title_9}}" data-ui="list-view.link-25">{{ellipsis_5}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Zomato" data-ui="list-view.input-24"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_2}}" href="#" title="{{ellipsis_title_9}}" data-ui="list-view.link-25">{{ellipsis_5}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -203,18 +203,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_10}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_4}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_10}}" data-filter="{{ellipsis_datafilter_8}}"><span class="es-badge__label">{{es_badge_label_4}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_11}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_5}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_9}}"><span class="es-badge__label">{{es_badge_label_5}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_12}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-26">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_10}}" data-ui="list-view.link-26">
 					{{ellipsis_6}}
 				</a>
 			</span>
@@ -222,7 +222,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_13}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-27">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_11}}" data-ui="list-view.link-27">
 					{{ellipsis_7}}
 				</a>
 			</span>
@@ -230,7 +230,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_14}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-28">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_12}}" data-ui="list-view.link-28">
 					
 				</a>
 			</span>
@@ -238,7 +238,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_15}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Zomato" data-ui="list-view.link-29">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_13}}" data-ui="list-view.link-29">
 					{{ellipsis_8}}
 				</a>
 			</span>
@@ -261,11 +261,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_9}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Zomato" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_2}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_16}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_6}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_16}}" data-filter="{{ellipsis_datafilter_14}}"><span class="es-badge__label">{{es_badge_label_6}}</span></span>
 			</div>
 		
 					</div>
@@ -277,7 +277,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Neha Kapoor" data-ui="list-view.input-31"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Neha Kapoor" href="#" title="{{ellipsis_title_17}}" data-ui="list-view.link-32">{{ellipsis_9}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Neha Kapoor" data-ui="list-view.input-31"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_3}}" href="#" title="{{ellipsis_title_17}}" data-ui="list-view.link-32">{{ellipsis_9}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -285,18 +285,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_18}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_7}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_18}}" data-filter="{{ellipsis_datafilter_15}}"><span class="es-badge__label">{{es_badge_label_7}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_19}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_8}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_16}}"><span class="es-badge__label">{{es_badge_label_8}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_20}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-33">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_17}}" data-ui="list-view.link-33">
 					{{ellipsis_10}}
 				</a>
 			</span>
@@ -304,7 +304,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_21}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-34">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_18}}" data-ui="list-view.link-34">
 					{{ellipsis_11}}
 				</a>
 			</span>
@@ -312,7 +312,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_22}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-35">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_19}}" data-ui="list-view.link-35">
 					
 				</a>
 			</span>
@@ -320,7 +320,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_23}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Neha Kapoor" data-ui="list-view.link-36">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_20}}" data-ui="list-view.link-36">
 					{{ellipsis_12}}
 				</a>
 			</span>
@@ -343,11 +343,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_10}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Neha Kapoor" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_3}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_24}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_9}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_24}}" data-filter="{{ellipsis_datafilter_21}}"><span class="es-badge__label">{{es_badge_label_9}}</span></span>
 			</div>
 		
 					</div>
@@ -359,7 +359,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Arjun Rao" data-ui="list-view.input-38"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Arjun Rao" href="#" title="{{ellipsis_title_25}}" data-ui="list-view.link-39">{{ellipsis_13}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Arjun Rao" data-ui="list-view.input-38"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_4}}" href="#" title="{{ellipsis_title_25}}" data-ui="list-view.link-39">{{ellipsis_13}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -367,18 +367,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_26}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_10}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_26}}" data-filter="{{ellipsis_datafilter_22}}"><span class="es-badge__label">{{es_badge_label_10}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_27}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_11}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_23}}"><span class="es-badge__label">{{es_badge_label_11}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_28}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-40">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_24}}" data-ui="list-view.link-40">
 					{{ellipsis_14}}
 				</a>
 			</span>
@@ -386,7 +386,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_29}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-41">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_25}}" data-ui="list-view.link-41">
 					{{ellipsis_15}}
 				</a>
 			</span>
@@ -394,7 +394,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_30}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-42">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_26}}" data-ui="list-view.link-42">
 					
 				</a>
 			</span>
@@ -402,7 +402,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_31}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Arjun Rao" data-ui="list-view.link-43">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_27}}" data-ui="list-view.link-43">
 					{{ellipsis_16}}
 				</a>
 			</span>
@@ -425,11 +425,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_11}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Arjun Rao" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_4}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_32}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_12}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_32}}" data-filter="{{ellipsis_datafilter_28}}"><span class="es-badge__label">{{es_badge_label_12}}</span></span>
 			</div>
 		
 					</div>
@@ -441,7 +441,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Kavita Joshi" data-ui="list-view.input-45"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Kavita Joshi" href="#" title="{{ellipsis_title_33}}" data-ui="list-view.link-46">{{ellipsis_17}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Kavita Joshi" data-ui="list-view.input-45"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_5}}" href="#" title="{{ellipsis_title_33}}" data-ui="list-view.link-46">{{ellipsis_17}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -449,18 +449,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_34}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_13}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_34}}" data-filter="{{ellipsis_datafilter_29}}"><span class="es-badge__label">{{es_badge_label_13}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_35}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_14}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_30}}"><span class="es-badge__label">{{es_badge_label_14}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_36}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-47">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_31}}" data-ui="list-view.link-47">
 					{{ellipsis_18}}
 				</a>
 			</span>
@@ -468,7 +468,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_37}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-48">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_32}}" data-ui="list-view.link-48">
 					{{ellipsis_19}}
 				</a>
 			</span>
@@ -476,7 +476,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_38}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-49">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_33}}" data-ui="list-view.link-49">
 					
 				</a>
 			</span>
@@ -484,7 +484,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_39}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Kavita Joshi" data-ui="list-view.link-50">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_34}}" data-ui="list-view.link-50">
 					{{ellipsis_20}}
 				</a>
 			</span>
@@ -507,11 +507,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_12}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Kavita Joshi" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_5}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_40}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_15}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_40}}" data-filter="{{ellipsis_datafilter_35}}"><span class="es-badge__label">{{es_badge_label_15}}</span></span>
 			</div>
 		
 					</div>
@@ -523,7 +523,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rohan Mehta" data-ui="list-view.input-52"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Rohan Mehta" href="#" title="{{ellipsis_title_41}}" data-ui="list-view.link-53">{{ellipsis_21}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rohan Mehta" data-ui="list-view.input-52"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_6}}" href="#" title="{{ellipsis_title_41}}" data-ui="list-view.link-53">{{ellipsis_21}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -531,18 +531,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_42}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_16}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_42}}" data-filter="{{ellipsis_datafilter_36}}"><span class="es-badge__label">{{es_badge_label_16}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_43}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_17}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_37}}"><span class="es-badge__label">{{es_badge_label_17}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_44}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-54">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_38}}" data-ui="list-view.link-54">
 					{{ellipsis_22}}
 				</a>
 			</span>
@@ -550,7 +550,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_45}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-55">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_39}}" data-ui="list-view.link-55">
 					{{ellipsis_23}}
 				</a>
 			</span>
@@ -558,7 +558,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_46}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-56">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_40}}" data-ui="list-view.link-56">
 					
 				</a>
 			</span>
@@ -566,7 +566,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_47}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Rohan Mehta" data-ui="list-view.link-57">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_41}}" data-ui="list-view.link-57">
 					{{ellipsis_24}}
 				</a>
 			</span>
@@ -589,11 +589,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_13}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Rohan Mehta" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_6}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_48}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_18}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_48}}" data-filter="{{ellipsis_datafilter_42}}"><span class="es-badge__label">{{es_badge_label_18}}</span></span>
 			</div>
 		
 					</div>
@@ -605,7 +605,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Anjali Nair" data-ui="list-view.input-59"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Anjali Nair" href="#" title="{{ellipsis_title_49}}" data-ui="list-view.link-60">{{ellipsis_25}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Anjali Nair" data-ui="list-view.input-59"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_7}}" href="#" title="{{ellipsis_title_49}}" data-ui="list-view.link-60">{{ellipsis_25}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -613,18 +613,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_50}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_19}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_50}}" data-filter="{{ellipsis_datafilter_43}}"><span class="es-badge__label">{{es_badge_label_19}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_51}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_20}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_44}}"><span class="es-badge__label">{{es_badge_label_20}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_52}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-61">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_45}}" data-ui="list-view.link-61">
 					{{ellipsis_26}}
 				</a>
 			</span>
@@ -632,7 +632,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_53}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-62">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_46}}" data-ui="list-view.link-62">
 					{{ellipsis_27}}
 				</a>
 			</span>
@@ -640,7 +640,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_54}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-63">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_47}}" data-ui="list-view.link-63">
 					
 				</a>
 			</span>
@@ -648,7 +648,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_55}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Anjali Nair" data-ui="list-view.link-64">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_48}}" data-ui="list-view.link-64">
 					{{ellipsis_28}}
 				</a>
 			</span>
@@ -671,11 +671,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_14}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Anjali Nair" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_7}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_56}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_21}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_56}}" data-filter="{{ellipsis_datafilter_49}}"><span class="es-badge__label">{{es_badge_label_21}}</span></span>
 			</div>
 		
 					</div>
@@ -687,7 +687,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Vikram Singh" data-ui="list-view.input-66"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Vikram Singh" href="#" title="{{ellipsis_title_57}}" data-ui="list-view.link-67">{{ellipsis_29}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Vikram Singh" data-ui="list-view.input-66"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_8}}" href="#" title="{{ellipsis_title_57}}" data-ui="list-view.link-67">{{ellipsis_29}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -695,18 +695,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_58}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_22}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_58}}" data-filter="{{ellipsis_datafilter_50}}"><span class="es-badge__label">{{es_badge_label_22}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_59}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_23}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_51}}"><span class="es-badge__label">{{es_badge_label_23}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_60}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-68">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_52}}" data-ui="list-view.link-68">
 					{{ellipsis_30}}
 				</a>
 			</span>
@@ -714,7 +714,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_61}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-69">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_53}}" data-ui="list-view.link-69">
 					{{ellipsis_31}}
 				</a>
 			</span>
@@ -722,7 +722,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_62}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-70">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_54}}" data-ui="list-view.link-70">
 					
 				</a>
 			</span>
@@ -730,7 +730,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_63}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Vikram Singh" data-ui="list-view.link-71">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_55}}" data-ui="list-view.link-71">
 					{{ellipsis_32}}
 				</a>
 			</span>
@@ -753,11 +753,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_15}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Vikram Singh" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_8}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_64}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_24}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_64}}" data-filter="{{ellipsis_datafilter_56}}"><span class="es-badge__label">{{es_badge_label_24}}</span></span>
 			</div>
 		
 					</div>
@@ -769,7 +769,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Sneha Reddy" data-ui="list-view.input-73"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Sneha Reddy" href="#" title="{{ellipsis_title_65}}" data-ui="list-view.link-74">{{ellipsis_33}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Sneha Reddy" data-ui="list-view.input-73"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_9}}" href="#" title="{{ellipsis_title_65}}" data-ui="list-view.link-74">{{ellipsis_33}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -777,18 +777,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_66}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_25}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_66}}" data-filter="{{ellipsis_datafilter_57}}"><span class="es-badge__label">{{es_badge_label_25}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_67}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_26}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_58}}"><span class="es-badge__label">{{es_badge_label_26}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_68}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-75">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_59}}" data-ui="list-view.link-75">
 					{{ellipsis_34}}
 				</a>
 			</span>
@@ -796,7 +796,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_69}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-76">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_60}}" data-ui="list-view.link-76">
 					{{ellipsis_35}}
 				</a>
 			</span>
@@ -804,7 +804,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_70}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-77">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_61}}" data-ui="list-view.link-77">
 					
 				</a>
 			</span>
@@ -812,7 +812,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_71}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Sneha Reddy" data-ui="list-view.link-78">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_62}}" data-ui="list-view.link-78">
 					{{ellipsis_36}}
 				</a>
 			</span>
@@ -835,11 +835,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_16}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Sneha Reddy" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_9}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_72}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_27}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_72}}" data-filter="{{ellipsis_datafilter_63}}"><span class="es-badge__label">{{es_badge_label_27}}</span></span>
 			</div>
 		
 					</div>
@@ -851,7 +851,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Amit Verma" data-ui="list-view.input-80"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Amit Verma" href="#" title="{{ellipsis_title_73}}" data-ui="list-view.link-81">{{ellipsis_37}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Amit Verma" data-ui="list-view.input-80"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_10}}" href="#" title="{{ellipsis_title_73}}" data-ui="list-view.link-81">{{ellipsis_37}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -859,18 +859,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_74}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_28}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_74}}" data-filter="{{ellipsis_datafilter_64}}"><span class="es-badge__label">{{es_badge_label_28}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_75}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_29}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_65}}"><span class="es-badge__label">{{es_badge_label_29}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_76}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-82">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_66}}" data-ui="list-view.link-82">
 					{{ellipsis_38}}
 				</a>
 			</span>
@@ -878,7 +878,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_77}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-83">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_67}}" data-ui="list-view.link-83">
 					{{ellipsis_39}}
 				</a>
 			</span>
@@ -886,7 +886,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_78}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-84">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_68}}" data-ui="list-view.link-84">
 					
 				</a>
 			</span>
@@ -894,7 +894,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_79}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Amit Verma" data-ui="list-view.link-85">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_69}}" data-ui="list-view.link-85">
 					{{ellipsis_40}}
 				</a>
 			</span>
@@ -917,11 +917,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_17}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Amit Verma" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_10}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_80}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_30}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_80}}" data-filter="{{ellipsis_datafilter_70}}"><span class="es-badge__label">{{es_badge_label_30}}</span></span>
 			</div>
 		
 					</div>
@@ -933,7 +933,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Priya Iyer" data-ui="list-view.input-87"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Priya Iyer" href="#" title="{{ellipsis_title_81}}" data-ui="list-view.link-88">{{ellipsis_41}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Priya Iyer" data-ui="list-view.input-87"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_11}}" href="#" title="{{ellipsis_title_81}}" data-ui="list-view.link-88">{{ellipsis_41}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -941,18 +941,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_82}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_31}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_82}}" data-filter="{{ellipsis_datafilter_71}}"><span class="es-badge__label">{{es_badge_label_31}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_83}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_32}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_72}}"><span class="es-badge__label">{{es_badge_label_32}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_84}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-89">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_73}}" data-ui="list-view.link-89">
 					{{ellipsis_42}}
 				</a>
 			</span>
@@ -960,7 +960,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_85}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-90">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_74}}" data-ui="list-view.link-90">
 					{{ellipsis_43}}
 				</a>
 			</span>
@@ -968,7 +968,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_86}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-91">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_75}}" data-ui="list-view.link-91">
 					
 				</a>
 			</span>
@@ -976,7 +976,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_87}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Priya Iyer" data-ui="list-view.link-92">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_76}}" data-ui="list-view.link-92">
 					{{ellipsis_44}}
 				</a>
 			</span>
@@ -999,11 +999,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_18}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Priya Iyer" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_11}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_88}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_33}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_88}}" data-filter="{{ellipsis_datafilter_77}}"><span class="es-badge__label">{{es_badge_label_33}}</span></span>
 			</div>
 		
 					</div>
@@ -1015,7 +1015,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rahul Sharma" data-ui="list-view.input-94"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Rahul Sharma" href="#" title="{{ellipsis_title_89}}" data-ui="list-view.link-95">{{ellipsis_45}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Rahul Sharma" data-ui="list-view.input-94"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_12}}" href="#" title="{{ellipsis_title_89}}" data-ui="list-view.link-95">{{ellipsis_45}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1023,18 +1023,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_90}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_34}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_90}}" data-filter="{{ellipsis_datafilter_78}}"><span class="es-badge__label">{{es_badge_label_34}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_91}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Individual"><span class="es-badge__label">{{es_badge_label_35}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_79}}"><span class="es-badge__label">{{es_badge_label_35}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_92}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=,Government" data-ui="list-view.link-96">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_80}}" data-ui="list-view.link-96">
 					{{ellipsis_46}}
 				</a>
 			</span>
@@ -1042,7 +1042,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_93}}">
-				<a class=" filterable ellipsis " data-filter="territory,=,Rest Of The World" data-ui="list-view.link-97">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_81}}" data-ui="list-view.link-97">
 					{{ellipsis_47}}
 				</a>
 			</span>
@@ -1050,7 +1050,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_94}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-98">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_82}}" data-ui="list-view.link-98">
 					
 				</a>
 			</span>
@@ -1058,7 +1058,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_95}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Rahul Sharma" data-ui="list-view.link-99">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_83}}" data-ui="list-view.link-99">
 					{{ellipsis_48}}
 				</a>
 			</span>
@@ -1081,11 +1081,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_19}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Rahul Sharma" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_12}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_96}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_36}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_96}}" data-filter="{{ellipsis_datafilter_84}}"><span class="es-badge__label">{{es_badge_label_36}}</span></span>
 			</div>
 		
 					</div>
@@ -1097,7 +1097,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Maria" data-ui="list-view.input-101"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Maria" href="#" title="{{ellipsis_title_97}}" data-ui="list-view.link-102">{{ellipsis_49}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Maria" data-ui="list-view.input-101"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_13}}" href="#" title="{{ellipsis_title_97}}" data-ui="list-view.link-102">{{ellipsis_49}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1105,18 +1105,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_98}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_37}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_98}}" data-filter="{{ellipsis_datafilter_85}}"><span class="es-badge__label">{{es_badge_label_37}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_99}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_38}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_86}}"><span class="es-badge__label">{{es_badge_label_38}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_100}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-103">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_87}}" data-ui="list-view.link-103">
 					
 				</a>
 			</span>
@@ -1124,7 +1124,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_101}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-104">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_88}}" data-ui="list-view.link-104">
 					
 				</a>
 			</span>
@@ -1132,7 +1132,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_102}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-105">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_89}}" data-ui="list-view.link-105">
 					
 				</a>
 			</span>
@@ -1140,7 +1140,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_103}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Maria" data-ui="list-view.link-106">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_90}}" data-ui="list-view.link-106">
 					{{ellipsis_50}}
 				</a>
 			</span>
@@ -1163,11 +1163,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_20}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Maria" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_13}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_104}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_39}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_104}}" data-filter="{{ellipsis_datafilter_91}}"><span class="es-badge__label">{{es_badge_label_39}}</span></span>
 			</div>
 		
 					</div>
@@ -1179,7 +1179,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Milo" data-ui="list-view.input-108"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Milo" href="#" title="{{ellipsis_title_105}}" data-ui="list-view.link-109">{{ellipsis_51}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Milo" data-ui="list-view.input-108"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_14}}" href="#" title="{{ellipsis_title_105}}" data-ui="list-view.link-109">{{ellipsis_51}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1187,18 +1187,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_106}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_40}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_106}}" data-filter="{{ellipsis_datafilter_92}}"><span class="es-badge__label">{{es_badge_label_40}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_107}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_41}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_93}}"><span class="es-badge__label">{{es_badge_label_41}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_108}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-110">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_94}}" data-ui="list-view.link-110">
 					
 				</a>
 			</span>
@@ -1206,7 +1206,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_109}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-111">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_95}}" data-ui="list-view.link-111">
 					
 				</a>
 			</span>
@@ -1214,7 +1214,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_110}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-112">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_96}}" data-ui="list-view.link-112">
 					
 				</a>
 			</span>
@@ -1222,7 +1222,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_111}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Milo" data-ui="list-view.link-113">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_97}}" data-ui="list-view.link-113">
 					{{ellipsis_52}}
 				</a>
 			</span>
@@ -1245,11 +1245,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_21}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Milo" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_14}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_112}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_42}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_112}}" data-filter="{{ellipsis_datafilter_98}}"><span class="es-badge__label">{{es_badge_label_42}}</span></span>
 			</div>
 		
 					</div>
@@ -1261,7 +1261,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Paige" data-ui="list-view.input-115"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Paige" href="#" title="{{ellipsis_title_113}}" data-ui="list-view.link-116">{{ellipsis_53}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Paige" data-ui="list-view.input-115"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_15}}" href="#" title="{{ellipsis_title_113}}" data-ui="list-view.link-116">{{ellipsis_53}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1269,18 +1269,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_114}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_43}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_114}}" data-filter="{{ellipsis_datafilter_99}}"><span class="es-badge__label">{{es_badge_label_43}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_115}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_44}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_100}}"><span class="es-badge__label">{{es_badge_label_44}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_116}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-117">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_101}}" data-ui="list-view.link-117">
 					
 				</a>
 			</span>
@@ -1288,7 +1288,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_117}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-118">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_102}}" data-ui="list-view.link-118">
 					
 				</a>
 			</span>
@@ -1296,7 +1296,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_118}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-119">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_103}}" data-ui="list-view.link-119">
 					
 				</a>
 			</span>
@@ -1304,7 +1304,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_119}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Paige" data-ui="list-view.link-120">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_104}}" data-ui="list-view.link-120">
 					{{ellipsis_54}}
 				</a>
 			</span>
@@ -1327,11 +1327,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_22}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Paige" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_15}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_120}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_45}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_120}}" data-filter="{{ellipsis_datafilter_105}}"><span class="es-badge__label">{{es_badge_label_45}}</span></span>
 			</div>
 		
 					</div>
@@ -1343,7 +1343,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Olivia" data-ui="list-view.input-122"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Olivia" href="#" title="{{ellipsis_title_121}}" data-ui="list-view.link-123">{{ellipsis_55}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Olivia" data-ui="list-view.input-122"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_16}}" href="#" title="{{ellipsis_title_121}}" data-ui="list-view.link-123">{{ellipsis_55}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1351,18 +1351,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_122}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_46}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_122}}" data-filter="{{ellipsis_datafilter_106}}"><span class="es-badge__label">{{es_badge_label_46}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_123}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_47}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_107}}"><span class="es-badge__label">{{es_badge_label_47}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_124}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-124">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_108}}" data-ui="list-view.link-124">
 					
 				</a>
 			</span>
@@ -1370,7 +1370,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_125}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-125">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_109}}" data-ui="list-view.link-125">
 					
 				</a>
 			</span>
@@ -1378,7 +1378,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_126}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-126">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_110}}" data-ui="list-view.link-126">
 					
 				</a>
 			</span>
@@ -1386,7 +1386,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_127}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Olivia" data-ui="list-view.link-127">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_111}}" data-ui="list-view.link-127">
 					{{ellipsis_56}}
 				</a>
 			</span>
@@ -1409,11 +1409,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_23}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Olivia" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_16}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_128}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_48}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_128}}" data-filter="{{ellipsis_datafilter_112}}"><span class="es-badge__label">{{es_badge_label_48}}</span></span>
 			</div>
 		
 					</div>
@@ -1425,7 +1425,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Harry" data-ui="list-view.input-129"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Harry" href="#" title="{{ellipsis_title_129}}" data-ui="list-view.link-130">{{ellipsis_57}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Harry" data-ui="list-view.input-129"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_17}}" href="#" title="{{ellipsis_title_129}}" data-ui="list-view.link-130">{{ellipsis_57}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1433,18 +1433,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_130}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_49}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_130}}" data-filter="{{ellipsis_datafilter_113}}"><span class="es-badge__label">{{es_badge_label_49}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_131}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_50}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_114}}"><span class="es-badge__label">{{es_badge_label_50}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_132}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-131">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_115}}" data-ui="list-view.link-131">
 					
 				</a>
 			</span>
@@ -1452,7 +1452,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_133}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-132">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_116}}" data-ui="list-view.link-132">
 					
 				</a>
 			</span>
@@ -1460,7 +1460,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_134}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-133">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_117}}" data-ui="list-view.link-133">
 					
 				</a>
 			</span>
@@ -1468,7 +1468,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_135}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Harry" data-ui="list-view.link-134">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_118}}" data-ui="list-view.link-134">
 					{{ellipsis_58}}
 				</a>
 			</span>
@@ -1491,11 +1491,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_24}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Harry" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_17}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_136}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_51}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_136}}" data-filter="{{ellipsis_datafilter_119}}"><span class="es-badge__label">{{es_badge_label_51}}</span></span>
 			</div>
 		
 					</div>
@@ -1507,7 +1507,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Tom" data-ui="list-view.input-136"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Tom" href="#" title="{{ellipsis_title_137}}" data-ui="list-view.link-137">{{ellipsis_59}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Tom" data-ui="list-view.input-136"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_18}}" href="#" title="{{ellipsis_title_137}}" data-ui="list-view.link-137">{{ellipsis_59}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1515,18 +1515,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_138}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_52}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_138}}" data-filter="{{ellipsis_datafilter_120}}"><span class="es-badge__label">{{es_badge_label_52}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_139}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_53}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_121}}"><span class="es-badge__label">{{es_badge_label_53}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_140}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-138">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_122}}" data-ui="list-view.link-138">
 					
 				</a>
 			</span>
@@ -1534,7 +1534,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_141}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-139">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_123}}" data-ui="list-view.link-139">
 					
 				</a>
 			</span>
@@ -1542,7 +1542,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_142}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-140">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_124}}" data-ui="list-view.link-140">
 					
 				</a>
 			</span>
@@ -1550,7 +1550,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_143}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Tom" data-ui="list-view.link-141">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_125}}" data-ui="list-view.link-141">
 					{{ellipsis_60}}
 				</a>
 			</span>
@@ -1573,11 +1573,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_25}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Tom" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_18}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_144}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_54}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_144}}" data-filter="{{ellipsis_datafilter_126}}"><span class="es-badge__label">{{es_badge_label_54}}</span></span>
 			</div>
 		
 					</div>
@@ -1589,7 +1589,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Jane" data-ui="list-view.input-143"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Jane" href="#" title="{{ellipsis_title_145}}" data-ui="list-view.link-144">{{ellipsis_61}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Jane" data-ui="list-view.input-143"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_19}}" href="#" title="{{ellipsis_title_145}}" data-ui="list-view.link-144">{{ellipsis_61}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1597,18 +1597,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_146}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_55}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_146}}" data-filter="{{ellipsis_datafilter_127}}"><span class="es-badge__label">{{es_badge_label_55}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_147}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_56}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_128}}"><span class="es-badge__label">{{es_badge_label_56}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_148}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-145">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_129}}" data-ui="list-view.link-145">
 					
 				</a>
 			</span>
@@ -1616,7 +1616,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_149}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-146">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_130}}" data-ui="list-view.link-146">
 					
 				</a>
 			</span>
@@ -1624,7 +1624,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_150}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-147">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_131}}" data-ui="list-view.link-147">
 					
 				</a>
 			</span>
@@ -1632,7 +1632,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_151}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Jane" data-ui="list-view.link-148">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_132}}" data-ui="list-view.link-148">
 					{{ellipsis_62}}
 				</a>
 			</span>
@@ -1655,11 +1655,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_26}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Jane" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_19}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_152}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_57}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_152}}" data-filter="{{ellipsis_datafilter_133}}"><span class="es-badge__label">{{es_badge_label_57}}</span></span>
 			</div>
 		
 					</div>
@@ -1671,7 +1671,7 @@
 					<div class="level-left ellipsis">
 						
 			<div class="list-row-col ellipsis list-subject level " data-fieldname="customer_name">
-				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Alex" data-ui="list-view.input-150"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="Alex" href="#" title="{{ellipsis_title_153}}" data-ui="list-view.link-151">{{ellipsis_63}}</a></span>
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="Customer" data-name="Alex" data-ui="list-view.input-150"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="Customer" data-name="{{ellipsis_dataname_20}}" href="#" title="{{ellipsis_title_153}}" data-ui="list-view.link-151">{{ellipsis_63}}</a></span>
 			</div>
 		
 				<div class="list-row-col tag-col hide hidden-xs ellipsis">
@@ -1679,18 +1679,18 @@
 				</div>
 			
 				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
-					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_154}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_58}}</span></span>
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_154}}" data-filter="{{ellipsis_datafilter_134}}"><span class="es-badge__label">{{es_badge_label_58}}</span></span>
 				</div>
 			
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_type">
 				<span class="ellipsis" title="{{ellipsis_title_155}}">
-				<span class="es-badge filterable ellipsis" data-filter="customer_type,=,Company"><span class="es-badge__label">{{es_badge_label_59}}</span></span>
+				<span class="es-badge filterable ellipsis" data-filter="{{ellipsis_datafilter_135}}"><span class="es-badge__label">{{es_badge_label_59}}</span></span>
 			</span>
 			</div>
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="customer_group">
 				<span class="ellipsis" title="{{ellipsis_title_156}}">
-				<a class=" filterable ellipsis " data-filter="customer_group,=," data-ui="list-view.link-152">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_136}}" data-ui="list-view.link-152">
 					
 				</a>
 			</span>
@@ -1698,7 +1698,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="territory">
 				<span class="ellipsis" title="{{ellipsis_title_157}}">
-				<a class=" filterable ellipsis " data-filter="territory,=," data-ui="list-view.link-153">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_137}}" data-ui="list-view.link-153">
 					
 				</a>
 			</span>
@@ -1706,7 +1706,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="default_currency">
 				<span class="ellipsis" title="{{ellipsis_title_158}}">
-				<a class=" filterable ellipsis " data-filter="default_currency,=," data-ui="list-view.link-154">
+				<a class=" filterable ellipsis " data-filter="{{ellipsis_datafilter_138}}" data-ui="list-view.link-154">
 					
 				</a>
 			</span>
@@ -1714,7 +1714,7 @@
 		
 			<div class="list-row-col ellipsis hidden-xs " data-fieldname="name">
 				<span class="ellipsis" title="{{ellipsis_title_159}}">
-				<a class=" filterable ellipsis" data-filter="name,=,Alex" data-ui="list-view.link-155">
+				<a class=" filterable ellipsis" data-filter="{{ellipsis_datafilter_139}}" data-ui="list-view.link-155">
 					{{ellipsis_64}}
 				</a>
 			</span>
@@ -1737,11 +1737,11 @@
 			</span>
 				<span class="mx-2">{{hidden_xs_27}}</span>
 				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
-					<span class="like-action not-liked" data-doctype="Customer" data-name="Alex" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+					<span class="like-action not-liked" data-doctype="Customer" data-name="{{not_liked_dataname_20}}" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
 				</span>
 			</div>
 			<div class="level-item visible-xs text-right">
-				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_160}}" data-filter="disabled,=,0"><span class="es-badge__label">{{es_badge_label_60}}</span></span>
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="{{ellipsis_title_160}}" data-filter="{{ellipsis_datafilter_140}}"><span class="es-badge__label">{{es_badge_label_60}}</span></span>
 			</div>
 		
 					</div>

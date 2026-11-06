@@ -1,0 +1,429 @@
+<div class="form-page" data-ui="kot-form"><div class="form-dashboard"><div class="form-dashboard-section progress-area hide-control" data-fieldname="undefined"><div class="section-body"></div></div><div class="form-dashboard-section form-heatmap hide-control" data-fieldname="undefined"><div class="section-head collapsible" tabindex="0" data-ui="kot-form.div-1">
+			{{section_head}}
+			<span class="collapse-indicator" style="" tabindex="0" data-ui="kot-form.span-2"><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="mb-1" href="#icon-chevron-down">
+			</use>
+		</svg></span>
+			</div><div class="section-body">
+				<div id="heatmap-ury_kot" class="heatmap"></div>
+				<div class="text-muted small heatmap-message hidden"></div>
+			</div></div><div class="form-dashboard-section form-graph hide-control" data-fieldname="undefined"><div class="section-head collapsible" tabindex="0" data-ui="kot-form.div-3">
+			{{section_head_2}}
+			<span class="collapse-indicator" style="" tabindex="0" data-ui="kot-form.span-4"><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="mb-1" href="#icon-chevron-down">
+			</use>
+		</svg></span>
+			</div><div class="section-body"></div></div><div class="form-dashboard-section form-stats hide-control" data-fieldname="undefined"><div class="section-head collapsible" tabindex="0" data-ui="kot-form.div-5">
+			{{section_head_3}}
+			<span class="collapse-indicator" style="" tabindex="0" data-ui="kot-form.span-6"><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="mb-1" href="#icon-chevron-down">
+			</use>
+		</svg></span>
+			</div><div class="section-body"><div class="row"></div></div></div><div class="form-dashboard-section form-links hide-control" data-fieldname="undefined"><div class="section-body"><div class="transactions"></div></div></div></div><div class="form-section card-section visible-section" data-fieldname="__section_1"><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_1">
+				<form>
+				<div class="frappe-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="__newname">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;"></label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="invoice">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_2}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="restaurant_table">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_2}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><div class="link-field ui-front" style="position: relative;">
+			<div class="awesomplete"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Link" data-fieldname="restaurant_table" placeholder="" data-doctype="URY KOT" data-target="URY Table" autocomplete="off" aria-expanded="false" role="combobox" data-ui="kot-form.input-7" value="{{form_control_value}}"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">{{visually_hidden}}</span></div>
+			<span class="link-btn">
+				<a class="btn-clear" style="display: inline-flex;" title="{{btn_clear_title}}" data-ui="kot-form.link-8">
+					<svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
+			</use>
+		</svg>
+				</a>
+				<a class="btn-open" style="display: inline-flex;" title="{{btn_open_title}}" data-ui="kot-form.link-9">
+					<svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-arrow-right">
+			</use>
+		</svg>
+				</a>
+			</span>
+		</div></div>
+						<div class="control-value like-disabled-input hide"><a href="#" data-doctype="URY Table" data-name="{{hide_dataname}}" data-value="{{hide_datavalue}}" data-ui="kot-form.link-10">{{hide}}</a></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_3}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="customer_name">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_3}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"><a href="#" data-doctype="Customer" data-name="{{like_disabled_input_dataname}}" data-value="{{like_disabled_input_datavalue}}" data-ui="kot-form.link-11">{{like_disabled_input_2}}</a></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_4}}</span></div><div class="frappe-control" data-fieldtype="Small Text" data-fieldname="original_kot">
+				<div class="form-group">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_4}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input for-description" style="white-space-collapse: preserve;"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_5}}</span></div></form>
+			</div><div class="form-column col-sm-6" data-fieldname="column_break_phntx">
+				<form>
+				<div class="frappe-control input-max-width" data-fieldtype="Date" data-fieldname="date">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label reqd" style="padding-right: 5px;">{{reqd}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input bold">{{bold}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_6}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Time" data-fieldname="time">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_5}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_3}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_7}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="type">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_6}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_4}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_8}}</span></div></form>
+			</div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_l97s0"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_2">
+				<form>
+				<div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="order_status">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_7}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_5}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_9}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="production">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_8}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"><a href="#" data-doctype="URY Production Unit" data-name="{{like_disabled_input_dataname_2}}" data-value="{{like_disabled_input_datavalue_2}}" data-ui="kot-form.link-12">{{like_disabled_input_6}}</a></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_10}}</span></div></form>
+			</div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_yxcxo"><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_3">
+				<form>
+				<div class="frappe-control input-max-width" data-fieldtype="Time" data-fieldname="start_time_prep">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_9}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_7}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_11}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="production_time">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_10}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_12}}</span></div></form>
+			</div><div class="form-column col-sm-6" data-fieldname="column_break_9rksu">
+				<form>
+				<div class="frappe-control input-max-width" data-fieldtype="Time" data-fieldname="start_time_serv">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_11}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_13}}</span></div></form>
+			</div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_ubzfc"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_4">
+				<form>
+				<div class="frappe-control form-group" data-fieldtype="Table" data-fieldname="kot_items"><span class="tooltip-content">{{tooltip_content_14}}</span><div class="grid-field">
+				<label class="control-label">{{control_label_12}}</label>
+				<span class="help"></span>
+				<p class="text-muted small grid-description" style="display: none;"></p>
+				<div class="grid-custom-buttons"></div>
+				<div class="form-grid-container">
+					<div class="form-grid">
+						<div class="grid-heading-row"><div class="grid-row"><div class="data-row row m-0"><div class="row-check sortable-handle col">
+					<input type="checkbox" class="grid-row-check" tabindex="-1" data-ui="kot-form.input-13">
+				</div><div class="row-index sortable-handle grid-static-col col">
+					<span>{{grid_static_col}}</span>
+				</div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item" data-fieldtype="Link" title="{{grid_static_col_title}}" tabindex="0" data-ui="kot-form.div-14"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item_name" data-fieldtype="Data" title="{{grid_static_col_title_2}}"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis_2}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col grid-data-last" style="flex: 1 0 140px; width: 140px;" data-fieldname="quantity" data-fieldtype="Data" title="{{grid_data_last_title}}"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis_3}}</div><div class="grid-col-resize-handle" title=""></div></div><div class="col grid-static-col pointer">
+					<a data-ui="kot-form.link-15"><svg class="icon  icon-sm" style="filter: opacity(0.5)" aria-hidden="true">
+			<use class="" href="#icon-settings">
+			</use>
+		</svg></a>
+				</div></div></div></div>
+						<div class="grid-body">
+							<div class="rows"><div class="grid-row" data-name="{{grid_row_dataname}}" data-idx="1"><div class="data-row row m-0"><div class="row-check sortable-handle col">
+					<input type="checkbox" class="grid-row-check" tabindex="-1" data-ui="kot-form.input-16">
+				</div><div class="row-index sortable-handle grid-static-col col">
+					<span>{{grid_static_col_2}}</span>
+				</div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item" data-fieldtype="Link"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis"><a href="#" data-doctype="Item" data-name="{{ellipsis_dataname}}" data-value="{{ellipsis_datavalue}}" data-ui="kot-form.link-17">{{ellipsis_4}}</a></div></div><div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;" data-fieldname="item_name" data-fieldtype="Data"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis_5}}</div></div><div class="col grid-static-col grid-data-last" style="flex: 1 0 140px; width: 140px;" data-fieldname="quantity" data-fieldtype="Data"><div class="field-area" style="display: none;"></div><div class="static-area ellipsis">{{ellipsis_6}}</div></div><div class="col"><div class="btn-open-row" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{btn_open_row_dataoriginaltitle}}">
+							<a data-ui="kot-form.link-18"><svg class="icon  icon-xs" style="" aria-hidden="true">
+			<use class="" href="#icon-pencil">
+			</use>
+		</svg></a>
+						</div></div></div></div></div>
+							<div class="grid-empty text-center text-extra-muted hidden">
+								{{hidden}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="small form-clickable-section grid-footer">
+					<div class="flex justify-between">
+						<div class="grid-buttons">
+							<button class="es-button grid-remove-rows hidden" type="button" data-theme="red" data-action="delete_rows" data-ui="kot-form.button-19"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">{{es_button_loading_label}}</span><span class="es-button__label">{{es_button_label}}</span></button>
+							<button class="es-button grid-edit-rows hidden" type="button" data-action="bulk_edit_rows" data-ui="kot-form.button-20"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_2}}</span></button>
+							<button class="es-button grid-remove-all-rows hidden" type="button" data-theme="red" data-action="delete_all_rows" data-ui="kot-form.button-21"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_3}}</span></button>
+							<button class="es-button grid-duplicate-rows hidden" type="button" data-action="duplicate_rows" data-ui="kot-form.button-22"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_4}}</span></button>
+							
+							<button class="es-button grid-add-row" type="button" data-ui="kot-form.button-23"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_5}}</span></button>
+							<button class="es-button grid-add-multiple-rows hidden" type="button" data-ui="kot-form.button-24"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_6}}</span></button>
+						</div>
+						<div class="grid-pagination"></div>
+						<div class="grid-bulk-actions text-right">
+							<button class="es-button grid-download hidden" type="button" data-ui="kot-form.button-25"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_7}}</span></button>
+							<button class="es-button grid-upload hidden" type="button" data-ui="kot-form.button-26"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">{{es_button_label_8}}</span></button>
+						</div>
+					</div>
+				</div>
+			</div></div></form>
+			</div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_zpwun"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_5">
+				<form>
+				<div class="frappe-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="naming_series">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;"></label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_15}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="pos_profile">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;"></label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_16}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="comments">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_13}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_17}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="branch">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_14}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input" title="{{like_disabled_input_title}}"><a href="#" data-doctype="Branch" data-name="{{like_disabled_input_dataname_3}}" data-value="{{like_disabled_input_datavalue_3}}" data-ui="kot-form.link-27">{{like_disabled_input_8}}</a></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_18}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="verified">
+			<div class="checkbox">
+				<label>
+					<span class="input-area hide"></span>
+					<span class="disp-area"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="kot-form.input-28"></span>
+					<span class="label-area">{{label_area}}</span>
+					<span class="ml-1 help"></span>
+				</label>
+				<p class="help-box small text-extra-muted"></p>
+			</div>
+		<span class="tooltip-content">{{tooltip_content_19}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="order_no">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_15}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_9}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_20}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="aggregator_id">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_16}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_21}}</span></div><div class="form-group frappe-control input-max-width hide-control" data-fieldtype="Check" data-fieldname="is_aggregator">
+			<div class="checkbox">
+				<label>
+					<span class="input-area"></span>
+					<span class="disp-area"></span>
+					<span class="label-area"></span>
+					<span class="ml-1 help"></span>
+				</label>
+				<p class="help-box small text-extra-muted"></p>
+			</div>
+		<span class="tooltip-content">{{tooltip_content_22}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="verified_by">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_17}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_23}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="customer_group">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_18}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input" title="{{like_disabled_input_title_2}}"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_24}}</span></div><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="table_takeaway">
+			<div class="checkbox">
+				<label>
+					<span class="input-area hide"></span>
+					<span class="disp-area" title="{{disp_area_title}}"><input type="checkbox" disabled="" class="disabled-deselected" data-ui="kot-form.input-29"></span>
+					<span class="label-area">{{label_area_2}}</span>
+					<span class="ml-1 help"></span>
+				</label>
+				<p class="help-box small text-extra-muted"></p>
+			</div>
+		<span class="tooltip-content">{{tooltip_content_25}}</span></div><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="user">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_19}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input">{{like_disabled_input_10}}</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_26}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="amended_from">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">{{control_label_20}}</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input hide"></div>
+						<div class="control-value like-disabled-input"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_27}}</span></div><div class="frappe-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="validation_dedup_key">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;"></label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+			<span class="tooltip-content">{{tooltip_content_28}}</span></div></form>
+			</div></div></div></div>

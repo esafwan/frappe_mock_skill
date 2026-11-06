@@ -1,0 +1,1467 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" class="chrome" data-theme="dark">
+<head><meta charset="utf-8"><title>KOT list (URY Kitchen Order Tickets)</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(23, 23, 23);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open no-list-sidebar" data-route="List/URY KOT/List" data-sidebar="1">
+<div id="ui-kit-stage">
+<div class="main-section" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div id="body" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="content page-container" id="page-List/URY KOT/List" data-page-route="List/URY KOT/List" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="container page-body" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="page-wrapper" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="page-content" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="layout-main layout-two-column" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><div class="layout-main-section-wrapper list-view" style="width:1159px;flex:none;max-width:none;box-sizing:border-box"><svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol viewBox="0 0 24 24" id="icon-equal-approximately">
+      <path d="M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+      <path d="M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-funnel">
+      <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-down-wide-narrow">
+      <path d="m3 16 4 4 4-4"></path>
+      <path d="M7 20V4"></path>
+      <path d="M11 4h10"></path>
+      <path d="M11 8h7"></path>
+      <path d="M11 12h4"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-heart">
+      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-message-circle">
+      <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-file">
+      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+      <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol></svg><div class="layout-main-section layout-main-list" data-ui="kot-list"><div class="page-form flex list-page-form"><div class="standard-filter-section flex"><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="name" title="" data-original-title="ID"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="name" placeholder="ID" data-ui="kot-list.input-1"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="kot-list.button-2">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">name</span></div><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="order_status" title="" data-original-title="Order Status"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="order_status" placeholder="Order Status" data-ui="kot-list.input-3"><div class="input-group-btn mr-0">
+				<button type="button" class="btn btn-default  match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="kot-list.button-4">
+					<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-equal-approximately">
+			</use>
+		</svg>
+
+				</button>
+				<ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right">
+					<li class="dropdown-item" data-match-type="=">Equals</li>
+					<li class="dropdown-item" data-match-type="like">Like</li>
+				</ul>
+			</div></div><span class="tooltip-content">order_status</span></div></div><div class="filter-section flex"><div class="mobile-id-filter hidden-lg"></div><div class="filter-selector"><button class="filter-toggle btn btn-default btn-sm hidden-lg" data-ui="kot-list.button-5">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevrons-up-down">
+			</use>
+		</svg>
+					</span>
+				</button>
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm filter-button" data-original-title="" title="" data-ui="kot-list.button-6">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-funnel">
+			</use>
+		</svg>
+					</span>
+					<span class="button-label hidden-xs">
+					Filter
+					<span>
+				</span></span></button>
+				<button class="btn btn-default btn-sm filter-x-button" title="Clear all filters" data-ui="kot-list.button-7">
+					<span class="filter-icon button-icon">
+						<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-x">
+			</use>
+		</svg>
+					</span>
+				</button>
+			</div>
+		</div><div class="sort-selector">  <div class="btn-group">   <button class="btn btn-default btn-sm btn-order" data-value="desc" title="descending" data-ui="kot-list.button-8">    <span class="sort-order">     <svg class="icon icon-sm">      <use href="#icon-arrow-down-wide-narrow"></use>     </svg>    </span>   </button>   <button type="button" class="btn btn-default btn-sm sort-selector-button text-nowrap" data-toggle="dropdown" data-ui="kot-list.button-9">    <span class="dropdown-text hidden-sm">Last Updated On</span>    <span><svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-chevron-down">
+			</use>
+		</svg></span>    <ul class="dropdown-menu dropdown-menu-right">          <li>      <a class="dropdown-item option" data-value="modified" data-ui="kot-list.link-10">       Last Updated On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="name" data-ui="kot-list.link-11">       ID      </a>     </li>          <li>      <a class="dropdown-item option" data-value="creation" data-ui="kot-list.link-12">       Created On      </a>     </li>          <li>      <a class="dropdown-item option" data-value="idx" data-ui="kot-list.link-13">       Most Used      </a>     </li>          <li>      <a class="dropdown-item option" data-value="invoice" data-ui="kot-list.link-14">       Invoice      </a>     </li>          <li>      <a class="dropdown-item option" data-value="date" data-ui="kot-list.link-15">       Date      </a>     </li>         </ul>   </button>  </div> </div></div></div><div class="frappe-list"><div class="result-container" style="height: 754px;"><div class="result no-assign-to" data-comment-count-length="1" style="height: 850px; --list-right-width: 138.75px;">
+		<div class="list-row-container">
+			<header class="level list-row-head text-muted">
+				<div class="level-left list-header-subject">
+					<div class="list-row-col ellipsis list-subject level  " data-fieldname="name">
+			<span class="level-item select-like">
+				<input class="list-header-checkbox list-check-all" type="checkbox" title="Select All" data-ui="kot-list.select-all-1">
+			</span>
+			<span class="level-item" data-sort-by="name" title="Click to sort by ID">
+				ID
+			</span>
+		<div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs tag-col hide  " data-fieldname="undefined"><span>Tag</span></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="status_field"><span>Status</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="invoice"><span data-sort-by="invoice" title="Click to sort by Invoice">Invoice</span><div class="list-col-resize-handle"></div></div>
+			<div class="list-row-col ellipsis hidden-xs  " data-fieldname="date"><span data-sort-by="date" title="Click to sort by Date">Date</span><div class="list-col-resize-handle"></div></div>
+			
+				</div>
+				<div class="level-left checkbox-actions">
+					<div class="level list-subject">
+						<span class="level-item select-like">
+							<input class="list-header-checkbox list-check-all" type="checkbox" title="Select All" data-ui="kot-list.select-all-2">
+						</span>
+						<span class="level-item list-header-meta"></span>
+					</div>
+				</div>
+				<div class="level-right">
+					
+			<span class="list-count" style="white-space: nowrap;"><span>20 of 265</span></span>
+			<span class="level-item list-liked-by-me hidden-xs">
+				<span title="Liked by me">
+					<svg class="icon icon-sm like-icon">
+						<use href="#icon-heart"></use>
+					</svg>
+				</span>
+			</span>
+		
+				</div>
+			</header>
+		</div>
+		<div class="freeze flex justify-center align-center text-muted" style="display: none;">
+				Loading...
+			</div>
+			
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-16">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00237" data-ui="kot-list.input-17"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00237" href="#" title="KOT-URY-00237" data-ui="kot-list.link-18">KOT-URY-00237</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02779">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02779" data-ui="kot-list.link-19">
+					URY-2026-2027-02779
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-20">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 13:49:41.314972" title="22-10-2026 13:49:41"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00237" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-21">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00261" data-ui="kot-list.input-22"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00261" href="#" title="KOT-URY-00261" data-ui="kot-list.link-23">KOT-URY-00261</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02786">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02786" data-ui="kot-list.link-24">
+					URY-2026-2027-02786
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-25">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.523090" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00261" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-26">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00260" data-ui="kot-list.input-27"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00260" href="#" title="KOT-URY-00260" data-ui="kot-list.link-28">KOT-URY-00260</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02786">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02786" data-ui="kot-list.link-29">
+					URY-2026-2027-02786
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-30">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.496469" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00260" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-31">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00259" data-ui="kot-list.input-32"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00259" href="#" title="KOT-URY-00259" data-ui="kot-list.link-33">KOT-URY-00259</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02786">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02786" data-ui="kot-list.link-34">
+					URY-2026-2027-02786
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-35">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.461138" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00259" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-36">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00258" data-ui="kot-list.input-37"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00258" href="#" title="KOT-URY-00258" data-ui="kot-list.link-38">KOT-URY-00258</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02785">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02785" data-ui="kot-list.link-39">
+					URY-2026-2027-02785
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-40">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.359489" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00258" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-41">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00257" data-ui="kot-list.input-42"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00257" href="#" title="KOT-URY-00257" data-ui="kot-list.link-43">KOT-URY-00257</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02785">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02785" data-ui="kot-list.link-44">
+					URY-2026-2027-02785
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-45">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.324056" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00257" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-46">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00256" data-ui="kot-list.input-47"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00256" href="#" title="KOT-URY-00256" data-ui="kot-list.link-48">KOT-URY-00256</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02785">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02785" data-ui="kot-list.link-49">
+					URY-2026-2027-02785
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-50">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.309519" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00256" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-51">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00255" data-ui="kot-list.input-52"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00255" href="#" title="KOT-URY-00255" data-ui="kot-list.link-53">KOT-URY-00255</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02784">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02784" data-ui="kot-list.link-54">
+					URY-2026-2027-02784
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-55">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.250017" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00255" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-56">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00254" data-ui="kot-list.input-57"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00254" href="#" title="KOT-URY-00254" data-ui="kot-list.link-58">KOT-URY-00254</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02784">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02784" data-ui="kot-list.link-59">
+					URY-2026-2027-02784
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-60">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.201424" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00254" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-61">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00253" data-ui="kot-list.input-62"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00253" href="#" title="KOT-URY-00253" data-ui="kot-list.link-63">KOT-URY-00253</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02784">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02784" data-ui="kot-list.link-64">
+					URY-2026-2027-02784
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-65">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:44.190965" title="22-10-2026 12:17:44"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00253" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-66">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00252" data-ui="kot-list.input-67"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00252" href="#" title="KOT-URY-00252" data-ui="kot-list.link-68">KOT-URY-00252</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02783">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02783" data-ui="kot-list.link-69">
+					URY-2026-2027-02783
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-70">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.997122" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00252" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-71">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00251" data-ui="kot-list.input-72"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00251" href="#" title="KOT-URY-00251" data-ui="kot-list.link-73">KOT-URY-00251</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02783">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02783" data-ui="kot-list.link-74">
+					URY-2026-2027-02783
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-75">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.982763" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00251" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-76">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00250" data-ui="kot-list.input-77"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00250" href="#" title="KOT-URY-00250" data-ui="kot-list.link-78">KOT-URY-00250</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02783">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02783" data-ui="kot-list.link-79">
+					URY-2026-2027-02783
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-80">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.968162" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00250" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-81">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00249" data-ui="kot-list.input-82"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00249" href="#" title="KOT-URY-00249" data-ui="kot-list.link-83">KOT-URY-00249</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02782">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02782" data-ui="kot-list.link-84">
+					URY-2026-2027-02782
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-85">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.755413" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00249" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-86">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00248" data-ui="kot-list.input-87"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00248" href="#" title="KOT-URY-00248" data-ui="kot-list.link-88">KOT-URY-00248</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02782">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02782" data-ui="kot-list.link-89">
+					URY-2026-2027-02782
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-90">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.740454" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00248" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-91">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00247" data-ui="kot-list.input-92"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00247" href="#" title="KOT-URY-00247" data-ui="kot-list.link-93">KOT-URY-00247</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02782">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02782" data-ui="kot-list.link-94">
+					URY-2026-2027-02782
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-95">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.678102" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00247" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-96">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00246" data-ui="kot-list.input-97"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00246" href="#" title="KOT-URY-00246" data-ui="kot-list.link-98">KOT-URY-00246</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02782">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02782" data-ui="kot-list.link-99">
+					URY-2026-2027-02782
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-100">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.666252" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00246" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-101">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00245" data-ui="kot-list.input-102"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00245" href="#" title="KOT-URY-00245" data-ui="kot-list.link-103">KOT-URY-00245</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02782">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02782" data-ui="kot-list.link-104">
+					URY-2026-2027-02782
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-105">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.654596" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00245" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-106">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00244" data-ui="kot-list.input-107"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00244" href="#" title="KOT-URY-00244" data-ui="kot-list.link-108">KOT-URY-00244</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02781">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02781" data-ui="kot-list.link-109">
+					URY-2026-2027-02781
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-110">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.392156" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00244" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		
+			<div class="list-row-container" tabindex="1" data-ui="kot-list.div-111">
+				<div class="level list-row">
+					<div class="level-left ellipsis">
+						
+			<div class="list-row-col ellipsis list-subject level " data-fieldname="name">
+				<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="URY KOT" data-name="KOT-URY-00243" data-ui="kot-list.input-112"></span><span class="level-item bold ellipsis"><a class="ellipsis" data-doctype="URY KOT" data-name="KOT-URY-00243" href="#" title="KOT-URY-00243" data-ui="kot-list.link-113">KOT-URY-00243</a></span>
+			</div>
+		
+				<div class="list-row-col tag-col hide hidden-xs ellipsis">
+					<div class="tags-empty">-</div>
+				</div>
+			
+				<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field">
+					<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+				</div>
+			
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="invoice">
+				<span class="ellipsis" title="Invoice: URY-2026-2027-02781">
+				<a class=" filterable ellipsis" data-filter="invoice,=,URY-2026-2027-02781" data-ui="kot-list.link-114">
+					URY-2026-2027-02781
+				</a>
+			</span>
+			</div>
+		
+			<div class="list-row-col ellipsis hidden-xs " data-fieldname="date">
+				<span class="ellipsis" title="Date: 2026-10-22">
+				<a class=" filterable ellipsis" data-filter="date,=,2026-10-22" data-ui="kot-list.link-115">
+					22-10-2026
+				</a>
+			</span>
+			</div>
+		
+					</div>
+					<div class="level-right text-muted ellipsis border-0">
+						
+			<div class="level-item list-row-activity hidden-xs">
+				<div class="list-assignments-container hidden-md hidden-xs d-flex">
+					
+				</div>
+				<span class="modified"><span class="frappe-timestamp  mini" data-timestamp="2026-10-22 12:17:43.377688" title="22-10-2026 12:17:43"></span></span>
+				<span class="comment-count d-flex align-items-center">
+				<svg class="icon  icon-sm" style="" aria-hidden="true">
+			<use class="" href="#icon-message-circle">
+			</use>
+		</svg>
+				<span class="count">0</span>
+			</span>
+				<span class="mx-2">·</span>
+				<span class="list-row-like hidden-xs" style="margin-bottom: 1px;">
+					<span class="like-action not-liked" data-doctype="URY KOT" data-name="KOT-URY-00243" data-liked-by="" title=""><svg class="icon icon-sm like-icon"><use href="#icon-heart"></use></svg></span>
+				</span>
+			</div>
+			<div class="level-item visible-xs text-right">
+				<span class="es-badge filterable ellipsis" data-theme="blue" title="Document has been submitted" data-filter="docstatus,=,1"><span class="es-badge__label">Submitted</span></span>
+			</div>
+		
+					</div>
+				</div>
+			</div>
+		</div></div><div class="no-result text-muted flex justify-center align-center" style="display: none; height: 900px;"><div class="flex flex-col items-center justify-center text-center gap-3 min-h-48"><div class="flex size-11 items-center justify-center rounded-full bg-surface-gray-2 text-ink-gray-5"><svg class="icon  icon-md" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-file">
+			</use>
+		</svg></div><div class="flex flex-col items-center gap-1"><div class="text-base-medium text-ink-gray-8">No URY KOT created</div><div class="text-p-sm text-ink-gray-5 max-w-sm">Create your first URY KOT to get started.</div></div><div class="flex flex-wrap items-center justify-center gap-2"><button class="es-button btn-new-doc" type="button" data-ui="kot-list.button-116"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
+			<use class="" href="#icon-plus">
+			</use>
+		</svg><span class="es-button__label">Create</span></button></div></div></div><div class="list-paging-area level" style="">
+				<div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page Size"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="kot-list.button-117">20</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="kot-list.button-118">100</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="kot-list.button-119">500</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="kot-list.button-120">2500</button></div></div>
+				<div class="level-right"><button class="es-button btn-more" type="button" data-ui="kot-list.button-121"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Load More</span></button></div>
+			</div></div></div>
+</div></div></div></div></div></div></div></div>
+</div>
+</body></html>
