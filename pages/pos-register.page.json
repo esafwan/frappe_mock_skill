@@ -7,10 +7,48 @@
  "menu": null,
  "components": [
   "pos-navbar",
+  "pos-category-sidebar",
   "pos-filter-bar",
   "pos-item-grid",
   "pos-cart",
   "pos-bottom-nav"
  ],
- "shell": "<div id=\"root\"><div class=\"flex flex-col h-screen bg-gray-100 font-inter\"><!--component:pos-navbar--><div class=\"flex-1 overflow-hidden\"><div class=\"flex flex-1 overflow-hidden\"><div class=\"flex-1 flex flex-col h-screen overflow-hidden pe-96\"><!--component:pos-filter-bar--><div class=\"flex-1 overflow-auto bg-gray-50 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]\"><div class=\"max-w-screen-xl mx-auto p-4 pb-40\"><!--component:pos-item-grid--></div></div></div><!--component:pos-cart--></div></div><!--component:pos-bottom-nav--></div></div>"
+ "shell": "<div id=\"root\"><div class=\"flex flex-col h-screen bg-gray-100 font-inter\"><!--component:pos-navbar--><div class=\"flex-1 overflow-hidden\"><div class=\"flex flex-1 overflow-hidden\"><!--component:pos-category-sidebar--><div class=\"flex-1 flex flex-col h-screen overflow-hidden pe-96\"><!--component:pos-filter-bar--><div class=\"flex-1 overflow-auto bg-gray-50 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]\"><div class=\"max-w-screen-xl mx-auto p-4 pb-40\"><!--component:pos-item-grid--></div></div></div><!--component:pos-cart--></div></div><!--component:pos-bottom-nav--></div></div>",
+ "variants": [
+  {
+   "suffix": "cafe-USD",
+   "menu": "cafe",
+   "locale": "en-US/USD"
+  },
+  {
+   "suffix": "south-indian-INR",
+   "menu": "south-indian",
+   "locale": "en-IN/INR"
+  },
+  {
+   "suffix": "north-indian-INR",
+   "menu": "north-indian",
+   "locale": "en-IN/INR"
+  },
+  {
+   "suffix": "mediterranean-ar-AED",
+   "menu": "mediterranean",
+   "locale": "ar-AE/AED"
+  },
+  {
+   "suffix": "mediterranean-ar-SAR",
+   "menu": "mediterranean",
+   "locale": "ar-SA/SAR"
+  },
+  {
+   "suffix": "qsr-USD",
+   "menu": "qsr-chicken-burger",
+   "locale": "en-US/USD"
+  },
+  {
+   "suffix": "fine-dine-EUR",
+   "menu": "fine-dine",
+   "locale": "de-DE/EUR"
+  }
+ ]
 }

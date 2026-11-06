@@ -4,7 +4,7 @@ POS item grid of cards.
 
 **When to use:** Use for the POS ordering screen; bind to data/menus for any cuisine.
 
-**Slots people usually change:** `text_gray_900_4` (currency, e.g. "₹ 240"), `text_gray_900_6` (currency, e.g. "₹ 290"), `text_gray_900_8` (currency, e.g. "₹ 180"), `text_gray_900_10` (currency, e.g. "₹ 290"), `text_gray_900_12` (currency, e.g. "₹ 150"), `text_gray_900_14` (currency, e.g. "₹ 190"). All 80 slots are in `slots.json`.
+**Slots people usually change:** `text_gray_900_4` (currency, e.g. "₹ 240"), `text_gray_900_6` (currency, e.g. "₹ 290"), `text_gray_900_8` (currency, e.g. "₹ 180"), `text_gray_900_10` (currency, e.g. "₹ 290"), `text_gray_900_12` (currency, e.g. "₹ 150"), `text_gray_900_14` (currency, e.g. "₹ 190"). All 90 slots are in `slots.json`.
 
 **States:** default (none), hover (css-pseudo). Details and class/attribute changes in `states.json`.
 

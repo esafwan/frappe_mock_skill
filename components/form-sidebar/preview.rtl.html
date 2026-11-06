@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Form side panel (assignments, tags, shared)</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1159px}[data-ui="form-sidebar"]{width:277px!important;flex:none!important;box-sizing:border-box}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -11,6 +11,18 @@
   100% { transform: scale(1); }
 }
 :root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
   15% { opacity: 1; }
@@ -107,18 +119,6 @@
 @keyframes expenses-swipe { 
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
-}
-@keyframes system-trace { 
-  100% { transform: translateX(-13px); }
-}
-@keyframes geo-land { 
-  100% { transform: translateX(-25px); }
-}
-@keyframes automation-cycle { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes website-scroll { 
-  100% { transform: translateY(-28.3px); }
 }
 </style></head>
 <body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Direct" data-sidebar="1">

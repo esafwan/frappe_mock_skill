@@ -20,3 +20,7 @@ for (const id of ['pos-item-grid', 'pos-item-card']) if (fs.existsSync(ROOT + `c
 if (fs.existsSync(ROOT + 'components/pos-cart/slots.json')) { const s = slotsOf('pos-cart'); const b = {}; let nm = 0, pr = 0;
   for (const [k, v] of Object.entries(s)) { if (/^text_sm$/.test(k)) b[k] = 'menu.items[0].name'; else if (/^text_sm_2$/.test(k) || /^font_semibold_2$/.test(k)) b[k] = 'menu.items[0].price'; }
   write('pos-cart', b); }
+
+if (fs.existsSync(ROOT + 'components/pos-category-sidebar/slots.json')) { const s2 = slotsOf('pos-category-sidebar'); const b = {}; let n = 0, c = 0;
+  for (const [k, v] of Object.entries(s2)) { if (/^text_start(_\d+)?$/.test(k)) b[k] = { expr: `menu.categories[${n++}].name`, dropRow: 'button' }; else if (/^text_center(_\d+)?$/.test(k)) b[k] = c++ === 0 ? 'menu.itemCount' : `menu.categories[${c - 2}].count`; }
+  write('pos-category-sidebar', b); }

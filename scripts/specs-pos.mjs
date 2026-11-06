@@ -17,6 +17,8 @@ export const specs = [
     targets: { active: 'a:nth-child(2)' }, prepare: clean, states: { hover: { target: 'a:nth-child(3)' }, focus: { target: 'a:nth-child(3)' } } },
   { id: 'pos-category-tabs', name: 'Menu category tabs (pills)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.flex.items-center.gap-2.overflow-x-auto.overflow-y-hidden', settle: 1500,
     prepare: clean, targets: { all: 'button:nth-child(1)', special: 'button:nth-child(2)' }, states: hover('special') },
+  { id: 'pos-category-sidebar', name: 'Menu categories side panel (with item counts)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.w-64.bg-white.border-e.border-gray-200', settle: 1500,
+    prepare: clean, targets: {}, states: { hover: { target: 'nav button:nth-child(3), nav a:nth-child(3), nav div > div:nth-child(3)' } } },
   { id: 'pos-filter-bar', name: 'Order type tabs, search and category pills (filter bar)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.p-4.bg-white.border-b.border-border', settle: 1500,
     prepare: clean, targets: {}, states: { hover: { target: 'button:nth-child(2)' }, focus: { target: 'button:nth-child(2)' } } },
   { id: 'pos-item-grid', name: 'Menu item grid', group: 'pos', css: CSS, url: '/pos/register', root: CARDS, settle: 2500,

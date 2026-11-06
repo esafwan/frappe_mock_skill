@@ -18,7 +18,7 @@ const { browser, page } = await open();
 for (const spec of specs) {
   if (only.length && !only.includes(spec.id)) continue;
   const dir = ROOT + 'components/' + spec.id + '/'; fs.mkdirSync(dir + 'states', { recursive: true });
-  const out = { id: spec.id }; let rtlFrac = null, darkFrac = null, darkBg = null;
+  const out = { id: spec.id }; let rootWRtl = null, wRtl = null, wDark = null, rtlFrac = null, darkFrac = null, darkBg = null;
   try {
     const modes = [['light', false, false], ['dark', true, false], ['rtl', false, true]];
     for (const [mode, dark, rtl] of modes) {
@@ -45,6 +45,7 @@ for (const spec of specs) {
       if (dark) darkBg = data.bg;
       if (dark) { const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); darkFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) }; }
       if (rtl) { const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); rtlFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) }; }
+      if (rtl) { wRtl = data.ancestors.map(a => a.w); rootWRtl = data.size.w; } if (dark) wDark = data.ancestors.map(a => a.w);
       if (dark || rtl) continue;
       const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); data.rootFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) };
       data.pad = pad; data.clip = spec.pad ? { w: Math.ceil(data.size.w + pad.l + pad.r), h: Math.ceil(data.size.h + pad.t + pad.b) } : null;
@@ -87,8 +88,9 @@ for (const spec of specs) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, wRtl, rootWRtl, wDark, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
+    fs.rmSync(dir + 'assets', { recursive: true, force: true }); for (const im of out.images || []) { fs.mkdirSync(dir + 'assets', { recursive: true }); fs.writeFileSync(dir + im.file, (/;base64,/.test(im.data) ? Buffer.from(im.data.split(',')[1], 'base64') : Buffer.from(decodeURIComponent(im.data.slice(im.data.indexOf(',') + 1)), 'utf8'))); }
     { // calibrate sub-pixel origin per mode: render the preview with origin 0, compare root frac with the live one
       const cctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 }); const cp = await cctx.newPage();
       const m0 = { ...meta, origin: { x: 0, y: 0 }, originRtl: { x: 0, y: 0 }, originDark: { x: 0, y: 0 } }; const body0 = spriteFor(bodyHtml) + fill(bodyHtml, Object.fromEntries(out.slots.map(s => [s.name, s.sample])));

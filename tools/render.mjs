@@ -57,7 +57,9 @@ export function slotValues(id, opts = {}) {
         else if (m[2] === 'category') v = pick(menu.categories.find(c => c.id === it.category)?.name, lang) ?? it.category;
         else if (m[2] === 'image') v = it.image.startsWith('data/') ? path.posix.relative(opts.base || `components/${id}`, it.image) : it.image;
         else if (it[m[2]] !== undefined) v = String(pick(it[m[2]], lang)); }
-      const c = exprs.expr.match(/^menu\.categories\[(\d+)\]\.name$/); if (c) v = pick(menu.categories[+c[1] % menu.categories.length].name, lang);
+      const c = exprs.expr.match(/^menu\.categories\[(\d+)\]\.name$/); if (c) v = +c[1] >= menu.categories.length && exprs.dropRow ? `\u0001DROP:${exprs.dropRow}\u0001` : pick(menu.categories[+c[1] % menu.categories.length].name, lang);
+      const cc = exprs.expr.match(/^menu\.categories\[(\d+)\]\.count$/); if (cc && +cc[1] >= menu.categories.length) v = ''; else if (cc) { const cat = menu.categories[+cc[1] % menu.categories.length]; v = String(menu.items.filter(i => i.category === cat.id).length); }
+      if (exprs.expr === 'menu.itemCount') v = String(menu.items.length);
       if (exprs.expr === 'menu.name') v = pick(menu.name, lang);
     }
     if (lang === 'ar' && loc && /^(number|currency)$/.test(s.type) && opts.arabicDigits !== false && loc.numeralSystem === 'arab') v = toArabicDigits(v);
@@ -66,6 +68,15 @@ export function slotValues(id, opts = {}) {
   return Object.assign(vals, opts.set || {});
 }
 
+export function dropRows(html) {   // remove the enclosing <tag>…</tag> row of every \u0001DROP:tag\u0001 sentinel
+  for (;;) { const m = html.match(/\u0001DROP:([a-z0-9]+)\u0001/); if (!m) return html; const tag = m[1]; const at = m.index;
+    let depth = 0, start = -1; const re = new RegExp(`<(/?)${tag}\\b`, 'g'); const before = [...html.slice(0, at).matchAll(re)];
+    for (let i = before.length - 1; i >= 0; i--) { if (before[i][1]) depth++; else if (depth === 0) { start = before[i].index; break; } else depth--; }
+    if (start < 0) return html.replace(m[0], '');
+    let end = start, d = 0; const re2 = new RegExp(`<(/?)${tag}\\b[^>]*>`, 'g'); re2.lastIndex = start; let mm;
+    while ((mm = re2.exec(html))) { if (mm[1]) { d--; if (d === 0) { end = mm.index + mm[0].length; break; } } else d++; }
+    html = html.slice(0, start) + html.slice(end); }
+}
 export function renderComponent(id, opts = {}) {
   const dir = path.join(ROOT, 'components', id);
   const html = fs.readFileSync(path.join(dir, 'component.html'), 'utf8');
@@ -73,7 +84,7 @@ export function renderComponent(id, opts = {}) {
   const loc = opts.locale ? universals.locales()[opts.locale] : null; const lang = opts.lang || loc?.language || 'en';
   const rtl = opts.rtl ?? (universals.languages()[lang]?.rtl === true);
   const spriteMatch = fs.readFileSync(path.join(dir, 'preview.html'), 'utf8').match(/<svg class="icon-sprite"[\s\S]*?<\/svg>/);
-  const body = (spriteMatch ? spriteMatch[0] : '') + fill(html, slotValues(id, opts));
+  const body = (spriteMatch ? spriteMatch[0] : '') + dropRows(fill(html, slotValues(id, opts)));
   return harnessDoc(meta, body, { dark: opts.theme === 'dark', rtl, title: meta.name });
 }
 

@@ -11,7 +11,7 @@ for (const id of ids) {
     page.on('request', r => { if (!r.url().startsWith('file:') && !r.url().startsWith('data:')) reqs.push(r.url()); });
     await page.goto('file://' + dir + (mode === 'light' ? 'preview.html' : `preview.${mode}.html`)); await page.evaluate?.(() => 0).catch(() => {});
     await page.waitForTimeout(300);
-    const meta = JSON.parse(fs.readFileSync(dir + 'harness.json')); const buf = await (meta.clip ? (async () => { const bb = await page.locator('[data-ui="' + id + '"]').first().boundingBox(); const pd = meta.pad; return page.screenshot({ fullPage: true, clip: { x: Math.max(0, bb.x - pd.l), y: Math.max(0, bb.y - pd.t), width: meta.clip.w, height: meta.clip.h } }); })() : page.locator('[data-ui="' + id + '"]').first().screenshot()).catch(async () => page.locator('#ui-kit-stage').screenshot());
+    const meta = JSON.parse(fs.readFileSync(dir + 'harness.json')); const buf = await (meta.clip ? (async () => { const bb = await page.locator('[data-ui="' + id + '"]').first().boundingBox(); const pd = meta.pad; return page.screenshot({ fullPage: true, clip: { x: Math.max(0, bb.x - pd.l), y: Math.max(0, bb.y - pd.t), width: meta.clip.w, height: meta.clip.h } }); })() : page.locator('[data-ui="' + id + '"]').first().screenshot()).catch((e) => { throw new Error('verify: component root not found/screenshot failed for ' + id + ': ' + e.message.split('\n')[0]); });
     const a = PNG.sync.read(buf), b = PNG.sync.read(fs.readFileSync(dir + (mode === 'light' ? 'screenshot.png' : `screenshot.${mode}.png`)));
     let pct, note = '';
     if (Math.abs(a.width - b.width) > 4 || Math.abs(a.height - b.height) > 4) { pct = 1; note = `size ${a.width}x${a.height} vs ${b.width}x${b.height}`; }

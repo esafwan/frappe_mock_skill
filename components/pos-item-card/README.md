@@ -4,7 +4,7 @@ A single POS item card (photo, name, price).
 
 **When to use:** Use for close-ups; bind to a menu item.
 
-**Slots people usually change:** `text_gray_900_2` (currency, e.g. "₹ 60"), `text_gray_900` (text, e.g. "Butter Naan"), `font_normal` (text, e.g. "Available"), `text_gray_500` (text, e.g. "Breads"). All 8 slots are in `slots.json`.
+**Slots people usually change:** `text_gray_900_2` (currency, e.g. "₹ 60"), `text_gray_900` (text, e.g. "Butter Naan"), `font_normal` (text, e.g. "Available"), `text_gray_500` (text, e.g. "Breads"). All 9 slots are in `slots.json`.
 
 **States:** default (none), hover (css-pseudo), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
 
