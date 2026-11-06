@@ -9,4 +9,4 @@ echo $P | tr ' ' '\n' | xargs -P 2 -I{} sh -c 'node scripts/capture.mjs {} 2>&1 
 node scripts/capture.mjs pos-payment-dialog 2>&1 | tail -1
 node scripts/bindings.mjs >/dev/null && node scripts/previews.mjs
 node scripts/verify.mjs | tee /tmp/verify.out | grep -c PASS; grep FAIL /tmp/verify.out || true
-node scripts/pages.mjs verify; node scripts/credits.mjs; node scripts/docs.mjs && node scripts/lint.mjs; node scripts/check-data.mjs | tail -1
+node scripts/pages.mjs verify; node scripts/pages-self.mjs | grep -c PASS; node scripts/credits.mjs; node scripts/docs.mjs && node scripts/lint.mjs; node scripts/check-data.mjs | tail -1
