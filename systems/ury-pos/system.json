@@ -1,0 +1,16 @@
+{
+  "id": "ury-pos",
+  "name": "URY POS (React/Tailwind SPA)",
+  "status": "ready",
+  "source": { "app": "ury", "branch": "version-16", "route": "/pos" },
+  "componentGroup": "pos",
+  "variableSystem": {
+    "kind": "css-custom-properties (Tailwind theme variables)",
+    "themeAttribute": null,
+    "files": { "vars": "tokens/css/ury-pos-vars.css" },
+    "notes": "POS has its own variable system independent of the desk. Colours/radius/fonts come from ury-pos-vars.css."
+  },
+  "tokens": { "css": ["tokens/css/fonts.css", "tokens/css/ury-pos.css"], "fonts": "tokens/fonts/", "iconSprite": null },
+  "rtl": { "supported": true, "mechanism": "html[dir=rtl] / dir attribute on root (URY POS sets dir from the user language)" },
+  "defaults": { "locale": "en-IN/INR", "menu": "south-indian", "viewport": { "w": 1440, "h": 900, "deviceScaleFactor": 2 } }
+}

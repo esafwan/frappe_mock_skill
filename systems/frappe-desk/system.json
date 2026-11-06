@@ -1,0 +1,22 @@
+{
+  "id": "frappe-desk",
+  "name": "Frappe v16 desk (ERPNext / URY desk)",
+  "status": "ready",
+  "source": { "app": "frappe", "branch": "version-16", "capturedFrom": "sa-v16-verify bench, URY version-16 demo data" },
+  "componentGroup": "desk",
+  "variableSystem": {
+    "kind": "css-custom-properties",
+    "themeAttribute": "data-theme",
+    "themes": ["light", "dark"],
+    "files": { "vars": "tokens/css/theme-vars.css", "json": "tokens/tokens.json" },
+    "notes": "Override any --variable on :root or [data-theme] to re-skin; components use real Frappe classes so they follow the variables."
+  },
+  "tokens": {
+    "css": ["tokens/css/frappe-desk.css", "tokens/css/frappe-report.css", "tokens/css/erpnext-erpnext.css", "tokens/css/hrms-hrms.css"],
+    "fonts": "tokens/fonts/",
+    "iconSprite": "tokens/icons/sprite.svg.html"
+  },
+  "rtl": { "supported": true, "mechanism": "html[dir=rtl] (bundle uses [dir=rtl] selectors); set dir on <html>" },
+  "defaults": { "locale": "en-US/USD", "theme": "light", "viewport": { "w": 1440, "h": 900, "deviceScaleFactor": 2 }, "user": "Administrator" },
+  "dataBindings": "tools/render.mjs  (slot values come from data/menus + data/universals, or explicit values)"
+}
