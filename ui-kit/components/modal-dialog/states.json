@@ -54,8 +54,43 @@
       "description": "auto: first interactive element"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "modal-dialog.button-2",
+      "changes": [
+        {
+          "element": "modal-dialog.button-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(153, 153, 153)"
+        },
+        "borderColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(226, 226, 226)"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(153, 153, 153) none 3px"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": null,
+      "note": "element is hidden in this state (nothing to screenshot)",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
     },
     "error": {
       "applicable": false,

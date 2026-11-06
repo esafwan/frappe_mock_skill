@@ -67,8 +67,50 @@
       "description": "auto: first interactive element"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "kot-list.input-1",
+      "changes": [
+        {
+          "element": "kot-list.input-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(82, 82, 82)"
+        },
+        "backgroundColor": {
+          "from": "rgb(243, 243, 243)",
+          "to": "rgb(237, 237, 237)"
+        },
+        "borderColor": {
+          "from": "rgb(153, 153, 153)",
+          "to": "rgb(82, 82, 82)"
+        },
+        "boxShadow": {
+          "from": "rgba(124, 124, 124, 0.25) 0px 0px 0px 2px",
+          "to": "none"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 0px",
+          "to": "rgb(82, 82, 82) none 3px"
+        },
+        "cursor": {
+          "from": "text",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
     },
     "error": {
       "applicable": false,

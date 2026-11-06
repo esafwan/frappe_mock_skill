@@ -50,8 +50,30 @@
       "description": "auto: first interactive element"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "sidebar.button-2",
+      "changes": [
+        {
+          "element": "sidebar.button-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
     },
     "error": {
       "applicable": false,

@@ -54,13 +54,15 @@ for (const spec of specs) {
       const states = {};
       for (const st of STATES) {
         let def = (spec.states || {})[st];
+        if (!def && st === 'disabled') { const first = (data.boxes || []).find(b => b.interactive && /^(button|input|select|textarea)$/.test(b.tag) && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, act: async (p, t) => t.evaluate(e => { e.setAttribute('disabled', ''); e.setAttribute('aria-disabled', 'true'); e.classList.add('disabled'); }), reset: async (p, t) => t.evaluate(e => { e.removeAttribute('disabled'); e.removeAttribute('aria-disabled'); e.classList.remove('disabled'); }), description: 'auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control' }; }
         if (!def && ['hover', 'focus', 'active'].includes(st)) { const first = (data.boxes || []).find(b => b.interactive && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, description: 'auto: first interactive element' }; }
         if (st === 'default') { states[st] = { applicable: true, mechanism: 'none', note: 'markup as captured' }; continue; }
         if (!def) { states[st] = { applicable: false, reason: (spec.na && spec.na[st]) || 'not applicable: Frappe/POS renders no distinct ' + st + ' variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)' }; continue; }
         const before = await page.evaluate(({ id }) => { const r = document.querySelector(`[data-ui="${id}"]`); return [r, ...r.querySelectorAll('*')].map((e, i) => ({ i, tag: e.tagName, ui: e.getAttribute('data-ui'), cls: e.getAttribute('class') || '', attrs: Object.fromEntries([...e.attributes].filter(a => a.name !== 'class' && a.name !== 'style').map(a => [a.name, a.value])), }));}, { id: spec.id });
         const tgtSel = def.target ? (spec.targets?.[def.target] || def.target) : null;
         const tloc = tgtSel ? page.locator(`[data-ui="${spec.id}"] ${tgtSel}`).first() : loc;
-        const csBefore = tgtSel ? await tloc.evaluate(e => { const c = getComputedStyle(e); return { color: c.color, backgroundColor: c.backgroundColor, borderColor: c.borderTopColor, boxShadow: c.boxShadow, outline: c.outline, opacity: c.opacity, textDecoration: c.textDecorationLine, cursor: c.cursor }; }) : null;
+        const csBefore = tgtSel ? await tloc.evaluate(e => { const c = getComputedStyle(e); return { color: c.color, backgroundColor: c.backgroundColor, borderColor: c.borderTopColor, boxShadow: c.boxShadow, outline: c.outline, opacity: c.opacity, textDecoration: c.textDecorationLine, cursor: c.cursor }; }) .catch(() => undefined) : null;
+        if (tgtSel && csBefore === undefined) { states[st] = { applicable: false, reason: 'target element not present in this state (re-rendered by the app)' }; continue; }
         try {
           if (def.act) await def.act(page, tloc, loc);
           else if (st === 'hover') await tloc.hover({ force: true });

@@ -6,7 +6,7 @@ A single Kitchen Order Ticket document (items, quantities, production unit, stat
 
 **Slots people usually change:** `bold` (date, e.g. "22-10-2026"), `like_disabled_input_3` (time, e.g. "12:11:12"), `like_disabled_input_7` (time, e.g. "12:17:43"), `like_disabled_input_9` (number, e.g. "28"), `control_label_9` (text, e.g. "Start Time For Preparation"), `visually_hidden` (text, e.g. "Begin typing for results."). All 106 slots are in `slots.json`.
 
-**States:** default (none), hover (class-attr), focus (css-pseudo), active (css-pseudo). Details and class/attribute changes in `states.json`.
+**States:** default (none), hover (class-attr), focus (css-pseudo), active (css-pseudo), disabled (class-attr). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="kot-form"`; 13 interactive elements with measured boxes in `measurements.json` (e.g. `kot-form.input-7`, `kot-form.link-11`, `kot-form.link-12`).
 

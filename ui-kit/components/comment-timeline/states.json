@@ -64,8 +64,38 @@
       "description": "auto: first interactive element"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "comment-timeline.button-2",
+      "changes": [
+        {
+          "element": "comment-timeline.button-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(124, 124, 124)"
+        },
+        "opacity": {
+          "from": "1",
+          "to": "0.65"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
     },
     "error": {
       "applicable": false,

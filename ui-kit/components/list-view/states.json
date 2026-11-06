@@ -62,8 +62,46 @@
       "description": "row checkbox ticked (also shows action bar)"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "list-view.input-1",
+      "changes": [
+        {
+          "element": "list-view.input-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(82, 82, 82)"
+        },
+        "backgroundColor": {
+          "from": "rgb(243, 243, 243)",
+          "to": "rgb(237, 237, 237)"
+        },
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(82, 82, 82)"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(82, 82, 82) none 3px"
+        },
+        "cursor": {
+          "from": "text",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
     },
     "error": {
       "applicable": false,
