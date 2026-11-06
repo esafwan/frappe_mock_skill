@@ -19,7 +19,7 @@ const { browser, page } = await open();
 for (const spec of specs) {
   if (only.length && !only.includes(spec.id)) continue;
   const dir = ROOT + 'components/' + spec.id + '/'; fs.mkdirSync(dir + 'states', { recursive: true });
-  const out = { id: spec.id }; let bgDark, rtlX;
+  const out = { id: spec.id }; let bgDark;
   try {
     const modes = [['light', false, false], ['dark', true, false], ['rtl', false, true]];
     for (const [mode, dark, rtl] of modes) {
@@ -35,13 +35,13 @@ for (const spec of specs) {
       await page.mouse.move(0, 0);
       const pad = Object.assign({ l: 0, t: 0, r: 0, b: 0 }, spec.pad || {});
       const shotPath = dir + (dark ? 'screenshot.dark.png' : rtl ? 'screenshot.rtl.png' : 'screenshot.png');
+      if (spec.pad && rtl) await page.evaluate(({ padL, sel }) => { const x = document.querySelector(sel).getBoundingClientRect().x; if (x < padL) document.body.style.transform = `translateX(${padL - x}px)`; }, { padL: pad.l, sel: `[data-ui="${spec.id}"]` }); // RTL root sits near the left edge: shift page so the left pad is not clamped (preview always has pad.l of room)
       if (spec.pad) await page.evaluate((sel) => { const r = document.querySelector(sel); document.querySelectorAll('[data-keep]').forEach(e => e.removeAttribute('data-keep')); r.setAttribute('data-keep', ''); r.querySelectorAll('*').forEach(e => e.setAttribute('data-keep', '')); for (let a = r.parentElement; a; a = a.parentElement) a.setAttribute('data-keep', ''); const s = document.createElement('style'); s.dataset.uikit = '1'; s.textContent = 'body :not([data-keep]){visibility:hidden!important}'; document.head.appendChild(s); }, `[data-ui="${spec.id}"]`);
       if (dark) bgDark = await page.evaluate(() => { for (let p = document.body; p; p = p.parentElement) { const c = getComputedStyle(p).backgroundColor; if (c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') return c; } return 'rgb(255,255,255)'; });
       const shot = async (pth) => { if (!spec.pad) return loc.screenshot({ path: pth, animations: 'disabled' });
         const r = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY, w: b.width, h: b.height }; });
         return page.screenshot({ path: pth, fullPage: true, clip: { x: Math.max(0, r.x - pad.l), y: Math.max(0, r.y - pad.t), width: Math.ceil(r.w + pad.l + pad.r), height: Math.ceil(r.h + pad.t + pad.b) } }); };
       await shot(shotPath);
-      if (rtl) rtlX = await loc.evaluate(e => e.getBoundingClientRect().x + scrollX);
       if (dark || rtl) continue;
       const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); data.rootFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) };
       data.pad = pad; data.clip = spec.pad ? { w: Math.ceil(data.size.w + pad.l + pad.r), h: Math.ceil(data.size.h + pad.t + pad.b) } : null;
@@ -84,7 +84,7 @@ for (const spec of specs) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, bgDark, rtlX, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, bgDark, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
     fs.writeFileSync(dir + 'component.html', bodyHtml + '\n');
     const slots = {}; for (const s of out.slots) slots[s.name] = { type: s.type, sample: s.sample, maxLength: s.maxLength, where: s.where, element: s.element };
@@ -97,14 +97,6 @@ for (const spec of specs) {
     const prev = harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { title: spec.name });
     fs.writeFileSync(dir + 'preview.html', prev);
     fs.writeFileSync(dir + 'preview.rtl.html', harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { rtl: true, title: spec.name }));
-    if (meta.pad && meta.rtlX != null && meta.pad.l > meta.rtlX) { // overlay: live RTL root sits left of pad.l, so clamp-aware stage offset; measure the real offset in a scratch render
-      const pg = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-      meta.rtlLeft = (meta.pad.l || 0) > meta.rtlX ? meta.rtlX + (meta.origin ? meta.origin.x : 0) - (Math.ceil(meta.stageW || meta.size.w) - meta.size.w) : 0;
-      for (let k = 0; k < 4; k++) { // converge: stage offset of the root is layout dependent (negative left, rtl overflow)
-        fs.writeFileSync(dir + 'preview.rtl.html', harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { rtl: true, title: spec.name }));
-        await pg.goto('file://' + dir + 'preview.rtl.html'); const bb = await pg.locator(`[data-ui="${spec.id}"]`).first().boundingBox();
-        const d = meta.rtlX + (meta.origin ? meta.origin.x : 0) - bb.x; if (Math.abs(d) < 0.01) break; meta.rtlLeft += d; }
-      await pg.close(); fs.writeFileSync(dir + 'harness.json', JSON.stringify(meta, null, 2)); }
     const prevDark = harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { dark: true, title: spec.name });
     fs.writeFileSync(dir + 'preview.dark.html', prevDark);
     console.log('OK', spec.id, Object.keys(slots).length, 'slots', out.boxes.length, 'boxes');
