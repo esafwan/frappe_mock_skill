@@ -3,7 +3,7 @@ name: frappe-mock-ui
 description: Build fake-but-pixel-exact Frappe v16 desk (ERPNext/URY) and URY POS screens for demo videos from backend-free, JS-free components. Use when a video/animation needs UI that looks exactly like the real app, in light/dark, LTR/RTL Arabic, with swappable currency (AED/SAR/QAR/USD/EUR/INR…) and ready menus with real food photos.
 ---
 # frappe-mock-ui
-Read `README.md` (layout) and `AGENT_GUIDE.md` (workflow). Entry points:
+Everything is under `ui-kit/`. Read `ui-kit/README.md` (layout) and `ui-kit/AGENT_GUIDE.md` (workflow); all paths below are relative to `ui-kit/`. Entry points:
 - `manifest.json` — every component, its slots (type/sample/maxLength), states, targetable `data-ui` ids and pixel boxes, systems and pages.
 - `pages/*.html` — finished screens (`desk-list`, `desk-form`, `pos-register`) plus `.dark`, `.ar-AED`, `.en-EUR` and menu variants like `pos-register.mediterranean-ar-AED.html`.
 - `node tools/render.mjs <component> --locale ar-AE/AED --menu mediterranean --theme dark --out out.html` — render one component with locale, currency, theme and menu JSON.

@@ -6,7 +6,7 @@ Inline form alert banner (form message).
 
 **Slots people usually change:** `div` (text, e.g. "This customer has unpaid invoi"). All 1 slots are in `slots.json`.
 
-**States:** default (none). Details and class/attribute changes in `states.json`.
+**States:** default (none), error (class-attr), empty (class-attr). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="alert"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
 
