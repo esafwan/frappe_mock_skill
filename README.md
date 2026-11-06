@@ -37,8 +37,8 @@ node scripts/docs.mjs                                    # READMEs + manifest.js
 See `AGENT_GUIDE.md` for how a video agent should drive the kit. Photo credits: `data/images/*/CREDITS.md` (Wikimedia Commons / Unsplash licences — keep attribution when publishing).
 
 ## Verification status (rebuilt 2026-11-06)
-- 40 components × light/dark/RTL = 120 JS-off pixel checks, all ≤ 0.5 % (`node scripts/verify.mjs`).
+- 41 components × light/dark/RTL = 123 JS-off pixel checks, all ≤ 0.5 % (`node scripts/verify.mjs`).
 - 3 pages × light/dark/RTL compared to live captures, all ≤ 0.5 % (`node scripts/pages.mjs verify`; `pages-verify-report.json`). Variants with translated text, swapped currency or menu data have no live twin and are marked `verifiedAgainstLive:false` in `manifest.json`.
 - States: hover/focus/active are captured for every component that has an interactive element (explicit spec or auto-derived from its first interactive element). disabled/error/loading/empty exist only where the real UI has them (field-*, page-head, list-view, pos-cart, …); elsewhere `states.json` says `applicable:false` with the reason.
-- KOT: `kot-list`/`kot-form` are the real URY KOT desk screens; the POS has no KOT screen of its own, `pos-kot-view` is the Mosaic kitchen overview.
+- KOT: `pos-kot-board` is the real Mosaic kitchen board with live tickets (Queued / Preparing / Ready); `pos-kot-view` is the Mosaic unit overview; `kot-list`/`kot-form` are the desk KOT screens. Mosaic only shows KOTs from the last 3 h (site time), so recapturing `pos-kot-board` needs `scripts/kot/kot-shift.sql` applied to the bench (`bench --site <site> mariadb < kot-shift.sql`) and `scripts/kot/kot-restore.sql` afterwards.
 - The kit lives at `tracks/sa-ui-kit/ui-kit` of the URY workspace (symlinked as `ury_workspaces/ui-kit`); repo root = the kit.

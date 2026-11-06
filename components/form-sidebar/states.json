@@ -7,32 +7,85 @@
       "note": "markup as captured"
     },
     "hover": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "form-sidebar.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(82, 82, 82)",
+          "to": "rgb(218, 218, 218)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
     },
     "focus": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "form-sidebar.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(82, 82, 82)",
+          "to": "rgb(218, 218, 218)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(255, 255, 255, 0.15) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.075) 0px 1px 1px 0px, rgba(210, 210, 210, 0.5) 0px 0px 0px 2px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
     },
     "active": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "form-sidebar.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(82, 82, 82)",
+          "to": "rgb(23, 23, 23)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(243, 243, 243)"
+        },
+        "borderColor": {
+          "from": "rgb(82, 82, 82)",
+          "to": "rgb(211, 211, 211)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(201, 201, 201, 0.898) 0px 0px 0px 2px"
+        },
+        "outline": {
+          "from": "rgb(82, 82, 82) none 0px",
+          "to": "rgb(23, 23, 23) none 0px"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
     },
     "disabled": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "error": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "loading": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     }
   }
 }

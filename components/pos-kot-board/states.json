@@ -1,0 +1,43 @@
+{
+  "component": "pos-kot-board",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "div",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct focus variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct active variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    }
+  }
+}

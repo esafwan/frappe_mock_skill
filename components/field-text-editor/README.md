@@ -6,7 +6,7 @@ Rich text editor field with toolbar.
 
 **Slots people usually change:** `text_extra_muted` (text, e.g. "Help: To link to another recor"), `control_label` (text, e.g. "Content"), `tooltip_content` (text, e.g. "content"). All 261 slots are in `slots.json`.
 
-**States:** default (none), focus (css-pseudo), active (css-pseudo), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
+**States:** default (none), focus (css-pseudo), active (class-attr), disabled (class-attr), error (class-attr). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="field-text-editor"`; 21 interactive elements with measured boxes in `measurements.json` (e.g. `field-text-editor.span-1`, `field-text-editor.span-11`, `field-text-editor.button-36`).
 

@@ -21,14 +21,51 @@
     },
     "active": {
       "applicable": true,
-      "mechanism": "css-pseudo",
+      "mechanism": "class-attr",
       "pseudo": ":active",
-      "target": "field-text-editor.button-36",
-      "changes": [],
+      "target": "field-text-editor.span-1",
+      "changes": [
+        {
+          "element": "#path:9",
+          "addClass": [
+            "ql-expanded"
+          ],
+          "removeClass": [],
+          "attrs": {}
+        },
+        {
+          "element": "field-text-editor.span-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-expanded": "true"
+          }
+        },
+        {
+          "element": "field-text-editor.span-2",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-hidden": "false"
+          }
+        }
+      ],
       "computedStyleDelta": {
+        "color": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgb(15, 15, 15)"
+        },
         "backgroundColor": {
           "from": "rgba(0, 0, 0, 0)",
-          "to": "rgb(243, 243, 243)"
+          "to": "rgb(237, 237, 237)"
+        },
+        "borderColor": {
+          "from": "rgb(23, 23, 23)",
+          "to": "rgba(0, 0, 0, 0)"
+        },
+        "outline": {
+          "from": "rgb(23, 23, 23) none 3px",
+          "to": "rgb(15, 15, 15) none 3px"
         }
       },
       "screenshot": "states/active.png",
@@ -48,7 +85,7 @@
           "attrs": {}
         },
         {
-          "element": "#path:372",
+          "element": "#path:371",
           "addClass": [],
           "removeClass": [
             "hide"

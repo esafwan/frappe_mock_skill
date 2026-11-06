@@ -43,6 +43,8 @@ export const specs = [
       await p.evaluate(() => { const d = document.querySelector('[role=dialog]'); const card = d.querySelector(':scope > div.relative'); const w = card.getBoundingClientRect().width; card.id = 'ui-pay-card'; card.style.width = w + 'px'; card.style.cssText += ';position:absolute;left:80px;top:80px;margin:0;animation:none'; document.body.appendChild(card); d.remove(); document.getElementById('root').style.display = 'none'; });
       await clean(p);
     }, targets: { }, states: { hover: { target: 'button:last-of-type' }, focus: { target: 'input' } } },
+  { id: 'pos-kot-board', name: 'KOT board: live kitchen tickets for one production unit (Mosaic)', group: 'pos', css: ['fonts.css', 'ury-mosaic.css'], url: '/mosaic/Grill%20&%20Tandoor', root: 'div.p-6 > .grid', settle: 4000,
+    prepare: async (p) => { await p.waitForSelector('div.p-6 > .grid > *', { timeout: 15000 }); }, targets: {}, states: { hover: { target: 'div' } } },
   { id: 'pos-kot-view', name: 'Kitchen / KOT production-unit overview (Mosaic)', group: 'pos', css: ['fonts.css', 'ury-mosaic.css'], url: '/mosaic/', root: 'div.p-6 > .grid', settle: 3000,
     prepare: async (p) => { await p.waitForSelector('div.p-6 > .grid > div', { timeout: 15000 }); }, targets: {},
     states: { hover: { target: 'div.cursor-pointer' } } },

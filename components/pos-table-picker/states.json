@@ -25,28 +25,45 @@
       "screenshot": "states/hover.png"
     },
     "focus": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "pos-table-picker.div-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(120, 53, 15) none 3px",
+          "to": "rgb(0, 95, 204) auto 1px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
     },
     "active": {
-      "applicable": false,
-      "reason": "no such state on this component"
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "pos-table-picker.div-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
     },
     "disabled": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "error": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "loading": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
       "applicable": false,
-      "reason": "no such state on this component"
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     }
   }
 }

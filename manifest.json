@@ -2989,7 +2989,7 @@
         "default": "none",
         "hover": "n/a",
         "focus": "css-pseudo",
-        "active": "css-pseudo",
+        "active": "class-attr",
         "disabled": "class-attr",
         "error": "class-attr",
         "loading": "n/a",
@@ -3586,7 +3586,7 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
-      "contentHash": "91c37b6112ce",
+      "contentHash": "4cc85192979f",
       "size": {
         "w": 277,
         "h": 852
@@ -3595,7 +3595,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 24,
+      "slotCount": 25,
       "slots": {
         "standard_image": {
           "type": "text",
@@ -3667,6 +3667,11 @@
           "sample": "Print",
           "maxLength": 20
         },
+        "not_liked_dataname": {
+          "type": "text",
+          "sample": "Direct",
+          "maxLength": 20
+        },
         "add_assignment_btn_title": {
           "type": "text",
           "sample": "Assign",
@@ -3720,9 +3725,9 @@
       },
       "states": {
         "default": "none",
-        "hover": "n/a",
-        "focus": "n/a",
-        "active": "n/a",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",
@@ -4569,7 +4574,7 @@
         "default": "none",
         "hover": "css-pseudo",
         "focus": "css-pseudo",
-        "active": "n/a",
+        "active": "css-pseudo",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",
@@ -14606,7 +14611,7 @@
         "default": "none",
         "hover": "css-pseudo",
         "focus": "css-pseudo",
-        "active": "n/a",
+        "active": "css-pseudo",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",
@@ -16264,8 +16269,8 @@
       "states": {
         "default": "none",
         "hover": "css-pseudo",
-        "focus": "n/a",
-        "active": "n/a",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",
@@ -16395,6 +16400,419 @@
         }
       ],
       "dataBindings": "components/pos-item-grid/bindings.json"
+    },
+    "pos-kot-board": {
+      "id": "pos-kot-board",
+      "name": "KOT board: live kitchen tickets for one production unit (Mosaic)",
+      "system": "ury-pos",
+      "group": "pos",
+      "path": "components/pos-kot-board/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "screenshotRtl": "screenshot.rtl.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "contentHash": "a18e7b47b368",
+      "size": {
+        "w": 1392,
+        "h": 305
+      },
+      "css": [
+        "fonts.css",
+        "ury-mosaic.css"
+      ],
+      "slotCount": 72,
+      "slots": {
+        "ease_in_out": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_medium": {
+          "type": "text",
+          "sample": "Table",
+          "maxLength": 20
+        },
+        "font_semibold": {
+          "type": "text",
+          "sample": "T5",
+          "maxLength": 20
+        },
+        "font_medium_2": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_3": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_2": {
+          "type": "number",
+          "sample": "31",
+          "maxLength": 20
+        },
+        "shrink_0": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_4": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center": {
+          "type": "text",
+          "sample": "Lamb Seekh Kebab",
+          "maxLength": 32
+        },
+        "text_sm": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "font_semibold_3": {
+          "type": "text",
+          "sample": "Queued",
+          "maxLength": 20
+        },
+        "items_center_2": {
+          "type": "number",
+          "sample": "1",
+          "maxLength": 20
+        },
+        "ease_in_out_2": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_semibold_4": {
+          "type": "text",
+          "sample": "Takeaway",
+          "maxLength": 20
+        },
+        "font_medium_5": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_6": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_5": {
+          "type": "number",
+          "sample": "34",
+          "maxLength": 20
+        },
+        "shrink_0_2": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_7": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center_3": {
+          "type": "text",
+          "sample": "Paneer Malai Tikka",
+          "maxLength": 36
+        },
+        "text_sm_2": {
+          "type": "text",
+          "sample": "( Grills & BBQ )",
+          "maxLength": 32
+        },
+        "font_semibold_6": {
+          "type": "text",
+          "sample": "Ready",
+          "maxLength": 20
+        },
+        "items_center_4": {
+          "type": "number",
+          "sample": "2",
+          "maxLength": 20
+        },
+        "font_medium_8": {
+          "type": "text",
+          "sample": "Less spicy",
+          "maxLength": 20
+        },
+        "ease_in_out_3": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_semibold_7": {
+          "type": "text",
+          "sample": "Takeaway",
+          "maxLength": 20
+        },
+        "font_medium_9": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_10": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_8": {
+          "type": "number",
+          "sample": "16",
+          "maxLength": 20
+        },
+        "shrink_0_3": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_11": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center_5": {
+          "type": "text",
+          "sample": "Paneer Malai Tikka",
+          "maxLength": 36
+        },
+        "text_sm_3": {
+          "type": "text",
+          "sample": "( Grills & BBQ )",
+          "maxLength": 32
+        },
+        "font_semibold_9": {
+          "type": "text",
+          "sample": "Ready",
+          "maxLength": 20
+        },
+        "items_center_6": {
+          "type": "number",
+          "sample": "2",
+          "maxLength": 20
+        },
+        "font_medium_12": {
+          "type": "text",
+          "sample": "No onion",
+          "maxLength": 20
+        },
+        "ease_in_out_4": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_semibold_10": {
+          "type": "text",
+          "sample": "Takeaway",
+          "maxLength": 20
+        },
+        "font_medium_13": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_14": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_11": {
+          "type": "number",
+          "sample": "35",
+          "maxLength": 20
+        },
+        "shrink_0_4": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_15": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center_7": {
+          "type": "text",
+          "sample": "Butter Naan",
+          "maxLength": 22
+        },
+        "text_sm_4": {
+          "type": "text",
+          "sample": "( Breads )",
+          "maxLength": 20
+        },
+        "font_semibold_12": {
+          "type": "text",
+          "sample": "Preparing",
+          "maxLength": 20
+        },
+        "items_center_8": {
+          "type": "number",
+          "sample": "2",
+          "maxLength": 20
+        },
+        "font_medium_16": {
+          "type": "text",
+          "sample": "Less spicy",
+          "maxLength": 20
+        },
+        "ease_in_out_5": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_semibold_13": {
+          "type": "text",
+          "sample": "Takeaway",
+          "maxLength": 20
+        },
+        "font_medium_17": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_18": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_14": {
+          "type": "number",
+          "sample": "17",
+          "maxLength": 20
+        },
+        "shrink_0_5": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_19": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center_9": {
+          "type": "text",
+          "sample": "Garlic Naan",
+          "maxLength": 22
+        },
+        "text_sm_5": {
+          "type": "text",
+          "sample": "( Breads )",
+          "maxLength": 20
+        },
+        "font_semibold_15": {
+          "type": "text",
+          "sample": "Preparing",
+          "maxLength": 20
+        },
+        "items_center_10": {
+          "type": "number",
+          "sample": "3",
+          "maxLength": 20
+        },
+        "ease_in_out_6": {
+          "type": "text",
+          "sample": "Serve",
+          "maxLength": 20
+        },
+        "font_medium_20": {
+          "type": "text",
+          "sample": "Table",
+          "maxLength": 20
+        },
+        "font_semibold_16": {
+          "type": "text",
+          "sample": "T11",
+          "maxLength": 20
+        },
+        "font_medium_21": {
+          "type": "text",
+          "sample": "( Administrator )",
+          "maxLength": 34
+        },
+        "font_medium_22": {
+          "type": "text",
+          "sample": "Order",
+          "maxLength": 20
+        },
+        "font_semibold_17": {
+          "type": "number",
+          "sample": "30",
+          "maxLength": 20
+        },
+        "shrink_0_6": {
+          "type": "time",
+          "sample": "0:00",
+          "maxLength": 20
+        },
+        "font_medium_23": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "items_center_11": {
+          "type": "text",
+          "sample": "Paneer Malai Tikka",
+          "maxLength": 36
+        },
+        "text_sm_6": {
+          "type": "text",
+          "sample": "( )",
+          "maxLength": 20
+        },
+        "font_semibold_18": {
+          "type": "text",
+          "sample": "Ready",
+          "maxLength": 20
+        },
+        "items_center_12": {
+          "type": "number",
+          "sample": "2",
+          "maxLength": 20
+        },
+        "font_medium_24": {
+          "type": "text",
+          "sample": "Serve first",
+          "maxLength": 22
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "n/a",
+        "active": "n/a",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "pos-kot-board",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1392,
+            "h": 305
+          }
+        }
+      ],
+      "dataBindings": null
     },
     "pos-kot-view": {
       "id": "pos-kot-view",
@@ -16615,7 +17033,7 @@
         },
         "font_semibold_18": {
           "type": "number",
-          "sample": "0",
+          "sample": "6",
           "maxLength": 20
         },
         "text_xs_22": {
@@ -16635,7 +17053,7 @@
         },
         "font_semibold_20": {
           "type": "number",
-          "sample": "0",
+          "sample": "6",
           "maxLength": 20
         },
         "text_xs_24": {
@@ -17717,8 +18135,8 @@
       "states": {
         "default": "none",
         "hover": "css-pseudo",
-        "focus": "n/a",
-        "active": "n/a",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",
@@ -27187,7 +27605,7 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
-      "contentHash": "2e266db82381",
+      "contentHash": "3e7070d0f7b1",
       "size": {
         "w": 224,
         "h": 900
@@ -27196,7 +27614,7 @@
         "frappe-desk.css",
         "erpnext-erpnext.css"
       ],
-      "slotCount": 149,
+      "slotCount": 170,
       "slots": {
         "header_title": {
           "type": "text",
@@ -27588,6 +28006,11 @@
           "sample": "See all Activity",
           "maxLength": 32
         },
+        "body_sidebar_datatitle": {
+          "type": "text",
+          "sample": "Selling",
+          "maxLength": 20
+        },
         "drop_icon_arialabel": {
           "type": "text",
           "sample": "Sidebar Menu",
@@ -27643,6 +28066,11 @@
           "sample": "Notification categories",
           "maxLength": 46
         },
+        "unread_dataname": {
+          "type": "text",
+          "sample": "r67s8bvbc9",
+          "maxLength": 20
+        },
         "user_avatar_title": {
           "type": "text",
           "sample": "Administrator",
@@ -27657,6 +28085,11 @@
           "type": "text",
           "sample": "22-10-2026 12:04:31",
           "maxLength": 38
+        },
+        "unread_dataname_2": {
+          "type": "text",
+          "sample": "r67693qt4c",
+          "maxLength": 20
         },
         "user_avatar_title_2": {
           "type": "text",
@@ -27673,6 +28106,11 @@
           "sample": "22-10-2026 11:51:31",
           "maxLength": 38
         },
+        "unread_dataname_3": {
+          "type": "text",
+          "sample": "r67a944guk",
+          "maxLength": 20
+        },
         "user_avatar_title_3": {
           "type": "text",
           "sample": "Administrator",
@@ -27687,6 +28125,11 @@
           "type": "text",
           "sample": "22-10-2026 11:31:31",
           "maxLength": 38
+        },
+        "notification_item_dataname": {
+          "type": "text",
+          "sample": "r67o4e09op",
+          "maxLength": 20
         },
         "user_avatar_title_4": {
           "type": "text",
@@ -27703,6 +28146,11 @@
           "sample": "22-10-2026 08:16:31",
           "maxLength": 38
         },
+        "unread_dataname_4": {
+          "type": "text",
+          "sample": "r67v4h940m",
+          "maxLength": 20
+        },
         "user_avatar_title_5": {
           "type": "text",
           "sample": "Administrator",
@@ -27717,6 +28165,11 @@
           "type": "text",
           "sample": "22-10-2026 07:16:31",
           "maxLength": 38
+        },
+        "notification_item_dataname_2": {
+          "type": "text",
+          "sample": "r676ah921a",
+          "maxLength": 20
         },
         "user_avatar_title_6": {
           "type": "text",
@@ -27733,6 +28186,11 @@
           "sample": "22-10-2026 02:16:31",
           "maxLength": 38
         },
+        "unread_dataname_5": {
+          "type": "text",
+          "sample": "p9hjst3vl1",
+          "maxLength": 20
+        },
         "user_avatar_title_7": {
           "type": "text",
           "sample": "Administrator",
@@ -27747,6 +28205,11 @@
           "type": "text",
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
+        },
+        "unread_dataname_6": {
+          "type": "text",
+          "sample": "p9hg4f4mis",
+          "maxLength": 20
         },
         "user_avatar_title_8": {
           "type": "text",
@@ -27763,6 +28226,11 @@
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
         },
+        "unread_dataname_7": {
+          "type": "text",
+          "sample": "p9hgt2v49a",
+          "maxLength": 20
+        },
         "user_avatar_title_9": {
           "type": "text",
           "sample": "Administrator",
@@ -27777,6 +28245,11 @@
           "type": "text",
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
+        },
+        "unread_dataname_8": {
+          "type": "text",
+          "sample": "p9hma3sbbm",
+          "maxLength": 20
         },
         "user_avatar_title_10": {
           "type": "text",
@@ -27793,6 +28266,11 @@
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
         },
+        "unread_dataname_9": {
+          "type": "text",
+          "sample": "p9hdoipgi4",
+          "maxLength": 20
+        },
         "user_avatar_title_11": {
           "type": "text",
           "sample": "Administrator",
@@ -27807,6 +28285,11 @@
           "type": "text",
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
+        },
+        "unread_dataname_10": {
+          "type": "text",
+          "sample": "p9h9ec9buj",
+          "maxLength": 20
         },
         "user_avatar_title_12": {
           "type": "text",
@@ -27823,6 +28306,11 @@
           "sample": "21-10-2026 17:06:24",
           "maxLength": 38
         },
+        "unread_dataname_11": {
+          "type": "text",
+          "sample": "la12abth8m",
+          "maxLength": 20
+        },
         "user_avatar_title_13": {
           "type": "text",
           "sample": "Administrator",
@@ -27837,6 +28325,11 @@
           "type": "text",
           "sample": "21-10-2026 16:54:36",
           "maxLength": 38
+        },
+        "unread_dataname_12": {
+          "type": "text",
+          "sample": "la15ege731",
+          "maxLength": 20
         },
         "user_avatar_title_14": {
           "type": "text",
@@ -27853,6 +28346,11 @@
           "sample": "21-10-2026 13:59:36",
           "maxLength": 38
         },
+        "notification_item_dataname_3": {
+          "type": "text",
+          "sample": "la14pdelus",
+          "maxLength": 20
+        },
         "user_avatar_title_15": {
           "type": "text",
           "sample": "Administrator",
@@ -27867,6 +28365,11 @@
           "type": "text",
           "sample": "20-10-2026 10:59:36",
           "maxLength": 38
+        },
+        "unread_dataname_13": {
+          "type": "text",
+          "sample": "mlh0skcofd",
+          "maxLength": 20
         },
         "user_avatar_title_16": {
           "type": "text",
@@ -27883,6 +28386,11 @@
           "sample": "25-02-2026 14:39:24",
           "maxLength": 38
         },
+        "unread_dataname_14": {
+          "type": "text",
+          "sample": "mlgfnpjghm",
+          "maxLength": 20
+        },
         "user_avatar_title_17": {
           "type": "text",
           "sample": "Administrator",
@@ -27897,6 +28405,11 @@
           "type": "text",
           "sample": "25-02-2026 14:39:24",
           "maxLength": 38
+        },
+        "unread_dataname_15": {
+          "type": "text",
+          "sample": "mledoho20q",
+          "maxLength": 20
         },
         "user_avatar_title_18": {
           "type": "text",
@@ -27913,6 +28426,11 @@
           "sample": "25-02-2026 14:39:24",
           "maxLength": 38
         },
+        "unread_dataname_16": {
+          "type": "text",
+          "sample": "mle5podks5",
+          "maxLength": 20
+        },
         "user_avatar_title_19": {
           "type": "text",
           "sample": "Administrator",
@@ -27927,6 +28445,11 @@
           "type": "text",
           "sample": "25-02-2026 14:39:24",
           "maxLength": 38
+        },
+        "unread_dataname_17": {
+          "type": "text",
+          "sample": "14fhkvcuhs",
+          "maxLength": 20
         },
         "user_avatar_title_20": {
           "type": "text",
@@ -27947,8 +28470,8 @@
       "states": {
         "default": "none",
         "hover": "css-pseudo",
-        "focus": "n/a",
-        "active": "n/a",
+        "focus": "css-pseudo",
+        "active": "class-attr",
         "disabled": "n/a",
         "error": "n/a",
         "loading": "n/a",

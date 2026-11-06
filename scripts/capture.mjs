@@ -54,7 +54,7 @@ for (const spec of specs) {
       const states = {};
       for (const st of STATES) {
         let def = (spec.states || {})[st];
-        if (!def && ['hover', 'focus', 'active'].includes(st)) { const first = (data.boxes || []).find(b => b.interactive && /^(a|button|input|select|textarea)$/.test(b.tag) && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, description: 'auto: first interactive element' }; }
+        if (!def && ['hover', 'focus', 'active'].includes(st)) { const first = (data.boxes || []).find(b => b.interactive && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, description: 'auto: first interactive element' }; }
         if (st === 'default') { states[st] = { applicable: true, mechanism: 'none', note: 'markup as captured' }; continue; }
         if (!def) { states[st] = { applicable: false, reason: (spec.na && spec.na[st]) || 'not applicable: Frappe/POS renders no distinct ' + st + ' variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)' }; continue; }
         const before = await page.evaluate(({ id }) => { const r = document.querySelector(`[data-ui="${id}"]`); return [r, ...r.querySelectorAll('*')].map((e, i) => ({ i, tag: e.tagName, ui: e.getAttribute('data-ui'), cls: e.getAttribute('class') || '', attrs: Object.fromEntries([...e.attributes].filter(a => a.name !== 'class' && a.name !== 'style').map(a => [a.name, a.value])), }));}, { id: spec.id });
