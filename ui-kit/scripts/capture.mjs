@@ -54,6 +54,7 @@ for (const spec of specs) {
       const states = {};
       for (const st of STATES) {
         let def = (spec.states || {})[st];
+        if (!def && st === 'loading' && /class="[^"]*\bes-button\b/.test(data.html || '')) def = { target: '.es-button', act: async (p, t) => t.evaluate(e => e.setAttribute('aria-busy', 'true')), reset: async (p, t) => t.evaluate(e => e.removeAttribute('aria-busy')), description: 'auto: Frappe v16 busy button — aria-busy="true" on .es-button shows .es-spinner and .es-button__loading-label' };
         if (!def && st === 'disabled') { const first = (data.boxes || []).find(b => b.interactive && /^(button|input|select|textarea)$/.test(b.tag) && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, act: async (p, t) => t.evaluate(e => { e.setAttribute('disabled', ''); e.setAttribute('aria-disabled', 'true'); e.classList.add('disabled'); }), reset: async (p, t) => t.evaluate(e => { e.removeAttribute('disabled'); e.removeAttribute('aria-disabled'); e.classList.remove('disabled'); }), description: 'auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control' }; }
         if (!def && ['hover', 'focus', 'active'].includes(st)) { const first = (data.boxes || []).find(b => b.interactive && b.id !== spec.id); if (first) def = { target: `[data-ui="${first.id}"]`, description: 'auto: first interactive element' }; }
         if (st === 'default') { states[st] = { applicable: true, mechanism: 'none', note: 'markup as captured' }; continue; }

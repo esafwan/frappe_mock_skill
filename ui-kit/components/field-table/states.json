@@ -59,8 +59,22 @@
       "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "loading": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "field-table.button-12",
+      "changes": [
+        {
+          "element": "field-table.button-12",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-busy": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/loading.png",
+      "description": "auto: Frappe v16 busy button — aria-busy=\"true\" on .es-button shows .es-spinner and .es-button__loading-label"
     },
     "empty": {
       "applicable": false,
