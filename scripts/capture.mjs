@@ -86,6 +86,7 @@ for (const spec of specs) {
     // write files
     const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, bgDark, pageBg: undefined, size: out.size, origin: out.rootFrac, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
+    fs.rmSync(dir + 'assets', { recursive: true, force: true }); for (const im of out.images || []) { fs.mkdirSync(dir + 'assets', { recursive: true }); fs.writeFileSync(dir + im.file, (/;base64,/.test(im.data) ? Buffer.from(im.data.split(',')[1], 'base64') : Buffer.from(decodeURIComponent(im.data.slice(im.data.indexOf(',') + 1)), 'utf8'))); }
     fs.writeFileSync(dir + 'component.html', bodyHtml + '\n');
     const slots = {}; for (const s of out.slots) slots[s.name] = { type: s.type, sample: s.sample, maxLength: s.maxLength, where: s.where, element: s.element };
     fs.writeFileSync(dir + 'slots.json', JSON.stringify({ component: spec.id, slots }, null, 2));

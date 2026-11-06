@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><title>Navbar and search bar</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
-<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1440px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>html,body{margin:0}body{background:rgb(255, 255, 255);min-height:0px}#ui-kit-stage{position:absolute;left:0px;width:1440px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
 <style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -32,6 +32,47 @@ body.desktop-page .desktop-cloud-settings { display: inline-flex; align-items: c
 }
 @keyframes website-scroll { 
   100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
 }
 @keyframes factory-smoke { 
   0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
@@ -89,47 +130,6 @@ body.desktop-page .desktop-cloud-settings { display: inline-flex; align-items: c
   80% { transform: scale(1); opacity: 1; }
   92%, 100% { transform: scale(0); opacity: 0; }
 }
-@keyframes briefcase-carry { 
-  0%, 100% { transform: translateY(-1px) rotate(0deg); }
-  25% { transform: translateY(-1.4px) rotate(5deg); }
-  50% { transform: translateY(-1px) rotate(0deg); }
-  75% { transform: translateY(-1.4px) rotate(-5deg); }
-}
-@keyframes tenure-sweep { 
-  100% { transform: rotate(360deg); }
-}
-@keyframes recruitment-scan { 
-  0%, 100% { transform: translate(0px, 0px); }
-  25% { transform: translate(1.4px, -0.8px); }
-  50% { transform: translate(0px, -1.4px); }
-  75% { transform: translate(-1.4px, -0.8px); }
-}
-@keyframes tax-flip { 
-  0%, 15% { transform: scaleX(1); }
-  32.5% { transform: scaleX(0); }
-  50%, 100% { transform: scaleX(1); }
-}
-@keyframes attendance-punch { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(3.2px); }
-}
-@keyframes leaves-swing { 
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(9deg); }
-  75% { transform: rotate(-9deg); }
-}
-@keyframes performance-hop { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.6px); }
-}
-@keyframes payroll-rise { 
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-1.8px); }
-}
-@keyframes expenses-swipe { 
-  0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(-1.8px); }
-}
 </style></head>
 <body data-ajax-state="complete" class="desktop-page" data-route="" data-sidebar="0">
 <div id="ui-kit-stage">
@@ -141,7 +141,7 @@ body.desktop-page .desktop-cloud-settings { display: inline-flex; align-items: c
     </symbol><symbol viewBox="0 0 24 24" id="icon-bell">
       <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
       <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
-    </symbol></svg><header class="desktop-navbar navbar-expand navbar-container" role="navigation" data-ui="navbar"> <div class="navbar-home" data-ui="navbar.logo"> <img id="brand-logo" src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zNS43MTQzIDBIMTQuMjg1N0M2LjM5NTkzIDAgMCA2LjM5NTkzIDAgMTQuMjg1N1YzNS43MTQzQzAgNDMuNjA0MSA2LjM5NTkzIDUwIDE0LjI4NTcgNTBIMzUuNzE0M0M0My42MDQxIDUwIDUwIDQzLjYwNDEgNTAgMzUuNzE0M1YxNC4yODU3QzUwIDYuMzk1OTMgNDMuNjA0MSAwIDM1LjcxNDMgMFoiIGZpbGw9IiM3QjgwOEEiPjwvcGF0aD4KPHBhdGggZD0iTTI1IDEwLjcxNDFMMTIuNjI1IDE3Ljg1NjlWMTkuOTI4NEwxNi4xOTY0IDIxLjk4MTlMMjMuMjE0MyAyNi4wMTc2VjM0LjEyNDlMMTYuMTk2NCAzMC4wNzEyVjI2LjYyNDhMMTIuNjI1IDI0LjUxNzdWMzIuMTI0OUwyNSAzOS4yNjc3TDM3LjM3NSAzMi4xMjQ5VjE3LjgzOTFMMjUgMTAuNjk2M1YxMC43MTQxWk0xNy45ODIxIDE4Ljg5MjdMMjUgMTQuODM5MUwzMi4wMTc4IDE4Ljg5MjdMMjUgMjIuOTQ2M0wxNy45ODIxIDE4Ljg5MjdaTTMzLjgwMzUgMzAuMDg5MUwyNi43ODU3IDM0LjE0MjdWMjYuMDM1NUwzMy44MDM1IDIxLjk4MTlWMzAuMDg5MVoiIGZpbGw9IndoaXRlIj48L3BhdGg+Cjwvc3ZnPgo=" alt="App Logo"> </div> <div class="search-widget-wrapper input-group search-bar"> <button id="search-widget-button" class="btn-reset search-widget-button" title="Search" data-ui="navbar.search"> <span class="search-widget-icon"> <svg class="icon icon-sm"> <use href="#icon-search"></use> </svg> Search </span> <span class="search-widget-shortcut">⌘K</span> </button> </div> <div class="flex" style="gap:16px; align-items: center;"> <button class="btn-reset nav-link text-muted desktop-cloud-settings hidden" title="Cloud settings" aria-label="Cloud settings" data-ui="navbar.button-1"> <svg class="icon icon-md"> <use href="#icon-cloud"></use> </svg> </button>  <div class="desktop-notifications"> <button class="btn-reset nav-link text-muted desktop-notification-icon" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false" data-ui="navbar.button-2"> <svg class="icon icon-md" aria-hidden="true"> <use href="#icon-bell"></use> </svg> <span class="notification-count" aria-live="polite" aria-label="6 unread notifications">6</span> </button> </div> <div class="desktop-avatar" aria-haspopup="menu" aria-expanded="false"><span class="avatar avatar-medium" title="Administrator">
+    </symbol></svg><header class="desktop-navbar navbar-expand navbar-container" role="navigation" data-ui="navbar"> <div class="navbar-home" data-ui="navbar.logo"> <img id="brand-logo" src="assets/image_1.svg" alt="App Logo"> </div> <div class="search-widget-wrapper input-group search-bar"> <button id="search-widget-button" class="btn-reset search-widget-button" title="Search" data-ui="navbar.search"> <span class="search-widget-icon"> <svg class="icon icon-sm"> <use href="#icon-search"></use> </svg> Search </span> <span class="search-widget-shortcut">⌘K</span> </button> </div> <div class="flex" style="gap:16px; align-items: center;"> <button class="btn-reset nav-link text-muted desktop-cloud-settings hidden" title="Cloud settings" aria-label="Cloud settings" data-ui="navbar.button-1"> <svg class="icon icon-md"> <use href="#icon-cloud"></use> </svg> </button>  <div class="desktop-notifications"> <button class="btn-reset nav-link text-muted desktop-notification-icon" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false" data-ui="navbar.button-2"> <svg class="icon icon-md" aria-hidden="true"> <use href="#icon-bell"></use> </svg> <span class="notification-count" aria-live="polite" aria-label="6 unread notifications">6</span> </button> </div> <div class="desktop-avatar" aria-haspopup="menu" aria-expanded="false"><span class="avatar avatar-medium" title="Administrator">
 			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
 					A
 			</div>

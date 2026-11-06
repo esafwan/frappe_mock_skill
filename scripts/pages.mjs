@@ -8,7 +8,7 @@ const sprite = (html) => { const m = {}; for (const x of fs.readFileSync(ROOT + 
   const ids = new Set([...html.matchAll(/href="#([^"]+)"/g)].map(x => x[1])); const s = [...ids].filter(i => m[i]).map(i => m[i]).join(''); return s ? `<svg class="icon-sprite" aria-hidden="true" style="display:none">${s}</svg>` : ''; };
 export function buildPage(p, opts = {}) {
   const used = new Set(); const o = { locale: p.locale, menu: p.menu, theme: p.theme, ...opts };
-  let shell = p.shell.replace(/<!--component:([a-z0-9-]+)-->/g, (m, id) => { used.add(id); const html = fs.readFileSync(ROOT + `components/${id}/component.html`, 'utf8'); return fill(html, { ...slotValues(id, o), ...((p.values || {})[id] || {}) }); });
+  let shell = p.shell.replace(/<!--component:([a-z0-9-]+)-->/g, (m, id) => { used.add(id); const html = fs.readFileSync(ROOT + `components/${id}/component.html`, 'utf8'); const vals = { ...slotValues(id, { ...o, base: 'pages' }), ...((p.values || {})[id] || {}) }; for (const k in vals) if (typeof vals[k] === 'string' && vals[k].startsWith('assets/')) vals[k] = `../components/${id}/assets/${vals[k].slice(7)}`; return fill(html, vals); });
   const first = JSON.parse(fs.readFileSync(ROOT + `components/${[...used][0]}/harness.json`));
   const meta = { ...first, ancestors: (p.bodyFrom ? JSON.parse(fs.readFileSync(ROOT + `components/${p.bodyFrom}/harness.json`)) : first).ancestors.filter(a => a.tag === 'html' || a.tag === 'body').map(a => ({ ...a, attrs: Object.fromEntries(Object.entries(a.attrs).map(([k, v]) => [k, v])) })), cssBase: '../tokens/css/', css: p.css || first.css, size: { w: 1440 }, bg: first.bg, origin: { x: 0, y: 0 } };
   let doc = harnessDoc(meta, sprite(shell) + shell, { dark: o.theme === 'dark', rtl: !!p.rtl, title: p.title });

@@ -54,7 +54,7 @@ export function slotValues(id, opts = {}) {
       if (m) { const it = menu.items[+m[1]] ?? menu.items[+m[1] % menu.items.length];
         if (m[2] === 'name' || m[2] === 'description') v = pick(it[m[2]], lang);
         else if (m[2] === 'price') { const code = currency || menu.defaultCurrency; v = formatMoney(it.prices?.[code] ?? Object.values(it.prices)[0], code, { lang }); }
-        else if (m[2] === 'image') v = it.image.startsWith('data/') ? path.posix.relative(`components/${id}`, it.image) : it.image;
+        else if (m[2] === 'image') v = it.image.startsWith('data/') ? path.posix.relative(opts.base || `components/${id}`, it.image) : it.image;
         else if (it[m[2]] !== undefined) v = String(pick(it[m[2]], lang)); }
       const c = exprs.expr.match(/^menu\.categories\[(\d+)\]\.name$/); if (c) v = pick(menu.categories[+c[1] % menu.categories.length].name, lang);
       if (exprs.expr === 'menu.name') v = pick(menu.name, lang);

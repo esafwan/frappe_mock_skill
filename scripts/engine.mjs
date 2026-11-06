@@ -56,10 +56,13 @@ export async function extractInPage({ rootSel, id, targets, names }) {
     if (le.tagName === 'TEXTAREA') ce.textContent = le.value;
     if (le.tagName === 'SELECT') { [...ce.querySelectorAll('option')].forEach((o, j) => le.options[j]?.selected ? o.setAttribute('selected', '') : o.removeAttribute('selected')); }
   });
+  let imgN = 0; const images = [];
   // inline same-origin images/background urls as data URIs (no network at render time)
   const toData = async (u) => { try { const r = await fetch(u, { credentials: 'include' }); if (!r.ok) return null; const b = await r.blob(); return await new Promise(res => { const f = new FileReader(); f.onload = () => res(f.result); f.readAsDataURL(b); }); } catch { return null; } };
   for (const el of [clone, ...clone.querySelectorAll('*')]) {
-    if (el.tagName === 'IMG' && el.getAttribute('src') && !el.getAttribute('src').startsWith('data:')) { const d = await toData(el.getAttribute('src')); if (d) el.setAttribute('src', d); else el.removeAttribute('src'); el.removeAttribute('srcset'); el.removeAttribute('loading'); }
+    if (el.tagName === 'IMG' && el.getAttribute('src')) { const raw = el.getAttribute('src'); const d = raw.startsWith('data:') ? raw : await toData(raw); el.removeAttribute('srcset'); el.removeAttribute('loading');
+      if (d) { const mime = (d.match(/^data:([^;,]+)/) || [])[1] || 'image/png'; const ext = ({ 'image/jpeg': 'jpg', 'image/png': 'png', 'image/svg+xml': 'svg', 'image/webp': 'webp', 'image/gif': 'gif' })[mime] || 'png';
+        const nm = 'image_' + (++imgN); images.push({ slot: nm, file: `assets/${nm}.${ext}`, data: d }); el.setAttribute('src', `{{${nm}}}`); } else el.removeAttribute('src'); }
     const st = el.getAttribute('style');
     if (st && /url\(/.test(st)) { let out = st; for (const m of [...st.matchAll(/url\((['"]?)([^)'"]+)\1\)/g)]) { if (m[2].startsWith('data:')) continue; const d = await toData(m[2]); out = out.replace(m[0], d ? `url("${d}")` : 'none'); } el.setAttribute('style', out); }
   }
@@ -103,7 +106,8 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   let inlineCss = '';
   for (const st of document.querySelectorAll('style')) { if (st.dataset.uikit || /ui-kit-freeze/.test(st.id)) continue; let rules; try { rules = st.sheet.cssRules; } catch { continue; }
     for (const r of rules) { if (r.type === 1 ? relevant(r.selectorText) : (r.type === 5 || r.type === 7)) inlineCss += r.cssText + '\n'; } }
-  return { inlineCss, html: clone.outerHTML, slots, ancestors, bg, boxes, size: { w: rr.width, h: rr.height }, display: cs.display, position: cs.position,
+  for (const im of images) slots.push({ name: im.slot, type: 'image', sample: im.file, maxLength: 0, where: 'attr:src', element: 'img' });
+  return { images, inlineCss, html: clone.outerHTML, slots, ancestors, bg, boxes, size: { w: rr.width, h: rr.height }, display: cs.display, position: cs.position,
     font: getComputedStyle(document.body).fontFamily };
 }
 

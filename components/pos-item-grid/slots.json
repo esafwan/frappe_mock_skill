@@ -1,0 +1,565 @@
+{
+  "component": "pos-item-grid",
+  "slots": {
+    "text_gray_900": {
+      "type": "text",
+      "sample": "Butter Naan",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500": {
+      "type": "text",
+      "sample": "Breads",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_2": {
+      "type": "currency",
+      "sample": "₹ 60",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_3": {
+      "type": "text",
+      "sample": "Chicken 65 Dry",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_2": {
+      "type": "text",
+      "sample": "Starters",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_4": {
+      "type": "currency",
+      "sample": "₹ 240",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_2": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_5": {
+      "type": "text",
+      "sample": "Chicken Dum Biryani",
+      "maxLength": 38,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_3": {
+      "type": "text",
+      "sample": "Biryani & Rice",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_6": {
+      "type": "currency",
+      "sample": "₹ 290",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_3": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_7": {
+      "type": "text",
+      "sample": "Chicken Shawarma Roll",
+      "maxLength": 42,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_4": {
+      "type": "text",
+      "sample": "Grills & BBQ",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_8": {
+      "type": "currency",
+      "sample": "₹ 180",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_4": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_9": {
+      "type": "text",
+      "sample": "Chicken Tikka (6 pcs)",
+      "maxLength": 42,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_5": {
+      "type": "text",
+      "sample": "Grills & BBQ",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_10": {
+      "type": "currency",
+      "sample": "₹ 290",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_5": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_11": {
+      "type": "text",
+      "sample": "Crispy Onion Bhaji",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_6": {
+      "type": "text",
+      "sample": "Starters",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_12": {
+      "type": "currency",
+      "sample": "₹ 150",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_6": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_13": {
+      "type": "text",
+      "sample": "Dal Tadka",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_7": {
+      "type": "text",
+      "sample": "Curries",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_14": {
+      "type": "currency",
+      "sample": "₹ 190",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_7": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_15": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_8": {
+      "type": "text",
+      "sample": "Beverages",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_16": {
+      "type": "currency",
+      "sample": "₹ 120",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_8": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_17": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_9": {
+      "type": "text",
+      "sample": "Breads",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_18": {
+      "type": "currency",
+      "sample": "₹ 75",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_9": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_gray_900_19": {
+      "type": "text",
+      "sample": "Gulab Jamun Pair",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_gray_500_10": {
+      "type": "text",
+      "sample": "Desserts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_gray_900_20": {
+      "type": "currency",
+      "sample": "₹ 100",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_10": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_shadow_md_arialabel": {
+      "type": "text",
+      "sample": "Butter Naan",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-1"
+    },
+    "object_cover_alt": {
+      "type": "text",
+      "sample": "Butter Naan",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title": {
+      "type": "text",
+      "sample": "Butter Naan",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title": {
+      "type": "text",
+      "sample": "Breads",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_2": {
+      "type": "text",
+      "sample": "Chicken 65 Dry",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-2"
+    },
+    "object_cover_alt_2": {
+      "type": "text",
+      "sample": "Chicken 65 Dry",
+      "maxLength": 28,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_2": {
+      "type": "text",
+      "sample": "Chicken 65 Dry",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_2": {
+      "type": "text",
+      "sample": "Starters",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_3": {
+      "type": "text",
+      "sample": "Chicken Dum Biryani",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-3"
+    },
+    "object_cover_alt_3": {
+      "type": "text",
+      "sample": "Chicken Dum Biryani",
+      "maxLength": 38,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_3": {
+      "type": "text",
+      "sample": "Chicken Dum Biryani",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_3": {
+      "type": "text",
+      "sample": "Biryani & Rice",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_4": {
+      "type": "text",
+      "sample": "Chicken Shawarma Roll",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-4"
+    },
+    "object_cover_alt_4": {
+      "type": "text",
+      "sample": "Chicken Shawarma Roll",
+      "maxLength": 42,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_4": {
+      "type": "text",
+      "sample": "Chicken Shawarma Roll",
+      "maxLength": 42,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_4": {
+      "type": "text",
+      "sample": "Grills & BBQ",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_5": {
+      "type": "text",
+      "sample": "Chicken Tikka (6 pcs)",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-5"
+    },
+    "object_cover_alt_5": {
+      "type": "text",
+      "sample": "Chicken Tikka (6 pcs)",
+      "maxLength": 42,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_5": {
+      "type": "text",
+      "sample": "Chicken Tikka (6 pcs)",
+      "maxLength": 42,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_5": {
+      "type": "text",
+      "sample": "Grills & BBQ",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_6": {
+      "type": "text",
+      "sample": "Crispy Onion Bhaji",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-6"
+    },
+    "object_cover_alt_6": {
+      "type": "text",
+      "sample": "Crispy Onion Bhaji",
+      "maxLength": 36,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_6": {
+      "type": "text",
+      "sample": "Crispy Onion Bhaji",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_6": {
+      "type": "text",
+      "sample": "Starters",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_7": {
+      "type": "text",
+      "sample": "Dal Tadka",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-7"
+    },
+    "object_cover_alt_7": {
+      "type": "text",
+      "sample": "Dal Tadka",
+      "maxLength": 20,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_7": {
+      "type": "text",
+      "sample": "Dal Tadka",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_7": {
+      "type": "text",
+      "sample": "Curries",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_8": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-8"
+    },
+    "object_cover_alt_8": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_8": {
+      "type": "text",
+      "sample": "Fresh Orange Juice",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_8": {
+      "type": "text",
+      "sample": "Beverages",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_9": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-9"
+    },
+    "object_cover_alt_9": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_9": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_9": {
+      "type": "text",
+      "sample": "Breads",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "hover_shadow_md_arialabel_10": {
+      "type": "text",
+      "sample": "Gulab Jamun Pair",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "pos-item-grid.div-10"
+    },
+    "object_cover_alt_10": {
+      "type": "text",
+      "sample": "Gulab Jamun Pair",
+      "maxLength": 32,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "text_gray_900_title_10": {
+      "type": "text",
+      "sample": "Gulab Jamun Pair",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_gray_500_title_10": {
+      "type": "text",
+      "sample": "Desserts",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "p"
+    }
+  }
+}

@@ -6,7 +6,7 @@ if(spec.prepare)await spec.prepare(page);await page.waitForTimeout(spec.settle??
 await page.evaluate(({rootSel,id})=>document.querySelector(rootSel).setAttribute('data-ui',id),{rootSel:spec.root,id});
 const loc=page.locator(`[data-ui="${id}"]`).first();
 console.log('before',await loc.evaluate(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height,scrollX,scrollY,innerWidth,document.documentElement.scrollWidth]}));
-await page.evaluate(()=>{window.scrollTo(-100,0);window.scrollTo(0,0);console.log(document.scrollingElement.scrollLeft)}); await loc.scrollIntoViewIfNeeded();
+await page.evaluate(()=>{document.documentElement.setAttribute('dir','ltr');document.documentElement.setAttribute('dir','rtl')}); await loc.scrollIntoViewIfNeeded();
 console.log('after',await loc.evaluate(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height,scrollX,scrollY]}));
 await page.mouse.move(0,0);
 await loc.screenshot({path:out,animations:'disabled'});

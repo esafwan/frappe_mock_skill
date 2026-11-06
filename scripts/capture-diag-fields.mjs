@@ -27,6 +27,8 @@ for (const spec of specs) {
       if (spec.prepare) await spec.prepare(page);
       await page.waitForTimeout(spec.settle ?? 600);
       await page.evaluate(()=>{const s=document.createElement('style');s.dataset.uikit='1';s.textContent='*{animation:none!important;transition:none!important;caret-color:transparent!important}';document.head.appendChild(s)});
+      // RTL: body overflows by a few px, leaving the painted viewport offset from layout coords; lock root scrolling so screenshots match layout
+      if (rtl) await page.evaluate(() => { const s = document.createElement('style'); s.dataset.uikit = '1'; s.textContent = 'html,body{overflow:hidden!important}'; document.head.appendChild(s); });
       const rootSel = spec.root;
       const data = await page.evaluate(extractInPage, { rootSel, id: spec.id, targets: spec.targets || {} });
       const loc = page.locator(`[data-ui="${spec.id}"]`).first();
