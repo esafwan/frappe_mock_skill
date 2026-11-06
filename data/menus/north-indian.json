@@ -1,0 +1,908 @@
+{
+  "id": "north-indian",
+  "name": {
+    "en": "Tandoor & Tadka"
+  },
+  "format": "casual",
+  "cuisine": "north-indian",
+  "defaultCurrency": "INR",
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    {
+      "id": "starters-tandoor",
+      "name": {
+        "en": "Starters & Tandoor"
+      }
+    },
+    {
+      "id": "veg-curries",
+      "name": {
+        "en": "Veg Curries"
+      }
+    },
+    {
+      "id": "non-veg-curries",
+      "name": {
+        "en": "Non-Veg Curries"
+      }
+    },
+    {
+      "id": "breads",
+      "name": {
+        "en": "Breads"
+      }
+    },
+    {
+      "id": "rice-biryani",
+      "name": {
+        "en": "Rice & Biryani"
+      }
+    },
+    {
+      "id": "thali",
+      "name": {
+        "en": "Thali"
+      }
+    },
+    {
+      "id": "desserts-drinks",
+      "name": {
+        "en": "Desserts & Drinks"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "paneer-tikka",
+      "category": "starters-tandoor",
+      "name": {
+        "en": "Paneer Tikka"
+      },
+      "description": {
+        "en": "Charred cottage cheese cubes marinated in spiced yogurt, tandoor-grilled"
+      },
+      "prices": {
+        "USD": 7.5,
+        "EUR": 7.0,
+        "INR": 320,
+        "AED": 28.0,
+        "SAR": 28.5,
+        "QAR": 27.5
+      },
+      "diet": "veg",
+      "tags": [
+        "bestseller",
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 15,
+      "image": "data/images/north-indian/paneer-tikka.jpg",
+      "imageCredit": {
+        "author": "Namitakhaire",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Kabab.JPG",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "chicken-tikka",
+      "category": "starters-tandoor",
+      "name": {
+        "en": "Chicken Tikka"
+      },
+      "description": {
+        "en": "Boneless chicken in red-chilli yogurt marinade, roasted in the tandoor"
+      },
+      "prices": {
+        "USD": 8.5,
+        "EUR": 8.0,
+        "INR": 360,
+        "AED": 31.5,
+        "SAR": 32.0,
+        "QAR": 31.0
+      },
+      "diet": "non-veg",
+      "tags": [
+        "tandoor",
+        "spicy"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 18,
+      "image": "data/images/north-indian/chicken-tikka.jpg",
+      "imageCredit": {
+        "author": "Minaxibose1992",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Chicken-Tikka.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "seekh-kebab",
+      "category": "starters-tandoor",
+      "name": {
+        "en": "Seekh Kebab"
+      },
+      "description": {
+        "en": "Minced lamb skewers with herbs and spices, served with mint chutney"
+      },
+      "prices": {
+        "USD": 9.0,
+        "EUR": 8.5,
+        "INR": 380,
+        "AED": 33.0,
+        "SAR": 34.0,
+        "QAR": 33.0
+      },
+      "diet": "non-veg",
+      "tags": [
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 18,
+      "image": "data/images/north-indian/seekh-kebab.jpg",
+      "imageCredit": {
+        "author": "Miansari66",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Seekh_Kabab_2.JPG",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "hara-bhara-kebab",
+      "category": "starters-tandoor",
+      "name": {
+        "en": "Hara Bhara Kebab"
+      },
+      "description": {
+        "en": "Spinach, peas and potato patties, shallow-fried and cashew-topped"
+      },
+      "prices": {
+        "USD": 6.5,
+        "EUR": 6.0,
+        "INR": 280,
+        "AED": 24.5,
+        "SAR": 25.0,
+        "QAR": 24.5
+      },
+      "diet": "veg",
+      "tags": [
+        "vegetarian"
+      ],
+      "station": "grill",
+      "prepMinutes": 12,
+      "image": "data/images/north-indian/hara-bhara-kebab.jpg",
+      "imageCredit": {
+        "author": "Milanography",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab.JPG",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "dal-makhani",
+      "category": "veg-curries",
+      "name": {
+        "en": "Dal Makhani"
+      },
+      "description": {
+        "en": "Black lentils slow-cooked overnight with butter and cream"
+      },
+      "prices": {
+        "USD": 7.0,
+        "EUR": 6.5,
+        "INR": 290,
+        "AED": 25.5,
+        "SAR": 26.0,
+        "QAR": 25.0
+      },
+      "diet": "veg",
+      "tags": [
+        "bestseller",
+        "signature"
+      ],
+      "station": "main",
+      "prepMinutes": 10,
+      "image": "data/images/north-indian/dal-makhani.jpg",
+      "imageCredit": {
+        "author": "Miansari66",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "palak-paneer",
+      "category": "veg-curries",
+      "name": {
+        "en": "Palak Paneer"
+      },
+      "description": {
+        "en": "Cottage cheese in a smooth, lightly spiced spinach gravy"
+      },
+      "prices": {
+        "USD": 7.5,
+        "EUR": 7.0,
+        "INR": 310,
+        "AED": 27.0,
+        "SAR": 27.5,
+        "QAR": 27.0
+      },
+      "diet": "veg",
+      "tags": [
+        "healthy"
+      ],
+      "station": "main",
+      "prepMinutes": 12,
+      "image": "data/images/north-indian/palak-paneer.jpg",
+      "imageCredit": {
+        "author": "DreamyFlutura11",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Palak_Paneer_(Cottage_cheese_in_spinach_gravy).jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "paneer-butter-masala",
+      "category": "veg-curries",
+      "name": {
+        "en": "Paneer Butter Masala"
+      },
+      "description": {
+        "en": "Paneer in a rich tomato, butter and cashew gravy"
+      },
+      "prices": {
+        "USD": 8.0,
+        "EUR": 7.0,
+        "INR": 330,
+        "AED": 29.0,
+        "SAR": 29.5,
+        "QAR": 28.5
+      },
+      "diet": "veg",
+      "tags": [
+        "bestseller",
+        "mild"
+      ],
+      "station": "main",
+      "prepMinutes": 12,
+      "image": "data/images/north-indian/paneer-butter-masala.jpg",
+      "imageCredit": {
+        "author": "Gannu03",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Paneer_butter_masala_3.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "chole",
+      "category": "veg-curries",
+      "name": {
+        "en": "Chole Masala"
+      },
+      "description": {
+        "en": "Punjabi-style chickpeas simmered in tangy onion-tomato masala"
+      },
+      "prices": {
+        "USD": 6.0,
+        "EUR": 5.5,
+        "INR": 260,
+        "AED": 22.5,
+        "SAR": 23.0,
+        "QAR": 22.5
+      },
+      "diet": "veg",
+      "tags": [
+        "vegan-friendly"
+      ],
+      "station": "main",
+      "prepMinutes": 10,
+      "image": "data/images/north-indian/chole.jpg",
+      "imageCredit": {
+        "author": "Gannu03",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_4.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "baingan-bharta",
+      "category": "veg-curries",
+      "name": {
+        "en": "Baingan Bharta"
+      },
+      "description": {
+        "en": "Smoky roasted aubergine mashed with onion, tomato and green chilli"
+      },
+      "prices": {
+        "USD": 6.5,
+        "EUR": 6.0,
+        "INR": 270,
+        "AED": 23.5,
+        "SAR": 24.0,
+        "QAR": 23.5
+      },
+      "diet": "vegan",
+      "tags": [
+        "smoky"
+      ],
+      "station": "main",
+      "prepMinutes": 12,
+      "image": "data/images/north-indian/baingan-bharta.jpg",
+      "imageCredit": {
+        "author": "Devika",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Baigan_ka_Bharta.jpg",
+        "license": "CC BY-SA 2.0 (attribution required)"
+      }
+    },
+    {
+      "id": "dal-tadka",
+      "category": "veg-curries",
+      "name": {
+        "en": "Dal Tadka"
+      },
+      "description": {
+        "en": "Yellow lentils tempered with garlic, cumin and dried red chilli"
+      },
+      "prices": {
+        "USD": 5.5,
+        "EUR": 5.5,
+        "INR": 240,
+        "AED": 21.0,
+        "SAR": 21.5,
+        "QAR": 21.0
+      },
+      "diet": "vegan",
+      "tags": [
+        "comfort"
+      ],
+      "station": "main",
+      "prepMinutes": 10,
+      "image": "data/images/north-indian/dal-tadka.jpg",
+      "imageCredit": {
+        "author": "AugustineKajur",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Dal_Tadka-Delhi.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "butter-chicken",
+      "category": "non-veg-curries",
+      "name": {
+        "en": "Butter Chicken"
+      },
+      "description": {
+        "en": "Tandoori chicken in a velvety tomato-butter gravy"
+      },
+      "prices": {
+        "USD": 9.5,
+        "EUR": 9.0,
+        "INR": 400,
+        "AED": 35.0,
+        "SAR": 35.5,
+        "QAR": 34.5
+      },
+      "diet": "non-veg",
+      "tags": [
+        "bestseller",
+        "signature"
+      ],
+      "station": "main",
+      "prepMinutes": 15,
+      "image": "data/images/north-indian/butter-chicken.jpg",
+      "imageCredit": {
+        "author": "Vis M",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "rogan-josh",
+      "category": "non-veg-curries",
+      "name": {
+        "en": "Lamb Rogan Josh"
+      },
+      "description": {
+        "en": "Kashmiri-style lamb braised with fennel, ginger and Kashmiri chilli"
+      },
+      "prices": {
+        "USD": 11.5,
+        "EUR": 10.5,
+        "INR": 480,
+        "AED": 42.0,
+        "SAR": 43.0,
+        "QAR": 41.5
+      },
+      "diet": "non-veg",
+      "tags": [
+        "spicy"
+      ],
+      "station": "main",
+      "prepMinutes": 20,
+      "image": "data/images/north-indian/rogan-josh.jpg",
+      "imageCredit": {
+        "author": "Miansari66",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Rogan_Josh.JPG",
+        "license": "CC0"
+      }
+    },
+    {
+      "id": "mutton-keema",
+      "category": "non-veg-curries",
+      "name": {
+        "en": "Mutton Keema"
+      },
+      "description": {
+        "en": "Spiced minced mutton cooked dry with onions, tomato and coriander"
+      },
+      "prices": {
+        "USD": 10.0,
+        "EUR": 9.0,
+        "INR": 420,
+        "AED": 36.5,
+        "SAR": 37.5,
+        "QAR": 36.5
+      },
+      "diet": "non-veg",
+      "tags": [
+        "spicy"
+      ],
+      "station": "main",
+      "prepMinutes": 18,
+      "image": "data/images/north-indian/mutton-keema.jpg",
+      "imageCredit": {
+        "author": "Utkarshsingh.1992",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mutton_Keema_2.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "butter-naan",
+      "category": "breads",
+      "name": {
+        "en": "Butter Naan"
+      },
+      "description": {
+        "en": "Soft leavened bread baked in the tandoor and brushed with butter"
+      },
+      "prices": {
+        "USD": 1.67,
+        "EUR": 1.53,
+        "INR": 70,
+        "AED": 6,
+        "SAR": 6,
+        "QAR": 6
+      },
+      "diet": "veg",
+      "tags": [
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 6,
+      "image": "data/images/north-indian/butter-naan.jpg",
+      "imageCredit": {
+        "author": "Ravi Dwivedi",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "garlic-naan",
+      "category": "breads",
+      "name": {
+        "en": "Garlic Naan"
+      },
+      "description": {
+        "en": "Tandoor naan topped with garlic and fresh coriander"
+      },
+      "prices": {
+        "USD": 2.14,
+        "EUR": 1.97,
+        "INR": 90,
+        "AED": 8,
+        "SAR": 8,
+        "QAR": 8
+      },
+      "diet": "veg",
+      "tags": [
+        "bestseller",
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 6,
+      "image": "data/images/north-indian/garlic-naan.jpg",
+      "imageCredit": {
+        "author": "Joy",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Garlic_naan_1.jpg",
+        "license": "CC BY 2.0 (attribution required)"
+      }
+    },
+    {
+      "id": "tandoori-roti",
+      "category": "breads",
+      "name": {
+        "en": "Tandoori Roti"
+      },
+      "description": {
+        "en": "Whole-wheat flatbread baked crisp in the clay oven"
+      },
+      "prices": {
+        "USD": 1.07,
+        "EUR": 0.99,
+        "INR": 45,
+        "AED": 4,
+        "SAR": 4,
+        "QAR": 4
+      },
+      "diet": "vegan",
+      "tags": [
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 5,
+      "image": "data/images/north-indian/tandoori-roti.jpg",
+      "imageCredit": {
+        "author": "Ravi Dwivedi",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Tandoori-roti.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "laccha-paratha",
+      "category": "breads",
+      "name": {
+        "en": "Laccha Paratha"
+      },
+      "description": {
+        "en": "Flaky, multi-layered whole-wheat paratha cooked on the tawa"
+      },
+      "prices": {
+        "USD": 1.9,
+        "EUR": 1.75,
+        "INR": 80,
+        "AED": 7,
+        "SAR": 7,
+        "QAR": 7
+      },
+      "diet": "veg",
+      "tags": [
+        "flaky"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 7,
+      "image": "data/images/north-indian/laccha-paratha.jpg",
+      "imageCredit": {
+        "author": "Durvankur Patil",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Laccha_Paratha.JPG",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "kulcha",
+      "category": "breads",
+      "name": {
+        "en": "Amritsari Kulcha"
+      },
+      "description": {
+        "en": "Stuffed, buttered kulcha in the Amritsari style"
+      },
+      "prices": {
+        "USD": 2.62,
+        "EUR": 2.41,
+        "INR": 110,
+        "AED": 10,
+        "SAR": 10,
+        "QAR": 10
+      },
+      "diet": "veg",
+      "tags": [
+        "tandoor"
+      ],
+      "station": "tandoor",
+      "prepMinutes": 8,
+      "image": "data/images/north-indian/kulcha.jpg",
+      "imageCredit": {
+        "author": "Vivekvaid",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Amritsari_Kulcha.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "jeera-rice",
+      "category": "rice-biryani",
+      "name": {
+        "en": "Jeera Rice"
+      },
+      "description": {
+        "en": "Fragrant basmati tempered with cumin seeds and ghee"
+      },
+      "prices": {
+        "USD": 4.29,
+        "EUR": 3.94,
+        "INR": 180,
+        "AED": 15.5,
+        "SAR": 16.0,
+        "QAR": 15.5
+      },
+      "diet": "veg",
+      "tags": [
+        "side"
+      ],
+      "station": "main",
+      "prepMinutes": 8,
+      "image": "data/images/north-indian/jeera-rice.jpg",
+      "imageCredit": {
+        "author": "Marajozkee",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Jeera_rice.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "veg-biryani",
+      "category": "rice-biryani",
+      "name": {
+        "en": "Vegetable Biryani"
+      },
+      "description": {
+        "en": "Basmati dum-cooked with seasonal vegetables, saffron and whole spices"
+      },
+      "prices": {
+        "USD": 7.5,
+        "EUR": 7.0,
+        "INR": 310,
+        "AED": 27.0,
+        "SAR": 27.5,
+        "QAR": 27.0
+      },
+      "diet": "veg",
+      "tags": [
+        "dum"
+      ],
+      "station": "main",
+      "prepMinutes": 20,
+      "image": "data/images/north-indian/veg-biryani.jpg",
+      "imageCredit": {
+        "author": "Farhun Sayyed",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Indian_Veg_Biryani.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "chicken-biryani",
+      "category": "rice-biryani",
+      "name": {
+        "en": "Chicken Biryani"
+      },
+      "description": {
+        "en": "Layered basmati and marinated chicken, slow-cooked dum style"
+      },
+      "prices": {
+        "USD": 9.0,
+        "EUR": 8.5,
+        "INR": 380,
+        "AED": 33.0,
+        "SAR": 34.0,
+        "QAR": 33.0
+      },
+      "diet": "non-veg",
+      "tags": [
+        "bestseller",
+        "dum"
+      ],
+      "station": "main",
+      "prepMinutes": 25,
+      "image": "data/images/north-indian/chicken-biryani.jpg",
+      "imageCredit": {
+        "author": "Dheerajk88",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Chicken_Hyderabadi_Biryani.JPG",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "veg-thali",
+      "category": "thali",
+      "name": {
+        "en": "Vegetarian Thali"
+      },
+      "description": {
+        "en": "Dal, two sabzis, rice, roti, raita, salad and a sweet"
+      },
+      "prices": {
+        "USD": 8.5,
+        "EUR": 7.5,
+        "INR": 350,
+        "AED": 30.5,
+        "SAR": 31.5,
+        "QAR": 30.5
+      },
+      "diet": "veg",
+      "tags": [
+        "combo",
+        "value"
+      ],
+      "station": "main",
+      "prepMinutes": 15,
+      "image": "data/images/north-indian/veg-thali.jpg",
+      "imageCredit": {
+        "author": "Rajeeb Dutta",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Vegetarian_thali-MA08.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "non-veg-thali",
+      "category": "thali",
+      "name": {
+        "en": "Non-Veg Thali"
+      },
+      "description": {
+        "en": "Butter chicken, dal, rice, naan, raita, salad and a sweet"
+      },
+      "prices": {
+        "USD": 10.5,
+        "EUR": 10.0,
+        "INR": 450,
+        "AED": 39.5,
+        "SAR": 40.0,
+        "QAR": 39.0
+      },
+      "diet": "non-veg",
+      "tags": [
+        "combo",
+        "value"
+      ],
+      "station": "main",
+      "prepMinutes": 18,
+      "image": "data/images/north-indian/non-veg-thali.jpg",
+      "imageCredit": {
+        "author": "Krrisd",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Non_Veg_Thali_-_Gandhi_Nagar_Jammu_-_Jammu_%26_Kashmir_-_01.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "gulab-jamun",
+      "category": "desserts-drinks",
+      "name": {
+        "en": "Gulab Jamun"
+      },
+      "description": {
+        "en": "Warm milk-solid dumplings soaked in rose-cardamom syrup"
+      },
+      "prices": {
+        "USD": 3.33,
+        "EUR": 3.07,
+        "INR": 140,
+        "AED": 12.0,
+        "SAR": 12.5,
+        "QAR": 12.0
+      },
+      "diet": "veg",
+      "tags": [
+        "dessert",
+        "bestseller"
+      ],
+      "station": "pastry",
+      "prepMinutes": 5,
+      "image": "data/images/north-indian/gulab-jamun.jpg",
+      "imageCredit": {
+        "author": "Cabeza2000",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Gulab_jamun_(Gibraltar,_November_2020).jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "kulfi",
+      "category": "desserts-drinks",
+      "name": {
+        "en": "Malai Kulfi"
+      },
+      "description": {
+        "en": "Dense, slow-reduced milk ice cream with cardamom and pistachio"
+      },
+      "prices": {
+        "USD": 3.57,
+        "EUR": 3.29,
+        "INR": 150,
+        "AED": 13.0,
+        "SAR": 13.5,
+        "QAR": 13.0
+      },
+      "diet": "veg",
+      "tags": [
+        "dessert",
+        "cold"
+      ],
+      "station": "cold",
+      "prepMinutes": 3,
+      "image": "data/images/north-indian/kulfi.jpg",
+      "imageCredit": {
+        "author": "Shreya13jain",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Kulfi_ice-cream.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "lassi",
+      "category": "desserts-drinks",
+      "name": {
+        "en": "Sweet Lassi"
+      },
+      "description": {
+        "en": "Thick chilled yogurt drink, lightly sweetened and topped with malai"
+      },
+      "prices": {
+        "USD": 2.86,
+        "EUR": 2.63,
+        "INR": 120,
+        "AED": 10,
+        "SAR": 11,
+        "QAR": 10
+      },
+      "diet": "veg",
+      "tags": [
+        "cold",
+        "drink"
+      ],
+      "station": "cold",
+      "prepMinutes": 3,
+      "image": "data/images/north-indian/lassi.jpg",
+      "imageCredit": {
+        "author": "Gaurav Dhwaj Khadka",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Lassi_1.jpg",
+        "license": "CC BY-SA 4.0 (attribution required)"
+      }
+    },
+    {
+      "id": "masala-chai",
+      "category": "desserts-drinks",
+      "name": {
+        "en": "Masala Chai"
+      },
+      "description": {
+        "en": "Strong milk tea simmered with ginger, cardamom and spices"
+      },
+      "prices": {
+        "USD": 1.67,
+        "EUR": 1.53,
+        "INR": 70,
+        "AED": 6,
+        "SAR": 6,
+        "QAR": 6
+      },
+      "diet": "veg",
+      "tags": [
+        "hot",
+        "drink"
+      ],
+      "station": "main",
+      "prepMinutes": 5,
+      "image": "data/images/north-indian/masala-chai.jpg",
+      "imageCredit": {
+        "author": "Miansari66",
+        "source": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Masala_Chai.JPG",
+        "license": "Public domain"
+      }
+    }
+  ]
+}

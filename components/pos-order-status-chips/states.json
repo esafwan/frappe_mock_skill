@@ -1,0 +1,70 @@
+{
+  "component": "pos-order-status-chips",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "pos-order-status-chips.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(73, 73, 80)",
+          "to": "rgb(25, 25, 26)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgba(255, 255, 255, 0.6)"
+        },
+        "outline": {
+          "from": "rgb(73, 73, 80) none 3px",
+          "to": "rgb(25, 25, 26) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "pos-order-status-chips.button-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(251, 251, 250) 0px 0px 0px 2px, rgb(36, 87, 197) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(73, 73, 80) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no such state on this component"
+    }
+  }
+}

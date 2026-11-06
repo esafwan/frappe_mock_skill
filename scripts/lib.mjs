@@ -16,7 +16,7 @@ export async function go(page, path, { dark = false } = {}) {
   await page.goto(BASE + path, { waitUntil: 'networkidle' });
   await page.evaluate((d) => document.documentElement.setAttribute('data-theme', d ? 'dark' : 'light'), dark);
   await page.evaluate(()=>{const s=document.createElement('style');s.dataset.uikit='1';s.textContent='*{animation:none!important;transition:none!important;caret-color:transparent!important}';document.head.appendChild(s)});
-  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => { document.querySelectorAll('#ury-return-to-app').forEach(e => e.remove()); return document.fonts.ready; });
 }
 export const write = (p, c) => { fs.mkdirSync(require_dirname(p), { recursive: true }); fs.writeFileSync(p, c); };
 const require_dirname = (p) => p.split('/').slice(0, -1).join('/');

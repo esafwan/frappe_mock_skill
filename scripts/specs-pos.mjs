@@ -23,7 +23,7 @@ export const specs = [
     prepare: async (p) => { await register(p); await clean(p); await trim(10)(p); }, targets: {}, states: { hover: {}, focus: {}, active: {} } },
   { id: 'pos-cart', name: 'Order cart (lines, totals, actions)', group: 'pos', css: CSS, url: '/pos/register', root: 'div.w-96.bg-white.border-s', settle: 2500,
     prepare: async (p) => { await addFirst(p); await clean(p); },
-    targets: { plus: 'button:has(svg.lucide-plus)', 'add-order': 'button:has-text("Add New Order")' },
+    targets: { plus: 'button:has(svg.lucide-plus)' },
     states: { hover: { target: 'plus' }, focus: { target: 'plus' }, active: { target: 'plus' },
       empty: { act: async (p) => { await p.locator('button:has-text("Clear cart")').first().click(); await p.waitForTimeout(600); }, description: 'Clear cart' } } },
   { id: 'pos-table-picker', name: 'Table picker grid (available / occupied tables)', group: 'pos', css: CSS, url: '/pos/tables', root: '.grid[class*="grid-cols-2"].gap-4', settle: 2500,
@@ -38,7 +38,7 @@ export const specs = [
       if (!(await open())) { await p.locator('.w-96 button:has(svg.lucide-printer)').first().click(); await p.waitForTimeout(3500); await open(); }
       await p.evaluate(() => { const d = document.querySelector('[role=dialog]'); const card = d.querySelector(':scope > div.relative'); card.id = 'ui-pay-card'; card.style.cssText += ';position:absolute;left:80px;top:80px;margin:0;animation:none'; document.body.appendChild(card); d.remove(); });
       await clean(p);
-    }, targets: { cash: 'input[value]', pay: 'button:has-text("Pay")' }, states: { hover: { target: 'pay' }, focus: { target: 'input' } } },
+    }, targets: { }, states: { hover: { target: 'button:last-of-type' }, focus: { target: 'input' } } },
   { id: 'pos-kot-view', name: 'Kitchen / KOT production-unit overview (Mosaic)', group: 'pos', css: ['fonts.css', 'ury-mosaic.css'], url: '/mosaic/', root: 'div.p-6 > .grid', settle: 3000,
     prepare: async (p) => { await p.waitForSelector('div.p-6 > .grid > div', { timeout: 15000 }); }, targets: {},
     states: { hover: { target: ':scope > div:nth-child(2)' } } },
