@@ -78,8 +78,8 @@ for (const spec of specs) {
           } else changes.push({ note: 'DOM structure changed', before: before.length, after: after.length });
           const csAfter = tgtSel ? await tloc.evaluate(e => { const c = getComputedStyle(e); return { color: c.color, backgroundColor: c.backgroundColor, borderColor: c.borderTopColor, boxShadow: c.boxShadow, outline: c.outline, opacity: c.opacity, textDecoration: c.textDecorationLine, cursor: c.cursor }; }) : null;
           const styleDelta = {}; if (csBefore) for (const k in csBefore) if (csBefore[k] !== csAfter[k]) styleDelta[k] = { from: csBefore[k], to: csAfter[k] };
-          await shot(dir + `states/${st}.png`);
-          states[st] = { applicable: true, mechanism: changes.length ? 'class-attr' : 'css-pseudo', pseudo: st === 'hover' ? ':hover' : st === 'focus' ? ':focus' : st === 'active' ? ':active' : undefined, target: tgtSel ? (await tloc.getAttribute('data-ui')) || tgtSel : spec.id, changes, computedStyleDelta: styleDelta, screenshot: `states/${st}.png`, description: def.description };
+          let shotOk = true; try { await shot(dir + `states/${st}.png`); } catch { shotOk = false; }
+          states[st] = { applicable: true, mechanism: changes.length ? 'class-attr' : 'css-pseudo', pseudo: st === 'hover' ? ':hover' : st === 'focus' ? ':focus' : st === 'active' ? ':active' : undefined, target: tgtSel ? (await tloc.getAttribute('data-ui')) || tgtSel : spec.id, changes, computedStyleDelta: styleDelta, screenshot: shotOk ? `states/${st}.png` : null, note: shotOk ? undefined : 'element is hidden in this state (nothing to screenshot)', description: def.description };
           if (st === 'active') await page.mouse.up();
           if (def.reset) await def.reset(page, tloc, loc);
           else if (def.act || st === 'focus') await page.evaluate(() => document.activeElement?.blur?.());

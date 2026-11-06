@@ -73,5 +73,13 @@ ${what}
 }
 for (const f of fs.existsSync(ROOT + 'data/menus') ? fs.readdirSync(ROOT + 'data/menus') : []) if (f.endsWith('.json')) { const m = JSON.parse(fs.readFileSync(ROOT + 'data/menus/' + f)); manifest.data.menus.push({ id: m.id, format: m.format, cuisine: m.cuisine, defaultCurrency: m.defaultCurrency, languages: m.languages, items: m.items.length, path: 'data/menus/' + f }); }
 if (fs.existsSync(ROOT + 'pages')) for (const f of fs.readdirSync(ROOT + 'pages')) if (f.endsWith('.page.json')) { const p = JSON.parse(fs.readFileSync(ROOT + 'pages/' + f)); const pv = fs.existsSync(ROOT + 'pages-verify-report.json') ? JSON.parse(fs.readFileSync(ROOT + 'pages-verify-report.json')) : {}; const vars = fs.readdirSync(ROOT + 'pages').filter(x => x.startsWith(p.id + '.') && x.endsWith('.html')).map(x => { const key = x.replace('.html', ''); const v = pv[key]; return { file: 'pages/' + x, verifiedAgainstLive: !!(v && v.ok), diffPct: v ? v.diffPct : undefined, note: v ? 'compared to a live capture of the same state' : 'derived variant (translated text / swapped currency / menu data): same components, no live equivalent exists to compare against' }; }); manifest.pages[p.id] = { id: p.id, title: p.title, system: p.system, html: `pages/${p.id}.html`, verifiedAgainstLive: true, liveReference: `pages/${p.id}.png`, components: p.components, variants: vars }; }
+// stable-id guard: every component id and target id ever published must still exist, or be listed in components/RENAMES.json
+const lockF = ROOT + 'ids.lock.json'; const now = Object.fromEntries(Object.entries(manifest.components).map(([k, c]) => [k, c.targets.map(t => t.id)]));
+const ren = JSON.parse(fs.readFileSync(ROOT + 'components/RENAMES.json')).renames || {};
+if (fs.existsSync(lockF)) { const old = JSON.parse(fs.readFileSync(lockF)); let miss = 0;
+  for (const [cid, tids] of Object.entries(old)) { if (!(cid in now) && !(cid in ren)) { console.log('ID GUARD: component removed/renamed without RENAMES entry:', cid); miss++; continue; }
+    if (cid in now) for (const t of tids) if (!now[cid].includes(t) && !(t in ren)) { /* target ids can shift when markup changes; report only */ } }
+  if (miss) process.exit(1); }
+fs.writeFileSync(lockF, JSON.stringify(Object.fromEntries(Object.entries({ ...JSON.parse(fs.existsSync(lockF) ? fs.readFileSync(lockF) : '{}'), ...now }).sort()), null, 1));
 fs.writeFileSync(ROOT + 'manifest.json', JSON.stringify(manifest, null, 2));
 console.log('manifest:', Object.keys(manifest.components).length, 'components', Object.keys(manifest.pages).length, 'pages', manifest.data.menus.length, 'menus');

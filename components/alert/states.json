@@ -23,16 +23,44 @@
       "reason": "not applicable: Frappe/POS renders no distinct disabled variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "error": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "alert",
+      "changes": [
+        {
+          "element": "alert",
+          "addClass": [
+            "red"
+          ],
+          "removeClass": [
+            "yellow"
+          ],
+          "attrs": {}
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/error.png",
+      "description": "red intro = error alert (real set_intro colour variant)"
     },
     "loading": {
       "applicable": false,
       "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
     },
     "empty": {
-      "applicable": false,
-      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "alert",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 5,
+          "after": 1
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": null,
+      "note": "element is hidden in this state (nothing to screenshot)",
+      "description": "cleared intro hides the banner (container gets .hidden)"
     }
   }
 }
