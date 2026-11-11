@@ -1,0 +1,35 @@
+{
+ "title": "WhatsApp messages the member receives",
+ "surface": "whatsapp-preview",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "base": "",
+ "steps": [
+  {
+   "caption": "Enrolment confirmation",
+   "data_ref": "whatsapp_previews[0]",
+   "shot": true,
+   "n": 1,
+   "hold_ms": 1800
+  },
+  {
+   "caption": "Points earned after the bill",
+   "data_ref": "whatsapp_previews[1]",
+   "shot": true,
+   "n": 2,
+   "hold_ms": 1800
+  },
+  {
+   "caption": "Tier changed / referral reward (see copy/whatsapp_templates.json)",
+   "data_ref": "whatsapp_previews[2]",
+   "shot": true,
+   "n": 3,
+   "hold_ms": 1800
+  }
+ ],
+ "note": "No real WhatsApp UI route exists. Render with a WhatsApp bubble component (kit has none yet; see docs plan).",
+ "id": "05-whatsapp-preview",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}

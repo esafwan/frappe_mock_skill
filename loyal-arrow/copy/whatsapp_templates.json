@@ -1,0 +1,518 @@
+{
+  "source": "loyal_arrow@8725e1d test_pack/whatsapp/templates.json",
+  "templates": [
+    {
+      "name": "loyal_arrow_enrolment_confirmation",
+      "category": "UTILITY",
+      "event_key": "member.joined",
+      "body": "Welcome to {{1}}, {{2}}. Your membership is now active and your starting balance is {{3}} points. Reply or tap below any time to check your balance.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "0"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_points_earned",
+      "category": "UTILITY",
+      "event_key": "points.earned",
+      "body": "Hi {{2}}, you earned {{3}} points with {{1}} for your {{4}}. Your new balance is {{5}} points.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "120",
+        "purchase",
+        "540"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_balance_reply",
+      "category": "UTILITY",
+      "event_key": null,
+      "body": "Hi {{2}}, here is your {{1}} rewards summary. Balance: {{3}} points. Current tier: {{4}}. Points next expiring: {{5}}. Thank you for being a member.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "540",
+        "Silver",
+        "50 points on 30 Nov 2026"
+      ],
+      "buttons": []
+    },
+    {
+      "name": "loyal_arrow_reward_issued",
+      "category": "UTILITY",
+      "event_key": "reward.issued",
+      "body": "Good news {{2}}, your reward from {{1}} is ready: {{3}}. Your reward code is {{4}} and it is valid until {{5}}. Show this code when you redeem.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "Free upgrade",
+        "RW-48213",
+        "31 Dec 2026"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_reward_redeemed",
+      "category": "UTILITY",
+      "event_key": "reward.redeemed",
+      "body": "Hi {{2}}, your redemption of {{3}} at {{1}} on {{4}} is confirmed. Your remaining balance is {{5}} points.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "Free upgrade",
+        "12 Nov 2026",
+        "340"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_tier_changed",
+      "category": "UTILITY",
+      "event_key": "tier.changed",
+      "body": "Hi {{2}}, your {{1}} membership tier has changed from {{3}} to {{4}}. {{5}} Thank you for being with us.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "Silver",
+        "Gold",
+        "Enjoy your new benefits starting today."
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_points_expiring",
+      "category": "UTILITY",
+      "event_key": "points.expiring",
+      "body": "Hi {{2}}, {{3}} of your {{1}} points will expire on {{4}}. Visit us before then to use or keep earning them.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "50",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_referral_reward_earned",
+      "category": "UTILITY",
+      "event_key": "referral.qualified",
+      "body": "Hi {{2}}, a friend you referred has completed their first visit with {{1}}. You earned {{3}} points. Your new balance is {{4}} points.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "200",
+        "740"
+      ],
+      "buttons": [
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_referral_invite",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{2}}, love {{1}}? Share your personal code {{3}} with a friend. When they join and make their first purchase, you both earn {{4}} bonus points.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "PRIYA25",
+        "200"
+      ],
+      "buttons": [
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_winback",
+      "category": "MARKETING",
+      "event_key": "segment.entered",
+      "body": "Hi {{2}}, we miss you at {{1}}. You have {{3}} points waiting. Visit before {{4}} and earn {{5}}x points on your next purchase.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "540",
+        "15 Dec 2026",
+        "2"
+      ],
+      "buttons": [
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_special_date_offer",
+      "category": "MARKETING",
+      "event_key": "member.date_due",
+      "body": "Happy {{3}}, {{2}}! To celebrate, {{1}} has a special gift waiting for you: {{4}}. You can redeem it any time until {{5}}. We hope you enjoy it, and thank you for being a valued member.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "birthday",
+        "200 bonus points",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_new_reward_announcement",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{2}}, a new reward just arrived at {{1}}: {{3}} for {{4}} points. You have {{5}} points, so check it out on your next visit.",
+      "examples": [
+        "Sunrise Rewards",
+        "Priya",
+        "Premium gift set",
+        "500",
+        "540"
+      ],
+      "buttons": [
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_birthday_offer_img",
+      "category": "MARKETING",
+      "event_key": "member.date_due",
+      "body": "Happy birthday, {{1}}! All of us at {{2}} wish you a wonderful day. Your birthday treat is {{3}}, and it is yours to enjoy until {{4}}. We hope it makes your day even sweeter.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "a free dessert upgrade",
+        "30 November"
+      ],
+      "buttons": [
+        "Claim my treat",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_welcome_gift_img",
+      "category": "MARKETING",
+      "event_key": "member.joined",
+      "body": "Welcome to {{1}}, {{2}}. We are so glad to have you with us. To say thank you, here is your first gift: {{3}}. It is waiting in your account and is valid until {{4}}. Enjoy getting to know us.",
+      "examples": [
+        "Sunrise Rewards",
+        "Safwan",
+        "100 bonus points",
+        "31 December"
+      ],
+      "buttons": [
+        "See my gift",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_tier_upgrade_img",
+      "category": "MARKETING",
+      "event_key": "tier.changed",
+      "body": "Congratulations {{1}}, you have reached {{2}} tier with {{3}}. Your new benefits are active from today, and you now earn {{4}} on every purchase. Thank you for being part of the program.",
+      "examples": [
+        "Safwan",
+        "Gold",
+        "Sunrise Rewards",
+        "1.5 times the points"
+      ],
+      "buttons": [
+        "See my benefits",
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_points_expiry_img",
+      "category": "UTILITY",
+      "event_key": "points.expiring",
+      "body": "Hi {{1}}, a quick reminder from {{2}}: {{3}} points in your account will expire on {{4}}. Redeem them before then so you do not lose them.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "250",
+        "30 November"
+      ],
+      "buttons": [
+        "Check balance",
+        "Show rewards"
+      ]
+    },
+    {
+      "name": "loyal_arrow_winback_offer_img",
+      "category": "MARKETING",
+      "event_key": "segment.entered",
+      "body": "Hi {{1}}, it has been a while since we saw you at {{2}}, and we miss you. Come back by {{3}} and enjoy {{4}} as our way of saying thank you.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "15 December",
+        "double points on your next visit"
+      ],
+      "buttons": [
+        "Show my offer",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_referral_invite_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{1}}, enjoying {{2}}? Share it with a friend. When they join, you both receive {{3}} as a thank you. Your personal referral code is {{4}}, so just ask them to mention it.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "100 bonus points",
+        "SAFWAN100"
+      ],
+      "buttons": [
+        "Get my code",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_festive_offer_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Season greetings, {{1}}. To celebrate {{2}}, we have a special offer for you: {{3}}. It runs until {{4}}, so there is plenty of time to enjoy it.",
+      "examples": [
+        "Safwan",
+        "the festive season",
+        "triple points on every purchase",
+        "5 January"
+      ],
+      "buttons": [
+        "Show my offer",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_reward_claim_img",
+      "category": "MARKETING",
+      "event_key": "reward.issued",
+      "body": "Good news, {{1}}. Your reward from {{2}} is ready to claim: {{3}}. Your code is {{4}} and it is valid until {{5}}. Tap below when you are ready to use it.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "a free gift of your choice",
+        "RW-48213",
+        "31 December"
+      ],
+      "buttons": [
+        "Claim reward",
+        "Check balance"
+      ]
+    },
+    {
+      "name": "loyal_arrow_birthday_video",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hello from {{1}}. Happy birthday, {{2}}. We have a treat waiting for you: {{3}}. Enjoy it any time until {{4}}, and thank you for being with us.",
+      "examples": [
+        "Sunrise Rewards",
+        "Safwan",
+        "a chocolate frappe with butterscotch topping",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        "Claim my treat",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_voucher_pdf",
+      "category": "UTILITY",
+      "event_key": null,
+      "body": "Hello {{1}}, your personal voucher from {{2}} is attached. It entitles you to {{3}} and your code is {{4}}. Please show the attached document or quote the code when you visit us.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "20 percent off your next visit",
+        "BDAY-SAFWAN-20"
+      ],
+      "buttons": [
+        "Thanks"
+      ]
+    },
+    {
+      "name": "loyal_arrow_offer_copy_code",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hello {{1}}, {{2}} has a treat for you: {{3}}. Copy your code below and show it at the counter before {{4}}, and we will take care of the rest.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "20 percent off your next visit",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        null,
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_offer_carousel",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hello {{1}}, here are three treats from {{2}} picked for you. Swipe through the cards below and choose the one you like.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards"
+      ],
+      "buttons": []
+    },
+    {
+      "name": "loyal_arrow_anniversary_offer_img",
+      "category": "MARKETING",
+      "event_key": "member.date_due",
+      "body": "Happy anniversary, {{1}}! It is a joy to celebrate with you at {{2}}. Enjoy {{3}} as our gift, valid until {{4}}. We hope to see you soon!",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "a complimentary dessert",
+        "30 November"
+      ],
+      "buttons": [
+        "Claim my treat",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_we_miss_you_img",
+      "category": "MARKETING",
+      "event_key": "segment.entered",
+      "body": "Hi {{1}}, we miss you at {{2}}. Come back by {{3}} and enjoy {{4}} on us.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "15 December",
+        "double points on your next visit"
+      ],
+      "buttons": [
+        "Show my offer",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_favourite_item_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{1}}, your favourite, {{2}}, is back at {{3}}. Treat yourself before {{4}}. See you soon!",
+      "examples": [
+        "Safwan",
+        "Masala Chai",
+        "Sunrise Rewards",
+        "30 November"
+      ],
+      "buttons": [
+        "Order now",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_percent_off_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hello {{1}}, {{2}} has {{3}} percent off for you. Copy your code below and use it before {{4}}. We look forward to seeing you!",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "20",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        null,
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_bogo_offer_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{1}}, bring a friend to {{2}} and enjoy buy one get one on {{3}}. Copy your code below and show it before {{4}}. We look forward to seeing you!",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "any coffee",
+        "30 Nov 2026"
+      ],
+      "buttons": [
+        null,
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_points_earned_img",
+      "category": "UTILITY",
+      "event_key": "points.earned",
+      "body": "Thank you for visiting {{2}}, {{1}}. You earned {{3}} points and your balance is now {{4}} points. See you again soon!",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "50",
+        "320"
+      ],
+      "buttons": [
+        "Check balance",
+        "Show rewards"
+      ]
+    },
+    {
+      "name": "loyal_arrow_feedback_ask_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{1}}, thank you for visiting {{2}} on {{3}}. How did we do? Tap a reply below.",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "2 November"
+      ],
+      "buttons": [
+        "Great",
+        "Could be better",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_visit_us_img",
+      "category": "MARKETING",
+      "event_key": null,
+      "body": "Hi {{1}}, we saved you a seat at {{2}}. Visit us before {{3}} and enjoy {{4}}. See you soon!",
+      "examples": [
+        "Safwan",
+        "Sunrise Rewards",
+        "30 November",
+        "a free drink with any meal"
+      ],
+      "buttons": [
+        "Call us",
+        "Directions",
+        "Stop"
+      ]
+    },
+    {
+      "name": "loyal_arrow_otp_code",
+      "category": "AUTHENTICATION",
+      "event_key": "otp.requested",
+      "body": "{{1}} is your verification code.",
+      "examples": [
+        "123456"
+      ],
+      "buttons": [
+        "Copy code"
+      ]
+    }
+  ]
+}

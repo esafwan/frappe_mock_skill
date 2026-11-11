@@ -1,0 +1,13 @@
+{
+ "app": {"name":"loyal_arrow","title":"Loyal Arrow","publisher":"Safwan Erooth","description":"Loyalty, retention and referral app built on Huf"},
+ "source": "loyal_arrow@8725e1d hooks.py; workspace icon from workspace/loyal_arrow.json",
+ "desk": {"workspace_icon":"gift","sidebar_root":"Loyal Arrow","icon_set":"lucide","system":"frappe-desk"},
+ "counter_pwa": {"base":"/counter","title":"Counter","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","system":"loyal-arrow-counter (styles in frontend/counter/src/style.css, capture needed)"},
+ "member_pwa": {"base":"/app-member","card_token_route":"/m/<token>","manifest":"/api/method/loyal_arrow_customer_app.web.manifest","default_app_name":"Rewards",
+   "theme_defaults":{"--la-color-primary":"#1f6feb","--la-color-secondary":"#4b5563","--la-color-accent":"#f59e0b","--la-color-surface":"#ffffff","--la-color-background":"#f8fafc","--la-color-text":"#111827","--la-radius":"8px","--la-font":"system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"},
+   "tabs":["Home","Notifications","Profile"], "shell_max_width_px":480, "source_css":"customer_app/frontend/src/styles/app.css"},
+ "per_store_theme": {
+   "uae-dubai-supermarket": {"app_name":"Al Noor Rewards","app_name_ar":"مكافآت النور","primary":"#0f766e","accent":"#f59e0b","rtl_locale":"ar"},
+   "india-departmental-store": {"app_name":"Sree Lakshmi Rewards","primary":"#b45309","accent":"#16a34a"}},
+ "logo": {"status":"PLACEHOLDER","file":"logo-placeholder.svg","note":"No production logo exists in the app repo at 8725e1d. Replace with the owner's real mark before publishing videos."}
+}

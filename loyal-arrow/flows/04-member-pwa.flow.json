@@ -1,0 +1,62 @@
+{
+ "title": "Member PWA: login, home balance and QR card",
+ "surface": "member-pwa",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "base": "/app-member",
+ "steps": [
+  {
+   "goto": "/login",
+   "caption": "Sign in with mobile",
+   "selector": "#phone",
+   "action": "fill",
+   "value": "{{members[4].mobile}}",
+   "n": 1,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "button.btn.primary",
+   "n": 2,
+   "hold_ms": 800
+  },
+  {
+   "caption": "OTP step (OtpCodeForm)",
+   "shot": true,
+   "n": 3,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/",
+   "caption": "Home: balance, pending, expiring, referral code",
+   "selector": "[data-testid=\"balance\"]",
+   "shot": true,
+   "n": 4,
+   "hold_ms": 1800
+  },
+  {
+   "selector": "[data-testid=\"qr-card\"]",
+   "caption": "Show QR card at the counter (expires, countdown)",
+   "expect": "[data-testid=\"qr-countdown\"]",
+   "shot": true,
+   "n": 5,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/notifications",
+   "caption": "Notifications tab",
+   "n": 6,
+   "hold_ms": 800
+  },
+  {
+   "goto": "/profile",
+   "caption": "Profile tab",
+   "n": 7,
+   "hold_ms": 800
+  }
+ ],
+ "id": "04-member-pwa",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}
