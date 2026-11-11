@@ -1,0 +1,52 @@
+{
+ "title": "Bill, earn preview",
+ "steps": [
+  {
+   "goto": "/find",
+   "action": "fill",
+   "selector": "[data-testid=\"query\"]",
+   "value": "{{members[4].mobile}}",
+   "n": 1,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"search\"]",
+   "n": 2,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"continue\"]",
+   "caption": "Continue to bill",
+   "n": 3,
+   "hold_ms": 800
+  },
+  {
+   "goto": "/bill",
+   "action": "fill",
+   "selector": "[data-testid=\"amount\"], input",
+   "value": "{{bills[0].net}}",
+   "caption": "Amount (net of VAT per store rule)",
+   "n": 4,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"to-preview\"]",
+   "expect": "[data-testid=\"preview-points\"]",
+   "caption": "Earn preview: nothing is booked yet",
+   "shot": true,
+   "n": 5,
+   "hold_ms": 1800
+  }
+ ],
+ "surface": "counter-pwa",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "base": "/counter",
+ "id": "02-bill-earn-preview",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}

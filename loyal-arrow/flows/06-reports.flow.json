@@ -1,0 +1,61 @@
+{
+ "title": "Desk: sidebar tour and reports",
+ "surface": "frappe-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "base": "/app",
+ "steps": [
+  {
+   "goto": "/loyal-arrow",
+   "caption": "Loyal Arrow workspace (gift icon)",
+   "shot": true,
+   "n": 1,
+   "hold_ms": 1800
+  },
+  {
+   "selector": ".desk-sidebar .sidebar-item-container",
+   "caption": "Sidebar: Home, Members, Points and Rewards, Referrals, Messaging... (structure/sidebar.json)",
+   "n": 2,
+   "hold_ms": 800
+  },
+  {
+   "goto": "/loyalty-member",
+   "caption": "Members list",
+   "shot": true,
+   "n": 3,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/query-report/Loyalty%20Today",
+   "caption": "Loyalty Today",
+   "shot": true,
+   "n": 4,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/query-report/Tier%20Distribution",
+   "caption": "Tier Distribution",
+   "shot": true,
+   "n": 5,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/query-report/Liability%20and%20Aging",
+   "caption": "Liability and Aging",
+   "shot": true,
+   "n": 6,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/query-report/Referral%20Funnel",
+   "caption": "Referral Funnel",
+   "shot": true,
+   "n": 7,
+   "hold_ms": 1800
+  }
+ ],
+ "id": "06-reports",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}

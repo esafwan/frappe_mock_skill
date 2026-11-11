@@ -1,0 +1,87 @@
+{
+ "title": "Earn, stamp/points, redeem with member OTP",
+ "steps": [
+  {
+   "caption": "Preview shows Earns and redeemable points",
+   "selector": "[data-testid=\"preview-points\"]",
+   "shot": true,
+   "n": 1,
+   "hold_ms": 1800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"go-redeem\"]",
+   "n": 2,
+   "hold_ms": 800
+  },
+  {
+   "action": "fill",
+   "selector": "input",
+   "value": "100",
+   "caption": "Points to redeem (min 100)",
+   "n": 3,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"method-otp\"]",
+   "caption": "Member OTP method (id inferred; confirm on capture)",
+   "n": 4,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"otp-send\"]",
+   "expect": "[data-testid=\"otp-sent\"]",
+   "caption": "OTP sent to the member's WhatsApp",
+   "shot": true,
+   "n": 5,
+   "hold_ms": 1800
+  },
+  {
+   "action": "fill",
+   "selector": "input[autocomplete=one-time-code], input",
+   "value": "000000",
+   "caption": "Synthetic code, mock only",
+   "n": 6,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"redeem-next\"]",
+   "caption": "Review",
+   "n": 7,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"confirm\"]",
+   "caption": "Confirm bill",
+   "n": 8,
+   "hold_ms": 800
+  },
+  {
+   "action": "wait",
+   "selector": "[data-testid=\"r-bill-no\"]",
+   "caption": "Receipt: Bill booked, earned, redeemed, balance, stamps",
+   "shot": true,
+   "expect": "[data-testid=\"r-balance\"]",
+   "n": 9,
+   "hold_ms": 1800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"new-bill\"]",
+   "n": 10,
+   "hold_ms": 800
+  }
+ ],
+ "surface": "counter-pwa",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "base": "/counter",
+ "id": "03-stamp-points-redeem-otp",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}

@@ -1,0 +1,660 @@
+{
+  "source": "loyal_arrow@8725e1d workspace/*",
+  "workspaces": [
+    {
+      "name": "loyal_arrow",
+      "label": "Loyal Arrow",
+      "title": "Loyal Arrow",
+      "icon": "gift",
+      "links": [
+        {
+          "label": "Engagement",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Campaigns",
+          "type": "Link",
+          "link_to": "Loyalty Campaign Ref"
+        },
+        {
+          "label": "Event Inbox",
+          "type": "Link",
+          "link_to": "Loyalty Event"
+        },
+        {
+          "label": "Overview",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Dashboard",
+          "type": "Link",
+          "link_to": "loyalty-dashboard"
+        },
+        {
+          "label": "Member 360",
+          "type": "Link",
+          "link_to": "member-profile"
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "Add member",
+          "type": "DocType",
+          "link_to": "Loyalty Member"
+        },
+        {
+          "label": "New reward",
+          "type": "DocType",
+          "link_to": "Loyalty Reward"
+        },
+        {
+          "label": "Reward requests",
+          "type": "DocType",
+          "link_to": "Loyalty Reward Issue"
+        },
+        {
+          "label": "Points ledger",
+          "type": "DocType",
+          "link_to": "Loyalty Ledger Entry"
+        },
+        {
+          "label": "Create Program",
+          "type": "DocType",
+          "link_to": "Loyalty Scheme"
+        },
+        {
+          "label": "New Referral Campaign",
+          "type": "DocType",
+          "link_to": "Loyalty Referral Campaign"
+        },
+        {
+          "label": "Create Segment",
+          "type": "DocType",
+          "link_to": "Loyalty Segment"
+        },
+        {
+          "label": "Simulate Rule",
+          "type": "Page",
+          "link_to": "rule-simulator"
+        },
+        {
+          "label": "Import Qualifying Events",
+          "type": "DocType",
+          "link_to": "Loyalty Event"
+        },
+        {
+          "label": "Reconcile",
+          "type": "Page",
+          "link_to": "loyalty-audit"
+        }
+      ]
+    },
+    {
+      "name": "loyal_arrow_home",
+      "label": "Loyal Arrow Home",
+      "title": "Loyal Arrow Home",
+      "icon": "layout-dashboard",
+      "links": [],
+      "shortcuts": [
+        {
+          "label": "Points rate",
+          "type": "DocType",
+          "link_to": "Loyalty Scheme"
+        },
+        {
+          "label": "Rewards",
+          "type": "DocType",
+          "link_to": "Loyalty Reward"
+        },
+        {
+          "label": "Tiers",
+          "type": "DocType",
+          "link_to": "Loyalty Tier"
+        },
+        {
+          "label": "WhatsApp",
+          "type": "DocType",
+          "link_to": "Loyalty Settings"
+        },
+        {
+          "label": "Points expiry",
+          "type": "Report",
+          "link_to": "Expiry Forecast"
+        }
+      ]
+    },
+    {
+      "name": "loyal_arrow_reports",
+      "label": "Reports",
+      "title": "Reports",
+      "icon": "chart-no-axes-combined",
+      "links": [
+        {
+          "label": "Liability",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Expiry Forecast",
+          "type": "Link",
+          "link_to": "Expiry Forecast"
+        },
+        {
+          "label": "Ledger Audit",
+          "type": "Link",
+          "link_to": "Ledger Audit"
+        },
+        {
+          "label": "Liability and Aging",
+          "type": "Link",
+          "link_to": "Liability and Aging"
+        },
+        {
+          "label": "Loyalty Liability",
+          "type": "Link",
+          "link_to": "Loyalty Liability"
+        },
+        {
+          "label": "Loyalty Pending Points",
+          "type": "Link",
+          "link_to": "Loyalty Pending Points"
+        },
+        {
+          "label": "Earn vs Redeem Trend",
+          "type": "Link",
+          "link_to": "Earn vs Redeem Trend"
+        },
+        {
+          "label": "Members and Tiers",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Tier Distribution",
+          "type": "Link",
+          "link_to": "Tier Distribution"
+        },
+        {
+          "label": "Cohorts",
+          "type": "Link",
+          "link_to": "Cohorts"
+        },
+        {
+          "label": "Milestones",
+          "type": "Link",
+          "link_to": "Milestones"
+        },
+        {
+          "label": "Member Growth and Activation",
+          "type": "Link",
+          "link_to": "Member Growth and Activation"
+        },
+        {
+          "label": "Lapsing Customers",
+          "type": "Link",
+          "link_to": "Lapsing Customers"
+        },
+        {
+          "label": "Repeat Rate",
+          "type": "Link",
+          "link_to": "Repeat Rate"
+        },
+        {
+          "label": "Top Customers",
+          "type": "Link",
+          "link_to": "Top Customers"
+        },
+        {
+          "label": "Rewards and Referrals",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Reward Performance",
+          "type": "Link",
+          "link_to": "Reward Performance"
+        },
+        {
+          "label": "Referral Funnel",
+          "type": "Link",
+          "link_to": "Referral Funnel"
+        },
+        {
+          "label": "Rule Simulation",
+          "type": "Link",
+          "link_to": "Rule Simulation"
+        },
+        {
+          "label": "Rule Effectiveness",
+          "type": "Link",
+          "link_to": "Rule Effectiveness"
+        },
+        {
+          "label": "Referral Fraud Review",
+          "type": "Link",
+          "link_to": "Referral Fraud Review"
+        },
+        {
+          "label": "Operations",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Integration Health",
+          "type": "Link",
+          "link_to": "Integration Health"
+        },
+        {
+          "label": "Adjustments and Approvals",
+          "type": "Link",
+          "link_to": "Adjustments and Approvals"
+        },
+        {
+          "label": "Loyalty Today",
+          "type": "Link",
+          "link_to": "Loyalty Today"
+        },
+        {
+          "label": "Loyalty Earn Breakdown",
+          "type": "Link",
+          "link_to": "Loyalty Earn Breakdown"
+        },
+        {
+          "label": "Unconfirmed POS Redemptions",
+          "type": "Link",
+          "link_to": "Unconfirmed POS Redemptions"
+        },
+        {
+          "label": "Staff Activity",
+          "type": "Link",
+          "link_to": "Staff Activity"
+        }
+      ],
+      "shortcuts": []
+    },
+    {
+      "name": "loyalty_members",
+      "label": "Loyalty Members",
+      "title": "Loyalty Members",
+      "icon": "users",
+      "links": [
+        {
+          "label": "Members",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Members",
+          "type": "Link",
+          "link_to": "Loyalty Member"
+        },
+        {
+          "label": "Member 360",
+          "type": "Link",
+          "link_to": "member-profile"
+        },
+        {
+          "label": "Segments",
+          "type": "Link",
+          "link_to": "Loyalty Segment"
+        },
+        {
+          "label": "Consent",
+          "type": "Link",
+          "link_to": "Loyalty Consent"
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "Add member",
+          "type": "DocType",
+          "link_to": "Loyalty Member"
+        },
+        {
+          "label": "Members",
+          "type": "DocType",
+          "link_to": "Loyalty Member"
+        },
+        {
+          "label": "Tier changes",
+          "type": "DocType",
+          "link_to": "Loyalty Tier History"
+        },
+        {
+          "label": "Consent",
+          "type": "DocType",
+          "link_to": "Loyalty Consent"
+        }
+      ]
+    },
+    {
+      "name": "loyalty_points_and_rewards",
+      "label": "Loyalty Points and Rewards",
+      "title": "Loyalty Points and Rewards",
+      "icon": "gift",
+      "links": [
+        {
+          "label": "Programs and Rules",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Programs",
+          "type": "Link",
+          "link_to": "Loyalty Scheme"
+        },
+        {
+          "label": "Tiers",
+          "type": "Link",
+          "link_to": "Loyalty Tier"
+        },
+        {
+          "label": "Earning and Redemption Rules",
+          "type": "Link",
+          "link_to": "Loyalty Rule"
+        },
+        {
+          "label": "Rewards Catalog",
+          "type": "Link",
+          "link_to": "Loyalty Reward"
+        },
+        {
+          "label": "Wallet Transactions",
+          "type": "Link",
+          "link_to": "Loyalty Ledger Entry"
+        },
+        {
+          "label": "Referrals",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Referral Programs",
+          "type": "Link",
+          "link_to": "Loyalty Referral Campaign"
+        },
+        {
+          "label": "Referrals",
+          "type": "Link",
+          "link_to": "Loyalty Referral"
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "New reward",
+          "type": "DocType",
+          "link_to": "Loyalty Reward"
+        },
+        {
+          "label": "Reward requests",
+          "type": "DocType",
+          "link_to": "Loyalty Reward Issue"
+        },
+        {
+          "label": "Points ledger",
+          "type": "DocType",
+          "link_to": "Loyalty Ledger Entry"
+        },
+        {
+          "label": "Programs",
+          "type": "DocType",
+          "link_to": "Loyalty Scheme"
+        }
+      ]
+    },
+    {
+      "name": "loyalty_messaging",
+      "label": "Loyalty Messaging",
+      "title": "Loyalty Messaging",
+      "icon": "message-square",
+      "links": [
+        {
+          "label": "Messaging",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Message log",
+          "type": "Link",
+          "link_to": "Loyalty Message Log"
+        },
+        {
+          "label": "Campaigns",
+          "type": "Link",
+          "link_to": "Loyalty Campaign Ref"
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "Message log",
+          "type": "DocType",
+          "link_to": "Loyalty Message Log"
+        },
+        {
+          "label": "Campaigns",
+          "type": "DocType",
+          "link_to": "Loyalty Campaign Ref"
+        },
+        {
+          "label": "Allowed recipients",
+          "type": "DocType",
+          "link_to": "Loyalty Settings"
+        },
+        {
+          "label": "Consent",
+          "type": "DocType",
+          "link_to": "Loyalty Consent"
+        }
+      ]
+    },
+    {
+      "name": "loyalty_operations",
+      "label": "Loyalty Operations",
+      "title": "Loyalty Operations",
+      "icon": "plug",
+      "links": [
+        {
+          "label": "Integrations",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Event Inbox",
+          "type": "Link",
+          "link_to": "Loyalty Event"
+        },
+        {
+          "label": "Event Outbox",
+          "type": "Link",
+          "link_to": "Loyalty Event Outbox"
+        },
+        {
+          "label": "Event Sources and Adapters",
+          "type": "Link",
+          "link_to": "Loyalty Event Source"
+        },
+        {
+          "label": "Integration Health",
+          "type": "Link",
+          "link_to": "Integration Health"
+        },
+        {
+          "label": "Audit",
+          "type": "Card Break",
+          "link_to": null
+        },
+        {
+          "label": "Audit and Reconciliation",
+          "type": "Link",
+          "link_to": "loyalty-audit"
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "Failed events",
+          "type": "DocType",
+          "link_to": "Loyalty Event"
+        },
+        {
+          "label": "Event outbox",
+          "type": "DocType",
+          "link_to": "Loyalty Event Outbox"
+        },
+        {
+          "label": "Event sources",
+          "type": "DocType",
+          "link_to": "Loyalty Event Source"
+        },
+        {
+          "label": "Loyalty settings",
+          "type": "DocType",
+          "link_to": "Loyalty Settings"
+        }
+      ]
+    },
+    {
+      "name": "loyalty_internal_records",
+      "label": "Loyalty Internal Records",
+      "title": "Loyalty Internal Records",
+      "icon": "history",
+      "links": [],
+      "shortcuts": [
+        {
+          "label": "Award day totals",
+          "type": "DocType",
+          "link_to": "Loyalty Award Day Total"
+        },
+        {
+          "label": "Segment memberships",
+          "type": "DocType",
+          "link_to": "Loyalty Segment Membership"
+        },
+        {
+          "label": "Rule versions",
+          "type": "DocType",
+          "link_to": "Loyalty Rule Version"
+        },
+        {
+          "label": "Rule evaluations",
+          "type": "DocType",
+          "link_to": "Loyalty Rule Evaluation"
+        },
+        {
+          "label": "Member identities",
+          "type": "DocType",
+          "link_to": "Loyalty Member Identity"
+        }
+      ]
+    },
+    {
+      "name": "loyalty_erpnext",
+      "label": "Loyalty ERPNext",
+      "title": "Loyalty ERPNext",
+      "icon": "plug",
+      "links": [],
+      "shortcuts": [
+        {
+          "label": "Loyalty ERPNext Setup",
+          "type": "DocType",
+          "link_to": "Loyalty ERPNext Setup"
+        },
+        {
+          "label": "Integration health",
+          "type": "Report",
+          "link_to": "Integration Health"
+        },
+        {
+          "label": "Earn reconciliation",
+          "type": "Report",
+          "link_to": "ERPNext Earn Reconciliation"
+        },
+        {
+          "label": "ERPNext event sources",
+          "type": "DocType",
+          "link_to": "Loyalty Event Source"
+        },
+        {
+          "label": "ERPNext backfill runs",
+          "type": "DocType",
+          "link_to": "Loyalty ERPNext Backfill Run"
+        }
+      ]
+    },
+    {
+      "name": "loyal_arrow_advanced",
+      "label": "Loyal Arrow Advanced",
+      "title": "Loyal Arrow Advanced",
+      "icon": "settings",
+      "links": [],
+      "shortcuts": [
+        {
+          "label": "Points rate",
+          "type": "DocType",
+          "link_to": "Loyalty Scheme"
+        },
+        {
+          "label": "Rewards",
+          "type": "DocType",
+          "link_to": "Loyalty Reward"
+        },
+        {
+          "label": "Tiers",
+          "type": "DocType",
+          "link_to": "Loyalty Tier"
+        },
+        {
+          "label": "WhatsApp",
+          "type": "DocType",
+          "link_to": "Loyalty Settings"
+        },
+        {
+          "label": "Rules",
+          "type": "DocType",
+          "link_to": "Loyalty Rule"
+        },
+        {
+          "label": "Segments",
+          "type": "DocType",
+          "link_to": "Loyalty Segment"
+        },
+        {
+          "label": "Campaigns",
+          "type": "DocType",
+          "link_to": "Loyalty Campaign Ref"
+        },
+        {
+          "label": "Ledger",
+          "type": "DocType",
+          "link_to": "Loyalty Ledger Entry"
+        },
+        {
+          "label": "Fraud",
+          "type": "DocType",
+          "link_to": "Loyalty Fraud Signal"
+        },
+        {
+          "label": "Adjustments",
+          "type": "DocType",
+          "link_to": "Loyalty Adjustment Request"
+        },
+        {
+          "label": "Imports",
+          "type": "DocType",
+          "link_to": "Loyalty Import Run"
+        },
+        {
+          "label": "Privacy",
+          "type": "DocType",
+          "link_to": "Loyalty Erasure Request"
+        },
+        {
+          "label": "Points expiry",
+          "type": "Report",
+          "link_to": "Expiry Forecast"
+        }
+      ]
+    }
+  ]
+}
