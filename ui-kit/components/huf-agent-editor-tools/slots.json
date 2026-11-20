@@ -1,0 +1,950 @@
+{
+  "component": "huf-agent-editor-tools",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.link-24"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Order Status Bot",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h1"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_normal": {
+      "type": "text",
+      "sample": "GPT-4.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Last run",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_2": {
+      "type": "relative-time",
+      "sample": "8 mins ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_4": {
+      "type": "number",
+      "sample": "5120",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-26"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Duplicate",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-27"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Disable",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-28"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Abilities",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md_4": {
+      "type": "text",
+      "sample": "Access",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md_5": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-31"
+    },
+    "shrink_0_2": {
+      "type": "text",
+      "sample": "Abilities",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-32"
+    },
+    "shrink_0_3": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-33"
+    },
+    "shrink_0_4": {
+      "type": "text",
+      "sample": "Access",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-34"
+    },
+    "shrink_0_5": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-35"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Documents it can answer from.",
+      "maxLength": 58,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Add knowledge",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-38"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Northwind Support Handbook",
+      "maxLength": 52,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Search when relevant",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Shipping and Returns FAQ",
+      "maxLength": 48,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Always include",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "Failed to index",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Product Catalog",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Search when relevant",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_2": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Create a new source",
+      "maxLength": 38,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-48"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Actions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Things it can do: tools and connected servers.",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_6": {
+      "type": "text",
+      "sample": "Browse integrations",
+      "maxLength": 38,
+      "where": "text",
+      "element": "huf-agent-editor-tools.link-49"
+    },
+    "text_micro_7": {
+      "type": "text",
+      "sample": "Connect MCP server",
+      "maxLength": 36,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-50"
+    },
+    "text_micro_8": {
+      "type": "text",
+      "sample": "Add tool",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-51"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Get Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Fetch one order by order number, including status and carrier.",
+      "maxLength": 124,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_3": {
+      "type": "text",
+      "sample": "Attached",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Search Orders",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Find orders by customer phone number or email.",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_4": {
+      "type": "text",
+      "sample": "Attached",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "Send WhatsApp Reply",
+      "maxLength": 38,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Reply to the customer in the current WhatsApp conversation.",
+      "maxLength": 118,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_5": {
+      "type": "text",
+      "sample": "Attached",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Create Support Ticket",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Open a ticket for the support team with the order attached.",
+      "maxLength": 118,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_6": {
+      "type": "text",
+      "sample": "Attached",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "Carrier Tracking",
+      "maxLength": 32,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Live parcel tracking across carriers · 6 tools",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "text_good_7": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Skills, MCP servers, procedures",
+      "maxLength": 62,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-67"
+    },
+    "text_ink_13": {
+      "type": "text",
+      "sample": "Try it",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Published",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Reset",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-71"
+    },
+    "hover_text_ink_2": {
+      "type": "text",
+      "sample": "Where is my order NW-10482?",
+      "maxLength": 54,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-72"
+    },
+    "hover_text_ink_3": {
+      "type": "text",
+      "sample": "Can I change my delivery address?",
+      "maxLength": 66,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-73"
+    },
+    "hover_text_ink_4": {
+      "type": "text",
+      "sample": "My package is late",
+      "maxLength": 36,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-74"
+    },
+    "text_micro_9": {
+      "type": "text",
+      "sample": "Send",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-agent-editor-tools.button-76"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Model: GPT-4.1",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-agent-editor-tools.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-22"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-25"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-29"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "More actions for Northwind Support Handbook",
+      "maxLength": 86,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-39"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-40"
+    },
+    "text_steel_arialabel_2": {
+      "type": "text",
+      "sample": "More actions for Shipping and Returns FAQ",
+      "maxLength": 82,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-42"
+    },
+    "data_state_unchecked_bg_input_value_2": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-43"
+    },
+    "text_steel_arialabel_3": {
+      "type": "text",
+      "sample": "More actions for Product Catalog",
+      "maxLength": 64,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-45"
+    },
+    "data_state_unchecked_bg_input_value_3": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-46"
+    },
+    "text_steel_arialabel_4": {
+      "type": "text",
+      "sample": "More actions for Get Order",
+      "maxLength": 52,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-52"
+    },
+    "data_state_unchecked_bg_input_value_4": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-53"
+    },
+    "text_steel_arialabel_5": {
+      "type": "text",
+      "sample": "More actions for Search Orders",
+      "maxLength": 60,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-55"
+    },
+    "data_state_unchecked_bg_input_value_5": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-56"
+    },
+    "text_steel_arialabel_6": {
+      "type": "text",
+      "sample": "More actions for Send WhatsApp Reply",
+      "maxLength": 72,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-58"
+    },
+    "data_state_unchecked_bg_input_value_6": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-59"
+    },
+    "text_steel_arialabel_7": {
+      "type": "text",
+      "sample": "More actions for Create Support Ticket",
+      "maxLength": 76,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-61"
+    },
+    "data_state_unchecked_bg_input_value_7": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-62"
+    },
+    "text_steel_arialabel_8": {
+      "type": "text",
+      "sample": "More actions for Carrier Tracking",
+      "maxLength": 66,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.button-64"
+    },
+    "data_state_unchecked_bg_input_value_8": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-agent-editor-tools.button-65"
+    },
+    "lg_self_start_arialabel": {
+      "type": "text",
+      "sample": "Try it",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "aside"
+    },
+    "overflow_y_auto_arialabel": {
+      "type": "text",
+      "sample": "Try it conversation",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "gap_1_5_arialabel": {
+      "type": "text",
+      "sample": "Suggestions",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "focus_visible_ring_0_placeholder": {
+      "type": "text",
+      "sample": "Type a message…",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-agent-editor-tools.textarea-75"
+    },
+    "focus_visible_ring_0_arialabel": {
+      "type": "text",
+      "sample": "Message",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.textarea-75"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-agent-editor-tools.section-77"
+    }
+  }
+}
