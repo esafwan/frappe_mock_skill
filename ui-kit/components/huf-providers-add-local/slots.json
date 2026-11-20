@@ -1,0 +1,159 @@
+{
+  "component": "huf-providers-add-local",
+  "slots": {
+    "dialog_title": {
+      "type": "text",
+      "sample": "Add provider",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Create a new AI provider",
+      "maxLength": 48,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Provider name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "API Key (optional for local)",
+      "maxLength": 56,
+      "where": "text",
+      "element": "label"
+    },
+    "cursor_pointer": {
+      "type": "text",
+      "sample": "Is local LLM (self-hosted endpoint)",
+      "maxLength": 70,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "API Base URL",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive_2": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Provider Brand",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive_3": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2": {
+      "type": "text",
+      "sample": "Ollama",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-add-local.button-6"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-add-local.button-7"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Enter provider name (e.g., OpenAI, Anthropic)",
+      "maxLength": 90,
+      "where": "attr:placeholder",
+      "element": "huf-providers-add-local.input-1"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Backoffice Ollama",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "huf-providers-add-local.input-1"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "Enter API key",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "huf-providers-add-local.input-2"
+    },
+    "border_primary_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-providers-add-local.button-3"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "http://host.docker.internal:11434",
+      "maxLength": 66,
+      "where": "attr:placeholder",
+      "element": "huf-providers-add-local.input-4"
+    },
+    "text_ui_text_value_2": {
+      "type": "text",
+      "sample": "http://ollama.northwind.local:11434",
+      "maxLength": 70,
+      "where": "attr:value",
+      "element": "huf-providers-add-local.input-4"
+    },
+    "invert_alt": {
+      "type": "text",
+      "sample": "ollama logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "image_1": {
+      "type": "image",
+      "sample": "assets/image_1.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    }
+  }
+}
