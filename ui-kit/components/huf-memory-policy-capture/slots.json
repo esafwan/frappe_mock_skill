@@ -1,0 +1,740 @@
+{
+  "component": "huf-memory-policy-capture",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-memory-policy-capture.link-24"
+    },
+    "hover_text_ink_2": {
+      "type": "text",
+      "sample": "Policies",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.link-25"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Back to Policies",
+      "maxLength": 32,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-27"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Support Desk Learning",
+      "maxLength": 42,
+      "where": "text",
+      "element": "h1"
+    },
+    "tracking_wide": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_text_destructive": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-29"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Save",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-30"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Policy",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-32"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Capture",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-33"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "Retrieval",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-34"
+    },
+    "h_control_md_4": {
+      "type": "text",
+      "sample": "Guardrails",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-policy-capture.button-35"
+    },
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Capture",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Control how new memory records are created and approved.",
+      "maxLength": 112,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Capture mode",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Agent Suggested",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "Manual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "Agent Suggested",
+      "maxLength": 30,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_3": {
+      "type": "text",
+      "sample": "Automatic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "block": {
+      "type": "text",
+      "sample": "Manual",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "block_2": {
+      "type": "text",
+      "sample": "— only explicit user or tool-call writes create memory.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "span"
+    },
+    "block_3": {
+      "type": "text",
+      "sample": "Agent Suggested",
+      "maxLength": 30,
+      "where": "text",
+      "element": "strong"
+    },
+    "block_4": {
+      "type": "text",
+      "sample": "— a background job proposes memory records after each run; they always land as Draft for approval.",
+      "maxLength": 196,
+      "where": "text",
+      "element": "span"
+    },
+    "block_5": {
+      "type": "text",
+      "sample": "Automatic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "block_6": {
+      "type": "text",
+      "sample": "— same background extraction, but records follow this policy's Approval Required / Default Status handling below.",
+      "maxLength": 226,
+      "where": "text",
+      "element": "span"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Learning agent",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_left": {
+      "type": "text",
+      "sample": "Memory Curator",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Optional dedicated agent that runs background memory extraction (used when Capture Mode is Agent Suggested or Automatic), instead of the conversation's own agent. Lets extraction run on a cheap model without touching the main agent's context or budget.",
+      "maxLength": 504,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Approval required",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "New memory records are forced to Draft status regardless of Default Status below, and must be approved by a user before becoming active. Turn this off to trust captured memory automatically.",
+      "maxLength": 380,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Default status",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_4": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_5": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Status assigned to newly captured records when Approval Required is off. Ignored (records are always Draft) while Approval Required is checked.",
+      "maxLength": 286,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "Allowed record types",
+      "maxLength": 40,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "4 selected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Fact",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "Preference",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Decision",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_wide_2": {
+      "type": "text",
+      "sample": "+",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_wide_3": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_wide_4": {
+      "type": "text",
+      "sample": "more",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "block_7": {
+      "type": "text",
+      "sample": "Which of Memory Record's Record Type values this policy may capture. Pick from the list — it's the same set the backend enforces, so nothing selected here can ever fail with a \"not allowed by policy\" error.",
+      "maxLength": 412,
+      "where": "text",
+      "element": "span"
+    },
+    "block_8": {
+      "type": "text",
+      "sample": "Leave empty to allow all record types.",
+      "maxLength": 76,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-memory-policy-capture.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-22"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-26"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Edit name",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-28"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "Manual",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "Agent Suggested",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_3": {
+      "type": "text",
+      "sample": "Automatic",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_text_foreground_title": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "huf-memory-policy-capture.span-39"
+    },
+    "hover_text_foreground_arialabel": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.span-39"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-memory-policy-capture.button-40"
+    },
+    "flex_col_value_4": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_5": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_bg_background_70_arialabel": {
+      "type": "text",
+      "sample": "Remove Fact",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-43"
+    },
+    "hover_bg_background_70_arialabel_2": {
+      "type": "text",
+      "sample": "Remove Preference",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-44"
+    },
+    "hover_bg_background_70_arialabel_3": {
+      "type": "text",
+      "sample": "Remove Decision",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.button-45"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-capture.section-48"
+    }
+  }
+}
