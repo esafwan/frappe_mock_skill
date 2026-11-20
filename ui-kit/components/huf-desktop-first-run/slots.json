@@ -1,0 +1,299 @@
+{
+  "component": "huf-desktop-first-run",
+  "slots": {
+    "text_var_ink": {
+      "type": "text",
+      "sample": "Desktop",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_2": {
+      "type": "text",
+      "sample": "Connect to Huf",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "Sign in to your Huf server to start chatting with your agents.",
+      "maxLength": 124,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_3": {
+      "type": "text",
+      "sample": "Server address",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "start_0": {
+      "type": "text",
+      "sample": "The address you open Huf at in your browser, for example https://huf.example.com. https:// is added if you leave it out (http:// for localhost and .local addresses), and anything after the host name is dropped.",
+      "maxLength": 420,
+      "where": "text",
+      "element": "span"
+    },
+    "text_signal_foreground": {
+      "type": "text",
+      "sample": "Password",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-first-run.button-2"
+    },
+    "hover_text_var_ink": {
+      "type": "text",
+      "sample": "API key",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-first-run.button-3"
+    },
+    "text_var_steel_2": {
+      "type": "text",
+      "sample": "Use the email and password you sign in to Huf with.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_4": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_5": {
+      "type": "text",
+      "sample": "Password",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "webkit_details_marker_hidden": {
+      "type": "text",
+      "sample": "Where do I find these?",
+      "maxLength": 44,
+      "where": "text",
+      "element": "huf-desktop-first-run.summary-4"
+    },
+    "text_var_steel_3": {
+      "type": "text",
+      "sample": "Open your Huf site in a browser and go to My Settings (your avatar menu).",
+      "maxLength": 146,
+      "where": "text",
+      "element": "li"
+    },
+    "text_var_steel_4": {
+      "type": "text",
+      "sample": "In the API Access section, choose Generate Keys.",
+      "maxLength": 96,
+      "where": "text",
+      "element": "li"
+    },
+    "text_var_steel_5": {
+      "type": "text",
+      "sample": "Copy the API key and the API secret here. The secret is shown only once.",
+      "maxLength": 144,
+      "where": "text",
+      "element": "li"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_6": {
+      "type": "text",
+      "sample": "Site huf, live updates on port 9000",
+      "maxLength": 70,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_6": {
+      "type": "text",
+      "sample": "Site Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "start_0_2": {
+      "type": "text",
+      "sample": "The site name on the server. Leave it as huf unless your administrator gave you a different one.",
+      "maxLength": 192,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_7": {
+      "type": "text",
+      "sample": "Socket.io Port",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "start_0_3": {
+      "type": "text",
+      "sample": "The port used for live updates such as streaming replies. Leave 9000 unless your administrator says otherwise.",
+      "maxLength": 220,
+      "where": "text",
+      "element": "span"
+    },
+    "disabled_opacity_50": {
+      "type": "text",
+      "sample": "Connect",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-first-run.button-8"
+    },
+    "disabled_opacity_50_2": {
+      "type": "text",
+      "sample": "Test only",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-first-run.button-9"
+    },
+    "text_var_steel_7": {
+      "type": "text",
+      "sample": "Your key is stored on this computer",
+      "maxLength": 70,
+      "where": "text",
+      "element": "span"
+    },
+    "end_0": {
+      "type": "text",
+      "sample": "The server address, API key and API secret are saved in this app's local database file, not in the system keychain, and the secret is stored there as plain text. They are sent only to the server address you entered. Anyone who can read your user files on this computer could read them.",
+      "maxLength": 570,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_8": {
+      "type": "text",
+      "sample": "or",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_var_paper_deep": {
+      "type": "text",
+      "sample": "Use local models instead (Ollama, offline)",
+      "maxLength": 84,
+      "where": "text",
+      "element": "huf-desktop-first-run.button-11"
+    },
+    "text_var_steel_9": {
+      "type": "text",
+      "sample": "No account or server. Chats stay on this computer.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_steel_10": {
+      "type": "text",
+      "sample": "With Huf Desktop",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_var_ink_soft": {
+      "type": "text",
+      "sample": "Chat with the agents on your Huf server",
+      "maxLength": 78,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_soft_2": {
+      "type": "text",
+      "sample": "Let them use files and tools on this computer, with your approval",
+      "maxLength": 130,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_soft_3": {
+      "type": "text",
+      "sample": "Open the documents, sheets and decks they make, right here",
+      "maxLength": 116,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_arialabel": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "svg"
+    },
+    "text_var_ink_arialabel_2": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "svg"
+    },
+    "hover_text_var_signal_arialabel": {
+      "type": "text",
+      "sample": "About Server address",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-first-run.button-1"
+    },
+    "aria_invalid_true_border_var_destructive_placeholder": {
+      "type": "text",
+      "sample": "huf.example.com",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-first-run.url-1"
+    },
+    "border_var_line_arialabel": {
+      "type": "text",
+      "sample": "Sign-in method",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "hover_text_var_signal_arialabel_2": {
+      "type": "text",
+      "sample": "About Site Name",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-first-run.button-6"
+    },
+    "aria_invalid_true_border_var_destructive_value": {
+      "type": "text",
+      "sample": "huf",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-desktop-first-run.url-4"
+    },
+    "hover_text_var_signal_arialabel_3": {
+      "type": "text",
+      "sample": "About Socket.io Port",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-first-run.button-7"
+    },
+    "aria_invalid_true_border_var_destructive_value_2": {
+      "type": "number",
+      "sample": "9000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-desktop-first-run.url-5"
+    },
+    "hover_text_var_signal_arialabel_4": {
+      "type": "text",
+      "sample": "Your key is stored on this computer",
+      "maxLength": 70,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-first-run.button-10"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-first-run.section-12"
+    }
+  }
+}

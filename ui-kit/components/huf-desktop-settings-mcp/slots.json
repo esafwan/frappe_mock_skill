@@ -1,0 +1,544 @@
+{
+  "component": "huf-desktop-settings-mcp",
+  "slots": {
+    "text_var_ink": {
+      "type": "text",
+      "sample": "Local MCP servers",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "block": {
+      "type": "text",
+      "sample": "An MCP server is a program on this computer that gives your agents extra tools. Servers run confined by default, and every add, edit, import or always-allow opens a system dialog that shows the exact command.",
+      "maxLength": 416,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_signal_ink": {
+      "type": "text",
+      "sample": "2 servers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Add server",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-mcp.button-2"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "Import from Claude config",
+      "maxLength": 50,
+      "where": "text",
+      "element": "huf-desktop-settings-mcp.button-3"
+    },
+    "start_0": {
+      "type": "text",
+      "sample": "Adding, editing, importing and allowing a tool without asking each open a system dialog showing the exact command.",
+      "maxLength": 228,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_2": {
+      "type": "text",
+      "sample": "inventory",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_normal": {
+      "type": "text",
+      "sample": "any agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "/usr/local/bin/northwind-inventory-mcp --warehouse NW-01",
+      "maxLength": 112,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_2": {
+      "type": "text",
+      "sample": "Secret variables",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_3": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_4": {
+      "type": "text",
+      "sample": "INVENTORY_API_TOKEN",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_3": {
+      "type": "text",
+      "sample": "stock_level",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_5": {
+      "type": "text",
+      "sample": "Current stock and open purchase orders for a SKU.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_5": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_4": {
+      "type": "text",
+      "sample": "create_transfer",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_6": {
+      "type": "text",
+      "sample": "Move stock between warehouses.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_6": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_7": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_8": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_5": {
+      "type": "text",
+      "sample": "write_off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_7": {
+      "type": "text",
+      "sample": "Write off damaged or expired stock.",
+      "maxLength": 70,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_9": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_10": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_11": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_6": {
+      "type": "text",
+      "sample": "supplier-portal",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_normal_2": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_8": {
+      "type": "text",
+      "sample": "/usr/local/bin/supplier-portal-mcp",
+      "maxLength": 68,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_9": {
+      "type": "text",
+      "sample": "Secret variables",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_10": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_11": {
+      "type": "text",
+      "sample": "PORTAL_TOKEN",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_2": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_7": {
+      "type": "text",
+      "sample": "list_deliveries",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_12": {
+      "type": "text",
+      "sample": "Deliveries booked by a supplier, with promised and actual times.",
+      "maxLength": 128,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_12": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_13": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_14": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_8": {
+      "type": "text",
+      "sample": "send_message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_13": {
+      "type": "text",
+      "sample": "Send a message to a supplier contact.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_15": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_16": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_17": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "hover_text_var_signal_arialabel": {
+      "type": "text",
+      "sample": "About Local MCP servers",
+      "maxLength": 46,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-1"
+    },
+    "hover_text_var_signal_arialabel_2": {
+      "type": "text",
+      "sample": "Add server",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-4"
+    },
+    "ps_7_placeholder": {
+      "type": "text",
+      "sample": "Search tools by name or description",
+      "maxLength": 70,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-mcp.input-5"
+    },
+    "ps_7_arialabel": {
+      "type": "text",
+      "sample": "Search tools by name or description",
+      "maxLength": 70,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.input-5"
+    },
+    "text_var_steel_title": {
+      "type": "text",
+      "sample": "/usr/local/bin/northwind-inventory-mcp --warehouse NW-01",
+      "maxLength": 112,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "w_var_control_h_sm_arialabel": {
+      "type": "text",
+      "sample": "Restart",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-7"
+    },
+    "w_var_control_h_sm_arialabel_2": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-8"
+    },
+    "text_xs_arialabel": {
+      "type": "text",
+      "sample": "stock_level policy",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.select-9"
+    },
+    "text_xs_value": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_2": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_3": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_2": {
+      "type": "text",
+      "sample": "create_transfer policy",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.select-10"
+    },
+    "text_xs_value_4": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_5": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_6": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_3": {
+      "type": "text",
+      "sample": "write_off policy",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.select-11"
+    },
+    "text_xs_value_7": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_8": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_9": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_var_steel_title_2": {
+      "type": "text",
+      "sample": "/usr/local/bin/supplier-portal-mcp",
+      "maxLength": 68,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "w_var_control_h_sm_arialabel_3": {
+      "type": "text",
+      "sample": "Restart",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-13"
+    },
+    "w_var_control_h_sm_arialabel_4": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.button-14"
+    },
+    "text_xs_arialabel_4": {
+      "type": "text",
+      "sample": "list_deliveries policy",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.select-15"
+    },
+    "text_xs_value_10": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_11": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_12": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_5": {
+      "type": "text",
+      "sample": "send_message policy",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-mcp.select-16"
+    },
+    "text_xs_value_13": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_14": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_15": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    }
+  }
+}

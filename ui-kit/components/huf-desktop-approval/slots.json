@@ -1,0 +1,138 @@
+{
+  "component": "huf-desktop-approval",
+  "slots": {
+    "pending_count": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "pending_count_2": {
+      "type": "text",
+      "sample": "pending",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "action_title": {
+      "type": "text",
+      "sample": "Run a command",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_var_steel_2": {
+      "type": "text",
+      "sample": "waiting 8s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_3": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_4": {
+      "type": "text",
+      "sample": "auto-denies in 120s",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "agent_and_chat": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "agent_and_chat_2": {
+      "type": "text",
+      "sample": "- Supplier delivery review, Q4",
+      "maxLength": 60,
+      "where": "text",
+      "element": "p"
+    },
+    "command": {
+      "type": "text",
+      "sample": "python3 scripts/email_suppliers.py --draft lindqvist-fish bayside-dairy",
+      "maxLength": 142,
+      "where": "text",
+      "element": "pre"
+    },
+    "text_var_steel_soft": {
+      "type": "text",
+      "sample": "Working directory",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_var_line": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-approval.button-1"
+    },
+    "hover_bg_var_paper_deep": {
+      "type": "text",
+      "sample": "Allow once",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-approval.button-2"
+    },
+    "hover_bg_var_paper_deep_2": {
+      "type": "text",
+      "sample": "Allow this command for this run",
+      "maxLength": 62,
+      "where": "text",
+      "element": "huf-desktop-approval.button-3"
+    },
+    "hover_bg_var_paper_deep_3": {
+      "type": "text",
+      "sample": "Allow any command for this run",
+      "maxLength": 60,
+      "where": "text",
+      "element": "huf-desktop-approval.button-4"
+    },
+    "border_var_line_arialabel": {
+      "type": "text",
+      "sample": "Operations Analyst: Run a command",
+      "maxLength": 66,
+      "where": "attr:aria-label",
+      "element": "section"
+    },
+    "text_var_steel_title": {
+      "type": "text",
+      "sample": "Auto-denies in 120s if not answered",
+      "maxLength": 70,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "command_arialabel": {
+      "type": "text",
+      "sample": "Command",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "pre"
+    }
+  }
+}
