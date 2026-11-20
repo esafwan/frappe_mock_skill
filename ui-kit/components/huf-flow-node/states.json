@@ -1,0 +1,44 @@
+{
+  "component": "huf-flow-node",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-flow-node",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "card hover (pointer over the step)"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "selection is a data state: see huf-flow-canvas-step"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pressing a node selects it: see huf-flow-canvas-step"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "page-level: no single disabled control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed step is a run state: see huf-flow-run-viewer"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "skeleton flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "empty builder (\"Choose a trigger\") is backlog"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "component": "huf-playground-compare",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-playground-compare.button-41",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(29, 29, 31) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-playground-compare.button-25",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-playground-compare.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed run shows the raw payload in the response panel; not captured here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked runs resolve instantly (the Running state is a 1 s flash)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "compare starts empty; see huf-playground-empty"
+    }
+  }
+}

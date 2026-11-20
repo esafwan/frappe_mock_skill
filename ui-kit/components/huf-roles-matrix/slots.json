@@ -1,0 +1,495 @@
+{
+  "component": "huf-roles-matrix",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "People",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-18"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Roles & access",
+      "maxLength": 28,
+      "where": "text",
+      "element": "huf-roles-matrix.button-19"
+    },
+    "shrink_0": {
+      "type": "text",
+      "sample": "Create role",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-roles-matrix.create"
+    },
+    "w_220px": {
+      "type": "text",
+      "sample": "Capability",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "transition_colors": {
+      "type": "text",
+      "sample": "Huf Admin",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-20"
+    },
+    "transition_colors_2": {
+      "type": "text",
+      "sample": "Builder",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-21"
+    },
+    "transition_colors_3": {
+      "type": "text",
+      "sample": "Viewer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-22"
+    },
+    "transition_colors_4": {
+      "type": "text",
+      "sample": "Support Lead",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-roles-matrix.button-23"
+    },
+    "transition_colors_5": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-24"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_6": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-25"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Own",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Own",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_7": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-26"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_8": {
+      "type": "text",
+      "sample": "Tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-27"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_9": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-roles-matrix.button-28"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Create",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Use",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_10": {
+      "type": "text",
+      "sample": "Data records",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-roles-matrix.button-29"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Edit own",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Own",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "Edit all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_11": {
+      "type": "text",
+      "sample": "Users & roles",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-roles-matrix.button-30"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_60": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_60_2": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Invite",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_colors_12": {
+      "type": "text",
+      "sample": "System settings",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-roles-matrix.button-31"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "Manage",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_60_3": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_60_4": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_60_5": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-roles-matrix.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-roles-matrix.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-roles-matrix.button-15"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-roles-matrix.section-32"
+    }
+  }
+}

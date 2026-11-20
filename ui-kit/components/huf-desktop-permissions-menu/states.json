@@ -1,0 +1,82 @@
+{
+  "component": "huf-desktop-permissions-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-desktop-permissions-menu.auto-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 240, 244)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "mode row hover (Auto)"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-desktop-permissions-menu.auto-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-desktop-permissions-menu.auto-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 240, 244)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "no distinct pressed style; a press selects the mode and closes the menu, so this is the hover look"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-desktop-permissions-menu.button-2",
+      "changes": [
+        {
+          "element": "huf-desktop-permissions-menu.button-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}

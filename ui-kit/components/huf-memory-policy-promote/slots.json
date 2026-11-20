@@ -1,0 +1,117 @@
+{
+  "component": "huf-memory-policy-promote",
+  "slots": {
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Knowledge projection",
+      "maxLength": 40,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Optionally promote high-confidence memories into a permanent Knowledge Source.",
+      "maxLength": 156,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Auto promote to knowledge",
+      "maxLength": 50,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "Automatically copies memory records that meet or exceed both Min Confidence and Min Importance below into a Knowledge Source, making them retrievable outside the memory system.",
+      "maxLength": 352,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Knowledge source",
+      "maxLength": 32,
+      "where": "text",
+      "element": "label"
+    },
+    "text_left": {
+      "type": "text",
+      "sample": "Northwind Support Handbook",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Required when Auto Promote is enabled. The Knowledge Source that promoted memories are written into.",
+      "maxLength": 200,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Min confidence",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Minimum confidence score (0-1) a memory record must have to be promoted. A record is promoted only when it meets or exceeds both this and Min Importance.",
+      "maxLength": 306,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Min importance",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Minimum importance score (0-1) a memory record must have to be promoted. A record is promoted only when it meets or exceeds both this and Min Confidence.",
+      "maxLength": 306,
+      "where": "text",
+      "element": "p"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-memory-policy-promote.button-1"
+    },
+    "hover_text_foreground_title": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "huf-memory-policy-promote.span-4"
+    },
+    "hover_text_foreground_arialabel": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-memory-policy-promote.span-4"
+    },
+    "text_ui_text_value": {
+      "type": "number",
+      "sample": "0.85",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-memory-policy-promote.confidence-1"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "0.7",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-memory-policy-promote.confidence-2"
+    }
+  }
+}

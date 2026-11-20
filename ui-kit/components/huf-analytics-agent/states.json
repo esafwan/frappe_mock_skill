@@ -1,0 +1,71 @@
+{
+  "component": "huf-analytics-agent",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-analytics-agent.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-analytics-agent.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-analytics-agent.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "captured as huf-analytics-empty"
+    }
+  }
+}

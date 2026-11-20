@@ -1,0 +1,208 @@
+{
+  "component": "huf-providers-test",
+  "slots": {
+    "dialog_title": {
+      "type": "text",
+      "sample": "Configure Northwind Ollama",
+      "maxLength": 52,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Update provider configuration settings",
+      "maxLength": 76,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "API Key (optional for local)",
+      "maxLength": 56,
+      "where": "text",
+      "element": "label"
+    },
+    "cursor_pointer": {
+      "type": "text",
+      "sample": "Is local LLM (self-hosted endpoint)",
+      "maxLength": 70,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "API Base URL",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Provider Brand",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive_2": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2": {
+      "type": "text",
+      "sample": "Ollama",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Test Connection",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-providers-test.button-5"
+    },
+    "text_good": {
+      "type": "text",
+      "sample": "Endpoint reachable",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "llama3.1:8b",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_2": {
+      "type": "text",
+      "sample": "tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "qwen2.5:14b",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_3": {
+      "type": "text",
+      "sample": "chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_4": {
+      "type": "text",
+      "sample": "tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "nomic-embed-text",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "break_words": {
+      "type": "text",
+      "sample": "Model not found on the endpoint. Run `ollama pull nomic-embed-text` on the host.",
+      "maxLength": 160,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-test.button-6"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Save",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-test.button-7"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Enter API key",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "huf-providers-test.input-1"
+    },
+    "border_primary_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-providers-test.button-2"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "http://host.docker.internal:11434",
+      "maxLength": 66,
+      "where": "attr:placeholder",
+      "element": "huf-providers-test.input-3"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "http://ollama.northwind.local:11434",
+      "maxLength": 70,
+      "where": "attr:value",
+      "element": "huf-providers-test.input-3"
+    },
+    "invert_alt": {
+      "type": "text",
+      "sample": "ollama logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "image_1": {
+      "type": "image",
+      "sample": "assets/image_1.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    }
+  }
+}

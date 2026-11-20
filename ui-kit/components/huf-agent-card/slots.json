@@ -1,0 +1,124 @@
+{
+  "component": "huf-agent-card",
+  "slots": {
+    "agent_name": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "description": {
+      "type": "text",
+      "sample": "Classifies inbound WhatsApp and email tickets and routes them to the right queue.",
+      "maxLength": 162,
+      "where": "text",
+      "element": "p"
+    },
+    "status": {
+      "type": "text",
+      "sample": "active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_label_1": {
+      "type": "text",
+      "sample": "Provider",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_value_1": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_label_2": {
+      "type": "text",
+      "sample": "Model",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_value_2": {
+      "type": "text",
+      "sample": "gpt-4.1-mini",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_label_3": {
+      "type": "text",
+      "sample": "Runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_value_3": {
+      "type": "number",
+      "sample": "1284",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_label_4": {
+      "type": "text",
+      "sample": "Last Run",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "meta_value_4": {
+      "type": "relative-time",
+      "sample": "14 hours ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "badge": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_logo_alt": {
+      "type": "text",
+      "sample": "openai logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "agent_name_title": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-agent-card.button-1"
+    },
+    "w_8_title_2": {
+      "type": "text",
+      "sample": "View logs",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-agent-card.button-2"
+    },
+    "image_1": {
+      "type": "image",
+      "sample": "assets/image_1.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    }
+  }
+}

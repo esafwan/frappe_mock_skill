@@ -1,10 +1,13 @@
 import fs from 'fs'; import path from 'path';
 import { chromium } from 'playwright';
-import { BASE, ROOT, open, go } from './lib.mjs';
+import { BASE, ROOT, open, go, launch } from './lib.mjs';
+import { openHuf, goHuf, liveCss } from './huf/app.mjs';
+const harnessOf = async (s) => (s.harness ? import(`./${s.harness}/app.mjs`) : { openHuf, goHuf, liveCss }); // huf spec.harness: another app host with the same API (e.g. 'huf-desktop')
 import { extractInPage, harnessDoc, fill } from './engine.mjs';
 import { specs as deskSpecs } from './specs.mjs';
 const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
-const specs = [...deskSpecs, ...posSpecs];
+const hufSpecs = fs.existsSync(new URL('./specs-huf.mjs', import.meta.url)) ? (await import('./specs-huf.mjs')).specs : [];
+const specs = [...deskSpecs, ...posSpecs, ...hufSpecs];
 
 const only = process.argv.slice(2);
 const sprite = fs.readFileSync(ROOT + 'tokens/icons/sprite.svg.html', 'utf8');
@@ -14,15 +17,20 @@ export const spriteFor = (html) => { const ids = new Set([...html.matchAll(/(?:x
 const STATES = ['default', 'hover', 'focus', 'active', 'disabled', 'error', 'loading', 'empty'];
 const snap = () => { const r = document.querySelector('[data-ui]'); return null; };
 
-const { browser, page } = await open();
-for (const spec of specs) {
-  if (only.length && !only.includes(spec.id)) continue;
+// Desk/POS specs log in to a live bench; huf specs need no bench (each gets its own mocked app context, see scripts/huf/app.mjs).
+const selected = specs.filter((s) => !only.length || only.includes(s.id));
+let browser, page;
+if (selected.some((s) => s.group !== 'huf')) ({ browser, page } = await open()); else browser = await launch();
+const deskPage = page;
+for (const spec of selected) {
+  const isHuf = spec.group === 'huf'; let hufCtx = null;
+  if (isHuf) { const o = await (await harnessOf(spec)).openHuf(spec, browser); hufCtx = o.ctx; page = o.page; } else page = deskPage;
   const dir = ROOT + 'components/' + spec.id + '/'; fs.mkdirSync(dir + 'states', { recursive: true });
   const out = { id: spec.id }; let rootWRtl = null, wRtl = null, wDark = null, rtlFrac = null, darkFrac = null, darkBg = null;
   try {
-    const modes = [['light', false, false], ['dark', true, false], ['rtl', false, true]];
+    const modes = (spec.modes || ['light', 'dark', 'rtl']).map((m) => [m, m === 'dark', m === 'rtl']);
     for (const [mode, dark, rtl] of modes) {
-      await go(page, spec.url, { dark });
+      if (isHuf) await (await harnessOf(spec)).goHuf(page, spec.url, { waitFor: spec.waitFor, dark }); else await go(page, spec.url, { dark });
       if (rtl) await page.evaluate(() => document.documentElement.setAttribute('dir', 'rtl'));
       if (spec.prepare) await spec.prepare(page);
       await page.waitForTimeout(spec.settle ?? 600);
@@ -30,7 +38,7 @@ for (const spec of specs) {
       // RTL: body overflows by a few px, leaving the painted viewport offset from layout coords; lock root scrolling so screenshots match layout
       if (rtl) await page.evaluate(() => { const s = document.createElement('style'); s.dataset.uikit = '1'; s.textContent = 'html,body{overflow:hidden!important}'; document.head.appendChild(s); });
       const rootSel = spec.root;
-      const data = await page.evaluate(extractInPage, { rootSel, id: spec.id, targets: spec.targets || {} });
+      const data = await page.evaluate(extractInPage, { rootSel, id: spec.id, targets: spec.targets || {}, names: spec.slotNames || {} });
       const loc = page.locator(`[data-ui="${spec.id}"]`).first();
       await loc.scrollIntoViewIfNeeded();
       await page.mouse.move(0, 0);
@@ -50,6 +58,7 @@ for (const spec of specs) {
       const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); data.rootFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) };
       data.pad = pad; data.clip = spec.pad ? { w: Math.ceil(data.size.w + pad.l + pad.r), h: Math.ceil(data.size.h + pad.t + pad.b) } : null;
       Object.assign(out, data);
+      if (isHuf) out.css = await (await harnessOf(spec)).liveCss(page, spec.source);
       // states
       const states = {};
       for (const st of STATES) {
@@ -92,7 +101,7 @@ for (const spec of specs) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, wRtl, rootWRtl, wDark, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, wRtl, rootWRtl, wDark, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: out.css || spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, modes: modes.map((m) => m[0]), describe: spec.describe, darkTheme: isHuf ? (spec.darkTheme || 'midnight') : undefined, app: isHuf ? { source: spec.source || 'pre-develop', route: spec.url, fixtures: spec.fixtures || [], time: spec.time || null } : undefined, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
     fs.rmSync(dir + 'assets', { recursive: true, force: true }); for (const im of out.images || []) { fs.mkdirSync(dir + 'assets', { recursive: true }); fs.writeFileSync(dir + im.file, (/;base64,/.test(im.data) ? Buffer.from(im.data.split(',')[1], 'base64') : Buffer.from(decodeURIComponent(im.data.slice(im.data.indexOf(',') + 1)), 'utf8'))); }
     { // calibrate sub-pixel origin per mode: render the preview with origin 0, compare root frac with the live one
@@ -100,8 +109,8 @@ for (const spec of specs) {
       const m0 = { ...meta, origin: { x: 0, y: 0 }, originRtl: { x: 0, y: 0 }, originDark: { x: 0, y: 0 } }; const body0 = spriteFor(bodyHtml) + fill(bodyHtml, Object.fromEntries(out.slots.map(s => [s.name, s.sample])));
       const frac = async (rtl, dk) => { fs.writeFileSync(dir + '.calib.html', harnessDoc(m0, body0, { rtl, dark: dk })); await cp.goto('file://' + dir + '.calib.html'); return cp.evaluate((id) => { const b = document.querySelector(`[data-ui="${id}"]`).getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }, spec.id); };
       const mod1 = (v) => ((v % 1) + 1) % 1; const fix = (live, got) => ({ x: +mod1(live.x - got.x).toFixed(3), y: +mod1(live.y - got.y).toFixed(3) });
-      const pl = await frac(false), pr = await frac(true), pd2 = await frac(false, true);
-      meta.origin = fix(out.rootFrac, pl); meta.originRtl = fix(rtlFrac, pr); meta.originDark = fix(darkFrac, pd2); fs.rmSync(dir + '.calib.html'); await cctx.close(); }
+      const pl = await frac(false), pr = rtlFrac ? await frac(true) : null, pd2 = darkFrac ? await frac(false, true) : null;
+      meta.origin = fix(out.rootFrac, pl); meta.originRtl = pr ? fix(rtlFrac, pr) : null; meta.originDark = pd2 ? fix(darkFrac, pd2) : null; fs.rmSync(dir + '.calib.html'); await cctx.close(); }
     fs.writeFileSync(dir + 'component.html', bodyHtml + '\n');
     const slots = {}; for (const s of out.slots) slots[s.name] = { type: s.type, sample: s.sample, maxLength: s.maxLength, where: s.where, element: s.element };
     fs.writeFileSync(dir + 'slots.json', JSON.stringify({ component: spec.id, slots }, null, 2));
@@ -112,10 +121,11 @@ for (const spec of specs) {
     const samples = Object.fromEntries(Object.entries(slots).map(([k, v]) => [k, v.sample]));
     const prev = harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { title: spec.name });
     fs.writeFileSync(dir + 'preview.html', prev);
-    fs.writeFileSync(dir + 'preview.rtl.html', harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { rtl: true, title: spec.name }));
+    if (meta.modes.includes('rtl')) fs.writeFileSync(dir + 'preview.rtl.html', harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { rtl: true, title: spec.name }));
     const prevDark = harnessDoc(meta, spriteFor(bodyHtml) + fill(bodyHtml, samples), { dark: true, title: spec.name });
-    fs.writeFileSync(dir + 'preview.dark.html', prevDark);
+    if (meta.modes.includes('dark')) fs.writeFileSync(dir + 'preview.dark.html', prevDark);
     console.log('OK', spec.id, Object.keys(slots).length, 'slots', out.boxes.length, 'boxes');
   } catch (e) { console.log('FAIL', spec.id, e.message.split('\n')[0]); }
+  if (hufCtx) await hufCtx.close();
 }
 await browser.close();

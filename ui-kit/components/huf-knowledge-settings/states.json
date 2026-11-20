@@ -1,0 +1,107 @@
+{
+  "component": "huf-knowledge-settings",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-knowledge-settings.button-4",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-knowledge-settings.name",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(228, 228, 232)",
+          "to": "rgb(122, 90, 240)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-knowledge-settings.name",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(228, 228, 232)",
+          "to": "rgb(122, 90, 240)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "mouse down in the Name field (the automatic first-control target is the close button, which would close the sheet)"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-knowledge-settings.button-1",
+      "changes": [
+        {
+          "element": "huf-knowledge-settings.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "upload errors are per-row; not in this fixture"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "import options load instantly with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "see huf-knowledge-add-content (empty drop zone is the top half of every upload state)"
+    }
+  }
+}

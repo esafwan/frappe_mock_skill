@@ -2,8 +2,30 @@
   "$comment": "Which UI the video agent is animating. Pick one id; every system owns its tokens, variable system, components and defaults. Add a system by copying systems/_template (see ADDING_A_SYSTEM.md).",
   "default": "frappe-desk",
   "systems": {
-    "frappe-desk": { "status": "ready",   "path": "systems/frappe-desk/system.json", "covers": ["Frappe v16 desk", "ERPNext", "Frappe HR", "URY desk screens", "Frappe Helpdesk (shared desk shell)"] },
-    "ury-pos":     { "status": "ready",   "path": "systems/ury-pos/system.json",     "covers": ["URY POS (React/Tailwind SPA)"] },
-    "huf":         { "status": "planned", "path": "systems/huf/system.json",         "covers": ["Huf AI platform UI"] }
+    "frappe-desk": {
+      "status": "ready",
+      "path": "systems/frappe-desk/system.json",
+      "covers": [
+        "Frappe v16 desk",
+        "ERPNext",
+        "Frappe HR",
+        "URY desk screens",
+        "Frappe Helpdesk (shared desk shell)"
+      ]
+    },
+    "ury-pos": {
+      "status": "ready",
+      "path": "systems/ury-pos/system.json",
+      "covers": [
+        "URY POS (React/Tailwind SPA)"
+      ]
+    },
+    "huf": {
+      "status": "foundation",
+      "path": "systems/huf/system.json",
+      "covers": [
+        "Huf AI platform UI (React/Vite/Tailwind/shadcn SPA), captured from pre-develop and open PR branches with mocked APIs"
+      ]
+    }
   }
 }

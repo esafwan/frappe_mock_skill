@@ -1,0 +1,390 @@
+{
+  "component": "huf-flow-panel-agent",
+  "slots": {
+    "truncate": {
+      "type": "text",
+      "sample": "Run agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_good": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.div-6"
+    },
+    "hover_text_foreground": {
+      "type": "text",
+      "sample": "Test",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.tab-test"
+    },
+    "hover_text_foreground_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.div-7"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Which agent",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_left": {
+      "type": "text",
+      "sample": "Order Status Bot",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "break_words": {
+      "type": "text",
+      "sample": "The AI agent that does the work. You can create or change agents on the Agents page.",
+      "maxLength": 168,
+      "where": "text",
+      "element": "p"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "What to tell it",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "flex_1": {
+      "type": "text",
+      "sample": "You are Harbor Goods support. Write a friendly two-sentence update for",
+      "maxLength": 140,
+      "where": "text",
+      "element": "div"
+    },
+    "break_words_2": {
+      "type": "text",
+      "sample": "Sender name · WhatsApp message",
+      "maxLength": 60,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_foreground_3": {
+      "type": "text",
+      "sample": "×",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.span-11"
+    },
+    "flex_1_2": {
+      "type": "text",
+      "sample": "whose order",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "break_words_3": {
+      "type": "text",
+      "sample": "Order no · Look up their orders",
+      "maxLength": 62,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_foreground_4": {
+      "type": "text",
+      "sample": "×",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.span-13"
+    },
+    "flex_1_3": {
+      "type": "text",
+      "sample": "is currently",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "break_words_4": {
+      "type": "text",
+      "sample": "Status · Look up their orders",
+      "maxLength": 58,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_foreground_5": {
+      "type": "text",
+      "sample": "×",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.span-15"
+    },
+    "flex_1_4": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_signal_ink": {
+      "type": "text",
+      "sample": "+ Use data",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.button-16"
+    },
+    "break_words_5": {
+      "type": "text",
+      "sample": "Write the task as you would to a colleague. Use + Use data to include details from the trigger or an earlier step, like the ticket text.",
+      "maxLength": 272,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "What this will become:",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "break_words_6": {
+      "type": "text",
+      "sample": "You are Harbor Goods support. Write a friendly two-sentence update for Priya Nair whose order HG-10482 is currently Shipped.",
+      "maxLength": 248,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Getting the sample data ready...",
+      "maxLength": 64,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "If this step fails",
+      "maxLength": 36,
+      "where": "text",
+      "element": "label"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "The flow stops and the run shows as failed.",
+      "maxLength": 86,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Notes",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "break_words_7": {
+      "type": "text",
+      "sample": "Only people editing the flow see this. It never changes what the flow does.",
+      "maxLength": 150,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Name in data lists",
+      "maxLength": 36,
+      "where": "text",
+      "element": "label"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "Write the reply",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "break_words_8": {
+      "type": "text",
+      "sample": "Later steps find this step's data under this name. Rename the step at the top to change it.",
+      "maxLength": 182,
+      "where": "text",
+      "element": "p"
+    },
+    "hover_text_foreground_6": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-flow-panel-agent.div-18"
+    },
+    "focus_visible_outline_none_arialabel": {
+      "type": "text",
+      "sample": "Resize the step panel",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.div-1"
+    },
+    "focus_visible_bg_background_placeholder": {
+      "type": "text",
+      "sample": "Name this step",
+      "maxLength": 28,
+      "where": "attr:placeholder",
+      "element": "huf-flow-panel-agent.input-2"
+    },
+    "focus_visible_bg_background_title": {
+      "type": "text",
+      "sample": "Write the reply",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "huf-flow-panel-agent.input-2"
+    },
+    "focus_visible_bg_background_arialabel": {
+      "type": "text",
+      "sample": "Step name",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.input-2"
+    },
+    "focus_visible_bg_background_value": {
+      "type": "text",
+      "sample": "Write the reply",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "huf-flow-panel-agent.input-2"
+    },
+    "focus_visible_ring_ring_arialabel": {
+      "type": "text",
+      "sample": "About this step",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.div-3"
+    },
+    "text_muted_foreground_arialabel": {
+      "type": "text",
+      "sample": "More actions for this step",
+      "maxLength": 52,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.button-4"
+    },
+    "hover_bg_accent_arialabel": {
+      "type": "text",
+      "sample": "Close settings",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.button-5"
+    },
+    "border_border_arialabel": {
+      "type": "text",
+      "sample": "Step sections",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "hover_text_foreground_title": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "huf-flow-panel-agent.span-9"
+    },
+    "hover_text_foreground_arialabel": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-9"
+    },
+    "flex_1_arialabel": {
+      "type": "text",
+      "sample": "What to tell it",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "hover_border_signal_title": {
+      "type": "text",
+      "sample": "Sender name · WhatsApp message. Priya Nair (example)",
+      "maxLength": 104,
+      "where": "attr:title",
+      "element": "huf-flow-panel-agent.span-10"
+    },
+    "hover_border_signal_arialabel": {
+      "type": "text",
+      "sample": "Sender name · WhatsApp message. Example: Priya Nair. Press Enter to change.",
+      "maxLength": 150,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-10"
+    },
+    "hover_text_foreground_arialabel_2": {
+      "type": "text",
+      "sample": "Remove Sender name",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-11"
+    },
+    "hover_border_signal_title_2": {
+      "type": "text",
+      "sample": "Order no · Look up their orders. HG-10482 (example)",
+      "maxLength": 102,
+      "where": "attr:title",
+      "element": "huf-flow-panel-agent.span-12"
+    },
+    "hover_border_signal_arialabel_2": {
+      "type": "text",
+      "sample": "Order no · Look up their orders. Example: HG-10482. Press Enter to change.",
+      "maxLength": 148,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-12"
+    },
+    "hover_text_foreground_arialabel_3": {
+      "type": "text",
+      "sample": "Remove Order no",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-13"
+    },
+    "hover_border_signal_title_3": {
+      "type": "text",
+      "sample": "Status · Look up their orders. Shipped (example)",
+      "maxLength": 96,
+      "where": "attr:title",
+      "element": "huf-flow-panel-agent.span-14"
+    },
+    "hover_border_signal_arialabel_3": {
+      "type": "text",
+      "sample": "Status · Look up their orders. Example: Shipped. Press Enter to change.",
+      "maxLength": 142,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-14"
+    },
+    "hover_text_foreground_arialabel_4": {
+      "type": "text",
+      "sample": "Remove Status",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.span-15"
+    },
+    "text_signal_ink_arialabel": {
+      "type": "text",
+      "sample": "Use data in What to tell it",
+      "maxLength": 54,
+      "where": "attr:aria-label",
+      "element": "huf-flow-panel-agent.button-16"
+    },
+    "min_h_20_placeholder": {
+      "type": "text",
+      "sample": "Why this step exists, or what to remember about it",
+      "maxLength": 100,
+      "where": "attr:placeholder",
+      "element": "huf-flow-panel-agent.textarea-17"
+    }
+  }
+}

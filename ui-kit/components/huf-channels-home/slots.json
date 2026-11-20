@@ -1,0 +1,663 @@
+{
+  "component": "huf-channels-home",
+  "slots": {
+    "text_steel": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-1"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-2"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "Teams",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-3"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Northwind Sales",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-5"
+    },
+    "hover_bg_paper_deep_4": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-6"
+    },
+    "hover_bg_paper_deep_5": {
+      "type": "text",
+      "sample": "Broadcasts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-7"
+    },
+    "hover_bg_paper_deep_6": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-8"
+    },
+    "hover_bg_paper_deep_7": {
+      "type": "text",
+      "sample": "Commerce",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-9"
+    },
+    "hover_bg_paper_deep_8": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-channels-home.link-10"
+    },
+    "hover_bg_paper_deep_9": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-11"
+    },
+    "hover_bg_paper_deep_10": {
+      "type": "text",
+      "sample": "Connections",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-channels-home.link-12"
+    },
+    "hover_bg_paper_deep_11": {
+      "type": "text",
+      "sample": "Numbers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-13"
+    },
+    "hover_bg_paper_deep_12": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-14"
+    },
+    "hover_bg_paper_deep_13": {
+      "type": "text",
+      "sample": "Ask Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.link-15"
+    },
+    "hover_bg_paper_deep_14": {
+      "type": "text",
+      "sample": "Back to Huf",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-channels-home.link-16"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_4": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "leading_snug": {
+      "type": "text",
+      "sample": "Working: receiving and replying normally.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "h5"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Check now",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-home.check"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Passed:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "sr_only_3": {
+      "type": "text",
+      "sample": "Passed:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Credentials",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "sr_only_4": {
+      "type": "text",
+      "sample": "Passed:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Token valid",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "sr_only_5": {
+      "type": "text",
+      "sample": "Passed:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Receiving",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "sr_only_6": {
+      "type": "text",
+      "sample": "Not passing:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Delivering",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Last message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "relative-time",
+      "sample": "3 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Checked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "relative-time",
+      "sample": "30 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_ink_3": {
+      "type": "number",
+      "sample": "86",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Conversations",
+      "maxLength": 26,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_4": {
+      "type": "number",
+      "sample": "71",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "AI-resolved",
+      "maxLength": 22,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_5": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Handed off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Template sends",
+      "maxLength": 28,
+      "where": "text",
+      "element": "dt"
+    },
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Access token",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Whether Meta still accepts this gateway's token.",
+      "maxLength": 96,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Result",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Valid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Checked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_7": {
+      "type": "relative-time",
+      "sample": "30 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Expires",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Never",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Webhook",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Subscribed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Number quality",
+      "maxLength": 28,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "GREEN",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "tracking_tight_2": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "What happened in the last 24 hours.",
+      "maxLength": 70,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Last message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_12": {
+      "type": "relative-time",
+      "sample": "3 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_ink_13": {
+      "type": "number",
+      "sample": "214",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Received",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_destructive": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Failed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_14": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Unrouted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_15": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Rejected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "tracking_tight_3": {
+      "type": "text",
+      "sample": "Needs attention",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Nothing needs attention.",
+      "maxLength": 48,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Send test from Templates",
+      "maxLength": 48,
+      "where": "text",
+      "element": "huf-channels-home.link-18"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "New broadcast",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-channels-home.link-19"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Open Automations",
+      "maxLength": 32,
+      "where": "text",
+      "element": "huf-channels-home.link-20"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "Help Desk",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "underline": {
+      "type": "text",
+      "sample": "Set up in Connections",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-channels-home.link-21"
+    },
+    "text_sm_2": {
+      "type": "text",
+      "sample": "CRM",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "underline_2": {
+      "type": "text",
+      "sample": "Set up in Connections",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-channels-home.link-22"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "ERPNext",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "underline_3": {
+      "type": "text",
+      "sample": "Set up in Connections",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-channels-home.link-23"
+    },
+    "bg_sidebar_arialabel": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Number",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-channels-home.button-4"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "Breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_steel_title": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:57 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "text_steel_title_2": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:30 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "lg_grid_cols_4_arialabel": {
+      "type": "text",
+      "sample": "Counters",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "dl"
+    },
+    "text_ink_title": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:30 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "text_ink_title_2": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:57 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "gap_2_arialabel": {
+      "type": "text",
+      "sample": "Quick actions",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-channels-home.section-24"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "component": "huf-members-invite",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-members-invite.input-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(228, 228, 232)",
+          "to": "rgb(122, 90, 240)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-members-invite.input-1",
+      "changes": [
+        {
+          "element": "huf-members-invite.input-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(122, 90, 240)",
+          "to": "rgb(228, 228, 232)"
+        },
+        "boxShadow": {
+          "from": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "to": "none"
+        },
+        "outline": {
+          "from": "rgba(0, 0, 0, 0) solid 2px",
+          "to": "rgb(29, 29, 31) none 3px"
+        },
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "text",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "validation is a toast"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "busy label flashes"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}

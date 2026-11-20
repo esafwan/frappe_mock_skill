@@ -1,0 +1,101 @@
+{
+  "component": "huf-flow-run-viewer",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-flow-run-viewer.button-79",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "Run history link hovered"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-flow-run-viewer.button-79",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "Run history link focused"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-flow-run-viewer.button-79",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "pointer on Run history (pressing it would leave the run)"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-flow-run-viewer.button-18",
+      "changes": [
+        {
+          "element": "huf-flow-run-viewer.button-18",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed step is a run state: see huf-flow-run-viewer"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "skeleton flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "empty builder (\"Choose a trigger\") is backlog"
+    }
+  }
+}

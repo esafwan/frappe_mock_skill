@@ -1,0 +1,86 @@
+{
+  "component": "huf-flow-canvas",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-flow-canvas.node-write",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "hover on the Write the reply step"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-flow-canvas.node-write",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-flow-canvas.fit",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(254, 254, 254)",
+          "to": "rgb(244, 244, 244)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "fit-view button pressed (re-fits the same view)"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-flow-canvas.button-18",
+      "changes": [
+        {
+          "element": "huf-flow-canvas.button-18",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed step is a run state: see huf-flow-run-viewer"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "skeleton flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "empty builder (\"Choose a trigger\") is backlog"
+    }
+  }
+}

@@ -1,0 +1,1524 @@
+{
+  "component": "huf-integrations-catalog",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Service catalog",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-19"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Add Integration",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-20"
+    },
+    "shadow_none": {
+      "type": "text",
+      "sample": "All categories",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Northwind Bot",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Telegram · Default",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Needs attention",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Telegram rejected the webhook: the secret token does not match.",
+      "maxLength": 126,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft": {
+      "type": "relative-time",
+      "sample": "Checked 15 hours ago",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-24"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Fix this",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-25"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Orders sheet",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Google Sheets · Default",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Needs attention",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "text_foreground_2": {
+      "type": "text",
+      "sample": "Google says the refresh token has expired.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_2": {
+      "type": "relative-time",
+      "sample": "Checked 4 hours ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-27"
+    },
+    "text_micro_6": {
+      "type": "text",
+      "sample": "Fix this",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-28"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Northwind Sales",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "WhatsApp · Default",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_3": {
+      "type": "relative-time",
+      "sample": "Checked 30 mins ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_7": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-30"
+    },
+    "text_micro_8": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-31"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Northwind Slack",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Slack · Default",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Connected as @northwind-assistant in Northwind Trading.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_4": {
+      "type": "relative-time",
+      "sample": "Checked 15 mins ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_9": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-33"
+    },
+    "text_micro_10": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-34"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Northwind Ops",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Microsoft Teams · Default",
+      "maxLength": 50,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_5": {
+      "type": "relative-time",
+      "sample": "Checked 2 hours ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_11": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-36"
+    },
+    "text_micro_12": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-37"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Support Inbox",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Email · Default",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_micro_13": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-39"
+    },
+    "text_micro_14": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-40"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Northwind GitHub",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "GitHub · Default",
+      "maxLength": 32,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_6": {
+      "type": "relative-time",
+      "sample": "Checked 1 day ago",
+      "maxLength": 34,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_15": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-42"
+    },
+    "text_micro_16": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-43"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Gmail · maya@example.com",
+      "maxLength": 48,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Gmail · Default",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_7": {
+      "type": "relative-time",
+      "sample": "Checked 3 hours ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_17": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-45"
+    },
+    "text_micro_18": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-46"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "Sales calendar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Google Calendar · Default",
+      "maxLength": 50,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_8": {
+      "type": "relative-time",
+      "sample": "Checked 3 hours ago",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_19": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-48"
+    },
+    "text_micro_20": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-49"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Delivery routes",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Google Maps · Default",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_9": {
+      "type": "relative-time",
+      "sample": "Checked 3 days ago",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_21": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-51"
+    },
+    "text_micro_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-52"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "Market research",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "SerpApi · Default",
+      "maxLength": 34,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_micro_23": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-54"
+    },
+    "text_micro_24": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-55"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Showing all 11 connections",
+      "maxLength": 52,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Add Integration",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Choose the service you want to connect.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "p"
+    },
+    "min_w_10rem": {
+      "type": "text",
+      "sample": "All categories",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2": {
+      "type": "text",
+      "sample": "Slack messaging and channel management",
+      "maxLength": 76,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "2 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_4": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_5": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_2": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_2": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_2": {
+      "type": "text",
+      "sample": "Telegram bot for messaging",
+      "maxLength": 52,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_6": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_7": {
+      "type": "text",
+      "sample": "2 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_8": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_9": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_3": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_3": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_3": {
+      "type": "text",
+      "sample": "WhatsApp Business messaging via the Meta Cloud API",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_10": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_11": {
+      "type": "text",
+      "sample": "7 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_12": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_13": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_4": {
+      "type": "text",
+      "sample": "Messenger",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_4": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_4": {
+      "type": "text",
+      "sample": "Facebook Messenger for Page messaging",
+      "maxLength": 74,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_5": {
+      "type": "text",
+      "sample": "Instagram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_5": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_5": {
+      "type": "text",
+      "sample": "Instagram Direct messaging via the Meta Graph API",
+      "maxLength": 98,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_6": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_6": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_6": {
+      "type": "text",
+      "sample": "Inbound/outbound email messaging",
+      "maxLength": 64,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_14": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_15": {
+      "type": "text",
+      "sample": "2 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_16": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_17": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_7": {
+      "type": "text",
+      "sample": "Microsoft Teams",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_7": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_7": {
+      "type": "text",
+      "sample": "Microsoft Teams bot for messaging",
+      "maxLength": 66,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_18": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_19": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_20": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_21": {
+      "type": "text",
+      "sample": "Microsoft Teams",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_8": {
+      "type": "text",
+      "sample": "Sms",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_8": {
+      "type": "text",
+      "sample": "Communication",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_8": {
+      "type": "text",
+      "sample": "SMS via Twilio (two-way, signed inbound), Twilio send-only or Frappe SMS Settings",
+      "maxLength": 162,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_9": {
+      "type": "text",
+      "sample": "GitHub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_9": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_9": {
+      "type": "text",
+      "sample": "GitHub API for repository and issue management",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_22": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_23": {
+      "type": "text",
+      "sample": "1 detail",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_24": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_25": {
+      "type": "text",
+      "sample": "GitHub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_10": {
+      "type": "text",
+      "sample": "Gmail",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_10": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_10": {
+      "type": "text",
+      "sample": "Gmail email management",
+      "maxLength": 44,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_26": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_27": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_28": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_29": {
+      "type": "text",
+      "sample": "Gmail",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_11": {
+      "type": "text",
+      "sample": "Google Calendar",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_11": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_11": {
+      "type": "text",
+      "sample": "Google Calendar event management",
+      "maxLength": 64,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_30": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_31": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_32": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_33": {
+      "type": "text",
+      "sample": "Google Calendar",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_12": {
+      "type": "text",
+      "sample": "Google Drive",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_12": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_12": {
+      "type": "text",
+      "sample": "Google Drive file management",
+      "maxLength": 56,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_34": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_35": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_36": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_37": {
+      "type": "text",
+      "sample": "Google Drive",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_13": {
+      "type": "text",
+      "sample": "Google Sheets",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_13": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_13": {
+      "type": "text",
+      "sample": "Google Sheets management",
+      "maxLength": 48,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_38": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_39": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_40": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_41": {
+      "type": "text",
+      "sample": "Google Sheets",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_14": {
+      "type": "text",
+      "sample": "Google Maps",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_14": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_14": {
+      "type": "text",
+      "sample": "Google Maps directions and geocoding",
+      "maxLength": 72,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_42": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_43": {
+      "type": "text",
+      "sample": "1 detail",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_44": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_45": {
+      "type": "text",
+      "sample": "Google Maps",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_15": {
+      "type": "text",
+      "sample": "Google Meet",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_15": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_15": {
+      "type": "text",
+      "sample": "Google Meet meeting space creation",
+      "maxLength": 68,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_46": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_47": {
+      "type": "text",
+      "sample": "3 details",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_48": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_49": {
+      "type": "text",
+      "sample": "Google Meet",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base_16": {
+      "type": "text",
+      "sample": "SerpApi",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "tracking_wide_16": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_2_16": {
+      "type": "text",
+      "sample": "SerpApi search data: hotels, reviews (Google Maps, TripAdvisor, Yelp), and YouTube",
+      "maxLength": 164,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_50": {
+      "type": "text",
+      "sample": "You will need",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_51": {
+      "type": "text",
+      "sample": "1 detail",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_52": {
+      "type": "text",
+      "sample": "from",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_53": {
+      "type": "text",
+      "sample": "SerpApi",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "Create custom service",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-integrations-catalog.button-60"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.span-14"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-integrations-catalog.button-16"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.button-16"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.button-18"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search integrations...",
+      "maxLength": 44,
+      "where": "attr:placeholder",
+      "element": "huf-integrations-catalog.input-21"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search integrations",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.input-21"
+    },
+    "shadow_none_arialabel": {
+      "type": "text",
+      "sample": "Category",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.button-22"
+    },
+    "text_ink_title": {
+      "type": "text",
+      "sample": "Northwind Bot",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_foreground_title": {
+      "type": "text",
+      "sample": "Telegram rejected the webhook: the secret token does not match.",
+      "maxLength": 126,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "text_ink_title_2": {
+      "type": "text",
+      "sample": "Orders sheet",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_foreground_title_2": {
+      "type": "text",
+      "sample": "Google says the refresh token has expired.",
+      "maxLength": 84,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "text_ink_title_3": {
+      "type": "text",
+      "sample": "Northwind Sales",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_4": {
+      "type": "text",
+      "sample": "Northwind Slack",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_steel_title": {
+      "type": "text",
+      "sample": "Connected as @northwind-assistant in Northwind Trading.",
+      "maxLength": 110,
+      "where": "attr:title",
+      "element": "p"
+    },
+    "text_ink_title_5": {
+      "type": "text",
+      "sample": "Northwind Ops",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_6": {
+      "type": "text",
+      "sample": "Support Inbox",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_7": {
+      "type": "text",
+      "sample": "Northwind GitHub",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_8": {
+      "type": "text",
+      "sample": "Gmail · maya@example.com",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_9": {
+      "type": "text",
+      "sample": "Sales calendar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_10": {
+      "type": "text",
+      "sample": "Delivery routes",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_ink_title_11": {
+      "type": "text",
+      "sample": "Market research",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-integrations-catalog.section-56"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Search services...",
+      "maxLength": 36,
+      "where": "attr:placeholder",
+      "element": "huf-integrations-catalog.input-58"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/* Huf Desktop fonts, bundled. The renderer names 'Inter' (not shipped with the app: on a Mac it falls back to SF Pro),
+   --display/--body = -apple-system, 'SF Pro Text', ... and mono = 'JetBrains Mono' (bundled) / --mono = ui-monospace, 'SF Mono'.
+   Captures pin every sans face to Inter and every mono face to Geist Mono (both SIL OFL 1.1, see ../../fonts/LICENSES.md),
+   exactly like tokens/css/huf/huf-fonts.css for the web app. The capture harness injects this file into the live renderer,
+   so live screenshots and JS-free previews use identical glyphs. Unlayered rules win over the app's @layer rules. */
+@font-face{font-family:"Huf Sans";font-style:normal;font-weight:100 900;font-display:block;src:url(../../fonts/InterVariable.woff2) format("woff2")}
+@font-face{font-family:"Huf Sans";font-style:italic;font-weight:100 900;font-display:block;src:url(../../fonts/InterVariable-Italic.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:400;font-display:block;src:url(../../fonts/geist-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:500;font-display:block;src:url(../../fonts/geist-mono-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:600 700;font-display:block;src:url(../../fonts/geist-mono-latin-600-normal.woff2) format("woff2")}
+:root{--display:"Huf Sans",sans-serif;--body:"Huf Sans",sans-serif;--mono:"Huf Mono",monospace}
+body,h1,h2,h3,h4,h5,h6,.font-display,.font-body{font-family:"Huf Sans",sans-serif}
+.font-sans{font-family:"Huf Sans",sans-serif}
+code,pre,kbd,samp,.font-mono{font-family:"Huf Mono",monospace}

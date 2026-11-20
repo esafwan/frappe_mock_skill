@@ -1,4 +1,54 @@
-{ "id": "huf", "name": "Huf AI platform UI", "status": "planned", "componentGroup": "huf",
-  "variableSystem": { "kind": "css-custom-properties", "files": { "vars": "tokens/huf/vars.css" } },
-  "tokens": { "css": [], "fonts": null, "iconSprite": null },
-  "note": "Placeholder. Capture with scripts/capture.mjs using specs-huf.mjs and fill this file; see systems/ADDING_A_SYSTEM.md." }
+{
+ "id": "huf",
+ "name": "Huf AI platform UI",
+ "status": "foundation",
+ "source": {
+  "app": "huf",
+  "repo": "https://github.com/tridz-dev/huf",
+  "baseBranch": "pre-develop",
+  "routerBase": "/huf",
+  "build": "scripts/huf/build.sh <branch> (vite build --base=/huf/ into .huf-cache/dist/<branch-slug>)"
+ },
+ "componentGroup": "huf",
+ "captureMode": {
+  "kind": "app",
+  "how": "Real React SPA from a built dist, served and mocked entirely by Playwright routes on http://huf.mock (scripts/huf/app.mjs); no Frappe backend, no server process, no network.",
+  "fixtures": "scripts/huf/fixtures/<area>.mjs + data/huf/*.json (fictional data)",
+  "clock": "2026-01-01T09:00:00Z (page.clock.setFixedTime)",
+  "specs": "scripts/specs-huf.mjs aggregates scripts/specs-huf-<area>.mjs"
+ },
+ "variableSystem": {
+  "kind": "css-custom-properties (shadcn + HUF design tokens on :root, Tailwind theme reads them)",
+  "themeAttribute": {
+   "light": null,
+   "dark": "data-theme=\"midnight\" on <html>"
+  },
+  "files": {
+   "vars": "tokens/huf/vars.css",
+   "tokens": "tokens/huf/tokens.json"
+  },
+  "notes": "Light = :root tokens (no attribute); dark = [data-theme=\"midnight\"] (set from the colour-scheme preference in lib/personalization.ts). Tailwind dark: variant is off. The shipped palette (tokens.json) is authoritative; DESIGN.md section 2 describes an earlier orange/paper palette."
+ },
+ "tokens": {
+  "css": "tokens/css/huf/<source-slug>/*.css (exact build CSS of each captured branch, chosen per component from the stylesheets the live page loaded) + tokens/css/huf/huf-fonts.css",
+  "fonts": "tokens/fonts/ (Inter, Geist Mono; OFL, tokens/fonts/LICENSES.md) + tokens/huf/fonts/ (KaTeX, MIT)",
+  "iconSprite": null,
+  "icons": "lucide-react inline SVG, captured in the DOM"
+ },
+ "modes": [
+  "light",
+  "dark"
+ ],
+ "rtl": {
+  "supported": false,
+  "mechanism": "HUF has no RTL support"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 1440,
+   "h": 900,
+   "deviceScaleFactor": 2
+  },
+  "identity": "data/huf/identity.json"
+ }
+}

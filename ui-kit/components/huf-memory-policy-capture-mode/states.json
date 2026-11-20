@@ -1,0 +1,64 @@
+{
+  "component": "huf-memory-policy-capture-mode",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":hover",
+      "target": "huf-memory-policy-capture-mode.div-56",
+      "changes": [
+        {
+          "element": "huf-memory-policy-capture-mode.div-56",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "data-highlighted": ""
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "hover on \"Automatic\""
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-memory-policy-capture-mode.link-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "spinner flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "a new policy (/memory/policies/new) is backlog: huf-memory-policy-new"
+    }
+  }
+}

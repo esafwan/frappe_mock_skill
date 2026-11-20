@@ -1,0 +1,803 @@
+{
+  "component": "huf-code-profile-edit",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "huf-code-profile-edit.link-17"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Reports with warehouse access",
+      "maxLength": 58,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "ID Reports with warehouse access",
+      "maxLength": 64,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Save Changes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-code-profile-edit.button-21"
+    },
+    "text_subtitle": {
+      "type": "text",
+      "sample": "General settings",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Configure security policy and sandbox behavior",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Profile name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Unique name identifying this execution environment.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Disable profile",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Disabled profiles cannot be selected or used for code execution.",
+      "maxLength": 128,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Approval mode",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Auto Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "Auto Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "Ask Every Time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_3": {
+      "type": "text",
+      "sample": "Never Allow",
+      "maxLength": 22,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Determines whether user confirmation is required before code executes.",
+      "maxLength": 140,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Filesystem policy",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Scratch Only",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_4": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_5": {
+      "type": "text",
+      "sample": "Scratch Only",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_6": {
+      "type": "text",
+      "sample": "Shared Directory",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Controls local disk read/write privileges for the execution sandbox.",
+      "maxLength": 136,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "Network access policy",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_4": {
+      "type": "text",
+      "sample": "Warehouse API only",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_7": {
+      "type": "text",
+      "sample": "Warehouse API only",
+      "maxLength": 36,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_8": {
+      "type": "text",
+      "sample": "Internal services only",
+      "maxLength": 44,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_9": {
+      "type": "text",
+      "sample": "Carrier tracking",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_10": {
+      "type": "text",
+      "sample": "Payments sandbox",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Restricts outbound network requests made by the sandbox to the hosts allowed by this policy. Leave unset to allow unrestricted egress.",
+      "maxLength": 268,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_5": {
+      "type": "text",
+      "sample": "Allowed python modules",
+      "maxLength": 44,
+      "where": "text",
+      "element": "label"
+    },
+    "min_h_90px": {
+      "type": "text",
+      "sample": "[\"math\", \"json\", \"csv\", \"statistics\", \"datetime\"]",
+      "maxLength": 98,
+      "where": "text",
+      "element": "huf-code-profile-edit.textarea-30"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "JSON array of module names the Python process is permitted to import.",
+      "maxLength": 138,
+      "where": "text",
+      "element": "p"
+    },
+    "text_subtitle_2": {
+      "type": "text",
+      "sample": "Resource limits",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Specify CPU, time, memory, and output boundaries for code runs",
+      "maxLength": 124,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_6": {
+      "type": "text",
+      "sample": "Max wall time (seconds)",
+      "maxLength": 46,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Maximum total elapsed execution time allowed.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_7": {
+      "type": "text",
+      "sample": "Max CPU time (seconds)",
+      "maxLength": 44,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Maximum CPU time consumed by the sandboxed process.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_8": {
+      "type": "text",
+      "sample": "Max memory (MB)",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Maximum RAM allocation before termination.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_9": {
+      "type": "text",
+      "sample": "Max output (bytes)",
+      "maxLength": 36,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Combined stdout/stderr character limit (default 1MB).",
+      "maxLength": 106,
+      "where": "text",
+      "element": "p"
+    },
+    "text_subtitle_3": {
+      "type": "text",
+      "sample": "Broker capabilities",
+      "maxLength": 38,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Capabilities the sandbox broker may invoke back into Frappe under the acting user's permissions",
+      "maxLength": 190,
+      "where": "text",
+      "element": "p"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Add permission",
+      "maxLength": 28,
+      "where": "text",
+      "element": "huf-code-profile-edit.button-35"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "Permission",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "text_sm_2": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Capability",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Reference doctype",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Any doctype",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal": {
+      "type": "text",
+      "sample": "Read only — this capability may not create, update, or delete records",
+      "maxLength": 138,
+      "where": "text",
+      "element": "label"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "Permission",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "text_sm_4": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Capability",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Reference doctype",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "Any doctype",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_2": {
+      "type": "text",
+      "sample": "Read only — this capability may not create, update, or delete records",
+      "maxLength": 138,
+      "where": "text",
+      "element": "label"
+    },
+    "text_sm_5": {
+      "type": "text",
+      "sample": "Permission",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "text_sm_6": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h4"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Capability",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Reference doctype",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "Any doctype",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "font_normal_3": {
+      "type": "text",
+      "sample": "Read only — this capability may not create, update, or delete records",
+      "maxLength": 138,
+      "where": "text",
+      "element": "label"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-code-profile-edit.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-code-profile-edit.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-code-profile-edit.button-15"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-code-profile-edit.button-18"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Edit name",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-code-profile-edit.button-19"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. Standard Sandbox",
+      "maxLength": 42,
+      "where": "attr:placeholder",
+      "element": "huf-code-profile-edit.name"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Reports with warehouse access",
+      "maxLength": 58,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.name"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.button-22"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "Auto Approve",
+      "maxLength": 24,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "Ask Every Time",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_3": {
+      "type": "text",
+      "sample": "Never Allow",
+      "maxLength": 22,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_4": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_5": {
+      "type": "text",
+      "sample": "Scratch Only",
+      "maxLength": 24,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_6": {
+      "type": "text",
+      "sample": "Shared Directory",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_7": {
+      "type": "text",
+      "sample": "Warehouse API only",
+      "maxLength": 36,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_8": {
+      "type": "text",
+      "sample": "Internal services only",
+      "maxLength": 44,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_9": {
+      "type": "text",
+      "sample": "Carrier tracking",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_10": {
+      "type": "text",
+      "sample": "Payments sandbox",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "min_h_90px_placeholder": {
+      "type": "text",
+      "sample": "[\"math\", \"json\", \"re\", \"datetime\"]",
+      "maxLength": 68,
+      "where": "attr:placeholder",
+      "element": "huf-code-profile-edit.textarea-30"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "120",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-31"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "60",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-32"
+    },
+    "text_ui_text_value_4": {
+      "type": "number",
+      "sample": "512",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-33"
+    },
+    "text_ui_text_value_5": {
+      "type": "number",
+      "sample": "262144",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-34"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "e.g. doc.read",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "huf-code-profile-edit.input-37"
+    },
+    "text_ui_text_value_6": {
+      "type": "text",
+      "sample": "Read documents",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-37"
+    },
+    "border_primary_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.button-39"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "e.g. doc.read",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "huf-code-profile-edit.input-42"
+    },
+    "text_ui_text_value_7": {
+      "type": "text",
+      "sample": "Read documents",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-42"
+    },
+    "border_primary_value_2": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.button-44"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "text",
+      "sample": "e.g. doc.read",
+      "maxLength": 26,
+      "where": "attr:placeholder",
+      "element": "huf-code-profile-edit.input-47"
+    },
+    "text_ui_text_value_8": {
+      "type": "text",
+      "sample": "Create documents",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.input-47"
+    },
+    "border_primary_value_3": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-code-profile-edit.button-49"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-code-profile-edit.section-51"
+    }
+  }
+}

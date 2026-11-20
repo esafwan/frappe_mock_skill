@@ -1,0 +1,66 @@
+{
+  "component": "huf-agent-new-template",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-agent-new-template.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-agent-new-template.link-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-agent-new-template.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    }
+  }
+}

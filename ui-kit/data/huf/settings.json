@@ -1,0 +1,347 @@
+{
+ "$comment": "Settings area (members, roles, settings, developer) for fictional Northwind Trading. Emails are @example.com. Times relative to the fixed clock 2026-01-01T09:00:00Z.",
+ "users": [
+  {
+   "user": "maya@example.com",
+   "email": "maya@example.com",
+   "full_name": "Maya Fernandes",
+   "huf_role": "Huf Admin",
+   "enabled": 1,
+   "invited_by": "Administrator",
+   "invited_on": "2025-09-02 10:00:00"
+  },
+  {
+   "user": "daniel@example.com",
+   "email": "daniel@example.com",
+   "full_name": "Daniel Okafor",
+   "huf_role": "Support Lead",
+   "enabled": 1,
+   "invited_by": "maya@example.com",
+   "invited_on": "2025-10-14 09:30:00"
+  },
+  {
+   "user": "priya@example.com",
+   "email": "priya@example.com",
+   "full_name": "Priya Raman",
+   "huf_role": "Builder",
+   "enabled": 1,
+   "invited_by": "maya@example.com",
+   "invited_on": "2025-10-21 14:10:00"
+  },
+  {
+   "user": "tomas@example.com",
+   "email": "tomas@example.com",
+   "full_name": "Tomas Berg",
+   "huf_role": "Builder",
+   "enabled": 1,
+   "invited_by": "maya@example.com",
+   "invited_on": "2025-11-03 11:45:00"
+  },
+  {
+   "user": "lena@example.com",
+   "email": "lena@example.com",
+   "full_name": "Lena Schmidt",
+   "huf_role": "Support Lead",
+   "enabled": 1,
+   "invited_by": "daniel@example.com",
+   "invited_on": "2025-11-18 16:20:00"
+  },
+  {
+   "user": "omar@example.com",
+   "email": "omar@example.com",
+   "full_name": "Omar Haddad",
+   "huf_role": "Viewer",
+   "enabled": 1,
+   "invited_by": "maya@example.com",
+   "invited_on": "2025-12-02 08:55:00"
+  },
+  {
+   "user": "sofia@example.com",
+   "email": "sofia@example.com",
+   "full_name": "Sofia Alvarez",
+   "huf_role": "Viewer",
+   "enabled": 1,
+   "invited_by": "daniel@example.com",
+   "invited_on": "2025-12-09 13:05:00"
+  },
+  {
+   "user": "jonas@example.com",
+   "email": "jonas@example.com",
+   "full_name": "Jonas Weber",
+   "huf_role": "Builder",
+   "enabled": 0,
+   "invited_by": "maya@example.com",
+   "invited_on": "2025-08-12 09:00:00"
+  }
+ ],
+ "catalogue": {
+  "agent.use": "Use agents",
+  "agent.view_all": "View all agents",
+  "agent.create": "Create agents",
+  "agent.edit": "Edit agents",
+  "agent.delete": "Delete agents",
+  "chat.use": "Use chat",
+  "chat.view_own": "View own conversations",
+  "chat.view_all": "View all conversations",
+  "knowledge.use": "Use knowledge",
+  "knowledge.create": "Create knowledge sources",
+  "knowledge.manage": "Manage knowledge",
+  "tools.use": "Use tools",
+  "tools.create": "Create tools",
+  "tools.manage": "Manage tools",
+  "flows.use": "Run flows",
+  "flows.create": "Create flows",
+  "flows.manage": "Manage flows",
+  "data.records.view_own": "View own records",
+  "data.records.view_all": "View all records",
+  "data.records.create": "Create records",
+  "data.records.edit_own": "Edit own records",
+  "data.records.edit_all": "Edit all records",
+  "data.tables.manage": "Manage data tables",
+  "users.invite": "Invite users",
+  "users.manage": "Manage users",
+  "roles.manage": "Manage roles",
+  "system.providers.manage": "Manage AI providers",
+  "system.models.manage": "Manage models",
+  "system.mcp.manage": "Manage MCP servers",
+  "system.integrations.manage": "Manage integrations",
+  "system.settings.manage": "Manage system settings"
+ },
+ "roles": [
+  {
+   "role_name": "Huf Admin",
+   "description": "Full access to everything, including members, roles and system settings.",
+   "is_system_role": 1,
+   "frappe_role": "System Manager",
+   "capabilities": [
+    "agent.use",
+    "agent.view_all",
+    "agent.create",
+    "agent.edit",
+    "agent.delete",
+    "chat.use",
+    "chat.view_own",
+    "chat.view_all",
+    "knowledge.use",
+    "knowledge.create",
+    "knowledge.manage",
+    "tools.use",
+    "tools.create",
+    "tools.manage",
+    "flows.use",
+    "flows.create",
+    "flows.manage",
+    "data.records.view_own",
+    "data.records.view_all",
+    "data.records.create",
+    "data.records.edit_own",
+    "data.records.edit_all",
+    "data.tables.manage",
+    "users.invite",
+    "users.manage",
+    "roles.manage",
+    "system.providers.manage",
+    "system.models.manage",
+    "system.mcp.manage",
+    "system.integrations.manage",
+    "system.settings.manage"
+   ]
+  },
+  {
+   "role_name": "Builder",
+   "description": "Builds agents, flows and knowledge but cannot manage people or system settings.",
+   "is_system_role": 1,
+   "frappe_role": "Huf Builder",
+   "capabilities": [
+    "agent.use",
+    "agent.view_all",
+    "agent.create",
+    "agent.edit",
+    "chat.use",
+    "chat.view_own",
+    "knowledge.use",
+    "knowledge.create",
+    "tools.use",
+    "tools.create",
+    "flows.use",
+    "flows.create",
+    "data.records.view_own",
+    "data.records.view_all",
+    "data.records.create",
+    "data.records.edit_own"
+   ]
+  },
+  {
+   "role_name": "Viewer",
+   "description": "Chats with agents and reads their own records.",
+   "is_system_role": 1,
+   "frappe_role": "Huf Viewer",
+   "capabilities": [
+    "agent.use",
+    "chat.use",
+    "chat.view_own",
+    "knowledge.use",
+    "tools.use",
+    "flows.use",
+    "data.records.view_own"
+   ]
+  },
+  {
+   "role_name": "Support Lead",
+   "description": "Runs the support desk: sees every conversation and edits customer records, without build access.",
+   "is_system_role": 0,
+   "frappe_role": "Huf Support Lead",
+   "capabilities": [
+    "agent.use",
+    "agent.view_all",
+    "chat.use",
+    "chat.view_own",
+    "chat.view_all",
+    "knowledge.use",
+    "knowledge.create",
+    "tools.use",
+    "flows.use",
+    "data.records.view_own",
+    "data.records.view_all",
+    "data.records.create",
+    "data.records.edit_all",
+    "users.invite"
+   ]
+  }
+ ],
+ "invite": {
+  "email": "hannah@example.com",
+  "full_name": "Hannah Klein",
+  "role": "Builder"
+ },
+ "newRole": {
+  "name": "Warehouse Planner",
+  "description": "Plans restocks and purchase orders. Can run flows and edit stock records.",
+  "capabilities": [
+   "agent.use",
+   "chat.use",
+   "flows.use",
+   "data.records.view_all",
+   "data.records.edit_all",
+   "knowledge.use"
+  ]
+ },
+ "settings": {
+  "default_provider": "OpenAI",
+  "default_model": "gpt-4.1",
+  "allow_code_in_flows": 1,
+  "skill_destinations": "{\"northwind-playbooks\": {\"repo_url\": \"https://github.com/northwind-trading/agent-playbooks\", \"path\": \"skills\", \"ref\": \"main\"}}"
+ },
+ "providers": [
+  {
+   "name": "OpenAI",
+   "provider_name": "OpenAI",
+   "provider_brand": "openai",
+   "is_local_llm": 0,
+   "api_base_url": null
+  },
+  {
+   "name": "Anthropic",
+   "provider_name": "Anthropic",
+   "provider_brand": "anthropic",
+   "is_local_llm": 0,
+   "api_base_url": null
+  },
+  {
+   "name": "Google",
+   "provider_name": "Google",
+   "provider_brand": "google",
+   "is_local_llm": 0,
+   "api_base_url": null
+  }
+ ],
+ "models": [
+  {
+   "name": "gpt-4.1",
+   "model_name": "gpt-4.1",
+   "provider": "OpenAI"
+  },
+  {
+   "name": "gpt-4.1-mini",
+   "model_name": "gpt-4.1-mini",
+   "provider": "OpenAI"
+  },
+  {
+   "name": "gpt-4o",
+   "model_name": "gpt-4o",
+   "provider": "OpenAI"
+  },
+  {
+   "name": "o4-mini",
+   "model_name": "o4-mini",
+   "provider": "OpenAI"
+  }
+ ],
+ "apiKeys": [
+  {
+   "key_id": "hk_7f3a91c2",
+   "label": "Storefront chat widget",
+   "status": "Active",
+   "scopes": [
+    "agents:run",
+    "conversations:read",
+    "conversations:write"
+   ],
+   "agent_restriction_mode": "selected",
+   "restricted_agents": [
+    "Northwind Support Agent"
+   ],
+   "expires_at": "2026-06-30 00:00:00",
+   "last_used_at": "2026-01-01 08:41:00",
+   "creation": "2025-10-02 10:15:00"
+  },
+  {
+   "key_id": "hk_2be04d17",
+   "label": "Warehouse nightly sync",
+   "status": "Active",
+   "scopes": [
+    "agents:read",
+    "agents:run",
+    "files:read",
+    "files:write"
+   ],
+   "agent_restriction_mode": "all",
+   "restricted_agents": null,
+   "expires_at": null,
+   "last_used_at": "2025-12-31 23:05:00",
+   "creation": "2025-11-12 16:40:00"
+  },
+  {
+   "key_id": "hk_9c51e8aa",
+   "label": "Voice kiosk pilot",
+   "status": "Revoked",
+   "scopes": [
+    "voice:use"
+   ],
+   "agent_restriction_mode": "all",
+   "restricted_agents": null,
+   "expires_at": null,
+   "last_used_at": "2025-12-04 12:00:00",
+   "creation": "2025-11-28 09:00:00"
+  }
+ ],
+ "newKey": {
+  "label": "Supplier portal",
+  "scopes": [
+   "agents:run",
+   "conversations:write"
+  ]
+ },
+ "codeStatus": {
+  "server_switch": true,
+  "allowed": true,
+  "enabled": true,
+  "can_execute": true,
+  "can_manage": true,
+  "available": true,
+  "max_code_bytes": 65536,
+  "default_profile": "Sandboxed",
+  "default_timeout_s": 30,
+  "profiles": []
+ }
+}

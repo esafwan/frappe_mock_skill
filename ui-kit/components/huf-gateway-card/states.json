@@ -1,0 +1,82 @@
+{
+  "component": "huf-gateway-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-gateway-card",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "card hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "p",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png",
+      "description": "no visible focus (plain text)"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "p",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "no visible active (plain text)"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-gateway-card.button-1",
+      "changes": [
+        {
+          "element": "huf-gateway-card.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "see huf-gateway-card-setup"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}

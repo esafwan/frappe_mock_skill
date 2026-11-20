@@ -1,0 +1,68 @@
+{
+  "component": "huf-desktop-permissions-menu",
+  "slots": {
+    "text_steel": {
+      "type": "text",
+      "sample": "How should agent actions be approved?",
+      "maxLength": 74,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Ask every time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Every write, delete and command asks for approval, every time. Reads run freely.",
+      "maxLength": 160,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Auto",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Reads run freely. Writes and commands ask; you can allow a kind of action for the rest of the run. Deletes and protected paths always ask.",
+      "maxLength": 276,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Sandboxed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Reads and normal writes inside the workspace run freely. Commands run confined to the workspace and ask first. Sensitive or protected paths ask.",
+      "maxLength": 288,
+      "where": "text",
+      "element": "span"
+    },
+    "text_warning": {
+      "type": "text",
+      "sample": "Full access",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "No gating. Every operation runs immediately, commands run unconfined.",
+      "maxLength": 138,
+      "where": "text",
+      "element": "span"
+    }
+  }
+}

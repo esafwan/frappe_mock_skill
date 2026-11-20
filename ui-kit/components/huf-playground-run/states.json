@@ -1,0 +1,65 @@
+{
+  "component": "huf-playground-run",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-playground-run.button-41",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "trace step hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-playground-run.button-25",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-playground-run.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed run shows the raw payload in the response panel; not captured here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked runs resolve instantly (the Running state is a 1 s flash)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "see huf-playground-empty"
+    }
+  }
+}

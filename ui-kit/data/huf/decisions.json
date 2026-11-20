@@ -1,0 +1,498 @@
+{
+ "$comment": "Fictional Northwind Trading data for the Playground (Decision Runtime), Executions, run detail, analytics and execution profiles.",
+ "providers": [
+  {
+   "name": "OpenAI",
+   "provider_name": "OpenAI",
+   "provider_brand": "openai",
+   "is_local_llm": 0
+  },
+  {
+   "name": "Anthropic",
+   "provider_name": "Anthropic",
+   "provider_brand": "anthropic",
+   "is_local_llm": 0
+  },
+  {
+   "name": "Local Ollama",
+   "provider_name": "Local Ollama",
+   "provider_brand": "ollama",
+   "is_local_llm": 1,
+   "api_base_url": "http://ollama.internal:11434"
+  }
+ ],
+ "models": [
+  {
+   "name": "gpt-4.1-mini",
+   "model_name": "gpt-4.1-mini",
+   "provider": "OpenAI",
+   "modalities": "text,image",
+   "use_custom_pricing": 0
+  },
+  {
+   "name": "gpt-4.1",
+   "model_name": "gpt-4.1",
+   "provider": "OpenAI",
+   "modalities": "text,image",
+   "use_custom_pricing": 0
+  },
+  {
+   "name": "claude-sonnet",
+   "model_name": "claude-sonnet",
+   "provider": "Anthropic",
+   "modalities": "text,image",
+   "use_custom_pricing": 0
+  },
+  {
+   "name": "llama3.1-8b",
+   "model_name": "llama3.1-8b",
+   "provider": "Local Ollama",
+   "modalities": "text",
+   "use_custom_pricing": 0
+  }
+ ],
+ "playground": {
+  "agent": "Support Triage",
+  "prompt": "A customer writes: \"My order NW-20418 was marked delivered but nothing arrived. Can you check and tell me what happens next?\" Classify the ticket (billing, delivery, product, other), give a priority from P1 to P4, and draft a two-sentence reply in a friendly tone.",
+  "criteria": "Names the right category, gives a priority and keeps the reply under 60 words.",
+  "response": "Category: delivery. Priority: P2 (delivered but not received, order value above $200). Reply: Hi Maya, I'm sorry your order NW-20418 didn't turn up. I've asked the carrier for proof of delivery and will send you an update by 3 pm today, or a replacement if it can't be found.",
+  "primary": {
+   "provider": "OpenAI",
+   "model": "gpt-4.1-mini",
+   "latency_ms": 1840,
+   "input_tokens": 412,
+   "output_tokens": 96,
+   "cost": 0.0009
+  },
+  "compare_b": {
+   "provider": "Anthropic",
+   "model": "claude-sonnet",
+   "latency_ms": 2310,
+   "input_tokens": 418,
+   "output_tokens": 101,
+   "cost": 0.0027,
+   "response": "Category: delivery. Priority: P2. Reply: Hi Maya, sorry about order NW-20418. I'm requesting proof of delivery from the carrier now and will update you by 3 pm today, or ship a replacement."
+  },
+  "evaluation": {
+   "score": 9,
+   "passed": true,
+   "reasoning": "Correct category, priority given with a reason, reply is 38 words."
+  },
+  "trace": [
+   {
+    "name": "AR-2026-0412-1",
+    "sequence": 1,
+    "agent": "Route",
+    "run_kind": "route",
+    "status": "Success",
+    "start_time": "2025-12-31 08:59:55",
+    "end_time": "2025-12-31 08:59:56",
+    "provider": "Local Ollama",
+    "model": "llama3.1-8b",
+    "input_tokens": 118,
+    "output_tokens": 9,
+    "cost": 0
+   },
+   {
+    "name": "AR-2026-0412-2",
+    "sequence": 2,
+    "agent": "Lookup",
+    "run_kind": "tool",
+    "status": "Success",
+    "start_time": "2025-12-31 08:59:56",
+    "end_time": "2025-12-31 08:59:58",
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "input_tokens": 204,
+    "output_tokens": 38,
+    "cost": 0.0004
+   },
+   {
+    "name": "AR-2026-0412-3",
+    "sequence": 3,
+    "agent": "Reply",
+    "run_kind": "agent",
+    "status": "Success",
+    "start_time": "2025-12-31 08:59:58",
+    "end_time": "2025-12-31 09:00:00",
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "input_tokens": 90,
+    "output_tokens": 49,
+    "cost": 0.0005
+   }
+  ]
+ },
+ "runs": [
+  {
+   "name": "AR-2026-0412",
+   "agent": "Support Triage",
+   "start": "2025-12-31 08:59:56",
+   "end": "2025-12-31 08:59:58",
+   "status": "Success",
+   "cached_tokens": 256,
+   "input_tokens": 412,
+   "output_tokens": 96,
+   "cost": 0.0009,
+   "provider": "OpenAI",
+   "model": "gpt-4.1-mini",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0411",
+   "agent": "Order Status Bot",
+   "start": "2025-12-31 08:41:10",
+   "end": "2025-12-31 08:41:12",
+   "status": "Success",
+   "cached_tokens": 640,
+   "input_tokens": 902,
+   "output_tokens": 188,
+   "cost": 0.0021,
+   "provider": "OpenAI",
+   "model": "gpt-4.1-mini",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0410",
+   "agent": "Invoice Reconciler",
+   "start": "2025-12-31 07:05:02",
+   "end": "2025-12-31 07:05:19",
+   "status": "Success",
+   "cached_tokens": 1280,
+   "input_tokens": 5410,
+   "output_tokens": 740,
+   "cost": 0.0412,
+   "provider": "Anthropic",
+   "model": "claude-sonnet",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0409",
+   "agent": "Lead Qualifier",
+   "start": "2025-12-31 06:48:30",
+   "end": "2025-12-31 06:48:34",
+   "status": "Failed",
+   "cached_tokens": 0,
+   "input_tokens": 733,
+   "output_tokens": 0,
+   "cost": 0.0006,
+   "provider": "Anthropic",
+   "model": "claude-sonnet",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0408",
+   "agent": "Support Triage",
+   "start": "2025-12-30 17:22:44",
+   "end": "2025-12-30 17:22:46",
+   "status": "Success",
+   "cached_tokens": 256,
+   "input_tokens": 398,
+   "output_tokens": 88,
+   "cost": 0.0008,
+   "provider": "Local Ollama",
+   "model": "llama3.1-8b",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0407",
+   "agent": "Policy Librarian",
+   "start": "2025-12-30 15:10:03",
+   "end": "2025-12-30 15:10:08",
+   "status": "Success",
+   "cached_tokens": 2048,
+   "input_tokens": 3120,
+   "output_tokens": 402,
+   "cost": 0.0187,
+   "provider": "OpenAI",
+   "model": "gpt-4.1",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0406",
+   "agent": "Weekly Ops Digest",
+   "start": "2025-12-30 09:00:00",
+   "end": "2025-12-30 09:00:21",
+   "status": "Success",
+   "cached_tokens": 0,
+   "input_tokens": 6890,
+   "output_tokens": 1210,
+   "cost": 0.0553,
+   "provider": "Anthropic",
+   "model": "claude-sonnet",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0405",
+   "agent": "Support Triage",
+   "start": "2025-12-30 08:12:19",
+   "end": "2025-12-30 08:12:20",
+   "status": "Success",
+   "cached_tokens": 256,
+   "input_tokens": 405,
+   "output_tokens": 91,
+   "cost": 0.0008,
+   "provider": "OpenAI",
+   "model": "gpt-4.1-mini",
+   "run_kind": "agent"
+  },
+  {
+   "name": "AR-2026-0404",
+   "agent": "Order Status Bot",
+   "start": "2025-12-29 16:30:51",
+   "end": "2025-12-29 16:30:53",
+   "status": "Success",
+   "cached_tokens": 640,
+   "input_tokens": 880,
+   "output_tokens": 160,
+   "cost": 0.0019,
+   "provider": "OpenAI",
+   "model": "gpt-4.1-mini",
+   "run_kind": "agent"
+  }
+ ],
+ "detail": {
+  "name": "AR-2026-0412",
+  "prompt": "A customer writes: \"My order NW-20418 was marked delivered but nothing arrived. Can you check and tell me what happens next?\" Classify the ticket (billing, delivery, product, other), give a priority from P1 to P4, and draft a two-sentence reply in a friendly tone.",
+  "response": "Category: delivery. Priority: P2 (delivered but not received, order value above $200). Reply: Hi Maya, I'm sorry your order NW-20418 didn't turn up. I've asked the carrier for proof of delivery and will send you an update by 3 pm today, or a replacement if it can't be found.",
+  "round_count": 3
+ },
+ "analytics": {
+  "summary": {
+   "run_count": 1284,
+   "success_count": 1241,
+   "failed_count": 43,
+   "input_tokens": 612400,
+   "output_tokens": 98200,
+   "cached_tokens": 241000,
+   "cache_creation_tokens": 18200,
+   "total_cost": 14.2386,
+   "duration_ms_sum": 2310000,
+   "duration_count": 1284,
+   "success_rate": 96.7,
+   "average_duration_ms": 1800,
+   "cache_ratio": 39.4
+  },
+  "series_days": [
+   118,
+   164,
+   171,
+   149,
+   203,
+   247,
+   232
+  ],
+  "breakdowns": {
+   "provider": [
+    {
+     "dimension": "OpenAI",
+     "run_count": 702,
+     "success_count": 688,
+     "failed_count": 14,
+     "input_tokens": 331000,
+     "output_tokens": 52100,
+     "cached_tokens": 140000,
+     "total_cost": 4.912,
+     "success_rate": 98.0,
+     "average_duration_ms": 1500,
+     "cache_ratio": 42.3
+    },
+    {
+     "dimension": "Anthropic",
+     "run_count": 311,
+     "success_count": 289,
+     "failed_count": 22,
+     "input_tokens": 201400,
+     "output_tokens": 34200,
+     "cached_tokens": 88000,
+     "total_cost": 8.341,
+     "success_rate": 92.9,
+     "average_duration_ms": 2600,
+     "cache_ratio": 43.7
+    },
+    {
+     "dimension": "Local Ollama",
+     "run_count": 271,
+     "success_count": 264,
+     "failed_count": 7,
+     "input_tokens": 80000,
+     "output_tokens": 11900,
+     "cached_tokens": 13000,
+     "total_cost": 0.0,
+     "success_rate": 97.4,
+     "average_duration_ms": 1200,
+     "cache_ratio": 16.3
+    }
+   ],
+   "model": [
+    {
+     "dimension": "gpt-4.1-mini",
+     "run_count": 612,
+     "success_count": 601,
+     "failed_count": 11,
+     "input_tokens": 262000,
+     "output_tokens": 40100,
+     "cached_tokens": 118000,
+     "total_cost": 1.842,
+     "success_rate": 98.2,
+     "average_duration_ms": 1300,
+     "cache_ratio": 45.0
+    },
+    {
+     "dimension": "claude-sonnet",
+     "run_count": 311,
+     "success_count": 289,
+     "failed_count": 22,
+     "input_tokens": 201400,
+     "output_tokens": 34200,
+     "cached_tokens": 88000,
+     "total_cost": 8.341,
+     "success_rate": 92.9,
+     "average_duration_ms": 2600,
+     "cache_ratio": 43.7
+    },
+    {
+     "dimension": "llama3.1-8b",
+     "run_count": 271,
+     "success_count": 264,
+     "failed_count": 7,
+     "input_tokens": 80000,
+     "output_tokens": 11900,
+     "cached_tokens": 13000,
+     "total_cost": 0.0,
+     "success_rate": 97.4,
+     "average_duration_ms": 1200,
+     "cache_ratio": 16.3
+    },
+    {
+     "dimension": "gpt-4.1",
+     "run_count": 90,
+     "success_count": 87,
+     "failed_count": 3,
+     "input_tokens": 69000,
+     "output_tokens": 12000,
+     "cached_tokens": 22000,
+     "total_cost": 3.07,
+     "success_rate": 96.7,
+     "average_duration_ms": 2100,
+     "cache_ratio": 31.9
+    }
+   ]
+  }
+ },
+ "profiles": [
+  {
+   "name": "Read-only analyst",
+   "profile_name": "Read-only analyst",
+   "is_builtin": 1,
+   "disabled": 0,
+   "approval_mode": "Auto Approve",
+   "filesystem_policy": "None",
+   "network_policy": "Deny all",
+   "allowed_modules": "json,math,statistics",
+   "max_wall_time_s": 15,
+   "max_cpu_seconds": 10,
+   "max_memory_mb": 128,
+   "max_output_bytes": 65536,
+   "modified": "2025-12-20 10:00:00",
+   "permissions": [
+    {
+     "capability": "Read",
+     "reference_doctype": "Sales Order",
+     "is_read_only": 1
+    },
+    {
+     "capability": "Read",
+     "reference_doctype": "Customer",
+     "is_read_only": 1
+    }
+   ]
+  },
+  {
+   "name": "Ask before changes",
+   "profile_name": "Ask before changes",
+   "is_builtin": 1,
+   "disabled": 0,
+   "approval_mode": "Ask Every Time",
+   "filesystem_policy": "Scratch Only",
+   "network_policy": "Allowlist",
+   "allowed_modules": "json,math,datetime,csv",
+   "max_wall_time_s": 30,
+   "max_cpu_seconds": 20,
+   "max_memory_mb": 256,
+   "max_output_bytes": 262144,
+   "modified": "2025-12-20 10:00:00",
+   "permissions": [
+    {
+     "capability": "Read",
+     "reference_doctype": "Sales Order",
+     "is_read_only": 1
+    },
+    {
+     "capability": "Write",
+     "reference_doctype": "Delivery Note",
+     "is_read_only": 0
+    }
+   ]
+  },
+  {
+   "name": "Warehouse automation",
+   "profile_name": "Warehouse automation",
+   "is_builtin": 0,
+   "disabled": 0,
+   "approval_mode": "Auto Approve",
+   "filesystem_policy": "Shared Directory",
+   "network_policy": "Allowlist",
+   "allowed_modules": "json,csv,datetime",
+   "max_wall_time_s": 60,
+   "max_cpu_seconds": 30,
+   "max_memory_mb": 512,
+   "max_output_bytes": 524288,
+   "modified": "2025-12-28 14:30:00",
+   "permissions": [
+    {
+     "capability": "Read",
+     "reference_doctype": "Stock Entry",
+     "is_read_only": 1
+    },
+    {
+     "capability": "Write",
+     "reference_doctype": "Stock Entry",
+     "is_read_only": 0
+    }
+   ]
+  },
+  {
+   "name": "Finance, never allow",
+   "profile_name": "Finance, never allow",
+   "is_builtin": 0,
+   "disabled": 0,
+   "approval_mode": "Never Allow",
+   "filesystem_policy": "None",
+   "network_policy": "Deny all",
+   "allowed_modules": "json",
+   "max_wall_time_s": 10,
+   "max_cpu_seconds": 5,
+   "max_memory_mb": 64,
+   "max_output_bytes": 32768,
+   "modified": "2025-12-29 09:15:00",
+   "permissions": []
+  },
+  {
+   "name": "Legacy sandbox",
+   "profile_name": "Legacy sandbox",
+   "is_builtin": 0,
+   "disabled": 1,
+   "approval_mode": "Ask Every Time",
+   "filesystem_policy": "Scratch Only",
+   "network_policy": "Deny all",
+   "allowed_modules": "json",
+   "max_wall_time_s": 30,
+   "max_cpu_seconds": 20,
+   "max_memory_mb": 256,
+   "max_output_bytes": 262144,
+   "modified": "2025-11-02 16:00:00",
+   "permissions": []
+  }
+ ]
+}

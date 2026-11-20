@@ -1,0 +1,495 @@
+{
+  "component": "huf-mcp-list",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h1"
+    },
+    "server_name_1": {
+      "type": "text",
+      "sample": "Northwind Orders",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem": {
+      "type": "text",
+      "sample": "Look up orders, shipments and stock levels from the Northwind order system.",
+      "maxLength": 150,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Namespace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "orders",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Last sync",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "relative-time",
+      "sample": "12 hours ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "server_name_2": {
+      "type": "text",
+      "sample": "Shared Drive",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_2": {
+      "type": "text",
+      "sample": "Search and read supplier contracts and price lists stored in the shared drive.",
+      "maxLength": 156,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Namespace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "drive",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Last sync",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "server_name_3": {
+      "type": "text",
+      "sample": "Support Desk",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_3": {
+      "type": "text",
+      "sample": "Create and update customer tickets in the support desk.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "token expired",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Namespace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "desk",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Last sync",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "server_name_4": {
+      "type": "text",
+      "sample": "Team Calendar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_4": {
+      "type": "text",
+      "sample": "Check availability and book delivery slots on the team calendar.",
+      "maxLength": 128,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Namespace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "calendar",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "Last sync",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_21": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "server_name_5": {
+      "type": "text",
+      "sample": "Legacy Pricing",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_5": {
+      "type": "text",
+      "sample": "Old price-list service, kept for reference.",
+      "maxLength": 86,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "disabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "Namespace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "pricing",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "Last sync",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "Never",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "Showing all 5 MCP servers",
+      "maxLength": 50,
+      "where": "text",
+      "element": "div"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-mcp-list.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-mcp-list.button-15"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search MCP servers...",
+      "maxLength": 42,
+      "where": "attr:placeholder",
+      "element": "huf-mcp-list.search"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search MCP servers",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-mcp-list.search"
+    },
+    "server_name_1_title": {
+      "type": "text",
+      "sample": "Northwind Orders",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-17"
+    },
+    "server_name_2_title": {
+      "type": "text",
+      "sample": "Shared Drive",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_2": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-18"
+    },
+    "server_name_3_title": {
+      "type": "text",
+      "sample": "Support Desk",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_3": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-19"
+    },
+    "server_name_4_title": {
+      "type": "text",
+      "sample": "Team Calendar",
+      "maxLength": 26,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_4": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-20"
+    },
+    "server_name_5_title": {
+      "type": "text",
+      "sample": "Legacy Pricing",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_5": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-mcp-list.button-21"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-mcp-list.section-22"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "component": "huf-gateway-list",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "main .grid > div:nth-child(1)",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "gateway card hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-gateway-list.add",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(251, 251, 253) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-gateway-list.add",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-gateway-list.button-1",
+      "changes": [
+        {
+          "element": "huf-gateway-list.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "captured as huf-gateway-list-empty"
+    }
+  }
+}

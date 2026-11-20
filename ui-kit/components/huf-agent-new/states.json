@@ -1,0 +1,77 @@
+{
+  "component": "huf-agent-new",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-agent-new.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-agent-new.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":active",
+      "target": "huf-agent-new.link-1",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 297,
+          "after": 299
+        }
+      ],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct error variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct loading variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: Frappe/POS renders no distinct empty variant of this widget (see field-*, page-head, list-view, pos-cart for the components that do)"
+    }
+  }
+}

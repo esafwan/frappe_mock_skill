@@ -1,0 +1,950 @@
+{
+  "component": "huf-skills-list",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "New skill",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-skills-list.button-24"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Refund approvals",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem": {
+      "type": "text",
+      "sample": "Checks a refund against the returns policy and drafts an approve or decline note.",
+      "maxLength": 162,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "1.3.0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "relative-time",
+      "sample": "18 hours ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "Carrier tracking",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_2": {
+      "type": "text",
+      "sample": "Looks up a shipment with Bluewater Logistics and explains delays in plain language.",
+      "maxLength": 166,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Git",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "0.9.2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_22": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Invoice to PO match",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_3": {
+      "type": "text",
+      "sample": "Matches supplier invoice lines to purchase order lines and lists every price or quantity mismatch.",
+      "maxLength": 196,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "Common Destination",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "2.0.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_28": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_29": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_5": {
+      "type": "text",
+      "sample": "Weekly ticket digest",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_4": {
+      "type": "text",
+      "sample": "Builds the Monday open-ticket summary grouped by region with large refunds first.",
+      "maxLength": 162,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_30": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_31": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_32": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_33": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_34": {
+      "type": "text",
+      "sample": "0.1.0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_35": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_36": {
+      "type": "relative-time",
+      "sample": "4 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_6": {
+      "type": "text",
+      "sample": "Translate reply",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_5": {
+      "type": "text",
+      "sample": "Translates a drafted customer reply into the customer's language while keeping order numbers intact.",
+      "maxLength": 200,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_37": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_38": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_39": {
+      "type": "text",
+      "sample": "App Provided",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_40": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_41": {
+      "type": "text",
+      "sample": "1.0.0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_42": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_43": {
+      "type": "relative-time",
+      "sample": "1 week ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_7": {
+      "type": "text",
+      "sample": "Stock forecast",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_6": {
+      "type": "text",
+      "sample": "Forecasts two-week demand per SKU from sales history.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_44": {
+      "type": "text",
+      "sample": "Error",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_45": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_46": {
+      "type": "text",
+      "sample": "Git",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_47": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_48": {
+      "type": "text",
+      "sample": "0.4.0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_49": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_50": {
+      "type": "relative-time",
+      "sample": "2 weeks ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Showing all 6 skills",
+      "maxLength": 40,
+      "where": "text",
+      "element": "div"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.button-22"
+    },
+    "text_10px_title": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_10px_arialabel": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search skills...",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-skills-list.search"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search skills",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.search"
+    },
+    "svg_opacity_100_arialabel": {
+      "type": "text",
+      "sample": "Status: All",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.button-25"
+    },
+    "svg_opacity_100_arialabel_2": {
+      "type": "text",
+      "sample": "Source: All",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.button-26"
+    },
+    "truncate_title": {
+      "type": "text",
+      "sample": "Refund approvals",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-27"
+    },
+    "w_8_title_2": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-28"
+    },
+    "truncate_title_2": {
+      "type": "text",
+      "sample": "Carrier tracking",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_3": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-29"
+    },
+    "w_8_title_4": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-30"
+    },
+    "truncate_title_3": {
+      "type": "text",
+      "sample": "Invoice to PO match",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_5": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-31"
+    },
+    "w_8_title_6": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-32"
+    },
+    "truncate_title_4": {
+      "type": "text",
+      "sample": "Weekly ticket digest",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_7": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-33"
+    },
+    "w_8_title_8": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-34"
+    },
+    "truncate_title_5": {
+      "type": "text",
+      "sample": "Translate reply",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_9": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-35"
+    },
+    "w_8_title_10": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-36"
+    },
+    "truncate_title_6": {
+      "type": "text",
+      "sample": "Stock forecast",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_11": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-37"
+    },
+    "w_8_title_12": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-skills-list.button-38"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-skills-list.section-39"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "component": "huf-playground-settings",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-playground-settings.link-2",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-playground-settings.link-2",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":active",
+      "target": "huf-playground-settings.link-2",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 370,
+          "after": 355
+        }
+      ],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-playground-settings.button-19",
+      "changes": [
+        {
+          "element": "huf-playground-settings.button-19",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed run shows the raw payload in the response panel; not captured here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked runs resolve instantly (the Running state is a 1 s flash)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "see huf-playground-empty"
+    }
+  }
+}

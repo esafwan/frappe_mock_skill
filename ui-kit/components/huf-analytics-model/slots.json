@@ -1,0 +1,992 @@
+{
+  "component": "huf-analytics-model",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "relative-time",
+      "sample": "Updated 5 mins ago",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Agent runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-28"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Flow runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-29"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-30"
+    },
+    "sm_truncate": {
+      "type": "text",
+      "sample": "Totals and trends across your runs.",
+      "maxLength": 70,
+      "where": "text",
+      "element": "p"
+    },
+    "w_180px": {
+      "type": "text",
+      "sample": "Model",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "w_140px": {
+      "type": "text",
+      "sample": "Last 7d",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_2": {
+      "type": "number",
+      "sample": "5,130",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Cache ratio",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_3": {
+      "type": "number",
+      "sample": "60.0%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "LLM cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_4": {
+      "type": "currency",
+      "sample": "$67.6052",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Average duration",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_5": {
+      "type": "number",
+      "sample": "3.5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "section_title_1": {
+      "type": "text",
+      "sample": "By",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "section_title_1_2": {
+      "type": "text",
+      "sample": "model",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "6 of 6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Model",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-33"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-34"
+    },
+    "text_right": {
+      "type": "text",
+      "sample": "Success rate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "LLM cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-analytics-model.button-35"
+    },
+    "text_right_2": {
+      "type": "text",
+      "sample": "Avg duration",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "top_name": {
+      "type": "text",
+      "sample": "gpt-4.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_4": {
+      "type": "number",
+      "sample": "2,140",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_5": {
+      "type": "number",
+      "sample": "97.8%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "top_cost": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "top_cost_2": {
+      "type": "number",
+      "sample": "38.2416",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "3.1s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "gpt-4.1-mini",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_7": {
+      "type": "number",
+      "sample": "1,890",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_8": {
+      "type": "number",
+      "sample": "96.2%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_10": {
+      "type": "number",
+      "sample": "6.8213",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "2.6s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "mistral-small",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_12": {
+      "type": "number",
+      "sample": "620",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_13": {
+      "type": "number",
+      "sample": "98.5%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_15": {
+      "type": "number",
+      "sample": "3.1042",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "4.2s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "mistral-large",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_17": {
+      "type": "number",
+      "sample": "410",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_18": {
+      "type": "number",
+      "sample": "95.9%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_20": {
+      "type": "number",
+      "sample": "14.5390",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "7.8s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "gemini-2.5-flash",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_22": {
+      "type": "number",
+      "sample": "42",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_23": {
+      "type": "number",
+      "sample": "92.9%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_25": {
+      "type": "number",
+      "sample": "0.2871",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "2.3s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "gemini-2.5-pro",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_27": {
+      "type": "number",
+      "sample": "28",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_28": {
+      "type": "number",
+      "sample": "96.4%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "$",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_30": {
+      "type": "number",
+      "sample": "4.6120",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_31": {
+      "type": "text",
+      "sample": "26.5s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "section_title_2": {
+      "type": "text",
+      "sample": "Context composition",
+      "maxLength": 38,
+      "where": "text",
+      "element": "h2"
+    },
+    "shrink_0": {
+      "type": "text",
+      "sample": "Instructions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_2": {
+      "type": "number",
+      "sample": "1,840,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_3": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_4": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_5": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_6": {
+      "type": "text",
+      "sample": "Tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_7": {
+      "type": "number",
+      "sample": "2,960,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_8": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_9": {
+      "type": "number",
+      "sample": "16",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_10": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_11": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_12": {
+      "type": "number",
+      "sample": "4,120,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_13": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_14": {
+      "type": "number",
+      "sample": "22",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_15": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_16": {
+      "type": "text",
+      "sample": "Conversation history",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_17": {
+      "type": "number",
+      "sample": "7,300,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_18": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_19": {
+      "type": "number",
+      "sample": "40",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_20": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_21": {
+      "type": "text",
+      "sample": "Latest message",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_22": {
+      "type": "number",
+      "sample": "2,200,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_23": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_24": {
+      "type": "number",
+      "sample": "12",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_25": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_6": {
+      "type": "text",
+      "sample": "Shares are computed only from segments that could be measured; a segment marked \"not measured\" is excluded from the total rather than counted as zero.",
+      "maxLength": 300,
+      "where": "text",
+      "element": "p"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-analytics-model.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-analytics-model.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-analytics-model.button-22"
+    },
+    "text_10px_title": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_10px_arialabel": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "h_control_md_title": {
+      "type": "text",
+      "sample": "Every task or conversation an agent handled.",
+      "maxLength": 88,
+      "where": "attr:title",
+      "element": "huf-analytics-model.button-28"
+    },
+    "h_control_md_title_2": {
+      "type": "text",
+      "sample": "Every time a flow ran, step by step.",
+      "maxLength": 72,
+      "where": "attr:title",
+      "element": "huf-analytics-model.button-29"
+    },
+    "h_control_md_title_3": {
+      "type": "text",
+      "sample": "Totals and trends across your runs.",
+      "maxLength": 70,
+      "where": "attr:title",
+      "element": "huf-analytics-model.button-30"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-analytics-model.section-36"
+    }
+  }
+}

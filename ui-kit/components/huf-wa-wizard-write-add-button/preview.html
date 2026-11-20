@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Template wizard step 2: "Add button" menu (open)</title>
+<link rel="stylesheet" href="../../tokens/css/huf/pre-develop/index-BZUhpcW-.css">
+<link rel="stylesheet" href="../../tokens/css/huf/huf-fonts.css">
+<style>html,body{margin:0}body{background:rgb(251, 251, 253);min-height:158px}#ui-kit-stage{position:absolute;left:8px;top:8px;width:176px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+body[data-scroll-locked] { overscroll-behavior: contain; padding-left: 0px; padding-top: 0px; padding-right: 0px; margin-left: 0px; margin-top: 0px; overflow: hidden !important; position: relative !important; margin-right: 0px !important; }
+body[data-scroll-locked] { --removed-body-scroll-bar-size: 0px; }
+</style></head>
+<body data-scroll-locked="1">
+<div id="ui-kit-stage">
+<div data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(289px, 612px); min-width: max-content; will-change: transform; z-index: 50; --radix-popper-available-width: 1440px; --radix-popper-available-height: 750px; --radix-popper-anchor-width: 109.28125px; --radix-popper-anchor-height: 30px; --radix-popper-transform-origin: 0% 138px;" data-ui="huf-wa-wizard-write-add-button"><div data-side="top" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r12:" aria-labelledby="radix-:r11:" class="z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2" tabindex="-1" data-orientation="vertical" style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;" data-ui="huf-wa-wizard-write-add-button.div-1"><div role="menuitem" class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50" tabindex="-1" data-orientation="vertical" data-radix-collection-item="" data-ui="huf-wa-wizard-write-add-button.div-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-reply mr-2 h-4 w-4" aria-hidden="true"><path d="M20 18v-2a4 4 0 0 0-4-4H4"></path><path d="m9 17-5-5 5-5"></path></svg> Custom reply</div><div role="menuitem" class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50" tabindex="-1" data-orientation="vertical" data-radix-collection-item="" data-ui="huf-wa-wizard-write-add-button.div-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link mr-2 h-4 w-4" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg> Visit website</div><div role="menuitem" class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50" tabindex="-1" data-orientation="vertical" data-radix-collection-item="" data-ui="huf-wa-wizard-write-add-button.div-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mr-2 h-4 w-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> Call phone number</div><div role="menuitem" class="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50" tabindex="-1" data-orientation="vertical" data-radix-collection-item="" data-ui="huf-wa-wizard-write-add-button.div-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy mr-2 h-4 w-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg> Copy offer code</div></div></div>
+</div>
+</body></html>
