@@ -1,0 +1,292 @@
+{
+  "component": "huf-voice-settings",
+  "slots": {
+    "text_ink": {
+      "type": "text",
+      "sample": "Voice calls",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "Let people talk to it. Same instructions, actions and knowledge as text.",
+      "maxLength": 144,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Mode",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Text and voice",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_signal_ink": {
+      "type": "text",
+      "sample": "Recommended",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Chat and calls",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Voice only",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Hides text-only setup",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Voice engine",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "OpenAI Realtime",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "OpenAI Realtime",
+      "maxLength": 30,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "Speech pipeline (STT + LLM + TTS)",
+      "maxLength": 66,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Which system runs the voice conversation.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Engine configuration",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Voice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Marin (warm)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_2": {
+      "type": "text",
+      "sample": "Marin (warm)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "space_y_2_2": {
+      "type": "text",
+      "sample": "Cedar (calm)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "space_y_2_3": {
+      "type": "text",
+      "sample": "Verse (bright)",
+      "maxLength": 28,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "How the agent sounds on the call.",
+      "maxLength": 66,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Greeting",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "disabled_opacity_50": {
+      "type": "text",
+      "sample": "Hi, this is Northwind order support. Which order can I help you with?",
+      "maxLength": 138,
+      "where": "text",
+      "element": "huf-voice-settings.greeting"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "What the agent says first when a call starts.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "TTS Model",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Select TTS model (optional)",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Specific model for Text-to-Speech (Audio Generation). If unset, defaults to the provider's default TTS model.",
+      "maxLength": 218,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "TTS Voice",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Voice to use for TTS (e.g. alloy, echo, onyx).",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_5": {
+      "type": "text",
+      "sample": "Audio Transcription Model",
+      "maxLength": 50,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_4": {
+      "type": "text",
+      "sample": "Select transcription model (optional)",
+      "maxLength": 74,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Specific model for Audio Transcription (speech-to-text). If unset, defaults to the provider's default transcription model.",
+      "maxLength": 244,
+      "where": "text",
+      "element": "p"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-voice-settings.button-1"
+    },
+    "motion_safe_animate_drop_arialabel": {
+      "type": "text",
+      "sample": "Voice calls settings",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "sm_grid_cols_repeat_auto_fit_minmax_9rem_1fr_arialabel": {
+      "type": "text",
+      "sample": "Modality",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "openai_realtime",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "pipeline",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "space_y_2_value": {
+      "type": "text",
+      "sample": "marin",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "space_y_2_value_2": {
+      "type": "text",
+      "sample": "cedar",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "space_y_2_value_3": {
+      "type": "text",
+      "sample": "verse",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "disabled_opacity_50_placeholder": {
+      "type": "text",
+      "sample": "Hi, how can I help you today?",
+      "maxLength": 58,
+      "where": "attr:placeholder",
+      "element": "huf-voice-settings.greeting"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. alloy, nova, 21m00Tcm4TlvDq8ikWAM",
+      "maxLength": 76,
+      "where": "attr:placeholder",
+      "element": "huf-voice-settings.input-11"
+    }
+  }
+}

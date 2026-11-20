@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head><meta charset="utf-8"><title>Chat agent switcher (open): agents grouped by provider with model</title>
+<link rel="stylesheet" href="../../tokens/css/huf/pre-develop/index-BZUhpcW-.css">
+<link rel="stylesheet" href="../../tokens/css/huf/huf-fonts.css">
+<style>html,body{margin:0}body{background:rgb(0, 0, 0);min-height:295px}#ui-kit-stage{position:absolute;left:8px;top:8px;width:300px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+</style></head>
+<body>
+<div id="ui-kit-stage">
+<div data-radix-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(244px, 36px); min-width: max-content; will-change: transform; z-index: 50; --radix-popper-available-width: 1440px; --radix-popper-available-height: 864px; --radix-popper-anchor-width: 140.9375px; --radix-popper-anchor-height: 25px; --radix-popper-transform-origin: 0% 0px;" data-ui="huf-chat-agent-picker"><div data-side="bottom" data-align="start" data-state="open" role="dialog" id="radix-:rd:" class="z-50 border bg-popover text-popover-foreground outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-[300px] rounded-[12px] border-input p-0 shadow-lg" tabindex="-1" data-ui="huf-chat-agent-picker.div-1" style="--radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height);"><div class="border-b border-paper-deep p-2"><div class="flex h-7 items-center gap-[7px] rounded-[8px] bg-paper-deep px-[9px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search size-[14px] shrink-0 text-steel-soft" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><input placeholder="Search agents" class="w-full min-w-0 bg-transparent text-[13px] text-ink outline-none placeholder:text-steel-soft" value="" data-ui="huf-chat-agent-picker.search"></div></div><div class="max-h-80 overflow-y-auto pt-1 pb-1.5"><div><div class="flex h-[22px] items-center px-3 font-mono text-[10px] uppercase tracking-[0.04em] text-steel-soft">Anthropic</div><button type="button" class="bg-paper-deep flex h-[34px] items-center gap-[9px] px-3 text-left" data-ui="huf-chat-agent-picker.button-2"><span class="flex h-5 w-5 flex-none items-center justify-center rounded-[6px] text-[9px] text-white" style="background-color: rgb(99, 102, 241);">HO</span><span class="min-w-0 flex-1 truncate text-[13px]">Hub Orchestrator<span class="font-mono text-[11px] text-steel-soft"> claude-sonnet-4-5</span></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check size-[15px] shrink-0 text-ink" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button type="button" class="hover:bg-paper-deep flex h-[34px] items-center gap-[9px] px-3 text-left" data-ui="huf-chat-agent-picker.button-3"><span class="flex h-5 w-5 flex-none items-center justify-center rounded-[6px] text-[9px] text-white" style="background-color: rgb(15, 118, 110);">SD</span><span class="min-w-0 flex-1 truncate text-[13px]">Supplier Desk<span class="font-mono text-[11px] text-steel-soft"> claude-sonnet-4-5</span></span></button></div><div><div class="mt-1 flex h-[22px] items-center px-3 font-mono text-[10px] uppercase tracking-[0.04em] text-steel-soft">OpenAI</div><button type="button" class="hover:bg-paper-deep flex h-[34px] items-center gap-[9px] px-3 text-left" data-ui="huf-chat-agent-picker.button-4"><span class="flex h-5 w-5 flex-none items-center justify-center rounded-[6px] text-[9px] text-white" style="background-color: rgb(180, 83, 9);">SA</span><span class="min-w-0 flex-1 truncate text-[13px]">Sales Analyst<span class="font-mono text-[11px] text-steel-soft"> gpt-4.1</span></span></button><button type="button" class="hover:bg-paper-deep flex h-[34px] items-center gap-[9px] px-3 text-left" data-ui="huf-chat-agent-picker.button-5"><span class="flex h-5 w-5 flex-none items-center justify-center rounded-[6px] text-[9px] text-white" style="background-color: rgb(122, 90, 240);">OS</span><span class="min-w-0 flex-1 truncate text-[13px]">Order Status Bot<span class="font-mono text-[11px] text-steel-soft"> gpt-4.1-mini</span></span></button><button type="button" class="hover:bg-paper-deep flex h-[34px] items-center gap-[9px] px-3 text-left" data-ui="huf-chat-agent-picker.button-6"><span class="flex h-5 w-5 flex-none items-center justify-center rounded-[6px] text-[9px] text-white" style="background-color: rgb(190, 18, 60);">RA</span><span class="min-w-0 flex-1 truncate text-[13px]">Returns Assistant<span class="font-mono text-[11px] text-steel-soft"> gpt-4.1-mini</span></span></button></div></div></div></div>
+</div>
+</body></html>

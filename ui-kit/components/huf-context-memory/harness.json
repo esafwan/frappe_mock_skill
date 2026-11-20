@@ -1,0 +1,301 @@
+{
+  "id": "huf-context-memory",
+  "name": "Agent settings: conversation data and memory switches",
+  "group": "huf",
+  "source": "/agents/Order%20Status%20Bot#advanced",
+  "ancestors": [
+    {
+      "tag": "html",
+      "attrs": {
+        "lang": "en"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "body",
+      "attrs": {},
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "id": "root"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "h-full",
+        "style": "opacity: 1;"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+        "style": "--sidebar-width: 15.5rem; --sidebar-width-icon: 4rem;"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "flex",
+      "position": "static"
+    },
+    {
+      "tag": "main",
+      "attrs": {
+        "class": "relative flex w-full flex-1 flex-col bg-paper md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 h-svh max-h-svh overflow-hidden"
+      },
+      "w": 1192,
+      "x": 248,
+      "y": 0,
+      "display": "flex",
+      "position": "relative"
+    },
+    {
+      "tag": "main",
+      "attrs": {
+        "class": "flex-1 overflow-hidden flex flex-col min-h-0"
+      },
+      "w": 1192,
+      "x": 248,
+      "y": 60,
+      "display": "flex",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "h-full overflow-auto"
+      },
+      "w": 1192,
+      "x": 248,
+      "y": 60,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "mx-auto max-w-[1400px] space-y-5 p-6"
+      },
+      "w": 1192,
+      "x": 248,
+      "y": 60,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "grid gap-6 lg:grid-cols-[minmax(0,1fr)_480px]"
+      },
+      "w": 1144,
+      "x": 272,
+      "y": 84,
+      "display": "grid",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "min-w-0 space-y-5"
+      },
+      "w": 640,
+      "x": 272,
+      "y": 84,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "form",
+      "attrs": {},
+      "w": 640,
+      "x": 272,
+      "y": 154,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "dir": "ltr",
+        "data-orientation": "horizontal",
+        "class": "w-full"
+      },
+      "w": 640,
+      "x": 272,
+      "y": 154,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "data-state": "active",
+        "data-orientation": "horizontal",
+        "role": "tabpanel",
+        "aria-labelledby": "radix-:r11:-trigger-advanced",
+        "id": "radix-:r11:-content-advanced",
+        "tabindex": "0",
+        "class": "ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-5",
+        "style": "animation-duration: 0s;"
+      },
+      "w": 640,
+      "x": 272,
+      "y": 209,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "space-y-6"
+      },
+      "w": 640,
+      "x": 272,
+      "y": 209,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "aria-labelledby": ":r1h:-title",
+        "class": "rounded-lg border border-line bg-panel p-5"
+      },
+      "w": 640,
+      "x": 272,
+      "y": 1226.5,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "class": "space-y-4"
+      },
+      "w": 598,
+      "x": 293,
+      "y": 1312,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "data-state": "open"
+      },
+      "w": 598,
+      "x": 293,
+      "y": 1312,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "div",
+      "attrs": {
+        "data-state": "open",
+        "id": "radix-:r1i:",
+        "class": "space-y-4 pt-3",
+        "style": "--radix-collapsible-content-height: 1551.5px; --radix-collapsible-content-width: 598px;"
+      },
+      "w": 598,
+      "x": 293,
+      "y": 1342,
+      "display": "block",
+      "position": "static"
+    }
+  ],
+  "bg": "rgb(255, 255, 255)",
+  "size": {
+    "w": 598,
+    "h": 389
+  },
+  "origin": {
+    "x": 0,
+    "y": 0.5
+  },
+  "wRtl": null,
+  "rootWRtl": null,
+  "wDark": [
+    1440,
+    1440,
+    1440,
+    1440,
+    1440,
+    1192,
+    1192,
+    1192,
+    1192,
+    1144,
+    640,
+    640,
+    640,
+    640,
+    640,
+    640,
+    598,
+    598,
+    598
+  ],
+  "originRtl": null,
+  "originDark": {
+    "x": 0,
+    "y": 0.5
+  },
+  "bgDark": "rgb(28, 28, 30)",
+  "stageW": 1440,
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf/pre-develop/index-BZUhpcW-.css",
+    "huf/huf-fonts.css"
+  ],
+  "fonts": "\"Huf Sans\", sans-serif",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Agent editor > Advanced > Developer options: conversation data management (allow + inject into prompt), Enable memory with the memory search / write tools, and Show tool execution details.",
+    "Long-term memory and per-conversation data are HUF's other context-management levers; values in data/huf/chat.json (advanced)."
+  ],
+  "darkTheme": "midnight",
+  "app": {
+    "source": "pre-develop",
+    "route": "/agents/Order%20Status%20Bot#advanced",
+    "fixtures": [
+      "agents",
+      "agents-editor",
+      "chat"
+    ],
+    "time": null
+  },
+  "sprite": true,
+  "inlineCss": "@keyframes swipe-out-left { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-right { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }\n}\n@keyframes swipe-out-up { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-down { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }\n}\n@keyframes sonner-fade-in { \n  0% { opacity: 0; transform: scale(0.8); }\n  100% { opacity: 1; transform: scale(1); }\n}\n@keyframes sonner-fade-out { \n  0% { opacity: 1; transform: scale(1); }\n  100% { opacity: 0; transform: scale(0.8); }\n}\n@keyframes sonner-spin { \n  0% { opacity: 1; }\n  100% { opacity: 0.15; }\n}\n",
+  "pad": {
+    "l": 0,
+    "t": 0,
+    "r": 0,
+    "b": 0
+  },
+  "clip": null
+}

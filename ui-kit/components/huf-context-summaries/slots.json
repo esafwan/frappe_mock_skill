@@ -1,0 +1,82 @@
+{
+  "component": "huf-context-summaries",
+  "slots": {
+    "text_ink": {
+      "type": "text",
+      "sample": "Summaries",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Summary ratio",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "Fraction of history to compress (0.7 = 70%).",
+      "maxLength": 88,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Summary model",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Default (main agent model)",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Dedicated lightweight model.",
+      "maxLength": 56,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Use external template",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Link a reusable summary prompt instead of writing one here.",
+      "maxLength": 118,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text_placeholder": {
+      "type": "number",
+      "sample": "0.7",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-context-summaries.ratio-1"
+    },
+    "text_ui_text_value": {
+      "type": "number",
+      "sample": "0.7",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-summaries.ratio-1"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-summaries.button-2"
+    }
+  }
+}
