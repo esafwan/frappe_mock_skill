@@ -14,7 +14,7 @@ Nothing in `components/` or `pages/` needs a server, JavaScript, network, a cloc
 | `components/<id>/` | `component.html` (real DOM, `{{slots}}`, `data-ui` ids) · `states.json` · `slots.json` · `screenshot.png` (+`.dark`/`.rtl`) · `measurements.json` (size/position of every interactive element) · `preview*.html` (JS-free) · `README.md` |
 | `pages/<id>.html` | whole pages composed **only** from components (+ `.dark`, `.ar-AED`, `.en-EUR` variants) |
 | `manifest.json` | index of every component/page/menu/system with slots, states, targets and stable ids (e.g. `form-title.save`) |
-| `systems/` | which UI you are animating (`registry.json`): `frappe-desk`, `ury-pos`, planned `huf` — each owns its variable system. See `systems/ADDING_A_SYSTEM.md` |
+| `systems/` | which UI you are animating (`registry.json`): `frappe-desk`, `ury-pos`, `huf` (React SPA captured from its build with mocked APIs: `systems/huf/README.md`) — each owns its variable system. See `systems/ADDING_A_SYSTEM.md` |
 | `data/universals/` | currencies (AED, SAR, QAR, USD, EUR, INR …), languages (+RTL flags), locale presets, en/ar UI strings |
 | `data/menus/` | pre-populated menus (café, South/North Indian, Mediterranean with Arabic, QSR chicken-burger, fine-dine) with real photos in `data/images/` |
 | `tools/render.mjs` | render any component/page with a locale, currency, theme and menu — fully offline |

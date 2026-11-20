@@ -1,6 +1,6 @@
 // Every page variant gets its own screenshot (pages/shots/<name>.png, JS enabled) and must render within 0.5% of it with JavaScript removed.
-import fs from 'fs'; import { chromium } from 'playwright'; import { PNG } from 'pngjs'; import pixelmatch from 'pixelmatch'; import { ROOT } from './lib.mjs';
-fs.mkdirSync(ROOT + 'pages/shots', { recursive: true }); const b = await chromium.launch(); const rep = {}; let fail = 0;
+import fs from 'fs'; import { chromium } from 'playwright'; import { PNG } from 'pngjs'; import pixelmatch from 'pixelmatch'; import { ROOT, launch } from './lib.mjs';
+fs.mkdirSync(ROOT + 'pages/shots', { recursive: true }); const b = await launch(); const rep = {}; let fail = 0;
 for (const f of fs.readdirSync(ROOT + 'pages').filter(f => f.endsWith('.html')).sort()) {
   const name = f.replace('.html', ''); const shot = async (js) => { const c = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, javaScriptEnabled: js }); const p = await c.newPage(); const reqs = []; p.on('request', r => { if (!/^(file|data):/.test(r.url())) reqs.push(r.url()); });
     await p.goto('file://' + ROOT + 'pages/' + f); await p.waitForTimeout(400); const buf = await p.screenshot(); await c.close(); return { buf, reqs }; };

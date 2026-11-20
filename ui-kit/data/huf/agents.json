@@ -1,0 +1,11 @@
+{
+  "$comment": "Fictional agents (company: Northwind Trading). Times are relative to the fixed capture clock 2026-01-01T09:00:00Z.",
+  "agents": [
+    { "name": "Support Triage", "agent_name": "Support Triage", "description": "Classifies inbound WhatsApp and email tickets and routes them to the right queue.", "provider": "OpenAI", "model": "gpt-4.1-mini", "disabled": 0, "allow_chat": 1, "total_run": 1284, "last_run": "2025-12-31 18:20:00", "modified": "2025-12-31 18:20:00", "prompt_mode": "Free" },
+    { "name": "Invoice Reconciler", "agent_name": "Invoice Reconciler", "description": "Matches supplier invoices against purchase orders and flags mismatches for review.", "provider": "Anthropic", "model": "claude-sonnet", "disabled": 0, "allow_chat": 0, "total_run": 342, "last_run": "2025-12-31 07:05:00", "modified": "2025-12-30 11:00:00", "enable_multi_run": 1 },
+    { "name": "Lead Qualifier", "agent_name": "Lead Qualifier", "description": "Scores new CRM leads and drafts a first-touch reply.", "provider": "Google", "model": "gemini-2.5-flash", "disabled": 1, "allow_chat": 1, "total_run": 57, "last_run": "2025-12-20 10:00:00", "modified": "2025-12-20 10:00:00" },
+    { "name": "Order Status Bot", "agent_name": "Order Status Bot", "description": "Answers where-is-my-order questions on WhatsApp using the Orders table.", "provider": "OpenAI", "model": "gpt-4.1", "disabled": 0, "allow_chat": 1, "total_run": 5120, "last_run": "2026-01-01 08:52:00", "modified": "2025-12-29 09:00:00", "enable_prompt_caching": 1 },
+    { "name": "Policy Librarian", "agent_name": "Policy Librarian", "description": "Answers HR and travel policy questions from the Knowledge base with citations.", "provider": "Anthropic", "model": "claude-haiku", "disabled": 0, "allow_chat": 1, "total_run": 911, "last_run": "2026-01-01 07:40:00", "modified": "2025-12-28 14:00:00" },
+    { "name": "Weekly Ops Digest", "agent_name": "Weekly Ops Digest", "description": "Every Monday, summarises tickets, orders and SLA breaches into one report.", "provider": "Google", "model": "gemini-2.5-pro", "disabled": 0, "allow_chat": 0, "total_run": 48, "last_run": "2025-12-29 06:00:00", "modified": "2025-12-22 10:00:00" }
+  ]
+}

@@ -2,8 +2,13 @@ import { chromium } from 'playwright';
 import fs from 'fs';
 export const BASE = process.env.BASE || 'http://localhost:8001';
 export const ROOT = new URL('..', import.meta.url).pathname;
+// Bundled Playwright Chromium when installed; otherwise CHROME_PATH or the system Chrome (same engine, may differ by version).
+export async function launch() {
+  try { return await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}); }
+  catch (e) { for (const p of ['/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser']) if (fs.existsSync(p)) return chromium.launch({ executablePath: p }); throw e; }
+}
 export async function open({ dark = false, rtl = false } = {}) {
-  const browser = await chromium.launch();
+  const browser = await launch();
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, locale: 'en-US', timezoneId: 'UTC' });
   await ctx.addInitScript(() => { const t = 1767225600000; Date.now = () => t; let s = 42; Math.random = () => (s = (s * 16807) % 2147483647) / 2147483647; });
   const page = await ctx.newPage(); page.setDefaultTimeout(6000);

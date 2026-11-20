@@ -35,10 +35,10 @@
       "componentGroup": "pos"
     },
     "huf": {
-      "status": "planned",
+      "status": "foundation",
       "path": "systems/huf/system.json",
       "covers": [
-        "Huf AI platform UI"
+        "Huf AI platform UI (React/Vite/Tailwind/shadcn SPA), captured from pre-develop and open PR branches with mocked APIs"
       ],
       "name": "Huf AI platform UI",
       "componentGroup": "huf"
@@ -61,6 +61,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "077783f6456b",
       "size": {
         "w": 882,
@@ -119,6 +124,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "219d78eb8e03",
       "size": {
         "w": 852,
@@ -244,6 +254,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "9d454e686396",
       "size": {
         "w": 878,
@@ -399,6 +414,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "a5581adbf044",
       "size": {
         "w": 57,
@@ -693,6 +713,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "17b08ad27043",
       "size": {
         "w": 253.7,
@@ -783,6 +808,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "fecc9e291716",
       "size": {
         "w": 420,
@@ -862,6 +892,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "59f6d697fd2b",
       "size": {
         "w": 396,
@@ -946,6 +981,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "a264c16c511f",
       "size": {
         "w": 420,
@@ -1030,6 +1070,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "3bd70b6d8355",
       "size": {
         "w": 396,
@@ -1139,6 +1184,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "46f0ffb939ae",
       "size": {
         "w": 396,
@@ -1248,6 +1298,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "696196293749",
       "size": {
         "w": 821.2,
@@ -1668,6 +1723,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "13d8aa0fe009",
       "size": {
         "w": 870,
@@ -3257,6 +3317,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "0255a0dd13a1",
       "size": {
         "w": 882,
@@ -3586,6 +3651,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "4cc85192979f",
       "size": {
         "w": 277,
@@ -3841,6 +3911,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "fd93ba6298d2",
       "size": {
         "w": 882,
@@ -4038,6 +4113,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "1962ac3a9dcb",
       "size": {
         "w": 1159,
@@ -4705,6 +4785,1464 @@
       ],
       "dataBindings": null
     },
+    "huf-agent-card": {
+      "id": "huf-agent-card",
+      "name": "Agent card (name, status dot, description, provider/model/runs/last run, badges, provider logo)",
+      "system": "huf",
+      "group": "huf",
+      "path": "components/huf-agent-card/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "app": {
+        "source": "pre-develop",
+        "route": "/agents",
+        "fixtures": [
+          "agents"
+        ],
+        "time": null
+      },
+      "contentHash": "c95109b7364a",
+      "size": {
+        "w": 370.7,
+        "h": 251.5
+      },
+      "css": [
+        "huf/pre-develop/index-BKd4Oh-C.css",
+        "huf/huf-fonts.css"
+      ],
+      "slotCount": 17,
+      "slots": {
+        "agent_name": {
+          "type": "text",
+          "sample": "Support Triage",
+          "maxLength": 28
+        },
+        "description": {
+          "type": "text",
+          "sample": "Classifies inbound WhatsApp and email tickets and routes them to the right queue.",
+          "maxLength": 162
+        },
+        "status": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "meta_label_1": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "meta_value_1": {
+          "type": "text",
+          "sample": "OpenAI",
+          "maxLength": 20
+        },
+        "meta_label_2": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "meta_value_2": {
+          "type": "text",
+          "sample": "gpt-4.1-mini",
+          "maxLength": 24
+        },
+        "meta_label_3": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "meta_value_3": {
+          "type": "number",
+          "sample": "1284",
+          "maxLength": 20
+        },
+        "meta_label_4": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "meta_value_4": {
+          "type": "relative-time",
+          "sample": "14 hours ago",
+          "maxLength": 24
+        },
+        "badge": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "provider_logo_alt": {
+          "type": "text",
+          "sample": "openai logo",
+          "maxLength": 22
+        },
+        "agent_name_title": {
+          "type": "text",
+          "sample": "Support Triage",
+          "maxLength": 28
+        },
+        "w_8_title": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_2": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "image_1": {
+          "type": "image",
+          "sample": "assets/image_1.svg",
+          "maxLength": 0
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "huf-agent-card",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 370.66,
+            "h": 251.5
+          }
+        },
+        {
+          "id": "huf-agent-card.button-1",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 25,
+            "y": 206.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-agent-card.button-2",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 65,
+            "y": 206.5,
+            "w": 32,
+            "h": 32
+          }
+        }
+      ],
+      "dataBindings": null
+    },
+    "huf-page-agents": {
+      "id": "huf-page-agents",
+      "name": "Agents list page (full screen: sidebar + header + filter bar + agent cards)",
+      "system": "huf",
+      "group": "huf",
+      "path": "components/huf-page-agents/",
+      "files": {
+        "html": "component.html",
+        "states": "states.json",
+        "slots": "slots.json",
+        "screenshot": "screenshot.png",
+        "screenshotDark": "screenshot.dark.png",
+        "measurements": "measurements.json",
+        "preview": "preview.html"
+      },
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "app": {
+        "source": "pre-develop",
+        "route": "/agents",
+        "fixtures": [
+          "agents"
+        ],
+        "time": null
+      },
+      "contentHash": "1070791b5df1",
+      "size": {
+        "w": 1440,
+        "h": 900
+      },
+      "css": [
+        "huf/pre-develop/index-BKd4Oh-C.css",
+        "huf/huf-fonts.css"
+      ],
+      "slotCount": 161,
+      "slots": {
+        "group_data_collapsible_icon_hidden": {
+          "type": "text",
+          "sample": "AI platform",
+          "maxLength": 22
+        },
+        "group_data_collapsible_icon_hidden_2": {
+          "type": "text",
+          "sample": "Hub",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_3": {
+          "type": "text",
+          "sample": "Apps",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_4": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_5": {
+          "type": "text",
+          "sample": "Solutions",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_6": {
+          "type": "text",
+          "sample": "Build",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_7": {
+          "type": "text",
+          "sample": "Agents",
+          "maxLength": 20
+        },
+        "text_steel": {
+          "type": "number",
+          "sample": "6",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_8": {
+          "type": "text",
+          "sample": "Flows",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_9": {
+          "type": "text",
+          "sample": "Procedures",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_10": {
+          "type": "text",
+          "sample": "Intelligence",
+          "maxLength": 24
+        },
+        "group_data_collapsible_icon_hidden_11": {
+          "type": "text",
+          "sample": "Skills",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_12": {
+          "type": "text",
+          "sample": "Automations",
+          "maxLength": 22
+        },
+        "group_data_collapsible_icon_hidden_13": {
+          "type": "text",
+          "sample": "Library",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_14": {
+          "type": "text",
+          "sample": "Prompts",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_15": {
+          "type": "text",
+          "sample": "Knowledge",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_16": {
+          "type": "text",
+          "sample": "Providers",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_17": {
+          "type": "text",
+          "sample": "Tables",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_18": {
+          "type": "text",
+          "sample": "Monitor",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_19": {
+          "type": "text",
+          "sample": "Dashboard",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_20": {
+          "type": "text",
+          "sample": "Executions",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_21": {
+          "type": "text",
+          "sample": "Playground",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_22": {
+          "type": "text",
+          "sample": "Settings",
+          "maxLength": 20
+        },
+        "group_data_collapsible_icon_hidden_23": {
+          "type": "text",
+          "sample": "Keyboard shortcuts",
+          "maxLength": 36
+        },
+        "group_focus_within_shortcut_hint_opacity_100": {
+          "type": "text",
+          "sample": "?",
+          "maxLength": 20
+        },
+        "text_11px": {
+          "type": "text",
+          "sample": "MF",
+          "maxLength": 20
+        },
+        "text_ink": {
+          "type": "text",
+          "sample": "Maya Fernandes",
+          "maxLength": 28
+        },
+        "text_steel_2": {
+          "type": "text",
+          "sample": "maya@example.com",
+          "maxLength": 32
+        },
+        "sr_only": {
+          "type": "text",
+          "sample": "Toggle sidebar",
+          "maxLength": 28
+        },
+        "truncate": {
+          "type": "text",
+          "sample": "Agents",
+          "maxLength": 20
+        },
+        "text_steel_3": {
+          "type": "text",
+          "sample": "Status",
+          "maxLength": 20
+        },
+        "text_steel_4": {
+          "type": "text",
+          "sample": ":",
+          "maxLength": 20
+        },
+        "text_steel_5": {
+          "type": "text",
+          "sample": "All",
+          "maxLength": 20
+        },
+        "text_steel_6": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "text_steel_7": {
+          "type": "text",
+          "sample": ":",
+          "maxLength": 20
+        },
+        "text_steel_8": {
+          "type": "text",
+          "sample": "All",
+          "maxLength": 20
+        },
+        "truncate_2": {
+          "type": "text",
+          "sample": "Support Triage",
+          "maxLength": 28
+        },
+        "min_h_2_5rem": {
+          "type": "text",
+          "sample": "Classifies inbound WhatsApp and email tickets and routes them to the right queue.",
+          "maxLength": 162
+        },
+        "text_steel_9": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "text_steel_10": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_11": {
+          "type": "text",
+          "sample": "OpenAI",
+          "maxLength": 20
+        },
+        "text_steel_12": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_13": {
+          "type": "text",
+          "sample": "gpt-4.1-mini",
+          "maxLength": 24
+        },
+        "text_steel_14": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_15": {
+          "type": "number",
+          "sample": "1284",
+          "maxLength": 20
+        },
+        "text_steel_16": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_17": {
+          "type": "relative-time",
+          "sample": "14 hours ago",
+          "maxLength": 24
+        },
+        "text_10px": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "truncate_3": {
+          "type": "text",
+          "sample": "Invoice Reconciler",
+          "maxLength": 36
+        },
+        "min_h_2_5rem_2": {
+          "type": "text",
+          "sample": "Matches supplier invoices against purchase orders and flags mismatches for review.",
+          "maxLength": 164
+        },
+        "text_steel_18": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "text_steel_19": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_20": {
+          "type": "text",
+          "sample": "Anthropic",
+          "maxLength": 20
+        },
+        "text_steel_21": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_22": {
+          "type": "text",
+          "sample": "claude-sonnet",
+          "maxLength": 26
+        },
+        "text_steel_23": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_24": {
+          "type": "number",
+          "sample": "342",
+          "maxLength": 20
+        },
+        "text_steel_25": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_26": {
+          "type": "relative-time",
+          "sample": "1 day ago",
+          "maxLength": 20
+        },
+        "text_10px_2": {
+          "type": "text",
+          "sample": "Multi-run",
+          "maxLength": 20
+        },
+        "truncate_4": {
+          "type": "text",
+          "sample": "Lead Qualifier",
+          "maxLength": 28
+        },
+        "min_h_2_5rem_3": {
+          "type": "text",
+          "sample": "Scores new CRM leads and drafts a first-touch reply.",
+          "maxLength": 104
+        },
+        "text_steel_27": {
+          "type": "text",
+          "sample": "disabled",
+          "maxLength": 20
+        },
+        "text_steel_28": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_29": {
+          "type": "text",
+          "sample": "Google",
+          "maxLength": 20
+        },
+        "text_steel_30": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_31": {
+          "type": "text",
+          "sample": "gemini-2.5-flash",
+          "maxLength": 32
+        },
+        "text_steel_32": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_33": {
+          "type": "number",
+          "sample": "57",
+          "maxLength": 20
+        },
+        "text_steel_34": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_35": {
+          "type": "relative-time",
+          "sample": "1 week ago",
+          "maxLength": 20
+        },
+        "text_10px_3": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "truncate_5": {
+          "type": "text",
+          "sample": "Order Status Bot",
+          "maxLength": 32
+        },
+        "min_h_2_5rem_4": {
+          "type": "text",
+          "sample": "Answers where-is-my-order questions on WhatsApp using the Orders table.",
+          "maxLength": 142
+        },
+        "text_steel_36": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "text_steel_37": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_38": {
+          "type": "text",
+          "sample": "OpenAI",
+          "maxLength": 20
+        },
+        "text_steel_39": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_40": {
+          "type": "text",
+          "sample": "gpt-4.1",
+          "maxLength": 20
+        },
+        "text_steel_41": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_42": {
+          "type": "number",
+          "sample": "5120",
+          "maxLength": 20
+        },
+        "text_steel_43": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_44": {
+          "type": "relative-time",
+          "sample": "8 mins ago",
+          "maxLength": 20
+        },
+        "text_10px_4": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "text_10px_5": {
+          "type": "text",
+          "sample": "Prompt cache",
+          "maxLength": 24
+        },
+        "truncate_6": {
+          "type": "text",
+          "sample": "Policy Librarian",
+          "maxLength": 32
+        },
+        "min_h_2_5rem_5": {
+          "type": "text",
+          "sample": "Answers HR and travel policy questions from the Knowledge base with citations.",
+          "maxLength": 156
+        },
+        "text_steel_45": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "text_steel_46": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_47": {
+          "type": "text",
+          "sample": "Anthropic",
+          "maxLength": 20
+        },
+        "text_steel_48": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_49": {
+          "type": "text",
+          "sample": "claude-haiku",
+          "maxLength": 24
+        },
+        "text_steel_50": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_51": {
+          "type": "number",
+          "sample": "911",
+          "maxLength": 20
+        },
+        "text_steel_52": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_53": {
+          "type": "relative-time",
+          "sample": "1 hour ago",
+          "maxLength": 20
+        },
+        "text_10px_6": {
+          "type": "text",
+          "sample": "Chat",
+          "maxLength": 20
+        },
+        "truncate_7": {
+          "type": "text",
+          "sample": "Weekly Ops Digest",
+          "maxLength": 34
+        },
+        "min_h_2_5rem_6": {
+          "type": "text",
+          "sample": "Every Monday, summarises tickets, orders and SLA breaches into one report.",
+          "maxLength": 148
+        },
+        "text_steel_54": {
+          "type": "text",
+          "sample": "active",
+          "maxLength": 20
+        },
+        "text_steel_55": {
+          "type": "text",
+          "sample": "Provider",
+          "maxLength": 20
+        },
+        "text_steel_56": {
+          "type": "text",
+          "sample": "Google",
+          "maxLength": 20
+        },
+        "text_steel_57": {
+          "type": "text",
+          "sample": "Model",
+          "maxLength": 20
+        },
+        "text_steel_58": {
+          "type": "text",
+          "sample": "gemini-2.5-pro",
+          "maxLength": 28
+        },
+        "text_steel_59": {
+          "type": "text",
+          "sample": "Runs",
+          "maxLength": 20
+        },
+        "text_steel_60": {
+          "type": "number",
+          "sample": "48",
+          "maxLength": 20
+        },
+        "text_steel_61": {
+          "type": "text",
+          "sample": "Last Run",
+          "maxLength": 20
+        },
+        "text_steel_62": {
+          "type": "relative-time",
+          "sample": "3 days ago",
+          "maxLength": 20
+        },
+        "text_steel_63": {
+          "type": "text",
+          "sample": "Showing all 6 agents",
+          "maxLength": 40
+        },
+        "transition_opacity_title": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_2": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_2": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_3": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_3": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_4": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_4": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_5": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_5": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_6": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_6": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_title_7": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "transition_opacity_arialabel_7": {
+          "type": "text",
+          "sample": "Experimental",
+          "maxLength": 24
+        },
+        "justify_center_arialabel": {
+          "type": "text",
+          "sample": "Connecting...",
+          "maxLength": 26
+        },
+        "data_side_right_data_collapsible_offcanvas_left_2_title": {
+          "type": "text",
+          "sample": "Toggle sidebar",
+          "maxLength": 28
+        },
+        "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+          "type": "text",
+          "sample": "Toggle sidebar",
+          "maxLength": 28
+        },
+        "placeholder_text_steel_soft_placeholder": {
+          "type": "text",
+          "sample": "Search agents...",
+          "maxLength": 32
+        },
+        "placeholder_text_steel_soft_arialabel": {
+          "type": "text",
+          "sample": "Search agents",
+          "maxLength": 26
+        },
+        "svg_opacity_100_arialabel": {
+          "type": "text",
+          "sample": "Status: All",
+          "maxLength": 22
+        },
+        "svg_opacity_100_arialabel_2": {
+          "type": "text",
+          "sample": "Chat: All",
+          "maxLength": 20
+        },
+        "invert_alt": {
+          "type": "text",
+          "sample": "openai logo",
+          "maxLength": 22
+        },
+        "truncate_title": {
+          "type": "text",
+          "sample": "Support Triage",
+          "maxLength": 28
+        },
+        "w_8_title": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_2": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "invert_alt_2": {
+          "type": "text",
+          "sample": "anthropic logo",
+          "maxLength": 28
+        },
+        "truncate_title_2": {
+          "type": "text",
+          "sample": "Invoice Reconciler",
+          "maxLength": 36
+        },
+        "w_8_title_3": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_4": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "invert_alt_3": {
+          "type": "text",
+          "sample": "google logo",
+          "maxLength": 22
+        },
+        "truncate_title_3": {
+          "type": "text",
+          "sample": "Lead Qualifier",
+          "maxLength": 28
+        },
+        "w_8_title_5": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_6": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "invert_alt_4": {
+          "type": "text",
+          "sample": "openai logo",
+          "maxLength": 22
+        },
+        "truncate_title_4": {
+          "type": "text",
+          "sample": "Order Status Bot",
+          "maxLength": 32
+        },
+        "w_8_title_7": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_8": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "invert_alt_5": {
+          "type": "text",
+          "sample": "anthropic logo",
+          "maxLength": 28
+        },
+        "truncate_title_5": {
+          "type": "text",
+          "sample": "Policy Librarian",
+          "maxLength": 32
+        },
+        "w_8_title_9": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_10": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "invert_alt_6": {
+          "type": "text",
+          "sample": "google logo",
+          "maxLength": 22
+        },
+        "truncate_title_6": {
+          "type": "text",
+          "sample": "Weekly Ops Digest",
+          "maxLength": 34
+        },
+        "w_8_title_11": {
+          "type": "text",
+          "sample": "Configure",
+          "maxLength": 20
+        },
+        "w_8_title_12": {
+          "type": "text",
+          "sample": "View logs",
+          "maxLength": 20
+        },
+        "section_arialabel": {
+          "type": "text",
+          "sample": "Notifications alt+T",
+          "maxLength": 38
+        },
+        "image_1": {
+          "type": "image",
+          "sample": "assets/image_1.svg",
+          "maxLength": 0
+        },
+        "image_2": {
+          "type": "image",
+          "sample": "assets/image_2.svg",
+          "maxLength": 0
+        },
+        "image_3": {
+          "type": "image",
+          "sample": "assets/image_3.svg",
+          "maxLength": 0
+        },
+        "image_4": {
+          "type": "image",
+          "sample": "assets/image_4.svg",
+          "maxLength": 0
+        },
+        "image_5": {
+          "type": "image",
+          "sample": "assets/image_5.svg",
+          "maxLength": 0
+        },
+        "image_6": {
+          "type": "image",
+          "sample": "assets/image_6.svg",
+          "maxLength": 0
+        }
+      },
+      "states": {
+        "default": "none",
+        "hover": "css-pseudo",
+        "focus": "css-pseudo",
+        "active": "css-pseudo",
+        "disabled": "n/a",
+        "error": "n/a",
+        "loading": "n/a",
+        "empty": "n/a"
+      },
+      "targets": [
+        {
+          "id": "huf-page-agents",
+          "tag": "div",
+          "interactive": false,
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900
+          }
+        },
+        {
+          "id": "huf-page-agents.link-1",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 61,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-2",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 99,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-3",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 133,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-4",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 167,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.nav-agents",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 229,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-5",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 263,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-6",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 297,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-7",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 331,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-8",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 365,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-9",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 399,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-10",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 461,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-11",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 495,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-12",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 529,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-13",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 563,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-14",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 625,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-15",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 659,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.link-16",
+          "tag": "a",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 693,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-17",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 728,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-18",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 8,
+            "y": 768,
+            "w": 231,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.span-19",
+          "tag": "span",
+          "interactive": true,
+          "box": {
+            "x": 215,
+            "y": 812,
+            "w": 16,
+            "h": 24
+          }
+        },
+        {
+          "id": "huf-page-agents.button-20",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 0,
+            "y": 848,
+            "w": 247,
+            "h": 48
+          }
+        },
+        {
+          "id": "huf-page-agents.button-21",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 239,
+            "y": 0,
+            "w": 16,
+            "h": 900
+          }
+        },
+        {
+          "id": "huf-page-agents.button-22",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 268,
+            "y": 12,
+            "w": 28,
+            "h": 28
+          }
+        },
+        {
+          "id": "huf-page-agents.search",
+          "tag": "input",
+          "interactive": true,
+          "box": {
+            "x": 301,
+            "y": 57.5,
+            "w": 818,
+            "h": 28
+          }
+        },
+        {
+          "id": "huf-page-agents.button-23",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1128,
+            "y": 56.5,
+            "w": 140,
+            "h": 30
+          }
+        },
+        {
+          "id": "huf-page-agents.button-24",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1276,
+            "y": 56.5,
+            "w": 140,
+            "h": 30
+          }
+        },
+        {
+          "id": "huf-page-agents.button-25",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 297,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-26",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 337,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-27",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 683.66,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-28",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 723.66,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-29",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1070.33,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-30",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1110.33,
+            "y": 322.5,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-31",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 297,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-32",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 337,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-33",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 683.66,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-34",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 723.66,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-35",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1070.33,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "huf-page-agents.button-36",
+          "tag": "button",
+          "interactive": true,
+          "box": {
+            "x": 1110.33,
+            "y": 590,
+            "w": 32,
+            "h": 32
+          }
+        }
+      ],
+      "dataBindings": null
+    },
     "kot-form": {
       "id": "kot-form",
       "name": "KOT form (kitchen order ticket document)",
@@ -4721,6 +6259,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "c8ec5dacd180",
       "size": {
         "w": 881.2,
@@ -5447,6 +6990,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "767f9b82c161",
       "size": {
         "w": 1159,
@@ -8989,6 +10537,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "85bd04a2d2dc",
       "size": {
         "w": 1159,
@@ -13438,6 +14991,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "c469876629ff",
       "size": {
         "w": 38,
@@ -13822,6 +15380,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "cd7dd37d61bd",
       "size": {
         "w": 575,
@@ -13948,6 +15511,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "6651b9b708b9",
       "size": {
         "w": 1440,
@@ -14094,6 +15662,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "c69e20f3b1d1",
       "size": {
         "w": 292.7,
@@ -14193,6 +15766,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "963cf6af5e8c",
       "size": {
         "w": 1159,
@@ -14565,6 +16143,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "60f356a59806",
       "size": {
         "w": 1440,
@@ -14714,6 +16297,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "36e62ff28f83",
       "size": {
         "w": 384,
@@ -15037,6 +16625,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "80e9a0a8180c",
       "size": {
         "w": 256,
@@ -15536,6 +17129,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "b1b2306e2587",
       "size": {
         "w": 768,
@@ -15621,6 +17219,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "f80e5d6b52d9",
       "size": {
         "w": 800,
@@ -15706,6 +17309,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "0fad584869eb",
       "size": {
         "w": 144,
@@ -15804,6 +17412,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "56f65ca6cd2b",
       "size": {
         "w": 768,
@@ -16417,6 +18030,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "a18e7b47b368",
       "size": {
         "w": 1392,
@@ -16830,6 +18448,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "9057489ea547",
       "size": {
         "w": 1392,
@@ -17288,6 +18911,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "b261f4dcd7fc",
       "size": {
         "w": 1440,
@@ -17399,6 +19027,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "dea9cc7b792b",
       "size": {
         "w": 207,
@@ -17505,6 +19138,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "836a54a0ce58",
       "size": {
         "w": 896,
@@ -17755,6 +19393,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "ab1326377582",
       "size": {
         "w": 1280,
@@ -18349,6 +19992,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "aebfd461e2ac",
       "size": {
         "w": 1159,
@@ -27605,6 +29253,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "3e7070d0f7b1",
       "size": {
         "w": 224,
@@ -28728,6 +30381,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "5ee23ba14a4a",
       "size": {
         "w": 280,
@@ -28802,6 +30460,11 @@
         "measurements": "measurements.json",
         "preview": "preview.html"
       },
+      "modes": [
+        "light",
+        "dark",
+        "rtl"
+      ],
       "contentHash": "a54175533613",
       "size": {
         "w": 870,
