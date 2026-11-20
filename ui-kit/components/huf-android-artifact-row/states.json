@@ -1,0 +1,76 @@
+{
+  "component": "huf-android-artifact-row",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "markdown": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z\"/></svg>",
+          "name": "Reminder letter template",
+          "kind": "markdown"
+        }
+      },
+      "values": {
+        "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z\"/></svg>",
+        "name": "Reminder letter template",
+        "kind": "markdown"
+      },
+      "screenshot": "states/markdown.png",
+      "preview": "states/markdown.html",
+      "description": "markdown"
+    },
+    "html": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z\"/></svg>",
+          "name": "Receivables dashboard",
+          "kind": "html"
+        }
+      },
+      "values": {
+        "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z\"/></svg>",
+        "name": "Receivables dashboard",
+        "kind": "html"
+      },
+      "screenshot": "states/html.png",
+      "preview": "states/html.html",
+      "description": "html"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

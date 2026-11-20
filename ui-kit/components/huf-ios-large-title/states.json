@@ -1,0 +1,64 @@
+{
+  "component": "huf-ios-large-title",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "projects": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "add": true
+      },
+      "values": {
+        "title": "Projects",
+        "search_placeholder": "Search projects"
+      },
+      "screenshot": "states/projects.png",
+      "preview": "states/projects.html",
+      "description": "Projects: add and schedule buttons"
+    },
+    "agents": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "title": "Agents",
+        "search_placeholder": "Search agents"
+      },
+      "screenshot": "states/agents.png",
+      "preview": "states/agents.html",
+      "description": "Agents: no trailing button"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

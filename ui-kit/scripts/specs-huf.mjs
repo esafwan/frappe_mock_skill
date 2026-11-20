@@ -8,7 +8,7 @@
 // css is NOT listed by hand: capture maps the stylesheets the live page loaded to tokens/css/huf/<source>/ and adds huf-fonts.css.
 import fs from 'fs';
 const dir = new URL('.', import.meta.url);
-const files = fs.readdirSync(dir).filter((f) => /^specs-huf-[a-z0-9-]+\.mjs$/.test(f)).sort();
+const files = fs.readdirSync(dir).filter((f) => /^specs-huf-[a-z0-9-]+\.mjs$/.test(f) && !/^specs-huf-(ios|android)\.mjs$/.test(f)).sort();
 export const specs = [];
 for (const f of files) for (const s of (await import(new URL(f, dir))).specs) specs.push({ group: 'huf', modes: ['light', 'dark'], source: 'pre-develop', fixtures: [], file: f.replace(/^specs-huf-|\.mjs$/g, ''), ...s });
 const seen = new Set(); for (const s of specs) { if (!/^huf-[a-z0-9-]+$/.test(s.id)) throw new Error('huf spec id must be huf-<kebab>: ' + s.id); if (seen.has(s.id)) throw new Error('duplicate huf spec id ' + s.id); seen.add(s.id); }

@@ -1,0 +1,27 @@
+{
+  "component": "huf-ios-pinned-chat-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Gulf Steel receivables",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "agent": {
+      "type": "text",
+      "sample": "Finance Reviewer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "date": {
+      "type": "text",
+      "sample": "AUG 13",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

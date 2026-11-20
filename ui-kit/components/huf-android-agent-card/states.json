@@ -1,0 +1,61 @@
+{
+  "component": "huf-android-agent-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "unselected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "sel_class": "",
+          "check": "",
+          "name": "Falcon Arabic Test",
+          "description": "Arabic-first assistant for bilingual customer replies",
+          "model": "falcon-arabic-7b"
+        }
+      },
+      "values": {
+        "sel_class": "",
+        "check": "",
+        "name": "Falcon Arabic Test",
+        "description": "Arabic-first assistant for bilingual customer replies",
+        "model": "falcon-arabic-7b"
+      },
+      "screenshot": "states/unselected.png",
+      "preview": "states/unselected.html",
+      "description": "unselected"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "component": "huf-ios-agent-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "Falcon Arabic Test",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "local · falcon-h1r:7b",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

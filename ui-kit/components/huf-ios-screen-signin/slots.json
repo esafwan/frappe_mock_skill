@@ -1,0 +1,48 @@
+{
+  "component": "huf-ios-screen-signin",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "heading": {
+      "type": "text",
+      "sample": "Connect to your workspace.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "server_label": {
+      "type": "text",
+      "sample": "Server",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "server_placeholder": {
+      "type": "text",
+      "sample": "huf.yourcompany.com",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "hint": {
+      "type": "text",
+      "sample": "The address you open Huf at. Use https.",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "cta": {
+      "type": "text",
+      "sample": "Continue",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "advanced": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

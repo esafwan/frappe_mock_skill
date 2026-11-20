@@ -1,0 +1,319 @@
+{
+ "agents": [
+  {
+   "name": "Falcon Arabic Test",
+   "agent_name": "Falcon Arabic Test",
+   "provider": "TII Falcon",
+   "provider_brand": "falcon",
+   "model": "falcon-arabic-7b",
+   "agent_color": "#0f766e",
+   "allow_chat": 1,
+   "disabled": 0,
+   "description": "Arabic-first assistant for bilingual customer replies",
+   "allow_file_upload": 1,
+   "max_upload_size_mb": 10,
+   "stt_model": null,
+   "run_immediately": 0
+  },
+  {
+   "name": "Hub Orchestrator",
+   "agent_name": "Hub Orchestrator",
+   "provider": "Anthropic",
+   "provider_brand": "anthropic",
+   "model": "claude-sonnet-5",
+   "agent_color": "#7c3aed",
+   "allow_chat": 1,
+   "disabled": 0,
+   "description": "Routes work across finance, documents and field agents",
+   "allow_file_upload": 1,
+   "max_upload_size_mb": 25,
+   "stt_model": "whisper-1",
+   "run_immediately": 0
+  },
+  {
+   "name": "Finance Reviewer",
+   "agent_name": "Finance Reviewer",
+   "provider": "OpenAI",
+   "provider_brand": "openai",
+   "model": "gpt-5.1",
+   "agent_color": "#b45309",
+   "allow_chat": 1,
+   "disabled": 0,
+   "description": "Reviews receivables, ageing and payment reminders",
+   "allow_file_upload": 1,
+   "max_upload_size_mb": 25,
+   "stt_model": null,
+   "run_immediately": 0
+  },
+  {
+   "name": "Doc Extractor",
+   "agent_name": "Doc Extractor",
+   "provider": "Google",
+   "provider_brand": "google",
+   "model": "gemini-3-pro",
+   "agent_color": "#2563eb",
+   "allow_chat": 1,
+   "disabled": 0,
+   "description": "Extracts fields and tables from contracts and invoices",
+   "allow_file_upload": 1,
+   "max_upload_size_mb": 50,
+   "stt_model": null,
+   "run_immediately": 0
+  }
+ ],
+ "projects": [
+  {
+   "name": "PRJ-recv",
+   "project_name": "Receivables",
+   "description": "Ageing, reminders and collections follow-up",
+   "default_agent": "Finance Reviewer",
+   "status": "Active",
+   "last_activity": "2026-11-18 09:12:00",
+   "modified": "2026-11-18 09:12:00",
+   "owner": "mock@huf.local"
+  },
+  {
+   "name": "PRJ-policy",
+   "project_name": "Policy & compliance",
+   "description": "Policy Q&A and compliance document review",
+   "default_agent": "Doc Extractor",
+   "status": "Active",
+   "last_activity": "2026-11-18 08:40:00",
+   "modified": "2026-11-18 08:40:00",
+   "owner": "mock@huf.local"
+  },
+  {
+   "name": "PRJ-vendor",
+   "project_name": "Vendor onboarding",
+   "description": "KYC checks and onboarding paperwork",
+   "default_agent": "Hub Orchestrator",
+   "status": "Active",
+   "last_activity": "2026-11-17 16:05:00",
+   "modified": "2026-11-17 16:05:00",
+   "owner": "mock@huf.local"
+  },
+  {
+   "name": "PRJ-field",
+   "project_name": "Field reports",
+   "description": "Site inspection summaries in Arabic and English",
+   "default_agent": "Falcon Arabic Test",
+   "status": "Active",
+   "last_activity": "2026-11-16 11:30:00",
+   "modified": "2026-11-16 11:30:00",
+   "owner": "mock@huf.local"
+  }
+ ],
+ "conversations": [
+  {
+   "name": "CONV-R1",
+   "title": "Overdue receivables summary",
+   "agent": "Finance Reviewer",
+   "project": "PRJ-recv",
+   "last_activity": "2026-11-18 09:12:00",
+   "modified": "2026-11-18 09:12:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 1
+  },
+  {
+   "name": "CONV-R2",
+   "title": "Draft reminder for Al Noor Trading",
+   "agent": "Finance Reviewer",
+   "project": "PRJ-recv",
+   "last_activity": "2026-11-18 08:55:00",
+   "modified": "2026-11-18 08:55:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 0
+  },
+  {
+   "name": "CONV-P1",
+   "title": "Data retention policy review",
+   "agent": "Doc Extractor",
+   "project": "PRJ-policy",
+   "last_activity": "2026-11-18 08:40:00",
+   "modified": "2026-11-18 08:40:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 1
+  },
+  {
+   "name": "CONV-V1",
+   "title": "Onboard Gulf Steel as a vendor",
+   "agent": "Hub Orchestrator",
+   "project": "PRJ-vendor",
+   "last_activity": "2026-11-17 16:05:00",
+   "modified": "2026-11-17 16:05:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 1
+  },
+  {
+   "name": "CONV-F1",
+   "title": "Jebel Ali site inspection report",
+   "agent": "Falcon Arabic Test",
+   "project": "PRJ-field",
+   "last_activity": "2026-11-16 11:30:00",
+   "modified": "2026-11-16 11:30:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 0
+  },
+  {
+   "name": "CONV-G1",
+   "title": "Quarterly VAT filing checklist",
+   "agent": "Hub Orchestrator",
+   "project": null,
+   "last_activity": "2026-11-15 10:00:00",
+   "modified": "2026-11-15 10:00:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 0
+  },
+  {
+   "name": "CONV-G2",
+   "title": "Translate customer notice to Arabic",
+   "agent": "Falcon Arabic Test",
+   "project": null,
+   "last_activity": "2026-11-14 14:20:00",
+   "modified": "2026-11-14 14:20:00",
+   "channel": "Chat",
+   "status": "Active",
+   "pinned": 0
+  }
+ ],
+ "messages": {
+  "CONV-R1": [
+   [
+    "Show receivables ageing for November.",
+    0
+   ],
+   [
+    "Here is the receivables ageing for November.\n\n| Customer | Open (AED) | Days overdue |\n|---|---:|---:|\n| Gulf Steel | 412,900 | 47 |\n| Al Noor Trading | 88,300 | 12 |\n| Marina Logistics | 61,450 | 31 |\n\n<artifact type=\"chart\" title=\"Ageing by bucket\">const data = [{ name: '0-30', amount: 149750 }, { name: '31-60', amount: 474350 }, { name: '61-90', amount: 128000 }, { name: '90+', amount: 61200 }];\n<BarChart data={data}><XAxis dataKey=\"name\"/><Bar dataKey=\"amount\" fill=\"#0f766e\"/></BarChart></artifact>",
+    1
+   ]
+  ],
+  "CONV-R2": [
+   [
+    "Draft a polite reminder for Al Noor Trading.",
+    0
+   ],
+   [
+    "Dear Al Noor team, a gentle reminder that invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+    1
+   ]
+  ],
+  "CONV-P1": [
+   [
+    "Summarise our data retention policy.",
+    0
+   ],
+   [
+    "Records are kept for 7 years; personal data is deleted on request within 30 days.",
+    1
+   ]
+  ],
+  "CONV-V1": [
+   [
+    "Start onboarding for Gulf Steel.",
+    0
+   ],
+   [
+    "I created the KYC checklist and requested the trade licence.",
+    1
+   ]
+  ],
+  "CONV-F1": [
+   [
+    "لخص تقرير الفحص في جبل علي",
+    0
+   ],
+   [
+    "تم الفحص، لا توجد ملاحظات حرجة.",
+    1
+   ]
+  ],
+  "CONV-G1": [
+   [
+    "What is on the VAT filing checklist?",
+    0
+   ],
+   [
+    "Reconcile sales, review input VAT, file by the 28th.",
+    1
+   ]
+  ],
+  "CONV-G2": [
+   [
+    "Translate the notice to Arabic.",
+    0
+   ],
+   [
+    "تم ترجمة الإشعار.",
+    1
+   ]
+  ]
+ },
+ "artifacts": [
+  {
+   "name": "ART-chart-1",
+   "title": "Ageing by bucket",
+   "artifact_type": "chart",
+   "language": null,
+   "message": "MSG-R1",
+   "message_index": 1,
+   "size_bytes": 245,
+   "creation": "2026-11-18 09:12:00",
+   "content": "const data = [{ name: '0-30', amount: 149750 }, { name: '31-60', amount: 474350 }, { name: '61-90', amount: 128000 }, { name: '90+', amount: 61200 }];\n<BarChart data={data}><XAxis dataKey=\"name\"/><Bar dataKey=\"amount\" fill=\"#0f766e\"/></BarChart>",
+   "conversation": "CONV-R1",
+   "agent": "Finance Reviewer",
+   "content_hash": "h1"
+  },
+  {
+   "name": "ART-md-1",
+   "title": "Reminder letter template",
+   "artifact_type": "markdown",
+   "language": null,
+   "message": "MSG-R1",
+   "message_index": 1,
+   "size_bytes": 120,
+   "creation": "2026-11-18 09:10:00",
+   "content": "# Payment reminder\n\nDear customer, invoice **INV-2041** (AED 4,200) is due on 20 Nov.",
+   "conversation": "CONV-R1",
+   "agent": "Finance Reviewer",
+   "content_hash": "h2"
+  },
+  {
+   "name": "ART-html-1",
+   "title": "Receivables dashboard",
+   "artifact_type": "html",
+   "language": null,
+   "message": "MSG-R1",
+   "message_index": 1,
+   "size_bytes": 200,
+   "creation": "2026-11-18 09:05:00",
+   "content": "<h3>Receivables</h3><p>Open AED 562,600</p>",
+   "conversation": "CONV-R1",
+   "agent": "Finance Reviewer",
+   "content_hash": "h3"
+  }
+ ],
+ "desktop_hosts": [
+  {
+   "device_id": "dev-studio",
+   "label": "Studio Mac",
+   "online": true,
+   "last_seen": "2026-11-18 09:10:00",
+   "remote_control": true,
+   "mode": "ask"
+  },
+  {
+   "device_id": "dev-office",
+   "label": "Office Windows PC",
+   "online": false,
+   "last_seen": "2026-11-17 18:30:00",
+   "remote_control": true,
+   "mode": "sandbox"
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "component": "huf-android-signin-form",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "ready": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "btn_state": "",
+          "server": "https://acme.example.com",
+          "email": "maya@acme.example.com",
+          "password": "••••••••••",
+          "server_color": "var(--ha-ink)",
+          "email_color": "var(--ha-ink)",
+          "password_color": "var(--ha-ink)"
+        }
+      },
+      "values": {
+        "btn_state": "",
+        "server": "https://acme.example.com",
+        "email": "maya@acme.example.com",
+        "password": "••••••••••",
+        "server_color": "var(--ha-ink)",
+        "email_color": "var(--ha-ink)",
+        "password_color": "var(--ha-ink)"
+      },
+      "screenshot": "states/ready.png",
+      "preview": "states/ready.html",
+      "description": "ready"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

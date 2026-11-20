@@ -1,0 +1,55 @@
+{
+  "component": "huf-ios-screen-uploading",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Falcon Arabic Test",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Falcon Arabic Test · falcon-h1r:7b",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "user_text": {
+      "type": "text",
+      "sample": "Which orders from Gulf Steel are<br>still unpaid?",
+      "maxLength": 79,
+      "where": "text",
+      "element": "text"
+    },
+    "assistant_text": {
+      "type": "text",
+      "sample": "Three invoices are open, totalling AED 412,900. The oldest is 47 days past terms.",
+      "maxLength": 130,
+      "where": "text",
+      "element": "text"
+    },
+    "placeholder": {
+      "type": "text",
+      "sample": "Message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "draft": {
+      "type": "text",
+      "sample": "Summarize the overdue invoices.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "filename": {
+      "type": "text",
+      "sample": "invoice.pdf",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

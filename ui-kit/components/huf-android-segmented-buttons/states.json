@@ -1,0 +1,80 @@
+{
+  "component": "huf-android-segmented-buttons",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "light-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "a_on": "",
+          "a_chk": "",
+          "b_on": "on",
+          "b_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+        }
+      },
+      "values": {
+        "a_on": "",
+        "a_chk": "",
+        "b_on": "on",
+        "b_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+      },
+      "screenshot": "states/light-selected.png",
+      "preview": "states/light-selected.html",
+      "description": "light-selected"
+    },
+    "dark-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "a_on": "",
+          "a_chk": "",
+          "c_on": "on",
+          "c_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+        }
+      },
+      "values": {
+        "a_on": "",
+        "a_chk": "",
+        "c_on": "on",
+        "c_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+      },
+      "screenshot": "states/dark-selected.png",
+      "preview": "states/dark-selected.html",
+      "description": "dark-selected"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

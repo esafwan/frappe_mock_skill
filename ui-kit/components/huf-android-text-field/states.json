@@ -1,0 +1,66 @@
+{
+  "component": "huf-android-text-field",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "focus",
+          "value": "https://acme.example.com"
+        }
+      },
+      "values": {
+        "state": "focus",
+        "value": "https://acme.example.com"
+      },
+      "screenshot": "states/focus.png",
+      "preview": "states/focus.html",
+      "description": "focus"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "err",
+          "value": "acme",
+          "support": "Enter a valid server address"
+        }
+      },
+      "values": {
+        "state": "err",
+        "value": "acme",
+        "support": "Enter a valid server address"
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

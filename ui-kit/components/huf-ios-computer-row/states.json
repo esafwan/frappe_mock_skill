@@ -1,0 +1,63 @@
+{
+  "component": "huf-ios-computer-row",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "offline": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "offline": true
+      },
+      "values": {
+        "name": "Home PC",
+        "detail": "Unavailable until this computer reconnects."
+      },
+      "screenshot": "states/offline.png",
+      "preview": "states/offline.html",
+      "description": "offline host"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "offline": true
+      },
+      "values": {
+        "name": "Home PC",
+        "detail": "Unavailable until this computer reconnects."
+      },
+      "screenshot": "states/offline.png",
+      "preview": "states/offline.html",
+      "description": "offline host",
+      "alias": "offline"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

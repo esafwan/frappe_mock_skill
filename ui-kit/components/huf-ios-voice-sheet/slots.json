@@ -1,0 +1,48 @@
+{
+  "component": "huf-ios-voice-sheet",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Voice",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "close": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status": {
+      "type": "text",
+      "sample": "LISTENING",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "heading": {
+      "type": "text",
+      "sample": "Listening…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "time": {
+      "type": "text",
+      "sample": "0:04",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "send": {
+      "type": "text",
+      "sample": "Send",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

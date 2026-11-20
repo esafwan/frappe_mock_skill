@@ -1,0 +1,34 @@
+{
+  "component": "huf-android-top-app-bar",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "variant": {
+      "type": "text",
+      "sample": "two",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "title": {
+      "type": "text",
+      "sample": "New conversation",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Start a conversation",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "project_line": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}
