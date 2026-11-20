@@ -10,7 +10,7 @@ const comps = Object.values(C).map((c) => {
   const short = c.id.replace('huf-android-', '');
   return { ...BASE, id: c.id, name: c.name, slots: c.pre ? {} : text(c), props: {}, screen: false, ref: null,
     render: (v, p) => (c.pre || c.root === 'device' ? R(short, p.over || (c.root === 'device' ? { content: '<div style="padding:60px 21px;color:var(--ha-secondary)">Screen body</div>' } : {})) : c.tpl),
-    variants: Object.fromEntries(Object.entries(c.states || {}).map(([n, st]) => [n, { props: { over: st.slots }, values: st.slots, describe: st.note || n }])),
+    variants: Object.fromEntries(Object.entries(c.states || {}).map(([n, st]) => [n, { props: { over: st.slots }, values: st.slots, state: ({ pressed: 'active', loading: 'loading', busy: 'loading', failed: 'error' })[n], describe: st.note || n }])),
     describe: [c.name, c.desc], height: /sheet|menu|dialog|drawer/.test(c.id) ? 892 : undefined };
 });
 const screens = SCREENS.map((s) => ({ ...BASE, id: 'huf-android-screen-' + s.id, name: s.name, slots: {}, props: {}, variants: {}, screen: true, height: 892,

@@ -1,8 +1,8 @@
 # Computer (desktop host) row: status, detail, last seen, permission mode  `huf-ios-computer-row`
 
-Computer (desktop host) row: status, detail, last seen, permission mode
+Row of Remote computers.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use in the computers list.
 
 **Slots people usually change:** `last_seen` (text, e.g. "Last seen: Oct 29, 2026 at 12:"), `detail` (text, e.g. "Remote control enabled"), `mode` (text, e.g. "Full access"), `name` (text, e.g. "Office Mac"), `status_offline` (text, e.g. "OFFLINE"), `status_online` (text, e.g. "ONLINE"). All 6 slots are in `slots.json`.
 

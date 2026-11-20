@@ -8,15 +8,27 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state_class": "pressed"
+        }
+      },
+      "values": {
+        "state_class": "pressed"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "pressed",
+      "alias": "pressed"
     },
     "uploading": {
       "applicable": true,
@@ -32,6 +44,21 @@
       "screenshot": "states/uploading.png",
       "preview": "states/uploading.html",
       "description": "uploading"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state_class": "pressed"
+        }
+      },
+      "values": {
+        "state_class": "pressed"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "pressed"
     },
     "disabled": {
       "applicable": false,

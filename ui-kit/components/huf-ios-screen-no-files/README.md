@@ -1,8 +1,8 @@
 # Screen: chat with an agent that does not accept files  `huf-ios-screen-no-files`
 
-Screen: chat with an agent that does not accept files
+Full iPhone screen: chat with an agent that does not accept files
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/no-files.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `draft` (text, e.g. "Summarize the overdue invoices"), `title` (text, e.g. "Falcon Arabic Test"), `subtitle` (text, e.g. "Text only"), `placeholder` (text, e.g. "Message"). All 6 slots are in `slots.json`.
 

@@ -1,8 +1,8 @@
 # Screen: Remote computers list  `huf-ios-screen-computers`
 
-Screen: Remote computers list
+Full iPhone screen: Remote computers list
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/computers.light.png.
 
 **Slots people usually change:** `last_seen` (text, e.g. "Last seen: Oct 29, 2026 at 12:"), `detail` (text, e.g. "Remote control enabled"), `title` (text, e.g. "Remote computers"), `mode` (text, e.g. "Full access"), `name` (text, e.g. "Office Mac"), `status_offline` (text, e.g. "OFFLINE"). All 7 slots are in `slots.json`.
 

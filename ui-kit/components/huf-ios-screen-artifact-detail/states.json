@@ -1,0 +1,87 @@
+{
+  "component": "huf-ios-screen-artifact-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "html": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "html"
+      },
+      "values": {
+        "ad_title": "Receivables dashboard"
+      },
+      "screenshot": "states/html.png",
+      "preview": "states/html.html",
+      "description": "HTML dashboard preview"
+    },
+    "diagram": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "diagram"
+      },
+      "values": {
+        "ad_title": "ERP architecture"
+      },
+      "screenshot": "states/diagram.png",
+      "preview": "states/diagram.html",
+      "description": "Mermaid diagram preview"
+    },
+    "source": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "source"
+      },
+      "values": {
+        "ad_title": "Receivables dashboard"
+      },
+      "screenshot": "states/source.png",
+      "preview": "states/source.html",
+      "description": "Show source mode"
+    },
+    "closed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "closed": true
+      },
+      "screenshot": "states/closed.png",
+      "preview": "states/closed.html",
+      "description": "sheet dismissed"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

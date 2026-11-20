@@ -8,15 +8,30 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "no pressed variant for this component"
+    },
+    "agents-pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "agents_on": "pressed"
+        }
+      },
+      "values": {
+        "agents_on": "pressed"
+      },
+      "screenshot": "states/agents-pressed.png",
+      "preview": "states/agents-pressed.html",
+      "description": "Agents tab pressed (ripple)"
     },
     "chat-active": {
       "applicable": true,

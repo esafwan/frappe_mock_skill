@@ -1,41 +1,48 @@
 {
   "component": "huf-android-chats-drawer",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
+    "state": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-chats-drawer"
+    },
     "t1": {
       "type": "text",
       "sample": "Send the November promo",
-      "maxLength": 37,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-chats-drawer"
     },
     "t2": {
       "type": "text",
       "sample": "Overdue receivables summary",
-      "maxLength": 44,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-chats-drawer"
     },
     "t3": {
       "type": "text",
       "sample": "Draft reminder for Al Noor Trading",
-      "maxLength": 55,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-chats-drawer"
     },
     "t4": {
       "type": "text",
       "sample": "Data retention policy review",
-      "maxLength": 45,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-chats-drawer"
     },
     "t5": {
       "type": "text",
       "sample": "Onboard Gulf Steel as a vendor",
-      "maxLength": 48,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-chats-drawer"
     }
   }
 }

@@ -1,8 +1,8 @@
 # Empty chat state: Start a conversation  `huf-ios-empty-state`
 
-Empty chat state: Start a conversation
+Centred bubble glyph with title and agent name.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for a new chat.
 
 **Slots people usually change:** `title` (text, e.g. "Start a conversation"), `subtitle` (text, e.g. "Falcon Arabic Test"). All 2 slots are in `slots.json`.
 

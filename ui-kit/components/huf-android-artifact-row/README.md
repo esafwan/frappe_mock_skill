@@ -1,10 +1,13 @@
-# huf-android-artifact-row
+# Artifact browser row (kind icon, title, kind, chevron arrow)  `huf-android-artifact-row`
 
 Artifact browser row (kind icon, title, kind, chevron arrow)
 
-Row of the Artifacts list. icon: chart | markdown | html.
+**When to use:** Row of the Artifacts list. icon: chart | markdown | html.
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-artifact-row"]`. Slots: `icon`, `name`, `kind`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `icon` (html, e.g. "<svg class="ha-ico " viewBox=""), `name` (text, e.g. "Ageing by bucket"), `kind` (text, e.g. "chart"). All 4 slots are in `slots.json`.
+
+**States:** default (none), active (props), pressed (props), markdown (props), html (props). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-artifact-row"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-artifact-row --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

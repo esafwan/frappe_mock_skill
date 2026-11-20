@@ -1,0 +1,26 @@
+{
+  "component": "huf-android-screen-chat-html-artifact",
+  "note": "Full screen composed from huf-android-* components. Change text through the component slots (see composedOf); target elements by data-ui.",
+  "slots": {
+    "draft": {
+      "type": "text",
+      "sample": "Write a message…",
+      "maxLength": 200,
+      "where": "text",
+      "element": "huf-android-composer.input",
+      "typing": true
+    }
+  },
+  "typing": {
+    "component": "huf-android-composer",
+    "slot": "draft",
+    "selector": "[data-ui=\"huf-android-composer.input\"]"
+  },
+  "composedOf": [
+    "huf-android-top-app-bar",
+    "huf-android-mermaid-diagram",
+    "huf-android-html-artifact",
+    "huf-android-composer",
+    "huf-android-bottom-nav"
+  ]
+}

@@ -1,8 +1,8 @@
 # Provider filter chips (All selected)  `huf-ios-filter-chips`
 
-Provider filter chips (All selected)
+Row of pill chips, the active one tinted with the accent.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use under the Agents search field.
 
 **Slots people usually change:** `chip_1` (text, e.g. "Anthropic"), `chip_2` (text, e.g. "Google"), `chip_3` (text, e.g. "OpenAI"), `chip_4` (text, e.g. "local"), `chip_all` (text, e.g. "All"). All 5 slots are in `slots.json`.
 

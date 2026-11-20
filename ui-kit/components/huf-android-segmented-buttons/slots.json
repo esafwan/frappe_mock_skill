@@ -1,69 +1,69 @@
 {
   "component": "huf-android-segmented-buttons",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "a": {
       "type": "text",
       "sample": "System",
-      "maxLength": 24,
+      "maxLength": 12,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     },
     "b": {
       "type": "text",
       "sample": "Light",
-      "maxLength": 24,
+      "maxLength": 12,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     },
     "c": {
       "type": "text",
       "sample": "Dark",
-      "maxLength": 24,
+      "maxLength": 12,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     },
     "a_on": {
-      "type": "text",
+      "type": "class",
       "sample": "on",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 2,
+      "where": "class",
+      "element": "huf-android-segmented-buttons"
     },
     "b_on": {
-      "type": "text",
+      "type": "class",
       "sample": "",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 2,
+      "where": "class",
+      "element": "huf-android-segmented-buttons"
     },
     "c_on": {
-      "type": "text",
+      "type": "class",
       "sample": "",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 2,
+      "where": "class",
+      "element": "huf-android-segmented-buttons"
     },
     "a_chk": {
-      "type": "text",
+      "type": "html",
       "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>",
-      "maxLength": 204,
+      "maxLength": 300,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     },
     "b_chk": {
-      "type": "text",
+      "type": "html",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 300,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     },
     "c_chk": {
-      "type": "text",
+      "type": "html",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 300,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-segmented-buttons"
     }
   }
 }

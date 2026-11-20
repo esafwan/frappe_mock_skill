@@ -1,8 +1,8 @@
 # Screen: Agents tab, agent list  `huf-ios-screen-agents`
 
-Screen: Agents tab, agent list
+Full iPhone screen: Agents tab, agent list
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/agents.light.png.
 
 **Slots people usually change:** `search_placeholder` (text, e.g. "Search agents"), `chip_1` (text, e.g. "Anthropic"), `tab_projects` (text, e.g. "Projects"), `count` (text, e.g. "4 agents"), `title` (text, e.g. "Agents"), `tab_agents` (text, e.g. "Agents"). All 12 slots are in `slots.json`.
 

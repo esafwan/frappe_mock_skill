@@ -1,8 +1,8 @@
 # Markdown table in a chat answer  `huf-ios-table-artifact`
 
-Markdown table in a chat answer
+Bordered table with header row and striped rows.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for structured answers.
 
 **Slots people usually change:** `a2` (text, e.g. "AED 412,900 open"), `b2` (text, e.g. "94% available"), `h2` (text, e.g. "Live signal"), `b3` (text, e.g. "Operations"), `b1` (text, e.g. "Inventory"), `a3` (text, e.g. "Revenue"). All 9 slots are in `slots.json`.
 

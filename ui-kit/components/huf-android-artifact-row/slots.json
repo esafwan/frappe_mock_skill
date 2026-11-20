@@ -1,27 +1,34 @@
 {
   "component": "huf-android-artifact-row",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
+    "cls": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-artifact-row"
+    },
     "icon": {
-      "type": "text",
+      "type": "html",
       "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z\"/></svg>",
-      "maxLength": 332,
+      "maxLength": 400,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-artifact-row"
     },
     "name": {
       "type": "text",
       "sample": "Ageing by bucket",
-      "maxLength": 26,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-artifact-row"
     },
     "kind": {
       "type": "text",
       "sample": "chart",
-      "maxLength": 24,
+      "maxLength": 12,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-artifact-row"
     }
   }
 }

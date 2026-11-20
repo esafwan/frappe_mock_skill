@@ -3,36 +3,43 @@
   "states": {
     "default": {
       "applicable": true,
-      "mechanism": "none",
-      "note": "markup as captured"
+      "mechanism": "none"
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "pressed variants live on the components (see composedOf)"
     },
     "disabled": {
       "applicable": false,
-      "reason": "not applicable: this component has no distinct disabled variant"
+      "reason": "n/a"
     },
     "error": {
       "applicable": false,
-      "reason": "not applicable: this component has no distinct error variant"
+      "reason": "n/a"
     },
     "loading": {
-      "applicable": false,
-      "reason": "not applicable: this component has no distinct loading variant"
+      "applicable": true,
+      "mechanism": "screen",
+      "description": "this screen is the loading / busy state (composer spinner or stop button)"
     },
     "empty": {
       "applicable": false,
-      "reason": "not applicable: this component has no distinct empty variant"
+      "reason": "n/a"
+    },
+    "sheet-open": {
+      "applicable": true,
+      "mechanism": "screen",
+      "description": "this screen shows permission-dialog open; the closed pose is the permission-dialog component state \"closed\" (translate off-screen)",
+      "component": "huf-android-permission-dialog",
+      "closedState": "closed"
     }
   }
 }

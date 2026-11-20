@@ -15,8 +15,25 @@
       "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "pressed": "back"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "back button pressed",
+      "alias": "pressed"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "pressed": "back"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "back button pressed"
     },
     "disabled": {
       "applicable": false,

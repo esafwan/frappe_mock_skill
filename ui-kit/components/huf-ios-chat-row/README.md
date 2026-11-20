@@ -1,8 +1,8 @@
 # Chat list row: initials avatar, title, date, agent in mono  `huf-ios-chat-row`
 
-Chat list row: initials avatar, title, date, agent in mono
+Conversation row with a 36 pt initials tile.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use in the Chats list under a section label (Today, Earlier ...).
 
 **Slots people usually change:** `title` (text, e.g. "Falcon Arabic Test"), `agent` (text, e.g. "Falcon Arabic Test"), `date` (text, e.g. "AUG 13"). All 3 slots are in `slots.json`.
 

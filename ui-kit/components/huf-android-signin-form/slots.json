@@ -1,76 +1,76 @@
 {
   "component": "huf-android-signin-form",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "lead": {
       "type": "text",
       "sample": "Sign in to your workspace.",
-      "maxLength": 42,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "hint": {
       "type": "text",
       "sample": "Enter your server, email, and password to continue.",
-      "maxLength": 82,
+      "maxLength": 60,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "locale": {
       "type": "text",
       "sample": "System",
-      "maxLength": 24,
+      "maxLength": 10,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "btn_state": {
-      "type": "text",
+      "type": "class",
       "sample": "disabled",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-signin-form"
     },
     "server": {
       "type": "text",
       "sample": "Server",
-      "maxLength": 24,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "email": {
       "type": "text",
       "sample": "Email",
-      "maxLength": 24,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "password": {
       "type": "text",
       "sample": "Password",
-      "maxLength": 24,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "server_color": {
-      "type": "text",
+      "type": "css",
       "sample": "var(--ha-secondary)",
-      "maxLength": 31,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "email_color": {
-      "type": "text",
+      "type": "css",
       "sample": "var(--ha-secondary)",
-      "maxLength": 31,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     },
     "password_color": {
-      "type": "text",
+      "type": "css",
       "sample": "var(--ha-secondary)",
-      "maxLength": 31,
+      "maxLength": 40,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-signin-form"
     }
   }
 }

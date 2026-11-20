@@ -1,8 +1,8 @@
 # Agent switcher sheet: search and agents grouped by provider  `huf-ios-sheet-agent-switcher`
 
-Agent switcher sheet: search and agents grouped by provider
+Bottom sheet with search and provider-grouped agents (selected = check).
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use when the title in the nav header is tapped.
 
 **Slots people usually change:** `d3` (text, e.g. "Google · gemini-3.5-flash-lite"), `d2` (text, e.g. "Anthropic · claude-sonnet-4.6"), `d1` (text, e.g. "local · falcon-h1r:7b"), `d4` (text, e.g. "OpenAI · gpt-4o-mini"), `a1` (text, e.g. "Falcon Arabic Test"), `a2` (text, e.g. "Finance Reviewer"). All 10 slots are in `slots.json`.
 

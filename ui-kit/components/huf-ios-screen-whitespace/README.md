@@ -1,8 +1,8 @@
 # Screen: composer with a whitespace-only draft (send disabled)  `huf-ios-screen-whitespace`
 
-Screen: composer with a whitespace-only draft (send disabled)
+Full iPhone screen: composer with a whitespace-only draft (send disabled)
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/whitespace.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `title` (text, e.g. "Falcon Arabic Test"), `placeholder` (text, e.g. "Message"). All 6 slots are in `slots.json`.
 

@@ -1,8 +1,8 @@
 # Screen: new empty chat  `huf-ios-screen-empty`
 
-Screen: new empty chat
+Full iPhone screen: new empty chat
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/empty.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `et` (text, e.g. "Start a conversation"), `es` (text, e.g. "Falcon Arabic Test"). All 8 slots are in `slots.json`.
 

@@ -8,64 +8,146 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "input_cls": "txt",
+          "draft": "Send the November promo to my VIP list",
+          "action": "<div class=\"act\"><div class=\"send pressed\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+        }
+      },
+      "values": {
+        "input_cls": "txt",
+        "draft": "Send the November promo to my VIP list",
+        "action": "<div class=\"act\"><div class=\"send pressed\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "send button pressed (Material ripple)",
+      "alias": "pressed"
     },
     "draft": {
       "applicable": true,
       "mechanism": "props",
       "props": {
         "over": {
-          "input": "<span class=\"txt\">Send the November promo to my VIP list</span>",
-          "action": "<div class=\"act\"><div class=\"send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+          "input_cls": "txt",
+          "draft": "Send the November promo to my VIP list",
+          "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
         }
       },
       "values": {
-        "input": "<span class=\"txt\">Send the November promo to my VIP list</span>",
-        "action": "<div class=\"act\"><div class=\"send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+        "input_cls": "txt",
+        "draft": "Send the November promo to my VIP list",
+        "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
       },
       "screenshot": "states/draft.png",
       "preview": "states/draft.html",
-      "description": "draft"
+      "description": "typed draft; send button replaces mic"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "input_cls": "txt",
+          "draft": "Send the November promo to my VIP list",
+          "action": "<div class=\"act\"><div class=\"send pressed\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+        }
+      },
+      "values": {
+        "input_cls": "txt",
+        "draft": "Send the November promo to my VIP list",
+        "action": "<div class=\"act\"><div class=\"send pressed\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "send button pressed (Material ripple)"
     },
     "attachment": {
       "applicable": true,
       "mechanism": "props",
       "props": {
         "over": {
-          "chips": "",
-          "input": "<span class=\"txt\">Summarise this invoice</span>",
-          "action": "<div class=\"act\"><div class=\"send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+          "input_cls": "txt",
+          "draft": "Summarise this invoice",
+          "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
         }
       },
       "values": {
-        "chips": "",
-        "input": "<span class=\"txt\">Summarise this invoice</span>",
-        "action": "<div class=\"act\"><div class=\"send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
+        "input_cls": "txt",
+        "draft": "Summarise this invoice",
+        "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.send\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z\"/></svg></div></div>"
       },
       "screenshot": "states/attachment.png",
       "preview": "states/attachment.html",
-      "description": "pair with huf-android-attachment-chip above the composer"
+      "description": "pair with huf-android-upload-row above the composer"
+    },
+    "busy": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.stop\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div></div>"
+        }
+      },
+      "values": {
+        "action": "<div class=\"act\"><div class=\"send\" data-ui=\"huf-android-composer.stop\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div></div>"
+      },
+      "screenshot": "states/busy.png",
+      "preview": "states/busy.html",
+      "description": "response streaming: filled Stop generation button"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "action": "<div class=\"act\"><span class=\"ha-spin\"></span></div>"
+        }
+      },
+      "values": {
+        "action": "<div class=\"act\"><span class=\"ha-spin\"></span></div>"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "waiting for the first token / uploading: accent spinner, no action"
+    },
+    "stopping": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "action": "<div class=\"act\"><div class=\"send\"><span class=\"ha-spin dark\"></span></div></div>"
+        }
+      },
+      "values": {
+        "action": "<div class=\"act\"><div class=\"send\"><span class=\"ha-spin dark\"></span></div></div>"
+      },
+      "screenshot": "states/stopping.png",
+      "preview": "states/stopping.html",
+      "description": "stop requested: spinner inside the accent button"
     },
     "recording": {
       "applicable": true,
       "mechanism": "props",
       "props": {
         "over": {
-          "input": "<span class=\"ph\" style=\"color:var(--ha-danger)\">Recording… 0:07</span>",
-          "action": "<div class=\"act\" style=\"color:var(--ha-danger)\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div>"
+          "draft": "Recording… 0:07",
+          "action": "<div class=\"act\" style=\"color:var(--ha-danger)\" data-ui=\"huf-android-composer.stop-recording\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div>"
         }
       },
       "values": {
-        "input": "<span class=\"ph\" style=\"color:var(--ha-danger)\">Recording… 0:07</span>",
-        "action": "<div class=\"act\" style=\"color:var(--ha-danger)\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div>"
+        "draft": "Recording… 0:07",
+        "action": "<div class=\"act\" style=\"color:var(--ha-danger)\" data-ui=\"huf-android-composer.stop-recording\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6h12v12H6z\"/></svg></div>"
       },
       "screenshot": "states/recording.png",
       "preview": "states/recording.html",
@@ -78,10 +160,6 @@
     "error": {
       "applicable": false,
       "reason": "not applicable: this component has no distinct error variant"
-    },
-    "loading": {
-      "applicable": false,
-      "reason": "not applicable: this component has no distinct loading variant"
     },
     "empty": {
       "applicable": false,

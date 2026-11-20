@@ -1,8 +1,8 @@
 # Assistant reply text (plain, loading spinner, note)  `huf-ios-assistant-text`
 
-Assistant reply text (plain, loading spinner, note)
+Assistant answer, full width without a bubble.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for answers; add the spinner while streaming.
 
 **Slots people usually change:** `text` (text, e.g. "Three invoices are open, total"), `note` (text, e.g. "Choose another agent to start "). All 2 slots are in `slots.json`.
 

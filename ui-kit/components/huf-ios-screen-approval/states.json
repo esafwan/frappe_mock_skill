@@ -1,0 +1,82 @@
+{
+  "component": "huf-ios-screen-approval",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "sending": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "sending"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "approved, sending in progress"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "sending"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "approved, sending in progress",
+      "alias": "sending"
+    },
+    "approved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "approved"
+      },
+      "screenshot": "states/approved.png",
+      "preview": "states/approved.html",
+      "description": "sent, status Done"
+    },
+    "denied": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "denied"
+      },
+      "screenshot": "states/denied.png",
+      "preview": "states/denied.html",
+      "description": "denied, status Denied"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "denied"
+      },
+      "screenshot": "states/denied.png",
+      "preview": "states/denied.html",
+      "description": "denied, status Denied",
+      "alias": "denied"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

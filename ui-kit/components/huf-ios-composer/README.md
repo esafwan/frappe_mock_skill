@@ -1,12 +1,12 @@
 # Chat composer: attach, message pill, mic / send / stop  `huf-ios-composer`
 
-Chat composer: attach, message pill, mic / send / stop
+Bottom composer bar of a chat thread (safe area included).
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use under every thread; switch states with the variants.
 
 **Slots people usually change:** `draft` (text, e.g. "Summarize the overdue invoices"), `placeholder_disabled` (text, e.g. "Choose an agent to chat"), `placeholder` (text, e.g. "Message"). All 3 slots are in `slots.json`.
 
-**States:** default (none), draft (props), busy (props), loading (props), whitespace (props), disabled (props), no-files (props), error (props). Details and class/attribute changes in `states.json`.
+**States:** default (none), active (props), draft (props), busy (props), loading (props), whitespace (props), disabled (props), no-files (props), error (props), pressed (props). Details and class/attribute changes in `states.json`.
 
 **Targeting:** root `data-ui="huf-ios-composer"`; 1 interactive elements with measured boxes in `measurements.json` (e.g. `huf-ios-composer.attach`).
 

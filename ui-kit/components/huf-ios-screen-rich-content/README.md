@@ -1,10 +1,10 @@
 # Screen: chat thread with markdown, table and Mermaid diagram  `huf-ios-screen-rich-content`
 
-Screen: chat thread with markdown, table and Mermaid diagram
+Full iPhone screen: chat thread with markdown, table and Mermaid diagram
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/rich-content.light.png.
 
-**Slots people usually change:** `body` (text, e.g. "An ERP system connects finance"), `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Show the ERP summary and archi"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `title` (text, e.g. "ERP architecture"). All 23 slots are in `slots.json`.
+**Slots people usually change:** `intro` (text, e.g. "An <b>ERP system</b> connects "), `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Show the ERP summary and archi"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `bl3` (text, e.g. "Cross-team reporting"). All 27 slots are in `slots.json`.
 
 **States:** default (none). Details and class/attribute changes in `states.json`.
 

@@ -1,34 +1,34 @@
 {
   "component": "huf-android-top-app-bar",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "variant": {
-      "type": "text",
+      "type": "class",
       "sample": "two",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 5,
+      "where": "class",
+      "element": "huf-android-top-app-bar"
     },
     "title": {
       "type": "text",
       "sample": "New conversation",
-      "maxLength": 26,
+      "maxLength": 34,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-top-app-bar"
     },
     "subtitle": {
       "type": "text",
       "sample": "Start a conversation",
-      "maxLength": 32,
+      "maxLength": 34,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-top-app-bar"
     },
     "project_line": {
-      "type": "text",
+      "type": "html",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 60,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-top-app-bar"
     }
   }
 }

@@ -1,13 +1,13 @@
 {
   "component": "huf-android-empty-state",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "text": {
       "type": "text",
       "sample": "No messages yet.",
-      "maxLength": 26,
+      "maxLength": 60,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-empty-state"
     }
   }
 }

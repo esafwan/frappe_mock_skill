@@ -1,10 +1,10 @@
 # HTML artifact card (dashboard)  `huf-ios-html-artifact-card`
 
-HTML artifact card (dashboard)
+Artifact card with an HTML badge and preview area.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for dashboards the agent built.
 
-**Slots people usually change:** `title` (text, e.g. "Receivables dashboard"), `heading` (text, e.g. "Receivables"), `badge` (text, e.g. "HTML"). All 3 slots are in `slots.json`.
+**Slots people usually change:** `subheading` (text, e.g. "Open invoices by customer"), `title` (text, e.g. "Receivables dashboard"), `heading` (text, e.g. "Receivables"), `badge` (text, e.g. "HTML"). All 4 slots are in `slots.json`.
 
 **States:** default (none). Details and class/attribute changes in `states.json`.
 

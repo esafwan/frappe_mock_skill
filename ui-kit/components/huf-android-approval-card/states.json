@@ -8,15 +8,27 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "press-approve"
+        }
+      },
+      "values": {
+        "state": "press-approve"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Approve button pressed",
+      "alias": "pressed"
     },
     "sending": {
       "applicable": true,
@@ -53,6 +65,21 @@
       "screenshot": "states/approved.png",
       "preview": "states/approved.html",
       "description": "approved"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "press-approve"
+        }
+      },
+      "values": {
+        "state": "press-approve"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Approve button pressed"
     },
     "denied": {
       "applicable": true,
@@ -99,8 +126,30 @@
       "description": "pending-expiring"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: this component has no distinct disabled variant"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "disabled",
+          "recipients": "128",
+          "template": "payment_reminder_v2",
+          "channel": "WhatsApp",
+          "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+          "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+        }
+      },
+      "values": {
+        "state": "disabled",
+        "recipients": "128",
+        "template": "payment_reminder_v2",
+        "channel": "WhatsApp",
+        "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+        "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+      },
+      "screenshot": "states/pending-expiring.png",
+      "preview": "states/pending-expiring.html",
+      "description": "Approve/Deny dimmed while the card is not decidable",
+      "alias": "pending-expiring"
     },
     "error": {
       "applicable": false,

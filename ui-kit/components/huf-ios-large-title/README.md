@@ -1,8 +1,8 @@
 # Large title with search field (Chats, Projects, Agents)  `huf-ios-large-title`
 
-Large title with search field (Chats, Projects, Agents)
+Large 34 pt bold title, capsule search field and optional glass buttons (compose, add).
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use at the top of the three list tabs.
 
 **Slots people usually change:** `search_placeholder` (text, e.g. "Search chats"), `title` (text, e.g. "Chats"). All 2 slots are in `slots.json`.
 

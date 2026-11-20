@@ -1,8 +1,8 @@
 # Attach sheet: Camera, Photo library, Files, Record audio  `huf-ios-sheet-attach`
 
-Attach sheet: Camera, Photo library, Files, Record audio
+Floating bottom sheet listing the attach sources.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use when the + button is tapped.
 
 **Slots people usually change:** `photo` (text, e.g. "Photo library"), `audio` (text, e.g. "Record audio"), `title` (text, e.g. "Attach"), `camera` (text, e.g. "Camera"), `files` (text, e.g. "Files"). All 5 slots are in `slots.json`.
 

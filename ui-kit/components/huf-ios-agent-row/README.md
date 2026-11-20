@@ -1,8 +1,8 @@
 # Agent row: initials, name, provider and model, chat glyph  `huf-ios-agent-row`
 
-Agent row: initials, name, provider and model, chat glyph
+Row of the Agents tab.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use in the Agents list.
 
 **Slots people usually change:** `detail` (text, e.g. "local · falcon-h1r:7b"), `name` (text, e.g. "Falcon Arabic Test"). All 2 slots are in `slots.json`.
 

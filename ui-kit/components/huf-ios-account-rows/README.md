@@ -1,8 +1,8 @@
 # Account list: profile, workspace, app and server rows, sign out  `huf-ios-account-rows`
 
-Account list: profile, workspace, app and server rows, sign out
+Grouped settings rows of the You tab.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for account scenes.
 
 **Slots people usually change:** `footnote` (text, e.g. "Password sign-ins are ended on"), `computers` (text, e.g. "Remote computers"), `host` (text, e.g. "preview.invalid"), `appearance` (text, e.g. "Appearance"), `add` (text, e.g. "Add server"), `sec1` (text, e.g. "Workspace"). All 17 slots are in `slots.json`.
 

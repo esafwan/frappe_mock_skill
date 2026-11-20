@@ -1,5 +1,13 @@
 {
   "component": "huf-android-attach-sheet",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
-  "slots": {}
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "state": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-attach-sheet"
+    }
+  }
 }

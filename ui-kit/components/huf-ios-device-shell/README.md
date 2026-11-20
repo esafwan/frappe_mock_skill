@@ -1,8 +1,8 @@
 # iOS device shell: status bar (9:41, signal, Wi-Fi, charging battery), Dynamic Island, home indicator, 402x874 pt  `huf-ios-device-shell`
 
-iOS device shell: status bar (9:41, signal, Wi-Fi, charging battery), Dynamic Island, home indicator, 402x874 pt
+iPhone 17 Pro frame at 402x874 pt: status bar, Dynamic Island and home indicator. Every huf-ios-screen-* is built on it.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use as the base when composing a custom iOS screen; put content in the .hi-body layer.
 
 **Slots people usually change:** `time` (text, e.g. "9:41"). All 1 slots are in `slots.json`.
 
