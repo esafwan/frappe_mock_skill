@@ -1,0 +1,1090 @@
+{
+ "_note": "Gateways, channel credentials, integrations and the Channels app (fictional: Northwind Trading). Times are relative to the kit clock 2026-01-01 09:00 UTC. Agent names match data/huf/agents.json.",
+ "gateways": [
+  {
+   "name": "Northwind Sales",
+   "gateway_name": "Northwind Sales",
+   "provider": "WhatsApp",
+   "is_enabled": 1,
+   "integration_settings": "whatsapp-northwind-sales",
+   "direct_policy": "Open",
+   "room_policy": "Disabled",
+   "description": "Order questions and restock alerts on +1 555 0142",
+   "default_target_type": "Agent",
+   "default_agent": "Order Status Bot",
+   "last_event_at": "2026-01-01 08:57:00",
+   "connection_state": "Connected",
+   "phone_number_id": "100000000000142",
+   "whatsapp_account": "Northwind WABA",
+   "execution_user": "gateway-bot@example.com"
+  },
+  {
+   "name": "Northwind Team",
+   "gateway_name": "Northwind Team",
+   "provider": "Slack",
+   "is_enabled": 1,
+   "integration_settings": "slack-northwind",
+   "direct_policy": "Pairing",
+   "room_policy": "Allow list",
+   "mention_required": 1,
+   "description": "Ask the sales and ops agents from any Slack channel",
+   "default_target_type": "Agent",
+   "default_agent": "Support Triage",
+   "last_event_at": "2026-01-01 08:41:00",
+   "connection_state": "Connected",
+   "unmapped_policy": "Ask to link account",
+   "private_reply_policy": "Private when marked sensitive",
+   "show_feedback_buttons": 1,
+   "room_sender_policy": "Open",
+   "execution_user": "gateway-bot@example.com"
+  },
+  {
+   "name": "Northwind Ops",
+   "gateway_name": "Northwind Ops",
+   "provider": "Microsoft Teams",
+   "is_enabled": 1,
+   "integration_settings": "teams-northwind",
+   "direct_policy": "Allow list",
+   "room_policy": "Allow list",
+   "description": "Warehouse and finance team in Microsoft Teams",
+   "default_target_type": "Flow",
+   "default_flow": "Order status reply",
+   "last_event_at": "2026-01-01 07:12:00",
+   "connection_state": "Connected",
+   "execution_user": "gateway-bot@example.com"
+  },
+  {
+   "name": "Northwind Bot",
+   "gateway_name": "Northwind Bot",
+   "provider": "Telegram",
+   "is_enabled": 1,
+   "integration_settings": "telegram-northwind",
+   "direct_policy": "Pairing",
+   "description": "@northwind_orders_bot for delivery drivers",
+   "default_target_type": "Agent",
+   "default_agent": "Order Status Bot",
+   "last_event_at": "2025-12-31 22:05:00",
+   "last_error": "Telegram rejected the webhook: the secret token does not match.",
+   "connection_state": "Degraded",
+   "execution_user": "gateway-bot@example.com"
+  },
+  {
+   "name": "Support Inbox",
+   "gateway_name": "Support Inbox",
+   "provider": "Email",
+   "is_enabled": 1,
+   "integration_settings": "email-support",
+   "direct_policy": "Open",
+   "description": "support@example.com, answered by the triage agent",
+   "default_target_type": "Agent",
+   "default_agent": "Support Triage",
+   "last_event_at": "2026-01-01 08:20:00",
+   "connection_state": "Connected",
+   "execution_user": "gateway-bot@example.com"
+  },
+  {
+   "name": "Northwind Voice",
+   "gateway_name": "Northwind Voice",
+   "provider": "SMS",
+   "is_enabled": 0,
+   "integration_settings": "",
+   "direct_policy": "Pairing",
+   "description": "Two-way SMS and voice line on +1 555 0187",
+   "default_target_type": "",
+   "last_event_at": "",
+   "connection_state": "Disconnected"
+  }
+ ],
+ "settings": [
+  {
+   "name": "whatsapp-northwind-sales",
+   "service": "whatsapp",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Northwind Sales",
+   "account_label": "+1 555 0142 · Northwind Trading",
+   "last_test_status": "Connected",
+   "last_test_at": "2026-01-01 08:30:00",
+   "last_test_message": "",
+   "last_used": "2026-01-01 08:57:00",
+   "modified": "2026-01-01 08:57:00",
+   "credentials": [
+    {
+     "key": "phone_number_id",
+     "value": "100000000000142"
+    },
+    {
+     "key": "business_account_id",
+     "value": "200000000000917"
+    },
+    {
+     "key": "app_id",
+     "value": "300000000000455"
+    },
+    {
+     "key": "access_token",
+     "value": "*********"
+    },
+    {
+     "key": "app_secret",
+     "value": "*********"
+    },
+    {
+     "key": "webhook_verify_token",
+     "value": "*********"
+    },
+    {
+     "key": "graph_api_version",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "name": "slack-northwind",
+   "service": "slack",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Northwind Slack",
+   "account_label": "Northwind Trading workspace",
+   "last_test_status": "Connected",
+   "last_test_at": "2026-01-01 08:45:00",
+   "last_test_message": "Connected as @northwind-assistant in Northwind Trading.",
+   "last_used": "2026-01-01 08:41:00",
+   "modified": "2026-01-01 08:45:00",
+   "credentials": [
+    {
+     "key": "token",
+     "value": "*********"
+    },
+    {
+     "key": "signing_secret",
+     "value": "*********"
+    }
+   ],
+   "recipients": [
+    {
+     "name": "r1",
+     "recipient_name": "#sales-desk",
+     "recipient_id": "C0NWSALES1"
+    },
+    {
+     "name": "r2",
+     "recipient_name": "#warehouse",
+     "recipient_id": "C0NWWARE02"
+    }
+   ]
+  },
+  {
+   "name": "teams-northwind",
+   "service": "microsoft_teams",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Northwind Ops",
+   "account_label": "Northwind Trading tenant",
+   "last_test_status": "Connected",
+   "last_test_at": "2026-01-01 07:00:00",
+   "last_used": "2026-01-01 07:12:00",
+   "modified": "2026-01-01 07:12:00",
+   "credentials": [
+    {
+     "key": "app_id",
+     "value": "8f3c2a10-0000-4000-8000-000000000105"
+    },
+    {
+     "key": "app_password",
+     "value": "*********"
+    },
+    {
+     "key": "tenant_id",
+     "value": "5d1e7b20-0000-4000-8000-000000000187"
+    }
+   ]
+  },
+  {
+   "name": "telegram-northwind",
+   "service": "telegram",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Northwind Bot",
+   "account_label": "@northwind_orders_bot",
+   "last_test_status": "Connected",
+   "last_test_at": "2025-12-31 18:00:00",
+   "last_error": "Telegram rejected the webhook: the secret token does not match.",
+   "last_used": "2025-12-31 22:05:00",
+   "modified": "2025-12-31 22:05:00",
+   "credentials": [
+    {
+     "key": "token",
+     "value": "*********"
+    },
+    {
+     "key": "webhook_secret",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "email-support",
+   "service": "email",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Support Inbox",
+   "account_label": "support@example.com",
+   "last_test_status": "",
+   "last_used": "2026-01-01 08:20:00",
+   "modified": "2026-01-01 08:20:00",
+   "credentials": [
+    {
+     "key": "webhook_secret",
+     "value": "*********"
+    },
+    {
+     "key": "sender_email",
+     "value": "support@example.com"
+    }
+   ]
+  },
+  {
+   "name": "github-northwind",
+   "service": "github",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Northwind GitHub",
+   "account_label": "northwind-trading",
+   "last_test_status": "Connected",
+   "last_test_at": "2025-12-30 10:00:00",
+   "last_used": "2025-12-31 16:00:00",
+   "modified": "2025-12-30 10:00:00",
+   "credentials": [
+    {
+     "key": "access_token",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "gmail-maya",
+   "service": "gmail",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "",
+   "account_label": "maya@example.com",
+   "last_test_status": "Connected",
+   "last_test_at": "2026-01-01 06:00:00",
+   "last_used": "2026-01-01 08:10:00",
+   "modified": "2026-01-01 06:00:00",
+   "credentials": [
+    {
+     "key": "client_id",
+     "value": "*********"
+    },
+    {
+     "key": "client_secret",
+     "value": "*********"
+    },
+    {
+     "key": "refresh_token",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "gcal-maya",
+   "service": "google_calendar",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Sales calendar",
+   "account_label": "maya@example.com",
+   "last_test_status": "Connected",
+   "last_test_at": "2026-01-01 06:00:00",
+   "last_used": "2026-01-01 07:30:00",
+   "modified": "2026-01-01 06:00:00",
+   "credentials": [
+    {
+     "key": "client_id",
+     "value": "*********"
+    },
+    {
+     "key": "client_secret",
+     "value": "*********"
+    },
+    {
+     "key": "refresh_token",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "gsheets-orders",
+   "service": "google_sheets",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Orders sheet",
+   "account_label": "ops@example.com",
+   "last_test_status": "Rejected",
+   "last_test_at": "2026-01-01 05:00:00",
+   "last_test_message": "Google says the refresh token has expired.",
+   "last_used": "2025-12-29 12:00:00",
+   "modified": "2026-01-01 05:00:00",
+   "credentials": [
+    {
+     "key": "client_id",
+     "value": "*********"
+    },
+    {
+     "key": "client_secret",
+     "value": "*********"
+    },
+    {
+     "key": "refresh_token",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "gmaps-northwind",
+   "service": "google_maps",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Delivery routes",
+   "account_label": "",
+   "last_test_status": "Connected",
+   "last_test_at": "2025-12-28 10:00:00",
+   "last_used": "2025-12-31 15:00:00",
+   "modified": "2025-12-28 10:00:00",
+   "credentials": [
+    {
+     "key": "api_key",
+     "value": "*********"
+    }
+   ]
+  },
+  {
+   "name": "serpapi-northwind",
+   "service": "serpapi",
+   "is_active": 1,
+   "is_default": 1,
+   "display_label": "Market research",
+   "account_label": "",
+   "last_test_status": "",
+   "last_used": "",
+   "modified": "2025-12-20 10:00:00",
+   "credentials": [
+    {
+     "key": "api_key",
+     "value": "*********"
+    }
+   ]
+  }
+ ],
+ "services": [
+  {
+   "name": "slack",
+   "service_name": "slack",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Slack messaging and channel management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "token",
+     "label": "Slack Bot Token (xoxb-...)",
+     "required": true
+    },
+    {
+     "key": "signing_secret",
+     "label": "Slack Signing Secret",
+     "required": false,
+     "description": "Only needed to receive Slack events"
+    }
+   ]
+  },
+  {
+   "name": "telegram",
+   "service_name": "telegram",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Telegram bot for messaging",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "token",
+     "label": "Telegram Bot Token",
+     "required": true
+    },
+    {
+     "key": "webhook_secret",
+     "label": "Webhook secret token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "whatsapp",
+   "service_name": "whatsapp",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "WhatsApp Business messaging via the Meta Cloud API",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "phone_number_id",
+     "label": "Phone Number ID",
+     "required": true,
+     "secret": false,
+     "description": "Meta app > WhatsApp > API setup, under the phone number."
+    },
+    {
+     "key": "business_account_id",
+     "label": "WhatsApp Business Account ID",
+     "required": true,
+     "secret": false,
+     "description": "Meta app > WhatsApp > API setup, next to the phone number ID."
+    },
+    {
+     "key": "app_id",
+     "label": "Meta App ID",
+     "required": true,
+     "secret": false,
+     "description": "Meta app dashboard > App settings > Basic."
+    },
+    {
+     "key": "access_token",
+     "label": "Permanent Access Token",
+     "required": true,
+     "description": "A system user token from Meta Business settings, with WhatsApp messaging and management access."
+    },
+    {
+     "key": "app_secret",
+     "label": "Meta App Secret",
+     "required": true,
+     "description": "Meta app dashboard > App settings > Basic. Used to confirm messages really come from Meta."
+    },
+    {
+     "key": "webhook_verify_token",
+     "label": "Webhook Verify Token",
+     "required": true,
+     "description": "Any phrase you choose. Paste the same phrase into Meta when you add the webhook URL."
+    },
+    {
+     "key": "graph_api_version",
+     "label": "Graph API Version",
+     "required": false,
+     "secret": false,
+     "description": "Optional. Defaults to v21.0."
+    }
+   ]
+  },
+  {
+   "name": "messenger",
+   "service_name": "messenger",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Facebook Messenger for Page messaging",
+   "is_builtin": 1,
+   "required_credentials": []
+  },
+  {
+   "name": "instagram",
+   "service_name": "instagram",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Instagram Direct messaging via the Meta Graph API",
+   "is_builtin": 1,
+   "required_credentials": []
+  },
+  {
+   "name": "email",
+   "service_name": "email",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Inbound/outbound email messaging",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "webhook_secret",
+     "label": "Webhook Verification Secret",
+     "required": true
+    },
+    {
+     "key": "sender_email",
+     "label": "Default Outbound Sender Email (Optional)",
+     "required": false
+    }
+   ]
+  },
+  {
+   "name": "microsoft_teams",
+   "service_name": "microsoft_teams",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "Microsoft Teams bot for messaging",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "app_id",
+     "label": "Microsoft App ID",
+     "required": true
+    },
+    {
+     "key": "app_password",
+     "label": "Microsoft App Secret / Password",
+     "required": true
+    },
+    {
+     "key": "tenant_id",
+     "label": "Directory (tenant) ID",
+     "required": true,
+     "secret": false
+    }
+   ]
+  },
+  {
+   "name": "sms",
+   "service_name": "sms",
+   "category": "Communication",
+   "surface": "Gateway",
+   "description": "SMS via Twilio (two-way, signed inbound), Twilio send-only or Frappe SMS Settings",
+   "is_builtin": 1,
+   "required_credentials": []
+  },
+  {
+   "name": "github",
+   "service_name": "github",
+   "category": "Developer",
+   "surface": "Integration",
+   "description": "GitHub API for repository and issue management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "access_token",
+     "label": "GitHub Access Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "gmail",
+   "service_name": "gmail",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Gmail email management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "client_id",
+     "label": "Google Client ID",
+     "required": true
+    },
+    {
+     "key": "client_secret",
+     "label": "Google Client Secret",
+     "required": true
+    },
+    {
+     "key": "refresh_token",
+     "label": "OAuth Refresh Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "google_calendar",
+   "service_name": "google_calendar",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Google Calendar event management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "client_id",
+     "label": "Google Client ID",
+     "required": true
+    },
+    {
+     "key": "client_secret",
+     "label": "Google Client Secret",
+     "required": true
+    },
+    {
+     "key": "refresh_token",
+     "label": "OAuth Refresh Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "google_drive",
+   "service_name": "google_drive",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Google Drive file management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "client_id",
+     "label": "Google Client ID",
+     "required": true
+    },
+    {
+     "key": "client_secret",
+     "label": "Google Client Secret",
+     "required": true
+    },
+    {
+     "key": "refresh_token",
+     "label": "OAuth Refresh Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "google_sheets",
+   "service_name": "google_sheets",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Google Sheets management",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "client_id",
+     "label": "Google Client ID",
+     "required": true
+    },
+    {
+     "key": "client_secret",
+     "label": "Google Client Secret",
+     "required": true
+    },
+    {
+     "key": "refresh_token",
+     "label": "OAuth Refresh Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "google_maps",
+   "service_name": "google_maps",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Google Maps directions and geocoding",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "api_key",
+     "label": "Google Maps API Key",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "google_meet",
+   "service_name": "google_meet",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "Google Meet meeting space creation",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "client_id",
+     "label": "Google Client ID",
+     "required": true
+    },
+    {
+     "key": "client_secret",
+     "label": "Google Client Secret",
+     "required": true
+    },
+    {
+     "key": "refresh_token",
+     "label": "OAuth Refresh Token",
+     "required": true
+    }
+   ]
+  },
+  {
+   "name": "serpapi",
+   "service_name": "serpapi",
+   "category": "Google",
+   "surface": "Integration",
+   "description": "SerpApi search data: hotels, reviews (Google Maps, TripAdvisor, Yelp), and YouTube",
+   "is_builtin": 1,
+   "required_credentials": [
+    {
+     "key": "api_key",
+     "label": "SerpApi API Key",
+     "required": true
+    }
+   ]
+  }
+ ],
+ "access_entries": [
+  {
+   "name": "GAE-0007",
+   "gateway": "Northwind Team",
+   "provider": "Slack",
+   "entry_type": "Pairing",
+   "external_id": "U0NWLENA01",
+   "display_label": "Lena Ortiz",
+   "pairing_code": "PAIR-7Q4M",
+   "state": "Pending",
+   "expires_at": "2026-01-01 09:52:00",
+   "creation": "2026-01-01 08:52:00"
+  },
+  {
+   "name": "GAE-0006",
+   "gateway": "Northwind Bot",
+   "provider": "Telegram",
+   "entry_type": "Pairing",
+   "external_id": "582201447",
+   "display_label": "Sam Patel (driver)",
+   "pairing_code": "PAIR-K2TD",
+   "state": "Pending",
+   "expires_at": "2026-01-01 09:31:00",
+   "creation": "2026-01-01 08:31:00"
+  },
+  {
+   "name": "GAE-0005",
+   "gateway": "Northwind Team",
+   "provider": "Slack",
+   "entry_type": "Pairing",
+   "external_id": "U0NWRAVI02",
+   "display_label": "Ravi Menon",
+   "pairing_code": "PAIR-3HXA",
+   "state": "Pending",
+   "expires_at": "2026-01-01 09:18:00",
+   "creation": "2026-01-01 08:18:00"
+  }
+ ],
+ "channel_gateways": [
+  {
+   "name": "Northwind Bot",
+   "provider": "Telegram",
+   "channel": "telegram",
+   "enabled": true,
+   "health": "degraded",
+   "setup_stage": "degraded"
+  },
+  {
+   "name": "Northwind Team",
+   "provider": "Slack",
+   "channel": "slack",
+   "enabled": true,
+   "health": "healthy",
+   "setup_stage": "live"
+  },
+  {
+   "name": "Northwind Ops",
+   "provider": "Microsoft Teams",
+   "channel": "teams",
+   "enabled": true,
+   "health": "healthy",
+   "setup_stage": "live"
+  }
+ ],
+ "conversation_counts": {
+  "all": 86,
+  "ai": 71,
+  "handed_off": 6
+ },
+ "number_summary": {
+  "gateway": "Northwind Sales",
+  "label": "Northwind Sales",
+  "phone": "+1 555 0142",
+  "solutions": [
+   {
+    "name": "SOL-0001",
+    "title": "Order desk",
+    "status": "live",
+    "usage_pct": 34,
+    "sends_24h": 212
+   }
+  ],
+  "routing_order": [
+   {
+    "rank": 1,
+    "kind": "default",
+    "label": "Order Status Bot",
+    "solution": "SOL-0001"
+   }
+  ],
+  "quality": {
+   "rating": "GREEN",
+   "source": "meta"
+  },
+  "blame": null
+ },
+ "slack_setup": {
+  "verified": true,
+  "checked_at": "2026-01-01 08:45:00",
+  "request_url_verified": true,
+  "checks": [
+   {
+    "id": "token_present",
+    "ok": true,
+    "plain_title": "Bot token added",
+    "detail": "A bot token is saved.",
+    "how_to_fix": ""
+   },
+   {
+    "id": "token_kind",
+    "ok": true,
+    "plain_title": "Token is a bot token",
+    "detail": "This is a bot token (starts with xoxb-).",
+    "how_to_fix": ""
+   },
+   {
+    "id": "auth_test",
+    "ok": true,
+    "plain_title": "Slack accepts the token",
+    "detail": "Connected to Northwind Trading.",
+    "how_to_fix": ""
+   },
+   {
+    "id": "scopes",
+    "ok": true,
+    "plain_title": "Required permissions granted",
+    "detail": "All required permissions are granted.",
+    "how_to_fix": ""
+   },
+   {
+    "id": "signing_secret",
+    "ok": true,
+    "plain_title": "Signing secret added",
+    "detail": "A signing secret is saved.",
+    "how_to_fix": ""
+   },
+   {
+    "id": "request_url",
+    "ok": true,
+    "plain_title": "Slack confirmed the Request URL",
+    "detail": "Slack has confirmed the events address.",
+    "how_to_fix": ""
+   },
+   {
+    "id": "direct_policy",
+    "ok": false,
+    "plain_title": "People can connect their own account",
+    "detail": "Direct messages are not open, so people who have not been approved cannot reach the connect prompt.",
+    "how_to_fix": "Set the access policy to Open so people can connect their own account, or add each person to the access list first.",
+    "informational": true
+   },
+   {
+    "id": "slack_connect",
+    "ok": true,
+    "plain_title": "Shared channels (Slack Connect)",
+    "detail": "Channels shared with other organizations are not supported. Huf works in channels and DMs inside your own workspace.",
+    "how_to_fix": "",
+    "informational": true
+   }
+  ]
+ },
+ "bindings": {
+  "Northwind Team": [
+   {
+    "name": "GB-0003",
+    "gateway": "Northwind Team",
+    "priority": 1,
+    "is_enabled": 1,
+    "match_type": "Room or channel",
+    "match_value": "#warehouse",
+    "target_type": "Flow",
+    "flow": "Order status reply",
+    "description": "Stock and delivery questions"
+   },
+   {
+    "name": "GB-0002",
+    "gateway": "Northwind Team",
+    "priority": 2,
+    "is_enabled": 1,
+    "match_type": "Room or channel",
+    "match_value": "#sales-desk",
+    "target_type": "Agent",
+    "agent": "Lead Qualifier"
+   },
+   {
+    "name": "GB-0001",
+    "gateway": "Northwind Team",
+    "priority": 3,
+    "is_enabled": 1,
+    "match_type": "Any conversation",
+    "target_type": "Agent",
+    "agent": "Support Triage"
+   }
+  ]
+ },
+ "identity_links": [
+  {
+   "name": "SIL-0002",
+   "gateway": "Northwind Team",
+   "team_id": "T0NWTRADE",
+   "external_id": "U0NWMAYA01",
+   "user": "maya@example.com",
+   "state": "Linked",
+   "source": "Self-service",
+   "display_label": "Maya Fernandes",
+   "linked_at": "2025-12-18 10:00:00",
+   "linked_by": "maya@example.com"
+  },
+  {
+   "name": "SIL-0001",
+   "gateway": "Northwind Team",
+   "team_id": "T0NWTRADE",
+   "external_id": "U0NWJONAS2",
+   "user": "jonas@example.com",
+   "state": "Linked",
+   "source": "Admin",
+   "display_label": "Jonas Weber",
+   "linked_at": "2025-12-20 14:00:00",
+   "linked_by": "maya@example.com"
+  }
+ ],
+ "health": {
+  "counts": {
+   "24h": {
+    "Received": 0,
+    "Rejected": 2,
+    "Unrouted": 0,
+    "Queued": 0,
+    "Running": 0,
+    "Succeeded": 46,
+    "Failed": 1,
+    "total": 49
+   },
+   "7d": {
+    "Received": 0,
+    "Rejected": 9,
+    "Unrouted": 1,
+    "Queued": 0,
+    "Running": 0,
+    "Succeeded": 318,
+    "Failed": 3,
+    "total": 331
+   }
+  },
+  "recent_events": [
+   {
+    "name": "GE-0331",
+    "status": "Succeeded",
+    "received_at": "2026-01-01 08:41:00",
+    "sender": "Jonas Weber",
+    "conversation": "#warehouse",
+    "error_message": "",
+    "target": "Order status reply"
+   },
+   {
+    "name": "GE-0330",
+    "status": "Succeeded",
+    "received_at": "2026-01-01 08:33:00",
+    "sender": "Maya Fernandes",
+    "conversation": "Direct message",
+    "error_message": "",
+    "target": "Support Triage"
+   },
+   {
+    "name": "GE-0329",
+    "status": "Rejected",
+    "received_at": "2026-01-01 08:18:00",
+    "sender": "Ravi Menon",
+    "conversation": "Direct message",
+    "error_message": "Waiting for approval (pairing code PAIR-3HXA).",
+    "target": ""
+   },
+   {
+    "name": "GE-0328",
+    "status": "Succeeded",
+    "received_at": "2026-01-01 07:55:00",
+    "sender": "Lena Ortiz",
+    "conversation": "#sales-desk",
+    "error_message": "",
+    "target": "Lead Qualifier"
+   }
+  ],
+  "usage_7d": {
+   "runs": 318,
+   "cost": 4.82,
+   "total_tokens": 1284000,
+   "input_tokens": 1012000,
+   "output_tokens": 272000
+  }
+ },
+ "whatsapp_status": {
+  "name": "Northwind Sales",
+  "enabled": true,
+  "whatsapp_account": "Northwind WABA",
+  "phone_number_id": "100000000000142",
+  "account_phone_mismatch": false,
+  "webhook_url": "https://hub.example.com/api/method/huf.ai.whatsapp.webhook?gateway_name=Northwind%20Sales",
+  "integration_settings": "whatsapp-northwind-sales",
+  "health": "healthy",
+  "setup_stage": "live",
+  "reasons": [],
+  "next_step": null,
+  "checklist": [
+   {
+    "code": "credentials",
+    "state": "done"
+   },
+   {
+    "code": "webhook",
+    "state": "done"
+   },
+   {
+    "code": "test_message",
+    "state": "done"
+   }
+  ],
+  "fallback_template": "order_shipped",
+  "fallback_template_language": "en_US",
+  "fallback_template_approved": true,
+  "last_event_at": "2026-01-01T08:57:00Z",
+  "last_error": null,
+  "access_token_present": true,
+  "app_id_present": true,
+  "app_secret_present": true,
+  "verify_token_present": true,
+  "events_24h": {
+   "received": 214,
+   "failed": 1,
+   "unrouted": 0,
+   "rejected": 0
+  },
+  "last_failed_event": null,
+  "unrouted_phone_ids": [],
+  "policy": {
+   "direct_policy": "Open",
+   "room_policy": "Disabled",
+   "pairing_ttl_minutes": 60
+  },
+  "meta_links": {
+   "app_dashboard": null,
+   "whatsapp_manager": null,
+   "webhook_config": null
+  },
+  "token_check": {
+   "valid": true,
+   "token_type": "SYSTEM_USER",
+   "expires_at": null,
+   "missing_scopes": [],
+   "waba_ids": [
+    "200000000000917"
+   ],
+   "phone": {
+    "display": "+1 555 0142",
+    "verified_name": "Northwind Trading",
+    "quality": "GREEN",
+    "tier": "TIER_10K"
+   },
+   "webhook_subscribed": true,
+   "checked_at": "2026-01-01T08:30:00Z",
+   "source": "debug_token"
+  }
+ },
+ "signup_config": {
+  "enabled": false,
+  "app_id": "",
+  "config_id": "",
+  "graph_version": "v21.0"
+ }
+}

@@ -1,0 +1,250 @@
+{
+  "component": "huf-gateway-slack-setup",
+  "slots": {
+    "font_medium": {
+      "type": "text",
+      "sample": "Slack setup",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "1. Create the Slack app",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Copy the app manifest, then create a Slack app from it. It sets up the permissions and the events address for you.",
+      "maxLength": 228,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Copy app manifest",
+      "maxLength": 34,
+      "where": "text",
+      "element": "huf-gateway-slack-setup.button-1"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Create app from manifest",
+      "maxLength": 48,
+      "where": "text",
+      "element": "huf-gateway-slack-setup.link-2"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "2. Add your keys",
+      "maxLength": 32,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "Install the app to your workspace, then open the Credentials tab and paste the Bot User OAuth Token (starts with xoxb-) and the Signing Secret. Then, in Slack, click Save Request URL under Event Subscriptions.",
+      "maxLength": 418,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "3. Check the connection",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Verify connection",
+      "maxLength": 34,
+      "where": "text",
+      "element": "huf-gateway-slack-setup.button-3"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Bot token added",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "A bot token is saved.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Token is a bot token",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_4": {
+      "type": "text",
+      "sample": "This is a bot token (starts with xoxb-).",
+      "maxLength": 80,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Slack accepts the token",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_5": {
+      "type": "text",
+      "sample": "Connected to Northwind Trading.",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Required permissions granted",
+      "maxLength": 56,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_6": {
+      "type": "text",
+      "sample": "All required permissions are granted.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "Signing secret added",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_7": {
+      "type": "text",
+      "sample": "A signing secret is saved.",
+      "maxLength": 52,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Slack confirmed the Request URL",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_8": {
+      "type": "text",
+      "sample": "Slack has confirmed the events address.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "People can connect their own account",
+      "maxLength": 72,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_9": {
+      "type": "text",
+      "sample": "Direct messages are not open, so people who have not been approved cannot reach the connect prompt.",
+      "maxLength": 198,
+      "where": "text",
+      "element": "p"
+    },
+    "space_y_0_5": {
+      "type": "text",
+      "sample": "Set the access policy to Open so people can connect their own account, or add each person to the access list first.",
+      "maxLength": 230,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_12": {
+      "type": "text",
+      "sample": "Shared channels (Slack Connect)",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_10": {
+      "type": "text",
+      "sample": "Channels shared with other organizations are not supported. Huf works in channels and DMs inside your own workspace.",
+      "maxLength": 232,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_13": {
+      "type": "text",
+      "sample": "4. Send a test message",
+      "maxLength": 44,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_11": {
+      "type": "text",
+      "sample": "Huf will send a direct message to one person. Enter their Slack member ID or their email.",
+      "maxLength": 178,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_14": {
+      "type": "text",
+      "sample": "Slack member ID",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_15": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Send test message to me",
+      "maxLength": 46,
+      "where": "text",
+      "element": "huf-gateway-slack-setup.button-6"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Slack setup",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-slack-setup"
+    },
+    "space_y_2_arialabel": {
+      "type": "text",
+      "sample": "Connection checks",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "ul"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "U012ABCDE",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-slack-setup.input-4"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "you@company.com",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-slack-setup.input-5"
+    }
+  }
+}

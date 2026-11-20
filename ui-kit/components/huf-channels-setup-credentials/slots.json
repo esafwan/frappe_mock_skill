@@ -1,0 +1,579 @@
+{
+  "component": "huf-channels-setup-credentials",
+  "slots": {
+    "text_steel": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-1"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-2"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "Teams",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-3"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Select a number",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Pick a number above to open the other pages.",
+      "maxLength": 88,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Broadcasts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "Commerce",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_6": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_7": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_8": {
+      "type": "text",
+      "sample": "Connections",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep_4": {
+      "type": "text",
+      "sample": "Numbers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-5"
+    },
+    "text_steel_soft_9": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep_5": {
+      "type": "text",
+      "sample": "Ask Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-6"
+    },
+    "hover_bg_paper_deep_6": {
+      "type": "text",
+      "sample": "Back to Huf",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-7"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_4": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Set up WhatsApp",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Choose how to connect",
+      "maxLength": 42,
+      "where": "text",
+      "element": "li"
+    },
+    "border_line": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Credentials",
+      "maxLength": 22,
+      "where": "text",
+      "element": "li"
+    },
+    "border_line_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Webhook",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "border_line_3": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Test",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "border_line_4": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Who answers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "li"
+    },
+    "border_line_5": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Access policy",
+      "maxLength": 26,
+      "where": "text",
+      "element": "li"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Step",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_base_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_base_3": {
+      "type": "text",
+      "sample": "of",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_base_4": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_base_5": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_base_6": {
+      "type": "text",
+      "sample": "Credentials",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Name for this number",
+      "maxLength": 40,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Only you see this. It labels the number inside Huf.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Phone number ID",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Meta app > WhatsApp > API setup, under the phone number.",
+      "maxLength": 112,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "WhatsApp Business Account ID (WABA)",
+      "maxLength": 70,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Same page, next to the phone number ID.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "App ID",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Meta app dashboard > App settings > Basic.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Access token",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "A permanent system user token from Meta Business settings, with WhatsApp messaging and management access.",
+      "maxLength": 210,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "App secret",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Meta app dashboard > App settings > Basic. Lets Huf confirm messages really come from Meta.",
+      "maxLength": 182,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Huf also generates a webhook verify token for you. You will paste it into Meta in the next step.",
+      "maxLength": 192,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Save and check",
+      "maxLength": 28,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.button-15"
+    },
+    "text_base_7": {
+      "type": "text",
+      "sample": "Ask Hub instead",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Prefer to chat? Hub can walk you through connecting WhatsApp. Say \"connect my WhatsApp\". Secrets stay in a private form.",
+      "maxLength": 240,
+      "where": "text",
+      "element": "p"
+    },
+    "hover_underline": {
+      "type": "text",
+      "sample": "Open Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-channels-setup-credentials.link-16"
+    },
+    "bg_sidebar_arialabel": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Number",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-channels-setup-credentials.button-4"
+    },
+    "text_steel_soft_title": {
+      "type": "text",
+      "sample": "Pick a number to use Home",
+      "maxLength": 50,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_2": {
+      "type": "text",
+      "sample": "Pick a number to use Activity",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_3": {
+      "type": "text",
+      "sample": "Pick a number to use Broadcasts",
+      "maxLength": 62,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_4": {
+      "type": "text",
+      "sample": "Pick a number to use Templates",
+      "maxLength": 60,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_5": {
+      "type": "text",
+      "sample": "Pick a number to use Commerce",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_6": {
+      "type": "text",
+      "sample": "Pick a number to use Automations",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_7": {
+      "type": "text",
+      "sample": "Pick a number to use Analytics",
+      "maxLength": 60,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_8": {
+      "type": "text",
+      "sample": "Pick a number to use Connections",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_soft_title_9": {
+      "type": "text",
+      "sample": "Pick a number to use Settings",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "Breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "space_y_1_arialabel": {
+      "type": "text",
+      "sample": "Setup steps",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "ol"
+    },
+    "space_y_4_arialabel": {
+      "type": "text",
+      "sample": "WhatsApp credentials",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "form"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. Support line",
+      "maxLength": 34,
+      "where": "attr:placeholder",
+      "element": "huf-channels-setup-credentials.input-9"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Northwind Returns",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-9"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "100000000000187",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-10"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "200000000000917",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-11"
+    },
+    "text_ui_text_value_4": {
+      "type": "number",
+      "sample": "300000000000455",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-12"
+    },
+    "text_ui_text_value_5": {
+      "type": "text",
+      "sample": "EAAG-northwind-demo-token",
+      "maxLength": 50,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-13"
+    },
+    "text_ui_text_value_6": {
+      "type": "text",
+      "sample": "northwind-demo-secret",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "huf-channels-setup-credentials.input-14"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-channels-setup-credentials.section-17"
+    }
+  }
+}

@@ -1,0 +1,2189 @@
+{
+  "component": "huf-gateway-detail-channel",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.link-17"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Northwind Slack",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Slack · Used by default",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Connected as @northwind-assistant in Northwind Trading.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Checked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "relative-time",
+      "sample": "15 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Test connection",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-19"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-20"
+    },
+    "hover_text_destructive": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-21"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-23"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Recipients",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-24"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-25"
+    },
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Ready to receive messages",
+      "maxLength": 50,
+      "where": "text",
+      "element": "h5"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Channel enabled",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Receive and process inbound messages from this channel",
+      "maxLength": 108,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Run as user",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Least-privileged user this channel runs agents and flows as. Required while enabled — never use an administrator account.",
+      "maxLength": 242,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "dark_text_green_300": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Routing target",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Target type",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_3": {
+      "type": "text",
+      "sample": "Flow",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_4": {
+      "type": "text",
+      "sample": "Choose an agent…",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_5": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_6": {
+      "type": "text",
+      "sample": "Invoice Reconciler",
+      "maxLength": 36,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_7": {
+      "type": "text",
+      "sample": "Lead Qualifier",
+      "maxLength": 28,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_8": {
+      "type": "text",
+      "sample": "Order Status Bot",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_9": {
+      "type": "text",
+      "sample": "Policy Librarian",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_10": {
+      "type": "text",
+      "sample": "Weekly Ops Digest",
+      "maxLength": 34,
+      "where": "text",
+      "element": "option"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Direct message policy",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Pairing — require approval for new senders",
+      "maxLength": 84,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_11": {
+      "type": "text",
+      "sample": "Open — people connect their own account first",
+      "maxLength": 90,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_12": {
+      "type": "text",
+      "sample": "Allow list — require an approved contact",
+      "maxLength": 80,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_13": {
+      "type": "text",
+      "sample": "Pairing — require approval for new senders",
+      "maxLength": 84,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_14": {
+      "type": "text",
+      "sample": "Disabled — reject direct messages",
+      "maxLength": 66,
+      "where": "text",
+      "element": "option"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "Recommended for Slack and Teams: people connect their own account before anything runs.",
+      "maxLength": 174,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "New senders",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "Someone who isn't approved yet gets a pairing code and waits below until you approve them.",
+      "maxLength": 180,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Send them their pairing code",
+      "maxLength": 56,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Without it, new senders get no reply at all until you approve them.",
+      "maxLength": 134,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Code lifetime (minutes)",
+      "maxLength": 46,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_12": {
+      "type": "text",
+      "sample": "Codes sent per day",
+      "maxLength": 36,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "0 sends none.",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_13": {
+      "type": "text",
+      "sample": "Most people waiting",
+      "maxLength": 38,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "0 means no limit.",
+      "maxLength": 34,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_14": {
+      "type": "text",
+      "sample": "People",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "People who messaged and are waiting for you. Check the code they tell you against the one shown here.",
+      "maxLength": 202,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Add number",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-43"
+    },
+    "h_control_md_4": {
+      "type": "text",
+      "sample": "Waiting",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-45"
+    },
+    "h_control_md_5": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-46"
+    },
+    "h_control_md_6": {
+      "type": "text",
+      "sample": "Removed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-47"
+    },
+    "h_control_md_7": {
+      "type": "text",
+      "sample": "Blocked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-48"
+    },
+    "h_control_md_8": {
+      "type": "text",
+      "sample": "Opted out",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-49"
+    },
+    "role_checkbox_translate_y_2px": {
+      "type": "text",
+      "sample": "Contact",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_2": {
+      "type": "text",
+      "sample": "Type",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_3": {
+      "type": "text",
+      "sample": "Code",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_4": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_5": {
+      "type": "text",
+      "sample": "Requested",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_right": {
+      "type": "text",
+      "sample": "Actions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "U0NWLENA01",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Lena Ortiz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Person",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "PAIR-7Q4M",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "font_medium_15": {
+      "type": "text",
+      "sample": "Waiting",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_12": {
+      "type": "relative-time",
+      "sample": "8 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-50"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Decline",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-51"
+    },
+    "text_micro_6": {
+      "type": "text",
+      "sample": "Block",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-52"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "U0NWRAVI02",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Ravi Menon",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "Person",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "PAIR-3HXA",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "font_medium_16": {
+      "type": "text",
+      "sample": "Waiting",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_14": {
+      "type": "relative-time",
+      "sample": "42 min ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "time"
+    },
+    "text_micro_7": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-53"
+    },
+    "text_micro_8": {
+      "type": "text",
+      "sample": "Decline",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-54"
+    },
+    "text_micro_9": {
+      "type": "text",
+      "sample": "Block",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-55"
+    },
+    "font_medium_17": {
+      "type": "text",
+      "sample": "Slack people and answers",
+      "maxLength": 48,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_18": {
+      "type": "text",
+      "sample": "When a person is not linked",
+      "maxLength": 54,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_4": {
+      "type": "text",
+      "sample": "Ask to link account",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_15": {
+      "type": "text",
+      "sample": "Ask to link account",
+      "maxLength": 38,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_16": {
+      "type": "text",
+      "sample": "Use service user",
+      "maxLength": 32,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Ask sends a one-time link to connect their account. The other option runs them as the Run as user.",
+      "maxLength": 196,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_19": {
+      "type": "text",
+      "sample": "Where to send answers",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_5": {
+      "type": "text",
+      "sample": "Private when marked sensitive",
+      "maxLength": 58,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_17": {
+      "type": "text",
+      "sample": "Reply where asked",
+      "maxLength": 34,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_18": {
+      "type": "text",
+      "sample": "Private when marked sensitive",
+      "maxLength": 58,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_19": {
+      "type": "text",
+      "sample": "Always private",
+      "maxLength": 28,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Private answers are sent as a direct message. Needs the im:write Slack permission.",
+      "maxLength": 164,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_20": {
+      "type": "text",
+      "sample": "Ask for feedback after answers",
+      "maxLength": 60,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Posts a thumbs up / thumbs down question in the thread.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_21": {
+      "type": "text",
+      "sample": "Room & group chat admission",
+      "maxLength": 54,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_4": {
+      "type": "text",
+      "sample": "Controls how this channel admits messages from rooms, channels, or group chats (as opposed to one-on-one direct messages, which use the policy above).",
+      "maxLength": 300,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_22": {
+      "type": "text",
+      "sample": "Room policy",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_6": {
+      "type": "text",
+      "sample": "Allow list — require an approved room",
+      "maxLength": 74,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_20": {
+      "type": "text",
+      "sample": "Allow list — require an approved room",
+      "maxLength": 74,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_21": {
+      "type": "text",
+      "sample": "Disabled — reject room messages",
+      "maxLength": 62,
+      "where": "text",
+      "element": "option"
+    },
+    "font_medium_23": {
+      "type": "text",
+      "sample": "Sender policy within a room",
+      "maxLength": 54,
+      "where": "text",
+      "element": "label"
+    },
+    "flex_col_22": {
+      "type": "text",
+      "sample": "Allow list — require an approved sender",
+      "maxLength": 78,
+      "where": "text",
+      "element": "option"
+    },
+    "font_medium_24": {
+      "type": "text",
+      "sample": "Require @mention in rooms",
+      "maxLength": 50,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Only respond when the bot is explicitly mentioned",
+      "maxLength": 98,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_25": {
+      "type": "text",
+      "sample": "Test message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_5": {
+      "type": "text",
+      "sample": "Send a test message to check that this channel can deliver messages.",
+      "maxLength": 136,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_26": {
+      "type": "text",
+      "sample": "Recipient ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_7": {
+      "type": "text",
+      "sample": "Send",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-69"
+    },
+    "font_medium_27": {
+      "type": "text",
+      "sample": "Inbound webhook URL",
+      "maxLength": 38,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_6": {
+      "type": "text",
+      "sample": "Paste this URL into the channel provider's webhook settings.",
+      "maxLength": 120,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_28": {
+      "type": "text",
+      "sample": "Webhook URL",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_29": {
+      "type": "text",
+      "sample": "Routing rules",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_7": {
+      "type": "text",
+      "sample": "Rules are checked from top to bottom. The first match decides where a message goes.",
+      "maxLength": 166,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "When a message arrives in #warehouse, send it to Order status reply flow",
+      "maxLength": 144,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm_2": {
+      "type": "text",
+      "sample": "When a message arrives in #sales-desk, send it to Lead Qualifier agent",
+      "maxLength": 140,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "When any message arrives, send it to Support Triage agent",
+      "maxLength": 114,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_10": {
+      "type": "text",
+      "sample": "Add a rule",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-90"
+    },
+    "font_medium_30": {
+      "type": "text",
+      "sample": "Test a message",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_11": {
+      "type": "text",
+      "sample": "See which rule matches",
+      "maxLength": 44,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-94"
+    },
+    "font_medium_31": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "dark_text_green_300_2": {
+      "type": "text",
+      "sample": "On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground_8": {
+      "type": "text",
+      "sample": "Last message:",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground_9": {
+      "type": "relative-time",
+      "sample": "19 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro_12": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-95"
+    },
+    "text_muted_foreground_10": {
+      "type": "text",
+      "sample": "Messages, last 24 hours",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold": {
+      "type": "number",
+      "sample": "49",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_11": {
+      "type": "text",
+      "sample": "Problems, last 24 hours",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_12": {
+      "type": "text",
+      "sample": "Messages, last 7 days",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_3": {
+      "type": "number",
+      "sample": "331",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_13": {
+      "type": "text",
+      "sample": "Usage, last 7 days",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_4": {
+      "type": "currency",
+      "sample": "$4.82",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_14": {
+      "type": "text",
+      "sample": "1.3M",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground_15": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "role_checkbox_translate_y_2px_6": {
+      "type": "text",
+      "sample": "Received",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_7": {
+      "type": "text",
+      "sample": "From",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_8": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_9": {
+      "type": "text",
+      "sample": "Handled by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_10": {
+      "type": "relative-time",
+      "sample": "19 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_11": {
+      "type": "text",
+      "sample": "Jonas Weber",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_3": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_12": {
+      "type": "text",
+      "sample": "Order status reply",
+      "maxLength": 36,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_13": {
+      "type": "relative-time",
+      "sample": "27 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_14": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_4": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_15": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_16": {
+      "type": "relative-time",
+      "sample": "42 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_17": {
+      "type": "text",
+      "sample": "Ravi Menon",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_amber_300": {
+      "type": "text",
+      "sample": "Blocked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground_16": {
+      "type": "text",
+      "sample": "Waiting for approval (pairing code PAIR-3HXA).",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "role_checkbox_translate_y_2px_18": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "text_micro_13": {
+      "type": "text",
+      "sample": "Why didn't this run?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-96"
+    },
+    "role_checkbox_translate_y_2px_19": {
+      "type": "relative-time",
+      "sample": "1 hour ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_20": {
+      "type": "text",
+      "sample": "Lena Ortiz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_5": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_21": {
+      "type": "text",
+      "sample": "Lead Qualifier",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "font_medium_32": {
+      "type": "text",
+      "sample": "Slack people",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_33": {
+      "type": "text",
+      "sample": "Link a person",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_17": {
+      "type": "text",
+      "sample": "People normally link themselves from Slack. As an admin you can link someone directly using their Slack workspace ID, Slack user ID and their Huf user.",
+      "maxLength": 302,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_34": {
+      "type": "text",
+      "sample": "Workspace ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_35": {
+      "type": "text",
+      "sample": "Slack user ID",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_36": {
+      "type": "text",
+      "sample": "Huf user (email)",
+      "maxLength": 32,
+      "where": "text",
+      "element": "label"
+    },
+    "text_micro_14": {
+      "type": "text",
+      "sample": "Link person",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-100"
+    },
+    "font_medium_37": {
+      "type": "text",
+      "sample": "Linked people",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_15": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-101"
+    },
+    "font_medium_38": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_18": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_19": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_20": {
+      "type": "text",
+      "sample": "U0NWMAYA01",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "tracking_wide": {
+      "type": "text",
+      "sample": "Linked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_micro_16": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-102"
+    },
+    "font_medium_39": {
+      "type": "text",
+      "sample": "Jonas Weber",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_21": {
+      "type": "text",
+      "sample": "jonas@example.com",
+      "maxLength": 34,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_22": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_23": {
+      "type": "text",
+      "sample": "U0NWJONAS2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "tracking_wide_2": {
+      "type": "text",
+      "sample": "Linked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_micro_17": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-103"
+    },
+    "font_medium_40": {
+      "type": "text",
+      "sample": "Slack setup",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_41": {
+      "type": "text",
+      "sample": "1. Create the Slack app",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_24": {
+      "type": "text",
+      "sample": "Copy the app manifest, then create a Slack app from it. It sets up the permissions and the events address for you.",
+      "maxLength": 228,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_18": {
+      "type": "text",
+      "sample": "Copy app manifest",
+      "maxLength": 34,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-104"
+    },
+    "text_micro_19": {
+      "type": "text",
+      "sample": "Create app from manifest",
+      "maxLength": 48,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.link-105"
+    },
+    "font_medium_42": {
+      "type": "text",
+      "sample": "2. Add your keys",
+      "maxLength": 32,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_25": {
+      "type": "text",
+      "sample": "Install the app to your workspace, then open the Credentials tab and paste the Bot User OAuth Token (starts with xoxb-) and the Signing Secret. Then, in Slack, click Save Request URL under Event Subscriptions.",
+      "maxLength": 418,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_43": {
+      "type": "text",
+      "sample": "3. Check the connection",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_20": {
+      "type": "text",
+      "sample": "Verify connection",
+      "maxLength": 34,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-106"
+    },
+    "font_medium_44": {
+      "type": "text",
+      "sample": "Bot token added",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_26": {
+      "type": "text",
+      "sample": "A bot token is saved.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_45": {
+      "type": "text",
+      "sample": "Token is a bot token",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_27": {
+      "type": "text",
+      "sample": "This is a bot token (starts with xoxb-).",
+      "maxLength": 80,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_46": {
+      "type": "text",
+      "sample": "Slack accepts the token",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_28": {
+      "type": "text",
+      "sample": "Connected to Northwind Trading.",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_47": {
+      "type": "text",
+      "sample": "Required permissions granted",
+      "maxLength": 56,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_29": {
+      "type": "text",
+      "sample": "All required permissions are granted.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_48": {
+      "type": "text",
+      "sample": "Signing secret added",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_30": {
+      "type": "text",
+      "sample": "A signing secret is saved.",
+      "maxLength": 52,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_49": {
+      "type": "text",
+      "sample": "Slack confirmed the Request URL",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_31": {
+      "type": "text",
+      "sample": "Slack has confirmed the events address.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_50": {
+      "type": "text",
+      "sample": "People can connect their own account",
+      "maxLength": 72,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_32": {
+      "type": "text",
+      "sample": "Direct messages are not open, so people who have not been approved cannot reach the connect prompt.",
+      "maxLength": 198,
+      "where": "text",
+      "element": "p"
+    },
+    "space_y_0_5": {
+      "type": "text",
+      "sample": "Set the access policy to Open so people can connect their own account, or add each person to the access list first.",
+      "maxLength": 230,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_51": {
+      "type": "text",
+      "sample": "Shared channels (Slack Connect)",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_33": {
+      "type": "text",
+      "sample": "Channels shared with other organizations are not supported. Huf works in channels and DMs inside your own workspace.",
+      "maxLength": 232,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_52": {
+      "type": "text",
+      "sample": "4. Send a test message",
+      "maxLength": 44,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_34": {
+      "type": "text",
+      "sample": "Huf will send a direct message to one person. Enter their Slack member ID or their email.",
+      "maxLength": 178,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_53": {
+      "type": "text",
+      "sample": "Slack member ID",
+      "maxLength": 30,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_54": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_micro_21": {
+      "type": "text",
+      "sample": "Send test message to me",
+      "maxLength": 46,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-109"
+    },
+    "text_ui_text_8": {
+      "type": "text",
+      "sample": "Delete gateway",
+      "maxLength": 28,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-110"
+    },
+    "text_ui_text_9": {
+      "type": "text",
+      "sample": "Save channel settings",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-gateway-detail-channel.button-111"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-gateway-detail-channel.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-15"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-18"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-29"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. gateway-service@yourcompany.com",
+      "maxLength": 72,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-31"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "gateway-bot@example.com",
+      "maxLength": 46,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.input-31"
+    },
+    "border_arialabel": {
+      "type": "text",
+      "sample": "Connection status",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "__none",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_3": {
+      "type": "text",
+      "sample": "Flow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_4": {
+      "type": "text",
+      "sample": "__none",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_5": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_6": {
+      "type": "text",
+      "sample": "Invoice Reconciler",
+      "maxLength": 36,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_7": {
+      "type": "text",
+      "sample": "Lead Qualifier",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_8": {
+      "type": "text",
+      "sample": "Order Status Bot",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_9": {
+      "type": "text",
+      "sample": "Policy Librarian",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_10": {
+      "type": "text",
+      "sample": "Weekly Ops Digest",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_11": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_12": {
+      "type": "text",
+      "sample": "Allow list",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_13": {
+      "type": "text",
+      "sample": "Pairing",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_14": {
+      "type": "text",
+      "sample": "Disabled",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "data_state_unchecked_bg_input_value_2": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-38"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "60",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.input-40"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "20",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.input-41"
+    },
+    "text_ui_text_value_4": {
+      "type": "number",
+      "sample": "50",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.input-42"
+    },
+    "text_steel_title": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:52 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "text_steel_title_2": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 8:18 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "time"
+    },
+    "flex_col_value_15": {
+      "type": "text",
+      "sample": "Ask to link account",
+      "maxLength": 38,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_16": {
+      "type": "text",
+      "sample": "Use service user",
+      "maxLength": 32,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_17": {
+      "type": "text",
+      "sample": "Reply where asked",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_18": {
+      "type": "text",
+      "sample": "Private when marked sensitive",
+      "maxLength": 58,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_19": {
+      "type": "text",
+      "sample": "Always private",
+      "maxLength": 28,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "data_state_unchecked_bg_input_value_3": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-60"
+    },
+    "flex_col_value_20": {
+      "type": "text",
+      "sample": "Allow list",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_21": {
+      "type": "text",
+      "sample": "Disabled",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_22": {
+      "type": "text",
+      "sample": "Allow list",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "data_state_unchecked_bg_input_value_4": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-66"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "User, chat or channel ID",
+      "maxLength": 48,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-68"
+    },
+    "text_xs_title": {
+      "type": "text",
+      "sample": "http://huf.mock/api/method/huf.ai.gateways.slack_events.handle_slack_event?gateway_name=Northwind%20Team",
+      "maxLength": 208,
+      "where": "attr:title",
+      "element": "huf-gateway-detail-channel.input-70"
+    },
+    "text_xs_value": {
+      "type": "text",
+      "sample": "http://huf.mock/api/method/huf.ai.gateways.slack_events.handle_slack_event?gateway_name=Northwind%20Team",
+      "maxLength": 208,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.input-70"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Copy Webhook URL",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-71"
+    },
+    "border_arialabel_2": {
+      "type": "text",
+      "sample": "Routing rules",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "section"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-72"
+    },
+    "text_micro_arialabel_2": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-73"
+    },
+    "data_state_unchecked_bg_input_arialabel": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-74"
+    },
+    "data_state_unchecked_bg_input_value_5": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-74"
+    },
+    "text_ui_text_arialabel_2": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-76"
+    },
+    "text_ui_text_arialabel_3": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-77"
+    },
+    "text_micro_arialabel_3": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-78"
+    },
+    "text_micro_arialabel_4": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-79"
+    },
+    "data_state_unchecked_bg_input_arialabel_2": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-80"
+    },
+    "data_state_unchecked_bg_input_value_6": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-80"
+    },
+    "text_ui_text_arialabel_4": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-82"
+    },
+    "text_ui_text_arialabel_5": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-83"
+    },
+    "text_micro_arialabel_5": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-84"
+    },
+    "text_micro_arialabel_6": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-85"
+    },
+    "data_state_unchecked_bg_input_arialabel_3": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-86"
+    },
+    "data_state_unchecked_bg_input_value_7": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail-channel.button-86"
+    },
+    "text_ui_text_arialabel_6": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-88"
+    },
+    "text_ui_text_arialabel_7": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-89"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "Conversation ID",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-91"
+    },
+    "text_ui_text_arialabel_8": {
+      "type": "text",
+      "sample": "Conversation ID",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.input-91"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "text",
+      "sample": "Sender ID",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-92"
+    },
+    "text_ui_text_arialabel_9": {
+      "type": "text",
+      "sample": "Sender ID",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.input-92"
+    },
+    "text_ui_text_placeholder_5": {
+      "type": "text",
+      "sample": "Thread ID (optional)",
+      "maxLength": 40,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-93"
+    },
+    "text_ui_text_arialabel_10": {
+      "type": "text",
+      "sample": "Thread ID",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.input-93"
+    },
+    "border_arialabel_3": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "section"
+    },
+    "border_arialabel_4": {
+      "type": "text",
+      "sample": "Slack people",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "section"
+    },
+    "text_ui_text_placeholder_6": {
+      "type": "text",
+      "sample": "T0123ABCD",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-97"
+    },
+    "text_ui_text_placeholder_7": {
+      "type": "text",
+      "sample": "U0123ABCD",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-98"
+    },
+    "text_ui_text_placeholder_8": {
+      "type": "text",
+      "sample": "you@company.com",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-99"
+    },
+    "border_arialabel_5": {
+      "type": "text",
+      "sample": "Linked people",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "ul"
+    },
+    "text_micro_arialabel_7": {
+      "type": "text",
+      "sample": "Remove link for Maya Fernandes",
+      "maxLength": 60,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-102"
+    },
+    "text_micro_arialabel_8": {
+      "type": "text",
+      "sample": "Remove link for Jonas Weber",
+      "maxLength": 54,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.button-103"
+    },
+    "border_arialabel_6": {
+      "type": "text",
+      "sample": "Slack setup",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "section"
+    },
+    "space_y_2_arialabel": {
+      "type": "text",
+      "sample": "Connection checks",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "ul"
+    },
+    "text_ui_text_placeholder_9": {
+      "type": "text",
+      "sample": "U012ABCDE",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-107"
+    },
+    "text_ui_text_placeholder_10": {
+      "type": "text",
+      "sample": "you@company.com",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail-channel.input-108"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail-channel.section-112"
+    }
+  }
+}
