@@ -1,0 +1,97 @@
+{
+  "component": "huf-flow-panel-agent",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-flow-panel-agent.tab-test",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(29, 29, 31) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-flow-panel-agent.tab-test",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-flow-panel-agent.tab-test",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(29, 29, 31) none 3px"
+        }
+      },
+      "screenshot": "states/active.png"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-flow-panel-agent.input-2",
+      "changes": [
+        {
+          "element": "huf-flow-panel-agent.input-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "text",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "a failed step is a run state: see huf-flow-run-viewer"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "skeleton flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "empty builder (\"Choose a trigger\") is backlog"
+    }
+  }
+}

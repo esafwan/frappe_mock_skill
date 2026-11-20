@@ -1,0 +1,774 @@
+{
+ "$comment": "Fictional flows for the HUF flows area (scripts/huf/fixtures/flows.mjs). Business: Harbor Goods, a made-up online store. Times are relative to the fixed clock 2026-01-01T09:00Z.",
+ "cards": [
+  {
+   "flow_id": "whatsapp-order-desk",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "description": "Answers customer messages on WhatsApp: order questions get a checked update, everything else an answer from the help center.",
+   "category": "Customer support",
+   "status": "Draft",
+   "modified": "2026-01-01T08:12:00Z",
+   "trigger": {
+    "type": "whatsapp",
+    "gateway": "harbor-wa",
+    "gateway_label": "Harbor Goods WhatsApp"
+   },
+   "steps": [
+    {
+     "type": "state.get"
+    },
+    {
+     "type": "condition"
+    },
+    {
+     "type": "agent.run"
+    },
+    {
+     "type": "agent.run"
+    },
+    {
+     "type": "human.approval"
+    },
+    {
+     "type": "output"
+    },
+    {
+     "type": "output"
+    },
+    {
+     "type": "output"
+    }
+   ],
+   "step_count": 8,
+   "last_run": {
+    "status": "Success",
+    "stale": false,
+    "at": "2026-01-01T08:41:00Z"
+   }
+  },
+  {
+   "flow_id": "return-request-triage",
+   "flow_name": "Harbor Goods - Return request triage",
+   "description": "Reads new return requests, checks the order window and asks the store lead before a refund goes out.",
+   "category": "Customer support",
+   "status": "Active",
+   "modified": "2025-12-31T16:20:00Z",
+   "trigger": {
+    "type": "webhook",
+    "method": "POST"
+   },
+   "steps": [
+    {
+     "type": "agent.run"
+    },
+    {
+     "type": "condition"
+    },
+    {
+     "type": "human.approval"
+    },
+    {
+     "type": "doc.create"
+    },
+    {
+     "type": "output"
+    }
+   ],
+   "step_count": 5,
+   "last_run": {
+    "status": "Waiting Approval",
+    "stale": false,
+    "at": "2026-01-01T07:55:00Z"
+   }
+  },
+  {
+   "flow_id": "daily-stock-digest",
+   "flow_name": "Daily stock digest",
+   "description": "Every morning at 7, totals low-stock items and posts a short summary to the team channel.",
+   "category": "Operations",
+   "status": "Active",
+   "modified": "2025-12-29T10:02:00Z",
+   "trigger": {
+    "type": "schedule",
+    "cron": "0 7 * * *"
+   },
+   "steps": [
+    {
+     "type": "transform"
+    },
+    {
+     "type": "foreach"
+    },
+    {
+     "type": "tool.call",
+     "tool_id": "slack_send_message"
+    },
+    {
+     "type": "output"
+    }
+   ],
+   "step_count": 4,
+   "last_run": {
+    "status": "Success",
+    "stale": false,
+    "at": "2026-01-01T07:00:00Z"
+   }
+  },
+  {
+   "flow_id": "new-lead-follow-up",
+   "flow_name": "New lead follow-up",
+   "description": "When a lead is created, an agent scores it and drafts a first email for the sales owner.",
+   "category": "Sales",
+   "status": "Active",
+   "modified": "2025-12-27T14:45:00Z",
+   "trigger": {
+    "type": "doc-event",
+    "doctype": "Lead",
+    "event": "after_insert"
+   },
+   "steps": [
+    {
+     "type": "agent.run"
+    },
+    {
+     "type": "router.llm"
+    },
+    {
+     "type": "tool.call",
+     "tool_id": "gmail_send_email"
+    },
+    {
+     "type": "output"
+    },
+    {
+     "type": "output"
+    }
+   ],
+   "step_count": 5,
+   "last_run": {
+    "status": "Failed",
+    "stale": false,
+    "at": "2025-12-31T18:30:00Z",
+    "failed_step": "Send first email"
+   }
+  },
+  {
+   "flow_id": "invoice-approval-telegram",
+   "flow_name": "Invoice approvals on Telegram",
+   "description": "",
+   "category": "Finance",
+   "status": "Draft",
+   "modified": "2025-12-22T09:10:00Z",
+   "trigger": {
+    "type": "telegram",
+    "gateway": "fin-tg",
+    "gateway_label": "Finance bot"
+   },
+   "steps": [
+    {
+     "type": "condition"
+    },
+    {
+     "type": "human.approval"
+    },
+    {
+     "type": "output"
+    }
+   ],
+   "step_count": 3,
+   "last_run": null
+  }
+ ],
+ "categories": [
+  "Customer support",
+  "Finance",
+  "Operations",
+  "Sales"
+ ],
+ "flows": {
+  "whatsapp-order-desk": {
+   "flow_id": "whatsapp-order-desk",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "description": "Answers customer messages on WhatsApp: order questions get a checked update, everything else an answer from the help center.",
+   "category": "Customer support",
+   "status": "Draft",
+   "version": 7,
+   "schema_version": "1.0.0",
+   "definition_json": {
+    "schema_version": "1.0.0",
+    "profile": "flow",
+    "fingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry": [
+     "wa_in"
+    ],
+    "nodes": [
+     {
+      "id": "wa_in",
+      "type": "trigger.whatsapp",
+      "config": {
+       "gateway": "harbor-wa",
+       "params": []
+      },
+      "next": "find_order",
+      "_label": "WhatsApp message",
+      "_position": {
+       "x": 250,
+       "y": 0
+      }
+     },
+     {
+      "id": "find_order",
+      "type": "state.get",
+      "config": {
+       "key": {
+        "$from": "input.wa_id"
+       },
+       "default": null
+      },
+      "next": "is_order",
+      "_label": "Look up their orders",
+      "_position": {
+       "x": 250,
+       "y": 140
+      }
+     },
+     {
+      "id": "is_order",
+      "type": "condition",
+      "config": {
+       "expression": "'order' in input['text']",
+       "on_true": "write_reply",
+       "on_false": "help_answer"
+      },
+      "_label": "Asking about an order?",
+      "_position": {
+       "x": 250,
+       "y": 280
+      }
+     },
+     {
+      "id": "write_reply",
+      "type": "agent.run",
+      "config": {
+       "agent": "Order Status Bot",
+       "prompt": "You are Harbor Goods support. Write a friendly two-sentence update for {customer} whose order {order} is currently {status}.",
+       "prompt_bindings": {
+        "customer": {
+         "$from": "input.display_name"
+        },
+        "order": {
+         "$from": "find_order.order_no"
+        },
+        "status": {
+         "$from": "find_order.status"
+        }
+       }
+      },
+      "next": "check_reply",
+      "_label": "Write the reply",
+      "_position": {
+       "x": 90,
+       "y": 420
+      }
+     },
+     {
+      "id": "help_answer",
+      "type": "agent.run",
+      "config": {
+       "agent": "Policy Librarian",
+       "prompt": "Answer {sender} from the help center in two friendly sentences. Question: {message}",
+       "prompt_bindings": {
+        "message": {
+         "$from": "input.text"
+        },
+        "sender": {
+         "$from": "input.display_name"
+        }
+       }
+      },
+      "next": "help_done",
+      "_label": "Answer from help center",
+      "_position": {
+       "x": 410,
+       "y": 420
+      }
+     },
+     {
+      "id": "check_reply",
+      "type": "human.approval",
+      "config": {
+       "message": "Send this reply to the customer?",
+       "approver_type": "role",
+       "approver_role": "Huf User",
+       "approve_next": "order_done",
+       "reject_next": "handoff"
+      },
+      "_label": "Check before sending",
+      "_position": {
+       "x": 90,
+       "y": 560
+      }
+     },
+     {
+      "id": "help_done",
+      "type": "output",
+      "config": {
+       "value": {
+        "$from": "help_answer"
+       },
+       "outcome": {
+        "label": "Answered on WhatsApp",
+        "tone": "good"
+       }
+      },
+      "_label": "Answer sent",
+      "_position": {
+       "x": 410,
+       "y": 560
+      }
+     },
+     {
+      "id": "order_done",
+      "type": "output",
+      "config": {
+       "value": {
+        "$from": "write_reply"
+       },
+       "outcome": {
+        "label": "Order update sent",
+        "tone": "good"
+       }
+      },
+      "_label": "Reply sent",
+      "_position": {
+       "x": -50,
+       "y": 700
+      }
+     },
+     {
+      "id": "handoff",
+      "type": "output",
+      "config": {
+       "value": "rejected",
+       "outcome": {
+        "label": "Handed to a person",
+        "tone": "neutral"
+       }
+      },
+      "_label": "Hand to a person",
+      "_position": {
+       "x": 230,
+       "y": 700
+      }
+     }
+    ],
+    "contract": {
+     "input_schema": {
+      "type": "object"
+     },
+     "output_schema": {
+      "type": "object"
+     },
+     "applies_when": [],
+     "permission_envelope": {
+      "read": [],
+      "write": [],
+      "http": "none",
+      "code": "none"
+     },
+     "limits": {
+      "max_nodes": 200,
+      "max_rows": 10000,
+      "max_output_bytes": 1000000,
+      "max_parallel_calls": 4,
+      "max_foreach_iterations": 1000,
+      "max_external_calls": 200,
+      "max_writes": 100,
+      "max_wall_time_ms": 300000,
+      "fail_closed": true
+     }
+    }
+   }
+  }
+ },
+ "runs": {
+  "FR-0042": {
+   "flow_id": "whatsapp-order-desk",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "flow_version": 7,
+   "mode": "normal",
+   "trigger_type": "whatsapp",
+   "trigger_event": null,
+   "node_labels": {
+    "wa_in": "WhatsApp message",
+    "find_order": "Look up their orders",
+    "is_order": "Asking about an order?",
+    "write_reply": "Write the reply",
+    "help_answer": "Answer from help center",
+    "check_reply": "Check before sending",
+    "help_done": "Answer sent",
+    "order_done": "Reply sent",
+    "handoff": "Hand to a person"
+   },
+   "step_meta": {
+    "wa_in": {
+     "type": "trigger.whatsapp"
+    },
+    "find_order": {
+     "type": "state.get"
+    },
+    "is_order": {
+     "type": "condition"
+    },
+    "write_reply": {
+     "type": "agent.run"
+    },
+    "help_answer": {
+     "type": "agent.run"
+    },
+    "check_reply": {
+     "type": "human.approval"
+    },
+    "help_done": {
+     "type": "output",
+     "outcome": {
+      "label": "Answered on WhatsApp",
+      "tone": "good"
+     }
+    },
+    "order_done": {
+     "type": "output",
+     "outcome": {
+      "label": "Order update sent",
+      "tone": "good"
+     }
+    },
+    "handoff": {
+     "type": "output",
+     "outcome": {
+      "label": "Handed to a person",
+      "tone": "neutral"
+     }
+    }
+   },
+   "last_agent_run": null,
+   "stale": false,
+   "can_mark_failed": false,
+   "stale_after_minutes": 30,
+   "started_by": "maya@example.com",
+   "started_by_name": "Maya Fernandes",
+   "flow_run_id": "FR-0042",
+   "run_number": 42,
+   "run_mode": "Real",
+   "status": "Success",
+   "current_node_id": "order_done",
+   "hop_count": 5,
+   "context_json": {
+    "text": "Hi, where is my order HG-10482? It said shipped on Monday.",
+    "display_name": "Priya Nair",
+    "wa_id": "+15550100231",
+    "message_id": "wamid.HG0001",
+    "__node_outputs__": {
+     "wa_in": {
+      "text": "Hi, where is my order HG-10482? It said shipped on Monday.",
+      "display_name": "Priya Nair",
+      "wa_id": "+15550100231",
+      "message_id": "wamid.HG0001"
+     },
+     "find_order": {
+      "order_no": "HG-10482",
+      "status": "Shipped",
+      "courier": "Coastline Express",
+      "eta": "Friday"
+     },
+     "is_order": true,
+     "write_reply": "Hi Priya, your order HG-10482 left our warehouse on Monday and is with the courier now. It should reach you by Friday, and we'll message you the tracking link as soon as it updates.",
+     "check_reply": {
+      "decision": "approved",
+      "decided_by": "Maya Fernandes",
+      "decided_at": "2026-01-01T08:40:30Z",
+      "comment": "Looks good, send it."
+     },
+     "order_done": "Hi Priya, your order HG-10482 left our warehouse on Monday and is with the courier now. It should reach you by Friday, and we'll message you the tracking link as soon as it updates."
+    }
+   },
+   "waiting": {},
+   "last_error": null,
+   "started_at": "2026-01-01T08:38:12Z",
+   "completed_at": "2026-01-01T08:41:02Z",
+   "modified_at": "2026-01-01T08:41:02Z",
+   "outcome": {
+    "label": "Order update sent",
+    "tone": "good"
+   }
+  },
+  "FR-0043": {
+   "flow_id": "whatsapp-order-desk",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "flow_version": 7,
+   "mode": "normal",
+   "trigger_type": "whatsapp",
+   "trigger_event": null,
+   "node_labels": {
+    "wa_in": "WhatsApp message",
+    "find_order": "Look up their orders",
+    "is_order": "Asking about an order?",
+    "write_reply": "Write the reply",
+    "help_answer": "Answer from help center",
+    "check_reply": "Check before sending",
+    "help_done": "Answer sent",
+    "order_done": "Reply sent",
+    "handoff": "Hand to a person"
+   },
+   "step_meta": {
+    "wa_in": {
+     "type": "trigger.whatsapp"
+    },
+    "find_order": {
+     "type": "state.get"
+    },
+    "is_order": {
+     "type": "condition"
+    },
+    "write_reply": {
+     "type": "agent.run"
+    },
+    "help_answer": {
+     "type": "agent.run"
+    },
+    "check_reply": {
+     "type": "human.approval"
+    },
+    "help_done": {
+     "type": "output",
+     "outcome": {
+      "label": "Answered on WhatsApp",
+      "tone": "good"
+     }
+    },
+    "order_done": {
+     "type": "output",
+     "outcome": {
+      "label": "Order update sent",
+      "tone": "good"
+     }
+    },
+    "handoff": {
+     "type": "output",
+     "outcome": {
+      "label": "Handed to a person",
+      "tone": "neutral"
+     }
+    }
+   },
+   "last_agent_run": null,
+   "stale": false,
+   "can_mark_failed": false,
+   "stale_after_minutes": 30,
+   "started_by": "maya@example.com",
+   "started_by_name": "Maya Fernandes",
+   "flow_run_id": "FR-0043",
+   "run_number": 43,
+   "run_mode": "Real",
+   "status": "Waiting Approval",
+   "current_node_id": "check_reply",
+   "hop_count": 4,
+   "context_json": {
+    "text": "Can I change the delivery address for order HG-10517?",
+    "display_name": "Daniel Okafor",
+    "wa_id": "+15550100877",
+    "message_id": "wamid.HG0002",
+    "__node_outputs__": {
+     "wa_in": {
+      "text": "Can I change the delivery address for order HG-10517?",
+      "display_name": "Daniel Okafor",
+      "wa_id": "+15550100877"
+     },
+     "find_order": {
+      "order_no": "HG-10517",
+      "status": "Packing",
+      "courier": "Coastline Express",
+      "eta": "Tuesday"
+     },
+     "is_order": true,
+     "write_reply": "Hi Daniel, order HG-10517 is still being packed, so we can update the delivery address for you. Please reply with the new address and we'll confirm it today."
+    }
+   },
+   "waiting": {
+    "type": "approval",
+    "node_id": "check_reply",
+    "title": "Check before sending",
+    "message": "Send this reply to the customer?",
+    "approver_type": "role",
+    "approver_role": "Huf User"
+   },
+   "last_error": null,
+   "started_at": "2026-01-01T08:52:40Z",
+   "completed_at": null,
+   "modified_at": "2026-01-01T08:53:05Z",
+   "outcome": null,
+   "can_decide": true,
+   "cannot_decide_reason": null
+  }
+ },
+ "run_list": [
+  {
+   "name": "FR-0043",
+   "flow_id": "whatsapp-order-desk",
+   "flow_version": 7,
+   "mode": "normal",
+   "run_mode": "Real",
+   "status": "Waiting Approval",
+   "current_node_id": "check_reply",
+   "hop_count": 4,
+   "trigger_type": "whatsapp",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "stale": false,
+   "can_mark_failed": false,
+   "started_at": "2026-01-01T08:52:40Z",
+   "completed_at": null,
+   "started_by": "maya@example.com",
+   "started_by_name": "Maya Fernandes",
+   "run_number": 43,
+   "outcome": null
+  },
+  {
+   "name": "FR-0042",
+   "flow_id": "whatsapp-order-desk",
+   "flow_version": 7,
+   "mode": "normal",
+   "run_mode": "Real",
+   "status": "Success",
+   "current_node_id": "order_done",
+   "hop_count": 5,
+   "trigger_type": "whatsapp",
+   "flow_name": "Harbor Goods - WhatsApp order desk",
+   "stale": false,
+   "can_mark_failed": false,
+   "started_at": "2026-01-01T08:38:12Z",
+   "completed_at": "2026-01-01T08:41:02Z",
+   "started_by": "maya@example.com",
+   "started_by_name": "Maya Fernandes",
+   "run_number": 42,
+   "outcome": {
+    "label": "Order update sent",
+    "tone": "good"
+   }
+  }
+ ],
+ "catalog": {
+  "trigger": {
+   "id": "wa_in",
+   "title": "WhatsApp message",
+   "type": "trigger.whatsapp",
+   "tool_id": null,
+   "is_trigger": true,
+   "kind": "whatsapp",
+   "source": "last_run",
+   "ran_at": "2026-01-01T08:38:12Z",
+   "has_sample": true,
+   "fields": [
+    {
+     "path": "input.text",
+     "label": "Message text",
+     "type": "text",
+     "sample": "Hi, where is my order HG-10482? It said shipped on Monday.",
+     "untrusted": true
+    },
+    {
+     "path": "input.display_name",
+     "label": "Sender name",
+     "type": "text",
+     "sample": "Priya Nair",
+     "untrusted": true
+    },
+    {
+     "path": "input.wa_id",
+     "label": "WhatsApp number",
+     "type": "text",
+     "sample": "+15550100231"
+    },
+    {
+     "path": "input.received_at",
+     "label": "Received at",
+     "type": "date",
+     "sample": "2026-01-01T08:38:12Z"
+    }
+   ]
+  },
+  "steps": {
+   "find_order": {
+    "id": "find_order",
+    "title": "Look up their orders",
+    "type": "state.get",
+    "tool_id": null,
+    "is_trigger": false,
+    "source": "last_run",
+    "ran_at": "2026-01-01T08:38:13Z",
+    "has_sample": true,
+    "fields": [
+     {
+      "path": "find_order.order_no",
+      "label": "Order no",
+      "type": "text",
+      "sample": "HG-10482"
+     },
+     {
+      "path": "find_order.status",
+      "label": "Status",
+      "type": "text",
+      "sample": "Shipped"
+     },
+     {
+      "path": "find_order.courier",
+      "label": "Courier",
+      "type": "text",
+      "sample": "Coastline Express"
+     },
+     {
+      "path": "find_order.eta",
+      "label": "Eta",
+      "type": "text",
+      "sample": "Friday"
+     }
+    ]
+   },
+   "write_reply": {
+    "id": "write_reply",
+    "title": "Write the reply",
+    "type": "agent.run",
+    "tool_id": null,
+    "is_trigger": false,
+    "source": "last_run",
+    "ran_at": "2026-01-01T08:38:20Z",
+    "has_sample": true,
+    "fields": [
+     {
+      "path": "write_reply",
+      "label": "Answer",
+      "type": "text",
+      "sample": "Hi Priya, your order HG-10482 left our warehouse on Monday and is with the courier now. It should reach you by Friday, and we'll message you the tracking link as soon as it updates."
+     }
+    ]
+   },
+   "help_answer": {
+    "id": "help_answer",
+    "title": "Answer from help center",
+    "type": "agent.run",
+    "tool_id": null,
+    "is_trigger": false,
+    "source": "none",
+    "ran_at": null,
+    "has_sample": false,
+    "fields": [
+     {
+      "path": "help_answer",
+      "label": "Answer",
+      "type": "text",
+      "sample": null
+     }
+    ]
+   }
+  }
+ }
+}
