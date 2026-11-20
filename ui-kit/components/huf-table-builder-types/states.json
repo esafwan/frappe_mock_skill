@@ -1,0 +1,78 @@
+{
+  "component": "huf-table-builder-types",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-table-builder-types.link-2",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":focus",
+      "target": "huf-table-builder-types.link-2",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 739,
+          "after": 553
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":active",
+      "target": "huf-table-builder-types.link-2",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 551,
+          "after": 553
+        }
+      ],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}
