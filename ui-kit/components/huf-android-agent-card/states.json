@@ -1,0 +1,22 @@
+{
+ "component": "huf-android-agent-card",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "unselected": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "sel_class": "",
+    "check": "",
+    "name": "Falcon Arabic Test",
+    "description": "Arabic-first assistant for bilingual customer replies",
+    "model": "falcon-arabic-7b"
+   },
+   "preview": "states/unselected.html"
+  }
+ }
+}

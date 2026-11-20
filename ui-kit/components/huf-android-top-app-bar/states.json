@@ -1,0 +1,21 @@
+{
+ "component": "huf-android-top-app-bar",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "with-project": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "variant": "three",
+    "title": "Overdue receivables summary",
+    "subtitle": "Workspace",
+    "project_line": "<div class=\"pj\">Project: Receivables</div>"
+   },
+   "preview": "states/with-project.html"
+  }
+ }
+}

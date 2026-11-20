@@ -1,0 +1,32 @@
+{
+ "component": "huf-android-segmented-buttons",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "light-selected": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "a_on": "",
+    "a_chk": "",
+    "b_on": "on",
+    "b_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+   },
+   "preview": "states/light-selected.html"
+  },
+  "dark-selected": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "a_on": "",
+    "a_chk": "",
+    "c_on": "on",
+    "c_chk": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>"
+   },
+   "preview": "states/dark-selected.html"
+  }
+ }
+}

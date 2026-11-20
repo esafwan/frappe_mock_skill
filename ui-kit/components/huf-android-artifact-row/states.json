@@ -1,0 +1,30 @@
+{
+ "component": "huf-android-artifact-row",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "markdown": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z\"/></svg>",
+    "name": "Reminder letter template",
+    "kind": "markdown"
+   },
+   "preview": "states/markdown.html"
+  },
+  "html": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "icon": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z\"/></svg>",
+    "name": "Receivables dashboard",
+    "kind": "html"
+   },
+   "preview": "states/html.html"
+  }
+ }
+}

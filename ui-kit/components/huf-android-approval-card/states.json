@@ -1,0 +1,52 @@
+{
+ "component": "huf-android-approval-card",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "sending": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "status": "Sending…",
+    "footer": "<div class=\"busy\"><span class=\"ha-spin\"></span>Sending…</div>"
+   },
+   "preview": "states/sending.html"
+  },
+  "approved": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state": "approved",
+    "status": "Approved",
+    "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>Sent to 120 recipients</div>"
+   },
+   "preview": "states/approved.html"
+  },
+  "denied": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state": "denied",
+    "status": "Denied",
+    "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"/></svg>Denied</div>"
+   },
+   "preview": "states/denied.html"
+  },
+  "pending-expiring": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state": "disabled",
+    "recipients": "128",
+    "template": "payment_reminder_v2",
+    "channel": "WhatsApp",
+    "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+    "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+   },
+   "preview": "states/pending-expiring.html"
+  }
+ }
+}

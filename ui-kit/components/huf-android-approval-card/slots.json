@@ -1,0 +1,45 @@
+{
+ "component": "huf-android-approval-card",
+ "slots": {
+  "state": {
+   "type": "class",
+   "sample": "",
+   "maxLength": 12
+  },
+  "title": {
+   "type": "text",
+   "sample": "Send WhatsApp broadcast",
+   "maxLength": 40
+  },
+  "status": {
+   "type": "text",
+   "sample": "Pending",
+   "maxLength": 14
+  },
+  "recipients": {
+   "type": "text",
+   "sample": "120",
+   "maxLength": 6
+  },
+  "template": {
+   "type": "text",
+   "sample": "promo_nov",
+   "maxLength": 30
+  },
+  "channel": {
+   "type": "text",
+   "sample": "whatsapp",
+   "maxLength": 20
+  },
+  "sample": {
+   "type": "text",
+   "sample": "Hi Asha, ...",
+   "maxLength": 90
+  },
+  "footer": {
+   "type": "html",
+   "sample": "<div class=\"acts\"><div class=\"ha-btn-approve\" data-ui=\"huf-android-approval-card.approve\">Approve</div><div class=\"ha-btn-deny\" data-ui=\"huf-android-approval-card.deny\">Deny</div></div>",
+   "maxLength": 600
+  }
+ }
+}

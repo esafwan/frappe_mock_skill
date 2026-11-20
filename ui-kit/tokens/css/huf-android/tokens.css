@@ -1,0 +1,23 @@
+/* huf-android tokens: mirror ai.huf.mobile.theme.HufTheme (LightHufColors / DarkHufColors, HufSpacing, HufRadius, HufLayout).
+   Light = :root, dark = html[data-theme="dark"]. Units are CSS px = Android dp (Pixel 5: 412 x 892 dp, density 2.625). */
+:root{
+  --ha-canvas:#FBFBFD;--ha-surface:#FFFFFF;--ha-sunken:#F4F4F7;--ha-hairline:#ECECF0;--ha-secondary:#6E6E73;--ha-tertiary:#98989D;
+  --ha-outline:#76767A;--ha-ink:#1D1D1F;--ha-accent:#0F766E;--ha-on-accent:#FFFFFF;--ha-accent-tint:#E3F1EF;--ha-accent-ink:#115E59;
+  --ha-input-border:#85858A;--ha-line-strong:#343A42;--ha-user-bubble:#EAE8E1;--ha-chat-bubble:#F0F0F4;
+  --ha-success-tint:#E8F5EE;--ha-warning-tint:#FDF3E0;--ha-danger-tint:#FDECEA;--ha-on-danger:#FFFFFF;
+  --ha-success:#1C7C54;--ha-warning:#8A5A00;--ha-danger:#B3261E;
+  --ha-scrim:rgba(0,0,0,.32);--ha-dialog-btn:#C2E7FF;--ha-dialog-btn-ink:#1D1D1F;
+  --ha-sp-xs:4px;--ha-sp-s:8px;--ha-sp-m:12px;--ha-sp-l:16px;--ha-sp-xl:24px;--ha-sp-xxl:32px;--ha-sp-xxxl:48px;
+  --ha-r-s:6px;--ha-r-m:8px;--ha-r-l:10px;--ha-r-xl:14px;--ha-r-composer:22px;--ha-r-card:12px;--ha-r-card-l:16px;--ha-r-bubble:18px;--ha-r-pill:20px;
+  --ha-touch:48px;--ha-inset:20px;--ha-icon-gap:10px;--ha-msg-inset:18px;
+  --ha-font:"Huf Android Sans",Roboto,sans-serif;--ha-mono:"Huf Android Mono",monospace;
+  --ha-w:412px;--ha-h:892px;--ha-status-h:48px;--ha-nav-h:110px;
+}
+html[data-theme="dark"]{
+  --ha-canvas:#1D1D1F;--ha-surface:#2A2A2D;--ha-sunken:#161618;--ha-hairline:#3A3A3E;--ha-secondary:#A1A1A6;--ha-tertiary:#98989D;
+  --ha-outline:#8E8E93;--ha-ink:#F5F5F7;--ha-accent:#2DD4BF;--ha-on-accent:#0B1F1D;--ha-accent-tint:#12302D;--ha-accent-ink:#5EEAD4;
+  --ha-input-border:#737378;--ha-line-strong:#636366;--ha-user-bubble:#333336;--ha-chat-bubble:#2C2C2F;
+  --ha-success-tint:#12281D;--ha-warning-tint:#2B2210;--ha-danger-tint:#3A1A18;--ha-on-danger:#1D1D1F;
+  --ha-success:#4CC38A;--ha-warning:#F0B454;--ha-danger:#FF7A72;
+  --ha-scrim:rgba(0,0,0,.6);--ha-dialog-btn:#C2E7FF;--ha-dialog-btn-ink:#1D1D1F;
+}

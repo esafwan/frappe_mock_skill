@@ -1,0 +1,6 @@
+/* huf-android fonts. The app renders the Android system font (Roboto). Roboto is not in the kit, so previews pin the open
+   Inter variable font (SIL OFL 1.1, tokens/fonts/LICENSES.md) with size-adjust to approximate Roboto's narrower metrics.
+   All url() are local. Deterministic: no system font is ever used. */
+@font-face{font-family:"Huf Android Sans";font-style:normal;font-weight:100 900;font-display:block;size-adjust:95%;src:url(../../fonts/InterVariable.woff2) format("woff2")}
+@font-face{font-family:"Huf Android Mono";font-style:normal;font-weight:400;font-display:block;src:url(../../fonts/geist-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Huf Android Mono";font-style:normal;font-weight:500 700;font-display:block;src:url(../../fonts/geist-mono-latin-500-normal.woff2) format("woff2")}

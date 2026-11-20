@@ -1,0 +1,29 @@
+{
+ "component": "huf-android-text-field",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "focus": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state": "focus",
+    "value": "https://acme.example.com"
+   },
+   "preview": "states/focus.html"
+  },
+  "error": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state": "err",
+    "value": "acme",
+    "support": "Enter a valid server address"
+   },
+   "preview": "states/error.html"
+  }
+ }
+}

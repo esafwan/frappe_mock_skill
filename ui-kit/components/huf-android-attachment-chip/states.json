@@ -1,0 +1,18 @@
+{
+ "component": "huf-android-attachment-chip",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "uploading": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "state_class": "up"
+   },
+   "preview": "states/uploading.html"
+  }
+ }
+}

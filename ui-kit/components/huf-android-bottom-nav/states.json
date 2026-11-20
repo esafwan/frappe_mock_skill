@@ -1,0 +1,70 @@
+{
+ "component": "huf-android-bottom-nav",
+ "states": {
+  "default": {
+   "applicable": true,
+   "mechanism": "none",
+   "note": "markup as in component.html with slot samples"
+  },
+  "chat-active": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "chat_on": "on",
+    "projects_on": "",
+    "agents_on": "",
+    "account_on": "",
+    "automations_on": ""
+   },
+   "preview": "states/chat-active.html"
+  },
+  "projects-active": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "chat_on": "",
+    "projects_on": "on",
+    "agents_on": "",
+    "account_on": "",
+    "automations_on": ""
+   },
+   "preview": "states/projects-active.html"
+  },
+  "agents-active": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "chat_on": "",
+    "projects_on": "",
+    "agents_on": "on",
+    "account_on": "",
+    "automations_on": ""
+   },
+   "preview": "states/agents-active.html"
+  },
+  "account-active": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "chat_on": "",
+    "projects_on": "",
+    "agents_on": "",
+    "account_on": "on",
+    "automations_on": ""
+   },
+   "preview": "states/account-active.html"
+  },
+  "automations-active": {
+   "applicable": true,
+   "mechanism": "slot-preset",
+   "slots": {
+    "chat_on": "",
+    "projects_on": "",
+    "agents_on": "",
+    "account_on": "",
+    "automations_on": "on"
+   },
+   "preview": "states/automations-active.html"
+  }
+ }
+}
