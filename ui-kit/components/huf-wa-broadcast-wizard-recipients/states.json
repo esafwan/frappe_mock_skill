@@ -1,0 +1,117 @@
+{
+  "component": "huf-wa-broadcast-wizard-recipients",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-wa-broadcast-wizard-recipients.button-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-wa-broadcast-wizard-recipients.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "borderColor": {
+          "from": "rgb(228, 228, 232)",
+          "to": "rgb(122, 90, 240)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(251, 251, 253) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":active",
+      "target": "huf-wa-broadcast-wizard-recipients.button-1",
+      "changes": [
+        {
+          "element": "#path:1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "data-aria-hidden": "true",
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "element": "huf-wa-broadcast-wizard-recipients.button-1",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-expanded": "true",
+            "data-state": "open",
+            "aria-controls": "radix-:r5:",
+            "data-radix-popper-side": "bottom",
+            "data-radix-popper-align": "start"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-wa-broadcast-wizard-recipients.button-1",
+      "changes": [
+        {
+          "element": "huf-wa-broadcast-wizard-recipients.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts or LoadError cards; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "_note": "Fictional WhatsApp fixtures for the HUF channels app (Northwind Trading, a wholesale kitchen supplier). Times are relative to the fixed clock 2026-01-01 09:00 UTC. Phone numbers use the reserved +1 555 01xx range.",
+  "gateways": [
+    {
+      "name": "Northwind Sales",
+      "health": "healthy",
+      "enabled": true,
+      "setup_stage": "live",
+      "display_phone_number": "+1 555 0142",
+      "verified_name": "Northwind Trading"
+    }
+  ],
+  "templates": [
+    {
+      "name": "TPL-0001",
+      "template_name": "order_shipped",
+      "category": "UTILITY",
+      "language_code": "en_US",
+      "status": "APPROVED",
+      "quality_score": "GREEN",
+      "last_meta_update": "2025-12-31 15:00:00",
+      "ttl_seconds": 3600,
+      "edits_left": 9,
+      "components": {
+        "header": {
+          "type": "TEXT",
+          "text": "Order {{1}} is on its way",
+          "sample": "#NW-4812"
+        },
+        "body": {
+          "text": "Hi {{1}}, your order of *{{2}}* left our Rotterdam warehouse today. Expected delivery: {{3}}.",
+          "sample_values": [
+            "Lena",
+            "24 cases of olive oil",
+            "Friday 9 January"
+          ]
+        },
+        "footer": {
+          "text": "Northwind Trading · Wholesale"
+        },
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Track delivery",
+            "url": "https://northwind.example.com/track/{{1}}",
+            "example": "https://northwind.example.com/track/NW-4812"
+          },
+          {
+            "type": "QUICK_REPLY",
+            "text": "Change delivery day"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TPL-0002",
+      "template_name": "spring_restock",
+      "category": "MARKETING",
+      "language_code": "en_US",
+      "status": "APPROVED",
+      "quality_score": "GREEN",
+      "last_meta_update": "2025-12-30 10:20:00",
+      "edits_left": 10,
+      "components": {
+        "header": {
+          "type": "IMAGE",
+          "text": "",
+          "sample": "https://huf.mock/files/northwind-spring-restock.svg"
+        },
+        "body": {
+          "text": "Hi {{1}}, our spring range is in stock: new olive oils, pasta and spices at trade prices. Orders over €500 ship free this week.",
+          "sample_values": [
+            "Lena"
+          ]
+        },
+        "footer": {
+          "text": "Reply STOP to opt out"
+        },
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "See the range",
+            "url": "https://northwind.example.com/spring",
+            "example": ""
+          },
+          {
+            "type": "QUICK_REPLY",
+            "text": "Call me back"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TPL-0003",
+      "template_name": "invoice_reminder",
+      "category": "UTILITY",
+      "language_code": "en_GB",
+      "status": "PENDING",
+      "quality_score": "",
+      "last_meta_update": "2026-01-01 07:40:00",
+      "edits_left": 10,
+      "components": {
+        "header": null,
+        "body": {
+          "text": "Hi {{1}}, invoice {{2}} for {{3}} is due on {{4}}. You can pay by bank transfer or card.",
+          "sample_values": [
+            "Marco",
+            "INV-20931",
+            "€1284.50",
+            "15 January"
+          ]
+        },
+        "footer": null,
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Pay invoice",
+            "url": "https://northwind.example.com/pay/{{1}}",
+            "example": "https://northwind.example.com/pay/INV-20931"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TPL-0004",
+      "template_name": "weekend_flash_deal",
+      "category": "MARKETING",
+      "language_code": "en_US",
+      "status": "REJECTED",
+      "quality_score": "",
+      "rejected_reason": "INVALID_FORMAT",
+      "rejection_recommendation": "Add a sample value for every variable and do not end the message with a variable.",
+      "last_meta_update": "2025-12-31 18:05:00",
+      "edits_left": 10,
+      "components": {
+        "header": {
+          "type": "TEXT",
+          "text": "48-hour flash deal",
+          "sample": ""
+        },
+        "body": {
+          "text": "{{1}}, take 30% off all coffee beans this weekend with code {{2}}",
+          "sample_values": [
+            "",
+            ""
+          ]
+        },
+        "footer": {
+          "text": "Reply STOP to opt out"
+        },
+        "buttons": [
+          {
+            "type": "QUICK_REPLY",
+            "text": "Reserve stock"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TPL-0005",
+      "template_name": "new_arrivals_cards",
+      "category": "MARKETING",
+      "language_code": "en_US",
+      "status": "APPROVED",
+      "quality_score": "YELLOW",
+      "last_meta_update": "2025-12-28 12:00:00",
+      "edits_left": 8,
+      "components": {
+        "header": null,
+        "body": {
+          "text": "Hi {{1}}, three new suppliers joined Northwind this month. Swipe to see their best sellers.",
+          "sample_values": [
+            "Lena"
+          ]
+        },
+        "footer": null,
+        "buttons": []
+      }
+    },
+    {
+      "name": "TPL-0006",
+      "template_name": "login_code",
+      "category": "AUTHENTICATION",
+      "language_code": "en_US",
+      "status": "APPROVED",
+      "quality_score": "GREEN",
+      "last_meta_update": "2025-12-20 09:00:00",
+      "edits_left": 10,
+      "components": {
+        "header": null,
+        "body": {
+          "text": "*{{1}}* is your verification code. For your security, do not share this code.",
+          "sample_values": [
+            "482913"
+          ]
+        },
+        "footer": {
+          "text": "This code expires in 10 minutes."
+        },
+        "buttons": [
+          {
+            "type": "URL",
+            "text": "Copy code",
+            "url": "https://www.whatsapp.com/otp/code/?otp_type=COPY_CODE&code=otp{{1}}",
+            "example": ""
+          }
+        ]
+      }
+    }
+  ],
+  "drafts": [
+    {
+      "name": "DR-0001",
+      "template_name": "delivery_delay_notice",
+      "language_code": "en_US",
+      "category": "UTILITY",
+      "status": "Pending Review",
+      "requested_via": "Agent run",
+      "agent_run": "RUN-0412",
+      "requested_by": "Order Desk Agent",
+      "creation": "2026-01-01 07:30:00",
+      "payload": {
+        "name": "delivery_delay_notice",
+        "category": "UTILITY",
+        "language": "en_US",
+        "body": {
+          "text": "Hi {{1}}, your delivery {{2}} is delayed by one day because of weather. Sorry for the wait.",
+          "examples": [
+            "Lena",
+            "#NW-4812"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DR-0002",
+      "template_name": "winter_clearance",
+      "language_code": "en_US",
+      "category": "MARKETING",
+      "status": "Failed",
+      "submit_error": "Meta rejected: a template with this name already exists",
+      "requested_via": "User",
+      "creation": "2025-12-31 16:00:00",
+      "payload": {
+        "name": "winter_clearance",
+        "category": "MARKETING",
+        "language": "en_US",
+        "body": {
+          "text": "Winter clearance: up to 40% off selected cookware."
+        }
+      }
+    },
+    {
+      "name": "DR-0003",
+      "template_name": "supplier_welcome",
+      "language_code": "en_US",
+      "category": "UTILITY",
+      "status": "Draft",
+      "requested_via": "User",
+      "creation": "2025-12-31 11:00:00",
+      "payload": {
+        "name": "supplier_welcome"
+      }
+    }
+  ],
+  "wizard": {
+    "name": "spring_tasting_invite",
+    "header": "Spring tasting at Northwind",
+    "body": "Hi {{1}}, you are invited to our *spring tasting* on {{2}} at the Rotterdam showroom. Try 40 new products and meet the suppliers.",
+    "samples": [
+      "Lena",
+      "Thursday 12 March"
+    ],
+    "footer": "Reply STOP to opt out",
+    "buttons": [
+      {
+        "type": "Visit website",
+        "text": "Book a seat",
+        "url": "https://northwind.example.com/tasting"
+      },
+      {
+        "type": "Custom reply",
+        "text": "Not this time"
+      }
+    ]
+  },
+  "broadcast": {
+    "title": "Spring range launch",
+    "template": "TPL-0002",
+    "params": {
+      "parameter_format": "POSITIONAL",
+      "body": [
+        {
+          "index": 1,
+          "sample": "Lena"
+        }
+      ],
+      "header": {
+        "type": "IMAGE",
+        "required": true,
+        "sample": "https://huf.mock/files/northwind-spring-restock.svg"
+      },
+      "buttons": []
+    },
+    "defaults": {
+      "1": "there"
+    },
+    "header_link": "https://huf.mock/files/northwind-spring-restock.svg",
+    "recipients_text": "+1 555 0118\n+1 555 0127\n+1 555 0139",
+    "audiences": [
+      {
+        "name": "AUD-0001",
+        "title": "Restaurant buyers (opted in)",
+        "description": "Chefs and purchasing managers who opted in at the trade fair",
+        "consent_source": "Trade fair sign-up form",
+        "consent_basis": "opt-in form",
+        "consent_purposes": [
+          "marketing",
+          "utility"
+        ],
+        "member_count": 1240,
+        "suppressed_count": 18,
+        "tags": [
+          {
+            "tag": "restaurants",
+            "count": 860
+          },
+          {
+            "tag": "hotels",
+            "count": 240
+          },
+          {
+            "tag": "catering",
+            "count": 140
+          }
+        ]
+      },
+      {
+        "name": "AUD-0002",
+        "title": "Delivery contacts",
+        "description": "Order and delivery contacts",
+        "consent_source": "Checkout",
+        "consent_basis": "checkout",
+        "consent_purposes": [
+          "utility"
+        ],
+        "member_count": 3115,
+        "suppressed_count": 4,
+        "tags": []
+      }
+    ],
+    "preview": {
+      "total": 1240,
+      "dupes": 0,
+      "excluded": 0,
+      "suppressed": 18,
+      "blocked_by_purpose": 0,
+      "final": 1222
+    }
+  }
+}
