@@ -1,0 +1,53 @@
+{
+  "$comment": "Fictional providers, models and MCP servers (company: Northwind Trading). Times relative to the fixed capture clock 2026-01-01T09:00:00Z.",
+  "providers": [
+    { "name": "OpenAI", "provider_name": "OpenAI", "provider_brand": "openai", "is_local_llm": 0, "api_base_url": "", "api_key": "" },
+    { "name": "Anthropic", "provider_name": "Anthropic", "provider_brand": "anthropic", "is_local_llm": 0, "api_base_url": "", "api_key": "" },
+    { "name": "Northwind Ollama", "provider_name": "Northwind Ollama", "provider_brand": "ollama", "is_local_llm": 1, "api_base_url": "http://ollama.northwind.local:11434", "api_key": "" },
+    { "name": "Google", "provider_name": "Google", "provider_brand": "google", "is_local_llm": 0, "api_base_url": "", "api_key": "" },
+    { "name": "Mistral", "provider_name": "Mistral", "provider_brand": "mistral", "is_local_llm": 0, "api_base_url": "", "api_key": "" },
+    { "name": "Warehouse LM Studio", "provider_name": "Warehouse LM Studio", "provider_brand": "lmstudio", "is_local_llm": 1, "api_base_url": "http://192.168.10.40:1234/v1", "api_key": "" }
+  ],
+  "models": [
+    { "name": "gpt-4.1-mini", "model_name": "gpt-4.1-mini", "provider": "OpenAI", "modalities": "Text, Image", "use_custom_pricing": 0 },
+    { "name": "gpt-4.1", "model_name": "gpt-4.1", "provider": "OpenAI", "modalities": "Text, Image", "use_custom_pricing": 0 },
+    { "name": "text-embedding-3-small", "model_name": "text-embedding-3-small", "provider": "OpenAI", "modalities": "Embeddings", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 0.02, "output_cost_per_1m_tokens": 0 },
+    { "name": "claude-sonnet-4-5", "model_name": "claude-sonnet-4-5", "provider": "Anthropic", "modalities": "Text, Image", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 3, "output_cost_per_1m_tokens": 15, "cached_input_cost_per_1m_tokens": 0.3 },
+    { "name": "llama3.1:8b", "model_name": "llama3.1:8b", "provider": "Northwind Ollama", "modalities": "Text", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 0, "output_cost_per_1m_tokens": 0 },
+    { "name": "qwen2.5:14b", "model_name": "qwen2.5:14b", "provider": "Northwind Ollama", "modalities": "Text", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 0, "output_cost_per_1m_tokens": 0 },
+    { "name": "nomic-embed-text", "model_name": "nomic-embed-text", "provider": "Northwind Ollama", "modalities": "Embeddings", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 0, "output_cost_per_1m_tokens": 0 },
+    { "name": "gemini-2.5-flash", "model_name": "gemini-2.5-flash", "provider": "Google", "modalities": "Text, Image, Transcription", "use_custom_pricing": 0 },
+    { "name": "mistral-large-latest", "model_name": "mistral-large-latest", "provider": "Mistral", "modalities": "Text", "use_custom_pricing": 0 },
+    { "name": "phi-4-mini", "model_name": "phi-4-mini", "provider": "Warehouse LM Studio", "modalities": "Text", "use_custom_pricing": 1, "input_cost_per_1m_tokens": 0, "output_cost_per_1m_tokens": 0 }
+  ],
+  "modalityOptions": ["Text", "Image", "Text-to-Speech", "Transcription", "Embeddings"],
+  "newCloud": { "name": "Groq", "key": "gsk_northwind_demo_key" },
+  "newLocal": { "name": "Backoffice Ollama", "url": "http://ollama.northwind.local:11434" },
+  "connectionTest": {
+    "provider": { "ok": true, "error": null },
+    "models": [
+      { "name": "llama3.1:8b", "ok": true, "error": null, "capabilities": ["chat", "tools"] },
+      { "name": "qwen2.5:14b", "ok": true, "error": null, "capabilities": ["chat", "tools"] },
+      { "name": "nomic-embed-text", "ok": false, "error": "Model not found on the endpoint. Run `ollama pull nomic-embed-text` on the host.", "capabilities": [] }
+    ]
+  },
+  "mcp": [
+    { "name": "Northwind Orders", "server_name": "Northwind Orders", "description": "Look up orders, shipments and stock levels from the Northwind order system.", "enabled": 1, "transport_type": "http", "server_url": "https://mcp.northwind.example/orders", "auth_type": "api_key", "auth_header_name": "X-API-Key", "tool_namespace": "orders", "timeout_seconds": 30, "last_sync": "2025-12-31 21:00:00", "enable_auto_sync": 1, "auto_sync_interval": 6, "oauth_status": "Not Connected", "modified": "2025-12-31 21:00:00" },
+    { "name": "Shared Drive", "server_name": "Shared Drive", "description": "Search and read supplier contracts and price lists stored in the shared drive.", "enabled": 1, "transport_type": "sse", "server_url": "https://mcp.northwind.example/drive", "auth_type": "oauth", "tool_namespace": "drive", "timeout_seconds": 45, "last_sync": "2025-12-31 09:00:00", "oauth_status": "Connected", "modified": "2025-12-31 09:00:00" },
+    { "name": "Support Desk", "server_name": "Support Desk", "description": "Create and update customer tickets in the support desk.", "enabled": 1, "transport_type": "http", "server_url": "https://mcp.northwind.example/desk", "auth_type": "oauth", "tool_namespace": "desk", "timeout_seconds": 30, "last_sync": "2025-12-30 09:00:00", "oauth_status": "Token Expired", "modified": "2025-12-30 09:00:00" },
+    { "name": "Team Calendar", "server_name": "Team Calendar", "description": "Check availability and book delivery slots on the team calendar.", "enabled": 1, "transport_type": "http", "server_url": "https://mcp.northwind.example/calendar", "auth_type": "bearer_token", "tool_namespace": "calendar", "timeout_seconds": 30, "last_sync": "2025-12-31 06:00:00", "oauth_status": "Not Connected", "modified": "2025-12-29 09:00:00" },
+    { "name": "Legacy Pricing", "server_name": "Legacy Pricing", "description": "Old price-list service, kept for reference.", "enabled": 0, "transport_type": "http", "server_url": "https://mcp.northwind.example/pricing", "auth_type": "none", "tool_namespace": "pricing", "timeout_seconds": 30, "modified": "2025-12-20 09:00:00" }
+  ],
+  "mcpDetail": {
+    "Northwind Orders": {
+      "custom_headers": [],
+      "tools": [
+        { "name": "t1", "tool_name": "orders_lookup", "description": "Find an order by number, customer or date range and return its status.", "parameters": "{\"type\":\"object\",\"properties\":{\"order_no\":{\"type\":\"string\",\"description\":\"Order number, e.g. SO-1042\"}},\"required\":[\"order_no\"]}", "enabled": 1 },
+        { "name": "t2", "tool_name": "shipment_track", "description": "Return the carrier, tracking number and expected delivery date for a shipment.", "parameters": "{\"type\":\"object\",\"properties\":{\"shipment_id\":{\"type\":\"string\"}},\"required\":[\"shipment_id\"]}", "enabled": 1 },
+        { "name": "t3", "tool_name": "stock_level", "description": "Current stock on hand for a product SKU across all warehouses.", "parameters": "{\"type\":\"object\",\"properties\":{\"sku\":{\"type\":\"string\"}},\"required\":[\"sku\"]}", "enabled": 1 },
+        { "name": "t4", "tool_name": "customer_balance", "description": "Outstanding balance and credit limit for a customer account.", "parameters": "{\"type\":\"object\",\"properties\":{\"customer\":{\"type\":\"string\"}},\"required\":[\"customer\"]}", "enabled": 1 },
+        { "name": "t5", "tool_name": "order_cancel", "description": "Cancel an order that has not shipped yet.", "parameters": "{\"type\":\"object\",\"properties\":{\"order_no\":{\"type\":\"string\"}},\"required\":[\"order_no\"]}", "enabled": 0 }
+      ]
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "component": "huf-models-dialog",
+  "slots": {
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Configure claude-sonnet-4-5",
+      "maxLength": 54,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Update model configuration settings",
+      "maxLength": 70,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Model Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Provider",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive_2": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Anthropic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Modality",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "2 selected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Text",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Image",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Select one or more supported modalities / tasks for this model. Used to filter model pickers (e.g. image generation, TTS, transcription).",
+      "maxLength": 274,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Enable custom prices to override LiteLLM's automatic pricing lookup. When disabled, LiteLLM's built-in price table is used as fallback. Values are in USD per 1 million tokens.",
+      "maxLength": 350,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Enable custom pricing",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Check this to activate the custom prices below. When unchecked, LiteLLM's automatic pricing is used regardless of what is entered below.",
+      "maxLength": 272,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Input cost per 1M tokens (USD)",
+      "maxLength": 60,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Cost in USD per 1 million prompt/input tokens. E.g. enter 2.50 for $2.50 per 1M tokens. Enter 0 for free/self-hosted models.",
+      "maxLength": 248,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Output cost per 1M tokens (USD)",
+      "maxLength": 62,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "Cost in USD per 1 million completion/output tokens. E.g. enter 10.00 for $10.00 per 1M tokens.",
+      "maxLength": 188,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Cached Input Cost per 1M Tokens (USD)",
+      "maxLength": 74,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_6": {
+      "type": "text",
+      "sample": "Optional. Cost for prompt cache reads (cache hits) in USD per 1M tokens. E.g. Anthropic charges $0.30/1M for cache reads vs $3.00/1M for regular input. Leave as 0 if not applicable.",
+      "maxLength": 362,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-models-dialog.button-11"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Save",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-models-dialog.button-12"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Enter model name (e.g., gpt-4, claude-3)",
+      "maxLength": 80,
+      "where": "attr:placeholder",
+      "element": "huf-models-dialog.input-1"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "claude-sonnet-4-5",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "huf-models-dialog.input-1"
+    },
+    "translate_y_1_2_title": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "huf-models-dialog.button-3"
+    },
+    "translate_y_1_2_arialabel": {
+      "type": "text",
+      "sample": "Open record",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-models-dialog.button-3"
+    },
+    "hover_bg_background_70_arialabel": {
+      "type": "text",
+      "sample": "Remove Text",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-models-dialog.button-5"
+    },
+    "hover_bg_background_70_arialabel_2": {
+      "type": "text",
+      "sample": "Remove Image",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-models-dialog.button-6"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-models-dialog.button-7"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "e.g. 2.50",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-models-dialog.input-8"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-models-dialog.input-8"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "e.g. 10.00",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-models-dialog.input-9"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "15",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-models-dialog.input-9"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "text",
+      "sample": "Optional, e.g. 0.30",
+      "maxLength": 38,
+      "where": "attr:placeholder",
+      "element": "huf-models-dialog.input-10"
+    },
+    "text_ui_text_value_4": {
+      "type": "number",
+      "sample": "0.3",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-models-dialog.input-10"
+    }
+  }
+}
