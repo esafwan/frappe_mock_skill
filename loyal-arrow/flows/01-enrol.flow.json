@@ -1,0 +1,96 @@
+{
+ "title": "Enrol a new member at the counter",
+ "steps": [
+  {
+   "goto": "/",
+   "caption": "Counter home: three tiles",
+   "selector": "[data-testid=\"home-find\"]",
+   "shot": true,
+   "n": 1,
+   "hold_ms": 1800
+  },
+  {
+   "goto": "/find",
+   "action": "fill",
+   "selector": "[data-testid=\"query\"]",
+   "value": "{{members[59].mobile}}",
+   "caption": "Type the customer's mobile",
+   "n": 2,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"search\"]",
+   "n": 3,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"enrol-new\"]",
+   "expect": "[data-testid=\"no-match\"]",
+   "caption": "No match: Enrol new member",
+   "n": 4,
+   "hold_ms": 800
+  },
+  {
+   "goto": "/enrol",
+   "action": "fill",
+   "selector": "[data-testid=\"name\"]",
+   "value": "{{members[59].names.en}}",
+   "n": 5,
+   "hold_ms": 800
+  },
+  {
+   "action": "fill",
+   "selector": "[data-testid=\"mobile\"]",
+   "value": "{{members[59].mobile}}",
+   "n": 6,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"consent-service\"]",
+   "caption": "Service consent is required",
+   "n": 7,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"consent-marketing\"]",
+   "caption": "Marketing consent is separate, never pre-ticked",
+   "n": 8,
+   "hold_ms": 800
+  },
+  {
+   "action": "fill",
+   "selector": "[data-testid=\"referral-code\"]",
+   "value": "{{members[0].referral_code}}",
+   "caption": "Optional referral code",
+   "n": 9,
+   "hold_ms": 800
+  },
+  {
+   "action": "click",
+   "selector": "[data-testid=\"submit\"]",
+   "n": 10,
+   "hold_ms": 800
+  },
+  {
+   "action": "wait",
+   "selector": "[data-testid=\"own-code\"]",
+   "caption": "Member created; own referral code shown",
+   "shot": true,
+   "expect": "[data-testid=\"done-status\"]",
+   "n": 11,
+   "hold_ms": 1800
+  }
+ ],
+ "surface": "counter-pwa",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "base": "/counter",
+ "id": "01-enrol",
+ "dataset": "data/uae-dubai-supermarket  (swap to data/india-departmental-store for INR/GST)"
+}
