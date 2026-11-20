@@ -1,0 +1,77 @@
+{
+  "component": "huf-profiles-list",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "tbody tr:nth-child(3)",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "row hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":focus",
+      "target": "huf-profiles-list.button-1",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 389,
+          "after": 391
+        }
+      ],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-profiles-list.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not captured"
+    }
+  }
+}

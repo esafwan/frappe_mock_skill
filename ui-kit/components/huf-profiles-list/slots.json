@@ -1,0 +1,579 @@
+{
+  "component": "huf-profiles-list",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Execution profiles",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Profile name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-profiles-list.button-19"
+    },
+    "role_checkbox_translate_y_2px": {
+      "type": "text",
+      "sample": "Approval Mode",
+      "maxLength": 26,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_2": {
+      "type": "text",
+      "sample": "Filesystem Policy",
+      "maxLength": 34,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_3": {
+      "type": "text",
+      "sample": "Resource Limits",
+      "maxLength": 30,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_4": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Modified",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-profiles-list.button-20"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Read-only analyst",
+      "maxLength": 34,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Built-in",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Auto Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "number",
+      "sample": "15",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "s /",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "number",
+      "sample": "128",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "MB",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_12": {
+      "type": "relative-time",
+      "sample": "1 week ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Ask before changes",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Built-in",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Ask Every Time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Scratch Only",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "number",
+      "sample": "30",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "s /",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_17": {
+      "type": "number",
+      "sample": "256",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "MB",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_20": {
+      "type": "relative-time",
+      "sample": "1 week ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Warehouse automation",
+      "maxLength": 40,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "Auto Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "Shared Directory",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_23": {
+      "type": "number",
+      "sample": "60",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "s /",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_25": {
+      "type": "number",
+      "sample": "512",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "MB",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_28": {
+      "type": "relative-time",
+      "sample": "3 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Finance, never allow",
+      "maxLength": 40,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "Never Allow",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_30": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_31": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_32": {
+      "type": "text",
+      "sample": "s /",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_33": {
+      "type": "number",
+      "sample": "64",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_34": {
+      "type": "text",
+      "sample": "MB",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_35": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_36": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Legacy sandbox",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_37": {
+      "type": "text",
+      "sample": "Ask Every Time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_38": {
+      "type": "text",
+      "sample": "Scratch Only",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_39": {
+      "type": "number",
+      "sample": "30",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_40": {
+      "type": "text",
+      "sample": "s /",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_41": {
+      "type": "number",
+      "sample": "256",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_42": {
+      "type": "text",
+      "sample": "MB",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_43": {
+      "type": "text",
+      "sample": "Disabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_44": {
+      "type": "relative-time",
+      "sample": "1 month ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_45": {
+      "type": "text",
+      "sample": "Showing all 5 execution profiles",
+      "maxLength": 64,
+      "where": "text",
+      "element": "div"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-profiles-list.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-profiles-list.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-profiles-list.button-15"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search execution profiles...",
+      "maxLength": 56,
+      "where": "attr:placeholder",
+      "element": "huf-profiles-list.input-17"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search execution profiles",
+      "maxLength": 50,
+      "where": "attr:aria-label",
+      "element": "huf-profiles-list.input-17"
+    },
+    "svg_opacity_100_arialabel": {
+      "type": "text",
+      "sample": "Status: All",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-profiles-list.button-18"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-profiles-list.section-21"
+    }
+  }
+}
