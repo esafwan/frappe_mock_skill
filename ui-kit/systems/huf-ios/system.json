@@ -1,0 +1,31 @@
+{
+ "id": "huf-ios",
+ "name": "Huf iOS app UI (native SwiftUI, iPhone 17 Pro)",
+ "status": "ready",
+ "partOf": "huf",
+ "source": {
+  "app": "huf_mobile (ios)",
+  "native": "HufMobileCore/HufDesignTokens.swift, HufMobileApp/*.swift",
+  "reference": "systems/huf-ios/ref/*.png + index.json (iPhone 17 Pro simulator, iOS 26.5, 3x, light + dark)"
+ },
+ "componentGroup": "huf-ios",
+ "componentPrefix": "huf-ios-",
+ "captureMode": {
+  "kind": "static",
+  "how": "Native apps cannot be DOM-captured, so components are hand-authored HTML/CSS (scripts/huf-mobile/ios/*.mjs) and rendered through the generic static spec source scripts/static-capture.mjs (scripts/specs-huf-ios.mjs). Output is identical to every other system.",
+  "compare": "node scripts/huf-mobile/compare-ref.mjs -> systems/huf-ios/ref-compare.json (perceptual diff vs the simulator PNGs)"
+ },
+ "variableSystem": {
+  "kind": "css-custom-properties --hi-* (HufDesignTokens.swift colours, radii, spacing)",
+  "themeAttribute": { "light": null, "dark": "data-theme=\"dark\" on <html>" },
+  "files": { "fonts": "tokens/css/huf-ios/huf-ios-fonts.css", "tokens": "tokens/css/huf-ios/huf-ios-tokens.css", "components": "tokens/css/huf-ios/huf-ios.css" }
+ },
+ "tokens": {
+  "css": "tokens/css/huf-ios/*.css",
+  "fonts": "SF Pro / SF Mono are not redistributable: Inter and Geist Mono (SIL OFL, tokens/fonts) are pinned for deterministic renders",
+  "icons": "inline SVG (lucide-style strokes approximating SF Symbols)"
+ },
+ "modes": ["light", "dark"],
+ "rtl": { "supported": false, "mechanism": "refs partly show Arabic (leaked app language); components are authored in English / LTR" },
+ "defaults": { "viewport": { "w": 402, "h": 874, "deviceScaleFactor": 3 }, "device": "iPhone 17 Pro" }
+}

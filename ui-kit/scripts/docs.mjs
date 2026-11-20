@@ -40,10 +40,10 @@ const WHEN = {
 };
 const manifest = { name: 'ury-ui-kit', version: '1.0.0', viewport: { w: 1440, h: 900, deviceScaleFactor: 2 }, modes: ['light', 'dark', 'rtl'], systems: {}, components: {}, pages: {}, data: { menus: [], universals: 'data/universals/index.json' } };
 const reg = JSON.parse(fs.readFileSync(ROOT + 'systems/registry.json')); manifest.systems = reg.systems; manifest.defaultSystem = reg.default;
-for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
+for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (p.endsWith('.json') && fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
 const groupToSystem = { desk: 'frappe-desk', pos: 'ury-pos', huf: 'huf' };
 for (const id of fs.readdirSync(ROOT + 'components').sort()) {
-  const dir = ROOT + 'components/' + id + '/'; if (!fs.existsSync(dir + 'harness.json')) continue;
+  const dir = ROOT + 'components/' + id + '/'; if (!['harness.json', 'measurements.json', 'slots.json', 'states.json', 'component.html'].every((f) => fs.existsSync(dir + f))) continue; // skip half-written components (parallel workers)
   const h = JSON.parse(fs.readFileSync(dir + 'harness.json')); const slots = JSON.parse(fs.readFileSync(dir + 'slots.json')).slots;
   const st = JSON.parse(fs.readFileSync(dir + 'states.json')).states; const ms = JSON.parse(fs.readFileSync(dir + 'measurements.json'));
   const states = Object.fromEntries(Object.entries(st).map(([k, v]) => [k, v.applicable ? (v.mechanism || 'yes') : 'n/a']));

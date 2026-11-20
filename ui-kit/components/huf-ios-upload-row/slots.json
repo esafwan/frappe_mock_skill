@@ -1,0 +1,20 @@
+{
+  "component": "huf-ios-upload-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "filename": {
+      "type": "text",
+      "sample": "invoice.pdf",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "error": {
+      "type": "text",
+      "sample": "Upload failed — file over 25 MB",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

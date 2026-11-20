@@ -1,0 +1,41 @@
+{
+  "component": "huf-ios-sheet-attach",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Attach",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "camera": {
+      "type": "text",
+      "sample": "Camera",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "photo": {
+      "type": "text",
+      "sample": "Photo library",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "files": {
+      "type": "text",
+      "sample": "Files",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "audio": {
+      "type": "text",
+      "sample": "Record audio",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "component": "huf-ios-assistant-text",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "response still loading",
+      "alias": "loading"
+    },
+    "unavailable": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "note": true
+      },
+      "screenshot": "states/unavailable.png",
+      "preview": "states/unavailable.html",
+      "description": "agent unavailable note"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "note": true
+      },
+      "screenshot": "states/unavailable.png",
+      "preview": "states/unavailable.html",
+      "description": "agent unavailable note",
+      "alias": "unavailable"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

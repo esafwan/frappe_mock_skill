@@ -1,0 +1,111 @@
+{
+  "component": "huf-ios-screen-agent-switcher",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Switch agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Falcon Arabic Test · falcon-h1r:7b",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "user_text": {
+      "type": "text",
+      "sample": "Which orders from Gulf Steel are still unpaid?",
+      "maxLength": 74,
+      "where": "text",
+      "element": "text"
+    },
+    "assistant_text": {
+      "type": "text",
+      "sample": "Three invoices are open, totalling AED 412,900. The oldest is 47 days past terms.",
+      "maxLength": 130,
+      "where": "text",
+      "element": "text"
+    },
+    "placeholder": {
+      "type": "text",
+      "sample": "Message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "draft": {
+      "type": "text",
+      "sample": "Summarize the overdue invoices.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "search": {
+      "type": "text",
+      "sample": "Switch agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a1": {
+      "type": "text",
+      "sample": "Falcon Arabic Test",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "d1": {
+      "type": "text",
+      "sample": "local · falcon-h1r:7b",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "a2": {
+      "type": "text",
+      "sample": "Finance Reviewer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "d2": {
+      "type": "text",
+      "sample": "Anthropic · claude-sonnet-4.6",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    },
+    "a3": {
+      "type": "text",
+      "sample": "Hub Orchestrator",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "d3": {
+      "type": "text",
+      "sample": "Google · gemini-3.5-flash-lite",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "a4": {
+      "type": "text",
+      "sample": "Doc Extractor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d4": {
+      "type": "text",
+      "sample": "OpenAI · gpt-4o-mini",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

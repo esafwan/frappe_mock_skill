@@ -1,0 +1,65 @@
+{
+  "component": "huf-ios-confirmation-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "sending": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "sending"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "approved, sending"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "sending"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "approved, sending",
+      "alias": "sending"
+    },
+    "approved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "approved"
+      },
+      "screenshot": "states/approved.png",
+      "preview": "states/approved.html",
+      "description": "done, buttons dimmed"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

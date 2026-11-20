@@ -7,6 +7,9 @@ import { extractInPage, harnessDoc, fill } from './engine.mjs';
 import { specs as deskSpecs } from './specs.mjs';
 const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
 const hufSpecs = fs.existsSync(new URL('./specs-huf.mjs', import.meta.url)) ? (await import('./specs-huf.mjs')).specs : [];
+// Static-HTML spec sources (native mobile systems, see static-capture.mjs): auto-loaded when present.
+const STATIC_SPEC_FILES = ['specs-huf-ios.mjs', 'specs-huf-android.mjs'];
+const staticSpecs = []; for (const f of STATIC_SPEC_FILES) if (fs.existsSync(new URL('./' + f, import.meta.url))) staticSpecs.push(...(await import('./' + f)).specs.map((x) => ({ ...x, static: true })));
 const specs = [...deskSpecs, ...posSpecs, ...hufSpecs];
 
 const only = process.argv.slice(2);
@@ -18,7 +21,10 @@ const STATES = ['default', 'hover', 'focus', 'active', 'disabled', 'error', 'loa
 const snap = () => { const r = document.querySelector('[data-ui]'); return null; };
 
 // Desk/POS specs log in to a live bench; huf specs need no bench (each gets its own mocked app context, see scripts/huf/app.mjs).
-const selected = specs.filter((s) => !only.length || only.includes(s.id));
+const want = (id) => !only.length || only.some((o) => (o.includes('*') ? new RegExp('^' + o.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$').test(id) : o === id));
+const selected = specs.filter((s) => want(s.id));
+const selectedStatic = staticSpecs.filter((s) => want(s.id));
+if (selectedStatic.length) { const { captureStatic } = await import('./static-capture.mjs'); const b = await launch(); for (const s of selectedStatic) { try { await captureStatic(s, b); } catch (e) { console.log('FAIL', s.id, e.message.split('\n')[0]); } } await b.close(); if (!selected.length) process.exit(0); }
 let browser, page;
 if (selected.some((s) => s.group !== 'huf')) ({ browser, page } = await open()); else browser = await launch();
 const deskPage = page;
