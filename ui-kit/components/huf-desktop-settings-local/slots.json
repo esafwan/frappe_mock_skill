@@ -1,0 +1,1482 @@
+{
+  "component": "huf-desktop-settings-local",
+  "slots": {
+    "text_var_ink": {
+      "type": "text",
+      "sample": "Desktop",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "md_hidden": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-1"
+    },
+    "md_hidden_2": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_3": {
+      "type": "text",
+      "sample": "Providers and agents",
+      "maxLength": 40,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_4": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_5": {
+      "type": "text",
+      "sample": "Agents and permissions",
+      "maxLength": 44,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_6": {
+      "type": "text",
+      "sample": "Local capabilities",
+      "maxLength": 36,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_7": {
+      "type": "text",
+      "sample": "Privacy and security",
+      "maxLength": 40,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_8": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Providers and agents",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Agents and permissions",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_5": {
+      "type": "text",
+      "sample": "Local capabilities",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_6": {
+      "type": "text",
+      "sample": "Privacy and security",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_7": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_3": {
+      "type": "text",
+      "sample": "Local capabilities",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "Skills, tool servers and a browser on this computer.",
+      "maxLength": 104,
+      "where": "text",
+      "element": "span"
+    },
+    "start_0": {
+      "type": "text",
+      "sample": "Extra abilities that run on this computer: skills, local tool servers and a browser. Each one is empty or off until you add it, and anything that widens access opens a system dialog that only you can answer.",
+      "maxLength": 414,
+      "where": "text",
+      "element": "span"
+    },
+    "md_block": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-12"
+    },
+    "text_var_ink_4": {
+      "type": "text",
+      "sample": "Local skills",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h3"
+    },
+    "block": {
+      "type": "text",
+      "sample": "Skills are folders on this computer that teach your agents how to do a task. Nothing is scanned until you add a folder, each skill stays off until you enable it, and a skill that ships scripts must be confirmed before it can run.",
+      "maxLength": 458,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_signal_ink": {
+      "type": "text",
+      "sample": "7 of 8 on",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Add folder",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-14"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "~/.claude/skills",
+      "maxLength": 32,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-15"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "~/.codex/skills",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-16"
+    },
+    "text_var_steel_2": {
+      "type": "text",
+      "sample": "Nothing is scanned until you add a folder.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "span"
+    },
+    "block_2": {
+      "type": "text",
+      "sample": "Choose a folder that holds skill folders (each with a SKILL.md), or pick a common location below. Adding one opens a system dialog; it does not enable anything.",
+      "maxLength": 320,
+      "where": "text",
+      "element": "span"
+    },
+    "block_3": {
+      "type": "text",
+      "sample": "Names and descriptions of enabled skills are sent to your Huf site. File paths never are.",
+      "maxLength": 178,
+      "where": "text",
+      "element": "span"
+    },
+    "me_1_5": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_3": {
+      "type": "text",
+      "sample": "~/.agents/skills",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_4": {
+      "type": "text",
+      "sample": "3 skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "Enable all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-18"
+    },
+    "me_1_5_2": {
+      "type": "text",
+      "sample": "Workspace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_5": {
+      "type": "text",
+      "sample": "/Users/maya/Northwind/supplier-ops/.agents/skills",
+      "maxLength": 98,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_6": {
+      "type": "text",
+      "sample": "2 skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_5": {
+      "type": "text",
+      "sample": "Enable all",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-20"
+    },
+    "end_0": {
+      "type": "text",
+      "sample": "Turn a skill on to let your agents see and use it. A skill marked scripts can run commands, so you confirm it once, and again if it changes.",
+      "maxLength": 280,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_5": {
+      "type": "text",
+      "sample": "huf-office-docx",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Shipped",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "scripts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_7": {
+      "type": "text",
+      "sample": "Create and edit Word documents with tracked structure and a rendered preview.",
+      "maxLength": 154,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_6": {
+      "type": "text",
+      "sample": "huf-office-xlsx",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Shipped",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "scripts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_8": {
+      "type": "text",
+      "sample": "Build spreadsheets with formulas and charts; recalculates and checks the result.",
+      "maxLength": 160,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_2": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_7": {
+      "type": "text",
+      "sample": "huf-office-pdf",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Shipped",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "scripts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_9": {
+      "type": "text",
+      "sample": "Render reports to PDF and read PDFs back for verification.",
+      "maxLength": 116,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_3": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_8": {
+      "type": "text",
+      "sample": "purchase-order-check",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_normal": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "scripts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_10": {
+      "type": "text",
+      "sample": "Match supplier invoices against purchase orders and flag price or quantity gaps.",
+      "maxLength": 160,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_4": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_9": {
+      "type": "text",
+      "sample": "supplier-scorecard",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_normal_2": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_11": {
+      "type": "text",
+      "sample": "Score suppliers on on-time delivery, fill rate and quality claims for the quarter.",
+      "maxLength": 164,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_10": {
+      "type": "text",
+      "sample": "buyer-email-style",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_normal_3": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_12": {
+      "type": "text",
+      "sample": "House style for emails to suppliers: short, specific, one ask per message.",
+      "maxLength": 148,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_6": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_11": {
+      "type": "text",
+      "sample": "reorder-points",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_normal_4": {
+      "type": "text",
+      "sample": "Workspace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "scripts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "needs confirmation",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_13": {
+      "type": "text",
+      "sample": "Recompute reorder points and safety stock from the last 90 days of sales.",
+      "maxLength": 146,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_6": {
+      "type": "text",
+      "sample": "Confirm",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-30"
+    },
+    "gap_1_7": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_12": {
+      "type": "text",
+      "sample": "shelf-labels",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_normal_5": {
+      "type": "text",
+      "sample": "Workspace",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_14": {
+      "type": "text",
+      "sample": "Print-ready shelf labels from the catalog export.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_8": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_13": {
+      "type": "text",
+      "sample": "Local MCP servers",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_4": {
+      "type": "text",
+      "sample": "An MCP server is a program on this computer that gives your agents extra tools. Servers run confined by default, and every add, edit, import or always-allow opens a system dialog that shows the exact command.",
+      "maxLength": 416,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_signal_ink_2": {
+      "type": "text",
+      "sample": "2 servers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_7": {
+      "type": "text",
+      "sample": "Add server",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-34"
+    },
+    "text_xs_8": {
+      "type": "text",
+      "sample": "Import from Claude config",
+      "maxLength": 50,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-35"
+    },
+    "start_0_2": {
+      "type": "text",
+      "sample": "Adding, editing, importing and allowing a tool without asking each open a system dialog showing the exact command.",
+      "maxLength": 228,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_14": {
+      "type": "text",
+      "sample": "inventory",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_normal_6": {
+      "type": "text",
+      "sample": "any agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_15": {
+      "type": "text",
+      "sample": "/usr/local/bin/northwind-inventory-mcp --warehouse NW-01",
+      "maxLength": 112,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_16": {
+      "type": "text",
+      "sample": "Secret variables",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_17": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_18": {
+      "type": "text",
+      "sample": "INVENTORY_API_TOKEN",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_9": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_15": {
+      "type": "text",
+      "sample": "stock_level",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_19": {
+      "type": "text",
+      "sample": "Current stock and open purchase orders for a SKU.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_9": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_10": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_11": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_16": {
+      "type": "text",
+      "sample": "create_transfer",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_20": {
+      "type": "text",
+      "sample": "Move stock between warehouses.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_12": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_13": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_14": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_17": {
+      "type": "text",
+      "sample": "write_off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_21": {
+      "type": "text",
+      "sample": "Write off damaged or expired stock.",
+      "maxLength": 70,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_15": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_16": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_17": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_18": {
+      "type": "text",
+      "sample": "supplier-portal",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "tracking_normal_7": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_22": {
+      "type": "text",
+      "sample": "/usr/local/bin/supplier-portal-mcp",
+      "maxLength": 68,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_23": {
+      "type": "text",
+      "sample": "Secret variables",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_24": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_steel_25": {
+      "type": "text",
+      "sample": "PORTAL_TOKEN",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_10": {
+      "type": "text",
+      "sample": "Enabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_var_ink_19": {
+      "type": "text",
+      "sample": "list_deliveries",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_26": {
+      "type": "text",
+      "sample": "Deliveries booked by a supplier, with promised and actual times.",
+      "maxLength": 128,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_18": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_19": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_20": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_20": {
+      "type": "text",
+      "sample": "send_message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_27": {
+      "type": "text",
+      "sample": "Send a message to a supplier contact.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "span"
+    },
+    "text_xs_21": {
+      "type": "text",
+      "sample": "Ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_22": {
+      "type": "text",
+      "sample": "Always allow",
+      "maxLength": 24,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_23": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_var_ink_21": {
+      "type": "text",
+      "sample": "Browser",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_5": {
+      "type": "text",
+      "sample": "Lets agents browse the web in a browser that this app starts and watches. It is off by default. Turning it on downloads a pinned browser after you confirm, and every new site is asked about before the agent can open it.",
+      "maxLength": 438,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_28": {
+      "type": "text",
+      "sample": "Off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_22": {
+      "type": "text",
+      "sample": "Let agents use a managed browser",
+      "maxLength": 64,
+      "where": "text",
+      "element": "label"
+    },
+    "block_6": {
+      "type": "text",
+      "sample": "Off by default. The first time you turn it on, you are shown the exact install command and asked to confirm. Turn it off again at any time.",
+      "maxLength": 278,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_12": {
+      "type": "text",
+      "sample": "Use my own browser",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_29": {
+      "type": "text",
+      "sample": "Let agents act inside your own browser instead. Only for tasks that need your signed-in sessions.",
+      "maxLength": 194,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_23": {
+      "type": "text",
+      "sample": "Use my own browser",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "block_7": {
+      "type": "text",
+      "sample": "Connects agents to the browser you already use, through its extension or its debug port. It lasts until you quit this app.",
+      "maxLength": 244,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_24": {
+      "type": "text",
+      "sample": "Risk",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_25": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_30": {
+      "type": "text",
+      "sample": "Agents would act inside your signed-in sessions with no proxy in between, so they can reach anything you are logged in to. Every new site is still asked about first.",
+      "maxLength": 330,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_24": {
+      "type": "text",
+      "sample": "Use my browser (extension)",
+      "maxLength": 52,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-54"
+    },
+    "text_xs_25": {
+      "type": "text",
+      "sample": "Use my browser (debug port)",
+      "maxLength": 54,
+      "where": "text",
+      "element": "huf-desktop-settings-local.button-56"
+    },
+    "font_medium_13": {
+      "type": "text",
+      "sample": "Toolchain and diagnostics",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_31": {
+      "type": "text",
+      "sample": "What the built-in office skills use on this computer. Check it when a Word, Excel, PowerPoint or PDF task fails.",
+      "maxLength": 224,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_26": {
+      "type": "text",
+      "sample": "Office toolchain",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_8": {
+      "type": "text",
+      "sample": "What the built-in office skills (Word, Excel, PowerPoint, PDF, charts, Typst) use on this computer. Nothing downloads until you ask, and each download shows its source and checksum first.",
+      "maxLength": 374,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_arialabel": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "svg"
+    },
+    "webkit_search_cancel_button_hidden_placeholder": {
+      "type": "text",
+      "sample": "Search settings",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-local.input-2"
+    },
+    "webkit_search_cancel_button_hidden_arialabel": {
+      "type": "text",
+      "sample": "Search settings",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.input-2"
+    },
+    "md_pt_7_arialabel": {
+      "type": "text",
+      "sample": "Settings sections",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "md_hidden_arialabel": {
+      "type": "text",
+      "sample": "Go to a settings section",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-3"
+    },
+    "md_hidden_value": {
+      "type": "text",
+      "sample": "connection",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_2": {
+      "type": "text",
+      "sample": "providers",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_3": {
+      "type": "text",
+      "sample": "general",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_4": {
+      "type": "text",
+      "sample": "agents",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_5": {
+      "type": "text",
+      "sample": "local",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_6": {
+      "type": "text",
+      "sample": "privacy",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_7": {
+      "type": "text",
+      "sample": "advanced",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_text_var_signal_arialabel": {
+      "type": "text",
+      "sample": "About Local capabilities",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-11"
+    },
+    "hover_text_var_signal_arialabel_2": {
+      "type": "text",
+      "sample": "About Local skills",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-13"
+    },
+    "hover_text_var_signal_arialabel_3": {
+      "type": "text",
+      "sample": "Add folder",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-17"
+    },
+    "w_var_control_h_sm_arialabel": {
+      "type": "text",
+      "sample": "Remove folder",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-19"
+    },
+    "w_var_control_h_sm_arialabel_2": {
+      "type": "text",
+      "sample": "Remove folder",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-21"
+    },
+    "ps_7_placeholder": {
+      "type": "text",
+      "sample": "Search skills by name or description",
+      "maxLength": 72,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-local.input-22"
+    },
+    "ps_7_arialabel": {
+      "type": "text",
+      "sample": "Search skills by name or description",
+      "maxLength": 72,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.input-22"
+    },
+    "hover_text_var_signal_arialabel_4": {
+      "type": "text",
+      "sample": "Search skills by name or description",
+      "maxLength": 72,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-23"
+    },
+    "font_medium_title": {
+      "type": "text",
+      "sample": "Comes with this app and is trusted by the app. Its scripts still run confined, and each run asks first.",
+      "maxLength": 206,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "font_medium_title_2": {
+      "type": "text",
+      "sample": "Comes with this app and is trusted by the app. Its scripts still run confined, and each run asks first.",
+      "maxLength": 206,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "font_medium_title_3": {
+      "type": "text",
+      "sample": "Comes with this app and is trusted by the app. Its scripts still run confined, and each run asks first.",
+      "maxLength": 206,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "tracking_normal_title": {
+      "type": "text",
+      "sample": "~/.agents/skills",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "tracking_normal_title_2": {
+      "type": "text",
+      "sample": "~/.agents/skills",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "tracking_normal_title_3": {
+      "type": "text",
+      "sample": "~/.agents/skills",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "tracking_normal_title_4": {
+      "type": "text",
+      "sample": "/Users/maya/Northwind/supplier-ops/.agents/skills",
+      "maxLength": 98,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "tracking_normal_title_5": {
+      "type": "text",
+      "sample": "/Users/maya/Northwind/supplier-ops/.agents/skills",
+      "maxLength": 98,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "hover_text_var_signal_arialabel_5": {
+      "type": "text",
+      "sample": "About Local MCP servers",
+      "maxLength": 46,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-33"
+    },
+    "hover_text_var_signal_arialabel_6": {
+      "type": "text",
+      "sample": "Add server",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-36"
+    },
+    "ps_7_placeholder_2": {
+      "type": "text",
+      "sample": "Search tools by name or description",
+      "maxLength": 70,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-local.input-37"
+    },
+    "ps_7_arialabel_2": {
+      "type": "text",
+      "sample": "Search tools by name or description",
+      "maxLength": 70,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.input-37"
+    },
+    "text_var_steel_title": {
+      "type": "text",
+      "sample": "/usr/local/bin/northwind-inventory-mcp --warehouse NW-01",
+      "maxLength": 112,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "w_var_control_h_sm_arialabel_3": {
+      "type": "text",
+      "sample": "Restart",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-39"
+    },
+    "w_var_control_h_sm_arialabel_4": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-40"
+    },
+    "text_xs_arialabel": {
+      "type": "text",
+      "sample": "stock_level policy",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-41"
+    },
+    "text_xs_value": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_2": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_3": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_2": {
+      "type": "text",
+      "sample": "create_transfer policy",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-42"
+    },
+    "text_xs_value_4": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_5": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_6": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_3": {
+      "type": "text",
+      "sample": "write_off policy",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-43"
+    },
+    "text_xs_value_7": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_8": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_9": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_var_steel_title_2": {
+      "type": "text",
+      "sample": "/usr/local/bin/supplier-portal-mcp",
+      "maxLength": 68,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "w_var_control_h_sm_arialabel_5": {
+      "type": "text",
+      "sample": "Restart",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-45"
+    },
+    "w_var_control_h_sm_arialabel_6": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-46"
+    },
+    "text_xs_arialabel_4": {
+      "type": "text",
+      "sample": "list_deliveries policy",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-47"
+    },
+    "text_xs_value_10": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_11": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_12": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_5": {
+      "type": "text",
+      "sample": "send_message policy",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.select-48"
+    },
+    "text_xs_value_13": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_14": {
+      "type": "text",
+      "sample": "allow",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_15": {
+      "type": "text",
+      "sample": "deny",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_text_var_signal_arialabel_7": {
+      "type": "text",
+      "sample": "About Browser",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-49"
+    },
+    "hover_text_var_signal_arialabel_8": {
+      "type": "text",
+      "sample": "About Let agents use a managed browser",
+      "maxLength": 76,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-50"
+    },
+    "data_state_unchecked_bg_input_arialabel": {
+      "type": "text",
+      "sample": "Let agents use a managed browser",
+      "maxLength": 64,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-51"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-desktop-settings-local.button-51"
+    },
+    "hover_text_var_signal_arialabel_9": {
+      "type": "text",
+      "sample": "Use my own browser",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-53"
+    },
+    "font_mono_arialabel": {
+      "type": "text",
+      "sample": "Debug endpoint",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.input-55"
+    },
+    "font_mono_value": {
+      "type": "text",
+      "sample": "http://127.0.0.1:9222",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "huf-desktop-settings-local.input-55"
+    },
+    "hover_text_var_signal_arialabel_10": {
+      "type": "text",
+      "sample": "About Office toolchain",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.button-58"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-local.section-59"
+    }
+  }
+}

@@ -2,6 +2,7 @@ import fs from 'fs'; import path from 'path';
 import { chromium } from 'playwright';
 import { BASE, ROOT, open, go, launch } from './lib.mjs';
 import { openHuf, goHuf, liveCss } from './huf/app.mjs';
+const harnessOf = async (s) => (s.harness ? import(`./${s.harness}/app.mjs`) : { openHuf, goHuf, liveCss }); // huf spec.harness: another app host with the same API (e.g. 'huf-desktop')
 import { extractInPage, harnessDoc, fill } from './engine.mjs';
 import { specs as deskSpecs } from './specs.mjs';
 const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
@@ -23,13 +24,13 @@ if (selected.some((s) => s.group !== 'huf')) ({ browser, page } = await open());
 const deskPage = page;
 for (const spec of selected) {
   const isHuf = spec.group === 'huf'; let hufCtx = null;
-  if (isHuf) { const o = await openHuf(spec, browser); hufCtx = o.ctx; page = o.page; } else page = deskPage;
+  if (isHuf) { const o = await (await harnessOf(spec)).openHuf(spec, browser); hufCtx = o.ctx; page = o.page; } else page = deskPage;
   const dir = ROOT + 'components/' + spec.id + '/'; fs.mkdirSync(dir + 'states', { recursive: true });
   const out = { id: spec.id }; let rootWRtl = null, wRtl = null, wDark = null, rtlFrac = null, darkFrac = null, darkBg = null;
   try {
     const modes = (spec.modes || ['light', 'dark', 'rtl']).map((m) => [m, m === 'dark', m === 'rtl']);
     for (const [mode, dark, rtl] of modes) {
-      if (isHuf) await goHuf(page, spec.url, { waitFor: spec.waitFor, dark }); else await go(page, spec.url, { dark });
+      if (isHuf) await (await harnessOf(spec)).goHuf(page, spec.url, { waitFor: spec.waitFor, dark }); else await go(page, spec.url, { dark });
       if (rtl) await page.evaluate(() => document.documentElement.setAttribute('dir', 'rtl'));
       if (spec.prepare) await spec.prepare(page);
       await page.waitForTimeout(spec.settle ?? 600);
@@ -57,7 +58,7 @@ for (const spec of selected) {
       const fr = await loc.evaluate(e => { const b = e.getBoundingClientRect(); return { x: b.x + scrollX, y: b.y + scrollY }; }); data.rootFrac = { x: +((fr.x % 1 + 1) % 1).toFixed(3), y: +((fr.y % 1 + 1) % 1).toFixed(3) };
       data.pad = pad; data.clip = spec.pad ? { w: Math.ceil(data.size.w + pad.l + pad.r), h: Math.ceil(data.size.h + pad.t + pad.b) } : null;
       Object.assign(out, data);
-      if (isHuf) out.css = await liveCss(page, spec.source);
+      if (isHuf) out.css = await (await harnessOf(spec)).liveCss(page, spec.source);
       // states
       const states = {};
       for (const st of STATES) {
@@ -100,7 +101,7 @@ for (const spec of selected) {
       out.states = states;
     }
     // write files
-    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, wRtl, rootWRtl, wDark, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: out.css || spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, modes: modes.map((m) => m[0]), describe: spec.describe, darkTheme: isHuf ? 'midnight' : undefined, app: isHuf ? { source: spec.source || 'pre-develop', route: spec.url, fixtures: spec.fixtures || [], time: spec.time || null } : undefined, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
+    const meta = { id: spec.id, name: spec.name, group: spec.group, source: spec.url, ancestors: out.ancestors, bg: out.bg, pageBg: undefined, size: out.size, origin: out.rootFrac, wRtl, rootWRtl, wDark, originRtl: rtlFrac, originDark: darkFrac, bgDark: darkBg, stageW: (out.ancestors.find(a => a.tag !== 'html' && a.tag !== 'body') || {}).w, cssBase: '../../tokens/css/', css: out.css || spec.css || ['frappe-desk.css', 'erpnext-erpnext.css'], fonts: out.font, modes: modes.map((m) => m[0]), describe: spec.describe, darkTheme: isHuf ? (spec.darkTheme || 'midnight') : undefined, app: isHuf ? { source: spec.source || 'pre-develop', route: spec.url, fixtures: spec.fixtures || [], time: spec.time || null } : undefined, sprite: true, inlineCss: out.inlineCss, pad: out.pad, clip: out.clip };
     const bodyHtml = out.html;
     fs.rmSync(dir + 'assets', { recursive: true, force: true }); for (const im of out.images || []) { fs.mkdirSync(dir + 'assets', { recursive: true }); fs.writeFileSync(dir + im.file, (/;base64,/.test(im.data) ? Buffer.from(im.data.split(',')[1], 'base64') : Buffer.from(decodeURIComponent(im.data.slice(im.data.indexOf(',') + 1)), 'utf8'))); }
     { // calibrate sub-pixel origin per mode: render the preview with origin 0, compare root frac with the live one

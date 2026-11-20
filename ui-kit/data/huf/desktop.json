@@ -1,0 +1,775 @@
+{
+ "bridge": {
+  "version": "0.1.0-beta.4",
+  "user": "maya@example.com",
+  "connection": {
+   "url": "https://northwind.huf.example",
+   "sitename": "northwind.huf.example",
+   "apiKey": "nw-demo-key",
+   "apiSecret": "nw-demo-secret",
+   "socketioPort": "9000"
+  },
+  "workspaces": [
+   {
+    "id": 1,
+    "path": "/Users/maya/Northwind/supplier-ops",
+    "name": null,
+    "created_at": "2025-12-01T09:00:00.000Z",
+    "last_used_at": "2026-01-01T08:58:00.000Z"
+   },
+   {
+    "id": 2,
+    "path": "/Users/maya/Northwind/catalog-site",
+    "name": "Catalog site",
+    "created_at": "2025-11-20T09:00:00.000Z",
+    "last_used_at": "2025-12-31T15:00:00.000Z"
+   },
+   {
+    "id": 3,
+    "path": "/Users/maya/Northwind/finance-close",
+    "name": null,
+    "created_at": "2025-11-02T09:00:00.000Z",
+    "last_used_at": "2025-12-30T10:00:00.000Z"
+   }
+  ],
+  "permissionModes": {
+   "/Users/maya/Northwind/supplier-ops": "ask",
+   "/Users/maya/Northwind/catalog-site": "sandbox",
+   "/Users/maya/Northwind/finance-close": "auto"
+  },
+  "executor": {
+   "running": true,
+   "active": true,
+   "executorId": "exec-nw-0001",
+   "fingerprint": "nw-fingerprint",
+   "workspaceLabel": "supplier-ops",
+   "permissionMode": "ask",
+   "socketConnected": true,
+   "inFlight": 0
+  },
+  "preferences": {},
+  "skillDirs": [
+   {
+    "id": 1,
+    "label": "Local",
+    "displayPath": "~/.agents/skills",
+    "pluginRoot": false,
+    "skillCount": 3
+   },
+   {
+    "id": 2,
+    "label": "Workspace",
+    "displayPath": "/Users/maya/Northwind/supplier-ops/.agents/skills",
+    "pluginRoot": false,
+    "skillCount": 2
+   }
+  ],
+  "skillSuggestions": [
+   {
+    "key": "claude",
+    "displayPath": "~/.claude/skills",
+    "added": false
+   },
+   {
+    "key": "agents",
+    "displayPath": "~/.agents/skills",
+    "added": true
+   },
+   {
+    "key": "codex",
+    "displayPath": "~/.codex/skills",
+    "added": false
+   }
+  ],
+  "skills": [
+   {
+    "id": "s-docx",
+    "name": "huf-office-docx",
+    "description": "Create and edit Word documents with tracked structure and a rendered preview.",
+    "dirLabel": "huf-office",
+    "hasScripts": true,
+    "fileCount": 9,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "shipped"
+   },
+   {
+    "id": "s-xlsx",
+    "name": "huf-office-xlsx",
+    "description": "Build spreadsheets with formulas and charts; recalculates and checks the result.",
+    "dirLabel": "huf-office",
+    "hasScripts": true,
+    "fileCount": 8,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "shipped"
+   },
+   {
+    "id": "s-pdf",
+    "name": "huf-office-pdf",
+    "description": "Render reports to PDF and read PDFs back for verification.",
+    "dirLabel": "huf-office",
+    "hasScripts": true,
+    "fileCount": 7,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "shipped"
+   },
+   {
+    "id": "s-po",
+    "name": "purchase-order-check",
+    "description": "Match supplier invoices against purchase orders and flag price or quantity gaps.",
+    "dirLabel": "Local",
+    "hasScripts": true,
+    "fileCount": 3,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "local"
+   },
+   {
+    "id": "s-sla",
+    "name": "supplier-scorecard",
+    "description": "Score suppliers on on-time delivery, fill rate and quality claims for the quarter.",
+    "dirLabel": "Local",
+    "hasScripts": false,
+    "fileCount": 3,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "local"
+   },
+   {
+    "id": "s-mail",
+    "name": "buyer-email-style",
+    "description": "House style for emails to suppliers: short, specific, one ask per message.",
+    "dirLabel": "Local",
+    "hasScripts": false,
+    "fileCount": 3,
+    "enabled": false,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "local"
+   },
+   {
+    "id": "s-reorder",
+    "name": "reorder-points",
+    "description": "Recompute reorder points and safety stock from the last 90 days of sales.",
+    "dirLabel": "Workspace",
+    "hasScripts": true,
+    "fileCount": 3,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": true,
+    "origin": "local"
+   },
+   {
+    "id": "s-labels",
+    "name": "shelf-labels",
+    "description": "Print-ready shelf labels from the catalog export.",
+    "dirLabel": "Workspace",
+    "hasScripts": false,
+    "fileCount": 3,
+    "enabled": true,
+    "status": "active",
+    "usable": true,
+    "changed": false,
+    "needsConfirm": false,
+    "origin": "local"
+   }
+  ],
+  "mcpServers": [
+   {
+    "name": "inventory",
+    "command": "/usr/local/bin/northwind-inventory-mcp",
+    "args": [
+     "--warehouse",
+     "NW-01"
+    ],
+    "envKeys": [
+     "INVENTORY_REGION"
+    ],
+    "secretEnvKeys": [
+     "INVENTORY_API_TOKEN"
+    ],
+    "confinement": "confined",
+    "allowedDomains": [
+     "inventory.northwind.example"
+    ],
+    "writeDirs": [],
+    "agents": "any",
+    "enabled": true,
+    "exposed": true,
+    "state": "ready",
+    "toolCount": 3,
+    "tools": [
+     {
+      "tool": "stock_level",
+      "description": "Current stock and open purchase orders for a SKU.",
+      "policy": "allow",
+      "available": true
+     },
+     {
+      "tool": "create_transfer",
+      "description": "Move stock between warehouses.",
+      "policy": "ask",
+      "available": true
+     },
+     {
+      "tool": "write_off",
+      "description": "Write off damaged or expired stock.",
+      "policy": "deny",
+      "available": true
+     }
+    ]
+   },
+   {
+    "name": "supplier-portal",
+    "command": "/usr/local/bin/supplier-portal-mcp",
+    "args": [],
+    "envKeys": [],
+    "secretEnvKeys": [
+     "PORTAL_TOKEN"
+    ],
+    "confinement": "confined",
+    "allowedDomains": [
+     "suppliers.northwind.example"
+    ],
+    "writeDirs": [],
+    "agents": [
+     "Operations Analyst"
+    ],
+    "enabled": true,
+    "exposed": true,
+    "state": "ready",
+    "toolCount": 2,
+    "tools": [
+     {
+      "tool": "list_deliveries",
+      "description": "Deliveries booked by a supplier, with promised and actual times.",
+      "policy": "allow",
+      "available": true
+     },
+     {
+      "tool": "send_message",
+      "description": "Send a message to a supplier contact.",
+      "policy": "ask",
+      "available": true
+     }
+    ]
+   }
+  ],
+  "browser": {
+   "enabled": false,
+   "state": "off",
+   "installed": {
+    "server": false,
+    "browser": false
+   },
+   "workspace": "supplier-ops",
+   "profile": {
+    "mode": "isolated",
+    "isDefault": true
+   },
+   "profileDefault": "isolated",
+   "headless": true,
+   "allowedDomains": [],
+   "realBrowser": {
+    "active": false
+   }
+  },
+  "installs": {
+   "workspace": "supplier-ops",
+   "allowScripts": false
+  },
+  "policy": {
+   "workspace": "supplier-ops",
+   "fields": [
+    "cli",
+    "files",
+    "skills",
+    "local_mcp",
+    "browser",
+    "installs",
+    "processes"
+   ],
+   "rows": [
+    {
+     "agent": "*",
+     "field": "cli",
+     "level": "ask"
+    },
+    {
+     "agent": "*",
+     "field": "files",
+     "level": "allowed"
+    },
+    {
+     "agent": "*",
+     "field": "installs",
+     "level": "ask"
+    },
+    {
+     "agent": "Buying Assistant",
+     "field": "cli",
+     "level": "off"
+    },
+    {
+     "agent": "Buying Assistant",
+     "field": "browser",
+     "level": "off"
+    }
+   ]
+  },
+  "remote": {
+   "enabled": false,
+   "excludedAgents": []
+  },
+  "device": null,
+  "processes": []
+ },
+ "server": {
+  "agents": [
+   {
+    "name": "Operations Analyst",
+    "agent_name": "Operations Analyst",
+    "provider": "Google",
+    "provider_brand": "google",
+    "model": "gemini-3.5-flash",
+    "agent_color": null,
+    "allow_chat": 1,
+    "disabled": 0,
+    "description": "Supplier, stock and delivery analysis for Northwind Trading.",
+    "allow_file_upload": 1,
+    "max_upload_size_mb": 20
+   },
+   {
+    "name": "Buying Assistant",
+    "agent_name": "Buying Assistant",
+    "provider": "Anthropic",
+    "provider_brand": "anthropic",
+    "model": "claude-sonnet-4-5",
+    "agent_color": null,
+    "allow_chat": 1,
+    "disabled": 0,
+    "description": "Drafts purchase orders and supplier emails.",
+    "allow_file_upload": 1,
+    "max_upload_size_mb": 20
+   },
+   {
+    "name": "Catalog Writer",
+    "agent_name": "Catalog Writer",
+    "provider": "Anthropic",
+    "provider_brand": "anthropic",
+    "model": "claude-haiku-4-5",
+    "agent_color": null,
+    "allow_chat": 1,
+    "disabled": 0,
+    "description": "Product descriptions for the wholesale catalog.",
+    "allow_file_upload": 0,
+    "max_upload_size_mb": null
+   }
+  ],
+  "conversations": [
+   {
+    "name": "NW-CONV-0001",
+    "title": "Supplier delivery review, Q4",
+    "agent": "Operations Analyst",
+    "last_activity": "2026-01-01 08:58:00",
+    "modified": "2026-01-01 08:58:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0002",
+    "title": "On-time delivery by supplier",
+    "agent": "Operations Analyst",
+    "last_activity": "2026-01-01 08:31:00",
+    "modified": "2026-01-01 08:31:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0003",
+    "title": "Reorder policy for chilled goods",
+    "agent": "Operations Analyst",
+    "last_activity": "2026-01-01 07:45:00",
+    "modified": "2026-01-01 07:45:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0004",
+    "title": "Invoice gaps from Vera Spice Co.",
+    "agent": "Operations Analyst",
+    "last_activity": "2025-12-31 16:10:00",
+    "modified": "2025-12-31 16:10:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0005",
+    "title": "Holiday stock transfer plan",
+    "agent": "Operations Analyst",
+    "last_activity": "2025-12-31 11:20:00",
+    "modified": "2025-12-31 11:20:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0006",
+    "title": "Draft PO for Casa Rinaldi",
+    "agent": "Buying Assistant",
+    "last_activity": "2025-12-30 14:05:00",
+    "modified": "2025-12-30 14:05:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0007",
+    "title": "Shelf-life claims, December",
+    "agent": "Operations Analyst",
+    "last_activity": "2025-12-29 09:40:00",
+    "modified": "2025-12-29 09:40:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   },
+   {
+    "name": "NW-CONV-0008",
+    "title": "Catalog copy for spring range",
+    "agent": "Catalog Writer",
+    "last_activity": "2025-12-23 10:00:00",
+    "modified": "2025-12-23 10:00:00",
+    "project": null,
+    "status": "Active",
+    "pinned": 0
+   }
+  ],
+  "messages": {
+   "NW-CONV-0001": [
+    {
+     "name": "NW-CONV-0001-U1",
+     "conversation": "NW-CONV-0001",
+     "content": "Put together the Q4 supplier delivery review for Monday's buying meeting. Use the delivery log, the open purchase orders and last quarter's scorecard, and tell me which suppliers need a conversation.",
+     "is_agent_message": 0,
+     "kind": "User",
+     "creation": "2026-01-01 08:50:00"
+    },
+    {
+     "name": "NW-CONV-0001-T11",
+     "conversation": "NW-CONV-0001",
+     "content": "read 1,284 rows",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0001-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:51:00",
+     "tool_name": "fs.read",
+     "tool_args": "{\"path\":\"data/deliveries_q4.csv\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0001-call-11"
+    },
+    {
+     "name": "NW-CONV-0001-T12",
+     "conversation": "NW-CONV-0001",
+     "content": "read 212 orders",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0001-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:52:00",
+     "tool_name": "fs.read",
+     "tool_args": "{\"path\":\"data/open_purchase_orders.json\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0001-call-12"
+    },
+    {
+     "name": "NW-CONV-0001-T13",
+     "conversation": "NW-CONV-0001",
+     "content": "scored 6 suppliers",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0001-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:53:00",
+     "tool_name": "exec.run",
+     "tool_args": "{\"command\":\"python3 scripts/score_suppliers.py --quarter 2025Q4\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0001-call-13"
+    },
+    {
+     "name": "NW-CONV-0001-T14",
+     "conversation": "NW-CONV-0001",
+     "content": "{\"success\":true,\"artifact_id\":\"NW-DOC-0001\",\"title\":\"Supplier delivery review, Q4 2025\",\"artifact_type\":\"document\"}",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0001-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:54:00",
+     "tool_name": "create_document",
+     "tool_args": "{\"title\":\"Supplier delivery review, Q4 2025\",\"type\":\"document\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0001-call-14"
+    },
+    {
+     "name": "NW-CONV-0001-A1",
+     "conversation": "NW-CONV-0001",
+     "content": "I matched all 1,284 deliveries against their purchase orders and wrote the review. It is in the side panel, and Export there saves it as Word or PDF.\n\n**Where we landed**\n\n- On-time delivery was **95.6%** across six suppliers, up from 93.9% in Q3.\n- Fill rate was **98.1%**; short shipments cost about **$42k** in lost sales.\n- Ortega Produce and Casa Rinaldi were best, both above 97%.\n\n**Two suppliers need a conversation.** Lindqvist Fish (91.2%) and Bayside Dairy (93.4%) missed the 95% target in all three months, and most of the December shortages on chilled lines trace back to them. I listed both first under Actions, with suggested talking points.\n\nI can also draft the two supplier emails if that helps.",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0001-RUN1",
+     "kind": "Agent",
+     "creation": "2026-01-01 08:58:00"
+    }
+   ],
+   "NW-CONV-0002": [
+    {
+     "name": "NW-CONV-0002-U1",
+     "conversation": "NW-CONV-0002",
+     "content": "Chart on-time delivery by supplier for Q4 against our 95% target. It is going in the buying deck.",
+     "is_agent_message": 0,
+     "kind": "User",
+     "creation": "2026-01-01 08:29:00"
+    },
+    {
+     "name": "NW-CONV-0002-T11",
+     "conversation": "NW-CONV-0002",
+     "content": "ok",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0002-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:51:00",
+     "tool_name": "exec.run",
+     "tool_args": "{\"command\":\"python3 scripts/on_time_by_supplier.py --quarter 2025Q4\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0002-call-11"
+    },
+    {
+     "name": "NW-CONV-0002-T12",
+     "conversation": "NW-CONV-0002",
+     "content": "ok",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0002-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:52:00",
+     "tool_name": "create_artifact",
+     "tool_args": "{\"type\":\"jsx\",\"title\":\"On-time delivery by supplier, Q4\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0002-call-12"
+    },
+    {
+     "name": "NW-CONV-0002-A1",
+     "conversation": "NW-CONV-0002",
+     "content": "Four of six suppliers met the 95% target. Ortega Produce led at **98.5%**; Lindqvist Fish was lowest at **91.2%**.\n\n<artifact type=\"jsx\" title=\"On-time delivery by supplier, Q4\">\nconst data = [\n  { supplier: 'Casa Rinaldi', onTime: 97.8, target: 95 },\n  { supplier: 'Vera Spice Co.', onTime: 96.1, target: 95 },\n  { supplier: 'Bayside Dairy', onTime: 93.4, target: 95 },\n  { supplier: 'Lindqvist Fish', onTime: 91.2, target: 95 },\n  { supplier: 'Ortega Produce', onTime: 98.5, target: 95 },\n  { supplier: 'Halden Bakery', onTime: 94.7, target: 95 },\n];\n<ResponsiveContainer width=\"100%\" height={380}><BarChart data={data} margin={{ top: 16, right: 24, left: 8, bottom: 28 }} barGap={4}><CartesianGrid strokeDasharray=\"3 3\" stroke=\"#ECECF0\" /><XAxis dataKey=\"supplier\" label={{ value: 'Supplier, Q4 2025', position: 'insideBottom', offset: -16, fill: '#6E6E73', fontSize: 12 }} tick={{ fontSize: 11 }} /><YAxis domain={[85, 100]} label={{ value: 'On-time deliveries (%)', angle: -90, position: 'insideLeft', fill: '#6E6E73', fontSize: 12 }} tick={{ fontSize: 12 }} /><Tooltip /><Legend verticalAlign=\"top\" height={32} /><Bar dataKey=\"onTime\" name=\"On time\" fill=\"#0F766E\" radius={[3, 3, 0, 0]} /><Bar dataKey=\"target\" name=\"Target\" fill=\"#B9C2C0\" radius={[3, 3, 0, 0]} /></BarChart></ResponsiveContainer>\n</artifact>\n\nHover a bar to see the exact values.",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0002-RUN1",
+     "kind": "Agent",
+     "creation": "2026-01-01 08:31:00"
+    }
+   ],
+   "NW-CONV-0003": [
+    {
+     "name": "NW-CONV-0003-U1",
+     "conversation": "NW-CONV-0003",
+     "content": "Write up a reorder policy proposal for chilled goods that I can share with the buyers.",
+     "is_agent_message": 0,
+     "kind": "User",
+     "creation": "2026-01-01 07:40:00"
+    },
+    {
+     "name": "NW-CONV-0003-T11",
+     "conversation": "NW-CONV-0003",
+     "content": "ok",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0003-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:51:00",
+     "tool_name": "fs.read",
+     "tool_args": "{\"path\":\"data/stockouts_q4.csv\"}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0003-call-11"
+    },
+    {
+     "name": "NW-CONV-0003-T12",
+     "conversation": "NW-CONV-0003",
+     "content": "ok",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0003-RUN1",
+     "kind": "Tool Result",
+     "creation": "2026-01-01 08:52:00",
+     "tool_name": "skill.run",
+     "tool_args": "{\"skill\":\"reorder-points\",\"args\":[\"--days\",\"90\",\"--group\",\"chilled\"]}",
+     "tool_status": "Completed",
+     "tool_call_id": "NW-CONV-0003-call-12"
+    },
+    {
+     "name": "NW-CONV-0003-A1",
+     "conversation": "NW-CONV-0003",
+     "content": "Here is the proposal. It raises safety stock only for the two lines with late suppliers.\n\n<artifact type=\"markdown\" title=\"Reorder policy for chilled goods\">\n# Reorder policy for chilled goods\n\n**Northwind Trading, supplier operations.** Draft for the January buying meeting.\n\n## Why change it\n\nChilled lines were short on 14 of 92 trading days in Q4, almost all after a late Bayside Dairy or Lindqvist Fish delivery. Safety stock today is a flat two days for every line.\n\n## Proposal\n\n| Line group | Supplier | Lead time | Safety stock now | Proposed |\n|---|---|---|---|---|\n| Fresh dairy | Bayside Dairy | 2 days | 2 days | 3 days |\n| Fresh fish | Lindqvist Fish | 1 day | 2 days | 3 days |\n| Bakery | Halden Bakery | 1 day | 2 days | 2 days |\n| Produce | Ortega Produce | 2 days | 2 days | 2 days |\n\n- Reorder point = average daily demand x (lead time + safety stock).\n- Review the two raised lines again at the end of February.\n\n## Cost\n\nAbout **$18,400** more stock on hand on an average day, against roughly **$61,000** of Q4 sales lost to empty shelves.\n</artifact>",
+     "is_agent_message": 1,
+     "agent_run": "NW-CONV-0003-RUN1",
+     "kind": "Agent",
+     "creation": "2026-01-01 07:45:00"
+    }
+   ]
+  }
+ },
+ "approval": {
+  "single": {
+   "items": [
+    {
+     "id": "appr-1",
+     "seq": 1,
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "conversationTitle": "Supplier delivery review, Q4",
+     "commandTruncated": false,
+     "sensitive": false,
+     "protected": false,
+     "outsideWorkspace": false,
+     "scopes": [
+      "once",
+      "run-command",
+      "run"
+     ],
+     "mustPrompt": false,
+     "expiresInSec": 120,
+     "requestedAgoSec": 8,
+     "op": "exec.run",
+     "title": "Run a command",
+     "command": "python3 scripts/email_suppliers.py --draft lindqvist-fish bayside-dairy",
+     "cwd": ".",
+     "confined": true
+    }
+   ],
+   "runGroups": [
+    {
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "count": 1,
+     "allowRunScope": true
+    }
+   ]
+  },
+  "batch": {
+   "items": [
+    {
+     "id": "appr-1",
+     "seq": 1,
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "conversationTitle": "Supplier delivery review, Q4",
+     "commandTruncated": false,
+     "sensitive": false,
+     "protected": false,
+     "outsideWorkspace": false,
+     "scopes": [
+      "once",
+      "run"
+     ],
+     "mustPrompt": false,
+     "expiresInSec": 120,
+     "requestedAgoSec": 8,
+     "op": "fs.write",
+     "title": "Write a file",
+     "path": "outputs/supplier-review-q4.docx",
+     "summary": "Save the Q4 supplier review as Word"
+    },
+    {
+     "id": "appr-2",
+     "seq": 2,
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "conversationTitle": "Supplier delivery review, Q4",
+     "commandTruncated": false,
+     "sensitive": false,
+     "protected": false,
+     "outsideWorkspace": false,
+     "scopes": [
+      "once",
+      "run"
+     ],
+     "mustPrompt": false,
+     "expiresInSec": 120,
+     "requestedAgoSec": 8,
+     "op": "fs.write",
+     "title": "Write a file",
+     "path": "outputs/supplier-review-q4.pdf"
+    },
+    {
+     "id": "appr-3",
+     "seq": 3,
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "conversationTitle": "Supplier delivery review, Q4",
+     "commandTruncated": false,
+     "sensitive": false,
+     "protected": false,
+     "outsideWorkspace": false,
+     "scopes": [
+      "once",
+      "run"
+     ],
+     "mustPrompt": false,
+     "expiresInSec": 120,
+     "requestedAgoSec": 8,
+     "op": "fs.edit",
+     "title": "Edit a file",
+     "path": "data/reorder_points.csv",
+     "summary": "Raise safety stock for fresh dairy and fish"
+    },
+    {
+     "id": "appr-4",
+     "seq": 4,
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "conversationTitle": "Supplier delivery review, Q4",
+     "commandTruncated": false,
+     "sensitive": false,
+     "protected": false,
+     "outsideWorkspace": false,
+     "scopes": [
+      "once",
+      "run-command",
+      "run"
+     ],
+     "mustPrompt": false,
+     "expiresInSec": 120,
+     "requestedAgoSec": 8,
+     "op": "exec.run",
+     "title": "Run a command",
+     "command": "python3 scripts/score_suppliers.py --quarter 2025Q4 --export",
+     "cwd": ".",
+     "confined": true
+    }
+   ],
+   "runGroups": [
+    {
+     "agentRunId": "NW-CONV-0001-RUN2",
+     "agentName": "Operations Analyst",
+     "count": 4,
+     "allowRunScope": true
+    }
+   ]
+  }
+ }
+}

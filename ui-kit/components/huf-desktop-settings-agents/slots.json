@@ -1,0 +1,1097 @@
+{
+  "component": "huf-desktop-settings-agents",
+  "slots": {
+    "text_var_ink": {
+      "type": "text",
+      "sample": "Desktop",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "md_hidden": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-1"
+    },
+    "md_hidden_2": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_3": {
+      "type": "text",
+      "sample": "Providers and agents",
+      "maxLength": 40,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_4": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_5": {
+      "type": "text",
+      "sample": "Agents and permissions",
+      "maxLength": 44,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_6": {
+      "type": "text",
+      "sample": "Local capabilities",
+      "maxLength": 36,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_7": {
+      "type": "text",
+      "sample": "Privacy and security",
+      "maxLength": 40,
+      "where": "text",
+      "element": "option"
+    },
+    "md_hidden_8": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Providers and agents",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Agents and permissions",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_5": {
+      "type": "text",
+      "sample": "Local capabilities",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_6": {
+      "type": "text",
+      "sample": "Privacy and security",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_7": {
+      "type": "text",
+      "sample": "Advanced",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_3": {
+      "type": "text",
+      "sample": "Agents and permissions",
+      "maxLength": 44,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "What agents may do on this computer.",
+      "maxLength": 72,
+      "where": "text",
+      "element": "span"
+    },
+    "start_0": {
+      "type": "text",
+      "sample": "What agents may do on this computer. Start with the approval mode in the chat composer; use this page for per-agent limits and for remote control. Everything here applies to the workspace you have open.",
+      "maxLength": 404,
+      "where": "text",
+      "element": "span"
+    },
+    "md_block": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-11"
+    },
+    "text_var_ink_4": {
+      "type": "text",
+      "sample": "Approval mode",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h3"
+    },
+    "block": {
+      "type": "text",
+      "sample": "How agent actions are approved is set per workspace, from the Permissions chip in the chat composer. It decides what runs freely and what asks you first.",
+      "maxLength": 306,
+      "where": "text",
+      "element": "span"
+    },
+    "block_2": {
+      "type": "text",
+      "sample": "Change the mode from the Permissions chip in the chat composer. Each workspace keeps its own mode, and Ask every time is the starting point for a new one.",
+      "maxLength": 308,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_5": {
+      "type": "text",
+      "sample": "Ask every time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_var_steel_2": {
+      "type": "text",
+      "sample": "Every write, delete and command asks for approval, every time. Reads run freely.",
+      "maxLength": 160,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_6": {
+      "type": "text",
+      "sample": "Auto",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_var_steel_3": {
+      "type": "text",
+      "sample": "Reads run freely. Writes and commands ask; you can allow a kind of action for the rest of the run. Deletes and protected paths always ask.",
+      "maxLength": 276,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_7": {
+      "type": "text",
+      "sample": "Sandboxed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_var_steel_4": {
+      "type": "text",
+      "sample": "Reads and normal writes inside the workspace run freely. Commands run confined to the workspace and ask first. Sensitive or protected paths ask.",
+      "maxLength": 288,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_8": {
+      "type": "text",
+      "sample": "Full access",
+      "maxLength": 22,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_var_steel_5": {
+      "type": "text",
+      "sample": "No gating. Every operation runs immediately, commands run unconfined.",
+      "maxLength": 138,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_9": {
+      "type": "text",
+      "sample": "Limits per agent",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_3": {
+      "type": "text",
+      "sample": "Turn a kind of access off, or force a prompt, for one agent or for every agent in this workspace. Limits can only tighten what the approval mode allows; the Huf server can also set a ceiling for an agent, and the stricter of the two applies.",
+      "maxLength": 482,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_10": {
+      "type": "text",
+      "sample": "off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "sm_gap_2": {
+      "type": "text",
+      "sample": "The agent is refused, whatever the approval mode says.",
+      "maxLength": 108,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_11": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "sm_gap_2_2": {
+      "type": "text",
+      "sample": "The agent always prompts you, even where the mode would let it run.",
+      "maxLength": 134,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_var_ink_12": {
+      "type": "text",
+      "sample": "allowed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "sm_gap_2_3": {
+      "type": "text",
+      "sample": "No extra limit; the workspace approval mode decides.",
+      "maxLength": 104,
+      "where": "text",
+      "element": "dd"
+    },
+    "space_y_1": {
+      "type": "text",
+      "sample": "Areas: cli (commands), files, skills, local_mcp (local MCP servers), browser, installs (package installs) and processes (long-running background commands).",
+      "maxLength": 310,
+      "where": "text",
+      "element": "div"
+    },
+    "text_var_signal_ink": {
+      "type": "text",
+      "sample": "5 limits",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_13": {
+      "type": "text",
+      "sample": "For workspace supplier-ops. Off refuses, Ask always prompts, Allowed follows the workspace permission mode. The most restrictive setting wins.",
+      "maxLength": 284,
+      "where": "text",
+      "element": "p"
+    },
+    "font_mono": {
+      "type": "text",
+      "sample": "Workspace default",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_2": {
+      "type": "text",
+      "sample": "cli",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_3": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_4": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-14"
+    },
+    "font_mono_2": {
+      "type": "text",
+      "sample": "Workspace default",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_5": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_6": {
+      "type": "text",
+      "sample": "files",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_7": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_8": {
+      "type": "text",
+      "sample": "allowed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-15"
+    },
+    "font_mono_3": {
+      "type": "text",
+      "sample": "Workspace default",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_9": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_10": {
+      "type": "text",
+      "sample": "installs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_11": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_12": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-16"
+    },
+    "font_mono_4": {
+      "type": "text",
+      "sample": "Buying Assistant",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_13": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_14": {
+      "type": "text",
+      "sample": "cli",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_15": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_16": {
+      "type": "text",
+      "sample": "off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-17"
+    },
+    "font_mono_5": {
+      "type": "text",
+      "sample": "Buying Assistant",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_17": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_18": {
+      "type": "text",
+      "sample": "browser",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_19": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_2_20": {
+      "type": "text",
+      "sample": "off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_xs_5": {
+      "type": "text",
+      "sample": "Remove",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-18"
+    },
+    "text_xs_6": {
+      "type": "text",
+      "sample": "cli",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_7": {
+      "type": "text",
+      "sample": "files",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_8": {
+      "type": "text",
+      "sample": "skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_9": {
+      "type": "text",
+      "sample": "local_mcp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_10": {
+      "type": "text",
+      "sample": "browser",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_11": {
+      "type": "text",
+      "sample": "installs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_12": {
+      "type": "text",
+      "sample": "processes",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_13": {
+      "type": "text",
+      "sample": "off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_14": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_15": {
+      "type": "text",
+      "sample": "allowed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_xs_16": {
+      "type": "text",
+      "sample": "Set",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-22"
+    },
+    "text_var_steel_6": {
+      "type": "text",
+      "sample": "Making something more permissive asks for confirmation in a system dialog.",
+      "maxLength": 148,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_14": {
+      "type": "text",
+      "sample": "Coding agent rules",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_4": {
+      "type": "text",
+      "sample": "Rules you saved when allowing a coding agent (Claude Code, Codex) to run something without asking again. Each rule matches one exact kind of request, never anything broader. You can revoke any rule here, turn automatic answers off entirely, and review the last 200 times a rule answered for you.",
+      "maxLength": 590,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_15": {
+      "type": "text",
+      "sample": "Allow Huf to auto-answer saved rules",
+      "maxLength": 72,
+      "where": "text",
+      "element": "label"
+    },
+    "block_5": {
+      "type": "text",
+      "sample": "When on, a request that matches one of the rules below is allowed without showing a card, and the chat shows that a rule did it. When off, every request asks you, even if a rule exists. The change applies right away, including to requests that are already waiting.",
+      "maxLength": 528,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_signal_ink_2": {
+      "type": "text",
+      "sample": "On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_16": {
+      "type": "text",
+      "sample": "Saved rules",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_var_steel_7": {
+      "type": "text",
+      "sample": "No saved rules. When you choose Allow for this session or Always allow on an approval card, the rule appears here.",
+      "maxLength": 228,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_17": {
+      "type": "text",
+      "sample": "Recent automatic answers",
+      "maxLength": 48,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_var_steel_8": {
+      "type": "text",
+      "sample": "No automatic answers yet.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_18": {
+      "type": "text",
+      "sample": "Remote control",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_6": {
+      "type": "text",
+      "sample": "Lets your Huf web and mobile sessions use this computer's tools. It is off by default and worth leaving off unless you actually work from another device.",
+      "maxLength": 306,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_9": {
+      "type": "text",
+      "sample": "Off",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_19": {
+      "type": "text",
+      "sample": "Allow web and mobile sessions to control this computer",
+      "maxLength": 108,
+      "where": "text",
+      "element": "label"
+    },
+    "block_7": {
+      "type": "text",
+      "sample": "Turn it on to let your Huf web and mobile sessions use this computer, each workspace under its own approval mode. A system dialog asks you to confirm.",
+      "maxLength": 300,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_20": {
+      "type": "text",
+      "sample": "Risk",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_21": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_10": {
+      "type": "text",
+      "sample": "While on, remote sessions use each workspace's own permission mode with no extra prompt and can change that mode, including to Full. Anyone who controls your signed-in Huf session can therefore act here. Every remote call and mode change appears in Activity.",
+      "maxLength": 516,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_22": {
+      "type": "text",
+      "sample": "Agents excluded from remote control",
+      "maxLength": 70,
+      "where": "text",
+      "element": "span"
+    },
+    "start_0_2": {
+      "type": "text",
+      "sample": "An excluded agent is refused by remote sessions even while the switch is on. Use it to keep specific agents off this computer while the others stay allowed.",
+      "maxLength": 312,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_11": {
+      "type": "text",
+      "sample": "None. Every agent follows the switch above.",
+      "maxLength": 86,
+      "where": "text",
+      "element": "div"
+    },
+    "text_xs_17": {
+      "type": "text",
+      "sample": "Exclude",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-settings-agents.button-31"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Advanced agent settings",
+      "maxLength": 46,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_12": {
+      "type": "text",
+      "sample": "Rarely needed. Install scripts can run code that nobody reviewed.",
+      "maxLength": 130,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_23": {
+      "type": "text",
+      "sample": "Package install scripts",
+      "maxLength": 46,
+      "where": "text",
+      "element": "h3"
+    },
+    "block_8": {
+      "type": "text",
+      "sample": "Every package install an agent runs is asked about first and never remembered. This one switch covers a separate question: whether the install scripts that some packages bring may run.",
+      "maxLength": 368,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_24": {
+      "type": "text",
+      "sample": "Let installed packages run their install scripts (supplier-ops)",
+      "maxLength": 126,
+      "where": "text",
+      "element": "label"
+    },
+    "block_9": {
+      "type": "text",
+      "sample": "Some packages run a script when installed. Off, they do not. Turn it on only if a project you trust needs them. It applies to the open workspace only.",
+      "maxLength": 300,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_25": {
+      "type": "text",
+      "sample": "Risk",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_ink_26": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel_13": {
+      "type": "text",
+      "sample": "Off by default. Scripts still run inside the sandbox, but you do not see them before they run.",
+      "maxLength": 188,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_arialabel": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "svg"
+    },
+    "webkit_search_cancel_button_hidden_placeholder": {
+      "type": "text",
+      "sample": "Search settings",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-agents.search"
+    },
+    "webkit_search_cancel_button_hidden_arialabel": {
+      "type": "text",
+      "sample": "Search settings",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.search"
+    },
+    "md_pt_7_arialabel": {
+      "type": "text",
+      "sample": "Settings sections",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "md_hidden_arialabel": {
+      "type": "text",
+      "sample": "Go to a settings section",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.select-2"
+    },
+    "md_hidden_value": {
+      "type": "text",
+      "sample": "connection",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_2": {
+      "type": "text",
+      "sample": "providers",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_3": {
+      "type": "text",
+      "sample": "general",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_4": {
+      "type": "text",
+      "sample": "agents",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_5": {
+      "type": "text",
+      "sample": "local",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_6": {
+      "type": "text",
+      "sample": "privacy",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "md_hidden_value_7": {
+      "type": "text",
+      "sample": "advanced",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_text_var_signal_arialabel": {
+      "type": "text",
+      "sample": "About Agents and permissions",
+      "maxLength": 56,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-10"
+    },
+    "hover_text_var_signal_arialabel_2": {
+      "type": "text",
+      "sample": "About Approval mode",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-12"
+    },
+    "hover_text_var_signal_arialabel_3": {
+      "type": "text",
+      "sample": "About Limits per agent",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-13"
+    },
+    "w_40_placeholder": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-agents.input-19"
+    },
+    "w_40_arialabel": {
+      "type": "text",
+      "sample": "Agent name, or * for the workspace default",
+      "maxLength": 84,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.input-19"
+    },
+    "w_40_value": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-desktop-settings-agents.input-19"
+    },
+    "text_xs_arialabel": {
+      "type": "text",
+      "sample": "Area to limit",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.select-20"
+    },
+    "text_xs_value": {
+      "type": "text",
+      "sample": "cli",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_2": {
+      "type": "text",
+      "sample": "files",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_3": {
+      "type": "text",
+      "sample": "skills",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_4": {
+      "type": "text",
+      "sample": "local_mcp",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_5": {
+      "type": "text",
+      "sample": "browser",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_6": {
+      "type": "text",
+      "sample": "installs",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_7": {
+      "type": "text",
+      "sample": "processes",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_arialabel_2": {
+      "type": "text",
+      "sample": "Limit level",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.select-21"
+    },
+    "text_xs_value_8": {
+      "type": "text",
+      "sample": "off",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_9": {
+      "type": "text",
+      "sample": "ask",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_xs_value_10": {
+      "type": "text",
+      "sample": "allowed",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "hover_text_var_signal_arialabel_4": {
+      "type": "text",
+      "sample": "About Coding agent rules",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-23"
+    },
+    "hover_text_var_signal_arialabel_5": {
+      "type": "text",
+      "sample": "About Allow Huf to auto-answer saved rules",
+      "maxLength": 84,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-24"
+    },
+    "hover_text_var_signal_arialabel_6": {
+      "type": "text",
+      "sample": "About Remote control",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-26"
+    },
+    "hover_text_var_signal_arialabel_7": {
+      "type": "text",
+      "sample": "About Allow web and mobile sessions to control this computer",
+      "maxLength": 120,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-27"
+    },
+    "data_state_unchecked_bg_input_arialabel": {
+      "type": "text",
+      "sample": "Allow web and mobile sessions to control this computer",
+      "maxLength": 108,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-28"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-desktop-settings-agents.button-28"
+    },
+    "hover_text_var_signal_arialabel_8": {
+      "type": "text",
+      "sample": "Agents excluded from remote control",
+      "maxLength": 70,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-29"
+    },
+    "text_length_var_text_micro_size_placeholder": {
+      "type": "text",
+      "sample": "Agent name",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-settings-agents.input-30"
+    },
+    "hover_text_var_signal_arialabel_9": {
+      "type": "text",
+      "sample": "About Package install scripts",
+      "maxLength": 58,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-33"
+    },
+    "hover_text_var_signal_arialabel_10": {
+      "type": "text",
+      "sample": "About Let installed packages run their install scripts (supplier-ops)",
+      "maxLength": 138,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.button-34"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-settings-agents.section-36"
+    }
+  }
+}

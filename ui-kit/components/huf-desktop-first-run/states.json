@@ -1,0 +1,86 @@
+{
+  "component": "huf-desktop-first-run",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-desktop-first-run.url-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/hover.png",
+      "description": "server address field hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-desktop-first-run.url-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(251, 251, 253)",
+          "to": "rgb(255, 255, 255)"
+        },
+        "borderColor": {
+          "from": "rgb(236, 236, 240)",
+          "to": "rgb(15, 118, 110)"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgb(16, 16, 16) none 1px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "server address field focus ring"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-desktop-first-run.url-1",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "no distinct pressed style; a press would navigate, so this is the server address field hover look"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-desktop-first-run.button-1",
+      "changes": [
+        {
+          "element": "huf-desktop-first-run.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are inline banners; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "fixture data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "this id is the empty state"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><title>Approval panel: one command waiting for approval</title>
+<link rel="stylesheet" href="../../tokens/css/huf-desktop/build/renderer-Bjnbx5Ld.css">
+<link rel="stylesheet" href="../../tokens/css/huf-desktop/huf-desktop-fonts.css">
+<style>html,body{margin:0}body{background:rgb(29, 29, 31);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:380px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>[data-sonner-toaster][dir="ltr"], html[dir="ltr"] { --toast-icon-margin-start: -3px; --toast-icon-margin-end: 4px; --toast-svg-margin-start: -1px; --toast-svg-margin-end: 0px; --toast-button-margin-start: auto; --toast-button-margin-end: 0; --toast-close-button-start: 0; --toast-close-button-end: unset; --toast-close-button-transform: translate(-35%, -35%); }
+@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+</style></head>
+<body>
+<div id="ui-kit-stage">
+<div id="root" style="width:380px;flex:none;max-width:none;box-sizing:border-box"><div class="h-screen overflow-y-auto border border-[var(--line)] bg-[var(--panel)] text-[var(--ink)]" data-ui="huf-desktop-approval" style="height: auto;"><div><header class="flex items-baseline justify-between gap-2 border-b border-[var(--line)] px-3 py-2"><h1 class="text-[13px] font-semibold" role="status" aria-live="polite" aria-atomic="true" data-testid="panel-pending">1 pending</h1><span class="min-w-0 truncate text-[11px] text-[var(--steel)]">Operations Analyst</span></header><section class="border-b border-[var(--line)] px-3 py-3" aria-label="Operations Analyst: Run a command"><div class="mb-1 flex items-baseline justify-between gap-2"><h2 class="min-w-0 truncate text-[13px] font-semibold text-[var(--ink)]">Run a command</h2><span class="flex-shrink-0 text-[11px] tabular-nums text-[var(--steel)]" title="Auto-denies in 120s if not answered">waiting 8s · auto-denies in 120s</span></div><p class="mb-2 truncate text-[11px] text-[var(--steel)]">Operations Analyst - Supplier delivery review, Q4</p><pre class="mb-2 max-h-40 overflow-auto whitespace-pre-wrap break-words rounded-chat-row border border-[var(--line)] bg-[var(--paper-deep)] p-2 font-mono text-[11px] text-[var(--ink)]" aria-label="Command">python3 scripts/email_suppliers.py --draft lindqvist-fish bayside-dairy</pre><div class="mb-1.5 text-[11px] leading-snug"><span class="text-[var(--steel-soft)]">Working directory </span><span class="break-all font-mono text-[var(--ink)]">.</span></div><div class="mt-2 flex flex-wrap items-center gap-1.5"><button type="button" class="h-7 px-2.5 rounded-chat-row text-[13px] font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--signal)] text-[var(--ink)] bg-[var(--paper-deep)] hover:bg-[var(--line)]" data-ui="huf-desktop-approval.button-1">Deny</button><button type="button" class="h-7 px-2.5 rounded-chat-row text-[13px] font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--signal)] text-[var(--ink)] border border-[var(--line)] bg-[var(--panel)] hover:bg-[var(--paper-deep)]" data-ui="huf-desktop-approval.button-2">Allow once</button><button type="button" class="h-7 px-2.5 rounded-chat-row text-[13px] font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--signal)] text-[var(--ink)] border border-[var(--line)] bg-[var(--panel)] hover:bg-[var(--paper-deep)]" data-ui="huf-desktop-approval.button-3">Allow this command for this run</button><button type="button" class="h-7 px-2.5 rounded-chat-row text-[13px] font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--signal)] text-[var(--ink)] border border-[var(--line)] bg-[var(--panel)] hover:bg-[var(--paper-deep)]" data-ui="huf-desktop-approval.button-4">Allow any command for this run</button></div></section></div></div></div>
+</div>
+</body></html>
