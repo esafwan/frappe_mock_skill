@@ -1,0 +1,1055 @@
+{
+  "component": "huf-wa-wizard-write",
+  "slots": {
+    "text_steel": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Teams",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Northwind Sales",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-2"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-3"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "Broadcasts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-4"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-5"
+    },
+    "hover_bg_paper_deep_4": {
+      "type": "text",
+      "sample": "Commerce",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-6"
+    },
+    "hover_bg_paper_deep_5": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-7"
+    },
+    "hover_bg_paper_deep_6": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-8"
+    },
+    "hover_bg_paper_deep_7": {
+      "type": "text",
+      "sample": "Connections",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-9"
+    },
+    "hover_bg_paper_deep_8": {
+      "type": "text",
+      "sample": "Numbers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-10"
+    },
+    "hover_bg_paper_deep_9": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-11"
+    },
+    "hover_bg_paper_deep_10": {
+      "type": "text",
+      "sample": "Ask Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-12"
+    },
+    "hover_bg_paper_deep_11": {
+      "type": "text",
+      "sample": "Back to Huf",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-write.link-13"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_4": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Pick a type",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_primary_foreground": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Write it",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Check and send",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Name and language",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Template name",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Lowercase letters, digits and underscores, for example order_update.",
+      "maxLength": 136,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_6": {
+      "type": "number",
+      "sample": "21",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "number",
+      "sample": "512",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Language",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_left": {
+      "type": "text",
+      "sample": "English (US)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Variable type",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Number",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-19"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-20"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Variables look like {{1}}, {{2}}.",
+      "maxLength": 66,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Switching renames the ones you have already added.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Header",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Optional. Shown above the message.",
+      "maxLength": 68,
+      "where": "text",
+      "element": "p"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-22"
+    },
+    "h_control_md_4": {
+      "type": "text",
+      "sample": "Text",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-23"
+    },
+    "h_control_md_5": {
+      "type": "text",
+      "sample": "Image",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-24"
+    },
+    "h_control_md_6": {
+      "type": "text",
+      "sample": "Video",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-25"
+    },
+    "h_control_md_7": {
+      "type": "text",
+      "sample": "Document",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-26"
+    },
+    "h_control_md_8": {
+      "type": "text",
+      "sample": "Location",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-27"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Header text",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Add variable",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-28"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "One variable at most.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_13": {
+      "type": "number",
+      "sample": "27",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "number",
+      "sample": "60",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Message",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Body",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "h_7": {
+      "type": "text",
+      "sample": "Add variable",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-35"
+    },
+    "focus_visible_ring_0": {
+      "type": "text",
+      "sample": "Hi {{1}}, you are invited to our *spring tasting* on {{2}} at the Rotterdam showroom. Try 40 new products and meet the suppliers.",
+      "maxLength": 258,
+      "where": "text",
+      "element": "huf-wa-wizard-write.textarea-36"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Use *bold*, _italic_, ~strike~ and ```code``` formatting.",
+      "maxLength": 114,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_17": {
+      "type": "number",
+      "sample": "129",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "number",
+      "sample": "1024",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Variable samples",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "Samples are only used for review. They aren't sent to your customers. Don't include customer information.",
+      "maxLength": 210,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Body",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "{{1}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Body",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "{{2}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Footer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "Optional. A short line under the message.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Footer text",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_24": {
+      "type": "number",
+      "sample": "21",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "number",
+      "sample": "60",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "Buttons",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "Optional. Up to 10 buttons. Replies stay together, up to 2 website buttons, 1 phone button and 1 offer code.",
+      "maxLength": 216,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Visit website",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "Button text",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_28": {
+      "type": "number",
+      "sample": "11",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_30": {
+      "type": "number",
+      "sample": "25",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Website link",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_31": {
+      "type": "text",
+      "sample": "End the link with {{1}} to add a value per message.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "Custom reply",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Button text",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_32": {
+      "type": "number",
+      "sample": "13",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_33": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_34": {
+      "type": "number",
+      "sample": "25",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Add button",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-49"
+    },
+    "text_steel_35": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_36": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_37": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_13": {
+      "type": "text",
+      "sample": "Spring tasting at Northwind",
+      "maxLength": 54,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_14": {
+      "type": "text",
+      "sample": "Hi",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_15": {
+      "type": "text",
+      "sample": "Lena",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_16": {
+      "type": "text",
+      "sample": ", you are invited to our",
+      "maxLength": 48,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_17": {
+      "type": "text",
+      "sample": "spring tasting",
+      "maxLength": 28,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_ink_18": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_19": {
+      "type": "text",
+      "sample": "Thursday 12 March",
+      "maxLength": 34,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_20": {
+      "type": "text",
+      "sample": "at the Rotterdam showroom. Try 40 new products and meet the suppliers.",
+      "maxLength": 140,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_38": {
+      "type": "text",
+      "sample": "Reply STOP to opt out",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_39": {
+      "type": "time",
+      "sample": "09:00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "shadow_sm": {
+      "type": "text",
+      "sample": "Book a seat",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "shadow_sm_2": {
+      "type": "text",
+      "sample": "Not this time",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-50"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Previous",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-51"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Next",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-write.button-52"
+    },
+    "bg_sidebar_arialabel": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_steel_soft_title": {
+      "type": "text",
+      "sample": "No Telegram bots connected",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_steel_soft_title_2": {
+      "type": "text",
+      "sample": "No Slack workspaces connected",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_steel_soft_title_3": {
+      "type": "text",
+      "sample": "No Teams workspaces connected",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Number",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-1"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "Breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "gap_y_2_arialabel": {
+      "type": "text",
+      "sample": "Progress",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "ol"
+    },
+    "outline_none_arialabel": {
+      "type": "text",
+      "sample": "Write it",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.div-16"
+    },
+    "font_mono_value": {
+      "type": "text",
+      "sample": "spring_tasting_invite",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.name"
+    },
+    "h_control_md_arialabel": {
+      "type": "text",
+      "sample": "Number variables",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-19"
+    },
+    "h_control_md_arialabel_2": {
+      "type": "text",
+      "sample": "Name variables",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-20"
+    },
+    "justify_start_arialabel": {
+      "type": "text",
+      "sample": "Header type",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.div-21"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Spring tasting at Northwind",
+      "maxLength": 54,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-29"
+    },
+    "focus_visible_ring_ring_arialabel": {
+      "type": "text",
+      "sample": "Variable rules",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-30"
+    },
+    "border_line_arialabel": {
+      "type": "text",
+      "sample": "Formatting",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "w_7_arialabel": {
+      "type": "text",
+      "sample": "Bold",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-31"
+    },
+    "w_7_arialabel_2": {
+      "type": "text",
+      "sample": "Italic",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-32"
+    },
+    "w_7_arialabel_3": {
+      "type": "text",
+      "sample": "Strikethrough",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-33"
+    },
+    "w_7_arialabel_4": {
+      "type": "text",
+      "sample": "Code",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-34"
+    },
+    "focus_visible_ring_0_placeholder": {
+      "type": "text",
+      "sample": "Hi {{1}}, your order {{2}} has shipped.",
+      "maxLength": 78,
+      "where": "attr:placeholder",
+      "element": "huf-wa-wizard-write.textarea-36"
+    },
+    "text_ui_text_value_2": {
+      "type": "text",
+      "sample": "Lena",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-37"
+    },
+    "text_ui_text_value_3": {
+      "type": "text",
+      "sample": "Thursday 12 March",
+      "maxLength": 34,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-38"
+    },
+    "text_ui_text_value_4": {
+      "type": "text",
+      "sample": "Reply STOP to opt out",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-39"
+    },
+    "border_line_arialabel_2": {
+      "type": "text",
+      "sample": "Button 1: Visit website",
+      "maxLength": 46,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "w_7_arialabel_5": {
+      "type": "text",
+      "sample": "Move button 1 up",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-40"
+    },
+    "w_7_arialabel_6": {
+      "type": "text",
+      "sample": "Move button 1 down",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-41"
+    },
+    "w_7_arialabel_7": {
+      "type": "text",
+      "sample": "Remove button 1",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-42"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Shop now",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-wa-wizard-write.input-43"
+    },
+    "text_ui_text_value_5": {
+      "type": "text",
+      "sample": "Book a seat",
+      "maxLength": 22,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-43"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "https://example.com/orders/{{1}}",
+      "maxLength": 64,
+      "where": "attr:placeholder",
+      "element": "huf-wa-wizard-write.input-44"
+    },
+    "text_ui_text_value_6": {
+      "type": "text",
+      "sample": "https://northwind.example.com/tasting",
+      "maxLength": 74,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-44"
+    },
+    "border_line_arialabel_3": {
+      "type": "text",
+      "sample": "Button 2: Custom reply",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "w_7_arialabel_8": {
+      "type": "text",
+      "sample": "Move button 2 up",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-45"
+    },
+    "w_7_arialabel_9": {
+      "type": "text",
+      "sample": "Move button 2 down",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-46"
+    },
+    "w_7_arialabel_10": {
+      "type": "text",
+      "sample": "Remove button 2",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.button-47"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "Shop now",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-wa-wizard-write.input-48"
+    },
+    "text_ui_text_value_7": {
+      "type": "text",
+      "sample": "Not this time",
+      "maxLength": 26,
+      "where": "attr:value",
+      "element": "huf-wa-wizard-write.input-48"
+    },
+    "lg_self_start_arialabel": {
+      "type": "text",
+      "sample": "Preview",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "aside"
+    },
+    "bg_paper_deep_arialabel": {
+      "type": "text",
+      "sample": "Message preview",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-write.section-53"
+    }
+  }
+}

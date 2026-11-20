@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head><meta charset="utf-8"><title>WhatsApp message preview with an image header</title>
+<link rel="stylesheet" href="../../tokens/css/huf/pre-develop/index-BZUhpcW-.css">
+<link rel="stylesheet" href="../../tokens/css/huf/huf-fonts.css">
+<style>html,body{margin:0}body{background:rgb(0, 0, 0);min-height:0px}#ui-kit-stage{position:absolute;left:0px;top:0px;width:1440px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+</style></head>
+<body>
+<div id="ui-kit-stage">
+<div id="root" style="width:1440px;flex:none;max-width:none;box-sizing:border-box"><div class="h-full" style="opacity: 1;width:1440px;flex:none;max-width:none;box-sizing:border-box"><div class="group/sidebar-wrapper flex w-full has-[[data-variant=inset]]:bg-sidebar h-svh min-h-0" style="--sidebar-width: 15.5rem; --sidebar-width-icon: 4rem;width:1440px;flex:none;max-width:none;box-sizing:border-box"><section class="relative flex h-full w-full overflow-hidden bg-paper text-ink" style="width:1440px;flex:none;max-width:none;box-sizing:border-box"><div class="flex h-full min-h-0 min-w-0 flex-1 flex-col" style="width:1192px;flex:none;max-width:none;box-sizing:border-box"><main class="min-h-0 flex-1 overflow-auto" style="width:1192px;flex:none;max-width:none;box-sizing:border-box"><div class="h-full overflow-auto" style="width:1192px;flex:none;max-width:none;box-sizing:border-box"><div class="flex flex-col" style="width:1192px;flex:none;max-width:none;box-sizing:border-box"><div class="flex-1 p-6" style="width:1192px;flex:none;max-width:none;box-sizing:border-box"><div class="space-y-4" style="width:1144px;flex:none;max-width:none;box-sizing:border-box"><div class="space-y-6" style="width:1144px;flex:none;max-width:none;box-sizing:border-box"><div role="region" aria-label="Write it" tabindex="-1" class="space-y-6 outline-none" style="width:1144px;flex:none;max-width:none;box-sizing:border-box"><div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]" style="width:1144px;flex:none;max-width:none;box-sizing:border-box"><aside aria-label="Preview" class="min-w-0 space-y-4 lg:sticky lg:top-4 lg:self-start" style="width:360px;flex:none;max-width:none;box-sizing:border-box"><div class="rounded-md border border-line bg-paper-deep p-4" aria-label="Message preview" data-ui="huf-wa-template-preview-image" style="background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: 14px 14px;"><div class="max-w-[320px]"><div class="overflow-hidden rounded-lg rounded-tl-none border border-line bg-panel shadow-sm"><img src="assets/image_1.svg" alt="" class="aspect-video w-full object-cover"><div class="space-y-1 px-3 py-2"><p dir="auto" class="whitespace-pre-wrap break-words text-sm text-ink">Hi Lena, you are invited to our <strong>spring tasting</strong> on Thursday 12 March at the Rotterdam showroom. Try 40 new products and meet the suppliers.</p><p dir="auto" class="break-words text-xs text-steel">Reply STOP to opt out</p><p class="text-right text-[11px] text-steel">09:00</p></div></div><div class="mt-1 space-y-1"><div class="flex w-full items-center justify-center gap-1.5 rounded-lg bg-panel px-3 py-2 text-sm font-medium text-signal-ink shadow-sm" data-testid="preview-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>Book a seat</div><div class="flex w-full items-center justify-center gap-1.5 rounded-lg bg-panel px-3 py-2 text-sm font-medium text-signal-ink shadow-sm" data-testid="preview-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-reply h-3.5 w-3.5" aria-hidden="true"><path d="M20 18v-2a4 4 0 0 0-4-4H4"></path><path d="m9 17-5-5 5-5"></path></svg>Not this time</div></div></div></div></aside></div></div></div></div></div></div></div></main></div></section></div></div></div>
+</div>
+</body></html>

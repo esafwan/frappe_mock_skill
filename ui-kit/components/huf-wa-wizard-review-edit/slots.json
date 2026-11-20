@@ -1,0 +1,635 @@
+{
+  "component": "huf-wa-wizard-review-edit",
+  "slots": {
+    "text_steel": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Teams",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Northwind Sales",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-2"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-3"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "Broadcasts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-4"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-5"
+    },
+    "hover_bg_paper_deep_4": {
+      "type": "text",
+      "sample": "Commerce",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-6"
+    },
+    "hover_bg_paper_deep_5": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-7"
+    },
+    "hover_bg_paper_deep_6": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-8"
+    },
+    "hover_bg_paper_deep_7": {
+      "type": "text",
+      "sample": "Connections",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-9"
+    },
+    "hover_bg_paper_deep_8": {
+      "type": "text",
+      "sample": "Numbers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-10"
+    },
+    "hover_bg_paper_deep_9": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-11"
+    },
+    "hover_bg_paper_deep_10": {
+      "type": "text",
+      "sample": "Ask Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-12"
+    },
+    "hover_bg_paper_deep_11": {
+      "type": "text",
+      "sample": "Back to Huf",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.link-13"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_4": {
+      "type": "text",
+      "sample": "/",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Templates",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Pick a type",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Write it",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_primary_foreground": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Check and send",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Check and send",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Review your changes. WhatsApp reviews them again.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Type",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Utility · Default",
+      "maxLength": 34,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "font_mono": {
+      "type": "text",
+      "sample": "order_shipped",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "English (US)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Header",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Order {{1}} is on its way",
+      "maxLength": 50,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Body",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "whitespace_pre_wrap": {
+      "type": "text",
+      "sample": "Hi {{1}}, your order of *{{2}}* left our Rotterdam warehouse today. Expected delivery: {{3}}.",
+      "maxLength": 186,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Footer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "Northwind Trading · Wholesale",
+      "maxLength": 58,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Buttons",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "space_y_0_5": {
+      "type": "text",
+      "sample": "Track delivery",
+      "maxLength": 28,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Website",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_0_5_2": {
+      "type": "text",
+      "sample": "Change delivery day",
+      "maxLength": 38,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Custom reply",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Samples",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "{{1}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_0_5_3": {
+      "type": "text",
+      "sample": "#NW-4812",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "{{1}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_0_5_4": {
+      "type": "text",
+      "sample": "Lena",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "{{2}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_0_5_5": {
+      "type": "text",
+      "sample": "24 cases of olive oil",
+      "maxLength": 42,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "{{3}}",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "space_y_0_5_6": {
+      "type": "text",
+      "sample": "Friday 9 January",
+      "maxLength": 32,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Expires after",
+      "maxLength": 26,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "1 hour",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Checks",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "Ready to send",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "Meta usually reviews in a few minutes, but it can take up to 24 hours.",
+      "maxLength": 140,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "Meta may move a utility template to marketing.",
+      "maxLength": 92,
+      "where": "text",
+      "element": "li"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "Samples are only used for review.",
+      "maxLength": 66,
+      "where": "text",
+      "element": "li"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Order #NW-4812 is on its way",
+      "maxLength": 56,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "Hi",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_13": {
+      "type": "text",
+      "sample": "Lena",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_14": {
+      "type": "text",
+      "sample": ", your order of",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_15": {
+      "type": "text",
+      "sample": "24 cases of olive oil",
+      "maxLength": 42,
+      "where": "text",
+      "element": "strong"
+    },
+    "text_ink_16": {
+      "type": "text",
+      "sample": "left our Rotterdam warehouse today. Expected delivery:",
+      "maxLength": 108,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_17": {
+      "type": "text",
+      "sample": "Friday 9 January",
+      "maxLength": 32,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_18": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "Northwind Trading · Wholesale",
+      "maxLength": 58,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_24": {
+      "type": "time",
+      "sample": "09:00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "shadow_sm": {
+      "type": "text",
+      "sample": "Track delivery",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "shadow_sm_2": {
+      "type": "text",
+      "sample": "Change delivery day",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.button-17"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Previous",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.button-18"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "Submit changes to WhatsApp",
+      "maxLength": 52,
+      "where": "text",
+      "element": "huf-wa-wizard-review-edit.button-19"
+    },
+    "bg_sidebar_arialabel": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_steel_soft_title": {
+      "type": "text",
+      "sample": "No Telegram bots connected",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_steel_soft_title_2": {
+      "type": "text",
+      "sample": "No Slack workspaces connected",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_steel_soft_title_3": {
+      "type": "text",
+      "sample": "No Teams workspaces connected",
+      "maxLength": 58,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Number",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-review-edit.button-1"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "Breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "gap_y_2_arialabel": {
+      "type": "text",
+      "sample": "Progress",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "ol"
+    },
+    "outline_none_arialabel": {
+      "type": "text",
+      "sample": "Check and send",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-review-edit.div-16"
+    },
+    "lg_self_start_arialabel": {
+      "type": "text",
+      "sample": "Preview",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "aside"
+    },
+    "bg_paper_deep_arialabel": {
+      "type": "text",
+      "sample": "Message preview",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-wa-wizard-review-edit.section-20"
+    }
+  }
+}
