@@ -1,22 +1,39 @@
 {
- "id": "huf-android-device-shell",
- "name": "Android device shell (Pixel 5 viewport 412x892: status bar 9:41, wifi, battery, gesture pill)",
- "group": "huf-android",
- "kind": "static-html",
- "modes": [
-  "light",
-  "dark"
- ],
- "css": [
-  "fonts.css",
-  "tokens.css",
-  "components.css"
- ],
- "cssBase": "../../tokens/css/huf-android/",
- "darkTheme": "html[data-theme=\"dark\"]",
- "viewport": {
-  "w": 412,
-  "h": 892,
-  "dpr": 2.621
- }
+  "id": "huf-android-device-shell",
+  "name": "Android device shell (Pixel 5 viewport 412x892: status bar 9:41, wifi, battery, gesture pill)",
+  "group": "huf-android",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 412,
+    "h": 892
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf-android/fonts.css",
+    "huf-android/tokens.css",
+    "huf-android/components.css"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Android device shell (Pixel 5 viewport 412x892: status bar 9:41, wifi, battery, gesture pill)",
+    "Frame for every screen. Put the screen body in `content` and any scrim/sheet/dialog/drawer in `overlay`. The status bar and gesture pill stay above scrims (as on device)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 412,
+  "height": null,
+  "props": {}
 }

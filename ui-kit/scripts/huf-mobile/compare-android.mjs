@@ -23,7 +23,7 @@ if (mode === 'shots') {
     if (!s.ref) { rep[s.id] = { ref: null, note: 'authored from Compose source; no emulator reference' }; continue; }
     rep[s.id] = {};
     for (const [m, refp] of Object.entries(s.ref)) {
-      if (!refp) continue;
+      if (!refp || !fs.existsSync(ROOT + refp)) continue;
       const R = PNG.sync.read(fs.readFileSync(ROOT + refp));
       const A = PNG.sync.read(await shot(s, m === 'dark', R.width / 412));
       const w = Math.min(A.width, R.width), h = Math.min(A.height, R.height);

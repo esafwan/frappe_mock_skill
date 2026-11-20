@@ -1,30 +1,41 @@
 {
- "component": "huf-android-bottom-nav",
- "slots": {
-  "chat_on": {
-   "type": "class",
-   "sample": "on",
-   "maxLength": 2
-  },
-  "projects_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
-  },
-  "agents_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
-  },
-  "account_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
-  },
-  "automations_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
+  "component": "huf-android-bottom-nav",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "chat_on": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "projects_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "agents_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "account_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "automations_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

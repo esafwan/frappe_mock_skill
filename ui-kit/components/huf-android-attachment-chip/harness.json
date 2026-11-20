@@ -1,22 +1,39 @@
 {
- "id": "huf-android-attachment-chip",
- "name": "Attachment chip (file name, upload state, remove)",
- "group": "huf-android",
- "kind": "static-html",
- "modes": [
-  "light",
-  "dark"
- ],
- "css": [
-  "fonts.css",
-  "tokens.css",
-  "components.css"
- ],
- "cssBase": "../../tokens/css/huf-android/",
- "darkTheme": "html[data-theme=\"dark\"]",
- "viewport": {
-  "w": 412,
-  "h": 892,
-  "dpr": 2.621
- }
+  "id": "huf-android-attachment-chip",
+  "name": "Attachment chip (file name, upload state, remove)",
+  "group": "huf-android",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 216.546875,
+    "h": 40
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf-android/fonts.css",
+    "huf-android/tokens.css",
+    "huf-android/components.css"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Attachment chip (file name, upload state, remove)",
+    "Shown above the composer once a file is attached; states uploading / uploaded / failed."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 412,
+  "height": null,
+  "props": {}
 }

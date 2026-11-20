@@ -1,10 +1,13 @@
 {
- "component": "huf-android-search-field",
- "slots": {
-  "placeholder": {
-   "type": "text",
-   "sample": "Search agents, providers, or models",
-   "maxLength": 44
+  "component": "huf-android-search-field",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "placeholder": {
+      "type": "text",
+      "sample": "Search agents, providers, or models",
+      "maxLength": 56,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

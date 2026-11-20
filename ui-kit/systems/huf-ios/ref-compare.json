@@ -3,39 +3,39 @@
     "method": "box-downsample to 402x874, 2x 5x5 blur, channel delta > 26/255, status bar + Arabic regions masked",
     "screens": {
       "signin": {
-        "diffPct": 12.06,
+        "diffPct": 3.26,
         "maskedRegionsPt": 0
       },
       "login": {
-        "diffPct": 13.61,
+        "diffPct": 10.34,
         "maskedRegionsPt": 0
       },
       "api-key": {
-        "diffPct": 18.42,
+        "diffPct": 16.38,
         "maskedRegionsPt": 0
       },
       "chats": {
-        "diffPct": 5.72,
+        "diffPct": 1.45,
         "maskedRegionsPt": 0
       },
       "chat": {
-        "diffPct": 3.54,
+        "diffPct": 5.59,
         "maskedRegionsPt": 1
       },
       "rich-content": {
-        "diffPct": 17.27,
+        "diffPct": 14.44,
         "maskedRegionsPt": 1
       },
       "dashboard": {
-        "diffPct": 11.56,
+        "diffPct": 16.33,
         "maskedRegionsPt": 2
       },
       "projects": {
-        "diffPct": 8.37,
+        "diffPct": 5.79,
         "maskedRegionsPt": 1
       },
       "agents": {
-        "diffPct": 7.6,
+        "diffPct": 6.6,
         "maskedRegionsPt": 0
       },
       "you": {
@@ -49,11 +49,11 @@
         "note": "ref is Arabic/RTL (body masked); only layout of title area compared"
       },
       "agent-switcher": {
-        "diffPct": 6.2,
+        "diffPct": 6.36,
         "maskedRegionsPt": 1
       },
       "attach": {
-        "diffPct": 1.47,
+        "diffPct": 1.75,
         "maskedRegionsPt": 1
       },
       "voice": {
@@ -61,31 +61,31 @@
         "maskedRegionsPt": 0
       },
       "upload": {
-        "diffPct": 3.99,
+        "diffPct": 6.03,
         "maskedRegionsPt": 1
       },
       "uploading": {
-        "diffPct": 4.11,
+        "diffPct": 6.15,
         "maskedRegionsPt": 1
       },
       "busy": {
-        "diffPct": 6,
+        "diffPct": 5.78,
         "maskedRegionsPt": 1
       },
       "draft": {
-        "diffPct": 3.65,
+        "diffPct": 5.7,
         "maskedRegionsPt": 1
       },
       "whitespace": {
-        "diffPct": 3.54,
+        "diffPct": 5.59,
         "maskedRegionsPt": 1
       },
       "no-files": {
-        "diffPct": 4.13,
+        "diffPct": 5.52,
         "maskedRegionsPt": 1
       },
       "disabled-agent": {
-        "diffPct": 5.47,
+        "diffPct": 4.46,
         "maskedRegionsPt": 2
       },
       "empty": {
@@ -93,14 +93,114 @@
         "maskedRegionsPt": 1
       }
     },
-    "mean": 6.6,
+    "mean": 6.18,
     "over8": [
-      "signin",
       "login",
       "api-key",
       "rich-content",
-      "dashboard",
-      "projects"
+      "dashboard"
+    ]
+  },
+  "dark": {
+    "method": "box-downsample to 402x874, 2x 5x5 blur, channel delta > 26/255, status bar + Arabic regions masked",
+    "screens": {
+      "signin": {
+        "diffPct": 2.87,
+        "maskedRegionsPt": 0
+      },
+      "login": {
+        "diffPct": 11.04,
+        "maskedRegionsPt": 0
+      },
+      "api-key": {
+        "diffPct": 17.58,
+        "maskedRegionsPt": 0
+      },
+      "chats": {
+        "diffPct": 1.47,
+        "maskedRegionsPt": 0
+      },
+      "chat": {
+        "diffPct": 5.73,
+        "maskedRegionsPt": 1
+      },
+      "rich-content": {
+        "diffPct": 14.32,
+        "maskedRegionsPt": 1
+      },
+      "dashboard": {
+        "diffPct": 14.99,
+        "maskedRegionsPt": 2
+      },
+      "projects": {
+        "diffPct": 5.62,
+        "maskedRegionsPt": 1
+      },
+      "agents": {
+        "diffPct": 6.76,
+        "maskedRegionsPt": 0
+      },
+      "you": {
+        "diffPct": 0,
+        "maskedRegionsPt": 1,
+        "note": "ref is Arabic/RTL (body masked); only layout of title area compared"
+      },
+      "computers": {
+        "diffPct": 0,
+        "maskedRegionsPt": 1,
+        "note": "ref is Arabic/RTL (body masked); only layout of title area compared"
+      },
+      "agent-switcher": {
+        "diffPct": 5.34,
+        "maskedRegionsPt": 1
+      },
+      "attach": {
+        "diffPct": 1.29,
+        "maskedRegionsPt": 1
+      },
+      "voice": {
+        "diffPct": 3.87,
+        "maskedRegionsPt": 0
+      },
+      "upload": {
+        "diffPct": 6.17,
+        "maskedRegionsPt": 1
+      },
+      "uploading": {
+        "diffPct": 6.26,
+        "maskedRegionsPt": 1
+      },
+      "busy": {
+        "diffPct": 5.93,
+        "maskedRegionsPt": 1
+      },
+      "draft": {
+        "diffPct": 5.84,
+        "maskedRegionsPt": 1
+      },
+      "whitespace": {
+        "diffPct": 5.73,
+        "maskedRegionsPt": 1
+      },
+      "no-files": {
+        "diffPct": 5.68,
+        "maskedRegionsPt": 1
+      },
+      "disabled-agent": {
+        "diffPct": 4.73,
+        "maskedRegionsPt": 2
+      },
+      "empty": {
+        "diffPct": 4.13,
+        "maskedRegionsPt": 1
+      }
+    },
+    "mean": 6.15,
+    "over8": [
+      "login",
+      "api-key",
+      "rich-content",
+      "dashboard"
     ]
   }
 }

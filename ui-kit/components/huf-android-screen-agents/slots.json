@@ -1,10 +1,5 @@
 {
- "component": "huf-android-screen-agents",
- "slots": {},
- "note": "Full screen composed from huf-android-* components; change text in the component slots (see composedOf).",
- "composedOf": [
-  "huf-android-search-field",
-  "huf-android-agent-card",
-  "huf-android-bottom-nav"
- ]
+  "component": "huf-android-screen-agents",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {}
 }

@@ -1,55 +1,76 @@
 {
- "component": "huf-android-signin-form",
- "slots": {
-  "lead": {
-   "type": "text",
-   "sample": "Sign in to your workspace.",
-   "maxLength": 40
-  },
-  "hint": {
-   "type": "text",
-   "sample": "Enter your server, email, and password to continue.",
-   "maxLength": 60
-  },
-  "locale": {
-   "type": "text",
-   "sample": "System",
-   "maxLength": 10
-  },
-  "btn_state": {
-   "type": "class",
-   "sample": "disabled",
-   "maxLength": 8
-  },
-  "server": {
-   "type": "text",
-   "sample": "Server",
-   "maxLength": 40
-  },
-  "email": {
-   "type": "text",
-   "sample": "Email",
-   "maxLength": 40
-  },
-  "password": {
-   "type": "text",
-   "sample": "Password",
-   "maxLength": 40
-  },
-  "server_color": {
-   "type": "css",
-   "sample": "var(--ha-secondary)",
-   "maxLength": 40
-  },
-  "email_color": {
-   "type": "css",
-   "sample": "var(--ha-secondary)",
-   "maxLength": 40
-  },
-  "password_color": {
-   "type": "css",
-   "sample": "var(--ha-secondary)",
-   "maxLength": 40
+  "component": "huf-android-signin-form",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "lead": {
+      "type": "text",
+      "sample": "Sign in to your workspace.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "hint": {
+      "type": "text",
+      "sample": "Enter your server, email, and password to continue.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "text"
+    },
+    "locale": {
+      "type": "text",
+      "sample": "System",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_state": {
+      "type": "text",
+      "sample": "disabled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "server": {
+      "type": "text",
+      "sample": "Server",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "email": {
+      "type": "text",
+      "sample": "Email",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "password": {
+      "type": "text",
+      "sample": "Password",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "server_color": {
+      "type": "text",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "email_color": {
+      "type": "text",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "password_color": {
+      "type": "text",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

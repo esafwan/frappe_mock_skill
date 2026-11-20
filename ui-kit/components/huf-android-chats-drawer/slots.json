@@ -1,30 +1,41 @@
 {
- "component": "huf-android-chats-drawer",
- "slots": {
-  "t1": {
-   "type": "text",
-   "sample": "Send the November promo",
-   "maxLength": 40
-  },
-  "t2": {
-   "type": "text",
-   "sample": "Overdue receivables summary",
-   "maxLength": 40
-  },
-  "t3": {
-   "type": "text",
-   "sample": "Draft reminder for Al Noor Trading",
-   "maxLength": 40
-  },
-  "t4": {
-   "type": "text",
-   "sample": "Data retention policy review",
-   "maxLength": 40
-  },
-  "t5": {
-   "type": "text",
-   "sample": "Onboard Gulf Steel as a vendor",
-   "maxLength": 40
+  "component": "huf-android-chats-drawer",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "t1": {
+      "type": "text",
+      "sample": "Send the November promo",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "t2": {
+      "type": "text",
+      "sample": "Overdue receivables summary",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "t3": {
+      "type": "text",
+      "sample": "Draft reminder for Al Noor Trading",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "t4": {
+      "type": "text",
+      "sample": "Data retention policy review",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "t5": {
+      "type": "text",
+      "sample": "Onboard Gulf Steel as a vendor",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

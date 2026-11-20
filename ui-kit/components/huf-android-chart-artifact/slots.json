@@ -1,35 +1,48 @@
 {
- "component": "huf-android-chart-artifact",
- "slots": {
-  "title": {
-   "type": "text",
-   "sample": "Ageing by bucket",
-   "maxLength": 40
-  },
-  "yaxis": {
-   "type": "text",
-   "sample": "Y-axis values: 0·200,000·400,000·600,000",
-   "maxLength": 60
-  },
-  "h1": {
-   "type": "num",
-   "sample": "67",
-   "maxLength": 3
-  },
-  "h2": {
-   "type": "num",
-   "sample": "215",
-   "maxLength": 3
-  },
-  "h3": {
-   "type": "num",
-   "sample": "58",
-   "maxLength": 3
-  },
-  "h4": {
-   "type": "num",
-   "sample": "27",
-   "maxLength": 3
+  "component": "huf-android-chart-artifact",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Ageing by bucket",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "yaxis": {
+      "type": "text",
+      "sample": "Y-axis values: 0·200,000·400,000·600,000",
+      "maxLength": 64,
+      "where": "text",
+      "element": "text"
+    },
+    "h1": {
+      "type": "text",
+      "sample": "67",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h2": {
+      "type": "text",
+      "sample": "215",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h3": {
+      "type": "text",
+      "sample": "58",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h4": {
+      "type": "text",
+      "sample": "27",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

@@ -1,21 +1,59 @@
 {
- "component": "huf-android-top-app-bar",
- "states": {
-  "default": {
-   "applicable": true,
-   "mechanism": "none",
-   "note": "markup as in component.html with slot samples"
-  },
-  "with-project": {
-   "applicable": true,
-   "mechanism": "slot-preset",
-   "slots": {
-    "variant": "three",
-    "title": "Overdue receivables summary",
-    "subtitle": "Workspace",
-    "project_line": "<div class=\"pj\">Project: Receivables</div>"
-   },
-   "preview": "states/with-project.html"
+  "component": "huf-android-top-app-bar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "with-project": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "variant": "three",
+          "title": "Overdue receivables summary",
+          "subtitle": "Workspace",
+          "project_line": "<div class=\"pj\">Project: Receivables</div>"
+        }
+      },
+      "values": {
+        "variant": "three",
+        "title": "Overdue receivables summary",
+        "subtitle": "Workspace",
+        "project_line": "<div class=\"pj\">Project: Receivables</div>"
+      },
+      "screenshot": "states/with-project.png",
+      "preview": "states/with-project.html",
+      "description": "with-project"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
   }
- }
 }

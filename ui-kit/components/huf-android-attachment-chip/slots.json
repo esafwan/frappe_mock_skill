@@ -1,20 +1,27 @@
 {
- "component": "huf-android-attachment-chip",
- "slots": {
-  "name": {
-   "type": "text",
-   "sample": "invoice-INV-2041.pdf",
-   "maxLength": 30
-  },
-  "state_class": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 8
-  },
-  "detail": {
-   "type": "text",
-   "sample": "",
-   "maxLength": 20
+  "component": "huf-android-attachment-chip",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "invoice-INV-2041.pdf",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "state_class": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

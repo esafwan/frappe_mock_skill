@@ -1,50 +1,69 @@
 {
- "component": "huf-android-segmented-buttons",
- "slots": {
-  "a": {
-   "type": "text",
-   "sample": "System",
-   "maxLength": 12
-  },
-  "b": {
-   "type": "text",
-   "sample": "Light",
-   "maxLength": 12
-  },
-  "c": {
-   "type": "text",
-   "sample": "Dark",
-   "maxLength": 12
-  },
-  "a_on": {
-   "type": "class",
-   "sample": "on",
-   "maxLength": 2
-  },
-  "b_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
-  },
-  "c_on": {
-   "type": "class",
-   "sample": "",
-   "maxLength": 2
-  },
-  "a_chk": {
-   "type": "html",
-   "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>",
-   "maxLength": 300
-  },
-  "b_chk": {
-   "type": "html",
-   "sample": "",
-   "maxLength": 300
-  },
-  "c_chk": {
-   "type": "html",
-   "sample": "",
-   "maxLength": 300
+  "component": "huf-android-segmented-buttons",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "a": {
+      "type": "text",
+      "sample": "System",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b": {
+      "type": "text",
+      "sample": "Light",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c": {
+      "type": "text",
+      "sample": "Dark",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a_on": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_on": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a_chk": {
+      "type": "text",
+      "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>",
+      "maxLength": 204,
+      "where": "text",
+      "element": "text"
+    },
+    "b_chk": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_chk": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

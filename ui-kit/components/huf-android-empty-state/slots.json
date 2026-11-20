@@ -1,10 +1,13 @@
 {
- "component": "huf-android-empty-state",
- "slots": {
-  "text": {
-   "type": "text",
-   "sample": "No messages yet.",
-   "maxLength": 60
+  "component": "huf-android-empty-state",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "text": {
+      "type": "text",
+      "sample": "No messages yet.",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

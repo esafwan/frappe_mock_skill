@@ -1,22 +1,39 @@
 {
- "id": "huf-android-attach-sheet",
- "name": "Attach bottom sheet (Photo library, Files, Camera, project knowledge, Record audio)",
- "group": "huf-android",
- "kind": "static-html",
- "modes": [
-  "light",
-  "dark"
- ],
- "css": [
-  "fonts.css",
-  "tokens.css",
-  "components.css"
- ],
- "cssBase": "../../tokens/css/huf-android/",
- "darkTheme": "html[data-theme=\"dark\"]",
- "viewport": {
-  "w": 412,
-  "h": 892,
-  "dpr": 2.621
- }
+  "id": "huf-android-attach-sheet",
+  "name": "Attach bottom sheet (Photo library, Files, Camera, project knowledge, Record audio)",
+  "group": "huf-android",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 412,
+    "h": 459
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf-android/fonts.css",
+    "huf-android/tokens.css",
+    "huf-android/components.css"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Attach bottom sheet (Photo library, Files, Camera, project knowledge, Record audio)",
+    "Composer + button sheet. Unavailable rows show the dimmed label."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 412,
+  "height": 892,
+  "props": {}
 }

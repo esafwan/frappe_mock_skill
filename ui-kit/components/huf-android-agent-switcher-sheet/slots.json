@@ -1,10 +1,13 @@
 {
- "component": "huf-android-agent-switcher-sheet",
- "slots": {
-  "current": {
-   "type": "text",
-   "sample": "Finance Reviewer",
-   "maxLength": 30
+  "component": "huf-android-agent-switcher-sheet",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "current": {
+      "type": "text",
+      "sample": "Finance Reviewer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    }
   }
- }
 }

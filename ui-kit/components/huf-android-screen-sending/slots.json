@@ -1,10 +1,5 @@
 {
- "component": "huf-android-screen-sending",
- "slots": {},
- "note": "Full screen composed from huf-android-* components; change text in the component slots (see composedOf).",
- "composedOf": [
-  "huf-android-user-bubble",
-  "huf-android-assistant-text",
-  "huf-android-approval-card"
- ]
+  "component": "huf-android-screen-sending",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {}
 }
