@@ -1,0 +1,754 @@
+{
+  "component": "huf-batch-jobs",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Batch jobs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Provider",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "role_checkbox_translate_y_2px": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_2": {
+      "type": "text",
+      "sample": "Provider",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_3": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_right": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_right_2": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_right_3": {
+      "type": "text",
+      "sample": "Est. cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Invoice Reminder Writer",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "In Progress",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "relative-time",
+      "sample": "9 hours ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "Not yet",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_13": {
+      "type": "currency",
+      "sample": "$0.1537",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Supplier Follow-ups",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Not yet",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_18": {
+      "type": "currency",
+      "sample": "$0.0921",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Weekly Stock Digest",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Anthropic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_21": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_22": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_23": {
+      "type": "currency",
+      "sample": "$0.4182",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Product Description Refresh",
+      "maxLength": 54,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "Gemini",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "Failed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_27": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_28": {
+      "type": "text",
+      "sample": "Not available",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Weekly Stock Digest",
+      "maxLength": 38,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "Anthropic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_30": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_31": {
+      "type": "relative-time",
+      "sample": "1 week ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_32": {
+      "type": "relative-time",
+      "sample": "1 week ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_33": {
+      "type": "currency",
+      "sample": "$0.4066",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Invoice Reminder Writer",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_34": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_35": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_36": {
+      "type": "relative-time",
+      "sample": "2 weeks ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_37": {
+      "type": "relative-time",
+      "sample": "2 weeks ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_38": {
+      "type": "currency",
+      "sample": "$0.1402",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Product Description Refresh",
+      "maxLength": 54,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_39": {
+      "type": "text",
+      "sample": "Gemini",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_40": {
+      "type": "text",
+      "sample": "Expired",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_41": {
+      "type": "relative-time",
+      "sample": "1 month ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_42": {
+      "type": "text",
+      "sample": "Not yet",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_43": {
+      "type": "currency",
+      "sample": "$0.2210",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_44": {
+      "type": "text",
+      "sample": "All 7 batch jobs",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-batch-jobs.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.button-22"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search batch jobs by agent",
+      "maxLength": 52,
+      "where": "attr:placeholder",
+      "element": "huf-batch-jobs.search"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search batch jobs by agent",
+      "maxLength": 52,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.search"
+    },
+    "svg_opacity_100_arialabel": {
+      "type": "text",
+      "sample": "Status: All",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.button-24"
+    },
+    "svg_opacity_100_arialabel_2": {
+      "type": "text",
+      "sample": "Provider: All",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.button-25"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-batch-jobs.section-26"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Batch job dialog, completed (details and results)</title>
+<link rel="stylesheet" href="../../tokens/css/huf/pre-develop/index-BZUhpcW-.css">
+<link rel="stylesheet" href="../../tokens/css/huf/huf-fonts.css">
+<style>html,body{margin:0}body{background:rgb(251, 251, 253);min-height:543px}#ui-kit-stage{position:absolute;left:32px;top:32px;width:520px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+body[data-scroll-locked] { overscroll-behavior: contain; padding-left: 0px; padding-top: 0px; padding-right: 0px; margin-left: 0px; margin-top: 0px; overflow: hidden !important; position: relative !important; margin-right: 0px !important; }
+body[data-scroll-locked] { --removed-body-scroll-bar-size: 0px; }
+</style></head>
+<body data-scroll-locked="1">
+<div id="ui-kit-stage">
+<div role="dialog" id="radix-:r1d:" data-state="open" class="fixed inset-0 z-50 grid w-full max-w-[100vw] gap-4 border-0 bg-background p-6 shadow-[0_24px_60px_-20px_rgba(0,0,0,.28)] duration-200 data-[state=open]:animate-in data-[state=open]:motion-reduce:!animate-none data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-[16px] max-h-[100dvh] overflow-y-auto sm:inset-auto sm:left-[50%] sm:top-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%] sm:max-h-[calc(100vh-48px)] sm:h-auto sm:rounded-[16px] sm:border sm:max-w-[520px]" tabindex="-1" aria-describedby="radix-:r1f:" aria-labelledby="radix-:r1e:" style="pointer-events: auto;" data-ui="huf-batch-job-detail"><div class="flex flex-col space-y-1.5 text-center sm:text-left"><div class="flex flex-wrap items-center gap-2"><h2 id="radix-:r1e:" class="text-lg font-semibold leading-none tracking-tight">Batch job</h2><div class="inline-flex items-center border px-2 py-0.5 text-[10.5px] transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full border-good/40 bg-transparent text-good font-mono uppercase tracking-wide">Completed</div></div><p id="radix-:r1f:" class="text-sm text-muted-foreground">Weekly Stock Digest</p></div><div class="space-y-4"><div class="divide-y divide-line rounded-md border border-line px-3"><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Agent</span><span class="text-[13px] truncate text-right text-ink">Weekly Stock Digest</span></div><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Provider</span><span class="text-[13px] truncate text-right text-ink">Anthropic</span></div><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Requests in this batch</span><span class="text-[13px] truncate text-right text-ink">240</span></div><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Submitted</span><span class="text-[13px] truncate text-right text-ink">1 day ago</span></div><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Completed</span><span class="text-[13px] truncate text-right text-ink">1 day ago</span></div><div class="flex h-[26px] items-center justify-between gap-4"><span class="text-[13px] text-steel shrink-0">Estimated cost</span><span class="text-[13px] truncate text-right text-ink">$0.4182</span></div></div><div class="space-y-2"><h3 class="text-[13px] font-[590] text-ink">Results</h3><div class="divide-y divide-line rounded-md border border-line"><div class="flex items-center justify-between gap-4 px-3 py-2"><span class="text-[13px] text-steel">succeeded</span><span class="font-mono text-[13px] text-ink">238</span></div><div class="flex items-center justify-between gap-4 px-3 py-2"><span class="text-[13px] text-steel">failed</span><span class="font-mono text-[13px] text-ink">2</span></div><div class="flex items-center justify-between gap-4 px-3 py-2"><span class="text-[13px] text-steel">input tokens</span><span class="font-mono text-[13px] text-ink">412880</span></div><div class="flex items-center justify-between gap-4 px-3 py-2"><span class="text-[13px] text-steel">output tokens</span><span class="font-mono text-[13px] text-ink">96340</span></div></div></div></div><button type="button" class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground" data-ui="huf-batch-job-detail.button-1"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"><path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg><span class="sr-only">Close</span></button></div>
+</div>
+</body></html>
