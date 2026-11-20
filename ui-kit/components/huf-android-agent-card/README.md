@@ -1,10 +1,13 @@
-# huf-android-agent-card
+# Agent card (name, description, model; selected state with check)  `huf-android-agent-card`
 
 Agent card (name, description, model; selected state with check)
 
-Agents tab list item. sel_class "sel" = currently selected agent; disabled agents render dimmed.
+**When to use:** Agents tab list item. sel_class "sel" = currently selected agent; disabled agents render dimmed.
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-agent-card"]`. Slots: `name`, `description`, `model`, `sel_class`, `check`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `check` (html, e.g. "<svg class="ha-ico " viewBox=""), `description` (text, e.g. "Routes work across finance, do"), `name` (text, e.g. "Hub Orchestrator"), `model` (text, e.g. "claude-sonnet-5"). All 5 slots are in `slots.json`.
+
+**States:** default (none), active (props), pressed (props), unselected (props). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-agent-card"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-agent-card --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

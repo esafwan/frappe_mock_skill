@@ -1,6 +1,6 @@
 {
   "id": "huf-android-composer",
-  "name": "Message composer (attach, input, mic/send, attachment chips)",
+  "name": "Message composer (attach, input, mic / send / stop, attachment chips)",
   "group": "huf-android",
   "static": true,
   "source": "static",
@@ -25,8 +25,8 @@
     "dark"
   ],
   "describe": [
-    "Message composer (attach, input, mic/send, attachment chips)",
-    "States by slot preset: empty (mic), draft (typed text + send), attachment (chip above), recording."
+    "Message composer (attach, input, mic / send / stop, attachment chips)",
+    "States by slot preset: empty (mic), draft (typed text + send; animate by growing `draft`), busy (stop generation), recording, transcribing. `input_cls` is \"ph\" (placeholder look) or \"txt\" (typed text)."
   ],
   "darkTheme": "dark",
   "dsf": 2,

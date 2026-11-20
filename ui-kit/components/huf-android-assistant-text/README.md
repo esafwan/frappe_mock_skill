@@ -1,10 +1,13 @@
-# huf-android-assistant-text
+# Assistant message text (no bubble)  `huf-android-assistant-text`
 
 Assistant message text (no bubble)
 
-Plain body text on the canvas.
+**When to use:** Plain body text on the canvas.
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-assistant-text"]`. Slots: `text`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `text` (text, e.g. "I can send the promo_nov Whats"). All 1 slots are in `slots.json`.
+
+**States:** default (none). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-assistant-text"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-assistant-text --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

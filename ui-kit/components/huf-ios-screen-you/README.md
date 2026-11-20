@@ -1,8 +1,8 @@
 # Screen: You tab, account and settings  `huf-ios-screen-you`
 
-Screen: You tab, account and settings
+Full iPhone screen: You tab, account and settings
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/you.light.png.
 
 **Slots people usually change:** `footnote` (text, e.g. "Password sign-ins are ended on"), `computers` (text, e.g. "Remote computers"), `host` (text, e.g. "preview.invalid"), `appearance` (text, e.g. "Appearance"), `add` (text, e.g. "Add server"), `sec1` (text, e.g. "Workspace"). All 22 slots are in `slots.json`.
 

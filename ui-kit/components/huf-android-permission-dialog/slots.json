@@ -1,13 +1,13 @@
 {
   "component": "huf-android-permission-dialog",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "question": {
       "type": "text",
       "sample": "HUF",
-      "maxLength": 24,
+      "maxLength": 20,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-permission-dialog"
     }
   }
 }

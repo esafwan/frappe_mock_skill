@@ -1,8 +1,8 @@
 # Screen: chat with a file uploading at 45 %  `huf-ios-screen-uploading`
 
-Screen: chat with a file uploading at 45 %
+Full iPhone screen: chat with a file uploading at 45 %
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/uploading.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `title` (text, e.g. "Falcon Arabic Test"), `filename` (text, e.g. "invoice.pdf"). All 7 slots are in `slots.json`.
 

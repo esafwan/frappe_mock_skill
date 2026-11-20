@@ -1,5 +1,41 @@
 {
   "component": "huf-android-text-field",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
-  "slots": {}
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "state": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 14,
+      "where": "class",
+      "element": "huf-android-text-field"
+    },
+    "label": {
+      "type": "text",
+      "sample": "Server",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-android-text-field"
+    },
+    "value": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-text-field"
+    },
+    "support": {
+      "type": "text",
+      "sample": "Example: https://your-workspace.example.com",
+      "maxLength": 70,
+      "where": "text",
+      "element": "huf-android-text-field"
+    },
+    "trailing": {
+      "type": "html",
+      "sample": "",
+      "maxLength": 99,
+      "where": "text",
+      "element": "huf-android-text-field"
+    }
+  }
 }

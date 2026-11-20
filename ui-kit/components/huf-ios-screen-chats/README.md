@@ -1,8 +1,8 @@
 # Screen: Chat tab, conversation list  `huf-ios-screen-chats`
 
-Screen: Chat tab, conversation list
+Full iPhone screen: Chat tab, conversation list
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/chats.light.png.
 
 **Slots people usually change:** `t2` (text, e.g. "Gulf Steel receivables"), `t1` (text, e.g. "Falcon Arabic Test"), `a1` (text, e.g. "Falcon Arabic Test"), `t3` (text, e.g. "Q3 policy rewrite"), `a2` (text, e.g. "Finance Reviewer"), `a3` (text, e.g. "Hub Orchestrator"). All 16 slots are in `slots.json`.
 

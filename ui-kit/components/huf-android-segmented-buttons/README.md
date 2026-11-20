@@ -1,10 +1,13 @@
-# huf-android-segmented-buttons
+# Segmented buttons (Appearance / Language)  `huf-android-segmented-buttons`
 
 Segmented buttons (Appearance / Language)
 
-Three-option single choice; selected segment shows a check and the accent tint.
+**When to use:** Three-option single choice; selected segment shows a check and the accent tint.
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-segmented-buttons"]`. Slots: `a`, `b`, `c`, `a_on`, `b_on`, `c_on`, `a_chk`, `b_chk`, `c_chk`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `a_chk` (html, e.g. "<svg class="ha-ico " viewBox=""), `a` (text, e.g. "System"), `b` (text, e.g. "Light"), `c` (text, e.g. "Dark"). All 9 slots are in `slots.json`.
+
+**States:** default (none), light-selected (props), dark-selected (props). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-segmented-buttons"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-segmented-buttons --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

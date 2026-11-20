@@ -31,18 +31,18 @@ body{background:var(--ha-canvas);color:var(--ha-ink);font-family:var(--ha-font);
 .ha-chat.fixture{padding:4px 17px 0}
 .ha-chat .empty{font-size:15px;line-height:20px;color:var(--ha-secondary);padding-top:15px}
 .ha-user{display:block;margin-left:auto;width:max-content;max-width:100%;background:var(--ha-user-bubble);border-radius:var(--ha-r-pill);padding:17px 19px 18px;font-size:15px;line-height:17.5px;color:var(--ha-ink);margin-top:10px}
-.ha-chat.fixture .ha-user{display:block;width:auto;margin-left:0;border-radius:28px;padding:19px 19px 20px;margin-top:0}
+.ha-chat.fixture .ha-user{display:block;width:auto;margin-left:0;border-radius:28px;padding:19px 19px 19px;margin-top:0}
 .ha-assistant{font-size:16px;line-height:25px;color:var(--ha-ink);margin:13px 0 0;padding:2px 0}
 .ha-chat.fixture .ha-assistant{margin-top:9px;font-size:16.5px}
 /* ---------- approval card ---------- */
-.ha-approval{background:var(--ha-chat-bubble);border:1px solid var(--ha-hairline);border-radius:var(--ha-r-card);padding:12px 12px 12px;margin-top:9px}
+.ha-approval{background:var(--ha-chat-bubble);border:1px solid var(--ha-hairline);border-radius:var(--ha-r-card);padding:9px 12px 12px;margin-top:9px}
 .ha-approval .hd{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .ha-approval .ti{font-size:15px;line-height:20px;font-weight:600;color:var(--ha-accent);margin-top:2px}
 .ha-approval .stt{font-size:13px;line-height:18px;font-weight:600;color:var(--ha-secondary);margin-top:0}
 .ha-approval .row{font-size:16.5px;line-height:25px;color:var(--ha-ink);margin-top:10px}
-.ha-approval .row:first-of-type{margin-top:10px}
+.ha-approval .row:first-of-type{margin-top:8px}
 .ha-approval .sample{font-size:16px;line-height:25px;color:var(--ha-secondary);margin-top:9px}
-.ha-approval .exp{font-size:13px;line-height:18px;color:var(--ha-secondary);font-weight:600;margin-top:11px}
+.ha-approval .exp{font-size:13px;line-height:18px;color:var(--ha-secondary);font-weight:600;margin-top:9px}
 .ha-approval .acts{display:flex;align-items:center;gap:8px;margin-top:11px;height:42px}
 .ha-approval .row + .row{margin-top:9px}
 .ha-btn-approve{height:42px;min-width:103px;padding:0 24px;border-radius:21px;background:var(--ha-accent);color:var(--ha-on-accent);font-size:14.5px;font-weight:500;display:flex;align-items:center;justify-content:center;border:0}
@@ -249,3 +249,62 @@ html:not([data-theme="dark"]) .ha-tonal{color:#0B5E57}
 .ha-psheet-v{font-size:16px;color:var(--ha-ink);padding:0 21px;line-height:26px}
 .ha-hist{padding:0 31px;margin-top:12px}.ha-hist .n{font-size:15px;line-height:24px;color:var(--ha-ink)}.ha-hist .s{font-size:12px;line-height:20px;color:var(--ha-secondary)}
 .ha-scrim-bar{background:rgba(0,0,0,.6)}html[data-theme="dark"] .ha-scrim-bar{background:var(--ha-scrim)}
+
+/* ---------- additions: upload rows, artifact cards, states ---------- */
+.ha-spin.dark{border-color:var(--ha-on-accent);border-right-color:transparent;width:18px;height:18px}
+.ha-spin.w{border-color:var(--ha-on-accent);border-right-color:transparent;width:18px;height:18px}
+.ha-composer .send.pressed{box-shadow:0 0 0 10px rgba(15,118,110,.16)}
+html[data-theme="dark"] .ha-composer .send.pressed{box-shadow:0 0 0 10px rgba(45,212,191,.2)}
+.ha-btn.filled.busy{background:var(--ha-accent);color:var(--ha-on-accent)}
+.ha-btn.filled.pressed{background:var(--ha-accent);color:var(--ha-on-accent);box-shadow:inset 0 0 0 100px rgba(255,255,255,.14)}
+.ha-helper2{font-size:14.5px;line-height:20px;color:var(--ha-secondary);margin:15px 0 0}
+.ha-upload{display:flex;align-items:center;gap:10px;padding:8px 21px 8px 21px;flex:none;position:relative;z-index:6}
+.ha-upload>.ha-ico{color:var(--ha-secondary)}
+.ha-upload .tx{flex:1;min-width:0}
+.ha-upload .fn,.ha-upload .dt{font-family:var(--ha-mono);font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ha-upload .fn{color:var(--ha-ink)}
+.ha-upload .dt{color:var(--ha-secondary)}
+.ha-upload .x{width:48px;height:48px;display:flex;align-items:center;justify-content:center;color:var(--ha-secondary);margin-right:-12px}
+.ha-upload.uploading>.ha-ico,.ha-upload.uploading .dt{color:var(--ha-accent)}
+.ha-upload.uploaded>.ha-ico,.ha-upload.uploaded .dt{color:var(--ha-success)}
+.ha-upload.failed>.ha-ico,.ha-upload.failed .dt{color:var(--ha-danger)}
+.ha-upload .bar{display:block;height:2px;background:var(--ha-hairline);margin-top:5px}
+.ha-upload .bar b{display:block;height:2px;background:var(--ha-accent)}
+.ha-chat.compact .sample{display:none}
+.ha-art-card{background:var(--ha-surface);border:1px solid var(--ha-hairline);border-radius:var(--ha-r-card);padding:12px;margin-top:16px}
+.ha-art-card .at{font-size:15px;line-height:20px;font-weight:600;color:var(--ha-ink);padding:2px 0 6px}
+.ha-art-card .btns{display:flex;gap:4px;margin:0 -8px}
+.ha-art-card .btns span{padding:0 12px;height:40px;display:flex;align-items:center;color:var(--ha-accent);font-size:14.5px;font-weight:500}
+.ha-mer{background:var(--ha-surface);border-radius:var(--ha-r-card);padding:16px;box-shadow:0 0 0 1px var(--ha-hairline) inset}
+.ha-mer .cv{position:relative;width:100%}
+.ha-mer .edges{position:absolute;left:0;top:0;width:100%;height:100%}
+.ha-mer .edges path{fill:none;stroke:var(--ha-outline);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ha-mer .nd{position:absolute;left:0;right:0;border-radius:var(--ha-r-l);background:var(--ha-accent-tint);color:var(--ha-accent-ink);text-align:center;font-size:14.5px;line-height:20px;padding:12px 10px}
+.ha-web{margin:8px 0 0;padding:12px;border-radius:8px;background:var(--ha-canvas);border:1px solid var(--ha-hairline)}
+.ha-web .wh{font-size:17px;font-weight:700;color:var(--ha-ink);line-height:22px}
+.ha-web .kp{display:flex;gap:8px;margin-top:10px}
+.ha-web .kp div{flex:1;background:var(--ha-accent-tint);border-radius:8px;padding:8px 8px 9px}
+.ha-web .kp b{display:block;font-size:14.5px;line-height:19px;color:var(--ha-accent-ink)}
+.ha-web .kp i{display:block;font-style:normal;font-size:11.5px;line-height:15px;color:var(--ha-secondary)}
+.ha-web .bars{display:flex;align-items:flex-end;gap:10px;height:90px;margin-top:12px;padding:0 8px;border-bottom:1px solid var(--ha-hairline)}
+.ha-web .bars u{flex:1;background:var(--ha-accent);border-radius:3px 3px 0 0}
+.ha-sheet.closed{transform:translateY(100%)}.ha-drawer.closed{transform:translateX(-100%)}.ha-menu.closed{opacity:0;transform:scale(.8)}
+.ha-agent2.pressed,.ha-pcard.pressed,.ha-art-row.pressed{background:var(--ha-sunken)}
+.ha-nav .it.pressed{background:rgba(110,110,115,.16);border-radius:16px;margin:8px 4px 24px}
+.ha-approval.press-approve .ha-btn-approve{box-shadow:inset 0 0 0 100px rgba(255,255,255,.16)}
+.ha-chip.pressed{background:var(--ha-sunken)}
+.ha-chat.compact .row{margin-top:3px!important;line-height:22px}.ha-chat.compact .ha-approval{margin-top:8px}.ha-chat.compact .ha-approval .acts{margin-top:8px}
+.ha-menu{padding:10px 0;top:130px}.ha-menu .mi{height:50px}
+html[data-theme="dark"] .ha-chart{background:#2B3235}html[data-theme="dark"] .ha-chart .plot .b{background:#0F766E}
+.ha-appbar.two{height:82px}
+.ha-approval .row:first-of-type{margin-top:5px}
+.ha-chat:not(.fixture) .ha-approval{margin-top:12px;padding-bottom:13px}
+.ha-approval .sample + .acts{margin-top:13px}
+[data-ui="huf-android-agent-switcher-sheet"]{height:446px;overflow:hidden}
+[data-ui="huf-android-agent-switcher-sheet"] .handle{margin-top:23px}
+[data-ui="huf-android-agent-switcher-sheet"] .hd{margin-top:22px;height:52px}
+[data-ui="huf-android-agent-switcher-sheet"] .desc{padding-top:9px;font-size:16.5px;line-height:25px}
+[data-ui="huf-android-agent-switcher-sheet"] .opt{min-height:69px;padding:6px 21px}
+[data-ui="huf-android-agent-switcher-sheet"] .opt.sel{min-height:60px}
+[data-ui="huf-android-agent-switcher-sheet"] .opt .n{line-height:20px}
+[data-ui="huf-android-agent-switcher-sheet"] .opt .d{line-height:17px}

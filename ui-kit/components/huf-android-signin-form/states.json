@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "reason": "no pressed variant for this component"
     },
     "ready": {
       "applicable": true,
@@ -25,7 +25,7 @@
         "over": {
           "btn_state": "",
           "server": "https://acme.example.com",
-          "email": "maya@acme.example.com",
+          "email": "maya@example.com",
           "password": "••••••••••",
           "server_color": "var(--ha-ink)",
           "email_color": "var(--ha-ink)",
@@ -35,7 +35,7 @@
       "values": {
         "btn_state": "",
         "server": "https://acme.example.com",
-        "email": "maya@acme.example.com",
+        "email": "maya@example.com",
         "password": "••••••••••",
         "server_color": "var(--ha-ink)",
         "email_color": "var(--ha-ink)",
@@ -46,8 +46,10 @@
       "description": "ready"
     },
     "disabled": {
-      "applicable": false,
-      "reason": "not applicable: this component has no distinct disabled variant"
+      "applicable": true,
+      "mechanism": "slot-preset",
+      "props": {},
+      "description": "default state: Sign in is disabled until all fields are filled (btn_state \"disabled\")"
     },
     "error": {
       "applicable": false,

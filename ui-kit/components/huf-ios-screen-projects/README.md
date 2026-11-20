@@ -1,8 +1,8 @@
 # Screen: Projects tab  `huf-ios-screen-projects`
 
-Screen: Projects tab
+Full iPhone screen: Projects tab
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/projects.light.png.
 
 **Slots people usually change:** `pd0` (text, e.g. "0 agents · 0 loaded chats"), `pd` (text, e.g. "1 agent · 1 loaded chat"), `p2` (text, e.g. "Policy & compliance"), `p3` (text, e.g. "Vendor onboarding"), `search_placeholder` (text, e.g. "Search projects"), `p4` (text, e.g. "Field reports"). All 14 slots are in `slots.json`.
 

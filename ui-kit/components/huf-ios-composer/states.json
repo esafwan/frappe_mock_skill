@@ -15,8 +15,16 @@
       "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "empty",
+        "pressed": "attach"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "attach button pressed",
+      "alias": "pressed"
     },
     "draft": {
       "applicable": true,
@@ -89,6 +97,17 @@
       "preview": "states/disabled.html",
       "description": "unavailable agent",
       "alias": "disabled"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "empty",
+        "pressed": "attach"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "attach button pressed"
     },
     "empty": {
       "applicable": false,

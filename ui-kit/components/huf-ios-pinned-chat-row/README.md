@@ -1,8 +1,8 @@
 # Pinned chat row (teal pin beside the date)  `huf-ios-pinned-chat-row`
 
-Pinned chat row (teal pin beside the date)
+Chat row with the pin glyph.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use in the Pinned section of Chats / Projects.
 
 **Slots people usually change:** `title` (text, e.g. "Gulf Steel receivables"), `agent` (text, e.g. "Finance Reviewer"), `date` (text, e.g. "AUG 13"). All 3 slots are in `slots.json`.
 

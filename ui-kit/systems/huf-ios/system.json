@@ -17,15 +17,59 @@
  },
  "variableSystem": {
   "kind": "css-custom-properties --hi-* (HufDesignTokens.swift colours, radii, spacing)",
-  "themeAttribute": { "light": null, "dark": "data-theme=\"dark\" on <html>" },
-  "files": { "fonts": "tokens/css/huf-ios/huf-ios-fonts.css", "tokens": "tokens/css/huf-ios/huf-ios-tokens.css", "components": "tokens/css/huf-ios/huf-ios.css" }
+  "themeAttribute": {
+   "light": null,
+   "dark": "data-theme=\"dark\" on <html>"
+  },
+  "files": {
+   "fonts": "tokens/css/huf-ios/huf-ios-fonts.css",
+   "tokens": "tokens/css/huf-ios/huf-ios-tokens.css",
+   "components": "tokens/css/huf-ios/huf-ios.css"
+  }
  },
  "tokens": {
   "css": "tokens/css/huf-ios/*.css",
   "fonts": "SF Pro / SF Mono are not redistributable: Inter and Geist Mono (SIL OFL, tokens/fonts) are pinned for deterministic renders",
   "icons": "inline SVG (lucide-style strokes approximating SF Symbols)"
  },
- "modes": ["light", "dark"],
- "rtl": { "supported": false, "mechanism": "refs partly show Arabic (leaked app language); components are authored in English / LTR" },
- "defaults": { "viewport": { "w": 402, "h": 874, "deviceScaleFactor": 3 }, "device": "iPhone 17 Pro" }
+ "modes": [
+  "light",
+  "dark"
+ ],
+ "rtl": {
+  "supported": false,
+  "mechanism": "refs partly show Arabic (leaked app language); components are authored in English / LTR"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 402,
+   "h": 874,
+   "deviceScaleFactor": 3
+  },
+  "device": "iPhone 17 Pro"
+ },
+ "coverage": {
+  "components": 33,
+  "screens": 27,
+  "refScreens": 22,
+  "authoredScreens": [
+   "chart",
+   "artifacts",
+   "artifact-detail",
+   "projects-empty",
+   "approval"
+  ],
+  "artifactKinds": [
+   "table",
+   "mermaid diagram",
+   "html dashboard",
+   "chart",
+   "source"
+  ]
+ },
+ "states": "default, active (pressed), loading, error, empty, disabled + named: filled, closed, html/diagram/source (see each states.json); hover/focus N/A (touch)",
+ "animation": {
+  "slots": "every component/screen has slots.json",
+  "ids": "stable data-ui ids, boxes in measurements.json"
+ }
 }

@@ -1,5 +1,9 @@
 {
   "component": "huf-android-screen-artifact-browser",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
-  "slots": {}
+  "note": "Full screen composed from huf-android-* components. Change text through the component slots (see composedOf); target elements by data-ui.",
+  "slots": {},
+  "typing": null,
+  "composedOf": [
+    "huf-android-artifact-row"
+  ]
 }

@@ -1,10 +1,10 @@
 # Screen: chat thread with approval cards, markdown table and HTML dashboard  `huf-ios-screen-dashboard`
 
-Screen: chat thread with approval cards, markdown table and HTML dashboard
+Full iPhone screen: chat thread with approval cards, markdown table and HTML dashboard
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/dashboard.light.png.
 
-**Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `sample` (text, e.g. "Hi Ahmed, your invoice INV-204"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `action` (text, e.g. "Send WhatsApp campaign"). All 32 slots are in `slots.json`.
+**Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `sample` (text, e.g. "Hi Ahmed, your invoice INV-204"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `card_sub` (text, e.g. "Open invoices by customer"). All 34 slots are in `slots.json`.
 
 **States:** default (none). Details and class/attribute changes in `states.json`.
 

@@ -1,10 +1,13 @@
-# huf-android-table-artifact
+# Table artifact (markdown table, horizontally clipped)  `huf-android-table-artifact`
 
 Table artifact (markdown table, horizontally clipped)
 
-Rich message table; wide tables clip at the screen edge (horizontal scroll on device).
+**When to use:** Rich message table; wide tables clip at the screen edge (horizontal scroll on device).
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-table-artifact"]`. Slots: `h1`, `h2`, `h3`, `r1`, `r2`, `r3`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `r3` (text, e.g. "Marina Logistics|61,450|31"), `r2` (text, e.g. "Al Noor Trading|88,300|12"), `r1` (text, e.g. "Gulf Steel|412,900|47"), `h2` (text, e.g. "Open (AED)"), `h1` (text, e.g. "Customer"), `h3` (text, e.g. "Days"). All 6 slots are in `slots.json`.
+
+**States:** default (none). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-table-artifact"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-table-artifact --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

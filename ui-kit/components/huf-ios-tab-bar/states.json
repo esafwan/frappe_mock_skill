@@ -15,8 +15,16 @@
       "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "chat",
+        "pressed": "agents"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "finger down on the Agents tab",
+      "alias": "pressed"
     },
     "projects": {
       "applicable": true,
@@ -47,6 +55,17 @@
       "screenshot": "states/you.png",
       "preview": "states/you.html",
       "description": "You tab selected"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "chat",
+        "pressed": "agents"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "finger down on the Agents tab"
     },
     "disabled": {
       "applicable": false,

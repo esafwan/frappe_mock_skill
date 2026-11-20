@@ -6,5 +6,5 @@ const CSS = ['huf-ios/huf-ios-fonts.css', 'huf-ios/huf-ios-tokens.css', 'huf-ios
 const BASE = { group: 'huf-ios', static: true, width: 402, dsf: 3, css: CSS, darkTheme: 'dark', modes: ['light', 'dark'] };
 export const specs = [
   ...defs.map((d) => ({ ...BASE, id: 'huf-ios-' + d.id, name: d.name, slots: d.slots, render: d.render, props: d.props || {}, variants: d.variants || {}, describe: d.describe, height: d.height && ['device-shell', 'empty-state', 'voice-sheet'].includes(d.id) ? d.height : undefined })),
-  ...screens.map((s) => ({ ...BASE, id: 'huf-ios-screen-' + s.id, name: s.name, slots: s.slots, render: s.render, props: {}, variants: {}, height: 874, describe: [s.name.replace('Screen: ', 'Full iPhone screen: '), 'Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/' + s.id + '.light.png.'] })),
+  ...screens.map((s) => ({ ...BASE, id: 'huf-ios-screen-' + s.id, name: s.name, slots: s.slots, render: s.render, props: {}, variants: s.variants || {}, height: 874, describe: [s.name.replace('Screen: ', 'Full iPhone screen: '), 'Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/' + s.id + '.light.png.'] })),
 ];

@@ -1,27 +1,27 @@
 {
   "component": "huf-android-attachment-chip",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "name": {
       "type": "text",
       "sample": "invoice-INV-2041.pdf",
-      "maxLength": 32,
+      "maxLength": 30,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-attachment-chip"
     },
     "state_class": {
-      "type": "text",
+      "type": "class",
       "sample": "",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-attachment-chip"
     },
     "detail": {
       "type": "text",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 20,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-attachment-chip"
     }
   }
 }

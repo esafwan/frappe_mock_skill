@@ -1,8 +1,8 @@
 # Screen: chat with an unavailable agent  `huf-ios-screen-disabled-agent`
 
-Screen: chat with an unavailable agent
+Full iPhone screen: chat with an unavailable agent
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/disabled-agent.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `note` (text, e.g. "Choose another agent to start "), `draft` (text, e.g. "Summarize the overdue invoices"), `placeholder` (text, e.g. "Choose an agent to chat"), `title` (text, e.g. "Falcon Arabic Test"). All 7 slots are in `slots.json`.
 

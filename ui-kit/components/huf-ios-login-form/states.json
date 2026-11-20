@@ -15,8 +15,16 @@
       "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed",
+      "alias": "pressed"
     },
     "api-key": {
       "applicable": true,
@@ -27,6 +35,38 @@
       "screenshot": "states/api-key.png",
       "preview": "states/api-key.html",
       "description": "API key and secret"
+    },
+    "filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true
+      },
+      "screenshot": "states/filled.png",
+      "preview": "states/filled.html",
+      "description": "email and password typed, Sign in enabled"
+    },
+    "api-key-filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "api-key",
+        "filled": true
+      },
+      "screenshot": "states/api-key-filled.png",
+      "preview": "states/api-key-filled.html",
+      "description": "key and secret typed, Sign in enabled"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed"
     },
     "disabled": {
       "applicable": false,

@@ -1,5 +1,27 @@
 {
   "component": "huf-android-screen-agent-switcher",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
-  "slots": {}
+  "note": "Full screen composed from huf-android-* components. Change text through the component slots (see composedOf); target elements by data-ui.",
+  "slots": {
+    "draft": {
+      "type": "text",
+      "sample": "Write a message…",
+      "maxLength": 200,
+      "where": "text",
+      "element": "huf-android-composer.input",
+      "typing": true
+    }
+  },
+  "typing": {
+    "component": "huf-android-composer",
+    "slot": "draft",
+    "selector": "[data-ui=\"huf-android-composer.input\"]"
+  },
+  "composedOf": [
+    "huf-android-top-app-bar",
+    "huf-android-table-artifact",
+    "huf-android-chart-artifact",
+    "huf-android-composer",
+    "huf-android-bottom-nav",
+    "huf-android-agent-switcher-sheet"
+  ]
 }

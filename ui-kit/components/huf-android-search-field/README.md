@@ -1,10 +1,13 @@
-# huf-android-search-field
+# Search field (outlined, leading search icon)  `huf-android-search-field`
 
 Search field (outlined, leading search icon)
 
-Used on Agents and Projects. The drawer variant is the pill `huf-android-search-pill`.
+**When to use:** Used on Agents and Projects. The drawer variant is the pill `huf-android-search-pill`.
 
-- System: `huf-android` (Pixel 5 viewport 412x892 CSS px = dp). Light + dark (`html[data-theme="dark"]`).
-- Root element: `[data-ui="huf-android-search-field"]`. Slots: `placeholder`. See `slots.json`, `states.json`.
-- Files: `component.html` (template, `{{slots}}`), `preview.html` / `preview.dark.html` (JS-free), `screenshot*.png`.
-- CSS: `tokens/css/huf-android/{fonts,tokens,components}.css`; mirrored from `ai.huf.mobile.theme.HufTheme`.
+**Slots people usually change:** `placeholder` (text, e.g. "Search agents, providers, or m"). All 1 slots are in `slots.json`.
+
+**States:** default (none). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="huf-android-search-field"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs huf-android-search-field --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs huf-android/fonts.css, huf-android/tokens.css, huf-android/components.css from `tokens/css/` and the desk icon sprite (inlined in preview).

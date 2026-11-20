@@ -1,8 +1,8 @@
 # Voice listening sheet: timer, waveform, stop, Send  `huf-ios-voice-sheet`
 
-Voice listening sheet: timer, waveform, stop, Send
+Full-height voice recording sheet.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use when the mic is tapped.
 
 **Slots people usually change:** `heading` (text, e.g. "Listening…"), `status` (text, e.g. "LISTENING"), `title` (text, e.g. "Voice"), `close` (text, e.g. "Close"), `time` (text, e.g. "0:04"), `send` (text, e.g. "Send"). All 6 slots are in `slots.json`.
 

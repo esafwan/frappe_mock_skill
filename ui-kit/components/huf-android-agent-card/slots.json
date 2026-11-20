@@ -1,41 +1,41 @@
 {
   "component": "huf-android-agent-card",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "name": {
       "type": "text",
       "sample": "Hub Orchestrator",
-      "maxLength": 26,
+      "maxLength": 30,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-agent-card"
     },
     "description": {
       "type": "text",
       "sample": "Routes work across finance, documents and field agents",
-      "maxLength": 87,
+      "maxLength": 90,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-agent-card"
     },
     "model": {
       "type": "text",
       "sample": "claude-sonnet-5",
-      "maxLength": 24,
+      "maxLength": 30,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-agent-card"
     },
     "sel_class": {
-      "type": "text",
+      "type": "class",
       "sample": "sel",
-      "maxLength": 24,
-      "where": "text",
-      "element": "text"
+      "maxLength": 10,
+      "where": "class",
+      "element": "huf-android-agent-card"
     },
     "check": {
-      "type": "text",
+      "type": "html",
       "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>",
-      "maxLength": 204,
+      "maxLength": 300,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-agent-card"
     }
   }
 }

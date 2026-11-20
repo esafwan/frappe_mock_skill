@@ -15,8 +15,37 @@
       "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
-      "applicable": false,
-      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Continue pressed",
+      "alias": "pressed"
+    },
+    "filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true
+      },
+      "screenshot": "states/filled.png",
+      "preview": "states/filled.html",
+      "description": "server typed, Continue enabled"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Continue pressed"
     },
     "disabled": {
       "applicable": false,

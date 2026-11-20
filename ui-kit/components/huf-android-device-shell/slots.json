@@ -1,20 +1,20 @@
 {
   "component": "huf-android-device-shell",
-  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
   "slots": {
     "content": {
-      "type": "text",
+      "type": "html",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 99999,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-device-shell"
     },
     "overlay": {
-      "type": "text",
+      "type": "html",
       "sample": "",
-      "maxLength": 24,
+      "maxLength": 99999,
       "where": "text",
-      "element": "text"
+      "element": "huf-android-device-shell"
     }
   }
 }

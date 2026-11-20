@@ -1,8 +1,8 @@
 # Project row: folder tile, name, counts, chevron  `huf-ios-project-row`
 
-Project row: folder tile, name, counts, chevron
+Row of the Projects list.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use under the Projects section label.
 
 **Slots people usually change:** `detail` (text, e.g. "1 agent · 1 loaded chat"), `name` (text, e.g. "Receivables"). All 2 slots are in `slots.json`.
 

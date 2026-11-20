@@ -3,6 +3,8 @@
 # Needs a booted emulator with the debug APK installed (run capture-android.sh first).
 # One app launch per theme for the signed-in flow (plus one per theme for the API-key sign-in variant).
 set -euo pipefail
+# MOCK_URL: address the emulator uses to reach this host mock server; export it before running.
+: "${MOCK_URL:?set MOCK_URL}"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SRC="${HUF_ANDROID_SRC:-/Users/safwan/Code/Huf/huf_mobile/android}"
@@ -31,7 +33,7 @@ launch(){ adb shell am force-stop $PKG; adb shell am start -W -n $ACT >/dev/null
 
 # ---- sign in once (session persists across relaunches)
 night no; adb shell pm clear $PKG >/dev/null; launch
-tap 540 554 1; adb shell input text 'http://10.0.2.2:8765'; tap 540 818 1; adb shell input text mock
+tap 540 554 1; adb shell input text "$MOCK_URL"; tap 540 818 1; adb shell input text mock
 tap 500 1027 1; adb shell input text mock; adb shell input keyevent 4; sleep 1; tap 540 1203 8
 
 for th in light dark; do

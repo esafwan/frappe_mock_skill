@@ -1,8 +1,8 @@
 # User message bubble  `huf-ios-user-bubble`
 
-User message bubble
+Right-aligned user bubble.
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Use for the user turn of a thread.
 
 **Slots people usually change:** `text` (text, e.g. "Which orders from Gulf Steel a"). All 1 slots are in `slots.json`.
 

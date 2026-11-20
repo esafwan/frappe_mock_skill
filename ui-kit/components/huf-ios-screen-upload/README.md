@@ -1,8 +1,8 @@
 # Screen: chat with a failed upload in the composer  `huf-ios-screen-upload`
 
-Screen: chat with a failed upload in the composer
+Full iPhone screen: chat with a failed upload in the composer
 
-**When to use:** Use when a scene needs this element.
+**When to use:** Composed only from huf-ios components; use as a whole-screen mockup or video frame. Reference simulator capture: systems/huf-ios/ref/upload.light.png.
 
 **Slots people usually change:** `assistant_text` (text, e.g. "Three invoices are open, total"), `user_text` (text, e.g. "Which orders from Gulf Steel a"), `subtitle` (text, e.g. "Falcon Arabic Test · falcon-h1"), `draft` (text, e.g. "Summarize the overdue invoices"), `error` (text, e.g. "Upload failed — file over 25 M"), `title` (text, e.g. "Falcon Arabic Test"). All 8 slots are in `slots.json`.
 
