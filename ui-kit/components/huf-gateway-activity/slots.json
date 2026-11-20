@@ -1,0 +1,271 @@
+{
+  "component": "huf-gateway-activity",
+  "slots": {
+    "font_medium": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "dark_text_green_300": {
+      "type": "text",
+      "sample": "On",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Last message:",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground_2": {
+      "type": "relative-time",
+      "sample": "19 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-activity.button-1"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "Messages, last 24 hours",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold": {
+      "type": "number",
+      "sample": "49",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_4": {
+      "type": "text",
+      "sample": "Problems, last 24 hours",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_5": {
+      "type": "text",
+      "sample": "Messages, last 7 days",
+      "maxLength": 42,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_3": {
+      "type": "number",
+      "sample": "331",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_6": {
+      "type": "text",
+      "sample": "Usage, last 7 days",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_4": {
+      "type": "currency",
+      "sample": "$4.82",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground_7": {
+      "type": "text",
+      "sample": "1.3M",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground_8": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "role_checkbox_translate_y_2px": {
+      "type": "text",
+      "sample": "Received",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_2": {
+      "type": "text",
+      "sample": "From",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_3": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_4": {
+      "type": "text",
+      "sample": "Handled by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "role_checkbox_translate_y_2px_5": {
+      "type": "relative-time",
+      "sample": "19 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_6": {
+      "type": "text",
+      "sample": "Jonas Weber",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_2": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_7": {
+      "type": "text",
+      "sample": "Order status reply",
+      "maxLength": 36,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_8": {
+      "type": "relative-time",
+      "sample": "27 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_9": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_3": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_10": {
+      "type": "text",
+      "sample": "Support Triage",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_11": {
+      "type": "relative-time",
+      "sample": "42 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_12": {
+      "type": "text",
+      "sample": "Ravi Menon",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_amber_300": {
+      "type": "text",
+      "sample": "Blocked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground_9": {
+      "type": "text",
+      "sample": "Waiting for approval (pairing code PAIR-3HXA).",
+      "maxLength": 92,
+      "where": "text",
+      "element": "p"
+    },
+    "role_checkbox_translate_y_2px_13": {
+      "type": "text",
+      "sample": "-",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Why didn't this run?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-gateway-activity.button-2"
+    },
+    "role_checkbox_translate_y_2px_14": {
+      "type": "relative-time",
+      "sample": "1 hour ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "role_checkbox_translate_y_2px_15": {
+      "type": "text",
+      "sample": "Lena Ortiz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "dark_text_green_300_4": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "role_checkbox_translate_y_2px_16": {
+      "type": "text",
+      "sample": "Lead Qualifier",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-activity"
+    }
+  }
+}

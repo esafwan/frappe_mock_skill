@@ -1,0 +1,488 @@
+{
+  "component": "huf-gateway-pending",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h1"
+    },
+    "gap_1_5": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "Pending access",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_center": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "Channel credentials",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Approve by pairing code",
+      "maxLength": 46,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Paste the code the sender shared with you to approve them without finding their row below.",
+      "maxLength": 180,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Approve code",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-gateway-pending.button-22"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Pending pairing requests",
+      "maxLength": 48,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Senders who messaged a gateway with a Pairing policy wait here until approved.",
+      "maxLength": 156,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "All gateways",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "record(s) visible",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Columns",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-25"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Sender",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Gateway",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Pairing code",
+      "maxLength": 24,
+      "where": "text",
+      "element": "th"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Requested",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Expires",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Lena Ortiz",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Northwind Team",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "PAIR-7Q4M",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_12": {
+      "type": "relative-time",
+      "sample": "8 mins ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Just now",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-26"
+    },
+    "hover_text_destructive": {
+      "type": "text",
+      "sample": "Decline",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-27"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Sam Patel (driver)",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Northwind Bot",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "PAIR-K2TD",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "relative-time",
+      "sample": "29 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "Just now",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-28"
+    },
+    "hover_text_destructive_2": {
+      "type": "text",
+      "sample": "Decline",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-29"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Ravi Menon",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Northwind Team",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Slack",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "PAIR-3HXA",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_20": {
+      "type": "relative-time",
+      "sample": "42 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "Just now",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-30"
+    },
+    "hover_text_destructive_3": {
+      "type": "text",
+      "sample": "Decline",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-pending.button-31"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-pending.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-gateway-pending.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-pending.button-15"
+    },
+    "gap_22px_arialabel": {
+      "type": "text",
+      "sample": "Gateways sections",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-pending.div-17"
+    },
+    "uppercase_placeholder": {
+      "type": "text",
+      "sample": "PAIR-XXXX",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-pending.input-21"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Filter by gateway",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-pending.button-23"
+    },
+    "text_ink_placeholder": {
+      "type": "text",
+      "sample": "Filter...",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-pending.input-24"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-pending.section-32"
+    }
+  }
+}

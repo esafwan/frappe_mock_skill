@@ -1,0 +1,418 @@
+{
+  "component": "huf-gateway-detail",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail.link-17"
+    },
+    "page_title": {
+      "type": "text",
+      "sample": "Northwind Slack",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Slack · Used by default",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Connected",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Connected as @northwind-assistant in Northwind Trading.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Checked",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "relative-time",
+      "sample": "15 mins ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Test connection",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-gateway-detail.test"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Use in agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-gateway-detail.button-19"
+    },
+    "hover_text_destructive": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail.button-20"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Connection",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail.button-22"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Recipients",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail.button-23"
+    },
+    "h_control_md_3": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-detail.button-24"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Name",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Shown in lists and when you pick this connection. Leave empty to use the service and account.",
+      "maxLength": 186,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Credentials",
+      "maxLength": 22,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Saved values stay hidden. Leave a field empty to keep what is saved, or type to replace it.",
+      "maxLength": 182,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Slack Bot Token (xoxb-...)",
+      "maxLength": 52,
+      "where": "text",
+      "element": "label"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "*",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Saved",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Slack Signing Secret",
+      "maxLength": 40,
+      "where": "text",
+      "element": "label"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Saved",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Only needed to receive Slack events",
+      "maxLength": 70,
+      "where": "text",
+      "element": "p"
+    },
+    "data_state_open_svg_rotate_180": {
+      "type": "text",
+      "sample": "How to connect Slack",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-gateway-detail.button-29"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Options",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Turn off to pause this connection without deleting it.",
+      "maxLength": 108,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_5": {
+      "type": "text",
+      "sample": "Use by default",
+      "maxLength": 28,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Used automatically when a step or agent does not choose a specific account.",
+      "maxLength": 150,
+      "where": "text",
+      "element": "p"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-gateway-detail.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail.button-15"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail.button-18"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Optional, for example Marketing Slack",
+      "maxLength": 74,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail.input-26"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Northwind Slack",
+      "maxLength": 30,
+      "where": "attr:value",
+      "element": "huf-gateway-detail.input-26"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "Saved. Type to replace it",
+      "maxLength": 50,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail.input-27"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "Saved. Type to replace it",
+      "maxLength": 50,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-detail.input-28"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail.button-30"
+    },
+    "data_state_unchecked_bg_input_value_2": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-detail.button-32"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-detail.section-36"
+    }
+  }
+}

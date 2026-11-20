@@ -1,0 +1,73 @@
+{
+  "component": "huf-gateway-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-gateway-detail.test",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgb(255, 255, 255)",
+          "to": "rgb(244, 244, 247)"
+        }
+      },
+      "screenshot": "states/hover.png"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-gateway-detail.test",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(122, 90, 240) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(29, 29, 31) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-gateway-detail.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}
