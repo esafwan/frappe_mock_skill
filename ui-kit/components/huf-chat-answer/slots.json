@@ -1,0 +1,495 @@
+{
+  "component": "huf-chat-answer",
+  "slots": {
+    "sr_only": {
+      "type": "text",
+      "sample": "Collapse conversation rail",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_chat_row_hover": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-2"
+    },
+    "hover_bg_chat_row_hover_2": {
+      "type": "text",
+      "sample": "New",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-3"
+    },
+    "hover_bg_chat_row_hover_3": {
+      "type": "text",
+      "sample": "Projects",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-4"
+    },
+    "hover_bg_chat_row_hover_4": {
+      "type": "text",
+      "sample": "Artifacts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-5"
+    },
+    "hover_bg_chat_row_hover_5": {
+      "type": "text",
+      "sample": "Scheduled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-6"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Recents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.button-7"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "Olive oil supplier price changes",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Olive oil supplier price changes",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_white": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_13px": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "claude-sonnet-4-5",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Conversation actions",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_3": {
+      "type": "text",
+      "sample": "Show analytics",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "user_message": {
+      "type": "text",
+      "sample": "Which Casa Rinaldi orders are late this week, and what does our supplier policy say we should do?",
+      "maxLength": 194,
+      "where": "text",
+      "element": "p"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Ran",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_foreground_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_foreground_3": {
+      "type": "text",
+      "sample": "tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "search_knowledge ×1, list_records ×1, get_record ×1",
+      "maxLength": 102,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_primary": {
+      "type": "text",
+      "sample": "Check for a procedure",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-chat-answer.button-17"
+    },
+    "last_child_mb_0": {
+      "type": "text",
+      "sample": "Two Casa Rinaldi purchase orders are past their promised delivery date:",
+      "maxLength": 142,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_2": {
+      "type": "text",
+      "sample": "Items",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "Promised",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_4": {
+      "type": "text",
+      "sample": "Days late",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "table_cell_1": {
+      "type": "text",
+      "sample": "PO-2025-0412",
+      "maxLength": 24,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_2": {
+      "type": "text",
+      "sample": "Bronze-cut spaghetti, 12 cases",
+      "maxLength": 60,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_3": {
+      "type": "text",
+      "sample": "Dec 22",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_4": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "table_cell_5": {
+      "type": "text",
+      "sample": "PO-2025-0419",
+      "maxLength": 24,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_6": {
+      "type": "text",
+      "sample": "Paccheri, 8 cases",
+      "maxLength": 34,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_7": {
+      "type": "text",
+      "sample": "Dec 29",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "table_cell_8": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold": {
+      "type": "text",
+      "sample": "What the policy says",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline": {
+      "type": "text",
+      "sample": "Orders more than",
+      "maxLength": 32,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_2": {
+      "type": "text",
+      "sample": "7 days late",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_2": {
+      "type": "text",
+      "sample": "earn a",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_3": {
+      "type": "text",
+      "sample": "5% credit note",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_3": {
+      "type": "text",
+      "sample": ", so PO-2025-0412 qualifies.",
+      "maxLength": 56,
+      "where": "text",
+      "element": "li"
+    },
+    "underline": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-18"
+    },
+    "p_inline_4": {
+      "type": "text",
+      "sample": "Notify Casa Rinaldi",
+      "maxLength": 38,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_4": {
+      "type": "text",
+      "sample": "in writing within 2 business days",
+      "maxLength": 66,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_5": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "underline_2": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-19"
+    },
+    "p_inline_6": {
+      "type": "text",
+      "sample": "A third late order this quarter triggers a supplier review.",
+      "maxLength": 118,
+      "where": "text",
+      "element": "li"
+    },
+    "underline_3": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-chat-answer.link-20"
+    },
+    "font_semibold_5": {
+      "type": "text",
+      "sample": "Sources",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "underline_4": {
+      "type": "text",
+      "sample": "Supplier Handbook 2025, §4.2 Late deliveries",
+      "maxLength": 88,
+      "where": "text",
+      "element": "huf-chat-answer.link-21"
+    },
+    "underline_5": {
+      "type": "text",
+      "sample": "Casa Rinaldi framework agreement FA-2024-07, clause 9",
+      "maxLength": 106,
+      "where": "text",
+      "element": "huf-chat-answer.link-22"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "claude-sonnet-4-5",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "AI output can be inaccurate. Double check important info.",
+      "maxLength": 114,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_text_ink_arialabel": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-16"
+    },
+    "hover_text_ink_arialabel_2": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-23"
+    },
+    "hover_text_ink_arialabel_3": {
+      "type": "text",
+      "sample": "Mark response helpful",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-24"
+    },
+    "hover_text_ink_arialabel_4": {
+      "type": "text",
+      "sample": "Mark response not helpful",
+      "maxLength": 50,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-25"
+    },
+    "hover_text_ink_title": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "huf-chat-answer.button-26"
+    },
+    "hover_text_ink_arialabel_5": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-26"
+    },
+    "hover_text_ink_title_2": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "huf-chat-answer.link-27"
+    },
+    "hover_text_ink_arialabel_6": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.link-27"
+    },
+    "disabled_opacity_50_placeholder": {
+      "type": "text",
+      "sample": "Write a message…",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-chat-answer.textarea-28"
+    },
+    "disabled_opacity_50_arialabel": {
+      "type": "text",
+      "sample": "Attach file",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-30"
+    },
+    "shrink_0_title": {
+      "type": "text",
+      "sample": "Local browser dictation (not audited by server STT)",
+      "maxLength": 102,
+      "where": "attr:title",
+      "element": "huf-chat-answer.button-31"
+    },
+    "hover_text_ink_title_3": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "huf-chat-answer.button-32"
+    },
+    "hover_text_ink_arialabel_7": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-32"
+    },
+    "text_paper_arialabel": {
+      "type": "text",
+      "sample": "Send message",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.button-33"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-chat-answer.section-34"
+    }
+  }
+}

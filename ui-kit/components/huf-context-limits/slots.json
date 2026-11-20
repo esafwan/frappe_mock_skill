@@ -1,0 +1,194 @@
+{
+  "component": "huf-context-limits",
+  "slots": {
+    "text_ink": {
+      "type": "text",
+      "sample": "Limits",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "Caps on how long a run and a conversation can get.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "When a conversation gets long",
+      "maxLength": 58,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Summarize",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "Summarize",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "FIFO",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_3": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Summarize compresses old messages with a model; FIFO drops the oldest; None keeps everything.",
+      "maxLength": 186,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "History limit",
+      "maxLength": 26,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Messages kept in context.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Max turns",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Consecutive actions in one run.",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Max knowledge tokens",
+      "maxLength": 40,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Budget for injected knowledge.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "p"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Max context characters",
+      "maxLength": 44,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Tool results are truncated beyond this.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "p"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "Summarize",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "FIFO",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_3": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_ui_text_placeholder": {
+      "type": "number",
+      "sample": "50",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-context-limits.history-1"
+    },
+    "text_ui_text_value": {
+      "type": "number",
+      "sample": "30",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-limits.history-1"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-context-limits.history-2"
+    },
+    "text_ui_text_value_2": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-limits.history-2"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "number",
+      "sample": "2000",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-context-limits.history-3"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "4000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-limits.history-3"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "number",
+      "sample": "2000",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-context-limits.history-4"
+    },
+    "text_ui_text_value_4": {
+      "type": "number",
+      "sample": "6000",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-context-limits.history-4"
+    }
+  }
+}

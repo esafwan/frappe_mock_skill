@@ -1,0 +1,655 @@
+{
+  "$comment": "Chat area fixtures (fictional: Northwind Trading, a wholesale food supplier). Times are relative to the fixed capture clock 2026-01-01T09:00:00Z. Edit text here to change what the chat captures show; specs read the same file.",
+  "providers": [
+    {
+      "name": "OpenAI"
+    },
+    {
+      "name": "Anthropic"
+    }
+  ],
+  "agents": [
+    {
+      "name": "Hub Orchestrator",
+      "agent_name": "Hub Orchestrator",
+      "description": "Routes each question to the right Northwind agent, table or document.",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5",
+      "agent_color": "#6366F1",
+      "provider_brand": "anthropic",
+      "starter_prompts": [
+        {
+          "name": "SP-1",
+          "prompt_text": "Which supplier orders are late this week?"
+        },
+        {
+          "name": "SP-2",
+          "prompt_text": "Summarise yesterday's customer tickets by topic"
+        },
+        {
+          "name": "SP-3",
+          "prompt_text": "Draft a restock email for our top 10 wholesale buyers"
+        }
+      ]
+    },
+    {
+      "name": "Supplier Desk",
+      "agent_name": "Supplier Desk",
+      "description": "Tracks purchase orders and answers from the supplier handbook.",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5",
+      "agent_color": "#0F766E",
+      "provider_brand": "anthropic",
+      "starter_prompts": [
+        {
+          "name": "SP-4",
+          "prompt_text": "Which Casa Rinaldi orders are late?"
+        },
+        {
+          "name": "SP-5",
+          "prompt_text": "What is our late-delivery policy?"
+        }
+      ]
+    },
+    {
+      "name": "Sales Analyst",
+      "agent_name": "Sales Analyst",
+      "description": "Answers sales questions from orders and invoices, with tables and charts.",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "agent_color": "#B45309",
+      "provider_brand": "openai",
+      "starter_prompts": []
+    },
+    {
+      "name": "Order Status Bot",
+      "agent_name": "Order Status Bot",
+      "description": "Tells customers where their order is.",
+      "provider": "OpenAI",
+      "model": "gpt-4.1-mini",
+      "agent_color": "#7A5AF0",
+      "provider_brand": "openai",
+      "starter_prompts": []
+    },
+    {
+      "name": "Returns Assistant",
+      "agent_name": "Returns Assistant",
+      "description": "Handles return requests and credit notes.",
+      "provider": "OpenAI",
+      "model": "gpt-4.1-mini",
+      "agent_color": "#BE123C",
+      "provider_brand": "openai",
+      "starter_prompts": []
+    }
+  ],
+  "conversations": [
+    {
+      "name": "CONV-0001",
+      "title": "Late Casa Rinaldi orders",
+      "agent": "Supplier Desk",
+      "model": "claude-sonnet-4-5",
+      "channel": "Chat",
+      "last_activity": "2026-01-01 08:52:00",
+      "modified": "2026-01-01 08:52:00"
+    },
+    {
+      "name": "CONV-0002",
+      "title": "Q4 orders over $5,000",
+      "agent": "Sales Analyst",
+      "model": "gpt-4.1",
+      "channel": "Chat",
+      "last_activity": "2026-01-01 08:20:00",
+      "modified": "2026-01-01 08:20:00"
+    },
+    {
+      "name": "CONV-0003",
+      "title": "Restock email for top buyers",
+      "agent": "Hub Orchestrator",
+      "model": "claude-sonnet-4-5",
+      "channel": "Chat",
+      "last_activity": "2025-12-31 16:40:00",
+      "modified": "2025-12-31 16:40:00"
+    },
+    {
+      "name": "CONV-0004",
+      "title": "Olive oil supplier price changes",
+      "agent": "Supplier Desk",
+      "model": "claude-sonnet-4-5",
+      "channel": "Chat",
+      "last_activity": "2025-12-31 11:05:00",
+      "modified": "2025-12-31 11:05:00"
+    },
+    {
+      "name": "CONV-0005",
+      "title": "Return for order NW-10482",
+      "agent": "Returns Assistant",
+      "model": "gpt-4.1-mini",
+      "channel": "Chat",
+      "last_activity": "2025-12-29 14:12:00",
+      "modified": "2025-12-29 14:12:00"
+    },
+    {
+      "name": "CONV-0006",
+      "title": "Holiday delivery cut-off dates",
+      "agent": "Hub Orchestrator",
+      "model": "claude-sonnet-4-5",
+      "channel": "Chat",
+      "last_activity": "2025-12-22 10:30:00",
+      "modified": "2025-12-22 10:30:00"
+    }
+  ],
+  "messages": {
+    "CONV-0001": [
+      {
+        "name": "MSG-0101",
+        "is_agent_message": 0,
+        "agent_run": "AR-0101",
+        "kind": "Message",
+        "creation": "2026-01-01 08:51:20",
+        "content": "Which Casa Rinaldi orders are late this week, and what does our supplier policy say we should do?"
+      },
+      {
+        "name": "MSG-0102",
+        "is_agent_message": 1,
+        "agent_run": "AR-0101",
+        "kind": "Tool Result",
+        "tool_name": "search_knowledge",
+        "tool_status": "Completed",
+        "creation": "2026-01-01 08:51:22",
+        "tool_args": {
+          "query": "late delivery supplier credit",
+          "source": "Supplier Handbook 2025",
+          "top_k": 4
+        },
+        "content": "{\"results\": 3, \"top\": \"§4.2 Late deliveries\", \"score\": 0.91}"
+      },
+      {
+        "name": "MSG-0103",
+        "is_agent_message": 1,
+        "agent_run": "AR-0101",
+        "kind": "Tool Result",
+        "tool_name": "list_records",
+        "tool_status": "Completed",
+        "creation": "2026-01-01 08:51:24",
+        "tool_args": {
+          "doctype": "Purchase Order",
+          "supplier": "Casa Rinaldi",
+          "status": "To Receive"
+        },
+        "content": "{\"count\": 2, \"names\": [\"PO-2025-0412\", \"PO-2025-0419\"]}"
+      },
+      {
+        "name": "MSG-0104",
+        "is_agent_message": 1,
+        "agent_run": "AR-0101",
+        "kind": "Tool Result",
+        "tool_name": "get_record",
+        "tool_status": "Completed",
+        "creation": "2026-01-01 08:51:25",
+        "tool_args": {
+          "doctype": "Supplier",
+          "name": "Casa Rinaldi"
+        },
+        "content": "{\"contact\": \"Giulia Rinaldi\", \"on_time_rate\": \"82%\", \"agreement\": \"FA-2024-07\"}"
+      },
+      {
+        "name": "MSG-0105",
+        "is_agent_message": 1,
+        "agent_run": "AR-0101",
+        "kind": "Message",
+        "creation": "2026-01-01 08:51:31",
+        "content": "Two Casa Rinaldi purchase orders are past their promised delivery date:\n\n| Order | Items | Promised | Days late |\n|---|---|---|---|\n| PO-2025-0412 | Bronze-cut spaghetti, 12 cases | Dec 22 | **10** |\n| PO-2025-0419 | Paccheri, 8 cases | Dec 29 | **3** |\n\n**What the policy says**\n\n- Orders more than **7 days late** earn a **5% credit note**, so PO-2025-0412 qualifies. [1](/huf/knowledge/KS-0001)\n- Notify Casa Rinaldi **in writing within 2 business days**. [1](/huf/knowledge/KS-0001)\n- A third late order this quarter triggers a supplier review. [2](/huf/knowledge/KS-0002)\n\n**Sources**\n1. [Supplier Handbook 2025, §4.2 Late deliveries](/huf/knowledge/KS-0001)\n2. [Casa Rinaldi framework agreement FA-2024-07, clause 9](/huf/knowledge/KS-0002)"
+      }
+    ],
+    "CONV-0002": [
+      {
+        "name": "MSG-0201",
+        "is_agent_message": 0,
+        "agent_run": "AR-0201",
+        "kind": "Message",
+        "creation": "2026-01-01 08:19:10",
+        "content": "Show me Q4 sales orders over $5,000 as a report."
+      },
+      {
+        "name": "MSG-0202",
+        "is_agent_message": 1,
+        "agent_run": "AR-0201",
+        "kind": "Tool Result",
+        "tool_name": "render_frappe_view",
+        "tool_status": "Completed",
+        "creation": "2026-01-01 08:19:13",
+        "tool_args": {
+          "doctype": "Sales Order",
+          "mode": "report",
+          "filters": {
+            "grand_total": [
+              ">",
+              5000
+            ]
+          }
+        },
+        "content": "{\"rows\": 6, \"mode\": \"report\"}"
+      },
+      {
+        "name": "MSG-0203",
+        "is_agent_message": 1,
+        "agent_run": "AR-0201",
+        "kind": "Message",
+        "creation": "2026-01-01 08:19:18",
+        "content": "Six Q4 orders were above $5,000, worth **$48,920** together. Bella Cucina and Harbor Deli each placed two.\n\n<artifact type=\"frappe-report\" title=\"Q4 sales orders over $5,000\">__REPORT__</artifact>"
+      }
+    ]
+  },
+  "report": {
+    "doctype": "Sales Order",
+    "fields": [
+      "name",
+      "customer",
+      "transaction_date",
+      "grand_total"
+    ],
+    "meta": {
+      "success": true,
+      "doctype": "Sales Order",
+      "is_submittable": true,
+      "title_field": "customer",
+      "fields": [
+        {
+          "fieldname": "name",
+          "label": "Order",
+          "fieldtype": "Data",
+          "options": null,
+          "reqd": false,
+          "read_only": true,
+          "depends_on": null,
+          "fetch_from": null
+        },
+        {
+          "fieldname": "customer",
+          "label": "Customer",
+          "fieldtype": "Link",
+          "options": "Customer",
+          "reqd": true,
+          "read_only": false,
+          "depends_on": null,
+          "fetch_from": null,
+          "link_doctype": "Customer"
+        },
+        {
+          "fieldname": "transaction_date",
+          "label": "Date",
+          "fieldtype": "Data",
+          "options": null,
+          "reqd": true,
+          "read_only": false,
+          "depends_on": null,
+          "fetch_from": null
+        },
+        {
+          "fieldname": "grand_total",
+          "label": "Total (USD)",
+          "fieldtype": "Currency",
+          "options": null,
+          "reqd": false,
+          "read_only": true,
+          "depends_on": null,
+          "fetch_from": null
+        },
+        {
+          "fieldname": "status",
+          "label": "Status",
+          "fieldtype": "Select",
+          "options": "To Deliver\nCompleted",
+          "reqd": false,
+          "read_only": true,
+          "depends_on": null,
+          "fetch_from": null
+        }
+      ]
+    },
+    "data": [
+      {
+        "name": "SO-2025-1183",
+        "customer": "Bella Cucina",
+        "transaction_date": "2025-10-14",
+        "grand_total": 9840,
+        "status": "Completed"
+      },
+      {
+        "name": "SO-2025-1207",
+        "customer": "Harbor Deli",
+        "transaction_date": "2025-10-29",
+        "grand_total": 7215.5,
+        "status": "Completed"
+      },
+      {
+        "name": "SO-2025-1266",
+        "customer": "Green Fork Catering",
+        "transaction_date": "2025-11-12",
+        "grand_total": 8460,
+        "status": "Completed"
+      },
+      {
+        "name": "SO-2025-1301",
+        "customer": "Bella Cucina",
+        "transaction_date": "2025-11-27",
+        "grand_total": 6930,
+        "status": "Completed"
+      },
+      {
+        "name": "SO-2025-1342",
+        "customer": "Harbor Deli",
+        "transaction_date": "2025-12-09",
+        "grand_total": 5875,
+        "status": "To Deliver"
+      },
+      {
+        "name": "SO-2025-1378",
+        "customer": "Old Mill Bakery",
+        "transaction_date": "2025-12-18",
+        "grand_total": 10599.5,
+        "status": "To Deliver"
+      }
+    ],
+    "total_count": 6,
+    "limit_start": 0,
+    "limit_page_length": 20
+  },
+  "artifacts": {
+    "CONV-0002": [
+      {
+        "name": "ART-0201",
+        "title": "Q4 sales orders over $5,000",
+        "artifact_type": "frappe-report",
+        "message": "MSG-0203",
+        "message_index": 0,
+        "size_bytes": 2140,
+        "creation": "2026-01-01 08:19:18"
+      },
+      {
+        "name": "ART-0202",
+        "title": "Q4 big orders summary",
+        "artifact_type": "document",
+        "language": "markdown",
+        "message": "MSG-0203",
+        "message_index": 1,
+        "size_bytes": 1310,
+        "creation": "2026-01-01 08:19:18"
+      }
+    ]
+  },
+  "analytics": {
+    "CONV-0001": {
+      "totals": {
+        "cumulative": true,
+        "run_count": 6,
+        "run_count_by_kind": {
+          "agent": 3,
+          "tool": 3,
+          "orchestrator": 0
+        },
+        "billed_input_tokens": 41280,
+        "output_tokens": 3960,
+        "cost": 0.184,
+        "cache_read_tokens": 18400,
+        "cache_write_tokens": 6200,
+        "duration_ms_sum": 31400,
+        "duration_count": 6,
+        "average_duration_ms": 5233
+      },
+      "current": {
+        "run": "AR-0101",
+        "sequence": 6,
+        "peak_context_tokens": 14820,
+        "model_context_window": 200000,
+        "context_fullness": 0.0741,
+        "segment_tokens": {
+          "system": 2140,
+          "history": 5320,
+          "knowledge": 3880,
+          "tools": 2610,
+          "user": 870
+        },
+        "tool_exchange_tokens": 2610,
+        "duration_ms": 9100
+      },
+      "series": [
+        {
+          "sequence": 1,
+          "run_kind": "agent",
+          "peak_context_tokens": 4210,
+          "peak_context_tokens_delta": null,
+          "billed_input_tokens": 4210,
+          "output_tokens": 420,
+          "cost": 0.017,
+          "status": "Success",
+          "start_time": "2026-01-01 08:31:00",
+          "duration_ms": 3800
+        },
+        {
+          "sequence": 2,
+          "run_kind": "tool",
+          "peak_context_tokens": 6380,
+          "peak_context_tokens_delta": 2170,
+          "billed_input_tokens": 6380,
+          "output_tokens": 310,
+          "cost": 0.021,
+          "status": "Success",
+          "start_time": "2026-01-01 08:33:00",
+          "duration_ms": 2900
+        },
+        {
+          "sequence": 3,
+          "run_kind": "agent",
+          "peak_context_tokens": 8150,
+          "peak_context_tokens_delta": 1770,
+          "billed_input_tokens": 8150,
+          "output_tokens": 690,
+          "cost": 0.031,
+          "status": "Success",
+          "start_time": "2026-01-01 08:38:00",
+          "duration_ms": 5400
+        },
+        {
+          "sequence": 4,
+          "run_kind": "tool",
+          "peak_context_tokens": 10920,
+          "peak_context_tokens_delta": 2770,
+          "billed_input_tokens": 10920,
+          "output_tokens": 540,
+          "cost": 0.036,
+          "status": "Success",
+          "start_time": "2026-01-01 08:44:00",
+          "duration_ms": 4300
+        },
+        {
+          "sequence": 5,
+          "run_kind": "tool",
+          "peak_context_tokens": 12740,
+          "peak_context_tokens_delta": 1820,
+          "billed_input_tokens": 12740,
+          "output_tokens": 480,
+          "cost": 0.038,
+          "status": "Success",
+          "start_time": "2026-01-01 08:47:00",
+          "duration_ms": 5900
+        },
+        {
+          "sequence": 6,
+          "run_kind": "agent",
+          "peak_context_tokens": 14820,
+          "peak_context_tokens_delta": 2080,
+          "billed_input_tokens": 14820,
+          "output_tokens": 1520,
+          "cost": 0.041,
+          "status": "Success",
+          "start_time": "2026-01-01 08:51:00",
+          "duration_ms": 9100
+        }
+      ],
+      "cache": {
+        "cache_read_tokens": 18400,
+        "cache_write_tokens": 6200,
+        "uncached_input_tokens": 16680,
+        "effectiveness": 0.4457
+      },
+      "measurement": {
+        "runs_missing_billed_input": 0,
+        "runs_missing_peak_context": 0,
+        "tool_runs_without_conversation_note": 0
+      }
+    }
+  },
+  "projects": [
+    {
+      "name": "PRJ-0001",
+      "project_name": "Supplier performance Q1",
+      "description": "Late orders, credit notes and supplier reviews for the spring range.",
+      "default_agent": "Supplier Desk",
+      "status": "Open",
+      "last_activity": "2026-01-01 08:52:00",
+      "creation": "2025-12-02 10:00:00",
+      "modified": "2026-01-01 08:52:00"
+    },
+    {
+      "name": "PRJ-0002",
+      "project_name": "Holiday season review",
+      "description": "What sold, what ran out and what to reorder before Easter.",
+      "default_agent": "Sales Analyst",
+      "status": "Open",
+      "last_activity": "2025-12-31 11:05:00",
+      "creation": "2025-11-20 10:00:00",
+      "modified": "2025-12-31 11:05:00"
+    },
+    {
+      "name": "PRJ-0003",
+      "project_name": "Customer returns playbook",
+      "description": "Drafting the new returns and credit-note process.",
+      "default_agent": "Returns Assistant",
+      "status": "Open",
+      "last_activity": "2025-12-29 14:12:00",
+      "creation": "2025-11-04 10:00:00",
+      "modified": "2025-12-29 14:12:00"
+    }
+  ],
+  "drafts": {
+    "empty": "Which supplier orders are late this week, and what should we do about them?"
+  },
+  "apps": [
+    {
+      "app_id": "northwind_field_sales",
+      "title": "Field Sales",
+      "description": "Visit plans, order capture and price lists for the Northwind sales team.",
+      "route": "/field-sales",
+      "icon": "/assets/northwind/field-sales.svg",
+      "category": "Sales",
+      "version": "1.4.0"
+    },
+    {
+      "app_id": "northwind_warehouse",
+      "title": "Warehouse Desk",
+      "description": "Pick lists, stock counts and inbound deliveries in one screen.",
+      "route": "/warehouse",
+      "icon": "/assets/northwind/warehouse.svg",
+      "category": "Operations",
+      "version": "2.1.0"
+    },
+    {
+      "app_id": "northwind_helpdesk",
+      "title": "Customer Helpdesk",
+      "description": "Tickets from email, WhatsApp and chat, answered with agent drafts.",
+      "route": "/helpdesk",
+      "icon": "/assets/northwind/helpdesk.svg",
+      "category": "Support",
+      "version": "1.0.3"
+    },
+    {
+      "app_id": "northwind_supplier_portal",
+      "title": "Supplier Portal",
+      "description": "Suppliers confirm orders, delivery dates and invoices themselves.",
+      "route": "/supplier-portal",
+      "icon": "/assets/northwind/supplier-portal.svg",
+      "category": "Purchasing",
+      "version": "0.9.2"
+    },
+    {
+      "app_id": "northwind_insights",
+      "title": "Sales Insights",
+      "description": "Dashboards for margin, top customers and seasonal demand.",
+      "route": "/insights",
+      "icon": "/assets/northwind/insights.svg",
+      "category": "Analytics",
+      "version": "1.2.0"
+    },
+    {
+      "app_id": "northwind_recipes",
+      "title": "Recipe Cards",
+      "description": "Product recipes and allergen sheets to share with restaurant buyers.",
+      "route": "/recipes",
+      "icon": "/assets/northwind/recipes.svg",
+      "category": "Marketing",
+      "version": "0.4.1"
+    }
+  ],
+  "voice": {
+    "voice_enabled": 1,
+    "agent_modality": "Both",
+    "voice_engine": "openai_realtime",
+    "voice_config": "{\"voice\": \"marin\"}",
+    "voice_greeting": "Hi, this is Northwind order support. Which order can I help you with?",
+    "tts_model": "",
+    "tts_voice": "",
+    "stt_model": "",
+    "engines": [
+      {
+        "key": "openai_realtime",
+        "label": "OpenAI Realtime",
+        "kind": "realtime"
+      },
+      {
+        "key": "pipeline",
+        "label": "Speech pipeline (STT + LLM + TTS)",
+        "kind": "pipeline"
+      }
+    ],
+    "schema": [
+      {
+        "key": "voice",
+        "label": "Voice",
+        "type": "select",
+        "default": "marin",
+        "help_text": "How the agent sounds on the call.",
+        "options": [
+          {
+            "value": "marin",
+            "label": "Marin (warm)"
+          },
+          {
+            "value": "cedar",
+            "label": "Cedar (calm)"
+          },
+          {
+            "value": "verse",
+            "label": "Verse (bright)"
+          }
+        ]
+      }
+    ]
+  },
+  "advanced": {
+    "context_strategy": "Summarize",
+    "history_limit": 30,
+    "max_turns": 10,
+    "max_knowledge_tokens": 4000,
+    "max_context_chars": 6000,
+    "summary_ratio": 0.7,
+    "summary_prompt_mode": "Local",
+    "summary_prompt": "Summarise the conversation so far in under 150 words. Keep order numbers, dates, amounts and any promises made to the customer.",
+    "enable_conversation_data": 1,
+    "inject_conversation_data": 1,
+    "enable_memory": 1,
+    "enable_memory_search_tool": 1,
+    "enable_memory_write_tool": 0,
+    "show_tool_execution_details": 1
+  }
+}

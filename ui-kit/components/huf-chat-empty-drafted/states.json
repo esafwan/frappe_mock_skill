@@ -1,0 +1,109 @@
+{
+  "component": "huf-chat-empty-drafted",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "huf-chat-empty-drafted.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 240, 244)"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(29, 29, 31) none 3px"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "auto: first interactive element"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-chat-empty-drafted.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(16, 16, 16) auto 1px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "auto: first interactive element"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-chat-empty-drafted.button-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 240, 244)"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgb(29, 29, 31) none 3px"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-chat-empty-drafted.button-1",
+      "changes": [
+        {
+          "element": "huf-chat-empty-drafted.button-1",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts; not captured"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "see huf-chat-empty-first-run"
+    }
+  }
+}

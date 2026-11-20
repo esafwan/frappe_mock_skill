@@ -1,0 +1,978 @@
+{
+  "component": "huf-context-analytics",
+  "slots": {
+    "sr_only": {
+      "type": "text",
+      "sample": "Collapse conversation rail",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_chat_row_hover": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-2"
+    },
+    "hover_bg_chat_row_hover_2": {
+      "type": "text",
+      "sample": "New",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-3"
+    },
+    "hover_bg_chat_row_hover_3": {
+      "type": "text",
+      "sample": "Projects",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-4"
+    },
+    "hover_bg_chat_row_hover_4": {
+      "type": "text",
+      "sample": "Artifacts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-5"
+    },
+    "hover_bg_chat_row_hover_5": {
+      "type": "text",
+      "sample": "Scheduled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-6"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Recents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.button-7"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "Olive oil supplier price changes",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Olive oil supplier price changes",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_white": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_13px": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Late Casa Rinaldi orders",
+      "maxLength": 48,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Hide analytics",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "last_child_mb_0": {
+      "type": "text",
+      "sample": "Which Casa Rinaldi orders are late this week, and what does our supplier policy say we should do?",
+      "maxLength": 194,
+      "where": "text",
+      "element": "p"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "Ran",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_foreground_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_foreground_3": {
+      "type": "text",
+      "sample": "tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "search_knowledge ×1, list_records ×1, get_record ×1",
+      "maxLength": 102,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_primary": {
+      "type": "text",
+      "sample": "Check for a procedure",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-context-analytics.button-16"
+    },
+    "last_child_mb_0_2": {
+      "type": "text",
+      "sample": "Two Casa Rinaldi purchase orders are past their promised delivery date:",
+      "maxLength": 142,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_2": {
+      "type": "text",
+      "sample": "Items",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "Promised",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_4": {
+      "type": "text",
+      "sample": "Days late",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "text_sm_5": {
+      "type": "text",
+      "sample": "PO-2025-0412",
+      "maxLength": 24,
+      "where": "text",
+      "element": "td"
+    },
+    "text_sm_6": {
+      "type": "text",
+      "sample": "Bronze-cut spaghetti, 12 cases",
+      "maxLength": 60,
+      "where": "text",
+      "element": "td"
+    },
+    "text_sm_7": {
+      "type": "text",
+      "sample": "Dec 22",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "font_semibold": {
+      "type": "number",
+      "sample": "10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_sm_8": {
+      "type": "text",
+      "sample": "PO-2025-0419",
+      "maxLength": 24,
+      "where": "text",
+      "element": "td"
+    },
+    "text_sm_9": {
+      "type": "text",
+      "sample": "Paccheri, 8 cases",
+      "maxLength": 34,
+      "where": "text",
+      "element": "td"
+    },
+    "text_sm_10": {
+      "type": "text",
+      "sample": "Dec 29",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "font_semibold_2": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold_3": {
+      "type": "text",
+      "sample": "What the policy says",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline": {
+      "type": "text",
+      "sample": "Orders more than",
+      "maxLength": 32,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_4": {
+      "type": "text",
+      "sample": "7 days late",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_2": {
+      "type": "text",
+      "sample": "earn a",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_5": {
+      "type": "text",
+      "sample": "5% credit note",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_3": {
+      "type": "text",
+      "sample": ", so PO-2025-0412 qualifies.",
+      "maxLength": 56,
+      "where": "text",
+      "element": "li"
+    },
+    "underline": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-17"
+    },
+    "p_inline_4": {
+      "type": "text",
+      "sample": "Notify Casa Rinaldi",
+      "maxLength": 38,
+      "where": "text",
+      "element": "li"
+    },
+    "font_semibold_6": {
+      "type": "text",
+      "sample": "in writing within 2 business days",
+      "maxLength": 66,
+      "where": "text",
+      "element": "span"
+    },
+    "p_inline_5": {
+      "type": "text",
+      "sample": ".",
+      "maxLength": 20,
+      "where": "text",
+      "element": "li"
+    },
+    "underline_2": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-18"
+    },
+    "p_inline_6": {
+      "type": "text",
+      "sample": "A third late order this quarter triggers a supplier review.",
+      "maxLength": 118,
+      "where": "text",
+      "element": "li"
+    },
+    "underline_3": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-context-analytics.link-19"
+    },
+    "font_semibold_7": {
+      "type": "text",
+      "sample": "Sources",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "underline_4": {
+      "type": "text",
+      "sample": "Supplier Handbook 2025, §4.2 Late deliveries",
+      "maxLength": 88,
+      "where": "text",
+      "element": "huf-context-analytics.link-20"
+    },
+    "underline_5": {
+      "type": "text",
+      "sample": "Casa Rinaldi framework agreement FA-2024-07, clause 9",
+      "maxLength": 106,
+      "where": "text",
+      "element": "huf-context-analytics.link-21"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "claude-sonnet-4-5",
+      "maxLength": 34,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "AI output can be inaccurate. Double check important info.",
+      "maxLength": 114,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Totals",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Summed across every run in this conversation",
+      "maxLength": 88,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Runs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_3": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "3 agent · 3 tool",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "Billed input",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_4": {
+      "type": "number",
+      "sample": "41,280",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_6": {
+      "type": "text",
+      "sample": "Output",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_5": {
+      "type": "number",
+      "sample": "3,960",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_7": {
+      "type": "text",
+      "sample": "Cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_6": {
+      "type": "currency",
+      "sample": "$0.184",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_8": {
+      "type": "text",
+      "sample": "Cache read",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_7": {
+      "type": "number",
+      "sample": "18,400",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_9": {
+      "type": "text",
+      "sample": "Cache write",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_8": {
+      "type": "number",
+      "sample": "6,200",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_10": {
+      "type": "text",
+      "sample": "Avg duration",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "5.2s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "Current context",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_11": {
+      "type": "text",
+      "sample": "Snapshot of the latest turn — not a total",
+      "maxLength": 82,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft_12": {
+      "type": "text",
+      "sample": "Largest turn",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_11": {
+      "type": "number",
+      "sample": "14,820",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_13": {
+      "type": "text",
+      "sample": "Context window",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_12": {
+      "type": "number",
+      "sample": "200,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_14": {
+      "type": "text",
+      "sample": "Context fullness",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_13": {
+      "type": "number",
+      "sample": "7.4%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_15": {
+      "type": "text",
+      "sample": "This turn",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_14": {
+      "type": "text",
+      "sample": "9.1s",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_16": {
+      "type": "text",
+      "sample": "Composition",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "system",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_15": {
+      "type": "text",
+      "sample": "2,140 tokens",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "history",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_16": {
+      "type": "text",
+      "sample": "5,320 tokens",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_17": {
+      "type": "text",
+      "sample": "3,880 tokens",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "tools",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_18": {
+      "type": "text",
+      "sample": "2,610 tokens",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "user",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_19": {
+      "type": "text",
+      "sample": "870 tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Tool exchange",
+      "maxLength": 26,
+      "where": "text",
+      "element": "dt"
+    },
+    "text_ink_20": {
+      "type": "text",
+      "sample": "2,610 tokens",
+      "maxLength": 24,
+      "where": "text",
+      "element": "dd"
+    },
+    "text_ink_21": {
+      "type": "text",
+      "sample": "Cache effectiveness",
+      "maxLength": 38,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_17": {
+      "type": "text",
+      "sample": "Effectiveness",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_22": {
+      "type": "number",
+      "sample": "44.6%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_18": {
+      "type": "text",
+      "sample": "Uncached input",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_23": {
+      "type": "number",
+      "sample": "16,680",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "tokens",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_19": {
+      "type": "text",
+      "sample": "Cache effectiveness is an indicator of prompt-prefix stability, not a value the provider confirms directly.",
+      "maxLength": 214,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_24": {
+      "type": "text",
+      "sample": "Measurement notes",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_20": {
+      "type": "text",
+      "sample": "Every run in this conversation was fully measured.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_25": {
+      "type": "text",
+      "sample": "Context growth",
+      "maxLength": 28,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_21": {
+      "type": "text",
+      "sample": "Largest context size measured per turn",
+      "maxLength": 76,
+      "where": "text",
+      "element": "p"
+    },
+    "recharts_cartesian_axis_tick_value": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_3": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_4": {
+      "type": "number",
+      "sample": "4",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_5": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_6": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_label": {
+      "type": "text",
+      "sample": "Turn",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_7": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_8": {
+      "type": "text",
+      "sample": "4k",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_9": {
+      "type": "text",
+      "sample": "8k",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_10": {
+      "type": "text",
+      "sample": "12k",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "recharts_cartesian_axis_tick_value_11": {
+      "type": "text",
+      "sample": "16k",
+      "maxLength": 20,
+      "where": "text",
+      "element": "tspan"
+    },
+    "hover_text_ink_arialabel": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-14"
+    },
+    "hover_text_ink_arialabel_2": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-22"
+    },
+    "hover_text_ink_arialabel_3": {
+      "type": "text",
+      "sample": "Mark response helpful",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-23"
+    },
+    "hover_text_ink_arialabel_4": {
+      "type": "text",
+      "sample": "Mark response not helpful",
+      "maxLength": 50,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-24"
+    },
+    "hover_text_ink_title": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "huf-context-analytics.button-25"
+    },
+    "hover_text_ink_arialabel_5": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-25"
+    },
+    "hover_text_ink_title_2": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "huf-context-analytics.link-26"
+    },
+    "hover_text_ink_arialabel_6": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.link-26"
+    },
+    "disabled_opacity_50_placeholder": {
+      "type": "text",
+      "sample": "Write a message…",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-context-analytics.textarea-27"
+    },
+    "disabled_opacity_50_arialabel": {
+      "type": "text",
+      "sample": "Attach file",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-29"
+    },
+    "shrink_0_title": {
+      "type": "text",
+      "sample": "Local browser dictation (not audited by server STT)",
+      "maxLength": 102,
+      "where": "attr:title",
+      "element": "huf-context-analytics.button-30"
+    },
+    "hover_text_ink_title_3": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "huf-context-analytics.button-31"
+    },
+    "hover_text_ink_arialabel_7": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-31"
+    },
+    "text_paper_arialabel": {
+      "type": "text",
+      "sample": "Send message",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-32"
+    },
+    "hover_text_ink_arialabel_8": {
+      "type": "text",
+      "sample": "Close analytics",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.button-33"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-context-analytics.section-35"
+    }
+  }
+}
