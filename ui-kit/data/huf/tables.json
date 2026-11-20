@@ -1,0 +1,805 @@
+{
+ "$comment": "Fictional Northwind Outfitters tables. Times relative to the fixed clock 2026-01-01T09:00:00Z.",
+ "tables": [
+  {
+   "name": "tbl-orders",
+   "table_name": "Orders",
+   "description": "Customer orders from the web shop and WhatsApp.",
+   "table_group": "Sales",
+   "icon": "",
+   "field_count": 11,
+   "record_count": 1284,
+   "modified": "2025-12-31 17:40:00",
+   "agents": [
+    {
+     "agent": "Order Status Bot",
+     "agent_name": "Order Status Bot",
+     "actions": [
+      "view",
+      "edit"
+     ]
+    },
+    {
+     "agent": "Support Triage",
+     "agent_name": "Support Triage",
+     "actions": [
+      "view"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tbl-customers",
+   "table_name": "Customers",
+   "description": "People who have bought or asked about gear.",
+   "table_group": "Sales",
+   "icon": "",
+   "field_count": 5,
+   "record_count": 862,
+   "modified": "2025-12-30 10:15:00",
+   "agents": [
+    {
+     "agent": "Support Triage",
+     "agent_name": "Support Triage",
+     "actions": [
+      "view",
+      "create",
+      "edit"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tbl-products",
+   "table_name": "Products",
+   "description": "Catalogue of items with price and stock.",
+   "table_group": "Catalogue",
+   "icon": "",
+   "field_count": 5,
+   "record_count": 148,
+   "modified": "2025-12-28 14:00:00",
+   "agents": [
+    {
+     "agent": "Order Status Bot",
+     "agent_name": "Order Status Bot",
+     "actions": [
+      "view"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tbl-returns",
+   "table_name": "Returns",
+   "description": "Return requests and their refund status.",
+   "table_group": "Sales",
+   "icon": "",
+   "field_count": 6,
+   "record_count": 57,
+   "modified": "2025-12-27 09:30:00",
+   "agents": []
+  },
+  {
+   "name": "tbl-suppliers",
+   "table_name": "Suppliers",
+   "description": "Vendors we reorder stock from.",
+   "table_group": "Catalogue",
+   "icon": "",
+   "field_count": 7,
+   "record_count": 23,
+   "modified": "2025-12-20 16:00:00",
+   "agents": []
+  }
+ ],
+ "schemas": {
+  "tbl-orders": {
+   "name": "tbl-orders",
+   "table_name": "Orders",
+   "doctype_name": "HDT Orders",
+   "description": "Customer orders from the web shop and WhatsApp.",
+   "icon": "",
+   "autoname_method": "Autoincrement",
+   "title_field_name": "order_number",
+   "table_group": "Sales",
+   "fields": [
+    {
+     "fieldname": "order_number",
+     "fieldtype": "Data",
+     "label": "Order number",
+     "idx": 1,
+     "reqd": 1,
+     "unique": 1,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "customer",
+     "fieldtype": "Data",
+     "label": "Customer",
+     "idx": 2,
+     "reqd": 1,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Email",
+     "idx": 3
+    },
+    {
+     "fieldname": "product",
+     "fieldtype": "Data",
+     "label": "Product",
+     "idx": 4,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "quantity",
+     "fieldtype": "Int",
+     "label": "Quantity",
+     "idx": 5,
+     "default": "1",
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "total",
+     "fieldtype": "Currency",
+     "label": "Total",
+     "idx": 6,
+     "reqd": 1,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "idx": 7,
+     "options": "Processing\nShipped\nDelivered\nReturned",
+     "default": "Processing",
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "order_date",
+     "fieldtype": "Date",
+     "label": "Order date",
+     "idx": 8
+    },
+    {
+     "fieldname": "express",
+     "fieldtype": "Check",
+     "label": "Express shipping",
+     "idx": 9
+    },
+    {
+     "fieldname": "tracking_number",
+     "fieldtype": "Data",
+     "label": "Tracking number",
+     "idx": 10
+    },
+    {
+     "fieldname": "notes",
+     "fieldtype": "Small Text",
+     "label": "Notes",
+     "idx": 11
+    }
+   ]
+  },
+  "tbl-orders-builder": {
+   "name": "tbl-orders",
+   "table_name": "Orders",
+   "doctype_name": "HDT Orders",
+   "description": "Customer orders from the web shop and WhatsApp.",
+   "icon": "",
+   "autoname_method": "Autoincrement",
+   "title_field_name": "order_number",
+   "table_group": "Sales",
+   "fields": [
+    {
+     "fieldname": "order_number",
+     "fieldtype": "Data",
+     "label": "Order number",
+     "idx": 1,
+     "reqd": 1,
+     "unique": 1,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "customer",
+     "fieldtype": "Data",
+     "label": "Customer",
+     "idx": 2,
+     "reqd": 1,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "section_shipping",
+     "fieldtype": "Section Break",
+     "label": "Shipping",
+     "idx": 3
+    },
+    {
+     "fieldname": "quantity",
+     "fieldtype": "Int",
+     "label": "Quantity",
+     "idx": 4,
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "total",
+     "fieldtype": "Currency",
+     "label": "Total",
+     "idx": 5,
+     "reqd": 1,
+     "in_list_view": 1,
+     "non_negative": 1
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "idx": 6,
+     "options": "Processing\nShipped\nDelivered\nReturned",
+     "default": "Processing",
+     "in_list_view": 1
+    },
+    {
+     "fieldname": "order_date",
+     "fieldtype": "Date",
+     "label": "Order date",
+     "idx": 7
+    },
+    {
+     "fieldname": "priority",
+     "fieldtype": "Rating",
+     "label": "Priority",
+     "idx": 8
+    },
+    {
+     "fieldname": "label_color",
+     "fieldtype": "Color",
+     "label": "Label color",
+     "idx": 9
+    },
+    {
+     "fieldname": "contact_phone",
+     "fieldtype": "Phone",
+     "label": "Contact phone",
+     "idx": 10
+    },
+    {
+     "fieldname": "express",
+     "fieldtype": "Check",
+     "label": "Express shipping",
+     "idx": 11
+    }
+   ]
+  },
+  "tbl-customers": {
+   "name": "tbl-customers",
+   "table_name": "Customers",
+   "doctype_name": "HDT Customers",
+   "description": "",
+   "icon": "",
+   "autoname_method": "Autoincrement",
+   "title_field_name": "full_name",
+   "table_group": "Sales",
+   "fields": [
+    {
+     "fieldname": "full_name",
+     "fieldtype": "Data",
+     "label": "Full name",
+     "idx": 0,
+     "reqd": 1
+    },
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Email",
+     "idx": 0
+    },
+    {
+     "fieldname": "city",
+     "fieldtype": "Data",
+     "label": "City",
+     "idx": 0
+    },
+    {
+     "fieldname": "tier",
+     "fieldtype": "Select",
+     "label": "Tier",
+     "idx": 0,
+     "options": "Standard\nPlus\nPro"
+    },
+    {
+     "fieldname": "joined",
+     "fieldtype": "Date",
+     "label": "Joined",
+     "idx": 0
+    }
+   ]
+  },
+  "tbl-products": {
+   "name": "tbl-products",
+   "table_name": "Products",
+   "doctype_name": "HDT Products",
+   "description": "",
+   "icon": "",
+   "autoname_method": "Autoincrement",
+   "title_field_name": "product_name",
+   "table_group": "Catalogue",
+   "fields": [
+    {
+     "fieldname": "sku",
+     "fieldtype": "Data",
+     "label": "SKU",
+     "idx": 0,
+     "reqd": 1
+    },
+    {
+     "fieldname": "product_name",
+     "fieldtype": "Data",
+     "label": "Product name",
+     "idx": 0,
+     "reqd": 1
+    },
+    {
+     "fieldname": "price",
+     "fieldtype": "Currency",
+     "label": "Price",
+     "idx": 0
+    },
+    {
+     "fieldname": "stock",
+     "fieldtype": "Int",
+     "label": "In stock",
+     "idx": 0
+    },
+    {
+     "fieldname": "active",
+     "fieldtype": "Check",
+     "label": "Active",
+     "idx": 0
+    }
+   ]
+  }
+ },
+ "rows": {
+  "HDT Orders": [
+   {
+    "name": "NW-10450",
+    "order_number": "NW-10450",
+    "customer": "Maya Okafor",
+    "email": "maya.okafor@example.com",
+    "product": "Trailhead 45L Backpack",
+    "quantity": 1,
+    "total": 189,
+    "status": "Processing",
+    "order_date": "2025-12-30",
+    "express": 1,
+    "tracking_number": null,
+    "notes": "Gift wrap requested",
+    "modified": "2025-12-31 09:10:00"
+   },
+   {
+    "name": "NW-10449",
+    "order_number": "NW-10449",
+    "customer": "Tomas Lindgren",
+    "email": "tomas.lindgren@example.com",
+    "product": "Alpine Shell Jacket",
+    "quantity": 2,
+    "total": 498,
+    "status": "Shipped",
+    "order_date": "2025-12-29",
+    "express": 0,
+    "tracking_number": "1Z84K920137",
+    "notes": null,
+    "modified": "2025-12-31 10:10:00"
+   },
+   {
+    "name": "NW-10448",
+    "order_number": "NW-10448",
+    "customer": "Priya Raman",
+    "email": "priya.raman@example.com",
+    "product": "Summit Trekking Poles",
+    "quantity": 3,
+    "total": 237,
+    "status": "Delivered",
+    "order_date": "2025-12-28",
+    "express": 0,
+    "tracking_number": "1Z84K920274",
+    "notes": null,
+    "modified": "2025-12-30 11:10:00"
+   },
+   {
+    "name": "NW-10447",
+    "order_number": "NW-10447",
+    "customer": "Jonas Weber",
+    "email": "jonas.weber@example.com",
+    "product": "Ridge Merino Base Layer",
+    "quantity": 1,
+    "total": 95,
+    "status": "Delivered",
+    "order_date": "2025-12-27",
+    "express": 0,
+    "tracking_number": "1Z84K920411",
+    "notes": null,
+    "modified": "2025-12-30 12:10:00"
+   },
+   {
+    "name": "NW-10446",
+    "order_number": "NW-10446",
+    "customer": "Lucia Moretti",
+    "email": "lucia.moretti@example.com",
+    "product": "Basecamp 4-Person Tent",
+    "quantity": 2,
+    "total": 840,
+    "status": "Shipped",
+    "order_date": "2025-12-26",
+    "express": 1,
+    "tracking_number": "1Z84K920548",
+    "notes": null,
+    "modified": "2025-12-29 13:10:00"
+   },
+   {
+    "name": "NW-10445",
+    "order_number": "NW-10445",
+    "customer": "Hannah Cole",
+    "email": "hannah.cole@example.com",
+    "product": "Headlamp Pro 600",
+    "quantity": 3,
+    "total": 165,
+    "status": "Returned",
+    "order_date": "2025-12-25",
+    "express": 0,
+    "tracking_number": "1Z84K920685",
+    "notes": "Gift wrap requested",
+    "modified": "2025-12-29 14:10:00"
+   },
+   {
+    "name": "NW-10444",
+    "order_number": "NW-10444",
+    "customer": "Dmitri Volkov",
+    "email": "dmitri.volkov@example.com",
+    "product": "Cascade Water Filter",
+    "quantity": 1,
+    "total": 64,
+    "status": "Delivered",
+    "order_date": "2025-12-24",
+    "express": 0,
+    "tracking_number": "1Z84K920822",
+    "notes": null,
+    "modified": "2025-12-28 15:10:00"
+   },
+   {
+    "name": "NW-10443",
+    "order_number": "NW-10443",
+    "customer": "Amara Nwosu",
+    "email": "amara.nwosu@example.com",
+    "product": "Insulated Camp Mug",
+    "quantity": 2,
+    "total": 44,
+    "status": "Processing",
+    "order_date": "2025-12-23",
+    "express": 0,
+    "tracking_number": null,
+    "notes": null,
+    "modified": "2025-12-28 16:10:00"
+   },
+   {
+    "name": "NW-10442",
+    "order_number": "NW-10442",
+    "customer": "Ethan Brooks",
+    "email": "ethan.brooks@example.com",
+    "product": "Trailhead 45L Backpack",
+    "quantity": 3,
+    "total": 567,
+    "status": "Processing",
+    "order_date": "2025-12-22",
+    "express": 1,
+    "tracking_number": null,
+    "notes": null,
+    "modified": "2025-12-27 17:10:00"
+   },
+   {
+    "name": "NW-10441",
+    "order_number": "NW-10441",
+    "customer": "Sofia Alvarez",
+    "email": "sofia.alvarez@example.com",
+    "product": "Alpine Shell Jacket",
+    "quantity": 1,
+    "total": 249,
+    "status": "Shipped",
+    "order_date": "2025-12-21",
+    "express": 0,
+    "tracking_number": "1Z84K921233",
+    "notes": null,
+    "modified": "2025-12-27 09:10:00"
+   },
+   {
+    "name": "NW-10440",
+    "order_number": "NW-10440",
+    "customer": "Kenji Watanabe",
+    "email": "kenji.watanabe@example.com",
+    "product": "Summit Trekking Poles",
+    "quantity": 2,
+    "total": 158,
+    "status": "Delivered",
+    "order_date": "2025-12-20",
+    "express": 0,
+    "tracking_number": "1Z84K921370",
+    "notes": "Gift wrap requested",
+    "modified": "2025-12-26 10:10:00"
+   },
+   {
+    "name": "NW-10439",
+    "order_number": "NW-10439",
+    "customer": "Olivia Hart",
+    "email": "olivia.hart@example.com",
+    "product": "Ridge Merino Base Layer",
+    "quantity": 3,
+    "total": 285,
+    "status": "Delivered",
+    "order_date": "2025-12-19",
+    "express": 0,
+    "tracking_number": "1Z84K921507",
+    "notes": null,
+    "modified": "2025-12-26 11:10:00"
+   },
+   {
+    "name": "NW-10438",
+    "order_number": "NW-10438",
+    "customer": "Rafael Costa",
+    "email": "rafael.costa@example.com",
+    "product": "Basecamp 4-Person Tent",
+    "quantity": 1,
+    "total": 420,
+    "status": "Shipped",
+    "order_date": "2025-12-18",
+    "express": 1,
+    "tracking_number": "1Z84K921644",
+    "notes": null,
+    "modified": "2025-12-25 12:10:00"
+   },
+   {
+    "name": "NW-10437",
+    "order_number": "NW-10437",
+    "customer": "Nadia Haddad",
+    "email": "nadia.haddad@example.com",
+    "product": "Headlamp Pro 600",
+    "quantity": 2,
+    "total": 110,
+    "status": "Returned",
+    "order_date": "2025-12-17",
+    "express": 0,
+    "tracking_number": "1Z84K921781",
+    "notes": null,
+    "modified": "2025-12-25 13:10:00"
+   },
+   {
+    "name": "NW-10436",
+    "order_number": "NW-10436",
+    "customer": "Liam Fischer",
+    "email": "liam.fischer@example.com",
+    "product": "Cascade Water Filter",
+    "quantity": 3,
+    "total": 192,
+    "status": "Delivered",
+    "order_date": "2025-12-16",
+    "express": 0,
+    "tracking_number": "1Z84K921918",
+    "notes": null,
+    "modified": "2025-12-24 14:10:00"
+   },
+   {
+    "name": "NW-10435",
+    "order_number": "NW-10435",
+    "customer": "Chloe Dubois",
+    "email": "chloe.dubois@example.com",
+    "product": "Insulated Camp Mug",
+    "quantity": 1,
+    "total": 22,
+    "status": "Processing",
+    "order_date": "2025-12-15",
+    "express": 0,
+    "tracking_number": null,
+    "notes": "Gift wrap requested",
+    "modified": "2025-12-24 15:10:00"
+   },
+   {
+    "name": "NW-10434",
+    "order_number": "NW-10434",
+    "customer": "Arjun Mehta",
+    "email": "arjun.mehta@example.com",
+    "product": "Trailhead 45L Backpack",
+    "quantity": 2,
+    "total": 378,
+    "status": "Processing",
+    "order_date": "2025-12-14",
+    "express": 1,
+    "tracking_number": null,
+    "notes": null,
+    "modified": "2025-12-23 16:10:00"
+   },
+   {
+    "name": "NW-10433",
+    "order_number": "NW-10433",
+    "customer": "Greta Nilsson",
+    "email": "greta.nilsson@example.com",
+    "product": "Alpine Shell Jacket",
+    "quantity": 3,
+    "total": 747,
+    "status": "Shipped",
+    "order_date": "2025-12-13",
+    "express": 0,
+    "tracking_number": "1Z84K922329",
+    "notes": null,
+    "modified": "2025-12-23 17:10:00"
+   },
+   {
+    "name": "NW-10432",
+    "order_number": "NW-10432",
+    "customer": "Marcus Reed",
+    "email": "marcus.reed@example.com",
+    "product": "Summit Trekking Poles",
+    "quantity": 1,
+    "total": 79,
+    "status": "Delivered",
+    "order_date": "2025-12-12",
+    "express": 0,
+    "tracking_number": "1Z84K922466",
+    "notes": null,
+    "modified": "2025-12-22 09:10:00"
+   },
+   {
+    "name": "NW-10431",
+    "order_number": "NW-10431",
+    "customer": "Ines Duarte",
+    "email": "ines.duarte@example.com",
+    "product": "Ridge Merino Base Layer",
+    "quantity": 2,
+    "total": 190,
+    "status": "Delivered",
+    "order_date": "2025-12-11",
+    "express": 0,
+    "tracking_number": "1Z84K922603",
+    "notes": null,
+    "modified": "2025-12-22 10:10:00"
+   }
+  ]
+ },
+ "total": {
+  "HDT Orders": 1284
+ },
+ "agentAccess": {
+  "tbl-orders": [
+   {
+    "agent": "Order Status Bot",
+    "agent_name": "Order Status Bot",
+    "actions": [
+     "view",
+     "edit"
+    ],
+    "tools": [
+     "orders_get",
+     "orders_update"
+    ]
+   },
+   {
+    "agent": "Support Triage",
+    "agent_name": "Support Triage",
+    "actions": [
+     "view"
+    ],
+    "tools": [
+     "orders_get"
+    ]
+   },
+   {
+    "agent": "Refund Helper",
+    "agent_name": "Refund Helper",
+    "actions": [
+     "view",
+     "create",
+     "edit",
+     "delete"
+    ],
+    "tools": []
+   }
+  ]
+ },
+ "agents": [
+  "Order Status Bot",
+  "Support Triage",
+  "Refund Helper",
+  "Invoice Reconciler",
+  "Lead Qualifier"
+ ],
+ "signature": {
+  "tools": [
+   {
+    "action": "view",
+    "tool_name": "orders_get",
+    "description": "Read orders",
+    "params": [
+     {
+      "name": "status",
+      "type": "Select",
+      "required": false,
+      "description": "Filter by status",
+      "options": "Processing, Shipped, Delivered, Returned"
+     },
+     {
+      "name": "customer",
+      "type": "Data",
+      "required": false,
+      "description": "Customer name contains"
+     }
+    ]
+   },
+   {
+    "action": "edit",
+    "tool_name": "orders_update",
+    "description": "Update an order",
+    "params": [
+     {
+      "name": "order_number",
+      "type": "Data",
+      "required": true,
+      "description": "Order to change"
+     },
+     {
+      "name": "status",
+      "type": "Select",
+      "required": false,
+      "description": "New status",
+      "options": "Processing, Shipped, Delivered, Returned"
+     }
+    ]
+   }
+  ]
+ },
+ "activity": [
+  {
+   "agent": "Order Status Bot",
+   "tool": "orders_get",
+   "status": "Success",
+   "timestamp": "2026-01-01 08:52:00"
+  },
+  {
+   "agent": "Order Status Bot",
+   "tool": "orders_update",
+   "status": "Success",
+   "timestamp": "2026-01-01 08:20:00"
+  },
+  {
+   "agent": "Support Triage",
+   "tool": "orders_get",
+   "status": "Success",
+   "timestamp": "2025-12-31 18:20:00"
+  },
+  {
+   "agent": "Support Triage",
+   "tool": "orders_update",
+   "status": "Blocked",
+   "timestamp": "2025-12-31 17:05:00"
+  }
+ ],
+ "deps": {
+  "record_count": 1284,
+  "agents": [
+   {
+    "agent": "Order Status Bot",
+    "agent_name": "Order Status Bot"
+   },
+   {
+    "agent": "Support Triage",
+    "agent_name": "Support Triage"
+   }
+  ],
+  "flows": [
+   {
+    "name": "f1",
+    "title": "Daily order digest"
+   }
+  ]
+ }
+}
