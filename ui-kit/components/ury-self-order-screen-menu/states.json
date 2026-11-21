@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "pickup": {
       "applicable": true,
@@ -35,6 +35,7 @@
       "props": {
         "error": true
       },
+      "values": {},
       "screenshot": "states/missing-token.png",
       "preview": "states/missing-token.html",
       "description": "No ordering context and an error: centred text-destructive message asking to rescan the QR code."
@@ -45,6 +46,7 @@
       "props": {
         "starting": true
       },
+      "values": {},
       "screenshot": "states/starting-up.png",
       "preview": "states/starting-up.html",
       "description": "Provisioned device bootstrapping (App.tsx): centred muted \"Starting up…\"."

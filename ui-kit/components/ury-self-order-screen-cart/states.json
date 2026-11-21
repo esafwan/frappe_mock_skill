@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "empty": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "empty": true
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "No lines: \"Your cart is empty.\" with a \"Browse the menu\" button; Proceed to checkout is disabled (opacity-50)."

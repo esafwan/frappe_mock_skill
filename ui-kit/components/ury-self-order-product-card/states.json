@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "tablet": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "size": "tablet"
       },
+      "values": {},
       "screenshot": "states/tablet.png",
       "preview": "states/tablet.html",
       "description": "Tablet layout: image h-32 (128), rounded-xl, text-left."
@@ -34,6 +35,7 @@
       "props": {
         "size": "landscape"
       },
+      "values": {},
       "screenshot": "states/landscape.png",
       "preview": "states/landscape.html",
       "description": "Landscape kiosk: image h-40 (160), rounded-2xl, text-lg."
@@ -44,6 +46,7 @@
       "props": {
         "size": "portrait"
       },
+      "values": {},
       "screenshot": "states/portrait.png",
       "preview": "states/portrait.html",
       "description": "Portrait kiosk: image h-48 (192), rounded-xl."
@@ -54,6 +57,7 @@
       "props": {
         "qty": 0
       },
+      "values": {},
       "screenshot": "states/not-in-cart.png",
       "preview": "states/not-in-cart.html",
       "description": "Nothing in the cart: only name and rate show."

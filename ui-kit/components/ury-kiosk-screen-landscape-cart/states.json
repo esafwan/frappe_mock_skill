@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "single-item": {
       "applicable": true,
@@ -26,12 +26,7 @@
       },
       "values": {
         "count_label": "1 item",
-        "cart_total": {
-          "type": "currency",
-          "amount": 16,
-          "currency": "AED",
-          "sample": "AED 16.00"
-        }
+        "cart_total": "AED 16.00"
       },
       "screenshot": "states/single-item.png",
       "preview": "states/single-item.html",
@@ -45,12 +40,7 @@
       },
       "values": {
         "count_label": "0 items",
-        "cart_total": {
-          "type": "currency",
-          "amount": 0,
-          "currency": "AED",
-          "sample": "AED 0.00"
-        }
+        "cart_total": "AED 0.00"
       },
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",

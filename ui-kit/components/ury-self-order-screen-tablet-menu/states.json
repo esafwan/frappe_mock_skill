@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "empty-cart": {
       "applicable": true,
@@ -26,12 +26,7 @@
       },
       "values": {
         "count_label": "0 items",
-        "cart_total": {
-          "type": "currency",
-          "amount": 0,
-          "currency": "AED",
-          "sample": "AED 0.00"
-        }
+        "cart_total": "AED 0.00"
       },
       "screenshot": "states/empty-cart.png",
       "preview": "states/empty-cart.html",
@@ -43,6 +38,7 @@
       "props": {
         "cart": true
       },
+      "values": {},
       "screenshot": "states/cart-filled.png",
       "preview": "states/cart-filled.html",
       "description": "Latte (1) and Croissant (2) in the cart: the cards carry the primary \"In cart: N\" badge and the cart panel lists the lines with the total."
@@ -54,6 +50,7 @@
         "cart": true,
         "idle": true
       },
+      "values": {},
       "screenshot": "states/idle-dialog.png",
       "preview": "states/idle-dialog.html",
       "description": "useIdleReset fired: the \"Still there?\" dialog overlays the whole layout on a blurred scrim with a full-width \"I'm still here\" button."

@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "options": {
       "applicable": true,
@@ -30,70 +30,22 @@
         ]
       },
       "values": {
-        "i1_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/espresso.jpg"
-        },
-        "i2_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/doppio.jpg"
-        },
-        "i3_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/macchiato.jpg"
-        },
-        "i4_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/latte.jpg"
-        },
-        "i5_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        },
-        "i6_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/flat-white.jpg"
-        },
-        "i7_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/pour-over.jpg"
-        },
-        "i8_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cold-brew.jpg"
-        },
-        "i9_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/americano.jpg"
-        },
-        "i10_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-latte.jpg"
-        },
-        "i11_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-americano.jpg"
-        },
-        "i12_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-mocha.jpg"
-        },
-        "i13_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/chai-latte.jpg"
-        },
-        "i14_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/tea.jpg"
-        },
-        "i15_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/hot-chocolate.jpg"
-        },
-        "img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        },
+        "i1_img": "../../../data/images/cafe/espresso.jpg",
+        "i2_img": "../../../data/images/cafe/croissant.jpg",
+        "i3_img": "../../../data/images/cafe/avocado-toast.jpg",
+        "i4_img": "../../../data/images/cafe/latte.jpg",
+        "i5_img": "../../../data/images/cafe/cappuccino.jpg",
+        "i6_img": "../../../data/images/cafe/blueberry-muffin.jpg",
+        "i7_img": "../../../data/images/cafe/iced-latte.jpg",
+        "i8_img": "../../../data/images/cafe/breakfast-sandwich.jpg",
+        "i9_img": "../../../data/images/cafe/cold-brew.jpg",
+        "i10_img": "../../../data/images/cafe/chai-latte.jpg",
+        "i11_img": "../../../data/images/cafe/cinnamon-roll.jpg",
+        "i12_img": "../../../data/images/cafe/flat-white.jpg",
+        "i13_img": "../../../data/images/cafe/pancakes.jpg",
+        "i14_img": "../../../data/images/cafe/iced-americano.jpg",
+        "i15_img": "../../../data/images/cafe/hot-chocolate.jpg",
+        "img": "../../../data/images/cafe/cappuccino.jpg",
         "qty": "2"
       },
       "screenshot": "states/options.png",
@@ -107,70 +59,22 @@
         "state": "loading"
       },
       "values": {
-        "i1_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/espresso.jpg"
-        },
-        "i2_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/doppio.jpg"
-        },
-        "i3_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/macchiato.jpg"
-        },
-        "i4_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/latte.jpg"
-        },
-        "i5_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        },
-        "i6_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/flat-white.jpg"
-        },
-        "i7_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/pour-over.jpg"
-        },
-        "i8_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cold-brew.jpg"
-        },
-        "i9_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/americano.jpg"
-        },
-        "i10_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-latte.jpg"
-        },
-        "i11_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-americano.jpg"
-        },
-        "i12_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-mocha.jpg"
-        },
-        "i13_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/chai-latte.jpg"
-        },
-        "i14_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/tea.jpg"
-        },
-        "i15_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/hot-chocolate.jpg"
-        },
-        "img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        }
+        "i1_img": "../../../data/images/cafe/espresso.jpg",
+        "i2_img": "../../../data/images/cafe/croissant.jpg",
+        "i3_img": "../../../data/images/cafe/avocado-toast.jpg",
+        "i4_img": "../../../data/images/cafe/latte.jpg",
+        "i5_img": "../../../data/images/cafe/cappuccino.jpg",
+        "i6_img": "../../../data/images/cafe/blueberry-muffin.jpg",
+        "i7_img": "../../../data/images/cafe/iced-latte.jpg",
+        "i8_img": "../../../data/images/cafe/breakfast-sandwich.jpg",
+        "i9_img": "../../../data/images/cafe/cold-brew.jpg",
+        "i10_img": "../../../data/images/cafe/chai-latte.jpg",
+        "i11_img": "../../../data/images/cafe/cinnamon-roll.jpg",
+        "i12_img": "../../../data/images/cafe/flat-white.jpg",
+        "i13_img": "../../../data/images/cafe/pancakes.jpg",
+        "i14_img": "../../../data/images/cafe/iced-americano.jpg",
+        "i15_img": "../../../data/images/cafe/hot-chocolate.jpg",
+        "img": "../../../data/images/cafe/cappuccino.jpg"
       },
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
@@ -183,70 +87,22 @@
         "state": "error"
       },
       "values": {
-        "i1_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/espresso.jpg"
-        },
-        "i2_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/doppio.jpg"
-        },
-        "i3_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/macchiato.jpg"
-        },
-        "i4_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/latte.jpg"
-        },
-        "i5_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        },
-        "i6_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/flat-white.jpg"
-        },
-        "i7_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/pour-over.jpg"
-        },
-        "i8_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cold-brew.jpg"
-        },
-        "i9_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/americano.jpg"
-        },
-        "i10_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-latte.jpg"
-        },
-        "i11_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-americano.jpg"
-        },
-        "i12_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/iced-mocha.jpg"
-        },
-        "i13_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/chai-latte.jpg"
-        },
-        "i14_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/tea.jpg"
-        },
-        "i15_img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/hot-chocolate.jpg"
-        },
-        "img": {
-          "type": "image",
-          "sample": "../../../data/images/cafe/cappuccino.jpg"
-        }
+        "i1_img": "../../../data/images/cafe/espresso.jpg",
+        "i2_img": "../../../data/images/cafe/croissant.jpg",
+        "i3_img": "../../../data/images/cafe/avocado-toast.jpg",
+        "i4_img": "../../../data/images/cafe/latte.jpg",
+        "i5_img": "../../../data/images/cafe/cappuccino.jpg",
+        "i6_img": "../../../data/images/cafe/blueberry-muffin.jpg",
+        "i7_img": "../../../data/images/cafe/iced-latte.jpg",
+        "i8_img": "../../../data/images/cafe/breakfast-sandwich.jpg",
+        "i9_img": "../../../data/images/cafe/cold-brew.jpg",
+        "i10_img": "../../../data/images/cafe/chai-latte.jpg",
+        "i11_img": "../../../data/images/cafe/cinnamon-roll.jpg",
+        "i12_img": "../../../data/images/cafe/flat-white.jpg",
+        "i13_img": "../../../data/images/cafe/pancakes.jpg",
+        "i14_img": "../../../data/images/cafe/iced-americano.jpg",
+        "i15_img": "../../../data/images/cafe/hot-chocolate.jpg",
+        "img": "../../../data/images/cafe/cappuccino.jpg"
       },
       "screenshot": "states/not-found.png",
       "preview": "states/not-found.html",

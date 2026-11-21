@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "pickup": {
       "applicable": true,
@@ -25,6 +25,7 @@
         "pickup": true,
         "requests": false
       },
+      "values": {},
       "screenshot": "states/pickup.png",
       "preview": "states/pickup.html",
       "description": "Pickup order: the pickup code card (max-w-xs, bg-muted, text-3xl bold) shows and \"Add more items\" is hidden."
@@ -35,6 +36,7 @@
       "props": {
         "requests": false
       },
+      "values": {},
       "screenshot": "states/no-requests.png",
       "preview": "states/no-requests.html",
       "description": "No open service requests."

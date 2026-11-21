@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "loading": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "loading": true
       },
+      "values": {},
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
       "description": "get_customer_product in flight: centred \"Loading item...\" with an underlined Back link."
@@ -34,6 +35,7 @@
       "props": {
         "notFound": true
       },
+      "values": {},
       "screenshot": "states/not-found.png",
       "preview": "states/not-found.html",
       "description": "No detail returned: destructive \"Item not found.\" and a rounded-full \"Back to menu\" button."

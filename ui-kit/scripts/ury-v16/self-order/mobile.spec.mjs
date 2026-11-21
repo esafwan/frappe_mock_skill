@@ -13,8 +13,8 @@ const img = photo('cappuccino');
 const wrap = (id, inner, cls = '') => screen(390, 844, inner, id, 'so som ' + cls);
 const U = (s) => P + 'screen-' + s;
 
-const cats = { all: 'All', cat_1: 'Espresso', cat_2: 'Milk Coffee', cat_3: 'Filter & Cold Brew', cat_4: 'Iced', cat_5: 'Tea & Others' };
-const catsAr = { all: 'الكل', cat_1: 'إسبريسو', cat_2: 'قهوة بالحليب', cat_3: 'قهوة مفلترة وباردة', cat_4: 'مثلجات', cat_5: 'شاي ومشروبات أخرى' };
+const cats = { all: 'All', cat_1: 'Coffee', cat_2: 'Iced', cat_3: 'Bakery' };
+const catsAr = { all: 'الكل', cat_1: 'قهوة', cat_2: 'مثلجات', cat_3: 'مخبوزات' };
 
 // ---------- Menu ----------
 const menuSlots = { ...cats, table: 'Table 5', pickup_title: 'Order for Pickup', start_over: 'Start Over', order_title: 'Your order so far', pickup_code_label: 'Pickup code: A-27',
@@ -39,7 +39,7 @@ const menu = (v, p = {}) => {
   return wrap(U('menu'), `<div class="som-menu"><header class="som-head" data-ui="${U('menu')}.header"><h1 class="som-head__t">${title}</h1><button type="button" class="som-start">${v.start_over}</button></header>
 <section class="som-order" data-ui="${U('menu')}.order"><h2 class="som-order__h">${v.order_title}</h2>${p.pickup ? `<p class="som-code" data-ui="${U('menu')}.pickup-code">${v.pickup_code_label}</p>` : ''}
 <ul class="som-rows">${row(1)}${row(2)}</ul><div class="som-total"><span>${v.total_label}</span><span>${v.order_total}</span></div></section>
-${categoryTabs(v, { n: 5, active: 0, ui: U('menu') + '.tabs' })}<div class="som-search">${searchBar(v, { ui: U('menu') + '.search' })}</div>
+${categoryTabs(v, { n: 3, active: 0, ui: U('menu') + '.tabs' })}<div class="som-search">${searchBar(v, { ui: U('menu') + '.search' })}</div>
 <div class="som-grid" data-ui="${U('menu')}.grid">${cards}</div></div>
 <div class="som-bar" data-ui="${U('menu')}.bar"><button type="button" class="som-btn">${v.view_cart} ${v.cart_total}</button></div>`);
 };

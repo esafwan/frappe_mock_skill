@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "pay-online-selected": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "sel": "online"
       },
+      "values": {},
       "screenshot": "states/pay-online-selected.png",
       "preview": "states/pay-online-selected.html",
       "description": "Pay Online selected (border-primary, bg-primary/10): the action button becomes \"Pay Online\"."
@@ -35,6 +36,7 @@
         "sel": "online",
         "paying": true
       },
+      "values": {},
       "screenshot": "states/paying-online.png",
       "preview": "states/paying-online.html",
       "description": "Online payment starting: \"Starting payment…\", button disabled."
@@ -82,6 +84,7 @@
         "sel": "online",
         "note": true
       },
+      "values": {},
       "screenshot": "states/payment-request.png",
       "preview": "states/payment-request.html",
       "description": "A payment request without a URL was created: the muted text-xs note appears under the options."
@@ -92,6 +95,7 @@
       "props": {
         "placing": true
       },
+      "values": {},
       "screenshot": "states/placing.png",
       "preview": "states/placing.html",
       "description": "Order being placed: \"Placing order…\", button disabled."
@@ -104,6 +108,7 @@
           "counter": true
         }
       },
+      "values": {},
       "screenshot": "states/counter-only.png",
       "preview": "states/counter-only.html",
       "description": "Only pay_at_counter_enabled: one option, preselected."
@@ -116,6 +121,7 @@
           "online": true
         }
       },
+      "values": {},
       "screenshot": "states/online-only.png",
       "preview": "states/online-only.html",
       "description": "Only customer_payment_enabled: one option, nothing preselected, the action stays \"Place Order\"."
@@ -126,6 +132,7 @@
       "props": {
         "caps": {}
       },
+      "values": {},
       "screenshot": "states/no-payment-options.png",
       "preview": "states/no-payment-options.html",
       "description": "No payment capability: the picker is not rendered and Place Order simply submits the cart."

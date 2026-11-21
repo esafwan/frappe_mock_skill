@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "nothing-selected": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "sel": []
       },
+      "values": {},
       "screenshot": "states/nothing-selected.png",
       "preview": "states/nothing-selected.html",
       "description": "No variant or add-on chosen: every option row uses border-border."
@@ -34,6 +35,7 @@
       "props": {
         "options": false
       },
+      "values": {},
       "screenshot": "states/no-options.png",
       "preview": "states/no-options.html",
       "description": "The item has no variants or add-ons: the Variants and Add-ons groups are not rendered, only quantity and Add to cart."

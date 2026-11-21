@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "add-more": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "more": true
       },
+      "values": {},
       "screenshot": "states/add-more.png",
       "preview": "states/add-more.html",
       "description": "add_to_running_table_enabled: a primary \"Add more items\" button above Done."
@@ -56,6 +57,7 @@
       "props": {
         "requests": 2
       },
+      "values": {},
       "screenshot": "states/open-requests.png",
       "preview": "states/open-requests.html",
       "description": "Open service requests listed in a bordered card (type left, status right)."
@@ -79,6 +81,7 @@
       "props": {
         "noStatus": true
       },
+      "values": {},
       "screenshot": "states/no-status.png",
       "preview": "states/no-status.html",
       "description": "get_order_status returned nothing: only the confirmation, pickup code and Done."

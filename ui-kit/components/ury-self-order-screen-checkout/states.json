@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "payment-request-info": {
       "applicable": true,
@@ -25,6 +25,7 @@
         "info": true,
         "sel": "bill"
       },
+      "values": {},
       "screenshot": "states/payment-request-info.png",
       "preview": "states/payment-request-info.html",
       "description": "A payment request without a payment_url was created: muted note under the methods; Request Bill selected."
@@ -35,6 +36,7 @@
       "props": {
         "submitting": true
       },
+      "values": {},
       "screenshot": "states/submitting.png",
       "preview": "states/submitting.html",
       "description": "Order submission in flight: \"Placing order…\", button disabled."
@@ -45,6 +47,7 @@
       "props": {
         "sel": "online"
       },
+      "values": {},
       "screenshot": "states/pay-online.png",
       "preview": "states/pay-online.html",
       "description": "Pay Online selected: the CTA switches to \"Pay Online\"."
@@ -57,6 +60,7 @@
         "submitting": true,
         "paying": true
       },
+      "values": {},
       "screenshot": "states/starting-payment.png",
       "preview": "states/starting-payment.html",
       "description": "Online payment starting: \"Starting payment…\", disabled."
