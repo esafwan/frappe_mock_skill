@@ -441,7 +441,8 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .bf .fcard>.sub{margin:0}
 .bf .facts{display:flex;flex-wrap:wrap;gap:var(--space-2)}
 .bf .fact{flex:1 1 5.5rem;min-width:0;padding:var(--space-2) var(--space-3);background:hsl(var(--muted));border-radius:var(--radius-xl)}
-.bf .fact b{display:block;font-size:1.125rem;font-weight:650;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;white-space:nowrap}
+.bf .fact:first-child{flex:2 1 8.5rem}
+.bf .fact b{display:block;min-width:0;font-size:1.125rem;font-weight:650;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .bf .fact span{display:block;font-size:var(--text-xs);color:hsl(var(--muted-foreground));overflow-wrap:anywhere}
 .bf .acts{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);padding-block-start:var(--space-2);border-block-start:1px solid hsl(var(--border))}
 .bf .tonal,.bf .quiet{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--touch-lg);padding:0 var(--space-4);border-radius:var(--radius-pill);border:0;font-size:var(--text-sm);font-weight:600;text-decoration:none;cursor:pointer}
@@ -606,7 +607,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .bf .call-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;block-size:3rem}
 .bf .call-iconbtn{justify-self:start;display:grid;place-items:center;inline-size:var(--touch);block-size:var(--touch);padding:0;border:0;border-radius:var(--radius-pill);background:transparent;color:hsl(var(--foreground))}
 [dir=rtl] .bf .call-iconbtn svg{transform:scaleX(-1)}
-.bf .call-left{grid-column:2;margin:0;padding:var(--space-1) var(--space-3);border-radius:var(--radius-pill);background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-family:var(--font-mono);font-size:var(--text-xs);font-variant-numeric:tabular-nums}
+.bf .call-left{grid-column:2;margin:0;padding:var(--space-1) var(--space-3);border-radius:var(--radius-pill);background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-family:var(--font-sans);font-size:var(--text-xs);font-variant-numeric:tabular-nums}
 .bf .call-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);min-inline-size:0}
 .bf .call-orb{position:relative;inline-size:var(--orb);block-size:var(--orb);margin-block-end:calc(var(--space-6)*1.33 + var(--space-6));flex:none}
 .bf .orb-glow,.bf .orb-ring,.bf .orb-core{position:absolute;inset:0;border-radius:50%}
@@ -627,7 +628,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .bf .call-name{margin:0;font-size:var(--text-2xl);line-height:1.2;font-weight:600}
 .bf .call-status{margin:0;font-size:var(--text-base);color:hsl(var(--muted-foreground))}
 .bf .call-detail{margin:0;max-inline-size:22rem;font-size:var(--text-sm);color:hsl(var(--destructive))}
-.bf .call-time{margin:0;font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:var(--text-sm);color:hsl(var(--text-tertiary))}
+.bf .call-time{margin:0;font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--text-sm);color:hsl(var(--text-tertiary))}
 .bf .call-caption{min-block-size:3.5rem;display:flex;align-items:flex-start;justify-content:center;padding-block-start:var(--space-2)}
 .bf .call-line{margin:0;max-inline-size:22rem;font-size:var(--text-sm);line-height:1.4;color:hsl(var(--muted-foreground))}
 .bf .call-line-who{color:hsl(var(--text-tertiary))}
