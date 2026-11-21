@@ -61,7 +61,7 @@
 
 /* ---- KPI strip ---- */
 .pdb-kpi-wrap { padding-bottom: 16px; border-bottom: 1px solid hsl(var(--border)); }
-.pdb-kpi-strip { display: flex; flex-wrap: wrap; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid hsl(var(--hair)); }
+.pdb-kpi-strip { display: flex; flex-wrap: wrap; }
 .pdb-kpi { flex: 1 1 0%; min-width: 140px; padding-inline-end: 20px; }
 .pdb-kpi + .pdb-kpi { padding-inline-start: 20px; border-inline-start: 1px solid hsl(var(--border)); }
 .pdb-kpi__label { font-size: 11px; color: hsl(var(--muted-foreground)); }
@@ -78,7 +78,7 @@
 .pdb-att { display: flex; align-items: center; gap: 12px; padding: 11px 14px; }
 .pdb-att__bar { width: 3px; flex-shrink: 0; align-self: stretch; border-radius: 2px; }
 .pdb-att__bar--blocking { background: hsl(var(--destructive)); }
-.pdb-att__bar--warning { background: hsl(var(--warning-600)); }
+.pdb-att__bar--warning { background: var(--tw-orange-500, #f97316); }
 .pdb-att__bar--info { background: hsl(var(--success-600)); }
 .pdb-att__main { flex: 1 1 0%; min-width: 0; }
 .pdb-att__title { font-size: 12.5px; line-height: 1.25; font-weight: 600; color: hsl(var(--foreground)); }
@@ -93,7 +93,7 @@
 .pdb-ins__list { display: flex; flex-direction: column; gap: 12px; }
 .pdb-ins { display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 4px; border-inline-start: 4px solid; background: hsl(var(--gray-50)); }
 .pdb-ins--critical { border-inline-start-color: var(--tw-red-600); }
-.pdb-ins--warning { border-inline-start-color: #d97706; }
+.pdb-ins--warning { border-inline-start-color: var(--tw-orange-500, #f97316); }
 .pdb-ins--info { border-inline-start-color: var(--tw-blue-600); }
 .pdb-ins__main { flex: 1 1 0%; min-width: 0; }
 .pdb-ins__title { font-size: 14px; line-height: 20px; font-weight: 600; color: hsl(var(--gray-900)); }
@@ -134,7 +134,7 @@
 .pdb-meter { width: 100%; height: 8px; overflow: hidden; border-radius: 9999px; background: hsl(var(--gray-200)); }
 .pdb-meter__fill { height: 100%; border-radius: 9999px; }
 .pdb-meter__fill--danger { background: hsl(var(--destructive)); }
-.pdb-meter__fill--warn { background: hsl(var(--warning-400)); }
+.pdb-meter__fill--warn { background: var(--tw-amber-400); }
 .pdb-meter__fill--primary { background: hsl(var(--primary)); }
 .pdb-floor { display: flex; flex-direction: column; gap: 12px; }
 .pdb-floor__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
@@ -155,3 +155,21 @@
 .pdb-note:last-child { padding-bottom: 0; }
 .pdb-note__msg { font-size: 12px; line-height: 1.625; color: hsl(var(--gray-700)); }
 .pdb-note__time { flex-shrink: 0; white-space: nowrap; font-size: 12px; line-height: 16px; color: hsl(var(--gray-400)); }
+
+.pdb-ins__title, .pdb-ins__body, .pdb-att__title, .pdb-warn { unicode-bidi: plaintext; text-align: start; }
+.pdb-page__in--scrolled { margin-top: var(--pdb-scroll, -1000px); }
+
+/* ---- dark legibility: the dark gray-900 token is a mid gray, so headings read as disabled; resolve them to the foreground,
+   lift destructive text onto its dark tint, tint the Act now rows by severity, and show the wordmark light ---- */
+.dark .pdb { --gray-900: 210 40% 98%; }
+.dark .pdb .psh-logo img { filter: brightness(0) invert(1); }
+.dark .pdb .pdb-badge--destructive,
+.dark .pdb .pdb-bar__min.is-over,
+.dark .pdb .pdb-bar__name.is-over,
+.dark .pdb .pdb-warn,
+.dark .pdb .pdb-state--error { color: hsl(var(--destructive-900)); }
+.dark .pdb .pdb-badge--destructive { background: hsl(var(--destructive-tint)); box-shadow: inset 0 0 0 1px hsl(var(--destructive-tint-border)); }
+.dark .pdb .pdb-ins--critical { background: hsl(var(--destructive-tint)); }
+.dark .pdb .pdb-ins--warning { background: hsl(var(--warning-tint)); }
+.dark .pdb .pdb-ins--info { background: hsl(var(--primary-tint)); }
+.dark .pdb .pdb-ins__body { color: hsl(var(--gray-950)); }

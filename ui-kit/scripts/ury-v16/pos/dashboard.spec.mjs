@@ -48,7 +48,9 @@ export const specs = [
     variants: { empty: { props: { view: 'empty' }, describe: 'No waiter assignments, no open sessions, no notifications (Shift Brief unchanged)' } },
     na, describe: ['The 340px right column: Floor Load (primary bars per waiter), Open Sessions (gray rows and View all link), Shift Brief (HUF badge) and Recent Notifications (divided list).', 'Right side of the Dashboard main grid; mirrors to the left in RTL.'] },
   { ...base, id: 'pos-screen-dashboard', name: 'POS dashboard screen', width: 1440, height: 900, css: SCREEN_CSS, slots: screenSlots, rtlValues: screenRtl, props: {},
-    render: (v, p) => dashboardScreen({ v, ...p }),
-    variants: {},
+    render: (v, p) => { const h = dashboardScreen({ v, ...p }); return p.wrap ? `<div class="${p.wrap.includes('dark') ? 'dark' : ''}" ${p.wrap.includes('rtl') ? 'dir="rtl"' : ''}>${h}</div>` : h; },
+    variants: { scrolled: { props: { scrolled: true }, describe: 'Page scrolled to the main grid: Service Line, Tonight vs Baseline and Running Low | Floor Load, Open Sessions, Shift Brief, Notifications (340px rail on the right in LTR, mirrored to the left in RTL)' },
+      'scrolled-dark': { props: { scrolled: true, wrap: 'dark' }, describe: 'Scrolled main grid in dark mode: tinted Service Line tag, Running Low and the four rail panels on dark tokens' },
+      'scrolled-rtl': { props: { scrolled: true, wrap: 'rtl' }, values: screenRtl, describe: 'Scrolled main grid in RTL Arabic: the grid mirrors with the DOM order: main column on the right, the 340px rail on the left (physical mirror of LTR, where it is on the right)' } },
     na, describe: ['Full 1440x900 POS Dashboard route: 48px header without the search pill, page header with the Ask pill and Live badge, Act now and Needs attention feeds, KPI strip, Service Line, then the 1fr / 340px grid (Tonight vs Baseline, Running Low | Floor Load, Open Sessions, Shift Brief, Notifications) above the footer navigation.', 'The Dashboard tab of the POS. The page scrolls inside the content area; this capture is the top of the page.'] },
 ];

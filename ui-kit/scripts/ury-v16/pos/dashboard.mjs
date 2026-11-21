@@ -16,7 +16,7 @@ export const DASH_CSS = ['ury-v16/ury-fonts.css', 'ury-v16/ury-ui-tokens.css', '
 export const SCREEN_CSS = [...DASH_CSS.slice(0, 3), 'ury-v16/components/pos-shell.css', DASH_CSS[3]];
 
 // ---- slots: [English sample (pos/src/i18n/locales/en.json), Arabic (ar.json)] ----
-const cur = (n, ar) => [money(n), ar];
+const cur = (n) => [money(n)];
 const S = {
   // page header
   title: ['Shift Overview', 'نظرة عامة على الوردية'], branch: ['Downtown', 'وسط المدينة'], live_status: ['Live floor status for the current shift', 'حالة القاعة مباشرة للوردية الحالية'],
@@ -149,8 +149,8 @@ export function pageHeader(v) {
   return `<div class="pdb-pagehead" data-ui="pos-screen-dashboard.page-header"><div><h1 class="pdb-h1">${v.title}</h1><p class="pdb-sub">${v.branch} · ${v.live_status}</p></div><div class="pdb-pagehead__right"><button type="button" class="pdb-ask" data-ui="pos-screen-dashboard.ask"><span class="pdb-ask__tag">${v.ask_tag}</span><span class="pdb-ask__text">${I('Sparkles', 14)}${v.ask_text}</span><span class="pdb-ask__key">${v.ask_key}</span></button><span class="pdb-live" data-ui="pos-screen-dashboard.live"><span class="pdb-live__dot"></span>${v.live_badge}</span></div></div>`;
 }
 export const SCREEN_SLOT_KEYS = [...HEADER_KEYS, ...FOOTER_KEYS];
-export function dashboardScreen({ v = P, id = 'pos-screen-dashboard' } = {}) {
-  const content = `<div class="pdb-page"><div class="pdb-page__in">${pageHeader(v)}${insightFeed({ v, id })}${attentionFeed({ v, id })}<div class="pdb-kpi-wrap" data-ui="${id}.kpi"><div class="pdb-kpi-strip">${[1, 2, 3, 4].map((i) => `<div class="pdb-kpi"><div class="pdb-kpi__label">${v['k' + i + '_label']}</div><div class="pdb-kpi__value">${i === 4 ? `<span class="u-num">${v.k4_value}</span>` : v['k' + i + '_value']}</div></div>`).join('')}</div></div>${serviceLine({ v, id: id + '.service-line' }).replace('class="pdb pdb-bg"', 'class="pdb-embed"')}<div class="pdb-grid"><div data-ui="${id}.left">${leftStack({ v, id: id + '.left-stack' })}</div>${dashPanels({ v, id: id + '.rail' }).replace('class="pdb pdb-bg"', 'class="pdb-embed"')}</div></div></div>`;
+export function dashboardScreen({ v = P, id = 'pos-screen-dashboard', scrolled = false } = {}) {
+  const content = `<div class="pdb-page"><div class="pdb-page__in${scrolled ? ' pdb-page__in--scrolled' : ''}">${pageHeader(v)}${insightFeed({ v, id })}${attentionFeed({ v, id })}<div class="pdb-kpi-wrap" data-ui="${id}.kpi"><div class="pdb-kpi-strip">${[1, 2, 3, 4].map((i) => `<div class="pdb-kpi"><div class="pdb-kpi__label">${v['k' + i + '_label']}</div><div class="pdb-kpi__value">${i === 4 ? `<span class="u-num">${v.k4_value}</span>` : v['k' + i + '_value']}</div></div>`).join('')}</div></div>${serviceLine({ v, id: id + '.service-line' }).replace('class="pdb pdb-bg"', 'class="pdb-embed"')}<div class="pdb-grid"><div data-ui="${id}.left">${leftStack({ v, id: id + '.left-stack' })}</div>${dashPanels({ v, id: id + '.rail' }).replace('class="pdb pdb-bg"', 'class="pdb-embed"')}</div></div></div>`;
   const shell = `<div class="pdb pdb-appshell">${header({ v, variant: 'dashboard', id: id + '.header' })}<div class="pdb-appshell__main">${content}</div>${footer('dashboard', { v, id: id + '.footer' })}</div>`;
   return screen(1440, 900, shell, id);
 }
