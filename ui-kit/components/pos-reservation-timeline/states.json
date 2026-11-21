@@ -1,0 +1,71 @@
+{
+  "component": "pos-reservation-timeline",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "block-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "r2"
+      },
+      "screenshot": "states/block-hover.png",
+      "preview": "states/block-hover.html",
+      "description": "Pointer over a block: z-40, shadow-xl, scale 1.01 and a status-coloured ring."
+    },
+    "scrolled-start": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "scroll": 0
+      },
+      "screenshot": "states/scrolled-start.png",
+      "preview": "states/scrolled-start.html",
+      "description": "Scrolled to 00:00 (any date other than today)."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": []
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No reservations on the date: BookLock chip with title and hint centred in the canvas."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true,
+        "h": 459
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Loading timeline view... centred message (h-80)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown in the loading / submitting variants where the controls are disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the error variant where the source renders one"
+    }
+  }
+}

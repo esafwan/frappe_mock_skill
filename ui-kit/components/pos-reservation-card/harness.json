@@ -1,0 +1,45 @@
+{
+  "id": "pos-reservation-card",
+  "name": "POS reservation card",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 336,
+    "h": 209
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-reservations.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Reservation list card (Card + CardContent p-5): TABLE label and table name, status badge, a three-dot action menu, and customer, phone, guest count and reservation time rows.",
+    "One card per reservation in the Reservations list view; the grid is 4 columns with a 16px gap at 1440px."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 336,
+  "height": null,
+  "props": {
+    "n": "c1",
+    "status": "Confirmed"
+  },
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,141 @@
+{
+  "component": "pos-reservation-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": true
+      },
+      "screenshot": "states/hover.png",
+      "preview": "states/hover.html",
+      "description": "Pointer over the card: border-gray-300."
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "Active"
+      },
+      "screenshot": "states/active.png",
+      "preview": "states/active.html",
+      "description": "Active status: warning badge."
+    },
+    "requested": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "Requested"
+      },
+      "screenshot": "states/requested.png",
+      "preview": "states/requested.html",
+      "description": "Requested status: outline badge."
+    },
+    "completed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "Completed"
+      },
+      "screenshot": "states/completed.png",
+      "preview": "states/completed.html",
+      "description": "Completed status: primary-100 badge, no action menu button (only Confirmed, Active and Requested are actionable)."
+    },
+    "cancelled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "Cancelled"
+      },
+      "screenshot": "states/cancelled.png",
+      "preview": "states/cancelled.html",
+      "description": "Cancelled status: destructive tint badge, no action menu button."
+    },
+    "no-show": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "No Show"
+      },
+      "screenshot": "states/no-show.png",
+      "preview": "states/no-show.html",
+      "description": "No Show status: orange-100 / orange-800 badge, no action menu button."
+    },
+    "menu-open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "menu": true
+      },
+      "screenshot": "states/menu-open.png",
+      "preview": "states/menu-open.html",
+      "description": "Action menu open (w-48): Edit Reservation, Complete Reservation and Cancel Reservation (manager or cashier)."
+    },
+    "menu-requested": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "Requested",
+        "menu": true
+      },
+      "screenshot": "states/menu-requested.png",
+      "preview": "states/menu-requested.html",
+      "description": "Requested reservations cannot be completed: the menu lists Edit and Cancel only."
+    },
+    "kebab-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kebabHover": true
+      },
+      "screenshot": "states/kebab-hover.png",
+      "preview": "states/kebab-hover.html",
+      "description": "Pointer over the three-dot button: gray-100 background."
+    },
+    "with-notes": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "notes": true
+      },
+      "screenshot": "states/with-notes.png",
+      "preview": "states/with-notes.html",
+      "description": "Comments shown as an italic quote (line-clamp-2) under a gray-50 rule."
+    },
+    "no-phone": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "phone": false
+      },
+      "screenshot": "states/no-phone.png",
+      "preview": "states/no-phone.html",
+      "description": "Customer without a phone number: the phone row is omitted."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown in the loading / submitting variants where the controls are disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the error variant where the source renders one"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "shown as the loading variant where the source renders one"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "shown as the empty variant where the source renders one"
+    }
+  }
+}

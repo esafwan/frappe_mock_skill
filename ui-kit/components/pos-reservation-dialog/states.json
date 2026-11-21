@@ -1,0 +1,166 @@
+{
+  "component": "pos-reservation-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "edit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "edit"
+      },
+      "screenshot": "states/edit.png",
+      "preview": "states/edit.html",
+      "description": "TableReservationEditDialog: same form with a Table select first and a Save Changes button (h-840, clamped by max-h-90vh)."
+    },
+    "cancel": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "cancel"
+      },
+      "screenshot": "states/cancel.png",
+      "preview": "states/cancel.html",
+      "description": "TableReservationCancelDialog (max-w-xl): red-50 summary card with customer, phone, guests and time; Keep Reservation / Cancel Reservation footer."
+    },
+    "complete": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "complete"
+      },
+      "screenshot": "states/complete.png",
+      "preview": "states/complete.html",
+      "description": "TableReservationCompleteDialog (max-w-xl): blue summary card with a Confirmed badge and a blue Complete button."
+    },
+    "warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "warning"
+      },
+      "screenshot": "states/warning.png",
+      "preview": "states/warning.html",
+      "description": "TableReservationWarningDialog (max-w-lg): amber buffer-time banner, indigo reservation card and Choose Another Table."
+    },
+    "create-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "create",
+        "noCustomer": true
+      },
+      "screenshot": "states/create-empty.png",
+      "preview": "states/create-empty.html",
+      "description": "No customer chosen yet: customer search field, empty phone with its placeholder and the Reserve Table button disabled."
+    },
+    "create-notes": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "create",
+        "notes": true
+      },
+      "screenshot": "states/create-notes.png",
+      "preview": "states/create-notes.html",
+      "description": "Notes textarea filled instead of showing its placeholder."
+    },
+    "create-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "create",
+        "error": true
+      },
+      "screenshot": "states/create-error.png",
+      "preview": "states/create-error.html",
+      "description": "Validation error box (red-50) above the form card."
+    },
+    "create-submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "create",
+        "off": true
+      },
+      "screenshot": "states/create-submitting.png",
+      "preview": "states/create-submitting.html",
+      "description": "Submitting: inputs and both buttons disabled."
+    },
+    "edit-no-tables": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "edit",
+        "tables": "none"
+      },
+      "screenshot": "states/edit-no-tables.png",
+      "preview": "states/edit-no-tables.html",
+      "description": "No table free for the chosen slot: placeholder No available tables and the amber hint."
+    },
+    "edit-loading-tables": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "edit",
+        "tables": "loading"
+      },
+      "screenshot": "states/edit-loading-tables.png",
+      "preview": "states/edit-loading-tables.html",
+      "description": "Loading available tables... placeholder in the Table select."
+    },
+    "cancel-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "cancel",
+        "off": true
+      },
+      "screenshot": "states/cancel-loading.png",
+      "preview": "states/cancel-loading.html",
+      "description": "Cancellation in progress: both buttons disabled."
+    },
+    "complete-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "complete",
+        "off": true
+      },
+      "screenshot": "states/complete-loading.png",
+      "preview": "states/complete-loading.html",
+      "description": "Completion in progress: both buttons disabled."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown in the loading / submitting variants where the controls are disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the error variant where the source renders one"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "shown as the loading variant where the source renders one"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "shown as the empty variant where the source renders one"
+    }
+  }
+}

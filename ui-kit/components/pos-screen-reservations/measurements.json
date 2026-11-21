@@ -1,0 +1,779 @@
+{
+  "component": "pos-screen-reservations",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "pos-screen-reservations",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "pos-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 48
+    },
+    {
+      "id": "pos-header.logo",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 7.5,
+      "w": 96,
+      "h": 32
+    },
+    {
+      "id": "pos-header.search",
+      "tag": "div",
+      "interactive": false,
+      "x": 256.83,
+      "y": 9.5,
+      "w": 672,
+      "h": 28
+    },
+    {
+      "id": "pos-header.printer",
+      "tag": "button",
+      "interactive": true,
+      "x": 1065.66,
+      "y": 9.5,
+      "w": 167.53,
+      "h": 28
+    },
+    {
+      "id": "pos-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1249.19,
+      "y": 9.5,
+      "w": 166.81,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 48,
+      "w": 1440,
+      "h": 73
+    },
+    {
+      "id": "pos-screen-reservations.count",
+      "tag": "span",
+      "interactive": false,
+      "x": 219.5,
+      "y": 74,
+      "w": 27.56,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.filters",
+      "tag": "div",
+      "interactive": false,
+      "x": 723.77,
+      "y": 65,
+      "w": 692.23,
+      "h": 38
+    },
+    {
+      "id": "pos-screen-reservations.stepper",
+      "tag": "div",
+      "interactive": false,
+      "x": 972.33,
+      "y": 67,
+      "w": 190.11,
+      "h": 34
+    },
+    {
+      "id": "pos-screen-reservations.status-filter",
+      "tag": "div",
+      "interactive": false,
+      "x": 1174.44,
+      "y": 66,
+      "w": 163.56,
+      "h": 36
+    },
+    {
+      "id": "pos-screen-reservations.toggle",
+      "tag": "div",
+      "interactive": false,
+      "x": 1350,
+      "y": 65,
+      "w": 66,
+      "h": 38
+    },
+    {
+      "id": "pos-screen-reservations.content",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 121,
+      "w": 1440,
+      "h": 702.5
+    },
+    {
+      "id": "pos-screen-reservations.grid",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 145,
+      "w": 1392,
+      "h": 476
+    },
+    {
+      "id": "pos-screen-reservations.card-c1",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 145,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 166,
+      "w": 43.28,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 184,
+      "w": 43.28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 218.94,
+      "y": 168,
+      "w": 84.06,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.kebab",
+      "tag": "button",
+      "interactive": true,
+      "x": 311,
+      "y": 166,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 249,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 71,
+      "y": 258,
+      "w": 109.67,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c1.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 69,
+      "y": 338,
+      "w": 123.7,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c2",
+      "tag": "div",
+      "interactive": false,
+      "x": 376,
+      "y": 145,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 166,
+      "w": 41.89,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 184,
+      "w": 41.89,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 594.83,
+      "y": 168,
+      "w": 60.17,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.kebab",
+      "tag": "button",
+      "interactive": true,
+      "x": 663,
+      "y": 166,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 228,
+      "w": 294,
+      "h": 126
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 423,
+      "y": 237,
+      "w": 93.2,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 421,
+      "y": 317,
+      "w": 125.03,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c2.notes",
+      "tag": "p",
+      "interactive": false,
+      "x": 397,
+      "y": 333,
+      "w": 294,
+      "h": 21
+    },
+    {
+      "id": "pos-screen-reservations.card-c3",
+      "tag": "div",
+      "interactive": false,
+      "x": 728,
+      "y": 145,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 166,
+      "w": 39.78,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 184,
+      "w": 39.78,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 921.05,
+      "y": 168,
+      "w": 85.95,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.kebab",
+      "tag": "button",
+      "interactive": true,
+      "x": 1015,
+      "y": 166,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 249,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 775,
+      "y": 258,
+      "w": 94.48,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c3.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 773,
+      "y": 338,
+      "w": 124.38,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c4",
+      "tag": "div",
+      "interactive": false,
+      "x": 1080,
+      "y": 145,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 166,
+      "w": 43.61,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 184,
+      "w": 43.61,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 1307.92,
+      "y": 166,
+      "w": 87.08,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 249,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 1127,
+      "y": 258,
+      "w": 93.78,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c4.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 1125,
+      "y": 338,
+      "w": 121.14,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c5",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 391,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 412,
+      "w": 43.5,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 430,
+      "w": 43.5,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 218.94,
+      "y": 414,
+      "w": 84.06,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.kebab",
+      "tag": "button",
+      "interactive": true,
+      "x": 311,
+      "y": 412,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 45,
+      "y": 474,
+      "w": 294,
+      "h": 126
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 71,
+      "y": 483,
+      "w": 102.95,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 69,
+      "y": 563,
+      "w": 125.17,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c5.notes",
+      "tag": "p",
+      "interactive": false,
+      "x": 45,
+      "y": 579,
+      "w": 294,
+      "h": 21
+    },
+    {
+      "id": "pos-screen-reservations.card-c6",
+      "tag": "div",
+      "interactive": false,
+      "x": 376,
+      "y": 391,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 412,
+      "w": 39.78,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 430,
+      "w": 39.78,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 608.81,
+      "y": 412,
+      "w": 82.19,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 397,
+      "y": 495,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 423,
+      "y": 504,
+      "w": 93.44,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c6.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 421,
+      "y": 584,
+      "w": 125.16,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c7",
+      "tag": "div",
+      "interactive": false,
+      "x": 728,
+      "y": 391,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 412,
+      "w": 43.77,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 430,
+      "w": 43.77,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 969.38,
+      "y": 412,
+      "w": 73.63,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 749,
+      "y": 495,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 775,
+      "y": 504,
+      "w": 93.16,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c7.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 773,
+      "y": 584,
+      "w": 118.64,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c8",
+      "tag": "div",
+      "interactive": false,
+      "x": 1080,
+      "y": 391,
+      "w": 336,
+      "h": 230
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.label",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 412,
+      "w": 43.28,
+      "h": 16
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 430,
+      "w": 43.28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 1274.94,
+      "y": 414,
+      "w": 84.06,
+      "h": 24
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.kebab",
+      "tag": "button",
+      "interactive": true,
+      "x": 1367,
+      "y": 412,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.info",
+      "tag": "div",
+      "interactive": false,
+      "x": 1101,
+      "y": 495,
+      "w": 294,
+      "h": 105
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.name",
+      "tag": "span",
+      "interactive": false,
+      "x": 1127,
+      "y": 504,
+      "w": 88.97,
+      "h": 20
+    },
+    {
+      "id": "pos-screen-reservations.card-c8.when",
+      "tag": "span",
+      "interactive": false,
+      "x": 1125,
+      "y": 584,
+      "w": 122.39,
+      "h": 16
+    },
+    {
+      "id": "pos-footer-nav",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 823.5,
+      "w": 1440,
+      "h": 76.5
+    },
+    {
+      "id": "pos-footer-nav.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 423.66,
+      "y": 830.5,
+      "w": 91.81,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.pos",
+      "tag": "a",
+      "interactive": true,
+      "x": 519.47,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.tables",
+      "tag": "a",
+      "interactive": true,
+      "x": 595.47,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.active",
+      "tag": "a",
+      "interactive": true,
+      "x": 671.47,
+      "y": 830.5,
+      "w": 106.2,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.orders",
+      "tag": "a",
+      "interactive": true,
+      "x": 781.67,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.sessions",
+      "tag": "a",
+      "interactive": true,
+      "x": 857.67,
+      "y": 830.5,
+      "w": 80,
+      "h": 63.5
+    },
+    {
+      "id": "pos-footer-nav.settings",
+      "tag": "a",
+      "interactive": true,
+      "x": 941.67,
+      "y": 830.5,
+      "w": 74.67,
+      "h": 63.5
+    }
+  ]
+}

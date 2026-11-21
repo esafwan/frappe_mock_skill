@@ -1,0 +1,118 @@
+{
+  "component": "pos-reservation-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "status_confirmed": {
+      "type": "text",
+      "sample": "Confirmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_active": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_requested": {
+      "type": "text",
+      "sample": "Requested",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_completed": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_cancelled": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_no_show": {
+      "type": "text",
+      "sample": "No Show",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_label": {
+      "type": "text",
+      "sample": "Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_edit": {
+      "type": "text",
+      "sample": "Edit Reservation",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_complete": {
+      "type": "text",
+      "sample": "Complete Reservation",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_cancel": {
+      "type": "text",
+      "sample": "Cancel Reservation",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_table": {
+      "type": "text",
+      "sample": "T-03",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_name": {
+      "type": "text",
+      "sample": "Rashid Mansoor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_phone": {
+      "type": "text",
+      "sample": "+971 50 123 4567",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_guests": {
+      "type": "text",
+      "sample": "4 guests",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_when": {
+      "type": "text",
+      "sample": "Sat, Nov 21, 07:30 PM",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_notes": {
+      "type": "text",
+      "sample": "Window seat, birthday dinner",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

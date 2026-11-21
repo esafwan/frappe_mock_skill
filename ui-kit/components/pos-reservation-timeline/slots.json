@@ -1,0 +1,363 @@
+{
+  "component": "pos-reservation-timeline",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "status_confirmed": {
+      "type": "text",
+      "sample": "Confirmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_active": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_requested": {
+      "type": "text",
+      "sample": "Requested",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_completed": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_cancelled": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_no_show": {
+      "type": "text",
+      "sample": "No Show",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_table": {
+      "type": "text",
+      "sample": "T-05",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_time": {
+      "type": "text",
+      "sample": "10:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_end": {
+      "type": "text",
+      "sample": "11:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_name": {
+      "type": "text",
+      "sample": "Noor Al Jaber",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_pax": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_phone": {
+      "type": "text",
+      "sample": "+971 56 456 7890",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_table": {
+      "type": "text",
+      "sample": "T-03",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_time": {
+      "type": "text",
+      "sample": "12:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_end": {
+      "type": "text",
+      "sample": "13:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_name": {
+      "type": "text",
+      "sample": "Rashid Mansoor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_pax": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_phone": {
+      "type": "text",
+      "sample": "+971 50 123 4567",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_table": {
+      "type": "text",
+      "sample": "T-07",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_time": {
+      "type": "text",
+      "sample": "12:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_end": {
+      "type": "text",
+      "sample": "13:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_name": {
+      "type": "text",
+      "sample": "Layla Haddad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_pax": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_phone": {
+      "type": "text",
+      "sample": "+971 55 234 5678",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_table": {
+      "type": "text",
+      "sample": "T-12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_time": {
+      "type": "text",
+      "sample": "13:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_end": {
+      "type": "text",
+      "sample": "14:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_name": {
+      "type": "text",
+      "sample": "Omar Siddiqui",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_pax": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_phone": {
+      "type": "text",
+      "sample": "+971 52 345 6789",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_table": {
+      "type": "text",
+      "sample": "T-09",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_time": {
+      "type": "text",
+      "sample": "14:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_end": {
+      "type": "text",
+      "sample": "15:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_name": {
+      "type": "text",
+      "sample": "Mariam Saleh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_pax": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r5_phone": {
+      "type": "text",
+      "sample": "+971 54 678 9012",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_table": {
+      "type": "text",
+      "sample": "T-04",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_time": {
+      "type": "text",
+      "sample": "15:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_end": {
+      "type": "text",
+      "sample": "17:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_name": {
+      "type": "text",
+      "sample": "Faisal Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_pax": {
+      "type": "text",
+      "sample": "5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r6_phone": {
+      "type": "text",
+      "sample": "+971 58 789 0123",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_table": {
+      "type": "text",
+      "sample": "T-02",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_time": {
+      "type": "text",
+      "sample": "19:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_end": {
+      "type": "text",
+      "sample": "21:00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_name": {
+      "type": "text",
+      "sample": "Hind Rahman",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_pax": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r7_phone": {
+      "type": "text",
+      "sample": "+971 50 890 1234",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_timeline_title": {
+      "type": "text",
+      "sample": "No Reservations for this Date",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_timeline_hint": {
+      "type": "text",
+      "sample": "Reservations will appear along the time axis.",
+      "maxLength": 72,
+      "where": "text",
+      "element": "text"
+    },
+    "loading_timeline": {
+      "type": "text",
+      "sample": "Loading timeline view...",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "pos-reservation-timeline",
+  "name": "POS reservation timeline",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1392,
+    "h": 459
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-reservations.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Horizontal day timeline (TableReservationTimeline): an hour axis of 24 columns x 120px, half-hour dashed rules, and one 74px block per reservation, coloured by status and stacked into lanes when they overlap.",
+    "The Timeline view of the Reservations route; shown scrolled to mid-day (the source scrolls to the current time on today)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1392,
+  "height": null,
+  "props": {
+    "items": [
+      {
+        "n": "r1",
+        "status": "Completed",
+        "start": 600,
+        "dur": 60
+      },
+      {
+        "n": "r2",
+        "status": "Confirmed",
+        "start": 720,
+        "dur": 90
+      },
+      {
+        "n": "r3",
+        "status": "Active",
+        "start": 750,
+        "dur": 60
+      },
+      {
+        "n": "r4",
+        "status": "Requested",
+        "start": 810,
+        "dur": 60
+      },
+      {
+        "n": "r5",
+        "status": "Cancelled",
+        "start": 840,
+        "dur": 60
+      },
+      {
+        "n": "r6",
+        "status": "No Show",
+        "start": 930,
+        "dur": 90
+      },
+      {
+        "n": "r7",
+        "status": "Confirmed",
+        "start": 1140,
+        "dur": 120
+      }
+    ],
+    "scroll": 1200,
+    "h": 459
+  },
+  "canvas": "hsl(var(--background))"
+}

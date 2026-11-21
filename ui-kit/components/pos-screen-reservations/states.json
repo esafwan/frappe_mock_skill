@@ -1,0 +1,184 @@
+{
+  "component": "pos-screen-reservations",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "filter-confirmed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "statusAll": false,
+        "cards": [
+          {
+            "n": "c1",
+            "status": "Confirmed",
+            "notes": false
+          },
+          {
+            "n": "c5",
+            "status": "Confirmed",
+            "notes": true
+          },
+          {
+            "n": "c8",
+            "status": "Confirmed",
+            "notes": false
+          }
+        ]
+      },
+      "values": {
+        "count": "3"
+      },
+      "screenshot": "states/filter-confirmed.png",
+      "preview": "states/filter-confirmed.html",
+      "description": "Default Confirmed status filter: only confirmed reservations."
+    },
+    "menu-open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "menu": {
+          "n": "c2"
+        }
+      },
+      "screenshot": "states/menu-open.png",
+      "preview": "states/menu-open.html",
+      "description": "Three-dot menu open on an Active reservation card."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty",
+        "cards": []
+      },
+      "values": {
+        "count": "0"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "List view with no reservations: p-4 gray-100 round BookLock, title and hint."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading",
+        "cards": []
+      },
+      "values": {
+        "count": "0"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Loading reservations... centred in the list area."
+    },
+    "timeline": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "timeline",
+        "tlItems": [
+          {
+            "n": "r1",
+            "status": "Completed",
+            "start": 600,
+            "dur": 60
+          },
+          {
+            "n": "r2",
+            "status": "Confirmed",
+            "start": 720,
+            "dur": 90
+          },
+          {
+            "n": "r3",
+            "status": "Active",
+            "start": 750,
+            "dur": 60
+          },
+          {
+            "n": "r4",
+            "status": "Requested",
+            "start": 810,
+            "dur": 60
+          },
+          {
+            "n": "r5",
+            "status": "Cancelled",
+            "start": 840,
+            "dur": 60
+          },
+          {
+            "n": "r6",
+            "status": "No Show",
+            "start": 930,
+            "dur": 90
+          },
+          {
+            "n": "r7",
+            "status": "Confirmed",
+            "start": 1140,
+            "dur": 120
+          }
+        ],
+        "scroll": 1200
+      },
+      "screenshot": "states/timeline.png",
+      "preview": "states/timeline.html",
+      "description": "Timeline view: the toggle switches to the CalendarClock button and the day timeline fills the content area."
+    },
+    "timeline-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "timeline",
+        "tlItems": [],
+        "scroll": 0
+      },
+      "values": {
+        "count": "0"
+      },
+      "screenshot": "states/timeline-empty.png",
+      "preview": "states/timeline-empty.html",
+      "description": "Timeline view with no reservations for the date."
+    },
+    "timeline-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "timeline",
+        "state": "loading"
+      },
+      "values": {
+        "count": "0"
+      },
+      "screenshot": "states/timeline-loading.png",
+      "preview": "states/timeline-loading.html",
+      "description": "Timeline view while loading."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown in the loading / submitting variants where the controls are disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the error variant where the source renders one"
+    }
+  }
+}

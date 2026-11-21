@@ -1,0 +1,377 @@
+{
+  "component": "pos-reservation-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "table": {
+      "type": "text",
+      "sample": "T-07",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "seats": {
+      "type": "text",
+      "sample": "4 seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "search_placeholder": {
+      "type": "text",
+      "sample": "Search customer...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_label": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_name": {
+      "type": "text",
+      "sample": "Rashid Mansoor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_name_label": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_phone": {
+      "type": "text",
+      "sample": "+971 50 123 4567",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "change": {
+      "type": "text",
+      "sample": "Change",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "phone_label": {
+      "type": "text",
+      "sample": "Phone Number",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "phone_placeholder": {
+      "type": "text",
+      "sample": "e.g. +1 555-0199",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "pax_label": {
+      "type": "text",
+      "sample": "Number of Persons",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "pax": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "date_label": {
+      "type": "text",
+      "sample": "Reservation Date",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "date": {
+      "type": "text",
+      "sample": "21-11-2026",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "time_label": {
+      "type": "text",
+      "sample": "Reservation Time",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "time": {
+      "type": "text",
+      "sample": "07:30 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notes_label": {
+      "type": "text",
+      "sample": "Notes / Special Requests",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "notes_placeholder": {
+      "type": "text",
+      "sample": "Special requests, occasion, dietary requirements...",
+      "maxLength": 82,
+      "where": "text",
+      "element": "text"
+    },
+    "notes_val": {
+      "type": "text",
+      "sample": "Birthday dinner, window seat if possible",
+      "maxLength": 64,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_reserve": {
+      "type": "text",
+      "sample": "Reserve Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_save": {
+      "type": "text",
+      "sample": "Save Changes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "error": {
+      "type": "text",
+      "sample": "Number of persons cannot exceed the table capacity of 4.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "text"
+    },
+    "table_label": {
+      "type": "text",
+      "sample": "Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_option": {
+      "type": "text",
+      "sample": "T-07 (Main Hall - 4 seats)",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "loading_tables": {
+      "type": "text",
+      "sample": "Loading available tables...",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "no_available_tables": {
+      "type": "text",
+      "sample": "No available tables",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "no_tables_for_slot": {
+      "type": "text",
+      "sample": "No tables are available for the selected date and time.",
+      "maxLength": 88,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_title": {
+      "type": "text",
+      "sample": "Cancel Reservation",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_description": {
+      "type": "text",
+      "sample": "Are you sure you want to cancel this reservation?",
+      "maxLength": 79,
+      "where": "text",
+      "element": "text"
+    },
+    "reserved_badge": {
+      "type": "text",
+      "sample": "Reserved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "guests": {
+      "type": "text",
+      "sample": "4 guests",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "reservation_time_label": {
+      "type": "text",
+      "sample": "Reservation Time",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "time_raw": {
+      "type": "text",
+      "sample": "2026-11-21 19:30:00",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "keep_reservation": {
+      "type": "text",
+      "sample": "Keep Reservation",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_reservation": {
+      "type": "text",
+      "sample": "Cancel Reservation",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "complete_title": {
+      "type": "text",
+      "sample": "Complete Reservation",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "complete_description": {
+      "type": "text",
+      "sample": "Confirm that the customer has arrived for table T-07 at 07:30 PM.",
+      "maxLength": 104,
+      "where": "text",
+      "element": "text"
+    },
+    "time_short": {
+      "type": "text",
+      "sample": "07:30 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "complete_action": {
+      "type": "text",
+      "sample": "Complete",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "warning_title": {
+      "type": "text",
+      "sample": "Table Reserved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "warning_description": {
+      "type": "text",
+      "sample": "This table has an active reservation and is protected by buffer time.",
+      "maxLength": 111,
+      "where": "text",
+      "element": "text"
+    },
+    "reserved_for": {
+      "type": "text",
+      "sample": "Reserved for 7:30 PM",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "choose_another": {
+      "type": "text",
+      "sample": "Please choose another table.",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "time_warn": {
+      "type": "text",
+      "sample": "7:30 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notes_prefix": {
+      "type": "text",
+      "sample": "Notes:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "choose_another_action": {
+      "type": "text",
+      "sample": "Choose Another Table",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "status_confirmed": {
+      "type": "text",
+      "sample": "Confirmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_active": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_requested": {
+      "type": "text",
+      "sample": "Requested",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_completed": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_cancelled": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_no_show": {
+      "type": "text",
+      "sample": "No Show",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

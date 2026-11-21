@@ -1,0 +1,44 @@
+{
+  "id": "pos-reservation-dialog",
+  "name": "POS reservation dialog",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-reservations.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Table reservation dialogs over a bg-black/50 scrim: Reserve Table (create, max-w-2xl, h-740), Edit (h-840, with a table select), Cancel Reservation, Complete Reservation (customer arrived) and the Table Reserved buffer-time warning.",
+    "Opened from the Tables screen (create, warning) and from the card menu of the Reservations route (edit, complete, cancel)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {
+    "kind": "create"
+  },
+  "canvas": "hsl(var(--background))"
+}
