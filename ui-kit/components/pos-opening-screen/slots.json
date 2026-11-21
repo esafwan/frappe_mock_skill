@@ -1,0 +1,279 @@
+{
+  "component": "pos-opening-screen",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Open POS Session",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Start a new POS session to begin taking orders",
+      "maxLength": 74,
+      "where": "text",
+      "element": "text"
+    },
+    "l_details": {
+      "type": "text",
+      "sample": "Session Details",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_company": {
+      "type": "text",
+      "sample": "Company",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_branch": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_restaurant": {
+      "type": "text",
+      "sample": "Restaurant",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_cashier": {
+      "type": "text",
+      "sample": "Cashier",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_start": {
+      "type": "text",
+      "sample": "Session Start",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_profile": {
+      "type": "text",
+      "sample": "POS Profile",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Al Noor Hospitality",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Downtown",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "restaurant": {
+      "type": "text",
+      "sample": "Mediterranean Table",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "cashier": {
+      "type": "text",
+      "sample": "Sara Khan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "start": {
+      "type": "text",
+      "sample": "21/11/2026, 09:30:00",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "profile": {
+      "type": "text",
+      "sample": "Counter 1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_balance": {
+      "type": "text",
+      "sample": "Opening Balance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_mode": {
+      "type": "text",
+      "sample": "Mode of Payment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_amount": {
+      "type": "text",
+      "sample": "Opening Amount",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_total": {
+      "type": "text",
+      "sample": "Total Opening Balance",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "help": {
+      "type": "text",
+      "sample": "Opening Balance is the starting cash/payment amount you're declaring for this shift. It's used to reconcile against sales when you close out.",
+      "maxLength": 226,
+      "where": "text",
+      "element": "text"
+    },
+    "mode1": {
+      "type": "text",
+      "sample": "Cash",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mode2": {
+      "type": "text",
+      "sample": "Card",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mode3": {
+      "type": "text",
+      "sample": "Online Payment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt1": {
+      "type": "text",
+      "sample": "500",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt2": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt3": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_open": {
+      "type": "currency",
+      "sample": "AED 500.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_zero": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_open": {
+      "type": "text",
+      "sample": "Open POS Session",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_opening": {
+      "type": "text",
+      "sample": "Opening...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_confirm": {
+      "type": "text",
+      "sample": "Confirm & Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_retry": {
+      "type": "text",
+      "sample": "Retry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_back": {
+      "type": "text",
+      "sample": "Back to Dashboard",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_no_profiles": {
+      "type": "text",
+      "sample": "No POS Profile is available for your user in this branch. Contact your manager.",
+      "maxLength": 127,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_no_permission": {
+      "type": "text",
+      "sample": "You don't have permission to open a session. Contact your manager.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_daily_close": {
+      "type": "text",
+      "sample": "Yesterday's session was never closed. Contact your manager to close it before opening today.",
+      "maxLength": 148,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_main_cashier": {
+      "type": "text",
+      "sample": "The main cashier hasn't opened the register yet. Please wait or contact your main cashier.",
+      "maxLength": 144,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_error": {
+      "type": "text",
+      "sample": "Failed to open POS session. Please try again.",
+      "maxLength": 72,
+      "where": "text",
+      "element": "text"
+    },
+    "zero_warning": {
+      "type": "text",
+      "sample": "You're opening with AED 0.00 across all payment modes. Tap \"Confirm & Open\" again to continue anyway.",
+      "maxLength": 162,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

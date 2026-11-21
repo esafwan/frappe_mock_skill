@@ -1,0 +1,31 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+<head><meta charset="utf-8"><title>POS closing dialog</title>
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-fonts.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-ui-tokens.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-ui-base.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/components/pos-shift.css">
+<style>html,body{margin:0}body{background:hsl(var(--background));min-height:900px}#ui-kit-stage{position:absolute;left:0;top:0;width:1440px;height:900px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style></head>
+<body>
+<div id="ui-kit-stage">
+<div class="u-screen pos-shift" data-ui="pos-closing-dialog" style="width:1440px;height:900px;position:relative;overflow:hidden"><div class="pos-shift__under"></div><div class="pos-shift__scrim">
+<div class="pos-shift__dlg" data-ui="pos-closing-dialog">
+  <button type="button" class="pos-shift__dlg-x" aria-label="Close"><svg class="lucide lucide-x" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <div class="pos-shift__dlg-head"><h2 class="pos-shift__dlg-title">إغلاق نقطة البيع</h2><p class="pos-shift__dlg-desc">راجع مبيعات ورديتك وأدخل المبالغ الفعلية للإغلاق.</p></div>
+  <div class="pos-shift__dlg-body">
+    <div class="pos-shift__sum" data-ui="pos-closing-summary">
+      <div class="pos-shift__sumcard"><p>الإجمالي الكلي</p><p>AED 1,847.50</p></div>
+      <div class="pos-shift__sumcard"><p>الصافي</p><p>AED 1,759.52</p></div>
+      <div class="pos-shift__sumcard"><p>إجمالي الكمية</p><p>86</p></div>
+      <div class="pos-shift__sumcard"><p>إجمالي الفواتير</p><p>42</p></div>
+    </div>
+    <div style="width:100%;overflow-x:auto"><table class="pos-shift__ctable" data-ui="pos-closing-table"><thead><tr>
+      <th class="is-start">طريقة الدفع</th><th>الافتتاح</th><th class=""><span title="">المتوقع<i aria-hidden="true">i</i></span></th><th class="is-center"><span title="">الإغلاق<i aria-hidden="true">i</i></span></th><th class=""><span title="">الفرق<i aria-hidden="true">i</i></span></th>
+    </tr></thead><tbody><tr class=""><td class="is-mode">نقدي</td><td>AED 500.00</td><td>AED 1,150.00</td><td><div class="pos-shift__input u-num is-center">AED 1,150.00</div></td><td class="is-diff is-green">AED 0.00</td></tr><tr class=""><td class="is-mode">بطاقة</td><td>AED 0.00</td><td>AED 520.50</td><td><div class="pos-shift__input u-num is-center">AED 508.00</div></td><td class="is-diff is-red">AED -12.50</td></tr><tr class="is-untouched"><td class="is-mode">دفع إلكتروني</td><td>AED 0.00</td><td>AED 177.00</td><td><div class="pos-shift__input u-num is-center is-empty is-warn"><span style="opacity:.6">0.00</span></div></td><td class="is-diff is-red">AED -177.00</td></tr></tbody></table></div>
+    <p class="pos-shift__amber" data-ui="pos-closing-warning">تم ترك طريقة دفع واحدة أو أكثر عند 0 رغم وجود حركة اليوم. يرجى التحقق قبل الإرسال.</p>
+  </div>
+  
+  <div class="pos-shift__dlg-foot" data-ui="pos-closing-footer"><button type="button" class="u-btn u-btn--outline">إلغاء</button><button type="button" class="u-btn u-btn--default" data-ui="pos-closing-submit">إغلاق الوردية</button></div>
+</div></div></div>
+</div>
+</body></html>

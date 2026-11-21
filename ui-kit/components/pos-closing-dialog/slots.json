@@ -1,0 +1,279 @@
+{
+  "component": "pos-closing-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Close POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "desc": {
+      "type": "text",
+      "sample": "Review sales for your session and enter the actual closing amounts.",
+      "maxLength": 108,
+      "where": "text",
+      "element": "text"
+    },
+    "l_grand": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_net": {
+      "type": "text",
+      "sample": "Net Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_qty": {
+      "type": "text",
+      "sample": "Total Quantity",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_invoices": {
+      "type": "text",
+      "sample": "Total Invoices",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "grand": {
+      "type": "currency",
+      "sample": "AED 1,847.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "net": {
+      "type": "currency",
+      "sample": "AED 1,759.52",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty": {
+      "type": "text",
+      "sample": "86",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "invoices": {
+      "type": "text",
+      "sample": "42",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_mode": {
+      "type": "text",
+      "sample": "Payment Mode",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_opening": {
+      "type": "text",
+      "sample": "Opening",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_expected": {
+      "type": "text",
+      "sample": "Expected",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_closing": {
+      "type": "text",
+      "sample": "Closing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_diff": {
+      "type": "text",
+      "sample": "Difference",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "row1": {
+      "type": "text",
+      "sample": "Cash",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "row2": {
+      "type": "text",
+      "sample": "Card",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "row3": {
+      "type": "text",
+      "sample": "Online Payment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open1": {
+      "type": "currency",
+      "sample": "AED 500.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open2": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open3": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "exp1": {
+      "type": "currency",
+      "sample": "AED 1,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "exp2": {
+      "type": "currency",
+      "sample": "AED 520.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "exp3": {
+      "type": "currency",
+      "sample": "AED 177.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cl1": {
+      "type": "currency",
+      "sample": "AED 1,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cl2": {
+      "type": "currency",
+      "sample": "AED 508.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "diff1": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "diff2": {
+      "type": "currency",
+      "sample": "AED -12.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "diff3": {
+      "type": "currency",
+      "sample": "AED -177.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "warn_zero": {
+      "type": "text",
+      "sample": "One or more payment modes were left at 0 despite having activity today. Double-check before submitting.",
+      "maxLength": 165,
+      "where": "text",
+      "element": "text"
+    },
+    "no_invoices": {
+      "type": "text",
+      "sample": "No invoices were found for this period.",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_close": {
+      "type": "text",
+      "sample": "Close POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_submitting": {
+      "type": "text",
+      "sample": "Closing POS...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_fail": {
+      "type": "text",
+      "sample": "Failed to close POS",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "confirm_title": {
+      "type": "text",
+      "sample": "Confirm POS Close",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "confirm_msg": {
+      "type": "text",
+      "sample": "This will submit the closing entry and cannot be undone. Are you sure you want to continue?",
+      "maxLength": 146,
+      "where": "text",
+      "element": "text"
+    },
+    "confirm_yes": {
+      "type": "text",
+      "sample": "Yes, Close POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "confirm_back": {
+      "type": "text",
+      "sample": "Go Back",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

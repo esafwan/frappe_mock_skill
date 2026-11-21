@@ -1,0 +1,34 @@
+<div class="u-screen pos-shift" data-ui="pos-opening-screen" style="width:1440px;height:900px;position:relative;overflow:hidden"><div class="pos-shift__under"></div><div class="pos-shift__scrim pos-shift__scrim--p4">
+<div class="pos-shift__card" data-ui="pos-opening-card">
+  <div class="pos-shift__head" data-ui="pos-opening-header"><div class="pos-shift__head-row">
+    <div class="pos-shift__icon"><svg class="lucide lucide-store" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></svg></div>
+    <div><h1 class="pos-shift__title">{{title}}</h1><p class="pos-shift__sub">{{subtitle}}</p></div>
+  </div></div>
+  <div class="pos-shift__body">
+    <section class="pos-shift__sec" data-ui="pos-opening-details">
+      <h2 class="pos-shift__label">{{l_details}}</h2>
+      <div class="pos-shift__badges"><span class="u-badge u-badge--secondary u-badge--sm">{{l_company}}: {{company}}</span><span class="u-badge u-badge--secondary u-badge--sm">{{l_branch}}: {{branch}}</span><span class="u-badge u-badge--secondary u-badge--sm">{{l_restaurant}}: {{restaurant}}</span><span class="u-badge u-badge--secondary u-badge--sm">{{l_cashier}}: {{cashier}}</span><span class="u-badge u-badge--secondary u-badge--sm">{{l_start}}: {{start}}</span></div>
+      <div class="pos-shift__profile"><span>{{l_profile}}:</span><span class="u-badge u-badge--info u-badge--sm" style="color:inherit">{{profile}}</span></div>
+    </section>
+    <section class="pos-shift__sec" data-ui="pos-opening-balance">
+      <div class="pos-shift__sec-row"><h2 class="pos-shift__label">{{l_balance}}</h2><span class="pos-shift__total u-num">{{total_open}}</span></div>
+      <div class="pos-shift__stack">
+        <p class="pos-shift__help">{{help}}</p>
+        <div class="pos-shift__tablewrap"><table class="pos-shift__table" data-ui="pos-opening-table">
+          <thead><tr><th>{{l_mode}}</th><th class="is-end">{{l_amount}}</th></tr></thead>
+          <tbody>
+            <tr><td>{{mode1}}</td><td><div class="pos-shift__input u-num ">{{amt1}}</div></td></tr>
+            <tr><td>{{mode2}}</td><td><div class="pos-shift__input u-num ">{{amt2}}</div></td></tr>
+            <tr><td>{{mode3}}</td><td><div class="pos-shift__input u-num ">{{amt3}}</div></td></tr>
+          </tbody></table></div>
+        <div class="pos-shift__sumrow"><b>{{l_total}}</b><b class="u-num">{{total_open}}</b></div>
+      </div>
+    </section>
+    
+  </div>
+  <div class="pos-shift__actions" data-ui="pos-opening-actions">
+    <button type="button" class="u-btn u-btn--default" data-ui="pos-opening-submit">{{btn_open}}</button>
+    <button type="button" class="u-btn u-btn--outline"><svg class="lucide lucide-refresh-cw" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>{{btn_retry}}</button>
+    <button type="button" class="u-btn u-btn--outline">{{btn_back}}</button>
+  </div>
+</div></div></div>

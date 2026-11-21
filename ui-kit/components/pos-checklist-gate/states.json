@@ -1,0 +1,306 @@
+{
+  "component": "pos-checklist-gate",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "closing": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ]
+      },
+      "screenshot": "states/closing.png",
+      "preview": "states/closing.html",
+      "description": "Closing checklist fully answered: Submit enabled."
+    },
+    "opening": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ]
+      },
+      "values": {
+        "gate_title": "Opening Checklist",
+        "item1": "Cash drawer counted",
+        "item2": "Card terminal connected",
+        "item3": "Printer paper loaded",
+        "item4": "Floor cleaned and tables set",
+        "blocked_heading": "Opening Checklist Required",
+        "blocked_msg": "Cashier has not completed the Opening Checklist yet. Please ask the Cashier to complete it before continuing."
+      },
+      "screenshot": "states/opening.png",
+      "preview": "states/opening.html",
+      "description": "Opening checklist title and items, all answered."
+    },
+    "opening-incomplete": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": null,
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": null,
+            "rem": null,
+            "req": false
+          }
+        ]
+      },
+      "values": {
+        "gate_title": "Opening Checklist",
+        "item1": "Cash drawer counted",
+        "item2": "Card terminal connected",
+        "item3": "Printer paper loaded",
+        "item4": "Floor cleaned and tables set",
+        "blocked_heading": "Opening Checklist Required",
+        "blocked_msg": "Cashier has not completed the Opening Checklist yet. Please ask the Cashier to complete it before continuing."
+      },
+      "screenshot": "states/opening-incomplete.png",
+      "preview": "states/opening-incomplete.html",
+      "description": "Opening checklist with a FAIL missing its remark (error text) and unanswered items; Submit disabled."
+    },
+    "blocked": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "blocked"
+      },
+      "screenshot": "states/blocked.png",
+      "preview": "states/blocked.html",
+      "description": "Predecessor role has not finished: \"<Checklist> Required\" with the Recheck button."
+    },
+    "blocked-opening": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "blocked"
+      },
+      "values": {
+        "gate_title": "Opening Checklist",
+        "item1": "Cash drawer counted",
+        "item2": "Card terminal connected",
+        "item3": "Printer paper loaded",
+        "item4": "Floor cleaned and tables set",
+        "blocked_heading": "Opening Checklist Required",
+        "blocked_msg": "Cashier has not completed the Opening Checklist yet. Please ask the Cashier to complete it before continuing."
+      },
+      "screenshot": "states/blocked-opening.png",
+      "preview": "states/blocked-opening.html",
+      "description": "Blocked state for the Opening checklist."
+    },
+    "start": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "start",
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ]
+      },
+      "screenshot": "states/start.png",
+      "preview": "states/start.html",
+      "description": "Eligible user before starting: Start Checklist button."
+    },
+    "submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ],
+        "submitting": true
+      },
+      "screenshot": "states/submitting.png",
+      "preview": "states/submitting.html",
+      "description": "Submitting label with button dimmed."
+    },
+    "submit-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ],
+        "submitError": true
+      },
+      "screenshot": "states/submit-error.png",
+      "preview": "states/submit-error.html",
+      "description": "Incomplete submission error text above the button."
+    },
+    "with-skip-bar": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          {
+            "st": "P",
+            "rem": null,
+            "req": true
+          },
+          {
+            "st": "F",
+            "rem": "rem2",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": "rem3",
+            "req": true
+          },
+          {
+            "st": "P",
+            "rem": null,
+            "req": false
+          }
+        ],
+        "skip": true
+      },
+      "screenshot": "states/with-skip-bar.png",
+      "preview": "states/with-skip-bar.html",
+      "description": "Closing checklist after POS close: fixed bottom-6 bar with Skip for now (z-60)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "Submit Checklist is shown disabled in the default variant until all mandatory items are answered"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the submit-error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "the submitting variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "no items auto-submits and is not rendered"
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "component": "pos-checklist-gate",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "gate_title": {
+      "type": "text",
+      "sample": "Closing Checklist",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "gate_desc": {
+      "type": "text",
+      "sample": "Please complete the checklist below before you continue.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "text"
+    },
+    "item1": {
+      "type": "text",
+      "sample": "Cash drawer counted and sealed",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "item2": {
+      "type": "text",
+      "sample": "Kitchen equipment switched off",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "item3": {
+      "type": "text",
+      "sample": "Tables cleaned and reset",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "item4": {
+      "type": "text",
+      "sample": "Printer paper stock checked",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "pass": {
+      "type": "text",
+      "sample": "PASS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fail": {
+      "type": "text",
+      "sample": "FAIL",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ph_remarks": {
+      "type": "text",
+      "sample": "Remarks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ph_fail": {
+      "type": "text",
+      "sample": "Explain the failure (required)",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "fail_required": {
+      "type": "text",
+      "sample": "Remarks are required for failed items.",
+      "maxLength": 61,
+      "where": "text",
+      "element": "text"
+    },
+    "rem2": {
+      "type": "text",
+      "sample": "Gas line left on, manager informed",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "rem3": {
+      "type": "text",
+      "sample": "Done before 11 PM",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_submit": {
+      "type": "text",
+      "sample": "Submit Checklist",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_submitting": {
+      "type": "text",
+      "sample": "Submitting...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_recheck": {
+      "type": "text",
+      "sample": "Recheck",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_start": {
+      "type": "text",
+      "sample": "Start Checklist",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "blocked_heading": {
+      "type": "text",
+      "sample": "Closing Checklist Required",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "blocked_msg": {
+      "type": "text",
+      "sample": "Cashier has not completed the Closing Checklist yet. Please ask the Cashier to complete it before continuing.",
+      "maxLength": 175,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_incomplete": {
+      "type": "text",
+      "sample": "Every item must be marked PASS or FAIL before this checklist can be completed.",
+      "maxLength": 125,
+      "where": "text",
+      "element": "text"
+    },
+    "skip_hint": {
+      "type": "text",
+      "sample": "The POS close was already submitted. You can finish this checklist later.",
+      "maxLength": 117,
+      "where": "text",
+      "element": "text"
+    },
+    "skip": {
+      "type": "text",
+      "sample": "Skip for now",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

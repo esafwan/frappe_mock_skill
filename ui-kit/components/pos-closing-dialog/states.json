@@ -1,0 +1,89 @@
+{
+  "component": "pos-closing-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "confirm": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "confirm": true
+      },
+      "screenshot": "states/confirm.png",
+      "preview": "states/confirm.html",
+      "description": "Confirm modal (z-70, max-w 384): Go Back / Yes, Close POS over the dialog."
+    },
+    "confirm-submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "confirm": true,
+        "submitting": true
+      },
+      "screenshot": "states/confirm-submitting.png",
+      "preview": "states/confirm-submitting.html",
+      "description": "Confirm modal while the closing entry is submitting."
+    },
+    "submit-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "error": true
+      },
+      "screenshot": "states/submit-error.png",
+      "preview": "states/submit-error.html",
+      "description": "Red submit error line above the footer."
+    },
+    "masked-amounts": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "masked": true
+      },
+      "screenshot": "states/masked-amounts.png",
+      "preview": "states/masked-amounts.html",
+      "description": "Amounts masked (shouldMaskAmounts): grand/net totals, expected and difference show an em dash."
+    },
+    "no-invoices": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "empty": true
+      },
+      "screenshot": "states/no-invoices.png",
+      "preview": "states/no-invoices.html",
+      "description": "No invoices for the period: empty message and the Close POS button disabled."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown in the empty variant (Close POS disabled)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "shown as the submit-error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "the submitting variant shows the closing label"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "shown as the empty variant"
+    }
+  }
+}

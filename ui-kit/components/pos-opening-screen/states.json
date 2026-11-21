@@ -1,0 +1,118 @@
+{
+  "component": "pos-opening-screen",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "error-no-profiles": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "alert": "no_profiles"
+      },
+      "screenshot": "states/error-no-profiles.png",
+      "preview": "states/error-no-profiles.html",
+      "description": "No POS Profile for the user: red alert, inputs and Open button disabled."
+    },
+    "error-no-permission": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "alert": "no_permission"
+      },
+      "screenshot": "states/error-no-permission.png",
+      "preview": "states/error-no-permission.html",
+      "description": "User cannot create or submit an opening entry: red alert with lock icon."
+    },
+    "warning-previous-day": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "alert": "daily_close"
+      },
+      "screenshot": "states/warning-previous-day.png",
+      "preview": "states/warning-previous-day.html",
+      "description": "Previous day not closed: orange alert, Open button disabled."
+    },
+    "warning-main-cashier": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "alert": "main_cashier"
+      },
+      "screenshot": "states/warning-main-cashier.png",
+      "preview": "states/warning-main-cashier.html",
+      "description": "Multi-cashier: main cashier has not opened yet, orange alert."
+    },
+    "zero-balance-confirm": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "zero": true
+      },
+      "screenshot": "states/zero-balance-confirm.png",
+      "preview": "states/zero-balance-confirm.html",
+      "description": "All amounts zero after the first press: orange warning and the button reads Confirm & Open."
+    },
+    "submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "submitting": true
+      },
+      "screenshot": "states/submitting.png",
+      "preview": "states/submitting.html",
+      "description": "Opening in progress: spinner icon and Opening... label, actions disabled."
+    },
+    "submit-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "error": true
+      },
+      "screenshot": "states/submit-error.png",
+      "preview": "states/submit-error.html",
+      "description": "Server error shown in a red box above the actions."
+    },
+    "profile-select": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "profileSelect": true
+      },
+      "screenshot": "states/profile-select.png",
+      "preview": "states/profile-select.html",
+      "description": "More than one allowed profile: POS Profile select replaces the profile badge."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "shown as the blocked variants where the action buttons and inputs are disabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "the submitting variant covers the loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "amounts left at zero are the zero-balance variant"
+    }
+  }
+}
