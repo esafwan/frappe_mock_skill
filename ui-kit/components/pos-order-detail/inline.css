@@ -606,6 +606,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
    Sources: pos/src/pages/Orders.tsx, components/{OrderStatusSidebar,OrderActionsMenu,SplitGroupPanel,MergedBillPanel}.tsx @100c43fe2e
    Logical properties only; tokens via var(--x). */
 .po {
+  --po-sunk: var(--gray-50); --po-hi: var(--gray-100);
   --tw-red-100: #fee2e2; --tw-blue-500: #3b82f6;
   font-family: var(--font-sans); color: hsl(var(--foreground)); -webkit-font-smoothing: antialiased;
   box-sizing: border-box; line-height: 1.5; text-align: start;
@@ -619,7 +620,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-screen { background: hsl(var(--background)); }
 .po-screen__row { display: flex; height: 852px; overflow: hidden; }
 .po-mid { flex: 1 1 0%; min-width: 0; display: flex; flex-direction: column; height: 852px; overflow: hidden; padding-inline-end: 384px; }
-.po-mid__scroll { flex: 1 1 0%; overflow: hidden; background: hsl(var(--gray-50)); padding: 16px 16px 160px; }
+.po-mid__scroll { flex: 1 1 0%; overflow: hidden; background: hsl(var(--po-sunk)); padding: 16px 16px 160px; }
 .po-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1280px; margin-inline: auto; }
 .po-pager { padding-block: 16px; }
 .po-pager__row { display: flex; justify-content: center; align-items: center; column-gap: 16px; max-width: 1280px; margin-inline: auto; }
@@ -630,7 +631,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 /* ---------- status sidebar (w-64) ---------- */
 .po-sidebar { width: 256px; height: 100%; flex-shrink: 0; display: flex; flex-direction: column; background: hsl(var(--card)); border-inline-end: 1px solid hsl(var(--border)); }
 .po-sidebar__nav { flex: 1 1 0%; padding: 24px; overflow: hidden; }
-.po-sidebar__card { background: hsl(var(--gray-50)); border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 16px; }
+.po-sidebar__card { background: hsl(var(--po-sunk)); border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 16px; }
 .po-sidebar__title { font-size: 12px; line-height: 16px; font-weight: 500; color: hsl(var(--gray-500)); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px !important; padding-inline: 4px; }
 .po-sidebar__list { display: flex; flex-direction: column; gap: 4px; }
 .po-sidebar__item { position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border: 0; background: transparent; border-radius: 6px; font: inherit; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-700)); text-align: start; }
@@ -649,7 +650,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-card { display: flex; flex-direction: column; overflow: hidden; padding: 0; background: hsl(var(--card)); text-align: start; }
 .po-card.is-selected { box-shadow: 0 0 0 2px var(--tw-blue-500), var(--shadow-lg); }
 .po-card.is-linked { border-inline-start: 4px solid hsl(var(--primary-500)); }
-.po-card__head { padding: 12px; background: hsl(var(--gray-50)); border-bottom: 1px solid hsl(var(--border)); }
+.po-card__head { padding: 12px; background: hsl(var(--po-sunk)); border-bottom: 1px solid hsl(var(--border)); }
 .po-card__r1 { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
 .po-card__name { font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-900)); min-width: 0; }
 .po-card__tags { display: flex; flex-shrink: 0; align-items: center; gap: 4px; }
@@ -673,7 +674,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-dh__title { flex: 1 1 0%; min-width: 0; font-size: 20px; line-height: 28px; font-weight: 600; color: hsl(var(--gray-900)); }
 .po-dh__acts { display: flex; flex-shrink: 0; align-items: center; gap: 8px; }
 .po-dh__tags { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.po-ibtn { display: inline-flex; align-items: center; justify-content: center; padding: 8px; border: 0; border-radius: 6px; background: hsl(var(--gray-100)); color: hsl(var(--gray-700)); }
+.po-ibtn { display: inline-flex; align-items: center; justify-content: center; padding: 8px; border: 0; border-radius: 6px; background: hsl(var(--po-hi)); color: hsl(var(--gray-700)); }
 .po-ibtn--red { color: var(--tw-red-600); }
 .po-ibtn svg { width: 16px; height: 16px; }
 .po-kebab { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 0; background: transparent; border-radius: 6px; color: hsl(var(--gray-600)); }
@@ -687,7 +688,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-info__row b { font-weight: 500; color: hsl(var(--gray-900)); }
 .po-h3 { font-size: 18px; line-height: 28px; font-weight: 600; color: hsl(var(--gray-900)); margin-bottom: 16px !important; }
 .po-items { display: flex; flex-direction: column; gap: 12px; }
-.po-item { display: flex; justify-content: space-between; align-items: flex-start; padding-block: 8px; border-bottom: 1px solid hsl(var(--gray-100)); }
+.po-item { display: flex; justify-content: space-between; align-items: flex-start; padding-block: 8px; border-bottom: 1px solid hsl(var(--po-hi)); }
 .po-item__main { flex: 1 1 0%; min-width: 0; }
 .po-item__nr { display: flex; align-items: center; gap: 8px; }
 .po-item__name { font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-900)); }
@@ -699,7 +700,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-taxes { display: flex; flex-direction: column; gap: 8px; }
 .po-tax { display: flex; justify-content: space-between; align-items: center; padding-block: 4px; font-size: 14px; line-height: 20px; color: hsl(var(--gray-600)); }
 .po-tax b { font-weight: 500; color: hsl(var(--gray-900)); }
-.po-df { position: absolute; inset-inline: 0; bottom: 0; z-index: 10; border-top: 1px solid hsl(var(--border)); padding: 24px; background: hsl(var(--gray-50)); }
+.po-df { position: absolute; inset-inline: 0; bottom: 0; z-index: 10; border-top: 1px solid hsl(var(--border)); padding: 24px; background: hsl(var(--po-sunk)); }
 .po-df__row { display: flex; align-items: center; gap: 12px; width: 100%; }
 .po-df .u-btn--icon svg { width: 20px; height: 20px; }
 .po-df .po-pay { flex: 1 1 0%; }
@@ -742,7 +743,7 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-am { position: relative; display: inline-block; vertical-align: top; }
 .po-am__pop { position: absolute; inset-inline-end: 0; top: 100%; margin-top: 4px; z-index: 50; width: 192px; border-radius: 8px; border: 1px solid hsl(var(--border)); background: hsl(var(--card)); padding-block: 4px; box-shadow: var(--shadow-lg); }
 .po-am__item { display: flex; align-items: center; justify-content: flex-start; gap: 8px; width: 100%; border: 0; background: transparent; padding: 8px 16px; font: inherit; font-size: 14px; line-height: 20px; font-weight: 400; color: hsl(var(--gray-700)); text-align: start; border-radius: 0; }
-.po-am__item.is-hover { background: hsl(var(--gray-100)); }
+.po-am__item.is-hover { background: hsl(var(--po-hi)); }
 .po-am__item svg { width: 16px; height: 16px; }
 .po-amstage { position: relative; width: 480px; height: 360px; padding: 16px; background: hsl(var(--background)); }
 .po-amstage--cancel { height: 520px; }
@@ -755,3 +756,16 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .po-textarea { width: 100%; min-height: 80px; border: 1px solid hsl(var(--input)); border-radius: 6px; background: hsl(var(--background)); padding: 8px 12px; font: inherit; font-size: 14px; line-height: 20px; color: hsl(var(--foreground)); resize: none; display: block; }
 .po-textarea::placeholder { color: hsl(var(--muted-foreground)); }
 .po-cancel__f { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 24px 24px; }
+
+/* ---------- dark: one navy surface set (sunken = --background, raised = --card, hi = --border) ---------- */
+.dark .po, [data-theme=dark] .po { --po-sunk: var(--background); --po-hi: var(--border); }
+
+/* ---------- fix round ---------- */
+.po-pane { height: 852px; }
+.po-detail { height: 852px; }
+.po-card.is-selected { box-shadow: var(--shadow-lg); outline: 2px solid var(--tw-blue-500); outline-offset: -1px; }
+.po-card__name { flex: 1 1 auto; }
+.po-card__r2 { align-items: flex-start; }
+.po-card__sub { flex: 1 1 0%; }
+.po-card__sub p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.po-card__st { flex-wrap: wrap; justify-content: flex-end; }
