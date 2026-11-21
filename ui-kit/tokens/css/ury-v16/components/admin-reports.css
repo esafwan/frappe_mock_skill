@@ -124,4 +124,7 @@ html[dir=rtl] .uar-flipx { transform: scaleX(-1); }
 .uar-wf.is-nested::before { content: ""; position: absolute; inset-block: 0; inset-inline-start: 24px; border-inline-start: 2px solid hsl(var(--border)); }
 /* dark navbar: the wordmark is dark blue, lift it to the foreground colour */
 .dark .ua-logo img { filter: brightness(0) invert(1); }
-.uar-sign { margin-inline-end: -3px; }
+.uar-sa { display: inline-flex; align-items: baseline; gap: 0; direction: ltr; unicode-bidi: isolate; white-space: nowrap; }
+.uar-sign { margin: 0; font-weight: inherit; }
+.uar-ms { min-height: 36px; }
+

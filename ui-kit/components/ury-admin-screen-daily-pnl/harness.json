@@ -28,7 +28,7 @@
     "rtl"
   ],
   "describe": [
-    "Daily P&L at 1440x900 inside the admin shell with the Reports group open: branch and date selects, four KPI figures and the P&L Statement waterfall with grouped breakup rows, subtotals and highlighted headline rows; the sample day is a loss day, so Gross and Net Profit show the destructive tint with a minus sign above the fold.",
+    "Daily P&L at 1440x900 inside the admin shell with the Reports group open: branch and date selects, four KPI figures and the P&L Statement waterfall with grouped breakup rows, subtotals and highlighted headline rows; the sample day is a small loss day (about -8% of sales): Gross Profit takes the success tint with a plus sign and Net Profit the destructive tint with a minus sign, glued to the amount. Negatives use one U+2212 minus everywhere. The Daily P&L report card keeps the registry IndianRupee icon (reportsRegistry.ts) for fidelity.",
     "The statement runs below the fold; the main area scrolls. Arabic comes from ury/translations/ar.csv; \"Amount\", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. \"# Orders\" and \"% of Total\" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary)."
   ],
   "darkTheme": ".dark",

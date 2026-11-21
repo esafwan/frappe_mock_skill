@@ -49,7 +49,7 @@ const trVariants = {
 };
 const plRender = (v, p) => dailyPnl(p);
 const plVariants = {
-  'profit-day': { props: { profit: true }, describe: 'A profitable day: Gross Profit takes the success tint with a plus sign and the Gross Profit KPI turns success; Net Profit stays negative.' },
+  'profit-day': { props: { profit: true }, describe: 'A profitable day: Gross and Net Profit both take the success tint with a plus sign.' },
   empty: { props: { state: 'empty' }, state: 'empty', describe: 'No submitted Daily P&L for this branch and date: the warning Alert.' },
   loading: { props: { state: 'loading' }, state: 'loading', describe: 'isLoading: the "Loading…" line under the header.' },
 };
@@ -66,5 +66,5 @@ export const specs = [
   mk({ ...screenBase, id: 'ury-admin-screen-report', name: 'URY admin Today\'s Sales report', props: {}, na: NA('the screen', 'loading', 'empty'),
     describe: ['Today\'s Sales report at 1440x900 inside the admin shell with the Reports group open: PageHeader with the Updated time, sticky filter bar, six-figure KPI strip, a Top Selling Items table with totals row, and Prev / Next pagination.', 'Template for every report page. The filter bar, totals row and pagination are composed from the date-range, MultiSelect, DataTable and pagination patterns used across the Reports pages. ' + note] }, trRender, trVariants),
   mk({ ...screenBase, id: 'ury-admin-screen-daily-pnl', name: 'URY admin Daily P&L', props: {}, na: NA('the screen', 'loading', 'empty'),
-    describe: ['Daily P&L at 1440x900 inside the admin shell with the Reports group open: branch and date selects, four KPI figures and the P&L Statement waterfall with grouped breakup rows, subtotals and highlighted headline rows; the sample day is a loss day, so Gross and Net Profit show the destructive tint with a minus sign above the fold.', 'The statement runs below the fold; the main area scrolls. ' + note] }, plRender, plVariants),
+    describe: ['Daily P&L at 1440x900 inside the admin shell with the Reports group open: branch and date selects, four KPI figures and the P&L Statement waterfall with grouped breakup rows, subtotals and highlighted headline rows; the sample day is a small loss day (about -8% of sales): Gross Profit takes the success tint with a plus sign and Net Profit the destructive tint with a minus sign, glued to the amount. Negatives use one U+2212 minus everywhere. The Daily P&L report card keeps the registry IndianRupee icon (reportsRegistry.ts) for fidelity.', 'The statement runs below the fold; the main area scrolls. ' + note] }, plRender, plVariants),
 ];
