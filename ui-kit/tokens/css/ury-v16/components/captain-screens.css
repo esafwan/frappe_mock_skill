@@ -1,0 +1,65 @@
+/* URY v16 Captain full screens (pos/src/captain/pages/CaptainTables.tsx, CaptainOrder.tsx @ ury-erp/version-16 100c43fe2e).
+   Composes the .ucap-* component rules from captain.css; this file only holds the page chrome. Logical properties only. */
+.ucs { display: flex; flex-direction: column; background: hsl(var(--gray-50)); overflow: hidden; }
+.ucs h1 { margin: 0; }
+
+/* ---- Tables ---- */
+.ucs-thead { position: sticky; top: 0; z-index: 10; padding: 12px; background: hsl(var(--white)); border-bottom: 1px solid hsl(var(--border)); }
+.ucs-trow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ucs-ttitle { font-size: 18px; line-height: 28px; font-weight: 700; color: hsl(var(--gray-900)); }
+.ucs-rooms { display: flex; gap: 8px; margin-top: 8px; padding-bottom: 4px; overflow: hidden; }
+.ucs-rooms .u-btn { height: 36px; flex: none; }
+.ucs-tbody { flex: 1 1 0%; padding: 12px; min-height: 0; overflow: hidden; }
+.ucs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ucs-grid .ucap-tc { width: auto !important; min-width: 0; }
+.ucs-state { display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding-block: 64px; color: hsl(var(--gray-500)); }
+.ucs-state--error { color: var(--tw-red-500); }
+.ucs-state svg { width: 32px; height: 32px; }
+.ucs-state p { margin: 0; font-size: 14px; line-height: 20px; }
+
+/* ---- Order header ---- */
+.ucs-hd { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 12px; background: hsl(var(--white)); border-bottom: 1px solid hsl(var(--border)); }
+.ucs-hd-l { display: flex; align-items: center; gap: 8px; }
+.ucs-hd-r { display: flex; align-items: center; gap: 8px; }
+.ucs-ibtn { display: flex; flex: none; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 6px; color: hsl(var(--gray-600)); }
+.ucs-ibtn svg { width: 20px; height: 20px; }
+.ucs-title { font-size: 16px; line-height: 20px; font-weight: 600; color: hsl(var(--gray-900)); }
+.ucs-sub { margin: 0; font-size: 12px; line-height: 16px; color: hsl(var(--gray-500)); }
+.ucs-seg { display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 9999px; background: hsl(var(--gray-100)); }
+.ucs-seg-b { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 9999px; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-600)); white-space: nowrap; }
+.ucs-seg-b svg { width: 16px; height: 16px; }
+.ucs-seg-b--on { background: hsl(var(--white)); color: hsl(var(--gray-900)); box-shadow: var(--shadow-sm); }
+.ucs-seg-n { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding-inline: 4px; margin-inline-start: 2px; border-radius: 9999px; background: var(--tw-blue-600); color: #fff; font-size: 12px; line-height: 16px; }
+.ucs-banner { padding: 12px 12px 0; }
+.ucs-banner p { margin: 0; padding: 8px 12px; border: 1px solid var(--tw-amber-200); border-radius: 8px; background: var(--tw-amber-50); color: var(--tw-amber-800); font-size: 14px; line-height: 20px; }
+
+/* ---- Panes ---- */
+.ucs-pane { flex: 1 1 0%; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.ucs-pane > .ucap-mp, .ucs-pane > .ucs-ol { width: 100% !important; }
+.ucs-bar { position: sticky; bottom: 0; }
+.ucs-bar > .ucap-sb { width: 100% !important; }
+.ucs-lg-row { display: flex; flex: 1 1 0%; min-height: 0; gap: 16px; padding: 12px; overflow: hidden; }
+.ucs-lg-panel { flex: 1 1 0%; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--white)); }
+.ucs-lg-panel > .ucap-mp, .ucs-lg-panel > .ucs-ol { width: 100% !important; }
+.ucs-lg-bar { margin-inline: 12px; margin-bottom: 12px; border-radius: 8px; background: hsl(var(--white)); }
+.ucs-lg-bar > .ucap-sb { width: auto !important; border-radius: 8px; }
+
+/* ---- Order list ---- */
+.ucs-ol { display: flex; flex-direction: column; gap: 20px; padding: 12px; font-size: 16px; line-height: 24px; }
+.ucs-pax { display: flex; align-items: center; justify-content: space-between; padding: 12px; border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--white)); }
+.ucs-pax-l { font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-700)); }
+.ucs-pax-v { font-size: 14px; line-height: 20px; color: hsl(var(--gray-900)); }
+.ucs-pax-c { display: flex; align-items: center; gap: 12px; }
+.ucs-pax-c .ucs-pax-n { width: 24px; text-align: center; }
+.ucs-pax-b { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid hsl(var(--input)); border-radius: 9999px; background: hsl(var(--background)); box-shadow: var(--shadow-sm); font-size: 14px; line-height: 20px; font-weight: 500; }
+.ucs-pax-b.is-off { opacity: .5; }
+.ucs-sec-h { margin: 0 0 8px; padding-inline: 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .025em; text-transform: uppercase; color: hsl(var(--gray-500)); }
+.ucs-sec-h--new { color: var(--tw-blue-600); }
+.ucs-sec-h--red { color: var(--tw-red-600); }
+.ucs-lines { display: flex; flex-direction: column; gap: 8px; }
+.ucs-lines .ucap-ol { width: auto !important; }
+.ucs-reduce { display: block; margin-inline-start: 12px; margin-top: 2px; margin-bottom: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--tw-red-600); }
+.ucs-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: 64px; text-align: center; }
+.ucs-empty > svg { width: 40px; height: 40px; margin-bottom: 12px; color: hsl(var(--gray-300)); }
+.ucs-empty p { margin: 0; font-size: 14px; line-height: 20px; color: hsl(var(--gray-500)); }
+.ucs-empty .u-btn { margin-top: 12px; }

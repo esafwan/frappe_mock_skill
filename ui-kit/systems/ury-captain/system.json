@@ -1,0 +1,55 @@
+{
+ "id": "ury-captain",
+ "name": "URY Captain app (waiter/captain PWA)",
+ "status": "planned",
+ "partOf": "ury",
+ "source": {
+  "app": "ury",
+  "branch": "version-16",
+  "commit": "100c43fe2e",
+  "path": "/Users/safwan/Code/ury-v16-latest/pos/src/captain",
+  "root": "/Users/safwan/Code/ury-v16-latest"
+ },
+ "componentGroup": "ury-captain",
+ "componentPrefix": "ury-captain-",
+ "captureMode": {
+  "kind": "static",
+  "how": "Hand-authored HTML/CSS from the v16 source class lists (scripts/ury-v16/captain/*.mjs) rendered through scripts/static-capture.mjs (scripts/specs-ury-captain.mjs)."
+ },
+ "variableSystem": {
+  "kind": "hsl-vars",
+  "themeAttribute": "class:dark",
+  "theme": {
+   "light": null,
+   "dark": "class=\"dark\" on <html>"
+  },
+  "files": {
+   "tokens": "tokens/css/ury-v16/ury-ui-tokens.css",
+   "base": "tokens/css/ury-v16/ury-ui-base.css",
+   "fonts": "tokens/css/ury-v16/ury-fonts.css",
+   "components": "tokens/css/ury-v16/components/*.css"
+  }
+ },
+ "modes": [
+  "light",
+  "dark",
+  "rtl"
+ ],
+ "rtl": {
+  "supported": true,
+  "mechanism": "dir=\"rtl\" on root; logical CSS properties; Arabic from locale files"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 390,
+   "h": 844,
+   "deviceScaleFactor": 2
+  }
+ },
+ "coverage": [
+  "table grid",
+  "order taking",
+  "cart and KOT",
+  "captain screens"
+ ]
+}
