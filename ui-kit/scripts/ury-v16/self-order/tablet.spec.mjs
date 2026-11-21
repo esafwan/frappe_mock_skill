@@ -4,6 +4,7 @@
 // Currency: the source prints raw server strings; the kit renders typed, formatted currency slots (money()).
 import { ic, money, screen } from '../lib.mjs';
 import { photo } from './cafe-images.mjs';
+import { MENU, CATS, CATS_AR } from '../kiosk/menu.mjs';
 import { P, so_css, SAMPLE_IMG, categoryTabs, searchBar, productCard, optionRow, cartPanel } from './components.mjs';
 
 const CSS = [...so_css, 'ury-v16/components/self-order-tablet.css'];
@@ -12,13 +13,14 @@ const aed = (n) => ({ ...money(n), sample: `${Number(n).toFixed(2)} د.إ` });
 const RTL_NOTE = 'RTL is a kit extension (the source has no dir handling): the kit mirrors with logical properties and translates the fixed UI labels.';
 const IDM = P + 'screen-tablet-menu', IDD = P + 'screen-tablet-detail', IDA = P + 'screen-tablet-assign';
 
-const cats = { all: 'All', cat_1: 'Espresso', cat_2: 'Milk Coffee', cat_3: 'Filter & Cold Brew', cat_4: 'Iced', cat_5: 'Tea & Others' };
-const catsAr = { all: 'الكل', cat_1: 'إسبريسو', cat_2: 'قهوة بالحليب', cat_3: 'قهوة مفلترة وباردة', cat_4: 'مثلجات', cat_5: 'شاي ومشروبات أخرى' };
-const ITEMS = [['Espresso', 'إسبريسو', 12], ['Doppio', 'دوبيو', 16], ['Cortado', 'كورتادو', 18], ['Cappuccino', 'كابتشينو', 18], ['Latte', 'لاتيه', 20], ['Flat White', 'فلات وايت', 20], ['Mocha', 'موكا', 22], ['Croissant', 'كرواسون', 14]];
-const STEMS = ['espresso', 'doppio', 'cortado', 'cappuccino', 'latte', 'flat-white', 'mocha', 'croissant'];
+const cats = { all: 'All', ...Object.fromEntries(CATS.map((c, i) => ['cat_' + (i + 1), c])) };
+const catsAr = { all: 'الكل', ...Object.fromEntries(CATS_AR.map((c, i) => ['cat_' + (i + 1), c])) };
+// shared kiosk menu (kiosk/menu.mjs): first 8 items fill the 4x2 tablet grid; cart = Latte x1 (#4) + Cappuccino x2 (#5)
+const ITEMS = MENU.slice(0, 8).map((m) => [m.n, m.ar, m.r]);
+const STEMS = MENU.slice(0, 8).map((m) => m.img);
 const cardSlots = (ar) => Object.fromEntries(ITEMS.flatMap(([en, a, r], i) => [['m' + (i + 1) + '_img', photo(STEMS[i])], ['m' + (i + 1) + '_name', ar ? a : en], ['m' + (i + 1) + '_rate', ar ? aed(r) : money(r)]]));
-const cartSlots = { cart_title: 'Cart', c1_name: 'Latte', c1_qty: '1', c1_amount: money(20), c2_name: 'Croissant', c2_qty: '2', c2_amount: money(28), empty_text: 'Tap a menu item to add it to your cart.', count_label: '3 items', cart_total: money(48), place_order: 'Place Order' };
-const cartSlotsAr = { cart_title: 'السلة', c1_name: 'لاتيه', c1_amount: aed(20), c2_name: 'كرواسون', c2_amount: aed(28), empty_text: 'اضغط على عنصر من القائمة لإضافته إلى السلة.', count_label: '3 عناصر', cart_total: aed(48), place_order: 'تأكيد الطلب' };
+const cartSlots = { cart_title: 'Cart', c1_name: 'Latte', c1_qty: '1', c1_amount: money(16), c2_name: 'Cappuccino', c2_qty: '2', c2_amount: money(32), empty_text: 'Tap a menu item to add it to your cart.', count_label: '3 items', cart_total: money(48), place_order: 'Place Order' };
+const cartSlotsAr = { cart_title: 'السلة', c1_name: 'لاتيه', c1_amount: aed(16), c2_name: 'كابتشينو', c2_amount: aed(32), empty_text: 'اضغط على عنصر من القائمة لإضافته إلى السلة.', count_label: '3 عناصر', cart_total: aed(48), place_order: 'تأكيد الطلب' };
 const idleSlots = { idle_title: 'Still there?', idle_still_here: "I'm still here", idle_close: 'Close' };
 const idleSlotsAr = { idle_title: 'هل ما زلت هنا؟', idle_still_here: 'ما زلت هنا', idle_close: 'إغلاق' };
 const na = { disabled: 'not applicable: no distinct disabled state on this screen', error: 'not applicable: the error banner prints a dynamic server message and is not a distinct designed state', loading: 'not applicable: the "Loading menu…" screen is a separate state not captured here' };
@@ -35,7 +37,7 @@ const shell = (id, main, p) => screen(1280, 800, `${header(id)}<div class="sot-b
 
 const menuMain = (v, p) => {
   const cards = ITEMS.map((_, i) => {
-    const n = i + 1, q = p.cart ? (n === 5 ? 1 : n === 8 ? 2 : 0) : 0;
+    const n = i + 1, q = p.cart ? (n === 4 ? 1 : n === 5 ? 2 : 0) : 0;
     return productCard({ name: v['m' + n + '_name'], rate: v['m' + n + '_rate'], in_cart: v['m' + n + '_in_cart'], img: v['m' + n + '_img'], unavail: '' }, { size: 'tablet', qty: q, ui: IDM + '.card-' + n });
   }).join('');
   return `<div class="sot-pane">${categoryTabs(v, { active: 0, n: 5, ui: IDM + '.tabs' })}<div class="sot-search">${searchBar(v, { ui: IDM + '.search' })}</div><div class="sot-grid" data-ui="${IDM}.grid">${cards}</div></div>`;
@@ -69,12 +71,12 @@ const assign = (p = {}) => {
   return screen(1280, 800, `<div class="sota-head" data-ui="${IDA}.head"><h1 class="sota-h1">{{title}}</h1><p class="sota-sub">{{subtitle}}</p></div>${err}${step === 'pin' ? pinStep : tableStep}`, IDA, 'so sota');
 };
 
-const menuSlots = { title: 'Table T12', new_order: 'New Order', ...cats, placeholder: 'Search menu...', ...cardSlots(false), m5_in_cart: 'In cart: 1', m8_in_cart: 'In cart: 2', ...cartSlots, ...idleSlots };
-const menuRtl = { title: 'طاولة T12', new_order: 'طلب جديد', ...catsAr, placeholder: 'ابحث في القائمة...', ...cardSlots(true), m5_in_cart: 'في السلة: 1', m8_in_cart: 'في السلة: 2', ...cartSlotsAr, ...idleSlotsAr };
+const menuSlots = { title: 'Table T12', new_order: 'New Order', ...cats, placeholder: 'Search menu...', ...cardSlots(false), m4_in_cart: 'In cart: 1', m5_in_cart: 'In cart: 2', ...cartSlots, ...idleSlots };
+const menuRtl = { title: 'طاولة T12', new_order: 'طلب جديد', ...catsAr, placeholder: 'ابحث في القائمة...', ...cardSlots(true), m4_in_cart: 'في السلة: 1', m5_in_cart: 'في السلة: 2', ...cartSlotsAr, ...idleSlotsAr };
 
-const detailSlots = { title: 'Table T12', new_order: 'New Order', back: 'Back', detail_img: photo('latte'), name: 'Latte', desc: 'Double-shot espresso with steamed milk.', rate: money(20), variants_label: 'Variants', v1_name: 'Regular', v1_rate: money(20), v2_name: 'Large', v2_rate: money(24),
+const detailSlots = { title: 'Table T12', new_order: 'New Order', back: 'Back', detail_img: photo('latte'), name: 'Latte', desc: 'Double-shot espresso with steamed milk.', rate: money(16), variants_label: 'Variants', v1_name: 'Regular', v1_rate: money(16), v2_name: 'Large', v2_rate: money(20),
   addons_label: 'Add-ons', a1_name: 'Extra shot', a1_rate: money(4), a2_name: 'Oat milk', a2_rate: money(3), qty: '1', add_to_cart: 'Add to cart', ...cartSlots };
-const detailRtl = { title: 'طاولة T12', new_order: 'طلب جديد', back: 'رجوع', name: 'لاتيه', desc: 'إسبريسو مزدوج مع حليب مبخّر.', rate: aed(20), variants_label: 'الخيارات', v1_name: 'عادي', v1_rate: aed(20), v2_name: 'كبير', v2_rate: aed(24), addons_label: 'الإضافات', a1_name: 'جرعة إسبريسو إضافية', a1_rate: aed(4), a2_name: 'حليب الشوفان', a2_rate: aed(3), add_to_cart: 'أضف إلى السلة', ...cartSlotsAr };
+const detailRtl = { title: 'طاولة T12', new_order: 'طلب جديد', back: 'رجوع', name: 'لاتيه', desc: 'إسبريسو مزدوج مع حليب مبخّر.', rate: aed(16), variants_label: 'الخيارات', v1_name: 'عادي', v1_rate: aed(16), v2_name: 'كبير', v2_rate: aed(20), addons_label: 'الإضافات', a1_name: 'جرعة إسبريسو إضافية', a1_rate: aed(4), a2_name: 'حليب الشوفان', a2_rate: aed(3), add_to_cart: 'أضف إلى السلة', ...cartSlotsAr };
 
 const assignSlots = { title: 'Assign This Tablet', subtitle: 'Bind a portable tablet to a table', pin_label: 'Staff PIN', pin_hint: 'Enter the 4-6 digit PIN to proceed', continue: 'Continue', table_label: 'Table Name or Code', table_hint: 'Enter the table identifier to assign',
   table_placeholder: 'e.g. T12, Table A, 5', table_value: 'T12', char_count: '3 characters', assign: 'Assign Table', assigning: 'Assigning…', back: 'Back', error_title: 'Assignment Failed', error_msg: 'Could not assign this table. Please check the PIN and try again.' };
@@ -86,7 +88,7 @@ export const specs = [
     render: (v, p) => shell(IDM, menuMain(v, p), p), props: { cart: true },
     variants: {
       'empty-cart': { props: { cart: false }, values: { count_label: '0 items', cart_total: money(0) }, describe: 'Nothing in the cart: no "In cart" badges on the cards, the hint text shows in the cart panel and Place Order is disabled (opacity-50).' },
-      'cart-filled': { props: { cart: true }, describe: 'Latte (1) and Croissant (2) in the cart: the cards carry the primary "In cart: N" badge and the cart panel lists the lines with the total.' },
+      'cart-filled': { props: { cart: true }, describe: 'Latte (1) and Cappuccino (2) in the cart: the cards carry the primary "In cart: N" badge and the cart panel lists the lines with the total.' },
       'idle-dialog': { props: { cart: true, idle: true }, describe: 'useIdleReset fired: the "Still there?" dialog overlays the whole layout on a blurred scrim with a full-width "I\'m still here" button.' } },
     describe: ['TabletLayout menu at 1280x800: header (px-6 py-4, border-b, H1 20/600 "Table T12", "New Order" button px-3 py-2 rounded-md border), then a split body: main pane 68% (p-6: category chips, search, 4-column grid gap-4 of cards min-w-150 rounded-xl with h-32 images) and the persistent CartPanel 32% (border-s, p-4).', 'Use for a tablet handed to a customer or fixed at a table. Base capture is the cart-filled state. Currency is a typed slot. ' + RTL_NOTE] },
   { ...BASE, id: IDD, name: 'Self-order tablet product detail screen', slots: detailSlots, rtlValues: detailRtl, na,
