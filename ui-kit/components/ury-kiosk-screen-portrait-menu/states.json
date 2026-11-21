@@ -1,0 +1,79 @@
+{
+  "component": "ury-kiosk-screen-portrait-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "category-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cat": 2
+      },
+      "screenshot": "states/category-active.png",
+      "preview": "states/category-active.html",
+      "description": "A course button is active (bg-primary); \"All Items\" falls back to text-foreground."
+    },
+    "table-order": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "title": "Table 12"
+      },
+      "screenshot": "states/table-order.png",
+      "preview": "states/table-order.html",
+      "description": "Dine-in session: the h1 reads \"Table {table}\" instead of \"Order for Pickup\"."
+    },
+    "sold-out": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "soldOut": 3
+      },
+      "screenshot": "states/sold-out.png",
+      "preview": "states/sold-out.html",
+      "description": "A sold-out card (availability gating): opacity-50, disabled, destructive reason replaces the in-cart badge."
+    },
+    "empty-cart": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "bar": false
+      },
+      "screenshot": "states/empty-cart.png",
+      "preview": "states/empty-cart.html",
+      "description": "cartCount is 0: the bottom bar is not rendered (the grid keeps its pb-24 reserve)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only product cards disable (shown as the sold-out variant)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this screen shows the source error banner only on a failed request"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" splash is a separate state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state is drawn"
+    }
+  }
+}

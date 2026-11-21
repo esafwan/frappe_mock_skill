@@ -1,0 +1,42 @@
+{
+  "id": "ury-kiosk-screen-portrait-detail",
+  "name": "Portrait kiosk product detail",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1080,
+    "h": 1920
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-portrait.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Full-screen product detail (product_detail_enabled): the layout header, then ProductDetail: underlined Back, full-width image, h1 20/600 name, muted description, 18/500 rate, Variants and Add-ons option rows, a 36 px round quantity stepper and the full-pill Add to cart button.",
+    "Use when a card is tapped and product detail is on. Image height follows the source (natural aspect, w-full). RTL is a kit extension (the source has no dir handling): the kit mirrors with logical properties and translates the fixed UI labels (self-order has no locale file)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1080,
+  "height": 1920,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

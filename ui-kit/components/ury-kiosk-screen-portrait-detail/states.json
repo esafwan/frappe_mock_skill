@@ -1,0 +1,58 @@
+{
+  "component": "ury-kiosk-screen-portrait-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "addon-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addon": true
+      },
+      "screenshot": "states/addon-selected.png",
+      "preview": "states/addon-selected.html",
+      "description": "An add-on row is selected (border-primary, bg-primary/10)."
+    },
+    "no-options": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "options": false
+      },
+      "screenshot": "states/no-options.png",
+      "preview": "states/no-options.html",
+      "description": "Item without variants or add-ons: only quantity and Add to cart remain."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only product cards disable (shown as the sold-out variant)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this screen shows the source error banner only on a failed request"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" splash is a separate state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state is drawn"
+    }
+  }
+}

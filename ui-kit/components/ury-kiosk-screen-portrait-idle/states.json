@@ -1,0 +1,38 @@
+{
+  "component": "ury-kiosk-screen-portrait-idle",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only product cards disable (shown as the sold-out variant)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this screen shows the source error banner only on a failed request"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" splash is a separate state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state is drawn"
+    }
+  }
+}

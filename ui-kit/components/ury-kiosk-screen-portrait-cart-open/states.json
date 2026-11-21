@@ -1,0 +1,57 @@
+{
+  "component": "ury-kiosk-screen-portrait-cart-open",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
+    },
+    "two-lines": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "lines": 2
+      },
+      "values": {
+        "count_label": "3 items",
+        "cart_total": {
+          "type": "currency",
+          "amount": 44,
+          "currency": "AED",
+          "sample": "AED 44.00"
+        }
+      },
+      "screenshot": "states/two-lines.png",
+      "preview": "states/two-lines.html",
+      "description": "Only Espresso and Cappuccino in the cart."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only product cards disable (shown as the sold-out variant)"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this screen shows the source error banner only on a failed request"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" splash is a separate state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state is drawn"
+    }
+  }
+}
