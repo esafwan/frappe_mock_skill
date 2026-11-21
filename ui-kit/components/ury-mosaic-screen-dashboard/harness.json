@@ -1,0 +1,44 @@
+{
+  "id": "ury-mosaic-screen-dashboard",
+  "name": "Mosaic Screen: Production Dashboard",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css",
+    "ury-v16/components/mosaic-screens.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "mosaic production dashboard route: header with scopes and a grid of production unit cards.",
+    "Home route of the KDS after sign-in. Unit names are sample data; Arabic unit names are translated here, the fixed UI strings come from mosaic/src/locales/ar.json. Modes: light and rtl only; dark is not applicable (mosaic defines one light palette)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {
+    "state": "ready"
+  },
+  "canvas": "var(--bg)"
+}

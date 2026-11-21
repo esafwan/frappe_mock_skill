@@ -1,0 +1,923 @@
+{
+  "component": "ury-mosaic-screen-board",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "logo_alt": {
+      "type": "text",
+      "sample": "Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user_name": {
+      "type": "text",
+      "sample": "Sara Ahmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user_email": {
+      "type": "text",
+      "sample": "sara@example.com",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "switch_dashboard": {
+      "type": "text",
+      "sample": "Switch to Dashboard",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "logout": {
+      "type": "text",
+      "sample": "Logout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_all": {
+      "type": "text",
+      "sample": "All Companies",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_1": {
+      "type": "text",
+      "sample": "Gulf Hospitality",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "c_2": {
+      "type": "text",
+      "sample": "Harbour Dining",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_3": {
+      "type": "text",
+      "sample": "Palm Cafe Group",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_heading": {
+      "type": "text",
+      "sample": "Select Active Company",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "c_sel0": {
+      "type": "text",
+      "sample": "All Companies",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_all": {
+      "type": "text",
+      "sample": "All Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_1": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_2": {
+      "type": "text",
+      "sample": "Downtown Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_3": {
+      "type": "text",
+      "sample": "Airport Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_heading": {
+      "type": "text",
+      "sample": "Select Active Branch",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "b_sel0": {
+      "type": "text",
+      "sample": "All Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_label": {
+      "type": "text",
+      "sample": "Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "takeaway_label": {
+      "type": "text",
+      "sample": "Takeaway",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_label": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_queued": {
+      "type": "text",
+      "sample": "Queued",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_preparing": {
+      "type": "text",
+      "sample": "Preparing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_ready": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_served": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "type_label": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "old_qty": {
+      "type": "text",
+      "sample": "Old Qty = 3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "disp_label": {
+      "type": "text",
+      "sample": "Disposition:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "return_label": {
+      "type": "text",
+      "sample": "Return to Stock",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waste_label": {
+      "type": "text",
+      "sample": "Mark as Wasted",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "disp_done": {
+      "type": "text",
+      "sample": "Disposition: Returned to Stock",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "dup_note": {
+      "type": "text",
+      "sample": "Duplicate KOT ( CHECK WITH CAPTAIN )",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "kot_comment": {
+      "type": "text",
+      "sample": "No onions please",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "item_comment": {
+      "type": "text",
+      "sample": "Extra spicy",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "agg_label": {
+      "type": "text",
+      "sample": "Aggregator",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "agg_name": {
+      "type": "text",
+      "sample": "Talabat",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "agg_id_label": {
+      "type": "text",
+      "sample": "Aggregator ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "agg_id": {
+      "type": "text",
+      "sample": "48213907",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "serve_label": {
+      "type": "text",
+      "sample": "Serve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "confirm_label": {
+      "type": "text",
+      "sample": "Confirm",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_1": {
+      "type": "text",
+      "sample": "T11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_1": {
+      "type": "text",
+      "sample": "Omar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_1": {
+      "type": "text",
+      "sample": "0041",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_1": {
+      "type": "text",
+      "sample": "+0:20",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_1": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_1": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_1": {
+      "type": "text",
+      "sample": "Masala Dosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_1": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_1": {
+      "type": "text",
+      "sample": "Fresh Lime Soda",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_1": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_2": {
+      "type": "text",
+      "sample": "T12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_2": {
+      "type": "text",
+      "sample": "Layla",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_2": {
+      "type": "text",
+      "sample": "0042",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_2": {
+      "type": "text",
+      "sample": "08:15",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_2": {
+      "type": "text",
+      "sample": "Masala Dosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_2": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_2": {
+      "type": "text",
+      "sample": "Fresh Lime Soda",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_2": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_2": {
+      "type": "text",
+      "sample": "Paneer Tikka",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_2": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_3": {
+      "type": "text",
+      "sample": "T13",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_3": {
+      "type": "text",
+      "sample": "Yusuf",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_3": {
+      "type": "text",
+      "sample": "0043",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_3": {
+      "type": "text",
+      "sample": "14:02",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_3": {
+      "type": "text",
+      "sample": "Fresh Lime Soda",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_3": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_3": {
+      "type": "text",
+      "sample": "Paneer Tikka",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_3": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_3": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_3": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_4": {
+      "type": "text",
+      "sample": "T14",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_4": {
+      "type": "text",
+      "sample": "Huda",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_4": {
+      "type": "text",
+      "sample": "0044",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_4": {
+      "type": "text",
+      "sample": "05:48",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_4": {
+      "type": "text",
+      "sample": "Paneer Tikka",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_4": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_4": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_4": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_4": {
+      "type": "text",
+      "sample": "Mango Lassi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_4": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_5": {
+      "type": "text",
+      "sample": "T15",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_5": {
+      "type": "text",
+      "sample": "Omar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_5": {
+      "type": "text",
+      "sample": "0045",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_5": {
+      "type": "text",
+      "sample": "03:21",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_5": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_5": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_5": {
+      "type": "text",
+      "sample": "Mango Lassi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_5": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_5": {
+      "type": "text",
+      "sample": "Mutton Curry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_5": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_6": {
+      "type": "text",
+      "sample": "T16",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_6": {
+      "type": "text",
+      "sample": "Layla",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_6": {
+      "type": "text",
+      "sample": "0046",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_6": {
+      "type": "text",
+      "sample": "11:09",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_6": {
+      "type": "text",
+      "sample": "Mango Lassi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_6": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_6": {
+      "type": "text",
+      "sample": "Mutton Curry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_6": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_6": {
+      "type": "text",
+      "sample": "Veg Samosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_6": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_7": {
+      "type": "text",
+      "sample": "T17",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_7": {
+      "type": "text",
+      "sample": "Yusuf",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_7": {
+      "type": "text",
+      "sample": "0047",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_7": {
+      "type": "text",
+      "sample": "02:37",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_7": {
+      "type": "text",
+      "sample": "Mutton Curry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_7": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_7": {
+      "type": "text",
+      "sample": "Veg Samosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_7": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_7": {
+      "type": "text",
+      "sample": "Filter Coffee",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_7": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_8": {
+      "type": "text",
+      "sample": "T18",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_8": {
+      "type": "text",
+      "sample": "Huda",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_8": {
+      "type": "text",
+      "sample": "0048",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_8": {
+      "type": "text",
+      "sample": "09:54",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_8": {
+      "type": "text",
+      "sample": "Veg Samosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_8": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_8": {
+      "type": "text",
+      "sample": "Filter Coffee",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_8": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_8": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_8": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_name_9": {
+      "type": "text",
+      "sample": "T19",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter_9": {
+      "type": "text",
+      "sample": "Omar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_no_9": {
+      "type": "text",
+      "sample": "0049",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "timer_9": {
+      "type": "text",
+      "sample": "06:30",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_1_9": {
+      "type": "text",
+      "sample": "Filter Coffee",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1_9": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_2_9": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2_9": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_3_9": {
+      "type": "text",
+      "sample": "Masala Dosa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_3_9": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "type_label_4": {
+      "type": "text",
+      "sample": "Cancelled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "type_label_8": {
+      "type": "text",
+      "sample": "Partially cancelled",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

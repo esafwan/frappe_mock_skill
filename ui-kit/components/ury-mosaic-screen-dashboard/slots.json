@@ -1,0 +1,321 @@
+{
+  "component": "ury-mosaic-screen-dashboard",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "logo_alt": {
+      "type": "text",
+      "sample": "Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user_name": {
+      "type": "text",
+      "sample": "Sara Ahmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user_email": {
+      "type": "text",
+      "sample": "sara@example.com",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "switch_dashboard": {
+      "type": "text",
+      "sample": "Switch to Dashboard",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "logout": {
+      "type": "text",
+      "sample": "Logout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_all": {
+      "type": "text",
+      "sample": "All Companies",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_1": {
+      "type": "text",
+      "sample": "Gulf Hospitality",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "c_2": {
+      "type": "text",
+      "sample": "Harbour Dining",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_3": {
+      "type": "text",
+      "sample": "Palm Cafe Group",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_heading": {
+      "type": "text",
+      "sample": "Select Active Company",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "c_sel0": {
+      "type": "text",
+      "sample": "All Companies",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_all": {
+      "type": "text",
+      "sample": "All Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_1": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_2": {
+      "type": "text",
+      "sample": "Downtown Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_3": {
+      "type": "text",
+      "sample": "Airport Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_heading": {
+      "type": "text",
+      "sample": "Select Active Branch",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "b_sel0": {
+      "type": "text",
+      "sample": "All Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_unit": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_active": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_served": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_total": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_foot": {
+      "type": "text",
+      "sample": "Click to view KOTs",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "loading_msg": {
+      "type": "text",
+      "sample": "Loading Production Dashboard...",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_msg": {
+      "type": "text",
+      "sample": "No production units for the selected company and branch.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "text"
+    },
+    "error_msg": {
+      "type": "text",
+      "sample": "Unable to load production units. Please reload to retry.",
+      "maxLength": 90,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_title_1": {
+      "type": "text",
+      "sample": "Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_active_1": {
+      "type": "text",
+      "sample": "12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_served_1": {
+      "type": "text",
+      "sample": "38",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_total_1": {
+      "type": "text",
+      "sample": "50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_title_2": {
+      "type": "text",
+      "sample": "Bar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_active_2": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_served_2": {
+      "type": "text",
+      "sample": "21",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_total_2": {
+      "type": "text",
+      "sample": "25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_title_3": {
+      "type": "text",
+      "sample": "Grill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_active_3": {
+      "type": "text",
+      "sample": "7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_served_3": {
+      "type": "text",
+      "sample": "16",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_total_3": {
+      "type": "text",
+      "sample": "23",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_title_4": {
+      "type": "text",
+      "sample": "Bakery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_active_4": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_served_4": {
+      "type": "text",
+      "sample": "9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_total_4": {
+      "type": "text",
+      "sample": "11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prod_title_5": {
+      "type": "text",
+      "sample": "Dessert",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_active_5": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_served_5": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_total_5": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

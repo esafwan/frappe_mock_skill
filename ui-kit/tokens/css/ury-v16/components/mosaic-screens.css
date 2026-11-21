@@ -1,0 +1,21 @@
+/* ury-mosaic full screens (dashboard, KOT board, empty board, delayed board) composed from mosaic.css parts.
+   Sources: mosaic/src/components/production/ProductionDashboard.vue, kot.vue, App.vue. Logical properties only. */
+.mzs { width: 1440px; height: 900px; position: relative; overflow: hidden; background: var(--bg); }
+.mzs-page { background: var(--bg); min-height: 852px; }
+/* ProductionDashboard: p-6, grid xl:grid-cols-3 gap-4 */
+.mzs-dash { padding: 24px; font-family: var(--s); }
+.mzs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.mzs-grid > .mz-prod { width: auto; }
+.mzs-msg { text-align: center; padding-block: 40px; }
+.mzs-msg.is-error { color: var(--rd); }
+.mzs-msg.is-empty { color: var(--t3); }
+.mzs-msg h2 { font-size: 18px; line-height: 28px; font-weight: 600; color: var(--t3); }
+/* kot.vue: mx-auto p-6 mb-16, masonry pre-computed as 4 columns (pitch 284), card margin-top 28 */
+.mzs-board { position: relative; margin-inline: auto; padding: 24px; margin-bottom: 64px; font-family: var(--s); }
+.mzs-cols { display: flex; gap: 0; width: 1136px; margin-inline: auto; align-items: flex-start; }
+.mzs-col { width: 284px; flex: none; }
+.mzs-card { display: flex; margin-top: 28px; }
+.mzs-empty { text-align: center; padding-block: 40px; font-size: 20px; line-height: 28px; color: var(--t3); }
+/* overlays inside the 1440x900 screen */
+.mzs > .mz-banner { position: absolute; }
+.mzs > .mz-toast { position: absolute; }

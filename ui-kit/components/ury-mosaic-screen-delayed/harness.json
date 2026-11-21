@@ -1,0 +1,42 @@
+{
+  "id": "ury-mosaic-screen-delayed",
+  "name": "Mosaic Screen: Delayed Order",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css",
+    "ury-v16/components/mosaic-screens.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "mosaic KOT board while an order is overdue and the connection is lost.",
+    "Banner appears when a KOT passes kot_alert_time; the offline toast on connectivity loss. Modes: light and rtl only; dark is not applicable (mosaic defines one light palette)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg)"
+}

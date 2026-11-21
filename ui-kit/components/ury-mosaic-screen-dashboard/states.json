@@ -1,0 +1,69 @@
+{
+  "component": "ury-mosaic-screen-dashboard",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "ready": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "ready"
+      },
+      "screenshot": "states/ready.png",
+      "preview": "states/ready.html",
+      "description": "Header with Company/Branch scope selectors above a p24, three-column gap-16 grid of five production cards: Kitchen, Bar, Grill, Bakery and a disabled Dessert (opacity .5, blur 1px)."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Loading Production Dashboard... centred 18/600 --t3 heading with py40.",
+      "alias": "loading"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No production units for the selected scope: centred --t3 message.",
+      "alias": "empty"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "error"
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Load failure: centred --rd alert text.",
+      "alias": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this screen has no distinct disabled variant"
+    }
+  }
+}
