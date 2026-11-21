@@ -122,8 +122,8 @@ function donut() {
   return cardWrap(S('c_order', 'Order Type Split', 'توزيع أنواع الطلبات'), `<div class="ud-chart__plot" ${u('ury-admin-chart-card.plot')}><svg width="${W}" height="300" viewBox="0 0 ${W} 300" role="img">${secs}${lbls}</svg><div class="ud-legend" ${u('ury-admin-chart-card.legend')}>${leg}</div></div>`, 'ury-admin-chart-card');
 }
 const TOP = [
-  ['Butter Chicken', 'دجاج بالزبدة', 186, 8370, 100], ['Paneer Tikka Masala', 'بانير تكا ماسالا', 152, 5320, 82], ['Chicken Biryani', 'برياني دجاج', 131, 6550, 70],
-  ['Garlic Naan', 'خبز نان بالثوم', 118, 1180, 63], ['Masala Chai', 'شاي ماسالا', 97, 970, 52], ['Gulab Jamun', 'جولاب جامون', 74, 1110, 40],
+  ['Butter Chicken', 'Butter Chicken', 186, 8370, 100], ['Paneer Tikka Masala', 'Paneer Tikka Masala', 152, 5320, 82], ['Chicken Biryani', 'Chicken Biryani', 131, 6550, 70],
+  ['Garlic Naan', 'Garlic Naan', 118, 1180, 63], ['Masala Chai', 'Masala Chai', 97, 970, 52], ['Gulab Jamun', 'Gulab Jamun', 74, 1110, 40],
 ];
 function topItems(p = {}) {
   const head = `<div class="ud-top__h"><div class="ud-top__hr"><div><h3 class="ud-top__t" ${u('ury-admin-chart-card.title')}>${S('c_top', 'Top Selling Menu Items', 'أصناف القائمة الأكثر مبيعاً')}</h3><p class="ud-top__sub">${S('c_top_sub', 'Highest grossing items ranked by order count &amp; volume', 'أعلى الأصناف مبيعاً مرتبة حسب عدد الطلبات والحجم')}</p></div><span class="ud-top__badge">${S('c_ranked', 'Ranked Top', 'أعلى')} ${S('c_ranked_n', String(TOP.length))}</span></div></div>`;
@@ -164,13 +164,13 @@ function quickActions(p = {}) {
 // ---------- screen: DashboardPage (Page > Section KPIGrid, Section ReportWidgets) ----------
 const TX = [
   ['INV-2026-00128', 'Walk-in Customer', 'عميل زائر', 'T-04', 'Dine In', 'في المطعم', '2026-11-21 02:14:08 PM', 'Paid', 'مدفوع', 86.5],
-  ['INV-2026-00127', 'Aisha Rahman', 'عائشة رحمن', 'Counter', 'Take Away', 'سفري', '2026-11-21 02:09:41 PM', 'Paid', 'مدفوع', 142],
-  ['INV-2026-00126', 'Omar Khalid', 'عمر خالد', 'T-11', 'Dine In', 'في المطعم', '2026-11-21 01:58:19 PM', 'Submitted', 'مسجلة', 318.75],
+  ['INV-2026-00127', 'Aisha Rahman', 'Aisha Rahman', 'Counter', 'Take Away', 'سفري', '2026-11-21 02:09:41 PM', 'Paid', 'مدفوع', 142],
+  ['INV-2026-00126', 'Omar Khalid', 'Omar Khalid', 'T-11', 'Dine In', 'في المطعم', '2026-11-21 01:58:19 PM', 'Submitted', 'مسجلة', 318.75],
   ['INV-2026-00125', 'Walk-in Customer', 'عميل زائر', 'Counter', 'Delivery', 'تسليم', '2026-11-21 01:47:03 PM', 'Paid', 'مدفوع', 64],
-  ['INV-2026-00124', 'Layla Haddad', 'ليلى حداد', 'T-07', 'Dine In', 'في المطعم', '2026-11-21 01:36:55 PM', 'Draft', 'مسودة', 205.25],
-  ['INV-2026-00123', 'Yusuf Ahmed', 'يوسف أحمد', 'T-02', 'Dine In', 'في المطعم', '2026-11-21 01:21:30 PM', 'Paid', 'مدفوع', 97],
+  ['INV-2026-00124', 'Layla Haddad', 'Layla Haddad', 'T-07', 'Dine In', 'في المطعم', '2026-11-21 01:36:55 PM', 'Draft', 'مسودة', 205.25],
+  ['INV-2026-00123', 'Yusuf Ahmed', 'Yusuf Ahmed', 'T-02', 'Dine In', 'في المطعم', '2026-11-21 01:21:30 PM', 'Paid', 'مدفوع', 97],
   ['INV-2026-00122', 'Walk-in Customer', 'عميل زائر', 'Counter', 'Take Away', 'سفري', '2026-11-21 01:12:47 PM', 'Submitted', 'مسجلة', 45.5],
-  ['INV-2026-00121', 'Mariam Saleh', 'مريم صالح', 'T-09', 'Dine In', 'في المطعم', '2026-11-21 12:58:12 PM', 'Paid', 'مدفوع', 276],
+  ['INV-2026-00121', 'Mariam Saleh', 'Mariam Saleh', 'T-09', 'Dine In', 'في المطعم', '2026-11-21 12:58:12 PM', 'Paid', 'مدفوع', 276],
 ];
 const ok = (s) => s === 'Paid' || s === 'Submitted';
 function reportWidgets(p = {}) {

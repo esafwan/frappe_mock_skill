@@ -62,8 +62,10 @@ export const SERVICE_COLS = [
   { h: ['Revenue', 'الإيرادات'], kind: 'money', end: true },
   { h: ['% of Total', '% of Total'], kind: 'num', end: true },
 ];
-const SVC = [[['Dine In', 'في المطعم'], 142, 9840.5], [['Take Away', 'سفري'], 96, 5620], [['Delivery', 'تسليم'], 61, 2989.5]];
-const DAY_TOTAL = 18450;
+const SVC = [[['Dine In', 'في المطعم'], 150, 10140.5], [['Take Away', 'سفري'], 98, 5760], [['Delivery', 'تسليم'], 64, 2621.5]];
+const GRAND_TOTAL = 18522; // = ITEM_TOTAL + TAXES + ROUND_OFF
+const ITEM_TOTAL = 17640, TAXES = 882, ROUND_OFF = 0;
+const DAY_TOTAL = GRAND_TOTAL;
 export const serviceRows = () => SVC.map(([n, c, r]) => [n, String(c), r, `${(r / DAY_TOTAL * 100).toFixed(1)}%`]);
 export const serviceFooter = () => [['Total', 'الإجمالي'], String(SVC.reduce((a, x) => a + x[1], 0)), SVC.reduce((a, x) => a + x[2], 0), '100.0%'];
 
@@ -73,15 +75,15 @@ export const ITEM_COLS = [
   { h: ['Avg Price', 'متوسط السعر'], kind: 'money', end: true }, { h: ['% of Total', '% of Total'], kind: 'num', end: true },
 ];
 const ITEMS = [
-  [['Chicken Shawarma', 'شاورما دجاج'], ['Mains', 'الأطباق الرئيسية'], 64, 30], [['Caesar Salad', 'سلطة سيزر'], ['Salads', 'السلطات'], 41, 34],
-  [['Cappuccino', 'كابتشينو'], ['Beverages', 'المشروبات'], 86, 16], [['Falafel Wrap', 'ساندويتش فلافل'], ['Mains', 'الأطباق الرئيسية'], 58, 22],
-  [['Hummus Plate', 'طبق حمص'], ['Starters', 'المقبلات'], 37, 26], [['Kunafa', 'كنافة'], ['Desserts', 'الحلويات'], 29, 28],
-  [['Mint Lemonade', 'ليمون بالنعناع'], ['Beverages', 'المشروبات'], 52, 14], [['Karak Tea', 'شاي كرك'], ['Beverages', 'المشروبات'], 74, 8],
+  [['Chicken Shawarma', 'Chicken Shawarma'], ['Mains', 'الأطباق الرئيسية'], 64, 30], [['Caesar Salad', 'Caesar Salad'], ['Salads', 'السلطات'], 41, 34],
+  [['Cappuccino', 'Cappuccino'], ['Beverages', 'المشروبات'], 86, 16], [['Falafel Wrap', 'Falafel Wrap'], ['Mains', 'الأطباق الرئيسية'], 58, 22],
+  [['Hummus Plate', 'Hummus Plate'], ['Starters', 'المقبلات'], 37, 26], [['Kunafa', 'Kunafa'], ['Desserts', 'الحلويات'], 29, 28],
+  [['Mint Lemonade', 'Mint Lemonade'], ['Beverages', 'المشروبات'], 52, 14], [['Karak Tea', 'Karak Tea'], ['Beverages', 'المشروبات'], 74, 8],
 ];
-export const itemRows = () => ITEMS.map(([n, g, q, pr]) => [n, g, String(q), q * pr, pr, `${(q * pr / DAY_TOTAL * 100).toFixed(1)}%`]);
+export const itemRows = () => ITEMS.map(([n, g, q, pr]) => [n, g, String(q), q * pr, pr, `${(q * pr / ITEM_TOTAL * 100).toFixed(1)}%`]);
 export const itemFooter = () => {
   const q = ITEMS.reduce((a, x) => a + x[2], 0), a = ITEMS.reduce((s, x) => s + x[2] * x[3], 0);
-  return [['Page total', 'إجمالي الصفحة'], ['—', '—'], String(q), a, a / q, `${(a / DAY_TOTAL * 100).toFixed(1)}%`];
+  return [['Page total', 'إجمالي الصفحة'], ['—', '—'], String(q), a, a / q, `${(a / ITEM_TOTAL * 100).toFixed(1)}%`];
 };
 
 // ---------- PageHeader (page-header.tsx) ----------
@@ -129,11 +131,11 @@ export function todaysSales(p = {}) {
   const head = pageHeader(id + '.header', '{{r_today}}', t('ts_desc', 'Friday, 2026-11-21', 'الجمعة، 2026-11-21'), upd);
   const fbar = filterBar({ id: id + '.filter-bar', hover: p.hover });
   const kpis = kpiStrip(id + '.kpis', [
-    { label: t('k_inv', 'Total Invoices', 'عدد الفواتير'), value: num('k_inv_v', '299') },
-    { label: t('k_item', 'Item Total', 'إجمالي الأصناف'), value: cur('k_item_v', 17571.4) },
-    { label: t('k_tax', 'Total Taxes & Charges', 'إجمالي الضرائب والرسوم'), value: cur('k_tax_v', 878.6) },
-    { label: t('k_grand', 'Grand Total', 'المجموع الإجمالي'), value: cur('k_grand_v', 18450), tone: 'success' },
-    { label: t('k_round', 'Round Off', 'تقريب'), value: cur('k_round_v', 0) },
+    { label: t('k_inv', 'Total Invoices', 'عدد الفواتير'), value: num('k_inv_v', '312') },
+    { label: t('k_item', 'Item Total', 'إجمالي الأصناف'), value: cur('k_item_v', ITEM_TOTAL) },
+    { label: t('k_tax', 'Total Taxes & Charges', 'إجمالي الضرائب والرسوم'), value: cur('k_tax_v', TAXES) },
+    { label: t('k_grand', 'Grand Total', 'المجموع الإجمالي'), value: cur('k_grand_v', GRAND_TOTAL), tone: 'success' },
+    { label: t('k_round', 'Round Off', 'تقريب'), value: cur('k_round_v', ROUND_OFF) },
     { label: t('k_disc', 'Cash Discounts', 'خصومات نقدية'), value: cur('k_disc_v', -215.5), hint: t('k_disc_h', 'given away') },
   ]);
   let body;
@@ -150,7 +152,7 @@ export function todaysSales(p = {}) {
 const PCT = (a, g) => `(${(a / g * 100).toFixed(1)}%)`;
 function pnlData(ds) {
   if (ds === 'L') return { gross: 9860, disc: 140, tax: 460, cogs: 5980, disp: 360, direct: [['Gas & Fuel', 'الغاز والوقود', 1100], ['Packaging', 'التغليف', 2000]], emp: [['Kitchen Staff', 'طاقم المطبخ', 2100], ['Service Staff', 'طاقم الخدمة', 1800]], ind: [['Rent', 'الإيجار', 3200], ['Utilities', 'المرافق', 1150]], dep: 640, other: 580 };
-  return { gross: 18450, disc: 215.5, tax: 878.6, cogs: 6420, disp: 310, direct: [['Gas & Fuel', 'الغاز والوقود', 620], ['Packaging', 'التغليف', 860]], emp: [['Kitchen Staff', 'طاقم المطبخ', 2100], ['Service Staff', 'طاقم الخدمة', 1800]], ind: [['Rent', 'الإيجار', 3200], ['Utilities', 'المرافق', 1150]], dep: 640, other: 580 };
+  return { gross: GRAND_TOTAL, disc: 215.5, tax: TAXES, cogs: 6420, disp: 310, direct: [['Gas & Fuel', 'الغاز والوقود', 620], ['Packaging', 'التغليف', 860]], emp: [['Kitchen Staff', 'طاقم المطبخ', 2100], ['Service Staff', 'طاقم الخدمة', 1800]], ind: [['Rent', 'الإيجار', 3200], ['Utilities', 'المرافق', 1150]], dep: 640, other: 580 };
 }
 export function dailyPnl(p = {}) {
   const id = 'ury-admin-screen-daily-pnl';

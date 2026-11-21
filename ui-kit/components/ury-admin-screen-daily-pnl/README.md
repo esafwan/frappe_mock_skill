@@ -4,7 +4,7 @@ Daily P&L at 1440x900 inside the admin shell with the Reports group open: branch
 
 **When to use:** The statement runs below the fold; the main area scrolls. Arabic comes from ury/translations/ar.csv; "Amount", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. "# Orders" and "% of Total" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary).
 
-**Slots people usually change:** `pl_kgs` (currency, e.g. "AED 18,450.00"), `pl_kns` (currency, e.g. "AED 17,355.90"), `pl_a1` (currency, e.g. "AED 18,450.00"), `pl_a4` (currency, e.g. "AED 17,355.90"), `plL_kgs` (currency, e.g. "AED 9,860.00"), `plL_kns` (currency, e.g. "AED 9,260.00"). All 180 slots are in `slots.json`.
+**Slots people usually change:** `plL_knp` (currency, e.g. "-AED 9,650.00"), `pl_kgs` (currency, e.g. "AED 18,522.00"), `pl_kns` (currency, e.g. "AED 17,424.50"), `pl_a1` (currency, e.g. "AED 18,522.00"), `pl_a4` (currency, e.g. "AED 17,424.50"), `plL_kgs` (currency, e.g. "AED 9,860.00"). All 180 slots are in `slots.json`.
 
 **States:** default (none), profit-day (props), empty (props), loading (props). Details and class/attribute changes in `states.json`.
 

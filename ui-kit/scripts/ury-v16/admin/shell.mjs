@@ -71,8 +71,8 @@ const T = (k) => `{{${k}}}`;
 // ---------- copy: key -> [English (source __() strings), Arabic (ury/translations/ar.csv)] ----------
 // Arabic for "Plan", "Setup", "Menu", the sample company/branch/department names and the sample date is translated here (no entry in ar.csv).
 export const D = {
-  company: ['Bay Leaf Hospitality', 'مجموعة ورق الغار'], branch: ['Marina Branch', 'فرع المارينا'],
-  user: ['Admin User', 'مستخدم الإدارة'], unread: ['3', '3'], logo_alt: ['URY Logo', 'شعار URY'],
+  company: ['Bay Leaf Hospitality', 'Bay Leaf Hospitality'], branch: ['Marina Branch', 'Marina Branch'],
+  user: ['Admin User', 'Admin User'], unread: ['3', '3'], logo_alt: ['URY Logo', 'شعار URY'],
   ask_tag: ['HUF', 'HUF'], ask_hint: ['Ask about tonight…', 'اسأل عن الليلة…'], ask_key: ['⌘K', '⌘K'],
   open_pos: ['Open POS', 'فتح نقطة البيع'], notif_label: ['Open notifications', 'فتح الإشعارات'],
   collapse: ['Collapse sidebar', 'طي الشريط الجانبي'], expand: ['Expand sidebar', 'توسيع الشريط الجانبي'],
@@ -90,9 +90,9 @@ export const D = {
   s_report_settings: ['Report Settings', 'إعدادات التقارير'], s_ai: ['AI Assistant', 'المساعد الذكي'], s_commission: ['Commission', 'العمولة'], s_units: ['Production Units', 'وحدات الإنتاج'], s_depts: ['Departments', 'الأقسام'], s_item_config: ['Item Config', 'إعداد الأصناف'], s_yield_standards: ['Yield Standards', 'معايير المردود'],
   day_date: ['Fri, 21 Nov', 'الجمعة، 21 نوفمبر'], day_status: ['Approved', 'معتمدة'], day_attention: ['3', '3'], day_need: ['need attention', 'بحاجة إلى متابعة'], day_open: ['Open', 'فتح'],
   sm_title_company: ['Select Active Company', 'اختر الشركة النشطة'], sm_title_branch: ['Select Active Branch', 'اختر الفرع النشط'], sm_all_companies: ['All Companies', 'كل الشركات'], sm_all_branches: ['All Branches', 'كل الفروع'],
-  sm_c1: ['Bay Leaf Hospitality', 'مجموعة ورق الغار'], sm_c2: ['Saffron Table Group', 'مجموعة مائدة الزعفران'], sm_c3: ['Harbour Kitchens', 'مطابخ الميناء'],
-  sm_b1: ['Marina Branch', 'فرع المارينا'], sm_b2: ['Old Town Branch', 'فرع البلدة القديمة'], sm_b3: ['Airport Road Branch', 'فرع طريق المطار'],
-  pt_title: ['Sales Plan — Fri, 21 Nov · Marina Branch', 'خطة المبيعات — الجمعة، 21 نوفمبر · فرع المارينا'],
+  sm_c1: ['Bay Leaf Hospitality', 'Bay Leaf Hospitality'], sm_c2: ['Saffron Table Group', 'مجموعة مائدة الزعفران'], sm_c3: ['Harbour Kitchens', 'مطابخ الميناء'],
+  sm_b1: ['Marina Branch', 'Marina Branch'], sm_b2: ['Old Town Branch', 'فرع البلدة القديمة'], sm_b3: ['Airport Road Branch', 'فرع طريق المطار'],
+  pt_title: ['Sales Plan — Fri, 21 Nov · Marina Branch', 'خطة المبيعات — الجمعة، 21 نوفمبر · Marina Branch'],
   pt_jump: ['Jump to:', 'انتقل إلى:'], pt_d1: ['Kitchen', 'المطبخ'], pt_d2: ['Bar', 'البار'], pt_d3: ['Bakery', 'المخبز'], pt_add: ['Add item', 'إضافة صنف'],
 };
 export const SHELL_SLOTS = Object.fromEntries(Object.entries(D).map(([k, v]) => [k, v[0]]));
