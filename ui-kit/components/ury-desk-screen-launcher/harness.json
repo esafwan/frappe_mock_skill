@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-screen-launcher",
+  "name": "URY desk launcher screen",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-overlays.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The /desk apps screen: the page navbar, then one .desktop-icon tile per add_to_apps_screen app (ERPNext, URY, Huf), each a 54px app-icon in .icon-container over .icon-caption with the title and the Open in Desk subtitle.",
+    "The subtitle is drawn for apps whose own UI is not the desk (URY and Huf); ERPNext is desk-native and has none. Frappe HR and Framework are not installed on this bench."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

@@ -1,0 +1,58 @@
+{
+  "component": "ury-desk-user-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "highlight": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "highlight": true
+      },
+      "screenshot": "states/highlight.png",
+      "preview": "states/highlight.html",
+      "description": "Settings row under the pointer or keyboard focus: [data-highlighted] fill."
+    },
+    "closed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "open": false
+      },
+      "screenshot": "states/closed.png",
+      "preview": "states/closed.html",
+      "description": "Menu closed: only the user chip at the foot of the sidebar."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: these overlays have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: these overlays have no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: nothing here waits on a request"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: see the variants"
+    }
+  }
+}

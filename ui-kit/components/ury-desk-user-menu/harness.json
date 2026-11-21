@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-user-menu",
+  "name": "URY desk user menu",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 375,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-overlays.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The sidebar user menu (frappe.ui.Dropdown, side top, align start): My Space, Settings, Manage Dock, Reload, then a rule and Logout, opened above the user chip.",
+    "Use on any desk page without a pinned dock; with a dock the avatar at its foot opens the same menu."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 375,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

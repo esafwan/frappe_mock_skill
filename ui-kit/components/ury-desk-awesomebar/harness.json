@@ -1,0 +1,43 @@
+{
+  "id": "ury-desk-awesomebar",
+  "name": "URY desk awesomebar",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-overlays.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The Ctrl+K search modal over the desk shell: .navbar-modal-wrapper with the 28px .awesomebar-input-row, the 1px .modal-divider, the Awesomplete list and the keyboard-hint footer, on the 50% backdrop with shadow-2xl.",
+    "Open it from the navbar search button or the dock; frappe renders no group headings, so rows are mixed Go to (List/Workspace) and Report rows in score order."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {
+    "results": true
+  },
+  "canvas": "var(--bg-color)"
+}

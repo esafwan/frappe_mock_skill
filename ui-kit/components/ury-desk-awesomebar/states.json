@@ -1,0 +1,54 @@
+{
+  "component": "ury-desk-awesomebar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "results": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "results": true
+      },
+      "screenshot": "states/results.png",
+      "preview": "states/results.html",
+      "description": "No text typed: recent pages and frequently visited links as <strong>name</strong> + List/Workspace/Report rows, the first row selected (autoFirst), the footer key hints shown."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "results": false
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "Just opened with no recent pages: the input row only, ul.p-0.m-0 and the footer hidden (awesome_bar.js toggles both when there are no options)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: these overlays have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: these overlays have no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: nothing here waits on a request"
+    }
+  }
+}
