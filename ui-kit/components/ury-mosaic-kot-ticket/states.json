@@ -24,6 +24,7 @@
       "props": {
         "type": "dine"
       },
+      "values": {},
       "screenshot": "states/dine-in.png",
       "preview": "states/dine-in.html",
       "description": "Dine-in KOT: --panel with --hair2 border, table, waiter, order number, elapsed timer."
@@ -34,6 +35,7 @@
       "props": {
         "type": "takeaway"
       },
+      "values": {},
       "screenshot": "states/takeaway.png",
       "preview": "states/takeaway.html",
       "description": "Takeaway KOT: --ac-t background and --ac-b border; no \"Table\" label."
@@ -44,6 +46,7 @@
       "props": {
         "type": "modified"
       },
+      "values": {},
       "screenshot": "states/modified.png",
       "preview": "states/modified.html",
       "description": "Order Modified: --am-t background and --am-b border."
@@ -54,6 +57,7 @@
       "props": {
         "type": "cancelled"
       },
+      "values": {},
       "screenshot": "states/cancelled.png",
       "preview": "states/cancelled.html",
       "description": "Cancelled KOT: --rd-t / --rd-b, \"( Cancelled )\" after the order number, [Old Qty = n] per item and disposition buttons Return to Stock (--gr) and Mark as Wasted (--rd)."
@@ -65,9 +69,7 @@
         "type": "partial"
       },
       "values": {
-        "type_label": {
-          "sample": "Partially cancelled"
-        }
+        "type_label": "Partially cancelled"
       },
       "screenshot": "states/partially-cancelled.png",
       "preview": "states/partially-cancelled.html",
@@ -81,9 +83,7 @@
         "resolved": true
       },
       "values": {
-        "type_label": {
-          "sample": "Partially cancelled"
-        }
+        "type_label": "Partially cancelled"
       },
       "screenshot": "states/disposition-resolved.png",
       "preview": "states/disposition-resolved.html",
@@ -95,6 +95,7 @@
       "props": {
         "type": "duplicate"
       },
+      "values": {},
       "screenshot": "states/duplicate.png",
       "preview": "states/duplicate.html",
       "description": "Duplicate KOT: red note \"Duplicate KOT ( CHECK WITH CAPTAIN )\" under the header."
@@ -106,6 +107,7 @@
         "type": "dine",
         "aggregator": true
       },
+      "values": {},
       "screenshot": "states/aggregator.png",
       "preview": "states/aggregator.html",
       "description": "Aggregator order: Aggregator and Aggregator ID rows under the header, takeaway colours."
@@ -117,6 +119,7 @@
         "type": "dine",
         "struck": true
       },
+      "values": {},
       "screenshot": "states/struck-item.png",
       "preview": "states/struck-item.html",
       "description": "Item tapped as done: line-through in --gr."
@@ -129,9 +132,7 @@
         "overdue": true
       },
       "values": {
-        "timer": {
-          "sample": "+0:20"
-        }
+        "timer": "+0:20"
       },
       "screenshot": "states/overdue.png",
       "preview": "states/overdue.html",
@@ -144,6 +145,7 @@
         "type": "dine",
         "comments": true
       },
+      "values": {},
       "screenshot": "states/comments.png",
       "preview": "states/comments.html",
       "description": "KOT comment line and an item comment."
@@ -155,6 +157,7 @@
         "type": "dine",
         "flip": "serve"
       },
+      "values": {},
       "screenshot": "states/flip-serve.png",
       "preview": "states/flip-serve.html",
       "description": "Card tapped: overlay (inset 0, opacity .9, --panel) with a Serve button."
@@ -166,6 +169,7 @@
         "type": "cancelled",
         "flip": "confirm"
       },
+      "values": {},
       "screenshot": "states/flip-confirm.png",
       "preview": "states/flip-confirm.html",
       "description": "Cancelled card tapped: the overlay button reads Confirm."

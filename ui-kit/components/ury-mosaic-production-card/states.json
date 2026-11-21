@@ -7,21 +7,22 @@
       "props": {
         "disabled": false
       },
+      "values": {},
       "screenshot": "states/default.png",
       "preview": "states/default.html",
       "description": "Production unit card with Active, Served and Total stat tiles."
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "disabled": {
       "applicable": true,
@@ -29,6 +30,7 @@
       "props": {
         "disabled": true
       },
+      "values": {},
       "screenshot": "states/disabled.png",
       "preview": "states/disabled.html",
       "description": "Disabled: opacity .5 with 1px blur, not-allowed cursor; click is ignored."
@@ -38,15 +40,9 @@
       "mechanism": "props",
       "props": {},
       "values": {
-        "n_active": {
-          "sample": "0"
-        },
-        "n_served": {
-          "sample": "0"
-        },
-        "n_total": {
-          "sample": "0"
-        }
+        "n_active": "0",
+        "n_served": "0",
+        "n_total": "0"
       },
       "screenshot": "states/idle.png",
       "preview": "states/idle.html",

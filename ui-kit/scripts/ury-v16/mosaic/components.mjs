@@ -59,7 +59,7 @@ export function kotTicket(v, o = {}) {
   const isTake = type === 'takeaway' || aggregator;
   const who = `${isTake ? '' : `<span class="mz-kot-lbl">${v.table_label} </span>`}<span class="mz-kot-val">${isTake ? v.takeaway_label : v.table_name} <span class="mz-kot-lbl">( ${v.waiter} )</span></span><br>`
     + (aggregator ? `<span class="mz-kot-lbl">${v.agg_label}</span><span class="mz-kot-ms mz-kot-val">${v.agg_name} </span><br><span class="mz-kot-lbl">${v.agg_id_label}</span><span class="mz-kot-ms mz-kot-val">${v.agg_id} </span><br>` : '')
-    + `<span class="mz-kot-lbl">${v.order_label}</span><span class="mz-kot-ms mz-kot-val mz-kot-mono" dir="ltr">${v.order_no}</span>`
+    + `<span class="mz-kot-lbl">${v.order_label}</span><span class="mz-kot-ms mz-kot-val mz-kot-mono">${v.order_no}</span>`
     + (canc ? `<span class="mz-kot-ms mz-kot-val"> ( ${v.type_label} )</span>` : '');
   const items = [1, 2, 3].map((n) => {
     const state = ['preparing', 'queued', 'served'][n - 1];

@@ -13,6 +13,7 @@
         "view": "home",
         "hover": "refresh"
       },
+      "values": {},
       "screenshot": "states/refresh-hover.png",
       "preview": "states/refresh-hover.html",
       "description": "Refresh button hover: bg --hover.",
@@ -20,11 +21,11 @@
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "home": {
       "applicable": true,
@@ -32,6 +33,7 @@
       "props": {
         "view": "home"
       },
+      "values": {},
       "screenshot": "states/home.png",
       "preview": "states/home.html",
       "description": "Home route: logo, Company and Branch scope selectors, refresh and user button."
@@ -42,6 +44,7 @@
       "props": {
         "view": "board"
       },
+      "values": {},
       "screenshot": "states/board.png",
       "preview": "states/board.html",
       "description": "KOT board route: no scope selectors, only refresh and user button."
@@ -53,6 +56,7 @@
         "view": "home",
         "menu": true
       },
+      "values": {},
       "screenshot": "states/user-menu-open.png",
       "preview": "states/user-menu-open.html",
       "description": "User dropdown open: w224 card with name and email, Switch to Dashboard, Logout in --rd."
@@ -64,6 +68,7 @@
         "view": "home",
         "hover": "refresh"
       },
+      "values": {},
       "screenshot": "states/refresh-hover.png",
       "preview": "states/refresh-hover.html",
       "description": "Refresh button hover: bg --hover."
@@ -75,6 +80,7 @@
         "view": "board",
         "hover": "user"
       },
+      "values": {},
       "screenshot": "states/user-hover.png",
       "preview": "states/user-hover.html",
       "description": "User button hover: bg --hover, text --t1."

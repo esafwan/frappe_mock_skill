@@ -13,6 +13,7 @@
         "kind": "company",
         "hover": true
       },
+      "values": {},
       "screenshot": "states/hover.png",
       "preview": "states/hover.html",
       "description": "Trigger hover: bg --hover.",
@@ -26,6 +27,7 @@
         "open": true,
         "sel": 0
       },
+      "values": {},
       "screenshot": "states/open.png",
       "preview": "states/open.html",
       "description": "Popover w256 with heading \"Select Active Company\"; selected row uses --ac-t / --ac plus a check.",
@@ -33,7 +35,7 @@
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "closed": {
       "applicable": true,
@@ -43,6 +45,7 @@
         "open": false,
         "sel": 0
       },
+      "values": {},
       "screenshot": "states/closed.png",
       "preview": "states/closed.html",
       "description": "Closed trigger showing \"All Companies\"."
@@ -55,6 +58,7 @@
         "open": true,
         "sel": 0
       },
+      "values": {},
       "screenshot": "states/open.png",
       "preview": "states/open.html",
       "description": "Popover w256 with heading \"Select Active Company\"; selected row uses --ac-t / --ac plus a check."
@@ -67,6 +71,7 @@
         "open": true,
         "sel": 2
       },
+      "values": {},
       "screenshot": "states/open-selected.png",
       "preview": "states/open-selected.html",
       "description": "A specific company selected; the trigger shows its name."
@@ -79,6 +84,7 @@
         "open": true,
         "sel": 1
       },
+      "values": {},
       "screenshot": "states/branch.png",
       "preview": "states/branch.html",
       "description": "Branch scope selector, popover open."
@@ -90,6 +96,7 @@
         "kind": "company",
         "disabled": true
       },
+      "values": {},
       "screenshot": "states/disabled.png",
       "preview": "states/disabled.html",
       "description": "Disabled while the scope is loading: opacity .5."

@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "all": {
       "applicable": true,
@@ -27,6 +27,7 @@
         "toast": "online",
         "modal": true
       },
+      "values": {},
       "screenshot": "states/all.png",
       "preview": "states/all.html",
       "description": "All four alerts layered as in the source (banner z-40 above the modal scrim z-10)."
@@ -40,6 +41,7 @@
         "toast": null,
         "modal": false
       },
+      "values": {},
       "screenshot": "states/order-delayed.png",
       "preview": "states/order-delayed.html",
       "description": "Order Delayed banner: --rd-t background, 3px --rd bottom border, dismiss button."
@@ -53,6 +55,7 @@
         "toast": null,
         "modal": false
       },
+      "values": {},
       "screenshot": "states/audio-disabled.png",
       "preview": "states/audio-disabled.html",
       "description": "Audio notifications disabled message, bold 24px --rd, centred at the top."
@@ -66,6 +69,7 @@
         "toast": "online",
         "modal": false
       },
+      "values": {},
       "screenshot": "states/toast-online.png",
       "preview": "states/toast-online.html",
       "description": "Connection restored toast at the bottom end, --gr."
@@ -79,6 +83,7 @@
         "toast": "offline",
         "modal": false
       },
+      "values": {},
       "screenshot": "states/toast-offline.png",
       "preview": "states/toast-offline.html",
       "description": "Connection lost toast at the bottom end, --rd."
@@ -92,6 +97,7 @@
         "toast": null,
         "modal": true
       },
+      "values": {},
       "screenshot": "states/not-permitted.png",
       "preview": "states/not-permitted.html",
       "description": "Not Permitted modal: scrim rgba(13,13,15,.2), panel max-w 448, shadow 0 8px 30px rgba(0,0,0,.12)."

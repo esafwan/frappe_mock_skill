@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "queued": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "only": "queued"
       },
+      "values": {},
       "screenshot": "states/queued.png",
       "preview": "states/queued.html",
       "description": "Queued: --rd set (red)."
@@ -34,6 +35,7 @@
       "props": {
         "only": "preparing"
       },
+      "values": {},
       "screenshot": "states/preparing.png",
       "preview": "states/preparing.html",
       "description": "Preparing: --am set (amber)."
@@ -44,6 +46,7 @@
       "props": {
         "only": "ready"
       },
+      "values": {},
       "screenshot": "states/ready.png",
       "preview": "states/ready.html",
       "description": "Ready: #EAF2FB / #1D5FA8 / #C3D9F0 (info blue)."
@@ -54,6 +57,7 @@
       "props": {
         "only": "served"
       },
+      "values": {},
       "screenshot": "states/served.png",
       "preview": "states/served.html",
       "description": "Served: --gr set (green)."
