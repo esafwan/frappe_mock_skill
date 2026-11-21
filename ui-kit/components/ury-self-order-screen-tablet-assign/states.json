@@ -1,0 +1,105 @@
+{
+  "component": "ury-self-order-screen-tablet-assign",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "pin-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "pin",
+        "pin": 0
+      },
+      "screenshot": "states/pin-empty.png",
+      "preview": "states/pin-empty.html",
+      "description": "No digits entered: six empty boxes (border-input) and the Continue button disabled (fewer than 4 digits)."
+    },
+    "pin-full": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "pin",
+        "pin": 6
+      },
+      "screenshot": "states/pin-full.png",
+      "preview": "states/pin-full.html",
+      "description": "Maximum of six digits entered; the keypad ignores further taps."
+    },
+    "pin-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "pin",
+        "pin": 0,
+        "error": true
+      },
+      "screenshot": "states/pin-error.png",
+      "preview": "states/pin-error.html",
+      "description": "A failed assignment returns to the PIN step with a cleared PIN and the destructive \"Assignment Failed\" alert above it."
+    },
+    "table-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "table"
+      },
+      "screenshot": "states/table-empty.png",
+      "preview": "states/table-empty.html",
+      "description": "Second step: free-text table field with its placeholder; Assign Table is disabled until a value is typed."
+    },
+    "table-filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "table",
+        "table": true
+      },
+      "screenshot": "states/table-filled.png",
+      "preview": "states/table-filled.html",
+      "description": "A table typed: the field is focused (border-primary, ring) with a character count and Assign Table enabled."
+    },
+    "assigning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": "table",
+        "table": true,
+        "submitting": true
+      },
+      "screenshot": "states/assigning.png",
+      "preview": "states/assigning.html",
+      "description": "assign_device_table in flight: spinner and \"Assigning…\", the field, Assign and Back disabled (opacity-50)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: no distinct disabled state on this screen"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the error banner prints a dynamic server message and is not a distinct designed state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" screen is a separate state not captured here"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

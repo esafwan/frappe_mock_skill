@@ -1,0 +1,111 @@
+{
+  "component": "ury-self-order-screen-tablet-assign",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Assign This Tablet",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Bind a portable tablet to a table",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "pin_label": {
+      "type": "text",
+      "sample": "Staff PIN",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pin_hint": {
+      "type": "text",
+      "sample": "Enter the 4-6 digit PIN to proceed",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "continue": {
+      "type": "text",
+      "sample": "Continue",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table_label": {
+      "type": "text",
+      "sample": "Table Name or Code",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "table_hint": {
+      "type": "text",
+      "sample": "Enter the table identifier to assign",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "table_placeholder": {
+      "type": "text",
+      "sample": "e.g. T12, Table A, 5",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "table_value": {
+      "type": "text",
+      "sample": "T12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "char_count": {
+      "type": "text",
+      "sample": "3 characters",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "assign": {
+      "type": "text",
+      "sample": "Assign Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "assigning": {
+      "type": "text",
+      "sample": "Assigning…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "back": {
+      "type": "text",
+      "sample": "Back",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "error_title": {
+      "type": "text",
+      "sample": "Assignment Failed",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "error_msg": {
+      "type": "text",
+      "sample": "Could not assign this table. Please check the PIN and try again.",
+      "maxLength": 103,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

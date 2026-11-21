@@ -1,0 +1,78 @@
+{
+  "component": "ury-self-order-screen-tablet-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "empty-cart": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cart": false
+      },
+      "values": {
+        "count_label": "0 items",
+        "cart_total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/empty-cart.png",
+      "preview": "states/empty-cart.html",
+      "description": "Nothing in the cart: no \"In cart\" badges on the cards, the hint text shows in the cart panel and Place Order is disabled (opacity-50)."
+    },
+    "cart-filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cart": true
+      },
+      "screenshot": "states/cart-filled.png",
+      "preview": "states/cart-filled.html",
+      "description": "Latte (1) and Croissant (2) in the cart: the cards carry the primary \"In cart: N\" badge and the cart panel lists the lines with the total."
+    },
+    "idle-dialog": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cart": true,
+        "idle": true
+      },
+      "screenshot": "states/idle-dialog.png",
+      "preview": "states/idle-dialog.html",
+      "description": "useIdleReset fired: the \"Still there?\" dialog overlays the whole layout on a blurred scrim with a full-width \"I'm still here\" button."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: no distinct disabled state on this screen"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the error banner prints a dynamic server message and is not a distinct designed state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" screen is a separate state not captured here"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

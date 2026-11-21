@@ -1,0 +1,71 @@
+/* URY v16 self-order tablet screens (1280x800). Class lists mirror self-order/src/layouts/TabletLayout.tsx and PortableTabletAssignment.tsx
+   (ury-erp/version-16 @100c43fe2e). Builds on self-order.css (.so-* shared primitives). Logical properties only; RTL is a kit extension. */
+
+/* ---------- TabletLayout root: flex h-screen flex-col overflow-hidden ---------- */
+.sot { display: flex; flex-direction: column; overflow: hidden; }
+.sot-head { display: flex; align-items: center; justify-content: space-between; border-bottom-width: 1px; background: hsl(var(--background) / .95); padding: 16px 24px; }
+.sot-title { margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; }
+.sot-new { border-radius: calc(var(--radius) - 2px); border-width: 1px; padding: 8px 12px; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--muted-foreground)); }
+.sot-body { display: flex; flex: 1 1 0%; overflow: hidden; min-height: 0; }
+/* main w-[68%] overflow-y-auto */
+.sot-main { width: 68%; overflow: hidden; }
+/* inner: flex h-full flex-col p-6 */
+.sot-pane { display: flex; height: 100%; flex-direction: column; padding: 24px; }
+.sot-pane .so-tabs { width: auto; }
+.sot-search { margin-top: 12px; margin-bottom: 16px; }
+/* MenuGrid gridClassName: grid grid-cols-3 gap-4 lg:grid-cols-4 */
+.sot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.sot-grid .so-pc { width: auto; min-width: 150px; }
+/* CartPanel className: flex w-[32%] flex-col overflow-hidden border-l bg-background p-4 */
+.sot-body > .so-cart { width: 32%; height: auto; flex: none; }
+
+/* ---------- ProductDetail (replaces the main pane): flex h-full flex-col overflow-y-auto ---------- */
+.sot-detail { display: flex; height: 100%; flex-direction: column; overflow: hidden; }
+.sot-detail__back { display: flex; align-items: center; gap: 8px; padding: 16px; }
+.sot-detail__backbtn { font-size: 14px; line-height: 20px; text-decoration: underline; }
+.sot-detail__img { display: block; width: 100%; object-fit: cover; }
+.sot-detail__info { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+.sot-detail__name { margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; }
+.sot-detail__desc { margin: 4px 0 0; color: hsl(var(--muted-foreground)); }
+.sot-detail__rate { font-size: 18px; line-height: 28px; font-weight: 500; }
+.sot-detail__group { display: flex; flex-direction: column; gap: 8px; }
+.sot-detail__label { font-size: 14px; line-height: 20px; font-weight: 600; }
+.sot-detail__list { display: flex; flex-direction: column; gap: 8px; }
+.sot-detail__qty { display: flex; align-items: center; gap: 16px; }
+.sot-detail__step { width: 36px; height: 36px; border-radius: 9999px; border-width: 1px; font-weight: 600; }
+.sot-detail__n { width: 24px; text-align: center; font-weight: 500; }
+.sot-detail__add { margin-top: 8px; border-radius: 9999px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 16px; font-weight: 600; }
+
+/* ---------- Idle dialog overlay (Dialog open): fixed inset-0 over the whole layout ---------- */
+.sot-overlay { position: absolute; inset: 0; z-index: 50; }
+.sot-overlay .u-dialog-header { text-align: center; }
+.sot-overlay .u-dialog-footer { flex-direction: column-reverse; }
+.sot-idle-btn { width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: 500; }
+
+/* ---------- PortableTabletAssignment: flex min-h-screen flex-col items-center justify-center gap-8 p-6 ---------- */
+.sota { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
+.sota-head { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sota-h1 { margin: 0; font-size: 24px; line-height: 32px; font-weight: 600; }
+.sota-sub { margin: 0; font-size: 14px; line-height: 20px; color: hsl(var(--muted-foreground)); }
+.sota-err { width: 100%; max-width: 320px; border-radius: var(--radius); border-width: 1px; border-color: hsl(var(--destructive) / .5); background: hsl(var(--destructive) / .1); padding: 16px; font-size: 14px; line-height: 20px; color: hsl(var(--destructive)); }
+.sota-err__t { margin-bottom: 4px; font-weight: 500; }
+.sota-step { display: flex; width: 100%; max-width: 320px; flex-direction: column; gap: 24px; }
+.sota-field { display: flex; flex-direction: column; gap: 8px; }
+.sota-label { font-size: 14px; line-height: 20px; font-weight: 600; color: hsl(var(--foreground)); }
+.sota-hint { margin: 0; font-size: 12px; line-height: 16px; color: hsl(var(--muted-foreground)); }
+.sota-pin { display: flex; justify-content: center; gap: 8px; }
+.sota-box { display: flex; width: 48px; height: 56px; align-items: center; justify-content: center; border-radius: var(--radius); border-width: 2px; font-size: 24px; line-height: 32px; font-weight: 600; border-color: hsl(var(--input)); background: hsl(var(--background)); color: transparent; }
+.sota-box--on { border-color: hsl(var(--primary)); background: hsl(var(--primary) / .1); color: hsl(var(--primary)); }
+.sota-keys { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.sota-key { display: flex; width: 64px; height: 64px; align-items: center; justify-content: center; border-radius: calc(var(--radius) + 4px); border-width: 2px; border-color: hsl(var(--input)); background: hsl(var(--background)); font-size: 18px; line-height: 28px; font-weight: 600; color: hsl(var(--foreground)); }
+.sota-btn { display: flex; width: 100%; align-items: center; justify-content: center; gap: 8px; border-radius: var(--radius); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 16px 0; font-size: 16px; line-height: 24px; font-weight: 600; }
+.sota-btn:disabled { opacity: .5; cursor: not-allowed; }
+.sota-back { width: 100%; border-radius: var(--radius); border-width: 1px; border-color: hsl(var(--input)); background: hsl(var(--background)); padding: 12px 0; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--foreground)); }
+.sota-back:disabled { opacity: .5; cursor: not-allowed; }
+.sota-inwrap { display: flex; flex-direction: column; gap: 4px; }
+.sota-input { width: 100%; border-radius: var(--radius); border-width: 1px; border-style: solid; border-color: hsl(var(--input)); background: hsl(var(--background)); padding: 12px 16px; font-size: 16px; line-height: 24px; text-align: start; }
+.sota-input::placeholder { color: hsl(var(--muted-foreground)); opacity: 1; }
+.sota-input--focus { border-color: hsl(var(--primary)); box-shadow: 0 0 0 2px hsl(var(--primary) / .1); }
+.sota-input:disabled { opacity: .5; cursor: not-allowed; }
+/* spinner: h-4 w-4 rounded-full border-2 border-primary-foreground border-t-transparent (animate-spin frozen for determinism) */
+.sota-spin { width: 16px; height: 16px; border-radius: 9999px; border: 2px solid hsl(var(--primary-foreground)); border-top-color: transparent; }

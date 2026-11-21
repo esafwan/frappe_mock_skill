@@ -1,0 +1,58 @@
+{
+  "component": "ury-self-order-screen-tablet-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "nothing-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": []
+      },
+      "screenshot": "states/nothing-selected.png",
+      "preview": "states/nothing-selected.html",
+      "description": "No variant or add-on chosen: every option row uses border-border."
+    },
+    "no-options": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "options": false
+      },
+      "screenshot": "states/no-options.png",
+      "preview": "states/no-options.html",
+      "description": "The item has no variants or add-ons: the Variants and Add-ons groups are not rendered, only quantity and Add to cart."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: no distinct disabled state on this screen"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the error banner prints a dynamic server message and is not a distinct designed state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the \"Loading menu…\" screen is a separate state not captured here"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}
