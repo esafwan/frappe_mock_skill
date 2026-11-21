@@ -1,0 +1,46 @@
+{
+  "id": "ury-mosaic-alerts",
+  "name": "Mosaic Alerts",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 960,
+    "h": 360
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "KOT board system alerts: delayed-order banner, audio-disabled prompt, online/offline toast, Not Permitted login modal.",
+    "Shown over the KOT board when an order passes kot_alert_time, when browser audio is blocked, when connectivity changes, or when the session expires. Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 960,
+  "height": null,
+  "props": {
+    "banner": true,
+    "audio": true,
+    "toast": "online",
+    "modal": true
+  },
+  "canvas": "var(--bg)"
+}

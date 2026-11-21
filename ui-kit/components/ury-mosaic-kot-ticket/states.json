@@ -1,0 +1,190 @@
+{
+  "component": "ury-mosaic-kot-ticket",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "dine-in": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine"
+      },
+      "screenshot": "states/dine-in.png",
+      "preview": "states/dine-in.html",
+      "description": "Dine-in KOT: --panel with --hair2 border, table, waiter, order number, elapsed timer."
+    },
+    "takeaway": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "takeaway"
+      },
+      "screenshot": "states/takeaway.png",
+      "preview": "states/takeaway.html",
+      "description": "Takeaway KOT: --ac-t background and --ac-b border; no \"Table\" label."
+    },
+    "modified": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "modified"
+      },
+      "screenshot": "states/modified.png",
+      "preview": "states/modified.html",
+      "description": "Order Modified: --am-t background and --am-b border."
+    },
+    "cancelled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "cancelled"
+      },
+      "screenshot": "states/cancelled.png",
+      "preview": "states/cancelled.html",
+      "description": "Cancelled KOT: --rd-t / --rd-b, \"( Cancelled )\" after the order number, [Old Qty = n] per item and disposition buttons Return to Stock (--gr) and Mark as Wasted (--rd)."
+    },
+    "partially-cancelled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "partial"
+      },
+      "values": {
+        "type_label": {
+          "sample": "Partially cancelled"
+        }
+      },
+      "screenshot": "states/partially-cancelled.png",
+      "preview": "states/partially-cancelled.html",
+      "description": "Partially cancelled: same red treatment, disposition pending on the cancelled item only."
+    },
+    "disposition-resolved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "partial",
+        "resolved": true
+      },
+      "values": {
+        "type_label": {
+          "sample": "Partially cancelled"
+        }
+      },
+      "screenshot": "states/disposition-resolved.png",
+      "preview": "states/disposition-resolved.html",
+      "description": "Disposition resolved: the buttons are replaced by \"( Disposition: Returned to Stock )\"."
+    },
+    "duplicate": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "duplicate"
+      },
+      "screenshot": "states/duplicate.png",
+      "preview": "states/duplicate.html",
+      "description": "Duplicate KOT: red note \"Duplicate KOT ( CHECK WITH CAPTAIN )\" under the header."
+    },
+    "aggregator": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine",
+        "aggregator": true
+      },
+      "screenshot": "states/aggregator.png",
+      "preview": "states/aggregator.html",
+      "description": "Aggregator order: Aggregator and Aggregator ID rows under the header, takeaway colours."
+    },
+    "struck-item": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine",
+        "struck": true
+      },
+      "screenshot": "states/struck-item.png",
+      "preview": "states/struck-item.html",
+      "description": "Item tapped as done: line-through in --gr."
+    },
+    "overdue": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine",
+        "overdue": true
+      },
+      "values": {
+        "timer": {
+          "sample": "+0:20"
+        }
+      },
+      "screenshot": "states/overdue.png",
+      "preview": "states/overdue.html",
+      "description": "Elapsed time past kot_alert_time: timer turns --rd."
+    },
+    "comments": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine",
+        "comments": true
+      },
+      "screenshot": "states/comments.png",
+      "preview": "states/comments.html",
+      "description": "KOT comment line and an item comment."
+    },
+    "flip-serve": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "dine",
+        "flip": "serve"
+      },
+      "screenshot": "states/flip-serve.png",
+      "preview": "states/flip-serve.html",
+      "description": "Card tapped: overlay (inset 0, opacity .9, --panel) with a Serve button."
+    },
+    "flip-confirm": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "type": "cancelled",
+        "flip": "confirm"
+      },
+      "screenshot": "states/flip-confirm.png",
+      "preview": "states/flip-confirm.html",
+      "description": "Cancelled card tapped: the overlay button reads Confirm."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ury-mosaic-kot-ticket",
+  "name": "Mosaic KOT Ticket",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 282,
+    "h": 187
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "Kitchen order ticket: p12 r8 card, inner width 256, table/takeaway header, elapsed timer 24/32 mono (ltr), items at 12.5/600 with status pill and mono qty.",
+    "Mosaic KOT board (masonry grid). Colour by type: dine-in panel, takeaway blue, modified amber, cancelled red. Timer and qty stay ltr in Arabic. The source sets an inline border-color of --hair2 on every card that overrides the colour class border; this mock follows the class list (--ac-b, --am-b, --rd-b). Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 340,
+  "height": null,
+  "props": {
+    "type": "dine"
+  },
+  "canvas": "var(--bg)"
+}

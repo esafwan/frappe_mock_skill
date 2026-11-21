@@ -1,0 +1,110 @@
+{
+  "component": "ury-mosaic-scope-selector",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "hover": true
+      },
+      "screenshot": "states/hover.png",
+      "preview": "states/hover.html",
+      "description": "Trigger hover: bg --hover.",
+      "alias": "hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "open": true,
+        "sel": 0
+      },
+      "screenshot": "states/open.png",
+      "preview": "states/open.html",
+      "description": "Popover w256 with heading \"Select Active Company\"; selected row uses --ac-t / --ac plus a check.",
+      "alias": "open"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "closed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "open": false,
+        "sel": 0
+      },
+      "screenshot": "states/closed.png",
+      "preview": "states/closed.html",
+      "description": "Closed trigger showing \"All Companies\"."
+    },
+    "open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "open": true,
+        "sel": 0
+      },
+      "screenshot": "states/open.png",
+      "preview": "states/open.html",
+      "description": "Popover w256 with heading \"Select Active Company\"; selected row uses --ac-t / --ac plus a check."
+    },
+    "open-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "open": true,
+        "sel": 2
+      },
+      "screenshot": "states/open-selected.png",
+      "preview": "states/open-selected.html",
+      "description": "A specific company selected; the trigger shows its name."
+    },
+    "branch": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "branch",
+        "open": true,
+        "sel": 1
+      },
+      "screenshot": "states/branch.png",
+      "preview": "states/branch.html",
+      "description": "Branch scope selector, popover open."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "disabled": true
+      },
+      "screenshot": "states/disabled.png",
+      "preview": "states/disabled.html",
+      "description": "Disabled while the scope is loading: opacity .5."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

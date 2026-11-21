@@ -1,0 +1,43 @@
+{
+  "id": "ury-mosaic-production-card",
+  "name": "Mosaic Production Card",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 320,
+    "h": 206.5
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "Production dashboard tile: empty 40px --ac-t tile, unit name, three stat tiles in Geist Mono, \"Click to view KOTs\" footer.",
+    "Production dashboard grid; one per production unit; click opens that unit's KOT board. \"Main Kitchen\" Arabic name is sample data. Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 360,
+  "height": null,
+  "props": {
+    "disabled": false
+  },
+  "canvas": "var(--bg)"
+}

@@ -1,0 +1,78 @@
+{
+  "component": "ury-mosaic-item-pill",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "queued": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "only": "queued"
+      },
+      "screenshot": "states/queued.png",
+      "preview": "states/queued.html",
+      "description": "Queued: --rd set (red)."
+    },
+    "preparing": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "only": "preparing"
+      },
+      "screenshot": "states/preparing.png",
+      "preview": "states/preparing.html",
+      "description": "Preparing: --am set (amber)."
+    },
+    "ready": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "only": "ready"
+      },
+      "screenshot": "states/ready.png",
+      "preview": "states/ready.html",
+      "description": "Ready: #EAF2FB / #1D5FA8 / #C3D9F0 (info blue)."
+    },
+    "served": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "only": "served"
+      },
+      "screenshot": "states/served.png",
+      "preview": "states/served.html",
+      "description": "Served: --gr set (green)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

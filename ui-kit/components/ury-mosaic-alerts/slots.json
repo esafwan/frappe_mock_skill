@@ -1,0 +1,76 @@
+{
+  "component": "ury-mosaic-alerts",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "banner_title": {
+      "type": "text",
+      "sample": "Order Delayed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "banner_inv": {
+      "type": "text",
+      "sample": "Order #: 0042",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "banner_table": {
+      "type": "text",
+      "sample": "Table: T12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "banner_time": {
+      "type": "text",
+      "sample": "Time: 12:40:05",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "audio_msg": {
+      "type": "text",
+      "sample": "Audio notifications disabled. Click anywhere to enable.",
+      "maxLength": 88,
+      "where": "text",
+      "element": "text"
+    },
+    "toast_online": {
+      "type": "text",
+      "sample": "You are online",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "toast_offline": {
+      "type": "text",
+      "sample": "You are Offline",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "modal_title": {
+      "type": "text",
+      "sample": "Not Permitted",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "modal_body": {
+      "type": "text",
+      "sample": "Log in to access this page.",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "modal_btn": {
+      "type": "text",
+      "sample": "Login",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

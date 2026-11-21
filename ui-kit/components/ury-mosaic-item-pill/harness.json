@@ -1,0 +1,41 @@
+{
+  "id": "ury-mosaic-item-pill",
+  "name": "Mosaic Item Status Pill",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 360,
+    "h": 22
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "Per-item KOT status badge: px6 py2 r4, 12/600, 1px border; default shows the four states side by side.",
+    "Beside each KOT item quantity; state progresses Queued, Preparing, Ready, Served. Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 360,
+  "height": null,
+  "props": {},
+  "canvas": "var(--bg)"
+}

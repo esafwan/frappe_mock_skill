@@ -1,0 +1,54 @@
+{
+ "id": "ury-mosaic",
+ "name": "URY Mosaic (kitchen display system)",
+ "status": "planned",
+ "partOf": "ury",
+ "source": {
+  "app": "ury",
+  "branch": "version-16",
+  "commit": "100c43fe2e",
+  "path": "/Users/safwan/Code/ury-v16-latest/mosaic",
+  "root": "/Users/safwan/Code/ury-v16-latest"
+ },
+ "componentGroup": "ury-mosaic",
+ "componentPrefix": "ury-mosaic-",
+ "captureMode": {
+  "kind": "static",
+  "how": "Hand-authored HTML/CSS from the v16 source class lists (scripts/ury-v16/mosaic/*.mjs) rendered through scripts/static-capture.mjs (scripts/specs-ury-mosaic.mjs)."
+ },
+ "variableSystem": {
+  "kind": "hsl-vars",
+  "themeAttribute": null,
+  "theme": {
+   "light": null,
+   "dark": null
+  },
+  "files": {
+   "tokens": "tokens/css/ury-v16/ury-mosaic-tokens.css",
+   "base": "tokens/css/ury-v16/ury-ui-base.css",
+   "fonts": "tokens/css/ury-v16/ury-fonts.css",
+   "components": "tokens/css/ury-v16/components/*.css"
+  }
+ },
+ "modes": [
+  "light",
+  "rtl"
+ ],
+ "rtl": {
+  "supported": true,
+  "mechanism": "dir=\"rtl\" on root; logical CSS properties; Arabic from locale files"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 1920,
+   "h": 1080,
+   "deviceScaleFactor": 1
+  }
+ },
+ "coverage": [
+  "KDS ticket cards",
+  "station and order lanes",
+  "timers and status chips",
+  "full KDS screens"
+ ]
+}

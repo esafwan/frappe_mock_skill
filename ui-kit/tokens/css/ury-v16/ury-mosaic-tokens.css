@@ -1,0 +1,25 @@
+/* Port of mosaic/src/index.css tokens (ury-erp/version-16 @100c43fe2e).
+   Supersedes the token block inside ../ury-mosaic.css (which is a compiled Tailwind bundle for the older KDS and
+   also defines these vars with identical values); this file carries only tokens, so it never pulls utilities in. */
+:root {
+  --bg: #FBFBFA; --panel: #FFFFFF; --rail: #F7F7F6; --hover: #F2F2F1; --sunk: #F5F5F4;
+  --t1: #0D0D0F; --t2: #5C6066; --t3: #6D7279; --t4: #AFB3B7;
+  --hair: #EAEAE8; --hair2: #DEDEDB;
+  --ac: #2457C5; --ac-t: #F0F4FC; --ac-b: #C9D8F2;
+  --rd: #BE3227; --rd-t: #FDF0EE; --rd-b: #F2CFC9;
+  --am: #9A6B04; --am-t: #FCF5E6; --am-b: #EEDFB8;
+  --gr: #15794F; --gr-t: #EDF6F1; --gr-b: #C4E0D1;
+  --s: 'Geist', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --m: 'Geist Mono', ui-monospace, monospace;
+}
+body {
+  font-family: var(--s);
+  background: var(--bg);
+  color: var(--t1);
+  font-size: 13px;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+html[lang='ar'] { --s: 'Almarai', 'Geist', ui-sans-serif, system-ui, sans-serif; }
+html[lang='ar'] body { letter-spacing: 0; font-size: 14px; }
+html[dir='rtl'] .truncate { text-align: start; }

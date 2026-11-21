@@ -1,0 +1,116 @@
+{
+  "component": "ury-mosaic-alerts",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "all": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": true,
+        "audio": true,
+        "toast": "online",
+        "modal": true
+      },
+      "screenshot": "states/all.png",
+      "preview": "states/all.html",
+      "description": "All four alerts layered as in the source (banner z-40 above the modal scrim z-10)."
+    },
+    "order-delayed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": true,
+        "audio": false,
+        "toast": null,
+        "modal": false
+      },
+      "screenshot": "states/order-delayed.png",
+      "preview": "states/order-delayed.html",
+      "description": "Order Delayed banner: --rd-t background, 3px --rd bottom border, dismiss button."
+    },
+    "audio-disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": false,
+        "audio": true,
+        "toast": null,
+        "modal": false
+      },
+      "screenshot": "states/audio-disabled.png",
+      "preview": "states/audio-disabled.html",
+      "description": "Audio notifications disabled message, bold 24px --rd, centred at the top."
+    },
+    "toast-online": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": false,
+        "audio": false,
+        "toast": "online",
+        "modal": false
+      },
+      "screenshot": "states/toast-online.png",
+      "preview": "states/toast-online.html",
+      "description": "Connection restored toast at the bottom end, --gr."
+    },
+    "toast-offline": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": false,
+        "audio": false,
+        "toast": "offline",
+        "modal": false
+      },
+      "screenshot": "states/toast-offline.png",
+      "preview": "states/toast-offline.html",
+      "description": "Connection lost toast at the bottom end, --rd."
+    },
+    "not-permitted": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": false,
+        "audio": false,
+        "toast": null,
+        "modal": true
+      },
+      "screenshot": "states/not-permitted.png",
+      "preview": "states/not-permitted.html",
+      "description": "Not Permitted modal: scrim rgba(13,13,15,.2), panel max-w 448, shadow 0 8px 30px rgba(0,0,0,.12)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

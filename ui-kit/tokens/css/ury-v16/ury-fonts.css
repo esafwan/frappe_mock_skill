@@ -1,0 +1,17 @@
+/* URY v16 fonts, all local. Geist/Inter reuse ui-kit/tokens/fonts; Almarai and the SAR glyph come from pos/src. */
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:block;src:url(../../fonts/InterVariable.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/geist-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/geist-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:600;font-display:swap;src:url(../../fonts/geist-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:700;font-display:swap;src:url(../../fonts/geist-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/geist-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/geist-mono-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:600;font-display:swap;src:url(../../fonts/geist-mono-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Almarai;font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/almarai-400.woff2) format("woff2")}
+@font-face{font-family:Almarai;font-style:normal;font-weight:700;font-display:swap;src:url(../../fonts/almarai-700.woff2) format("woff2")}
+/* Saudi Riyal sign U+20C1: one-glyph font (Lucide saudi-riyal outline, ISC), decoded from pos/src/index.css */
+@font-face{font-family:"URY SAR Sign";font-style:normal;font-weight:100 900;font-display:block;unicode-range:U+20C1;src:url(../../fonts/ury-sar-sign.woff) format("woff")}
+
+html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, html[dir=rtl] select, html[dir=rtl] textarea {
+  font-family: 'Almarai', system-ui, sans-serif;
+}

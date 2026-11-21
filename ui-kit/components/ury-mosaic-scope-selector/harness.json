@@ -1,0 +1,45 @@
+{
+  "id": "ury-mosaic-scope-selector",
+  "name": "Mosaic Scope Selector",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 164.296875,
+    "h": 28
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "Company/Branch filter dropdown: h28 trigger on --sunk with building icon, w256 popover with heading and check on the selected row.",
+    "Header, home route only; option 1 is always \"All ...\" and the rest come from the user's companies or branches. Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 320,
+  "height": null,
+  "props": {
+    "kind": "company",
+    "open": false,
+    "sel": 0
+  },
+  "canvas": "var(--bg)"
+}

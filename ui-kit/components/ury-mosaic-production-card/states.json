@@ -1,0 +1,68 @@
+{
+  "component": "ury-mosaic-production-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "disabled": false
+      },
+      "screenshot": "states/default.png",
+      "preview": "states/default.html",
+      "description": "Production unit card with Active, Served and Total stat tiles."
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "disabled": true
+      },
+      "screenshot": "states/disabled.png",
+      "preview": "states/disabled.html",
+      "description": "Disabled: opacity .5 with 1px blur, not-allowed cursor; click is ignored."
+    },
+    "idle": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "n_active": {
+          "sample": "0"
+        },
+        "n_served": {
+          "sample": "0"
+        },
+        "n_total": {
+          "sample": "0"
+        }
+      },
+      "screenshot": "states/idle.png",
+      "preview": "states/idle.html",
+      "description": "A unit with no orders yet."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

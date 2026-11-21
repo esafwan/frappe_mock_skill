@@ -1,0 +1,44 @@
+{
+  "id": "ury-mosaic-header",
+  "name": "Mosaic Header",
+  "group": "ury-mosaic",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 49
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-mosaic-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/mosaic.css"
+  ],
+  "modes": [
+    "light",
+    "rtl"
+  ],
+  "describe": [
+    "mosaic KDS top bar: mosaic.jpg logo at h32, Company/Branch scope selectors on the home route, refresh, user dropdown.",
+    "Top of every mosaic route; the home route shows the scope selectors, the KOT board route does not. Arabic strings from mosaic/src/locales/ar.json. Modes: light and rtl only; dark is not applicable (mosaic/src/index.css defines one light palette (:root only) and no dark: classes or .dark overrides, so the KDS has no dark theme)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": null,
+  "props": {
+    "view": "home",
+    "menu": false
+  },
+  "canvas": "var(--bg)"
+}
