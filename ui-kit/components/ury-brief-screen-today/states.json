@@ -1,0 +1,48 @@
+{
+  "component": "ury-brief-screen-today",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "menu": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "menu": true
+      },
+      "screenshot": "states/menu.png",
+      "preview": "states/menu.html",
+      "description": "Account menu open over the Today screen."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

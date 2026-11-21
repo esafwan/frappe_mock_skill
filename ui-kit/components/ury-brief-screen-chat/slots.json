@@ -1,0 +1,286 @@
+{
+  "component": "ury-brief-screen-chat",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "ch_back": {
+      "type": "text",
+      "sample": "Back",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_title": {
+      "type": "text",
+      "sample": "How were sales yesterday?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "tb_call": {
+      "type": "text",
+      "sample": "Call",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_day": {
+      "type": "text",
+      "sample": "Today",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_u1": {
+      "type": "text",
+      "sample": "How were sales yesterday?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_u1t": {
+      "type": "text",
+      "sample": "09:40",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_a1": {
+      "type": "text",
+      "sample": "Net sales were up 12.4% on the day before. Here is the detail.",
+      "maxLength": 100,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_title": {
+      "type": "text",
+      "sample": "Yesterday",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_sub": {
+      "type": "text",
+      "sample": "Net sales and orders",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_l1": {
+      "type": "text",
+      "sample": "Net sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_d1": {
+      "type": "text",
+      "sample": "+12.4%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_l2": {
+      "type": "text",
+      "sample": "Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_v2": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_d2": {
+      "type": "text",
+      "sample": "+11%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_link": {
+      "type": "text",
+      "sample": "Open dashboard",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_play": {
+      "type": "text",
+      "sample": "Play reply",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_a1t": {
+      "type": "text",
+      "sample": "09:41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_voice": {
+      "type": "text",
+      "sample": "Voice message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_u2": {
+      "type": "text",
+      "sample": "Which dishes sold best?",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_u2t": {
+      "type": "text",
+      "sample": "09:42",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_a2": {
+      "type": "text",
+      "sample": "Chicken Mandi led the day.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "bc_title": {
+      "type": "text",
+      "sample": "Top dishes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i1": {
+      "type": "text",
+      "sample": "Chicken Mandi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i2": {
+      "type": "text",
+      "sample": "Grilled Hammour",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i3": {
+      "type": "text",
+      "sample": "Lamb Ouzi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bc_note": {
+      "type": "text",
+      "sample": "Composed by the assistant from your data. Check the dashboard to confirm.",
+      "maxLength": 117,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_a2t": {
+      "type": "text",
+      "sample": "09:42",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_ph": {
+      "type": "text",
+      "sample": "Ask a question",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_rec": {
+      "type": "text",
+      "sample": "Record a voice message",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_cancel": {
+      "type": "text",
+      "sample": "Cancel recording",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_timer": {
+      "type": "text",
+      "sample": "0:07",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_sendv": {
+      "type": "text",
+      "sample": "Send voice message",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_intro": {
+      "type": "text",
+      "sample": "Ask about your restaurant",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_intro_s": {
+      "type": "text",
+      "sample": "Type or speak in English, Hindi, Arabic or Malayalam.",
+      "maxLength": 85,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_st1": {
+      "type": "text",
+      "sample": "How were sales yesterday?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "ch_st2": {
+      "type": "text",
+      "sample": "Which dishes should I push?",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "kc_v1": {
+      "type": "currency",
+      "sample": "AED 18,420.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1": {
+      "type": "currency",
+      "sample": "AED 4,280.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2": {
+      "type": "currency",
+      "sample": "AED 3,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3": {
+      "type": "currency",
+      "sample": "AED 2,760.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

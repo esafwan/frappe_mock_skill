@@ -1,0 +1,45 @@
+{
+  "id": "ury-brief-topbar",
+  "name": "Brief top bar",
+  "group": "ury-brief",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 390,
+    "h": 56
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-brief-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/brief.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Brief app top bar: 56px, title 17/600, one-line subtitle 12px muted, 40px circular Call and kebab buttons.",
+    "Use at the top of the Brief PWA; the kebab opens the overflow menu. Arabic: fixed UI labels translated (brief_app ships no Arabic locale); sample text values are illustrative."
+  ],
+  "darkTheme": "dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": null,
+  "props": {
+    "menu": false,
+    "avatar": false
+  },
+  "canvas": "hsl(var(--background))"
+}

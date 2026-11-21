@@ -1,0 +1,258 @@
+{
+  "component": "ury-brief-screen-chats",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "tb_title": {
+      "type": "text",
+      "sample": "Al Noor Restaurant",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "tb_sub": {
+      "type": "text",
+      "sample": "Updated 09:41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tb_account": {
+      "type": "text",
+      "sample": "Account menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tb_initials": {
+      "type": "text",
+      "sample": "SE",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_lbl": {
+      "type": "text",
+      "sample": "Net sales · Yesterday",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "h_delta": {
+      "type": "text",
+      "sample": "+12.4%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_orders": {
+      "type": "text",
+      "sample": "Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_orders": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_orders": {
+      "type": "text",
+      "sample": "vs 128 before",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_avg": {
+      "type": "text",
+      "sample": "Avg check",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_covers": {
+      "type": "text",
+      "sample": "Covers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_covers": {
+      "type": "text",
+      "sample": "236",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_covers": {
+      "type": "text",
+      "sample": "118 bills",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_spc": {
+      "type": "text",
+      "sample": "Spend per cover",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_prep": {
+      "type": "text",
+      "sample": "Avg prep time",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_prep": {
+      "type": "text",
+      "sample": "11.5 min",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_prep": {
+      "type": "text",
+      "sample": "p90 18 min",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_close": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_title": {
+      "type": "text",
+      "sample": "All questions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_search": {
+      "type": "text",
+      "sample": "Search questions",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_t": {
+      "type": "text",
+      "sample": "How were sales yesterday?",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_p": {
+      "type": "text",
+      "sample": "Thinking…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_w": {
+      "type": "text",
+      "sample": "09:41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_more": {
+      "type": "text",
+      "sample": "More",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_t": {
+      "type": "text",
+      "sample": "Which dishes should I push?",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_p": {
+      "type": "text",
+      "sample": "Chicken Mandi and Grilled Hammour are your steadiest sellers.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_w": {
+      "type": "text",
+      "sample": "Yesterday",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_t": {
+      "type": "text",
+      "sample": "Voice message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_p": {
+      "type": "text",
+      "sample": "You: How is kitchen prep time?",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "r3_w": {
+      "type": "text",
+      "sample": "3 days ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_t": {
+      "type": "text",
+      "sample": "How are covers trending?",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_p": {
+      "type": "text",
+      "sample": "Covers rose 8% over the last 7 days.",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "r4_w": {
+      "type": "text",
+      "sample": "12 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_big": {
+      "type": "currency",
+      "sample": "AED 18,420.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_avg": {
+      "type": "currency",
+      "sample": "AED 130.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_spc": {
+      "type": "currency",
+      "sample": "AED 78.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

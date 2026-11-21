@@ -1,0 +1,314 @@
+{
+  "component": "ury-brief-feed-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "f_title": {
+      "type": "text",
+      "sample": "Sales, last 7 days",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "f_head": {
+      "type": "text",
+      "sample": "Sales are up on last week, led by weekend dinner.",
+      "maxLength": 79,
+      "where": "text",
+      "element": "text"
+    },
+    "f_total": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_ordv": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_orders": {
+      "type": "text",
+      "sample": "Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_vsv": {
+      "type": "text",
+      "sample": "+12.4%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_vs": {
+      "type": "text",
+      "sample": "vs before",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_ask": {
+      "type": "text",
+      "sample": "Ask about this",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_dash": {
+      "type": "text",
+      "sample": "Dashboard ›",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_title": {
+      "type": "text",
+      "sample": "Key numbers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_head": {
+      "type": "text",
+      "sample": "How the day compares with the one before.",
+      "maxLength": 66,
+      "where": "text",
+      "element": "text"
+    },
+    "k_orders": {
+      "type": "text",
+      "sample": "Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_orders": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_orders": {
+      "type": "text",
+      "sample": "vs 128 before",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_avg": {
+      "type": "text",
+      "sample": "Avg check",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_covers": {
+      "type": "text",
+      "sample": "Covers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_covers": {
+      "type": "text",
+      "sample": "236",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_covers": {
+      "type": "text",
+      "sample": "118 bills",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_spc": {
+      "type": "text",
+      "sample": "Spend per cover",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_prep": {
+      "type": "text",
+      "sample": "Avg prep time",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_prep": {
+      "type": "text",
+      "sample": "11.5 min",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_prep": {
+      "type": "text",
+      "sample": "p90 18 min",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_top_t": {
+      "type": "text",
+      "sample": "Top and slowest dishes",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "f_top_h": {
+      "type": "text",
+      "sample": "What guests ordered most and least yesterday.",
+      "maxLength": 72,
+      "where": "text",
+      "element": "text"
+    },
+    "f_top": {
+      "type": "text",
+      "sample": "Top sellers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i1": {
+      "type": "text",
+      "sample": "Chicken Mandi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i2": {
+      "type": "text",
+      "sample": "Grilled Hammour",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i3": {
+      "type": "text",
+      "sample": "Lamb Ouzi",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_slow": {
+      "type": "text",
+      "sample": "Slowest sellers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s1": {
+      "type": "text",
+      "sample": "Fattoush Salad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s2": {
+      "type": "text",
+      "sample": "Lentil Soup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s3": {
+      "type": "text",
+      "sample": "Kunafa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_partial_b": {
+      "type": "text",
+      "sample": "Partial data:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "f_partial": {
+      "type": "text",
+      "sample": " some days or values are missing.",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "f_unavail_b": {
+      "type": "text",
+      "sample": "Not recorded yet.",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "f_totalv": {
+      "type": "currency",
+      "sample": "AED 18,420.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_avg": {
+      "type": "currency",
+      "sample": "AED 130.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_spc": {
+      "type": "currency",
+      "sample": "AED 78.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1": {
+      "type": "currency",
+      "sample": "AED 4,280.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2": {
+      "type": "currency",
+      "sample": "AED 3,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3": {
+      "type": "currency",
+      "sample": "AED 2,760.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q1": {
+      "type": "currency",
+      "sample": "AED 120.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q2": {
+      "type": "currency",
+      "sample": "AED 210.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q3": {
+      "type": "currency",
+      "sample": "AED 340.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

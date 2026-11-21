@@ -1,0 +1,89 @@
+{
+  "component": "ury-brief-screen-call",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "idle": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "idle"
+      },
+      "screenshot": "states/idle.png",
+      "preview": "states/idle.html",
+      "description": "Idle: Tap to talk with the green Call button."
+    },
+    "speaking": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "speaking"
+      },
+      "screenshot": "states/speaking.png",
+      "preview": "states/speaking.html",
+      "description": "Assistant speaking: orb glow at full level."
+    },
+    "muted": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "listening",
+        "muted": true
+      },
+      "screenshot": "states/muted.png",
+      "preview": "states/muted.html",
+      "description": "Muted: dimmed orb, pressed Unmute control."
+    },
+    "failed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "failed"
+      },
+      "screenshot": "states/failed.png",
+      "preview": "states/failed.html",
+      "description": "Could not connect: red orb and Try again."
+    },
+    "ended": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "ended"
+      },
+      "screenshot": "states/ended.png",
+      "preview": "states/ended.html",
+      "description": "Call ended: neutral orb and Call again."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

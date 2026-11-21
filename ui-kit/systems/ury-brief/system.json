@@ -1,0 +1,53 @@
+{
+ "id": "ury-brief",
+ "name": "URY Brief app",
+ "status": "planned",
+ "partOf": "ury",
+ "source": {
+  "app": "ury",
+  "branch": "version-16",
+  "commit": "100c43fe2e",
+  "path": "/Users/safwan/Code/ury-v16-latest/brief_app",
+  "root": "/Users/safwan/Code/ury-v16-latest"
+ },
+ "componentGroup": "ury-brief",
+ "componentPrefix": "ury-brief-",
+ "captureMode": {
+  "kind": "static",
+  "how": "Hand-authored HTML/CSS from the v16 source class lists (scripts/ury-v16/brief/*.mjs) rendered through scripts/static-capture.mjs (scripts/specs-ury-brief.mjs)."
+ },
+ "variableSystem": {
+  "kind": "hsl-vars",
+  "themeAttribute": "data-theme:dark",
+  "theme": {
+   "light": null,
+   "dark": "data-theme=\"dark\" on <html>"
+  },
+  "files": {
+   "tokens": "tokens/css/ury-v16/ury-brief-tokens.css",
+   "base": "tokens/css/ury-v16/ury-ui-base.css",
+   "fonts": "tokens/css/ury-v16/ury-fonts.css",
+   "components": "tokens/css/ury-v16/components/*.css"
+  }
+ },
+ "modes": [
+  "light",
+  "dark",
+  "rtl"
+ ],
+ "rtl": {
+  "supported": true,
+  "mechanism": "dir=\"rtl\" on root; logical CSS properties; Arabic from locale files"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 1440,
+   "h": 900,
+   "deviceScaleFactor": 2
+  }
+ },
+ "coverage": [
+  "brief reports",
+  "brief screens"
+ ]
+}
