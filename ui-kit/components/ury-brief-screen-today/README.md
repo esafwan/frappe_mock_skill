@@ -4,7 +4,7 @@ Full 390x844 Today screen: top bar, net sales hero, key-number tiles, feed cards
 
 **When to use:** Whole-screen mockup of the Brief home. Arabic: fixed UI labels translated (brief_app ships no Arabic locale); sample text values are illustrative.
 
-**Slots people usually change:** `h_big` (currency, e.g. "AED 18,420.00"), `f_totalv` (currency, e.g. "AED 18,420.00"), `p1` (currency, e.g. "AED 4,280.00"), `p2` (currency, e.g. "AED 3,150.00"), `p3` (currency, e.g. "AED 2,760.00"), `v_avg` (currency, e.g. "AED 130.00"). All 61 slots are in `slots.json`.
+**Slots people usually change:** `f_head` (text, e.g. "Sales are up on last week, led"), `f_top_h` (text, e.g. "What guests ordered most and l"), `dk_chip2` (text, e.g. "Which dishes are slowest?"), `dk_chip3` (text, e.g. "How were sales yesterday?"), `f_top_t` (text, e.g. "Top and slowest dishes"), `h_lbl` (text, e.g. "Net sales · Yesterday"). All 61 slots are in `slots.json`.
 
 **States:** default (none), menu (props). Details and class/attribute changes in `states.json`.
 

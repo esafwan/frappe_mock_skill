@@ -4,7 +4,7 @@ Feed card (.fcard): 24px radius card with title, sub line, chart, facts and Ask 
 
 **When to use:** Use for each story in Today’s story. Arabic: fixed UI labels translated (brief_app ships no Arabic locale); sample text values are illustrative.
 
-**Slots people usually change:** `f_totalv` (currency, e.g. "AED 18,420.00"), `p1` (currency, e.g. "AED 4,280.00"), `p2` (currency, e.g. "AED 3,150.00"), `p3` (currency, e.g. "AED 2,760.00"), `v_avg` (currency, e.g. "AED 130.00"), `q1` (currency, e.g. "AED 120.00"). All 44 slots are in `slots.json`.
+**Slots people usually change:** `f_head` (text, e.g. "Sales are up on last week, led"), `f_top_h` (text, e.g. "What guests ordered most and l"), `g_head` (text, e.g. "How the day compares with the "), `f_partial` (text, e.g. " some days or values are missi"), `f_top_t` (text, e.g. "Top and slowest dishes"), `f_title` (text, e.g. "Sales, last 7 days"). All 44 slots are in `slots.json`.
 
 **States:** default (none), number-cards (props), top-sellers (props), slowest-sellers (props), partial (props), unavailable (props). Details and class/attribute changes in `states.json`.
 
