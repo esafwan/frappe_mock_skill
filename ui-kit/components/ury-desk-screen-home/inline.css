@@ -40566,6 +40566,9 @@ div#driver-popover-item .driver-popover-footer button.driver-close-btn {
   font-size: 0; overflow: hidden;
 }
 
+/* dark chrome: the logo PNG has a white tile; invert it so it does not glare */
+[data-theme="dark"] .ury-desk .header-logo img { filter: invert(1) hue-rotate(180deg); }
+
 /* T25: URY v16 desk workspace widgets (frappe/public/scss/desk/desktop.scss + page.scss).
    Number card, shortcut and link card are .widget boxes placed on the 12-col editor.js grid (.ce-block col-N). */
 .ury-ws { padding: 10px 20px 0; }

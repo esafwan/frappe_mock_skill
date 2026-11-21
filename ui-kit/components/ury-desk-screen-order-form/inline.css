@@ -40900,6 +40900,9 @@ body.dt-resize {
   font-size: 0; overflow: hidden;
 }
 
+/* dark chrome: the logo PNG has a white tile; invert it so it does not glare */
+[data-theme="dark"] .ury-desk .header-logo img { filter: invert(1) hue-rotate(180deg); }
+
 /* T27: URY desk list / form / report screens. frappe-desk.css carries the real list, form and datatable rules; this file only pins the mock
    (30px list rows, flow-positioned datatable rows, layout of the page body under the shell). */
 .ury-desk-page-body { overflow: hidden; }
