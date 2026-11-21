@@ -1,0 +1,55 @@
+{
+  "component": "ury-self-order-option-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "label": {
+      "type": "text",
+      "sample": "Variants",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o1_name": {
+      "type": "text",
+      "sample": "Espresso",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o1_rate": {
+      "type": "currency",
+      "sample": "AED 12.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o2_name": {
+      "type": "text",
+      "sample": "Doppio",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o2_rate": {
+      "type": "currency",
+      "sample": "AED 16.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o3_name": {
+      "type": "text",
+      "sample": "Cortado",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o3_rate": {
+      "type": "currency",
+      "sample": "AED 18.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

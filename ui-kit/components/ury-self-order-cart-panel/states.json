@@ -1,0 +1,132 @@
+{
+  "component": "ury-self-order-cart-panel",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "empty-cart": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "order": false,
+        "items": 0
+      },
+      "values": {
+        "count_label": "0 items",
+        "cart_total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/empty-cart.png",
+      "preview": "states/empty-cart.html",
+      "description": "No order yet and an empty cart: the hint text shows and Place Order is disabled (opacity-50)."
+    },
+    "cart-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "order": false,
+        "items": 2
+      },
+      "screenshot": "states/cart-only.png",
+      "preview": "states/cart-only.html",
+      "description": "First order: no \"Your order so far\" block."
+    },
+    "submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "submitting": true
+      },
+      "screenshot": "states/submitting.png",
+      "preview": "states/submitting.html",
+      "description": "Order being submitted: \"Placing order…\", button disabled."
+    },
+    "pay-online": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "payOnline": true
+      },
+      "screenshot": "states/pay-online.png",
+      "preview": "states/pay-online.html",
+      "description": "customer_payment_enabled and an unbilled order: the primary \"Pay Online\" button."
+    },
+    "paying-online": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "payOnline": true,
+        "paying": true
+      },
+      "screenshot": "states/paying-online.png",
+      "preview": "states/paying-online.html",
+      "description": "Payment starting: \"Starting payment…\", disabled."
+    },
+    "request-bill": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "requestBill": true
+      },
+      "screenshot": "states/request-bill.png",
+      "preview": "states/request-bill.html",
+      "description": "request_bill_enabled and an unbilled order: outlined \"Request Bill\" button."
+    },
+    "bill-requested": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "requestBill": true,
+        "billRequested": true
+      },
+      "screenshot": "states/bill-requested.png",
+      "preview": "states/bill-requested.html",
+      "description": "Bill already requested: \"Bill requested — staff notified\", disabled."
+    },
+    "all-actions": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "payOnline": true,
+        "requestBill": true
+      },
+      "screenshot": "states/all-actions.png",
+      "preview": "states/all-actions.html",
+      "description": "Both optional buttons enabled."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "component": "ury-self-order-product-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "tablet": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "size": "tablet"
+      },
+      "screenshot": "states/tablet.png",
+      "preview": "states/tablet.html",
+      "description": "Tablet layout: image h-32 (128), rounded-xl, text-left."
+    },
+    "landscape": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "size": "landscape"
+      },
+      "screenshot": "states/landscape.png",
+      "preview": "states/landscape.html",
+      "description": "Landscape kiosk: image h-40 (160), rounded-2xl, text-lg."
+    },
+    "portrait": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "size": "portrait"
+      },
+      "screenshot": "states/portrait.png",
+      "preview": "states/portrait.html",
+      "description": "Portrait kiosk: image h-48 (192), rounded-xl."
+    },
+    "not-in-cart": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "qty": 0
+      },
+      "screenshot": "states/not-in-cart.png",
+      "preview": "states/not-in-cart.html",
+      "description": "Nothing in the cart: only name and rate show."
+    },
+    "sold-out": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unavailable": true
+      },
+      "values": {
+        "unavail": "Sold out"
+      },
+      "screenshot": "states/sold-out.png",
+      "preview": "states/sold-out.html",
+      "description": "Availability PLAN_EXHAUSTED / FG_OUT_OF_STOCK: opacity-50, the \"Sold out\" message replaces the in-cart badge."
+    },
+    "not-available-today": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unavailable": true
+      },
+      "values": {
+        "unavail": "Not available today"
+      },
+      "screenshot": "states/not-available-today.png",
+      "preview": "states/not-available-today.html",
+      "description": "NOT_PRODUCED / NO_ACTIVE_PLAN: \"Not available today\"."
+    },
+    "temporarily-unavailable": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unavailable": true
+      },
+      "values": {
+        "unavail": "Temporarily unavailable"
+      },
+      "screenshot": "states/temporarily-unavailable.png",
+      "preview": "states/temporarily-unavailable.html",
+      "description": "BLOCKING_COMPONENT, MISSING_BOM and the other configuration codes: \"Temporarily unavailable\"."
+    },
+    "currently-unavailable": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unavailable": true
+      },
+      "values": {
+        "unavail": "Currently unavailable"
+      },
+      "screenshot": "states/currently-unavailable.png",
+      "preview": "states/currently-unavailable.html",
+      "description": "Unknown or missing reason code: \"Currently unavailable\"."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state"
+    }
+  }
+}

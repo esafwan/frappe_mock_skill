@@ -1,0 +1,58 @@
+{
+  "component": "ury-self-order-category-tabs",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "all-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": 0
+      },
+      "screenshot": "states/all-active.png",
+      "preview": "states/all-active.html",
+      "description": "The \"All\" chip is active (bg-primary); every course chip is inactive (border, bg-background)."
+    },
+    "category-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": 2
+      },
+      "screenshot": "states/category-active.png",
+      "preview": "states/category-active.html",
+      "description": "A course chip is active, \"All\" falls back to the inactive style."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state"
+    }
+  }
+}

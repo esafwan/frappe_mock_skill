@@ -1,0 +1,79 @@
+{
+  "component": "ury-self-order-option-row",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "none-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": []
+      },
+      "screenshot": "states/none-selected.png",
+      "preview": "states/none-selected.html",
+      "description": "No row selected: all rows use border-border."
+    },
+    "multi-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "values": {
+        "label": "Add-ons"
+      },
+      "screenshot": "states/multi-selected.png",
+      "preview": "states/multi-selected.html",
+      "description": "Add-ons allow several selected rows (border-primary, bg-primary/10)."
+    },
+    "no-rate": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": [
+          1
+        ]
+      },
+      "values": {
+        "o3_rate": "—"
+      },
+      "screenshot": "states/no-rate.png",
+      "preview": "states/no-rate.html",
+      "description": "Option without a rate renders the em dash fallback."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state"
+    }
+  }
+}

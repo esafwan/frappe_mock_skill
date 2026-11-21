@@ -1,0 +1,167 @@
+{
+  "component": "ury-self-order-cart-panel",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "order_title": {
+      "type": "text",
+      "sample": "Your order so far",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "cart_title": {
+      "type": "text",
+      "sample": "Cart",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_label": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o1_name": {
+      "type": "text",
+      "sample": "Espresso",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o1_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o1_amount": {
+      "type": "currency",
+      "sample": "AED 12.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o2_name": {
+      "type": "text",
+      "sample": "Cappuccino",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o2_qty": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "o2_amount": {
+      "type": "currency",
+      "sample": "AED 36.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_total": {
+      "type": "currency",
+      "sample": "AED 48.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_name": {
+      "type": "text",
+      "sample": "Latte",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2_name": {
+      "type": "text",
+      "sample": "Croissant",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2_qty": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_text": {
+      "type": "text",
+      "sample": "Tap a menu item to add it to your cart.",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "count_label": {
+      "type": "text",
+      "sample": "3 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cart_total": {
+      "type": "currency",
+      "sample": "AED 52.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "place_order": {
+      "type": "text",
+      "sample": "Place Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "placing": {
+      "type": "text",
+      "sample": "Placing order…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pay_online": {
+      "type": "text",
+      "sample": "Pay Online",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "paying": {
+      "type": "text",
+      "sample": "Starting payment…",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "request_bill": {
+      "type": "text",
+      "sample": "Request Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill_requested": {
+      "type": "text",
+      "sample": "Bill requested — staff notified",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

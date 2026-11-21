@@ -1,0 +1,85 @@
+/* URY v16 self-order shared primitives. Class lists mirror self-order/src/layouts/shared/{CategoryTabs,SearchBar,ProductCard,ProductDetail,CartPanel}.tsx
+   and the Still-there dialog in the three layouts (ury-erp/version-16 @100c43fe2e). Tailwind classes translated to scoped rules; logical properties only.
+   RTL is a kit extension (the source has no dir handling): physical left/right in the source become inline-start/end. */
+.so, .so *, .so *::before, .so *::after { box-sizing: border-box; }
+:where(.so, .so *, .so *::before, .so *::after) { border: 0 solid hsl(var(--border)); }
+.so { font-family: var(--font-sans); font-size: 16px; line-height: 24px; color: hsl(var(--foreground)); background: hsl(var(--background)); -webkit-font-smoothing: antialiased; }
+:where(.so) :where(h1, h2, p, ul) { margin: 0; padding: 0; }
+:where(.so) ul { list-style: none; }
+:where(.so) button { font: inherit; color: inherit; background: transparent; padding: 0; margin: 0; text-align: center; cursor: pointer; }
+:where(.so) input { font: inherit; color: inherit; margin: 0; padding: 0; outline: none; }
+.so svg { display: block; flex-shrink: 0; }
+
+/* ---------- CategoryTabs: sticky top-0 z-10 flex gap-2 overflow-x-auto bg-background/95 px-6 py-3 backdrop-blur ---------- */
+.so-tabs { position: sticky; top: 0; z-index: 10; display: flex; gap: 8px; overflow: hidden; background: hsl(var(--background) / .95); padding: 12px 24px; backdrop-filter: blur(8px); width: 390px; }
+.so-chip { white-space: nowrap; border-radius: 9999px; padding: 8px 16px; font-size: 14px; line-height: 20px; font-weight: 500; flex-shrink: 0; }
+.so-chip--on { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.so-chip--off { border-width: 1px; background: hsl(var(--background)); color: hsl(var(--foreground)); }
+
+/* ---------- SearchBar: flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 ---------- */
+.so-search-wrap { width: 390px; padding: 12px 24px; }
+.so-search { position: relative; }
+.so-search__box { display: flex; align-items: center; gap: 8px; border-radius: calc(var(--radius) - 2px); border-width: 1px; border-color: hsl(var(--input)); background: hsl(var(--background)); padding: 8px 12px; }
+.so-search__icon { width: 20px; height: 20px; color: hsl(var(--muted-foreground)); }
+.so-search__input { flex: 1 1 0%; min-width: 0; border: 0; background: transparent; font-size: 14px; line-height: 20px; text-align: start; }
+.so-search__input::placeholder { color: hsl(var(--muted-foreground)); opacity: 1; }
+.so-search__clear { flex-shrink: 0; border-radius: 9999px; padding: 4px; color: hsl(var(--muted-foreground)); }
+.so-search__clear svg { width: 16px; height: 16px; }
+
+/* ---------- ProductCard: button, cardClassName per layout; body flex flex-1 flex-col gap-1 p-3 ---------- */
+.so-pc-wrap { width: 390px; padding: 16px; display: flex; }
+.so-pc { display: flex; flex-direction: column; cursor: pointer; overflow: hidden; border-width: 1px; width: 174px; text-align: center; background: transparent; }
+.so-pc--mobile { border-radius: var(--radius); }
+.so-pc--tablet { border-radius: calc(var(--radius) + 4px); text-align: start; min-width: 150px; }
+.so-pc--portrait { border-radius: calc(var(--radius) + 4px); text-align: start; }
+.so-pc--landscape { border-radius: 16px; text-align: start; font-size: 18px; line-height: 28px; min-width: 180px; width: 190px; }
+.so-pc__img { display: block; width: 100%; object-fit: cover; }
+.so-pc--mobile .so-pc__img { height: 96px; }
+.so-pc--tablet .so-pc__img { height: 128px; }
+.so-pc--landscape .so-pc__img { height: 160px; }
+.so-pc--portrait .so-pc__img { height: 192px; }
+.so-pc__body { display: flex; flex: 1 1 0%; flex-direction: column; gap: 4px; padding: 12px; }
+.so-pc__name { font-weight: 500; }
+.so-pc__rate { color: hsl(var(--muted-foreground)); }
+.so-pc__msg { margin-top: 4px; font-size: 14px; line-height: 20px; font-weight: 600; }
+.so-pc__msg--cart { color: hsl(var(--primary)); }
+.so-pc__msg--bad { color: hsl(var(--destructive)); }
+.so-pc.is-disabled { opacity: .5; cursor: not-allowed; }
+
+/* ---------- OptionRow (ProductDetail): flex items-center justify-between rounded-lg border px-4 py-3 text-left ---------- */
+.so-opt-wrap { width: 390px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.so-opt-label { font-size: 14px; line-height: 20px; font-weight: 600; }
+.so-opt-list { display: flex; flex-direction: column; gap: 8px; }
+.so-opt { display: flex; align-items: center; justify-content: space-between; border-radius: var(--radius); border-width: 1px; border-color: hsl(var(--border)); padding: 12px 16px; text-align: start; width: 100%; }
+.so-opt--on { border-color: hsl(var(--primary)); background: hsl(var(--primary) / .1); }
+.so-opt__rate { color: hsl(var(--muted-foreground)); }
+
+/* ---------- CartPanel: aside "flex w-[32%] flex-col overflow-hidden border-l bg-background p-4" ---------- */
+.so-cart { display: flex; flex-direction: column; overflow: hidden; border-inline-start-width: 1px; background: hsl(var(--background)); padding: 16px; width: 410px; height: 640px; }
+.so-cart__scroll { flex: 1 1 0%; overflow: hidden; }
+.so-cart__order { margin-bottom: 16px; border-radius: var(--radius); border-width: 1px; padding: 12px; }
+.so-cart__h { margin-bottom: 8px; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--muted-foreground)); }
+.so-cart__rows { font-size: 14px; line-height: 20px; display: flex; flex-direction: column; gap: 4px; }
+.so-cart__rows li { display: flex; justify-content: space-between; }
+.so-cart__total { margin-top: 8px; display: flex; justify-content: space-between; border-top-width: 1px; padding-top: 8px; font-size: 14px; line-height: 20px; font-weight: 600; }
+.so-cart__empty { font-size: 14px; line-height: 20px; color: hsl(var(--muted-foreground)); }
+.so-cart__lines { font-size: 14px; line-height: 20px; display: flex; flex-direction: column; gap: 8px; }
+.so-cart__lines li { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.so-cart__name { flex: 1 1 0%; }
+.so-cart__ctl { display: flex; align-items: center; gap: 8px; }
+.so-cart__step { width: 28px; height: 28px; border-radius: 9999px; border-width: 1px; font-size: 14px; line-height: 1; }
+.so-cart__qty { width: 16px; text-align: center; }
+.so-cart__foot { border-top-width: 1px; padding-top: 12px; }
+.so-cart__sum { margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; line-height: 20px; font-weight: 600; }
+.so-cart__sum .so-num { font-variant-numeric: tabular-nums; }
+.so-cart__btn { display: block; width: 100%; border-radius: calc(var(--radius) - 2px); }
+.so-cart__btn--place { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-weight: 500; }
+.so-cart__btn--pay { margin-top: 8px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 8px 0; font-size: 14px; line-height: 20px; font-weight: 500; }
+.so-cart__btn--bill { margin-top: 8px; border-width: 1px; padding: 8px 0; font-size: 14px; line-height: 20px; font-weight: 500; }
+.so-cart__btn:disabled, .so-cart__btn.is-disabled { opacity: .5; cursor: default; }
+
+/* ---------- Idle dialog: Dialog > DialogContent (rounded-xl max-w-md mx-4) > DialogHeader text-center + DialogFooter ---------- */
+.so-idle { position: relative; width: 390px; height: 320px; overflow: hidden; background: hsl(var(--background)); }
+.so-idle .u-dialog-header { text-align: center; }
+.so-idle__btn { width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: 500; }
+.so-idle .u-dialog-footer { flex-direction: column-reverse; }

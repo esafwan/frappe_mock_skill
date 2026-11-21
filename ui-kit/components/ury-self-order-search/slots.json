@@ -1,0 +1,20 @@
+{
+  "component": "ury-self-order-search",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "placeholder": {
+      "type": "text",
+      "sample": "Search menu...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "query": {
+      "type": "text",
+      "sample": "Cappuccino",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

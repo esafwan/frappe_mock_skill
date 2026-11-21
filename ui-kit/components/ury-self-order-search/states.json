@@ -1,0 +1,48 @@
+{
+  "component": "ury-self-order-search",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true
+      },
+      "screenshot": "states/filled.png",
+      "preview": "states/filled.html",
+      "description": "A query is typed: the circular clear button (X, 16px) appears at the end of the field."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state"
+    }
+  }
+}

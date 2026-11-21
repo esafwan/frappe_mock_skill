@@ -1,0 +1,27 @@
+{
+  "component": "ury-self-order-idle-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Still there?",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "still_here": {
+      "type": "text",
+      "sample": "I'm still here",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "close": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}
