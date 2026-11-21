@@ -1,0 +1,27 @@
+{
+  "component": "ury-captain-send-bar",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "total_label": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 78.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "button": {
+      "type": "text",
+      "sample": "Send Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

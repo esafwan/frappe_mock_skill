@@ -68,6 +68,16 @@
       "preview": "states/zero-balance-confirm.html",
       "description": "All amounts zero after the first press: orange warning and the button reads Confirm & Open."
     },
+    "retry-actions": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "retry": true
+      },
+      "screenshot": "states/retry-actions.png",
+      "preview": "states/retry-actions.html",
+      "description": "Source footer also renders Retry and Back to Dashboard buttons beside the primary action (POSOpeningScreen always renders all three); shown as a variant."
+    },
     "submitting": {
       "applicable": true,
       "mechanism": "props",

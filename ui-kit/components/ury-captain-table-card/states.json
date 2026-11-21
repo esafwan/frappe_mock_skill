@@ -1,0 +1,154 @@
+{
+  "component": "ury-captain-table-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "free": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "free",
+        "merge": false
+      },
+      "values": {
+        "table_name": "T3",
+        "status": "Free",
+        "seats": "2"
+      },
+      "screenshot": "states/free.png",
+      "preview": "states/free.html",
+      "description": "Free table: emerald-300 border, emerald-50 fill, emerald-900 text, success badge, seats only."
+    },
+    "mine": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "mine",
+        "merge": false
+      },
+      "values": {
+        "table_name": "T5",
+        "status": "Mine",
+        "elapsed": "12m",
+        "total": {
+          "type": "currency",
+          "amount": 54,
+          "currency": "AED",
+          "sample": "AED 54.00"
+        }
+      },
+      "screenshot": "states/mine.png",
+      "preview": "states/mine.html",
+      "description": "Table owned by the signed-in captain: sky-400 / sky-50 / sky-900, info badge, no owner row."
+    },
+    "occupied": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "occupied",
+        "merge": false
+      },
+      "values": {
+        "table_name": "T7",
+        "elapsed": "1h 5m",
+        "total": {
+          "type": "currency",
+          "amount": 132.25,
+          "currency": "AED",
+          "sample": "AED 132.25"
+        }
+      },
+      "screenshot": "states/occupied.png",
+      "preview": "states/occupied.html",
+      "description": "Occupied by another captain: amber-400 / amber-50 / amber-900, warning badge with the owner name, owner row (User 12), elapsed and total."
+    },
+    "billed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "billed",
+        "merge": false
+      },
+      "values": {
+        "table_name": "T4",
+        "status": "Billed",
+        "elapsed": "1h 20m",
+        "total": {
+          "type": "currency",
+          "amount": 210,
+          "currency": "AED",
+          "sample": "AED 210.00"
+        }
+      },
+      "screenshot": "states/billed.png",
+      "preview": "states/billed.html",
+      "description": "Invoice printed: slate-400 / slate-100 / slate-900, Lock 16 in the header, secondary \"Billed\" badge."
+    },
+    "merged": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "occupied",
+        "merge": true
+      },
+      "values": {
+        "table_name": "T1"
+      },
+      "screenshot": "states/merged.png",
+      "preview": "states/merged.html",
+      "description": "Merged cluster: the \"+ T2, T3\" line (12/500, opacity .8) under the table name."
+    },
+    "attention-newer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "attention",
+        "merge": false
+      },
+      "values": {
+        "table_name": "T9",
+        "elapsed": "1h 25m",
+        "total": {
+          "type": "currency",
+          "amount": 96.75,
+          "currency": "AED",
+          "sample": "AED 96.75"
+        }
+      },
+      "screenshot": "states/attention-newer.png",
+      "preview": "states/attention-newer.html",
+      "description": "newer (frontend/ copy): open longer than the branch attention threshold. AlertTriangle in the header, destructive border/tint/text, 1px border with 4px inline-start border, radius 8, gap 4."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no empty variant"
+    }
+  }
+}

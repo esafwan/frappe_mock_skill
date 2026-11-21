@@ -1,0 +1,83 @@
+{
+  "component": "ury-captain-service-requests",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Service Requests",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "count": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "acknowledged": {
+      "type": "text",
+      "sample": "Acknowledged",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ack": {
+      "type": "text",
+      "sample": "Ack",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "empty": {
+      "type": "text",
+      "sample": "No open requests",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "row_1": {
+      "type": "text",
+      "sample": "Table T1 · Assistance",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "elapsed_1": {
+      "type": "text",
+      "sample": "2 min ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "row_2": {
+      "type": "text",
+      "sample": "Table T4 · Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "elapsed_2": {
+      "type": "text",
+      "sample": "5 min ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "row_3": {
+      "type": "text",
+      "sample": "Table T2 · Assistance",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "elapsed_3": {
+      "type": "text",
+      "sample": "just now",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

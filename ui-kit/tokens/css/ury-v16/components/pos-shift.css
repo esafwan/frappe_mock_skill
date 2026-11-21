@@ -76,7 +76,7 @@
 .pos-shift__dlg-desc { font-size: 14px; line-height: 1.625; color: hsl(var(--muted-foreground)); }
 .pos-shift__dlg-body { padding: 0 24px 16px; }
 .pos-shift__dlg-foot { display: flex; justify-content: flex-end; gap: 8px; padding: 0 24px 24px; }
-.pos-shift__dlg-x { position: absolute; top: 12px; inset-inline-end: 12px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: calc(var(--radius) - 2px); color: hsl(var(--muted-foreground)); }
+.pos-shift__dlg-x { position: absolute; top: 12px; inset-inline-end: 12px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: calc(var(--radius) - 2px); color: hsl(var(--muted-foreground)); border: 0; background: transparent; padding: 0; outline: 0; box-shadow: none; font: inherit; }
 .pos-shift__dlg-x svg { width: 16px; height: 16px; }
 .pos-shift__sum { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
 .pos-shift__sumcard { border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 12px; }
@@ -111,11 +111,11 @@
 
 /* ---------- Checklist gate ---------- */
 .pos-shift__gate { display: flex; flex-direction: column; width: calc(100% - 32px); max-width: 512px; max-height: 90vh; margin-inline: 16px; padding: 32px; background: hsl(var(--card)); border-radius: 8px; box-shadow: var(--shadow-xl); }
-.pos-shift__gate-title { font-size: 24px; line-height: 32px; font-weight: 700; color: hsl(var(--gray-900)); text-align: center; margin-bottom: 8px; }
-.pos-shift__gate-desc { color: hsl(var(--gray-600)); text-align: center; margin-bottom: 24px; }
+.pos-shift .pos-shift__gate-title { font-size: 24px; line-height: 32px; font-weight: 700; color: hsl(var(--gray-900)); text-align: center; margin-bottom: 8px; }
+.pos-shift .pos-shift__gate-desc { color: hsl(var(--gray-600)); text-align: center; margin-bottom: 24px; }
 .pos-shift__gate-block { padding-block: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-.pos-shift__gate-block .h { font-size: 18px; line-height: 28px; font-weight: 600; color: hsl(var(--gray-900)); margin-bottom: 8px; }
-.pos-shift__gate-block .m { font-size: 14px; line-height: 20px; color: hsl(var(--gray-600)); }
+.pos-shift .pos-shift__gate-block .h { font-size: 18px; line-height: 28px; font-weight: 600; color: hsl(var(--gray-900)); margin-bottom: 8px; }
+.pos-shift .pos-shift__gate-block .m { font-size: 14px; line-height: 20px; color: hsl(var(--gray-600)); }
 .pos-shift__gate-block .u-btn { margin-top: 24px; }
 .pos-shift__items { flex: 1 1 0%; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; padding-inline-end: 4px; min-height: 0; }
 .pos-shift__item-t { font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-900)); }
@@ -131,3 +131,10 @@
 .pos-shift__gate-btn.is-off { opacity: .5; }
 .pos-shift__gate-btn--auto { width: auto; }
 .pos-shift__gate-block .pos-shift__gate-btn { margin-top: 24px; }
+
+/* dark: source text-gray-* ramp is too dim on the card token; keep readable */
+.dark .pos-shift__gate-title, .dark .pos-shift__item-t, .dark .pos-shift__radio, .dark .pos-shift__gate-block .h { color: hsl(var(--foreground)); }
+.dark .pos-shift .pos-shift__gate-desc, .dark .pos-shift__gate-block .m { color: hsl(var(--muted-foreground)); }
+.dark .pos-shift__title, .dark .pos-shift__total, .dark .pos-shift__sumrow b:last-child, .dark .pos-shift__table td, .dark .pos-shift__sumcard p:last-child, .dark .pos-shift__ctable th, .dark .pos-shift__ctable td.is-mode, .dark .pos-shift__confirm h3 { color: hsl(var(--foreground)); }
+.dark .pos-shift__sumrow b:first-child, .dark .pos-shift__table th, .dark .pos-shift__ctable td { color: hsl(var(--foreground) / .8); }
+.dark .pos-shift__sub, .dark .pos-shift__label, .dark .pos-shift__help, .dark .pos-shift__sumcard p:first-child, .dark .pos-shift__profile > span, .dark .pos-shift__confirm p { color: hsl(var(--muted-foreground)); }

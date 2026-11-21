@@ -1,0 +1,104 @@
+/* URY v16 Captain components (pos/src/captain/*, pos/src/components/MenuCard.tsx, packages/ui menu-item-card).
+   Tailwind class lists translated 1:1; logical properties only; colours from tokens, --tw-* literals and u-* primitives. */
+.ucap, .ucap *, .ucap *::before, .ucap *::after { box-sizing: border-box; }
+.ucap {
+  --ucap-red-400: #f87171; --ucap-amber-500: #f59e0b;
+  font-family: var(--font-sans); color: hsl(var(--foreground)); -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; font-size: 16px; line-height: 24px;
+}
+html[dir="rtl"] .ucap, html[dir="rtl"] .ucap * { font-family: 'Almarai', system-ui, sans-serif; }
+.ucap svg { flex: none; }
+.ucap p, .ucap h2, .ucap h3 { margin: 0; }
+.ucap-spin { animation: ucap-spin 1s linear infinite; animation-delay: -.25s; animation-play-state: paused; }
+@keyframes ucap-spin { to { transform: rotate(360deg); } }
+
+/* ---------- ury-captain-table-card (CaptainTableCard.tsx) ---------- */
+.ucap-tc {
+  display: flex; flex-direction: column; align-items: stretch; min-height: 120px; padding: 12px;
+  border: 2px solid; border-radius: 12px; text-align: start;
+}
+.ucap-tc--free { border-color: var(--tw-emerald-300); background: var(--tw-emerald-50); color: var(--tw-emerald-900); }
+.ucap-tc--mine { border-color: var(--tw-sky-400); background: var(--tw-sky-50); color: var(--tw-sky-900); }
+.ucap-tc--occupied { border-color: var(--tw-amber-400); background: var(--tw-amber-50); color: var(--tw-amber-900); }
+.ucap-tc--billed { border-color: var(--tw-slate-400); background: var(--tw-slate-100); color: var(--tw-slate-900); }
+.ucap-tc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.ucap-tc-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 18px; line-height: 28px; font-weight: 700; }
+.ucap-tc-icons { display: flex; flex: none; align-items: center; gap: 4px; }
+.ucap-tc-merge { display: block; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 16px; font-weight: 500; opacity: .8; }
+.ucap-tc-body { margin-top: 8px; display: flex; flex: 1 1 0%; flex-direction: column; justify-content: flex-end; gap: 6px; }
+.ucap-tc-body .u-badge { width: fit-content; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.ucap-tc-owner { display: flex; align-items: center; gap: 4px; overflow: hidden; font-size: 12px; line-height: 16px; font-weight: 500; opacity: .8; }
+.ucap-tc-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; line-height: 16px; font-weight: 500; opacity: .8; }
+.ucap-tc-seats { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; opacity: .7; }
+/* newer: frontend/ copy with the attention timer (AlertTriangle) */
+.ucap-tc--newer { border-width: 1px; border-inline-start-width: 4px; border-radius: 8px; }
+.ucap-tc--newer .ucap-tc-body { gap: 4px; }
+.ucap-tc--attention { border-color: hsl(var(--destructive)); background: hsl(var(--destructive) / .1); color: hsl(var(--destructive)); }
+
+/* ---------- ury-captain-order-line (CaptainOrderLine.tsx) ---------- */
+.ucap-ol { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border-radius: 8px; }
+.ucap-ol--delta { background: var(--tw-blue-50); }
+.ucap-ol--reduction { background: var(--tw-red-50); }
+.ucap-ol--confirmed { background: hsl(var(--white)); }
+.ucap-ol-main { flex: 1 1 0%; text-align: start; min-width: 0; }
+.ucap-ol-title { display: flex; align-items: center; gap: 8px; }
+.ucap-ol-name { font-size: 14px; line-height: 20px; font-weight: 500; }
+.ucap-ol--delta .ucap-ol-name { color: var(--tw-blue-900); }
+.ucap-ol--reduction .ucap-ol-name { color: var(--tw-red-900); text-decoration: line-through; text-decoration-color: var(--ucap-red-400); }
+.ucap-ol--confirmed .ucap-ol-name { color: hsl(var(--gray-900)); }
+.ucap-ol-comment { margin-top: 2px; display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; color: hsl(var(--gray-500)); }
+.ucap-ol-price { margin-top: 2px; font-size: 12px; line-height: 16px; color: hsl(var(--gray-500)); }
+.ucap-ol-actions { display: flex; flex: none; align-items: center; gap: 4px; }
+.ucap-ol-btn { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0; border: 1px solid hsl(var(--border)); border-radius: 9999px; background: transparent; color: inherit; }
+.ucap-ol-btn--danger { border-color: var(--tw-red-200); color: var(--tw-red-600); }
+
+/* ---------- ury-captain-menu-pane (CaptainMenu.tsx + MenuCard) ---------- */
+.ucap-mp { display: flex; flex-direction: column; background: hsl(var(--background)); }
+.ucap-mp-head { position: sticky; top: 0; z-index: 10; display: flex; flex-direction: column; gap: 8px; padding: 12px; background: hsl(var(--white)); border-bottom: 1px solid hsl(var(--border)); }
+.ucap-mp-search { position: relative; }
+.ucap-mp-search > svg { position: absolute; inset-inline-start: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: hsl(var(--gray-400)); }
+.ucap-mp-input { width: 100%; padding: 12px 12px; padding-inline-start: 36px; border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--gray-50)); font-size: 16px; line-height: 24px; color: hsl(var(--gray-400)); white-space: nowrap; overflow: hidden; }
+.ucap-mp-chips { display: flex; gap: 8px; margin-inline: -12px; padding-inline: 12px; padding-bottom: 4px; overflow: hidden; }
+.ucap-mp-chip { flex: none; padding: 8px 16px; border: 1px solid hsl(var(--border)); border-radius: 9999px; background: hsl(var(--white)); color: hsl(var(--gray-700)); font-size: 14px; line-height: 20px; font-weight: 500; white-space: nowrap; }
+.ucap-mp-chip--on { background: var(--tw-blue-600); border-color: var(--tw-blue-600); color: #fff; }
+.ucap-mp-note { padding: 8px 12px; border: 1px solid var(--tw-amber-200); border-radius: 4px; background: var(--tw-amber-50); color: var(--tw-amber-700); font-size: 12px; line-height: 16px; }
+.ucap-mp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 12px; padding-bottom: 32px; }
+.ucap-mp-grid .u-menu-item-card { cursor: default; }
+
+/* ---------- ury-captain-actions-menu (CaptainActionsMenu.tsx) ---------- */
+.ucap-am { display: flex; flex-direction: column; align-items: stretch; width: 224px; }
+.ucap-am-trigger { align-self: flex-end; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 6px; color: hsl(var(--gray-600)); background: transparent; }
+.ucap-am-trigger svg { width: 20px; height: 20px; }
+.ucap-am-panel { margin-top: 4px; width: 224px; padding: 4px 0; border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--white)); box-shadow: var(--shadow-lg); }
+.ucap-am-item { display: flex; align-items: center; justify-content: flex-start; gap: 8px; width: 100%; padding: 10px 16px; font-size: 14px; line-height: 20px; font-weight: 400; color: hsl(var(--gray-700)); white-space: nowrap; text-align: start; }
+.ucap-am-item svg { width: 16px; height: 16px; }
+.ucap-am-item--disabled { opacity: .5; pointer-events: none; }
+
+/* ---------- ury-captain-service-requests (ServiceRequestPanel.tsx) ---------- */
+.ucap-sr { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; width: 320px; padding-top: 4px; padding-inline-end: 4px; }
+.ucap-sr-panel { width: 100%; border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--white)); box-shadow: var(--shadow-lg); }
+.ucap-sr-head { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-bottom: 1px solid hsl(var(--border)); }
+.ucap-sr-title { font-size: 14px; line-height: 20px; font-weight: 600; color: hsl(var(--gray-900)); }
+.ucap-sr-head svg { width: 16px; height: 16px; color: hsl(var(--gray-400)); }
+.ucap-sr-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px; border-bottom: 1px solid hsl(var(--gray-100)); }
+.ucap-sr-row:last-child { border-bottom: 0; }
+.ucap-sr-text { min-width: 0; text-align: start; }
+.ucap-sr-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--gray-900)); }
+.ucap-sr-meta { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; color: hsl(var(--gray-500)); }
+.ucap-sr-meta svg { width: 12px; height: 12px; }
+.ucap-sr-ack { margin-inline-start: 4px; padding: 2px 6px; border-radius: 4px; background: var(--tw-amber-100); color: var(--tw-amber-700); }
+.ucap-sr-actions { display: flex; flex: none; gap: 4px; }
+.ucap-sr-empty { padding: 16px; text-align: center; font-size: 14px; line-height: 20px; color: hsl(var(--gray-500)); }
+.ucap-sr-bell { position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 9999px; box-shadow: var(--shadow-lg); }
+.ucap-sr-bell svg { width: 20px; height: 20px; }
+.ucap-sr-bell--on { background: var(--ucap-amber-500); color: #fff; }
+.ucap-sr-bell--off { background: hsl(var(--white)); color: hsl(var(--gray-600)); border: 1px solid hsl(var(--border)); }
+.ucap-sr-count { position: absolute; top: -4px; inset-inline-end: -4px; display: flex; align-items: center; justify-content: center; height: 20px; min-width: 20px; padding-inline: 4px; border-radius: 9999px; background: var(--tw-red-600); color: #fff; font-size: 12px; line-height: 16px; font-weight: 700; }
+
+/* ---------- ury-captain-send-bar (CaptainOrder.tsx primary action, mobile) ---------- */
+.ucap-sb { padding: 12px; border-top: 1px solid hsl(var(--border)); background: hsl(var(--white)); }
+.ucap-sb-total { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; padding-inline: 4px; }
+.ucap-sb-label { font-size: 14px; line-height: 20px; font-weight: 600; color: hsl(var(--gray-700)); }
+.ucap-sb-amount { font-size: 18px; line-height: 28px; font-weight: 600; color: hsl(var(--gray-900)); }
+.ucap-sb .u-btn { width: 100%; height: 48px; font-size: 16px; }
+.ucap-sb-busy { display: flex; align-items: center; gap: 8px; }

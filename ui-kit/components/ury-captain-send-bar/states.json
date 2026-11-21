@@ -1,0 +1,97 @@
+{
+  "component": "ury-captain-send-bar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "update": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "button": "Update Order",
+        "total": {
+          "type": "currency",
+          "amount": 134.5,
+          "currency": "AED",
+          "sample": "AED 134.50"
+        }
+      },
+      "screenshot": "states/update.png",
+      "preview": "states/update.html",
+      "description": "Existing order being changed: label \"Update Order\" (hard-coded English in the source)."
+    },
+    "sending": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "busy": true
+      },
+      "values": {
+        "button": "Sending…"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "Submitting a new order: Loader2 and \"Sending…\", button disabled (opacity .5)."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "busy": true
+      },
+      "values": {
+        "button": "Sending…"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "Submitting a new order: Loader2 and \"Sending…\", button disabled (opacity .5).",
+      "alias": "sending"
+    },
+    "updating": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "busy": true
+      },
+      "values": {
+        "button": "Updating…",
+        "total": {
+          "type": "currency",
+          "amount": 134.5,
+          "currency": "AED",
+          "sample": "AED 134.50"
+        }
+      },
+      "screenshot": "states/updating.png",
+      "preview": "states/updating.html",
+      "description": "Submitting an update: Loader2 and \"Updating…\"."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no error variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no empty variant"
+    }
+  }
+}

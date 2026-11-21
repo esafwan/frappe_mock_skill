@@ -44,6 +44,7 @@ const openSpec = {
     'warning-previous-day': { props: { alert: 'daily_close' }, describe: 'Previous day not closed: orange alert, Open button disabled.' },
     'warning-main-cashier': { props: { alert: 'main_cashier' }, describe: 'Multi-cashier: main cashier has not opened yet, orange alert.' },
     'zero-balance-confirm': { props: { zero: true }, describe: 'All amounts zero after the first press: orange warning and the button reads Confirm & Open.' },
+    'retry-actions': { props: { retry: true }, describe: 'Source footer also renders Retry and Back to Dashboard buttons beside the primary action (POSOpeningScreen always renders all three); shown as a variant.' },
     submitting: { props: { submitting: true }, describe: 'Opening in progress: spinner icon and Opening... label, actions disabled.' },
     'submit-error': { props: { error: true }, describe: 'Server error shown in a red box above the actions.' },
     'profile-select': { props: { profileSelect: true }, describe: 'More than one allowed profile: POS Profile select replaces the profile badge.' },
@@ -104,13 +105,13 @@ const mixed = [{ st: 'P', rem: null, req: true }, { st: 'F', rem: null, req: tru
 const done = [{ st: 'P', rem: null, req: true }, { st: 'F', rem: 'rem2', req: true }, { st: 'P', rem: 'rem3', req: true }, { st: 'P', rem: null, req: false }];
 const gateSpec = {
   ...base, id: 'pos-checklist-gate', name: 'POS checklist gate', slots: gc.slots, rtlValues: gc.rtlValues,
-  props: { kind: 'closing', items: mixed },
+  props: { kind: 'closing', items: done },
   render: (v, p) => gateScreen(v, p, 'pos-checklist-gate'),
   describe: ['Non-dismissible Checklist gate (ChecklistGateDialog): PASS / FAIL radios per item with remarks, required remarks on FAIL, and a Submit Checklist button; blocked and start states.', 'Blocks the POS until the Opening or Closing checklist is complete; also shown after a POS close with a Skip bar.'],
   na: { disabled: 'Submit Checklist is shown disabled in the default variant until all mandatory items are answered', error: 'shown as the submit-error variant', loading: 'the submitting variant', empty: 'no items auto-submits and is not rendered' },
   naDefault: STATE_NA.desktop,
   variants: {
-    closing: { props: { items: done }, describe: 'Closing checklist fully answered: Submit enabled.' },
+    'closing-incomplete': { props: { items: mixed }, describe: 'Closing checklist with a FAIL missing its remark and unanswered items; Submit disabled.' },
     opening: { props: { items: done }, values: openVals, rtlValues: openAr, describe: 'Opening checklist title and items, all answered.' },
     'opening-incomplete': { props: { items: mixed }, values: openVals, describe: 'Opening checklist with a FAIL missing its remark (error text) and unanswered items; Submit disabled.' },
     blocked: { props: { state: 'blocked' }, describe: 'Predecessor role has not finished: "<Checklist> Required" with the Recheck button.' },
@@ -121,6 +122,6 @@ const gateSpec = {
     'with-skip-bar': { props: { items: done, skip: true }, describe: 'Closing checklist after POS close: fixed bottom-6 bar with Skip for now (z-60).' },
   },
 };
-gateSpec.props = { kind: 'closing', items: mixed };
+gateSpec.props = { kind: 'closing', items: done };
 
 export const specs = [openSpec, closeSpec, gateSpec];

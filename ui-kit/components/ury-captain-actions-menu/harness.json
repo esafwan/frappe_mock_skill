@@ -1,0 +1,42 @@
+{
+  "id": "ury-captain-actions-menu",
+  "name": "URY Captain actions menu",
+  "group": "ury-captain",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 224,
+    "h": 210
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/captain.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Overflow menu of the captain order screen: MoreVertical trigger and a 224px panel with Reprint KOT, Transfer table, Transfer captain and Print bill (16px icons, 14px gray-700, 10px 16px padding).",
+    "Top bar of the captain order screen. Items the captain may not use are not rendered (print-bill-only variant); a running reprint/print shows Loader2 and disables the item."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

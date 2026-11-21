@@ -1,0 +1,42 @@
+{
+  "id": "ury-captain-service-requests",
+  "name": "URY Captain service requests",
+  "group": "ury-captain",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 320,
+    "h": 293
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/captain.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Service request bell (48px, amber with a red count badge) and the 320px panel: title, close, rows \"Table T1 · Assistance\" with Clock meta, optional amber \"Acknowledged\" pill, Ack and resolve (Check) buttons.",
+    "Floating over the captain screens. Request types are Bill and Assistance in the source; the panel polls open requests."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

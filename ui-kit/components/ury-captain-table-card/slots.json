@@ -1,0 +1,55 @@
+{
+  "component": "ury-captain-table-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "table_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "owner_name": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_list": {
+      "type": "text",
+      "sample": "T2, T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "elapsed": {
+      "type": "text",
+      "sample": "45m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 86.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

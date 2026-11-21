@@ -60,8 +60,7 @@ export const openingBody = (v, p = {}) => {
   </div>
   <div class="pos-shift__actions" data-ui="pos-opening-actions">
     ${btn('u-btn--default', label, { off, ui: 'pos-opening-submit' })}
-    ${btn('u-btn--outline', v.btn_retry, { off: p.submitting, icon: ic('RefreshCw', 16) })}
-    ${btn('u-btn--outline', v.btn_back)}
+    ${p.retry ? btn('u-btn--outline', v.btn_retry, { off: p.submitting, icon: ic('RefreshCw', 16) }) + btn('u-btn--outline', v.btn_back) : ''}
   </div>
 </div>`;
 };

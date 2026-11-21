@@ -1,0 +1,68 @@
+{
+  "component": "ury-captain-menu-pane",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "untagged": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "untagged": true
+      },
+      "values": {},
+      "screenshot": "states/untagged.png",
+      "preview": "states/untagged.html",
+      "description": "Cards without availability tags (the captain screen passes no branch/company, so MenuCard shows no tag)."
+    },
+    "browse-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "browse": true
+      },
+      "values": {},
+      "screenshot": "states/browse-only.png",
+      "preview": "states/browse-only.html",
+      "description": "canAddItems = false: amber note under the chips and every card disabled (opacity .5)."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "browse": true
+      },
+      "values": {},
+      "screenshot": "states/browse-only.png",
+      "preview": "states/browse-only.html",
+      "description": "canAddItems = false: amber note under the chips and every card disabled (opacity .5).",
+      "alias": "browse-only"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no empty variant"
+    }
+  }
+}

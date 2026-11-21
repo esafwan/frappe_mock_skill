@@ -1,0 +1,45 @@
+{
+  "id": "ury-captain-order-line",
+  "name": "URY Captain order line",
+  "group": "ury-captain",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 366,
+    "h": 60
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/captain.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "One row of the delta-aware order list: \"<qty> x name\", optional comment, line price and round 36px action buttons. delta (new/changed, blue) has Minus and Plus; reduction (pending reduction, red, struck through) has RotateCcw; confirmed (already ordered, white) has Minus and a red Trash2.",
+    "Captain order screen, Current Order list (366px wide at 390px)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": null,
+  "props": {
+    "variant": "delta",
+    "comment": true
+  },
+  "canvas": "hsl(var(--background))"
+}
