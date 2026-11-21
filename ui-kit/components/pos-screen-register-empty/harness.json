@@ -1,0 +1,43 @@
+{
+  "id": "pos-screen-register-empty",
+  "name": "POS screen: register, empty cart",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css",
+    "ury-v16/components/pos-register.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The POS register with nothing in the order: no item steppers on the grid and the panel shows the Frown empty state with the double-click hint.",
+    "The first moment of a new order, before the first tap on a menu item."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

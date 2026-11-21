@@ -1,0 +1,251 @@
+{
+  "component": "pos-order-panel-v16",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "i1_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i1_price": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dine_in": {
+      "type": "text",
+      "sample": "Dine In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "take_away": {
+      "type": "text",
+      "sample": "Take Away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "delivery": {
+      "type": "text",
+      "sample": "Delivery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "phone_in": {
+      "type": "text",
+      "sample": "Phone In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "aggregators": {
+      "type": "text",
+      "sample": "Aggregators",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_ph": {
+      "type": "text",
+      "sample": "Search customer...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_name": {
+      "type": "text",
+      "sample": "Rashid Mansoor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pax": {
+      "type": "text",
+      "sample": "Pax",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pax_n": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "edit_item": {
+      "type": "text",
+      "sample": "Edit item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "clear_cart": {
+      "type": "text",
+      "sample": "Clear cart",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_order": {
+      "type": "text",
+      "sample": "Add New Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "update_order": {
+      "type": "text",
+      "sample": "Update Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_comment": {
+      "type": "text",
+      "sample": "Add comment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kot_sent": {
+      "type": "text",
+      "sample": "Sent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kot_preparing": {
+      "type": "text",
+      "sample": "Preparing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kot_ready": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kot_served": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_1": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_2": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "line_variant": {
+      "type": "text",
+      "sample": "Large",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "line_addons": {
+      "type": "text",
+      "sample": "Extra Pita Bread, Spicy Harissa",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_price": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_name": {
+      "type": "text",
+      "sample": "Falafel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_price": {
+      "type": "currency",
+      "sample": "AED 48.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_name": {
+      "type": "text",
+      "sample": "Fattoush",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_price": {
+      "type": "currency",
+      "sample": "AED 28.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l4_name": {
+      "type": "text",
+      "sample": "Kibbeh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l4_price": {
+      "type": "currency",
+      "sample": "AED 32.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_multi": {
+      "type": "currency",
+      "sample": "AED 130.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_amount": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

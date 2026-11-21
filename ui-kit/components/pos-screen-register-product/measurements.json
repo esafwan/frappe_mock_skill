@@ -1,0 +1,698 @@
+{
+  "component": "pos-screen-register-product",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "pos-screen-register-product",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "pos-screen-register-product.header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 48
+    },
+    {
+      "id": "pos-screen-register-product.header.logo",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 7.5,
+      "w": 96,
+      "h": 32
+    },
+    {
+      "id": "pos-screen-register-product.header.search",
+      "tag": "div",
+      "interactive": false,
+      "x": 256.83,
+      "y": 9.5,
+      "w": 672,
+      "h": 28
+    },
+    {
+      "id": "pos-header.printer",
+      "tag": "button",
+      "interactive": true,
+      "x": 1065.66,
+      "y": 9.5,
+      "w": 167.53,
+      "h": 28
+    },
+    {
+      "id": "pos-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1249.19,
+      "y": 9.5,
+      "w": 166.81,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-register-product.sidebar",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 48,
+      "w": 256,
+      "h": 775.5
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.all",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 117,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-1",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 182,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-2",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 226,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-3",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 270,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-4",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 314,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-5",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 358,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-6",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 402,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.sidebar.cat-7",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 446,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-screen-register-product.filters",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 48,
+      "w": 800,
+      "h": 65
+    },
+    {
+      "id": "pos-screen-register-product.filters.all",
+      "tag": "button",
+      "interactive": true,
+      "x": 272,
+      "y": 64,
+      "w": 64.98,
+      "h": 32
+    },
+    {
+      "id": "pos-screen-register-product.filters.special",
+      "tag": "button",
+      "interactive": true,
+      "x": 344.98,
+      "y": 64,
+      "w": 137.58,
+      "h": 32
+    },
+    {
+      "id": "pos-screen-register-product.grid",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 113,
+      "w": 800,
+      "h": 710.5
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-1",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 129,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-1.qty",
+      "tag": "div",
+      "interactive": false,
+      "x": 296,
+      "y": 317,
+      "w": 112,
+      "h": 44
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-2",
+      "tag": "div",
+      "interactive": false,
+      "x": 428,
+      "y": 129,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-3",
+      "tag": "div",
+      "interactive": false,
+      "x": 584,
+      "y": 129,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-4",
+      "tag": "div",
+      "interactive": false,
+      "x": 740,
+      "y": 129,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-5",
+      "tag": "div",
+      "interactive": false,
+      "x": 896,
+      "y": 129,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-6",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 381,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-7",
+      "tag": "div",
+      "interactive": false,
+      "x": 428,
+      "y": 381,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-8",
+      "tag": "div",
+      "interactive": false,
+      "x": 584,
+      "y": 381,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-9",
+      "tag": "div",
+      "interactive": false,
+      "x": 740,
+      "y": 381,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.grid.item-10",
+      "tag": "div",
+      "interactive": false,
+      "x": 896,
+      "y": 381,
+      "w": 144,
+      "h": 240
+    },
+    {
+      "id": "pos-screen-register-product.panel",
+      "tag": "div",
+      "interactive": false,
+      "x": 1056,
+      "y": 48,
+      "w": 384,
+      "h": 836
+    },
+    {
+      "id": "pos-screen-register-product.panel.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 1057,
+      "y": 48,
+      "w": 383,
+      "h": 167
+    },
+    {
+      "id": "pos-screen-register-product.panel.types",
+      "tag": "div",
+      "interactive": false,
+      "x": 1065,
+      "y": 64,
+      "w": 367,
+      "h": 42
+    },
+    {
+      "id": "pos-screen-register-product.panel.customer",
+      "tag": "div",
+      "interactive": false,
+      "x": 1073,
+      "y": 118,
+      "w": 351,
+      "h": 36
+    },
+    {
+      "id": "pos-screen-register-product.panel.pax",
+      "tag": "div",
+      "interactive": false,
+      "x": 1073,
+      "y": 166,
+      "w": 351,
+      "h": 32
+    },
+    {
+      "id": "pos-screen-register-product.panel.lines",
+      "tag": "div",
+      "interactive": false,
+      "x": 1057,
+      "y": 215,
+      "w": 383,
+      "h": 552
+    },
+    {
+      "id": "pos-screen-register-product.panel.line-1",
+      "tag": "div",
+      "interactive": false,
+      "x": 1081,
+      "y": 215,
+      "w": 335,
+      "h": 77
+    },
+    {
+      "id": "pos-screen-register-product.panel.edit-1",
+      "tag": "button",
+      "interactive": true,
+      "x": 1208,
+      "y": 231,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "id": "pos-screen-register-product.panel.delete-1",
+      "tag": "button",
+      "interactive": true,
+      "x": 1372,
+      "y": 231,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "id": "pos-screen-register-product.panel.clear",
+      "tag": "button",
+      "interactive": true,
+      "x": 1081,
+      "y": 308,
+      "w": 335,
+      "h": 36
+    },
+    {
+      "id": "pos-screen-register-product.panel.footer",
+      "tag": "div",
+      "interactive": false,
+      "x": 1057,
+      "y": 767,
+      "w": 383,
+      "h": 117
+    },
+    {
+      "id": "pos-screen-register-product.panel.comment",
+      "tag": "button",
+      "interactive": true,
+      "x": 1073,
+      "y": 784,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "id": "pos-screen-register-product.panel.total",
+      "tag": "span",
+      "interactive": false,
+      "x": 1331.05,
+      "y": 786,
+      "w": 92.95,
+      "h": 28
+    },
+    {
+      "id": "pos-screen-register-product.panel.submit",
+      "tag": "button",
+      "interactive": true,
+      "x": 1073,
+      "y": 832,
+      "w": 351,
+      "h": 36
+    },
+    {
+      "id": "pos-screen-register-product.footer",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 823.5,
+      "w": 1440,
+      "h": 76.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 424.31,
+      "y": 830.5,
+      "w": 91.81,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.active",
+      "tag": "a",
+      "interactive": true,
+      "x": 520.13,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.tables",
+      "tag": "a",
+      "interactive": true,
+      "x": 596.13,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.reservations",
+      "tag": "a",
+      "interactive": true,
+      "x": 672.13,
+      "y": 830.5,
+      "w": 104.89,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.orders",
+      "tag": "a",
+      "interactive": true,
+      "x": 781.02,
+      "y": 830.5,
+      "w": 72,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.sessions",
+      "tag": "a",
+      "interactive": true,
+      "x": 857.02,
+      "y": 830.5,
+      "w": 80,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.footer.settings",
+      "tag": "a",
+      "interactive": true,
+      "x": 941.02,
+      "y": 830.5,
+      "w": 74.67,
+      "h": 63.5
+    },
+    {
+      "id": "pos-screen-register-product.dialog",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "dialog",
+      "tag": "div",
+      "interactive": false,
+      "x": 16,
+      "y": 220,
+      "w": 1408,
+      "h": 460
+    },
+    {
+      "id": "media",
+      "tag": "div",
+      "interactive": false,
+      "x": 16,
+      "y": 220,
+      "w": 469.33,
+      "h": 460
+    },
+    {
+      "id": "image",
+      "tag": "img",
+      "interactive": false,
+      "x": 16,
+      "y": 220,
+      "w": 469.33,
+      "h": 460
+    },
+    {
+      "id": "close",
+      "tag": "button",
+      "interactive": true,
+      "x": 429.33,
+      "y": 232,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "id": "details",
+      "tag": "div",
+      "interactive": false,
+      "x": 485.33,
+      "y": 220,
+      "w": 469.33,
+      "h": 460
+    },
+    {
+      "id": "item-name",
+      "tag": "h2",
+      "interactive": false,
+      "x": 509.33,
+      "y": 244,
+      "w": 421.33,
+      "h": 32
+    },
+    {
+      "id": "instructions",
+      "tag": "div",
+      "interactive": false,
+      "x": 509.33,
+      "y": 328,
+      "w": 421.33,
+      "h": 76
+    },
+    {
+      "id": "comments",
+      "tag": "input",
+      "interactive": true,
+      "x": 509.33,
+      "y": 368,
+      "w": 421.33,
+      "h": 36
+    },
+    {
+      "id": "quantity",
+      "tag": "div",
+      "interactive": false,
+      "x": 509.33,
+      "y": 428,
+      "w": 421.33,
+      "h": 84
+    },
+    {
+      "id": "qty-minus",
+      "tag": "button",
+      "interactive": true,
+      "x": 509.33,
+      "y": 468,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "id": "qty-input",
+      "tag": "input",
+      "interactive": true,
+      "x": 561.33,
+      "y": 468,
+      "w": 64,
+      "h": 44
+    },
+    {
+      "id": "qty-plus",
+      "tag": "button",
+      "interactive": true,
+      "x": 633.33,
+      "y": 468,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "id": "variants",
+      "tag": "div",
+      "interactive": false,
+      "x": 509.33,
+      "y": 536,
+      "w": 421.33,
+      "h": 120
+    },
+    {
+      "id": "variant-1",
+      "tag": "button",
+      "interactive": true,
+      "x": 509.33,
+      "y": 576,
+      "w": 421.33,
+      "h": 36
+    },
+    {
+      "id": "variant-2",
+      "tag": "button",
+      "interactive": true,
+      "x": 509.33,
+      "y": 620,
+      "w": 421.33,
+      "h": 36
+    },
+    {
+      "id": "side",
+      "tag": "div",
+      "interactive": false,
+      "x": 954.66,
+      "y": 220,
+      "w": 469.33,
+      "h": 460
+    },
+    {
+      "id": "addons",
+      "tag": "div",
+      "interactive": false,
+      "x": 979.66,
+      "y": 244,
+      "w": 420.33,
+      "h": 164
+    },
+    {
+      "id": "addon-1",
+      "tag": "button",
+      "interactive": true,
+      "x": 979.66,
+      "y": 284,
+      "w": 420.33,
+      "h": 36
+    },
+    {
+      "id": "addon-2",
+      "tag": "button",
+      "interactive": true,
+      "x": 979.66,
+      "y": 328,
+      "w": 420.33,
+      "h": 36
+    },
+    {
+      "id": "addon-3",
+      "tag": "button",
+      "interactive": true,
+      "x": 979.66,
+      "y": 372,
+      "w": 420.33,
+      "h": 36
+    },
+    {
+      "id": "total-bar",
+      "tag": "div",
+      "interactive": false,
+      "x": 979.66,
+      "y": 555,
+      "w": 420.33,
+      "h": 101
+    },
+    {
+      "id": "total",
+      "tag": "span",
+      "interactive": false,
+      "x": 1309.77,
+      "y": 564,
+      "w": 90.22,
+      "h": 28
+    },
+    {
+      "id": "submit",
+      "tag": "button",
+      "interactive": true,
+      "x": 979.66,
+      "y": 608,
+      "w": 420.33,
+      "h": 48
+    }
+  ]
+}

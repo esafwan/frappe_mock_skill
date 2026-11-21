@@ -1,0 +1,9 @@
+{
+  "component": "pos-order-panel-v16",
+  "note": "slot -> menu expression; applied by tools/render.mjs when --menu is given. items[i] wraps around the menu length.",
+  "bind": {
+    "i1_name": "menu.items[0].name",
+    "i1_price": "menu.items[0].price",
+    "total_amount": "menu.items[0].price"
+  }
+}
