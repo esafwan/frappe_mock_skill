@@ -1,0 +1,34 @@
+{
+  "component": "pos-toast",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "msg_error": {
+      "type": "text",
+      "sample": "KOT failed for table 4: Kitchen printer is offline.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_success": {
+      "type": "text",
+      "sample": "Order sent to the kitchen.",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_warning": {
+      "type": "text",
+      "sample": "Some items are low in stock.",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "msg_info": {
+      "type": "text",
+      "sample": "Order updated by another cashier.",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "pos-toast",
+  "name": "POS toast",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 344,
+    "h": 96.8125
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css",
+    "ury-v16/components/pos-misc.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "react-toastify colored toast: 20px status icon, 0.8rem/500 message, close button and a progress bar; the default frame is the KOT alert (showToast.error from KotAlertListener).",
+    "Appears top-right for 2 seconds after a KOT error, save or other action."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 344,
+  "height": null,
+  "props": {
+    "kinds": [
+      "error"
+    ]
+  },
+  "canvas": "hsl(var(--background))"
+}

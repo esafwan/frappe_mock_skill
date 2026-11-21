@@ -1,0 +1,27 @@
+{
+  "component": "pos-initial-loader",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "loading": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "loading_ury_pos": {
+      "type": "text",
+      "sample": "Loading URY POS...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "please_wait_setup": {
+      "type": "text",
+      "sample": "Please wait while we set things up",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

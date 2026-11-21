@@ -1,0 +1,87 @@
+{
+  "component": "pos-toast",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "success": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kinds": [
+          "success"
+        ]
+      },
+      "screenshot": "states/success.png",
+      "preview": "states/success.html",
+      "description": "showToast.success: green."
+    },
+    "warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kinds": [
+          "warning"
+        ]
+      },
+      "screenshot": "states/warning.png",
+      "preview": "states/warning.html",
+      "description": "showToast.warning: amber."
+    },
+    "info": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kinds": [
+          "info"
+        ]
+      },
+      "screenshot": "states/info.png",
+      "preview": "states/info.html",
+      "description": "showToast.info: blue."
+    },
+    "stacked": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kinds": [
+          "error",
+          "success"
+        ]
+      },
+      "screenshot": "states/stacked.png",
+      "preview": "states/stacked.html",
+      "description": "Two toasts stacked (container limit is 3)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

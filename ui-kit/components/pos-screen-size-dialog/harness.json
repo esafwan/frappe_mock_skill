@@ -1,0 +1,43 @@
+{
+  "id": "pos-screen-size-dialog",
+  "name": "POS screen size dialog",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css",
+    "ury-v16/components/pos-misc.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Blocking dialog shown when the window is narrower than 1024px: 64px blue icon circle, Desktop Only title, current/required width and a Switch to Version 1 button (max-w 448, r8, p32).",
+    "Shown on phones; points to URY POS v1."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,66 @@
+{
+  "component": "pos-screen-open-entries",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No open entries: centred \"No open sessions right now\"."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "error"
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Fetch failed: red error line in the card."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Fetching: centred spinner in the card."
+    },
+    "row-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": true
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Hover on a table row: bg-gray-50."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    }
+  }
+}

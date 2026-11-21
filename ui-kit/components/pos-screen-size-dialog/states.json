@@ -1,0 +1,48 @@
+{
+  "component": "pos-screen-size-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "button-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": true
+      },
+      "screenshot": "states/button-hover.png",
+      "preview": "states/button-hover.html",
+      "description": "Hover on Switch to Version 1: blue-700."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not styled in source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}
