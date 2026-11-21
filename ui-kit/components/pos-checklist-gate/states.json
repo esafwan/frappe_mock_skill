@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "closing-incomplete": {
       "applicable": true,
@@ -45,6 +45,7 @@
           }
         ]
       },
+      "values": {},
       "screenshot": "states/closing-incomplete.png",
       "preview": "states/closing-incomplete.html",
       "description": "Closing checklist with a FAIL missing its remark and unanswered items; Submit disabled."
@@ -135,6 +136,7 @@
       "props": {
         "state": "blocked"
       },
+      "values": {},
       "screenshot": "states/blocked.png",
       "preview": "states/blocked.html",
       "description": "Predecessor role has not finished: \"<Checklist> Required\" with the Recheck button."
@@ -186,6 +188,7 @@
           }
         ]
       },
+      "values": {},
       "screenshot": "states/start.png",
       "preview": "states/start.html",
       "description": "Eligible user before starting: Start Checklist button."
@@ -218,6 +221,7 @@
         ],
         "submitting": true
       },
+      "values": {},
       "screenshot": "states/submitting.png",
       "preview": "states/submitting.html",
       "description": "Submitting label with button dimmed."
@@ -250,6 +254,7 @@
         ],
         "submitError": true
       },
+      "values": {},
       "screenshot": "states/submit-error.png",
       "preview": "states/submit-error.html",
       "description": "Incomplete submission error text above the button."
@@ -282,6 +287,7 @@
         ],
         "skip": true
       },
+      "values": {},
       "screenshot": "states/with-skip-bar.png",
       "preview": "states/with-skip-bar.html",
       "description": "Closing checklist after POS close: fixed bottom-6 bar with Skip for now (z-60)."

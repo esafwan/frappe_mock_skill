@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "paid": {
       "applicable": true,
@@ -38,6 +38,7 @@
         "actions": true,
         "menu": true
       },
+      "values": {},
       "screenshot": "states/with-actions.png",
       "preview": "states/with-actions.html",
       "description": "Split / merge allowed: the three-dot actions button precedes Edit and Cancel; popover open."
@@ -49,6 +50,7 @@
         "discount": true,
         "reduce": true
       },
+      "values": {},
       "screenshot": "states/discount.png",
       "preview": "states/discount.html",
       "description": "Discounted item (-n% red-50 badge) and printed invoice: round 20px minus buttons to reduce quantity."
@@ -59,6 +61,7 @@
       "props": {
         "split": true
       },
+      "values": {},
       "screenshot": "states/split.png",
       "preview": "states/split.html",
       "description": "Split bill: Split n of m tag and the Related Bills panel (primary-200 2px border, primary-50/60 fill) with the siblings."
@@ -69,6 +72,7 @@
       "props": {
         "merged": true
       },
+      "values": {},
       "screenshot": "states/merged.png",
       "preview": "states/merged.html",
       "description": "Merged bill: Merged Bill tag and panel; footer shows the combined total (label above the value)."
@@ -79,6 +83,7 @@
       "props": {
         "cancelDlg": true
       },
+      "values": {},
       "screenshot": "states/cancel-dialog.png",
       "preview": "states/cancel-dialog.html",
       "description": "Cancel Order dialog open over the panel with the reason textarea."

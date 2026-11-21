@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "success": {
       "applicable": true,
@@ -26,6 +26,7 @@
           "success"
         ]
       },
+      "values": {},
       "screenshot": "states/success.png",
       "preview": "states/success.html",
       "description": "showToast.success: green."
@@ -38,6 +39,7 @@
           "warning"
         ]
       },
+      "values": {},
       "screenshot": "states/warning.png",
       "preview": "states/warning.html",
       "description": "showToast.warning: amber."
@@ -50,6 +52,7 @@
           "info"
         ]
       },
+      "values": {},
       "screenshot": "states/info.png",
       "preview": "states/info.html",
       "description": "showToast.info: blue."
@@ -63,6 +66,7 @@
           "success"
         ]
       },
+      "values": {},
       "screenshot": "states/stacked.png",
       "preview": "states/stacked.html",
       "description": "Two toasts stacked (container limit is 3)."

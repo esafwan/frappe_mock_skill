@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "confirm": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "state": "confirm"
       },
+      "values": {},
       "screenshot": "states/confirm.png",
       "preview": "states/confirm.html",
       "description": "Confirm dialog \"Close today's POS session?\" with Cancel / Yes, Close Session over the page."
@@ -34,6 +35,7 @@
       "props": {
         "state": "closed"
       },
+      "values": {},
       "screenshot": "states/closed.png",
       "preview": "states/closed.html",
       "description": "After closing: Session Closed card with green check and Back to Dashboard."

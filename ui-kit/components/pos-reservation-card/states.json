@@ -12,13 +12,14 @@
       "props": {
         "hover": true
       },
+      "values": {},
       "screenshot": "states/hover.png",
       "preview": "states/hover.html",
       "description": "Pointer over the card: border-gray-300."
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": true,
@@ -26,6 +27,7 @@
       "props": {
         "status": "Active"
       },
+      "values": {},
       "screenshot": "states/active.png",
       "preview": "states/active.html",
       "description": "Active status: warning badge."
@@ -36,6 +38,7 @@
       "props": {
         "status": "Requested"
       },
+      "values": {},
       "screenshot": "states/requested.png",
       "preview": "states/requested.html",
       "description": "Requested status: outline badge."
@@ -46,6 +49,7 @@
       "props": {
         "status": "Completed"
       },
+      "values": {},
       "screenshot": "states/completed.png",
       "preview": "states/completed.html",
       "description": "Completed status: primary-100 badge, no action menu button (only Confirmed, Active and Requested are actionable)."
@@ -56,6 +60,7 @@
       "props": {
         "status": "Cancelled"
       },
+      "values": {},
       "screenshot": "states/cancelled.png",
       "preview": "states/cancelled.html",
       "description": "Cancelled status: destructive tint badge, no action menu button."
@@ -66,6 +71,7 @@
       "props": {
         "status": "No Show"
       },
+      "values": {},
       "screenshot": "states/no-show.png",
       "preview": "states/no-show.html",
       "description": "No Show status: orange-100 / orange-800 badge, no action menu button."
@@ -76,6 +82,7 @@
       "props": {
         "menu": true
       },
+      "values": {},
       "screenshot": "states/menu-open.png",
       "preview": "states/menu-open.html",
       "description": "Action menu open (w-48): Edit Reservation, Complete Reservation and Cancel Reservation (manager or cashier)."
@@ -87,6 +94,7 @@
         "status": "Requested",
         "menu": true
       },
+      "values": {},
       "screenshot": "states/menu-requested.png",
       "preview": "states/menu-requested.html",
       "description": "Requested reservations cannot be completed: the menu lists Edit and Cancel only."
@@ -97,6 +105,7 @@
       "props": {
         "kebabHover": true
       },
+      "values": {},
       "screenshot": "states/kebab-hover.png",
       "preview": "states/kebab-hover.html",
       "description": "Pointer over the three-dot button: gray-100 background."
@@ -107,6 +116,7 @@
       "props": {
         "notes": true
       },
+      "values": {},
       "screenshot": "states/with-notes.png",
       "preview": "states/with-notes.html",
       "description": "Comments shown as an italic quote (line-clamp-2) under a gray-50 rule."
@@ -117,6 +127,7 @@
       "props": {
         "phone": false
       },
+      "values": {},
       "screenshot": "states/no-phone.png",
       "preview": "states/no-phone.html",
       "description": "Customer without a phone number: the phone row is omitted."

@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "edit": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "kind": "edit"
       },
+      "values": {},
       "screenshot": "states/edit.png",
       "preview": "states/edit.html",
       "description": "TableReservationEditDialog: same form with a Table select first and a Save Changes button (h-840, clamped by max-h-90vh)."
@@ -34,6 +35,7 @@
       "props": {
         "kind": "cancel"
       },
+      "values": {},
       "screenshot": "states/cancel.png",
       "preview": "states/cancel.html",
       "description": "TableReservationCancelDialog (max-w-xl): red-50 summary card with customer, phone, guests and time; Keep Reservation / Cancel Reservation footer."
@@ -44,6 +46,7 @@
       "props": {
         "kind": "complete"
       },
+      "values": {},
       "screenshot": "states/complete.png",
       "preview": "states/complete.html",
       "description": "TableReservationCompleteDialog (max-w-xl): blue summary card with a Confirmed badge and a blue Complete button."
@@ -54,6 +57,7 @@
       "props": {
         "kind": "warning"
       },
+      "values": {},
       "screenshot": "states/warning.png",
       "preview": "states/warning.html",
       "description": "TableReservationWarningDialog (max-w-lg): amber buffer-time banner, indigo reservation card and Choose Another Table."
@@ -65,6 +69,7 @@
         "kind": "create",
         "noCustomer": true
       },
+      "values": {},
       "screenshot": "states/create-empty.png",
       "preview": "states/create-empty.html",
       "description": "No customer chosen yet: customer search field, empty phone with its placeholder and the Reserve Table button disabled."
@@ -76,6 +81,7 @@
         "kind": "create",
         "notes": true
       },
+      "values": {},
       "screenshot": "states/create-notes.png",
       "preview": "states/create-notes.html",
       "description": "Notes textarea filled instead of showing its placeholder."
@@ -87,6 +93,7 @@
         "kind": "create",
         "error": true
       },
+      "values": {},
       "screenshot": "states/create-error.png",
       "preview": "states/create-error.html",
       "description": "Validation error box (red-50) above the form card."
@@ -98,6 +105,7 @@
         "kind": "create",
         "off": true
       },
+      "values": {},
       "screenshot": "states/create-submitting.png",
       "preview": "states/create-submitting.html",
       "description": "Submitting: inputs and both buttons disabled."
@@ -109,6 +117,7 @@
         "kind": "edit",
         "tables": "none"
       },
+      "values": {},
       "screenshot": "states/edit-no-tables.png",
       "preview": "states/edit-no-tables.html",
       "description": "No table free for the chosen slot: placeholder No available tables and the amber hint."
@@ -120,6 +129,7 @@
         "kind": "edit",
         "tables": "loading"
       },
+      "values": {},
       "screenshot": "states/edit-loading-tables.png",
       "preview": "states/edit-loading-tables.html",
       "description": "Loading available tables... placeholder in the Table select."
@@ -131,6 +141,7 @@
         "kind": "cancel",
         "off": true
       },
+      "values": {},
       "screenshot": "states/cancel-loading.png",
       "preview": "states/cancel-loading.html",
       "description": "Cancellation in progress: both buttons disabled."
@@ -142,6 +153,7 @@
         "kind": "complete",
         "off": true
       },
+      "values": {},
       "screenshot": "states/complete-loading.png",
       "preview": "states/complete-loading.html",
       "description": "Completion in progress: both buttons disabled."

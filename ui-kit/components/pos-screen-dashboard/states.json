@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "scrolled": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "scrolled": true
       },
+      "values": {},
       "screenshot": "states/scrolled.png",
       "preview": "states/scrolled.html",
       "description": "Page scrolled to the main grid: Service Line, Tonight vs Baseline and Running Low | Floor Load, Open Sessions, Shift Brief, Notifications (340px rail on the right in LTR, mirrored to the left in RTL)"
@@ -35,6 +36,7 @@
         "scrolled": true,
         "wrap": "dark"
       },
+      "values": {},
       "screenshot": "states/scrolled-dark.png",
       "preview": "states/scrolled-dark.html",
       "description": "Scrolled main grid in dark mode: tinted Service Line tag, Running Low and the four rail panels on dark tokens"

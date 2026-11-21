@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "draft": {
       "applicable": true,
@@ -44,12 +44,7 @@
         "name": "INV-0044",
         "meta": "Delivery",
         "customer": "Yusuf Ali",
-        "total": {
-          "type": "currency",
-          "amount": 210,
-          "currency": "AED",
-          "sample": "AED 210.00"
-        }
+        "total": "AED 210.00"
       },
       "screenshot": "states/paid.png",
       "preview": "states/paid.html",
@@ -76,6 +71,7 @@
         "status": "unbilled",
         "warn": true
       },
+      "values": {},
       "screenshot": "states/print-warning.png",
       "preview": "states/print-warning.html",
       "description": "Print warning: red-outline tag with the elapsed time beside the status badge (custom_invoice_warning_time exceeded)."
@@ -117,6 +113,7 @@
         "status": "unbilled",
         "selected": true
       },
+      "values": {},
       "screenshot": "states/selected.png",
       "preview": "states/selected.html",
       "description": "Selected card: ring-2 blue-500 plus shadow-lg."

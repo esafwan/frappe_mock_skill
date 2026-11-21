@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "confirm": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "confirm": true
       },
+      "values": {},
       "screenshot": "states/confirm.png",
       "preview": "states/confirm.html",
       "description": "Confirm modal (z-70, max-w 384): Go Back / Yes, Close POS over the dialog."
@@ -35,6 +36,7 @@
         "confirm": true,
         "submitting": true
       },
+      "values": {},
       "screenshot": "states/confirm-submitting.png",
       "preview": "states/confirm-submitting.html",
       "description": "Confirm modal while the closing entry is submitting."
@@ -45,6 +47,7 @@
       "props": {
         "error": true
       },
+      "values": {},
       "screenshot": "states/submit-error.png",
       "preview": "states/submit-error.html",
       "description": "Red submit error line above the footer."
@@ -55,6 +58,7 @@
       "props": {
         "masked": true
       },
+      "values": {},
       "screenshot": "states/masked-amounts.png",
       "preview": "states/masked-amounts.html",
       "description": "Amounts masked (shouldMaskAmounts): grand/net totals, expected and difference show an em dash."
@@ -65,6 +69,7 @@
       "props": {
         "empty": true
       },
+      "values": {},
       "screenshot": "states/no-invoices.png",
       "preview": "states/no-invoices.html",
       "description": "No invoices for the period: empty message and the Close POS button disabled."

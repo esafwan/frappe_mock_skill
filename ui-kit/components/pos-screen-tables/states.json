@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "no-reservations": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "reservations": false
       },
+      "values": {},
       "screenshot": "states/no-reservations.png",
       "preview": "states/no-reservations.html",
       "description": "Branch without reservations: the reserved lock and the Reserved legend entry are absent."
@@ -34,6 +35,7 @@
       "props": {
         "menuOn": 2
       },
+      "values": {},
       "screenshot": "states/menu-open.png",
       "preview": "states/menu-open.html",
       "description": "Actions menu open on the occupied T2 card."
@@ -44,6 +46,7 @@
       "props": {
         "hoverOn": 1
       },
+      "values": {},
       "screenshot": "states/hover-card.png",
       "preview": "states/hover-card.html",
       "description": "Hover on the available T1 card."

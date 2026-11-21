@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "filter-confirmed": {
       "applicable": true,
@@ -56,6 +56,7 @@
           "n": "c2"
         }
       },
+      "values": {},
       "screenshot": "states/menu-open.png",
       "preview": "states/menu-open.html",
       "description": "Three-dot menu open on an Active reservation card."
@@ -139,6 +140,7 @@
         ],
         "scroll": 1200
       },
+      "values": {},
       "screenshot": "states/timeline.png",
       "preview": "states/timeline.html",
       "description": "Timeline view: the toggle switches to the CalendarClock button and the day timeline fills the content area."

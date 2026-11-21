@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "error-no-profiles": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "alert": "no_profiles"
       },
+      "values": {},
       "screenshot": "states/error-no-profiles.png",
       "preview": "states/error-no-profiles.html",
       "description": "No POS Profile for the user: red alert, inputs and Open button disabled."
@@ -34,6 +35,7 @@
       "props": {
         "alert": "no_permission"
       },
+      "values": {},
       "screenshot": "states/error-no-permission.png",
       "preview": "states/error-no-permission.html",
       "description": "User cannot create or submit an opening entry: red alert with lock icon."
@@ -44,6 +46,7 @@
       "props": {
         "alert": "daily_close"
       },
+      "values": {},
       "screenshot": "states/warning-previous-day.png",
       "preview": "states/warning-previous-day.html",
       "description": "Previous day not closed: orange alert, Open button disabled."
@@ -54,6 +57,7 @@
       "props": {
         "alert": "main_cashier"
       },
+      "values": {},
       "screenshot": "states/warning-main-cashier.png",
       "preview": "states/warning-main-cashier.html",
       "description": "Multi-cashier: main cashier has not opened yet, orange alert."
@@ -64,6 +68,7 @@
       "props": {
         "zero": true
       },
+      "values": {},
       "screenshot": "states/zero-balance-confirm.png",
       "preview": "states/zero-balance-confirm.html",
       "description": "All amounts zero after the first press: orange warning and the button reads Confirm & Open."
@@ -74,6 +79,7 @@
       "props": {
         "retry": true
       },
+      "values": {},
       "screenshot": "states/retry-actions.png",
       "preview": "states/retry-actions.html",
       "description": "Source footer also renders Retry and Back to Dashboard buttons beside the primary action (POSOpeningScreen always renders all three); shown as a variant."
@@ -84,6 +90,7 @@
       "props": {
         "submitting": true
       },
+      "values": {},
       "screenshot": "states/submitting.png",
       "preview": "states/submitting.html",
       "description": "Opening in progress: spinner icon and Opening... label, actions disabled."
@@ -94,6 +101,7 @@
       "props": {
         "error": true
       },
+      "values": {},
       "screenshot": "states/submit-error.png",
       "preview": "states/submit-error.html",
       "description": "Server error shown in a red box above the actions."
@@ -104,6 +112,7 @@
       "props": {
         "profileSelect": true
       },
+      "values": {},
       "screenshot": "states/profile-select.png",
       "preview": "states/profile-select.html",
       "description": "More than one allowed profile: POS Profile select replaces the profile badge."

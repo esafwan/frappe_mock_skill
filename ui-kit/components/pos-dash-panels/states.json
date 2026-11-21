@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "empty": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "view": "empty"
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "No waiter assignments, no open sessions, no notifications (Shift Brief unchanged)"

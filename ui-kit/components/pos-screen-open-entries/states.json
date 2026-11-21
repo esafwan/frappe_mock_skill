@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "empty": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "state": "empty"
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "No open entries: centred \"No open sessions right now\"."
@@ -34,6 +35,7 @@
       "props": {
         "state": "error"
       },
+      "values": {},
       "screenshot": "states/error.png",
       "preview": "states/error.html",
       "description": "Fetch failed: red error line in the card."
@@ -44,6 +46,7 @@
       "props": {
         "state": "loading"
       },
+      "values": {},
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
       "description": "Fetching: centred spinner in the card."
@@ -54,6 +57,7 @@
       "props": {
         "hover": true
       },
+      "values": {},
       "screenshot": "states/row-hover.png",
       "preview": "states/row-hover.html",
       "description": "Hover on a table row: bg-gray-50."

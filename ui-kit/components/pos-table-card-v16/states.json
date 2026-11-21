@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "occupied": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "t": 2
       },
+      "values": {},
       "screenshot": "states/occupied.png",
       "preview": "states/occupied.html",
       "description": "Occupied: amber-50 bg, amber-400 border, amber-900 text, Occupied badge, started-at time and the Preview / Print footer with an amber-200 divider."
@@ -34,6 +35,7 @@
       "props": {
         "t": 3
       },
+      "values": {},
       "screenshot": "states/reserved.png",
       "preview": "states/reserved.html",
       "description": "Available but locked by a confirmed reservation: primary-50 bg, primary-400 border, Reserved badge and the Reserved for strip."
@@ -45,6 +47,7 @@
         "t": 2,
         "lock": true
       },
+      "values": {},
       "screenshot": "states/occupied-reserved.png",
       "preview": "states/occupied-reserved.html",
       "description": "Occupied table that also has a lock-window reservation: occupied colours with both the Occupied and Reserved badges and the strip."
@@ -55,6 +58,7 @@
       "props": {
         "t": 8
       },
+      "values": {},
       "screenshot": "states/take-away.png",
       "preview": "states/take-away.html",
       "description": "Take-away table: pending Take away badge under the seats row."
@@ -66,6 +70,7 @@
         "t": 6,
         "merged": true
       },
+      "values": {},
       "screenshot": "states/merged.png",
       "preview": "states/merged.html",
       "description": "Member of a merged group: the With T6 + T7 line in primary-700 above the rows."
@@ -76,6 +81,7 @@
       "props": {
         "t": 1
       },
+      "values": {},
       "screenshot": "states/shape-circle.png",
       "preview": "states/shape-circle.html",
       "description": "Circle shape icon (table_shape Circle)."
@@ -86,6 +92,7 @@
       "props": {
         "t": 9
       },
+      "values": {},
       "screenshot": "states/shape-square.png",
       "preview": "states/shape-square.html",
       "description": "Square shape icon (table_shape Square)."
@@ -96,6 +103,7 @@
       "props": {
         "t": 4
       },
+      "values": {},
       "screenshot": "states/shape-rectangle.png",
       "preview": "states/shape-rectangle.html",
       "description": "Rectangle shape icon (table_shape Rectangle, also the fallback)."
@@ -110,6 +118,7 @@
           "merge"
         ]
       },
+      "values": {},
       "screenshot": "states/menu-available.png",
       "preview": "states/menu-available.html",
       "description": "Actions menu open on an available table: card lifted to z-20 with the Reserve and Merge tables popover."
@@ -125,6 +134,7 @@
           "captain"
         ]
       },
+      "values": {},
       "screenshot": "states/menu-occupied.png",
       "preview": "states/menu-occupied.html",
       "description": "Actions menu open on an occupied table: Merge tables, Transfer table and Transfer captain."
@@ -136,6 +146,7 @@
         "t": 2,
         "printing": true
       },
+      "values": {},
       "screenshot": "states/printing.png",
       "preview": "states/printing.html",
       "description": "Print in progress: spinner and Printing... label, button dimmed to 60%."
@@ -147,6 +158,7 @@
         "t": 1,
         "hover": true
       },
+      "values": {},
       "screenshot": "states/hover-available.png",
       "preview": "states/hover-available.html",
       "description": "Hover on an available card: emerald-400 border and shadow-md."
@@ -158,6 +170,7 @@
         "t": 3,
         "hover": true
       },
+      "values": {},
       "screenshot": "states/hover-reserved.png",
       "preview": "states/hover-reserved.html",
       "description": "Hover on a reserved card: primary-500 border and shadow-md."
@@ -169,6 +182,7 @@
         "t": 2,
         "hoverBtn": true
       },
+      "values": {},
       "screenshot": "states/hover-footer-button.png",
       "preview": "states/hover-footer-button.html",
       "description": "Hover on the Preview button of an occupied card: amber-100 background."

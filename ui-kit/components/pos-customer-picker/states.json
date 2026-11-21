@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "searching": {
       "applicable": true,
@@ -25,6 +25,7 @@
         "status": "searching",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/searching.png",
       "preview": "states/searching.html",
       "description": "Search request in flight: spinner row above the Add New row."
@@ -36,6 +37,7 @@
         "status": "searching",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/searching.png",
       "preview": "states/searching.html",
       "description": "Search request in flight: spinner row above the Add New row.",
@@ -48,6 +50,7 @@
         "query": "{{query}}",
         "hl": 1
       },
+      "values": {},
       "screenshot": "states/typed.png",
       "preview": "states/typed.html",
       "description": "Query typed, second result highlighted (primary-50)."
@@ -59,6 +62,7 @@
         "status": "none",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/no-results.png",
       "preview": "states/no-results.html",
       "description": "No customer matched."
@@ -70,6 +74,7 @@
         "status": "none",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/no-results.png",
       "preview": "states/no-results.html",
       "description": "No customer matched.",
@@ -82,6 +87,7 @@
         "status": "error",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/search-error.png",
       "preview": "states/search-error.html",
       "description": "Search failed."
@@ -93,6 +99,7 @@
         "status": "error",
         "query": "{{query}}"
       },
+      "values": {},
       "screenshot": "states/search-error.png",
       "preview": "states/search-error.html",
       "description": "Search failed.",
@@ -104,6 +111,7 @@
       "props": {
         "hl": 3
       },
+      "values": {},
       "screenshot": "states/add-new-highlighted.png",
       "preview": "states/add-new-highlighted.html",
       "description": "Keyboard highlight on the Add New Customer row."
@@ -115,6 +123,7 @@
         "value": true,
         "list": false
       },
+      "values": {},
       "screenshot": "states/selected.png",
       "preview": "states/selected.html",
       "description": "Customer chosen: card with name, phone and Change."
@@ -125,6 +134,7 @@
       "props": {
         "dialog": true
       },
+      "values": {},
       "screenshot": "states/create.png",
       "preview": "states/create.html",
       "description": "Add New Customer dialog opened from the dropdown."
@@ -137,6 +147,7 @@
         "phoneError": "{{invalid_phone}}",
         "error": "{{create_failed}}"
       },
+      "values": {},
       "screenshot": "states/create-error.png",
       "preview": "states/create-error.html",
       "description": "Create failed with an invalid phone: red banner, destructive field border and message."
@@ -148,6 +159,7 @@
         "dialog": true,
         "creating": true
       },
+      "values": {},
       "screenshot": "states/creating.png",
       "preview": "states/creating.html",
       "description": "Create request in flight: submit disabled with spinner and Adding Customer..."

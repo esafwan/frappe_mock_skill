@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "attention-only": {
       "applicable": true,
@@ -25,6 +25,7 @@
         "insights": 0,
         "attention": 3
       },
+      "values": {},
       "screenshot": "states/attention-only.png",
       "preview": "states/attention-only.html",
       "description": "InsightFeed empty state (Nothing needs attention right now.) above the attention rows"
@@ -36,6 +37,7 @@
         "insights": 2,
         "attention": 1
       },
+      "values": {},
       "screenshot": "states/one-item.png",
       "preview": "states/one-item.html",
       "description": "A single needs-attention row (count badge 1)"
@@ -47,6 +49,7 @@
         "insights": 2,
         "attention": 0
       },
+      "values": {},
       "screenshot": "states/no-attention.png",
       "preview": "states/no-attention.html",
       "description": "No attention items: the AttentionFeed card is not rendered"

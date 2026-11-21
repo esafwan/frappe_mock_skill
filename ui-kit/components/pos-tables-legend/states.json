@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "no-reservations": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "reservations": false
       },
+      "values": {},
       "screenshot": "states/no-reservations.png",
       "preview": "states/no-reservations.html",
       "description": "Branch has reservations disabled: the Reserved swatch is omitted."

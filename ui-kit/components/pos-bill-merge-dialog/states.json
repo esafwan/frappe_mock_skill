@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "bill-selected": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "sel": 1
       },
+      "values": {},
       "screenshot": "states/bill-selected.png",
       "preview": "states/bill-selected.html",
       "description": "A candidate bill chosen: primary border and primary-50/40 fill; Merge bills enabled."
@@ -34,6 +35,7 @@
       "props": {
         "more": false
       },
+      "values": {},
       "screenshot": "states/no-more.png",
       "preview": "states/no-more.html",
       "description": "All candidates loaded: no Load more button."
@@ -44,6 +46,7 @@
       "props": {
         "state": "loading"
       },
+      "values": {},
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
       "description": "Initial candidate fetch.",
@@ -55,6 +58,7 @@
       "props": {
         "state": "empty"
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "No other open bill to merge.",
@@ -67,6 +71,7 @@
         "sel": 0,
         "error": true
       },
+      "values": {},
       "screenshot": "states/error.png",
       "preview": "states/error.html",
       "description": "Merge rejected: red message under the list.",

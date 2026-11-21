@@ -16,15 +16,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "orders": {
       "applicable": true,
@@ -58,6 +58,7 @@
       "props": {
         "variant": "dashboard"
       },
+      "values": {},
       "screenshot": "states/dashboard.png",
       "preview": "states/dashboard.html",
       "description": "Dashboard route hides the search pill"
@@ -68,6 +69,7 @@
       "props": {
         "printer": "offline"
       },
+      "values": {},
       "screenshot": "states/printer-offline.png",
       "preview": "states/printer-offline.html",
       "description": "Printer status dot: critical"
@@ -78,6 +80,7 @@
       "props": {
         "printer": "unknown"
       },
+      "values": {},
       "screenshot": "states/printer-unknown.png",
       "preview": "states/printer-unknown.html",
       "description": "Printer status dot: no data (gray-400)"
@@ -88,6 +91,7 @@
       "props": {
         "printer": "none"
       },
+      "values": {},
       "screenshot": "states/no-printer.png",
       "preview": "states/no-printer.html",
       "description": "Print status disabled in the POS profile: button hidden"

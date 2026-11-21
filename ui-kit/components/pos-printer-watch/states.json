@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "online": {
       "applicable": true,
@@ -26,6 +26,7 @@
           "online"
         ]
       },
+      "values": {},
       "screenshot": "states/online.png",
       "preview": "states/online.html",
       "description": "Only healthy printers"
@@ -38,6 +39,7 @@
           "offline"
         ]
       },
+      "values": {},
       "screenshot": "states/offline.png",
       "preview": "states/offline.html",
       "description": "A critical printer: failed count in red"
@@ -51,6 +53,7 @@
           "fair"
         ]
       },
+      "values": {},
       "screenshot": "states/fair.png",
       "preview": "states/fair.html",
       "description": "A printer with fair health (warning badge)"
@@ -65,6 +68,7 @@
         ],
         "alert": true
       },
+      "values": {},
       "screenshot": "states/alert.png",
       "preview": "states/alert.html",
       "description": "Refresh failed: orange stale-data banner above the cards"

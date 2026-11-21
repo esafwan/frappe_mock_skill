@@ -12,17 +12,18 @@
       "props": {
         "hover": "split"
       },
+      "values": {},
       "screenshot": "states/hover.png",
       "preview": "states/hover.html",
       "description": "Pointer over an item: gray-100 background."
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "merge-only": {
       "applicable": true,
@@ -30,6 +31,7 @@
       "props": {
         "split": false
       },
+      "values": {},
       "screenshot": "states/merge-only.png",
       "preview": "states/merge-only.html",
       "description": "Only Merge Bill is allowed."
@@ -40,6 +42,7 @@
       "props": {
         "merge": false
       },
+      "values": {},
       "screenshot": "states/split-only.png",
       "preview": "states/split-only.html",
       "description": "Only Split Bill is allowed."
@@ -50,6 +53,7 @@
       "props": {
         "cancel": true
       },
+      "values": {},
       "screenshot": "states/cancel-reason.png",
       "preview": "states/cancel-reason.html",
       "description": "Cancel Order dialog with the \"Enter cancel reason\" textarea (opened from the red X button, shown here beside the menu)."

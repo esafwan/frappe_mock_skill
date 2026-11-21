@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "available": {
       "applicable": true,
@@ -27,6 +27,7 @@
           "merge"
         ]
       },
+      "values": {},
       "screenshot": "states/available.png",
       "preview": "states/available.html",
       "description": "Available table with reservations enabled: Reserve and Merge tables."
@@ -41,6 +42,7 @@
           "unmerge"
         ]
       },
+      "values": {},
       "screenshot": "states/available-merged.png",
       "preview": "states/available-merged.html",
       "description": "Available merged table: adds a divider and the red Unmerge tables item."
@@ -54,6 +56,7 @@
           "transfer"
         ]
       },
+      "values": {},
       "screenshot": "states/no-captain.png",
       "preview": "states/no-captain.html",
       "description": "Occupied table where captain transfer is disabled in the branch."
@@ -69,6 +72,7 @@
         ],
         "hover": true
       },
+      "values": {},
       "screenshot": "states/hover-item.png",
       "preview": "states/hover-item.html",
       "description": "Trigger button hovered."

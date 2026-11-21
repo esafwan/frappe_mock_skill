@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "multi": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "lines": "multi"
       },
+      "values": {},
       "screenshot": "states/multi.png",
       "preview": "states/multi.html",
       "description": "Saved order with four lines carrying KOT badges: Sent (red), Preparing (amber), Ready (blue) and Served (green)."
@@ -34,6 +35,7 @@
       "props": {
         "lines": "config"
       },
+      "values": {},
       "screenshot": "states/configured.png",
       "preview": "states/configured.html",
       "description": "A line with a chosen variant and add-ons under the name."
@@ -45,6 +47,7 @@
         "lines": "one",
         "type": "dine_in"
       },
+      "values": {},
       "screenshot": "states/dine-in.png",
       "preview": "states/dine-in.html",
       "description": "Dine In pill selected (primary-50 fill, primary-600 border)."
@@ -56,6 +59,7 @@
         "lines": "one",
         "type": "delivery"
       },
+      "values": {},
       "screenshot": "states/delivery.png",
       "preview": "states/delivery.html",
       "description": "Delivery pill selected."
@@ -67,6 +71,7 @@
         "lines": "one",
         "type": "phone_in"
       },
+      "values": {},
       "screenshot": "states/phone-in.png",
       "preview": "states/phone-in.html",
       "description": "Phone In pill selected."
@@ -78,6 +83,7 @@
         "lines": "one",
         "type": "aggregators"
       },
+      "values": {},
       "screenshot": "states/aggregators.png",
       "preview": "states/aggregators.html",
       "description": "Aggregators pill selected."
@@ -92,6 +98,7 @@
         "customer": true,
         "type": "dine_in"
       },
+      "values": {},
       "screenshot": "states/update-order.png",
       "preview": "states/update-order.html",
       "description": "Editing a saved order: customer chosen, comment button in blue-600 and the Update Order button."
@@ -103,6 +110,7 @@
         "lines": "one",
         "disabled": true
       },
+      "values": {},
       "screenshot": "states/disabled.png",
       "preview": "states/disabled.html",
       "description": "Dine In restricted for the user role: the pill is dimmed to 50%.",
@@ -114,6 +122,7 @@
       "props": {
         "lines": "empty"
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "Empty cart: 96px gray-100 circle with a Frown, the Click items to add them chip and the double-click hint; no footer.",

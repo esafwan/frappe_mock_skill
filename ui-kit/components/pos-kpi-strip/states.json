@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "with-hint": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "hint": true
       },
+      "values": {},
       "screenshot": "states/with-hint.png",
       "preview": "states/with-hint.html",
       "description": "A stat carrying the optional 11.5px hint line under its value"
@@ -34,6 +35,7 @@
       "props": {
         "loading": true
       },
+      "values": {},
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
       "description": "Stats still loading: 48px skeleton bar (the page shows animate-pulse; the capture is the static frame)"

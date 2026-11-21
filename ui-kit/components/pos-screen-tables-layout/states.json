@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "edit": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "edit": true
       },
+      "values": {},
       "screenshot": "states/edit.png",
       "preview": "states/edit.html",
       "description": "Edit mode with move badges and the Editing Layout hint."
@@ -35,6 +36,7 @@
         "selected": 2,
         "panel": true
       },
+      "values": {},
       "screenshot": "states/selected.png",
       "preview": "states/selected.html",
       "description": "Selected occupied table with the Table Info panel."
@@ -47,6 +49,7 @@
         "selected": 2,
         "panel": true
       },
+      "values": {},
       "screenshot": "states/edit-selected.png",
       "preview": "states/edit-selected.html",
       "description": "Edit mode with the Edit Table Settings panel."

@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "table-selected": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "selected": 1
       },
+      "values": {},
       "screenshot": "states/table-selected.png",
       "preview": "states/table-selected.html",
       "description": "Currently selected table: primary-600 border and primary-50 fill."
@@ -34,6 +35,7 @@
       "props": {
         "activeRoom": 1
       },
+      "values": {},
       "screenshot": "states/room-2.png",
       "preview": "states/room-2.html",
       "description": "Second room tab selected."
@@ -44,6 +46,7 @@
       "props": {
         "merged": true
       },
+      "values": {},
       "screenshot": "states/merged-label.png",
       "preview": "states/merged-label.html",
       "description": "Occupied table that is part of a merged group shows the combined label in primary-700."
@@ -55,6 +58,7 @@
         "banner": true,
         "selected": -1
       },
+      "values": {},
       "screenshot": "states/reserved-warning.png",
       "preview": "states/reserved-warning.html",
       "description": "Amber warning banner after tapping a table inside its reservation lock window."
@@ -65,6 +69,7 @@
       "props": {
         "state": "loading-rooms"
       },
+      "values": {},
       "screenshot": "states/loading-rooms.png",
       "preview": "states/loading-rooms.html",
       "description": "Rooms are loading: spinner with message."
@@ -75,6 +80,7 @@
       "props": {
         "state": "loading-tables"
       },
+      "values": {},
       "screenshot": "states/loading-tables.png",
       "preview": "states/loading-tables.html",
       "description": "Tables of the room are loading."
@@ -85,6 +91,7 @@
       "props": {
         "state": "loading-tables"
       },
+      "values": {},
       "screenshot": "states/loading-tables.png",
       "preview": "states/loading-tables.html",
       "description": "Tables of the room are loading.",
@@ -96,6 +103,7 @@
       "props": {
         "state": "no-rooms"
       },
+      "values": {},
       "screenshot": "states/no-rooms.png",
       "preview": "states/no-rooms.html",
       "description": "Branch has no rooms."
@@ -106,6 +114,7 @@
       "props": {
         "state": "no-tables"
       },
+      "values": {},
       "screenshot": "states/no-tables.png",
       "preview": "states/no-tables.html",
       "description": "Room has no tables."
@@ -116,6 +125,7 @@
       "props": {
         "state": "no-tables"
       },
+      "values": {},
       "screenshot": "states/no-tables.png",
       "preview": "states/no-tables.html",
       "description": "Room has no tables.",
@@ -127,6 +137,7 @@
       "props": {
         "state": "error"
       },
+      "values": {},
       "screenshot": "states/error.png",
       "preview": "states/error.html",
       "description": "Failed to load rooms/tables: red alert icon with message.",

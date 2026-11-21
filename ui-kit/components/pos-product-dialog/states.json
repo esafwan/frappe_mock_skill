@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "variant-selected": {
       "applicable": true,
@@ -25,16 +25,8 @@
         "selVariant": 1
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        },
-        "total": {
-          "type": "currency",
-          "amount": 28,
-          "currency": "AED",
-          "sample": "AED 28.00"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg",
+        "total": "AED 28.00"
       },
       "screenshot": "states/variant-selected.png",
       "preview": "states/variant-selected.html",
@@ -50,20 +42,9 @@
         ]
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        },
-        "qty": {
-          "type": "number",
-          "sample": "2"
-        },
-        "total": {
-          "type": "currency",
-          "amount": 54,
-          "currency": "AED",
-          "sample": "AED 54.00"
-        },
+        "item_image": "../../../data/images/mediterranean/hummus.jpg",
+        "qty": "2",
+        "total": "AED 54.00",
         "special_text": "Less lemon, please"
       },
       "screenshot": "states/addons-selected.png",
@@ -79,20 +60,9 @@
         ]
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        },
-        "qty": {
-          "type": "number",
-          "sample": "2"
-        },
-        "total": {
-          "type": "currency",
-          "amount": 50,
-          "currency": "AED",
-          "sample": "AED 50.00"
-        },
+        "item_image": "../../../data/images/mediterranean/hummus.jpg",
+        "qty": "2",
+        "total": "AED 50.00",
         "special_text": "Less lemon, please",
         "submit_text": "Update Order"
       },
@@ -107,10 +77,7 @@
         "img": false
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/no-image.png",
       "preview": "states/no-image.html",
@@ -123,10 +90,7 @@
         "addons": "loading"
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/addons-loading.png",
       "preview": "states/addons-loading.html",
@@ -139,10 +103,7 @@
         "addons": "loading"
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/addons-loading.png",
       "preview": "states/addons-loading.html",
@@ -156,10 +117,7 @@
         "addons": "error"
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/addons-error.png",
       "preview": "states/addons-error.html",
@@ -172,10 +130,7 @@
         "addons": "error"
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/addons-error.png",
       "preview": "states/addons-error.html",
@@ -190,10 +145,7 @@
         "variants": false
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/no-addons.png",
       "preview": "states/no-addons.html",
@@ -207,10 +159,7 @@
         "variants": false
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg"
       },
       "screenshot": "states/no-addons.png",
       "preview": "states/no-addons.html",
@@ -224,20 +173,9 @@
         "submitDisabled": true
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        },
-        "qty": {
-          "type": "number",
-          "sample": "0"
-        },
-        "total": {
-          "type": "currency",
-          "amount": 0,
-          "currency": "AED",
-          "sample": "AED 0.00"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg",
+        "qty": "0",
+        "total": "AED 0.00"
       },
       "screenshot": "states/submit-disabled.png",
       "preview": "states/submit-disabled.html",
@@ -250,20 +188,9 @@
         "submitDisabled": true
       },
       "values": {
-        "item_image": {
-          "type": "image",
-          "sample": "../../../data/images/mediterranean/hummus.jpg"
-        },
-        "qty": {
-          "type": "number",
-          "sample": "0"
-        },
-        "total": {
-          "type": "currency",
-          "amount": 0,
-          "currency": "AED",
-          "sample": "AED 0.00"
-        }
+        "item_image": "../../../data/images/mediterranean/hummus.jpg",
+        "qty": "0",
+        "total": "AED 0.00"
       },
       "screenshot": "states/submit-disabled.png",
       "preview": "states/submit-disabled.html",

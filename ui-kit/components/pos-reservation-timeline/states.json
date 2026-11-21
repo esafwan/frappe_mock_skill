@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "block-hover": {
       "applicable": true,
@@ -24,6 +24,7 @@
       "props": {
         "hover": "r2"
       },
+      "values": {},
       "screenshot": "states/block-hover.png",
       "preview": "states/block-hover.html",
       "description": "Pointer over a block: z-40, shadow-xl, scale 1.01 and a status-coloured ring."
@@ -34,6 +35,7 @@
       "props": {
         "scroll": 0
       },
+      "values": {},
       "screenshot": "states/scrolled-start.png",
       "preview": "states/scrolled-start.html",
       "description": "Scrolled to 00:00 (any date other than today)."
@@ -44,6 +46,7 @@
       "props": {
         "items": []
       },
+      "values": {},
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",
       "description": "No reservations on the date: BookLock chip with title and hint centred in the canvas."
@@ -55,6 +58,7 @@
         "loading": true,
         "h": 459
       },
+      "values": {},
       "screenshot": "states/loading.png",
       "preview": "states/loading.html",
       "description": "Loading timeline view... centred message (h-80)."
