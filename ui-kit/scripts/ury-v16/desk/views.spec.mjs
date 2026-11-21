@@ -7,7 +7,7 @@
 import { ic, money } from '../lib.mjs';
 import { deskShell, NAV_SLOTS, NAV_RTL } from './nav.mjs';
 
-const CSS = ['frappe-desk.css', 'theme-vars.css', 'ury-v16/components/desk-nav.css', 'ury-v16/components/desk-views.css'];
+const CSS = ['frappe-desk.css', 'frappe-report.css', 'theme-vars.css', 'ury-v16/components/desk-nav.css', 'ury-v16/components/desk-views.css'];
 const EXTRA = {
   Funnel: '<path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/>',
   ArrowDownWideNarrow: '<path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/><path d="M11 8h7"/><path d="M11 12h4"/>',
@@ -23,7 +23,7 @@ const I = (n, s = 16, c = '') => ic(n, s, 'icon icon-sm' + (c ? ' ' + c : ''), {
 // ---- slot registry -------------------------------------------------------------------------------------------------------------------------
 const REG = {}; let USED = new Set();
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-const put = (k, e) => { let n = 1, kk = k; while (REG[kk] && !same(REG[kk], e)) kk = `${k}_v${++n}`; REG[kk] = e; USED.add(kk); return `{{${kk}}}`; };
+const put = (k0, e) => { const k = k0.replace(/[^A-Za-z0-9_]/g, '_'); let n = 1, kk = k; while (REG[kk] && !same(REG[kk], e)) kk = `${k}_v${++n}`; REG[kk] = e; USED.add(kk); return `{{${kk}}}`; };
 const T = (k, en, ar) => put(k, { en, ar: ar === undefined ? en : ar });
 const M = (k, amount, ar, cur = 'AED') => put(k, { money: money(amount, cur), ar });
 const NAVUSED = new Set();
@@ -170,7 +170,7 @@ const repFilter = (f, label, ar, type, value) => {
 const datatable = (cols, rows) => {
   const hdr = `<div class="dt-row dt-row-header" data-is-header="1"><div class="dt-cell dt-cell--col-0 dt-cell--header dt-cell--sticky dt-cell--sticky-top"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--header dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;"><span class="sort-indicator"> </span></div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2} dt-cell--header"><div class="dt-cell__content" style="width: ${c.w}px;${c.right ? ' text-align: right;' : ''}">${lbl('c_' + c.f, c.label, c.ar)}<span class="sort-indicator"> </span><span class="dt-cell__resize-handle"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle">${I('ChevronDown')}</div></div></div></div>`).join('')}</div>`;
   const body = rows.map((r, ri) => `<div class="dt-row dt-row-${ri} vrow"><div class="dt-cell dt-cell--col-0 dt-cell--sticky"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--sticky dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;">${T('ri_' + ri, String(ri + 1))}</div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2}"><div class="dt-cell__content" style="width: ${c.w}px;">${r[i] === null ? '' : c.money ? `<div style="text-align: right">${M(`rv_${c.f}_${ri}`, r[i].amount, r[i].ar)}</div>` : c.right ? `<div style="text-align: right">${T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div>` : T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div></div>`).join('')}</div>`).join('');
-  return `<div class="layout-main-section-wrapper report-view"><div class="layout-main-section layout-main-list" data-ui="ury-desk-screen-report-body"><div class="frappe-list"><div class="result"><div class="datatable-wrapper"><div class="datatable" dir="ltr"><div class="dt-header"><div>${hdr}</div></div><div class="dt-scrollable">${body}</div><div class="dt-footer"></div></div></div></div></div></div></div>`;
+  return `<div class="frappe-list"><div class="result"><div class="datatable-wrapper"><div class="datatable" dir="ltr"><div class="dt-header"><div>${hdr}</div></div><div class="dt-scrollable">${body}</div><div class="dt-footer"></div></div></div></div></div>`;
 };
 const reportPage = (r) => {
   const filters = r === 'todays-sales'
@@ -187,7 +187,7 @@ const reportPage = (r) => {
     const rev = [[5053.13, 'د.إ 5,053.13', '11.5', 10.97, 'د.إ 10.97'], [6120, 'د.إ 6,120.00', '12', 12.75, 'د.إ 12.75'], [5480.25, 'د.إ 5,480.25', '11', 12.46, 'د.إ 12.46'], [4390, 'د.إ 4,390.00', '10.5', 10.45, 'د.إ 10.45'], [4875.5, 'د.إ 4,875.50', '11', 11.08, 'د.إ 11.08'], [5210, 'د.إ 5,210.00', '11.5', 11.33, 'د.إ 11.33'], [7015.75, 'د.إ 7,015.75', '12.5', 14.03, 'د.إ 14.03']];
     table = datatable(c, d.map((x, i) => [{ en: x[0], ar: x[1] }, { amount: rev[i][0], ar: rev[i][1] }, { en: '40', ar: '40' }, { en: rev[i][2], ar: rev[i][2] }, { amount: rev[i][3], ar: rev[i][4] }, i === 6 ? { amount: 11.78, ar: 'د.إ 11.78' } : null]));
   }
-  return `<div class="layout-main-section-wrapper report-view">${bar}</div>${table}`;
+  return `<div class="layout-main-section-wrapper report-view"><div class="layout-main-section layout-main-list" data-ui="ury-desk-screen-report-body">${bar}${table}</div></div>`;
 };
 
 // ---- specs -------------------------------------------------------------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ export const specs = [
     'Use for floor-setup scenes (Setup > Tables).']),
   mk('ury-desk-screen-report', 'URY desk report', wrapRender((p) => {
     const r = p.report || 'todays-sales';
-    return page(r === 'todays-sales' ? "Today's Sales" : 'RevPASH Report', 'report', [T('crumb_' + r, r === 'todays-sales' ? "Today's Sales" : 'RevPASH Report', r === 'todays-sales' ? 'مبيعات اليوم' : 'تقرير RevPASH')], reportPage(r));
+    return page(r === 'todays-sales' ? "Today's Sales" : 'RevPASH Report', 'report', [T('crumb_' + r.replace('-', '_'), r === 'todays-sales' ? "Today's Sales" : 'RevPASH Report', r === 'todays-sales' ? 'مبيعات اليوم' : 'تقرير RevPASH')], reportPage(r));
   }), {
     revpash: { props: { report: 'revpash' }, describe: 'RevPASH Report: Branch, From Date and To Date filters; Date, Total Revenue, No Of Seats, Working hours, RevPASH and Total RevPASH columns from revpash_report.py.' },
   }, ["Today's Sales query report (ury/report/today's_sales): Branch filter and the seven query columns (Today, Total Invoices, Item Total, Total Taxes and Charges, Grand Total, Round Off, Cash Discounts) in the Frappe datatable.",
