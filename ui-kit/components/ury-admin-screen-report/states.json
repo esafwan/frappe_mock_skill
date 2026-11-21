@@ -1,0 +1,79 @@
+{
+  "component": "ury-admin-screen-report",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "rowHover": 2
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Table row hovered: bg-muted/50.",
+      "alias": "row-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No sales for the range: the table shows \"No results found.\" and the totals and pagination are hidden.",
+      "alias": "empty"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "isLoading with no data yet: the page shows only the \"Loading…\" line under the filter bar.",
+      "alias": "loading"
+    },
+    "row-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "rowHover": 2
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Table row hovered: bg-muted/50."
+    },
+    "date-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "date"
+      },
+      "screenshot": "states/date-hover.png",
+      "preview": "states/date-hover.html",
+      "description": "Date range trigger hovered."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no error state of its own (the page shows a red banner above it)"
+    }
+  }
+}

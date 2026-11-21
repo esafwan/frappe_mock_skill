@@ -1,0 +1,42 @@
+{
+  "id": "ury-admin-filter-bar",
+  "name": "URY admin filter bar",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1256,
+    "h": 71
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-reports.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Sticky report filter bar: date range trigger, branch select and an order-type multiselect with removable chips, on a bg-background/95 blurred strip with a bottom border and px 24 py 8.",
+    "Place directly under the report PageHeader. Built from the UryDateRangePicker trigger, SearchableSelect and MultiSelect class lists. Arabic comes from ury/translations/ar.csv; \"Amount\", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. \"# Orders\" and \"% of Total\" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1208,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

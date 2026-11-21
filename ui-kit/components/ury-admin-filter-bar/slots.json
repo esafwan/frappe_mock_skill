@@ -1,0 +1,48 @@
+{
+  "component": "ury-admin-filter-bar",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "fb_range": {
+      "type": "text",
+      "sample": "Nov 21, 2026 - Nov 21, 2026",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_chip0": {
+      "type": "text",
+      "sample": "Dine In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_chip1": {
+      "type": "text",
+      "sample": "Take Away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_ph": {
+      "type": "text",
+      "sample": "Select",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sm_all_branches": {
+      "type": "text",
+      "sample": "All Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

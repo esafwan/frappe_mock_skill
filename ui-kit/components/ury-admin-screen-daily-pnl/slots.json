@@ -1,0 +1,1266 @@
+{
+  "component": "ury-admin-screen-daily-pnl",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "pl_desc": {
+      "type": "text",
+      "sample": "Full daily profit & loss breakdown",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_date": {
+      "type": "text",
+      "sample": "2026-11-21",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_k_gs": {
+      "type": "text",
+      "sample": "Gross Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_kgs": {
+      "type": "currency",
+      "sample": "AED 9,860.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_k_ns": {
+      "type": "text",
+      "sample": "Net Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_kns": {
+      "type": "currency",
+      "sample": "AED 9,260.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_k_gp": {
+      "type": "text",
+      "sample": "Gross Profit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_kgp": {
+      "type": "currency",
+      "sample": "-AED 180.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_kgpp": {
+      "type": "text",
+      "sample": "(-1.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_k_np": {
+      "type": "text",
+      "sample": "Net Profit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_knp": {
+      "type": "currency",
+      "sample": "-AED 9,650.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_knpp": {
+      "type": "text",
+      "sample": "(-97.9%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_card_t": {
+      "type": "text",
+      "sample": "P&L Statement",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_card_d": {
+      "type": "text",
+      "sample": "Read top to bottom — each subtotal is a running reduction of the one above it.",
+      "maxLength": 125,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_gs": {
+      "type": "text",
+      "sample": "Gross Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a1": {
+      "type": "currency",
+      "sample": "AED 9,860.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p1": {
+      "type": "text",
+      "sample": "(100.0%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_disc": {
+      "type": "text",
+      "sample": "Discounts & Round Offs",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a2": {
+      "type": "currency",
+      "sample": "AED 140.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p2": {
+      "type": "text",
+      "sample": "(1.4%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_tax": {
+      "type": "text",
+      "sample": "Tax",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a3": {
+      "type": "currency",
+      "sample": "AED 460.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p3": {
+      "type": "text",
+      "sample": "(4.7%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_ns": {
+      "type": "text",
+      "sample": "Net Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a4": {
+      "type": "currency",
+      "sample": "AED 9,260.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p4": {
+      "type": "text",
+      "sample": "(93.9%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_cogs": {
+      "type": "text",
+      "sample": "Cost of Goods Sold",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a5": {
+      "type": "currency",
+      "sample": "AED 5,980.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p5": {
+      "type": "text",
+      "sample": "(60.6%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_disp": {
+      "type": "text",
+      "sample": "Disposables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a6": {
+      "type": "currency",
+      "sample": "AED 360.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p6": {
+      "type": "text",
+      "sample": "(3.7%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_dir": {
+      "type": "text",
+      "sample": "Direct Expenses",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a7": {
+      "type": "currency",
+      "sample": "AED 3,100.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p7": {
+      "type": "text",
+      "sample": "(31.4%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_nl8": {
+      "type": "text",
+      "sample": "Gas & Fuel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a8": {
+      "type": "currency",
+      "sample": "AED 1,100.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p8": {
+      "type": "text",
+      "sample": "(11.2%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_nl9": {
+      "type": "text",
+      "sample": "Packaging",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a9": {
+      "type": "currency",
+      "sample": "AED 2,000.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p9": {
+      "type": "text",
+      "sample": "(20.3%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_gp": {
+      "type": "text",
+      "sample": "Gross Profit/Loss",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a10": {
+      "type": "currency",
+      "sample": "AED 180.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p10": {
+      "type": "text",
+      "sample": "(-1.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_emp": {
+      "type": "text",
+      "sample": "Employee Cost",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a11": {
+      "type": "currency",
+      "sample": "AED 3,900.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p11": {
+      "type": "text",
+      "sample": "(39.6%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_nl12": {
+      "type": "text",
+      "sample": "Kitchen Staff",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a12": {
+      "type": "currency",
+      "sample": "AED 2,100.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p12": {
+      "type": "text",
+      "sample": "(21.3%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_nl13": {
+      "type": "text",
+      "sample": "Service Staff",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a13": {
+      "type": "currency",
+      "sample": "AED 1,800.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p13": {
+      "type": "text",
+      "sample": "(18.3%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_il14": {
+      "type": "text",
+      "sample": "Rent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a14": {
+      "type": "currency",
+      "sample": "AED 3,200.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p14": {
+      "type": "text",
+      "sample": "(32.5%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_il15": {
+      "type": "text",
+      "sample": "Utilities",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a15": {
+      "type": "currency",
+      "sample": "AED 1,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p15": {
+      "type": "text",
+      "sample": "(11.7%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_dep": {
+      "type": "text",
+      "sample": "Depreciation",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a16": {
+      "type": "currency",
+      "sample": "AED 640.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p16": {
+      "type": "text",
+      "sample": "(6.5%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_oth": {
+      "type": "text",
+      "sample": "Other Expenses",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a17": {
+      "type": "currency",
+      "sample": "AED 580.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p17": {
+      "type": "text",
+      "sample": "(5.9%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_ti": {
+      "type": "text",
+      "sample": "Total Indirect Expenses",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a18": {
+      "type": "currency",
+      "sample": "AED 5,570.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p18": {
+      "type": "text",
+      "sample": "(56.5%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_l_np": {
+      "type": "text",
+      "sample": "Net Profit/Loss",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_a19": {
+      "type": "currency",
+      "sample": "AED 9,650.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "plL_p19": {
+      "type": "text",
+      "sample": "(-97.9%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_kgs": {
+      "type": "currency",
+      "sample": "AED 18,450.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_kns": {
+      "type": "currency",
+      "sample": "AED 17,355.90",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_kgp": {
+      "type": "currency",
+      "sample": "AED 9,145.90",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_kgpp": {
+      "type": "text",
+      "sample": "(49.6%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_knp": {
+      "type": "currency",
+      "sample": "-AED 324.10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_knpp": {
+      "type": "text",
+      "sample": "(-1.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a1": {
+      "type": "currency",
+      "sample": "AED 18,450.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p1": {
+      "type": "text",
+      "sample": "(100.0%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a2": {
+      "type": "currency",
+      "sample": "AED 215.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p2": {
+      "type": "text",
+      "sample": "(1.2%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a3": {
+      "type": "currency",
+      "sample": "AED 878.60",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p3": {
+      "type": "text",
+      "sample": "(4.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a4": {
+      "type": "currency",
+      "sample": "AED 17,355.90",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p4": {
+      "type": "text",
+      "sample": "(94.1%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a5": {
+      "type": "currency",
+      "sample": "AED 6,420.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p5": {
+      "type": "text",
+      "sample": "(34.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a6": {
+      "type": "currency",
+      "sample": "AED 310.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p6": {
+      "type": "text",
+      "sample": "(1.7%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a7": {
+      "type": "currency",
+      "sample": "AED 1,480.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p7": {
+      "type": "text",
+      "sample": "(8.0%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_nl8": {
+      "type": "text",
+      "sample": "Gas & Fuel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a8": {
+      "type": "currency",
+      "sample": "AED 620.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p8": {
+      "type": "text",
+      "sample": "(3.4%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_nl9": {
+      "type": "text",
+      "sample": "Packaging",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a9": {
+      "type": "currency",
+      "sample": "AED 860.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p9": {
+      "type": "text",
+      "sample": "(4.7%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a10": {
+      "type": "currency",
+      "sample": "AED 9,145.90",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p10": {
+      "type": "text",
+      "sample": "(49.6%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a11": {
+      "type": "currency",
+      "sample": "AED 3,900.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p11": {
+      "type": "text",
+      "sample": "(21.1%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_nl12": {
+      "type": "text",
+      "sample": "Kitchen Staff",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a12": {
+      "type": "currency",
+      "sample": "AED 2,100.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p12": {
+      "type": "text",
+      "sample": "(11.4%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_nl13": {
+      "type": "text",
+      "sample": "Service Staff",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a13": {
+      "type": "currency",
+      "sample": "AED 1,800.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p13": {
+      "type": "text",
+      "sample": "(9.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_il14": {
+      "type": "text",
+      "sample": "Rent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a14": {
+      "type": "currency",
+      "sample": "AED 3,200.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p14": {
+      "type": "text",
+      "sample": "(17.3%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_il15": {
+      "type": "text",
+      "sample": "Utilities",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a15": {
+      "type": "currency",
+      "sample": "AED 1,150.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p15": {
+      "type": "text",
+      "sample": "(6.2%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a16": {
+      "type": "currency",
+      "sample": "AED 640.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p16": {
+      "type": "text",
+      "sample": "(3.5%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a17": {
+      "type": "currency",
+      "sample": "AED 580.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p17": {
+      "type": "text",
+      "sample": "(3.1%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a18": {
+      "type": "currency",
+      "sample": "AED 5,570.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p18": {
+      "type": "text",
+      "sample": "(30.2%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_a19": {
+      "type": "currency",
+      "sample": "AED 324.10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_p19": {
+      "type": "text",
+      "sample": "(-1.8%)",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pl_none": {
+      "type": "text",
+      "sample": "No submitted Daily P&L exists for this branch/date. It must be created and submitted in Desk first.",
+      "maxLength": 159,
+      "where": "text",
+      "element": "text"
+    },
+    "ts_loading": {
+      "type": "text",
+      "sample": "Loading…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_pnl": {
+      "type": "text",
+      "sample": "Daily P&L",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_sales": {
+      "type": "text",
+      "sample": "Sales Summary",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_today": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise": {
+      "type": "text",
+      "sample": "Daywise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise_inv": {
+      "type": "text",
+      "sample": "Daywise Invoices",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_month": {
+      "type": "text",
+      "sample": "Month Wise Sales",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_time": {
+      "type": "text",
+      "sample": "Time Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_service": {
+      "type": "text",
+      "sample": "Service Wise Sales",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cancelled": {
+      "type": "text",
+      "sample": "Cancelled Invoices",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_avg_bill": {
+      "type": "text",
+      "sample": "Average Bill Value",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_customers": {
+      "type": "text",
+      "sample": "Customers & Items",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_sales": {
+      "type": "text",
+      "sample": "Item Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_hist": {
+      "type": "text",
+      "sample": "Item-wise Purchase History",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "r_customer": {
+      "type": "text",
+      "sample": "Customer Data",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cust_daywise": {
+      "type": "text",
+      "sample": "Daywise Customer Details",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_repeat": {
+      "type": "text",
+      "sample": "Repeated Customers",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_employees": {
+      "type": "text",
+      "sample": "Employees & Operations",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_sales": {
+      "type": "text",
+      "sample": "Employee Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_comm": {
+      "type": "text",
+      "sample": "Employee Commission",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_item": {
+      "type": "text",
+      "sample": "Employee Item Wise Sales",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_work_orders": {
+      "type": "text",
+      "sample": "Completed Work Orders",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_financial": {
+      "type": "text",
+      "sample": "Financial",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

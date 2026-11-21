@@ -1,0 +1,1000 @@
+{
+  "component": "ury-admin-screen-report",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "ts_desc": {
+      "type": "text",
+      "sample": "Friday, 2026-11-21",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ts_updated": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ts_time": {
+      "type": "text",
+      "sample": "10:42:08 AM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_range": {
+      "type": "text",
+      "sample": "Nov 21, 2026 - Nov 21, 2026",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_chip0": {
+      "type": "text",
+      "sample": "Dine In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fb_chip1": {
+      "type": "text",
+      "sample": "Take Away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_inv": {
+      "type": "text",
+      "sample": "Total Invoices",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_inv_v": {
+      "type": "text",
+      "sample": "299",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_item": {
+      "type": "text",
+      "sample": "Item Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_item_v": {
+      "type": "currency",
+      "sample": "AED 17,571.40",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_tax": {
+      "type": "text",
+      "sample": "Total Taxes & Charges",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "k_tax_v": {
+      "type": "currency",
+      "sample": "AED 878.60",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_grand": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_grand_v": {
+      "type": "currency",
+      "sample": "AED 18,450.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_round": {
+      "type": "text",
+      "sample": "Round Off",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_round_v": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_disc": {
+      "type": "text",
+      "sample": "Cash Discounts",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_disc_v": {
+      "type": "currency",
+      "sample": "-AED 215.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_disc_h": {
+      "type": "text",
+      "sample": "given away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ts_top": {
+      "type": "text",
+      "sample": "Top Selling Items Today",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h0": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h1": {
+      "type": "text",
+      "sample": "Group",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h2": {
+      "type": "text",
+      "sample": "Qty",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h3": {
+      "type": "text",
+      "sample": "Amount",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h4": {
+      "type": "text",
+      "sample": "Avg Price",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_h5": {
+      "type": "text",
+      "sample": "% of Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_0": {
+      "type": "text",
+      "sample": "Chicken Shawarma",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_1": {
+      "type": "text",
+      "sample": "Mains",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_2": {
+      "type": "text",
+      "sample": "64",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_3": {
+      "type": "currency",
+      "sample": "AED 1,920.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_4": {
+      "type": "currency",
+      "sample": "AED 30.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_0_5": {
+      "type": "text",
+      "sample": "10.4%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_0": {
+      "type": "text",
+      "sample": "Caesar Salad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_1": {
+      "type": "text",
+      "sample": "Salads",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_2": {
+      "type": "text",
+      "sample": "41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_3": {
+      "type": "currency",
+      "sample": "AED 1,394.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_4": {
+      "type": "currency",
+      "sample": "AED 34.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_1_5": {
+      "type": "text",
+      "sample": "7.6%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_0": {
+      "type": "text",
+      "sample": "Cappuccino",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_1": {
+      "type": "text",
+      "sample": "Beverages",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_2": {
+      "type": "text",
+      "sample": "86",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_3": {
+      "type": "currency",
+      "sample": "AED 1,376.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_4": {
+      "type": "currency",
+      "sample": "AED 16.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_2_5": {
+      "type": "text",
+      "sample": "7.5%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_0": {
+      "type": "text",
+      "sample": "Falafel Wrap",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_1": {
+      "type": "text",
+      "sample": "Mains",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_2": {
+      "type": "text",
+      "sample": "58",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_3": {
+      "type": "currency",
+      "sample": "AED 1,276.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_4": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_3_5": {
+      "type": "text",
+      "sample": "6.9%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_0": {
+      "type": "text",
+      "sample": "Hummus Plate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_1": {
+      "type": "text",
+      "sample": "Starters",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_2": {
+      "type": "text",
+      "sample": "37",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_3": {
+      "type": "currency",
+      "sample": "AED 962.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_4": {
+      "type": "currency",
+      "sample": "AED 26.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_4_5": {
+      "type": "text",
+      "sample": "5.2%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_0": {
+      "type": "text",
+      "sample": "Kunafa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_1": {
+      "type": "text",
+      "sample": "Desserts",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_2": {
+      "type": "text",
+      "sample": "29",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_3": {
+      "type": "currency",
+      "sample": "AED 812.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_4": {
+      "type": "currency",
+      "sample": "AED 28.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_5_5": {
+      "type": "text",
+      "sample": "4.4%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_0": {
+      "type": "text",
+      "sample": "Mint Lemonade",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_1": {
+      "type": "text",
+      "sample": "Beverages",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_2": {
+      "type": "text",
+      "sample": "52",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_3": {
+      "type": "currency",
+      "sample": "AED 728.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_4": {
+      "type": "currency",
+      "sample": "AED 14.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_6_5": {
+      "type": "text",
+      "sample": "3.9%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_0": {
+      "type": "text",
+      "sample": "Karak Tea",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_1": {
+      "type": "text",
+      "sample": "Beverages",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_2": {
+      "type": "text",
+      "sample": "74",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_3": {
+      "type": "currency",
+      "sample": "AED 592.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_4": {
+      "type": "currency",
+      "sample": "AED 8.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_7_5": {
+      "type": "text",
+      "sample": "3.2%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f0": {
+      "type": "text",
+      "sample": "Page total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f1": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f2": {
+      "type": "text",
+      "sample": "441",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f3": {
+      "type": "currency",
+      "sample": "AED 9,060.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f4": {
+      "type": "currency",
+      "sample": "AED 20.54",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_f5": {
+      "type": "text",
+      "sample": "49.1%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pg_page": {
+      "type": "text",
+      "sample": "Page 1 of 3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pg_prev": {
+      "type": "text",
+      "sample": "Prev",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pg_next": {
+      "type": "text",
+      "sample": "Next",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_empty": {
+      "type": "text",
+      "sample": "No results found.",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "ts_loading": {
+      "type": "text",
+      "sample": "Loading…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_today": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_sales": {
+      "type": "text",
+      "sample": "Sales Summary",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise": {
+      "type": "text",
+      "sample": "Daywise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise_inv": {
+      "type": "text",
+      "sample": "Daywise Invoices",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_month": {
+      "type": "text",
+      "sample": "Month Wise Sales",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_time": {
+      "type": "text",
+      "sample": "Time Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_service": {
+      "type": "text",
+      "sample": "Service Wise Sales",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cancelled": {
+      "type": "text",
+      "sample": "Cancelled Invoices",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_avg_bill": {
+      "type": "text",
+      "sample": "Average Bill Value",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_customers": {
+      "type": "text",
+      "sample": "Customers & Items",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_sales": {
+      "type": "text",
+      "sample": "Item Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_hist": {
+      "type": "text",
+      "sample": "Item-wise Purchase History",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "r_customer": {
+      "type": "text",
+      "sample": "Customer Data",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cust_daywise": {
+      "type": "text",
+      "sample": "Daywise Customer Details",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_repeat": {
+      "type": "text",
+      "sample": "Repeated Customers",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_employees": {
+      "type": "text",
+      "sample": "Employees & Operations",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_sales": {
+      "type": "text",
+      "sample": "Employee Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_comm": {
+      "type": "text",
+      "sample": "Employee Commission",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_item": {
+      "type": "text",
+      "sample": "Employee Item Wise Sales",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_work_orders": {
+      "type": "text",
+      "sample": "Completed Work Orders",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_financial": {
+      "type": "text",
+      "sample": "Financial",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_pnl": {
+      "type": "text",
+      "sample": "Daily P&L",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

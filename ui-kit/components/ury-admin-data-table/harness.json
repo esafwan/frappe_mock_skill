@@ -1,0 +1,42 @@
+{
+  "id": "ury-admin-data-table",
+  "name": "URY admin data table",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 762,
+    "h": 180
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-reports.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Report DataTable: rounded-lg border, bg-muted/50 header row (12px/500 text-tertiary), 12.5px body rows on hairline dividers, numeric columns end-aligned with tabular numerals, and a bold totals row. Row tone washes mark danger, warning or selected rows.",
+    "Use for every report and list grid in the admin app; the totals row is added when a report sums its rows. Arabic comes from ury/translations/ar.csv; \"Amount\", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. \"# Orders\" and \"% of Total\" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 760,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-screen-report",
+  "name": "URY admin Today's Sales report",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-reports.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Today's Sales report at 1440x900 inside the admin shell with the Reports group open: PageHeader with the Updated time, sticky filter bar, six-figure KPI strip, a Top Selling Items table with totals row, and Prev / Next pagination.",
+    "Template for every report page. The filter bar, totals row and pagination are composed from the date-range, MultiSelect, DataTable and pagination patterns used across the Reports pages. Arabic comes from ury/translations/ar.csv; \"Amount\", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. \"# Orders\" and \"% of Total\" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

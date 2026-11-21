@@ -1,0 +1,716 @@
+{
+  "component": "ury-admin-screen-reports-home",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "ury-admin-screen-reports-home",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "ury-admin-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 49
+    },
+    {
+      "id": "ury-admin-header.logo",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 8,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.divider",
+      "tag": "div",
+      "interactive": false,
+      "x": 72,
+      "y": 16,
+      "w": 1,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.breadcrumbs",
+      "tag": "div",
+      "interactive": false,
+      "x": 89,
+      "y": 17.75,
+      "w": 46.69,
+      "h": 12.5
+    },
+    {
+      "id": "ury-admin-header.ask",
+      "tag": "button",
+      "interactive": true,
+      "x": 431.81,
+      "y": 2,
+      "w": 288,
+      "h": 44
+    },
+    {
+      "id": "ury-admin-header.company",
+      "tag": "button",
+      "interactive": true,
+      "x": 731.81,
+      "y": 10,
+      "w": 200.13,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.branch",
+      "tag": "button",
+      "interactive": true,
+      "x": 943.94,
+      "y": 10,
+      "w": 164.47,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.open-pos",
+      "tag": "a",
+      "interactive": true,
+      "x": 1120.41,
+      "y": 8,
+      "w": 102.17,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.bell",
+      "tag": "button",
+      "interactive": true,
+      "x": 1234.58,
+      "y": 10,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.bell-count",
+      "tag": "span",
+      "interactive": false,
+      "x": 1250.58,
+      "y": 6,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1274.58,
+      "y": 10,
+      "w": 141.42,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar",
+      "tag": "aside",
+      "interactive": false,
+      "x": 0,
+      "y": 49,
+      "w": 232,
+      "h": 852
+    },
+    {
+      "id": "ury-admin-sidebar.toggle",
+      "tag": "button",
+      "interactive": true,
+      "x": 195,
+      "y": 57,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar.day-card",
+      "tag": "div",
+      "interactive": false,
+      "x": 10,
+      "y": 95,
+      "w": 211,
+      "h": 99
+    },
+    {
+      "id": "ury-admin-sidebar.group.plan",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 204,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.sales-plan",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 236,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.requirements",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 269,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.operate",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 314,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 346,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.service",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 379,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.observe",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 424,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.department-profitability",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 456,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-variance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 489,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-compliance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 522,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.close-day",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 555,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.control",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 600,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.wastage",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 632,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.overdue-yield-checks",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 665,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.stock-reservations",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 698,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.kot-error-log",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 731,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.menu-routing",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 764,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.reports",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 809,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-today-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 866,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 899,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 932,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-month-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 965,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-time-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 998,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-service-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1031,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-cancelled-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1064,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-average-bill-value",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1097,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1159,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-item-wise-purchase-history",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1192,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-customer-data",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1245,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-customer-details",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1278,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-repeated-customers",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1331,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1393,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-commission",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1426,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1459,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-completed-work-orders",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1512,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daily-pnl",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1574,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.setup",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 1622,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-main",
+      "tag": "main",
+      "interactive": false,
+      "x": 232,
+      "y": 49,
+      "w": 1208,
+      "h": 851
+    },
+    {
+      "id": "ury-admin-screen-reports-home.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 73,
+      "w": 1160,
+      "h": 52
+    },
+    {
+      "id": "ury-admin-screen-reports-home.header.title",
+      "tag": "h1",
+      "interactive": false,
+      "x": 256,
+      "y": 73,
+      "w": 1160,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-screen-reports-home.header.desc",
+      "tag": "p",
+      "interactive": false,
+      "x": 256,
+      "y": 105,
+      "w": 1160,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-reports-home.group-rg_sales",
+      "tag": "section",
+      "interactive": false,
+      "x": 256,
+      "y": 149,
+      "w": 1160,
+      "h": 148
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-today-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 177,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-daywise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 549,
+      "y": 177,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-daywise-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 842,
+      "y": 177,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-month-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 1135,
+      "y": 177,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-time-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 243,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-service-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 549,
+      "y": 243,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-cancelled-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 842,
+      "y": 243,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-average-bill-value",
+      "tag": "a",
+      "interactive": true,
+      "x": 1135,
+      "y": 243,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.group-rg_customers",
+      "tag": "section",
+      "interactive": false,
+      "x": 256,
+      "y": 321,
+      "w": 1160,
+      "h": 148
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 349,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-item-wise-purchase-history",
+      "tag": "a",
+      "interactive": true,
+      "x": 549,
+      "y": 349,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-customer-data",
+      "tag": "a",
+      "interactive": true,
+      "x": 842,
+      "y": 349,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-daywise-customer-details",
+      "tag": "a",
+      "interactive": true,
+      "x": 1135,
+      "y": 349,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-repeated-customers",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 415,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.group-rg_employees",
+      "tag": "section",
+      "interactive": false,
+      "x": 256,
+      "y": 493,
+      "w": 1160,
+      "h": 82
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-employee-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 521,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-employee-commission",
+      "tag": "a",
+      "interactive": true,
+      "x": 549,
+      "y": 521,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-employee-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 842,
+      "y": 521,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-completed-work-orders",
+      "tag": "a",
+      "interactive": true,
+      "x": 1135,
+      "y": 521,
+      "w": 281,
+      "h": 54
+    },
+    {
+      "id": "ury-admin-screen-reports-home.group-rg_financial",
+      "tag": "section",
+      "interactive": false,
+      "x": 256,
+      "y": 599,
+      "w": 1160,
+      "h": 82
+    },
+    {
+      "id": "ury-admin-screen-reports-home.card-daily-pnl",
+      "tag": "a",
+      "interactive": true,
+      "x": 256,
+      "y": 627,
+      "w": 281,
+      "h": 54
+    }
+  ]
+}

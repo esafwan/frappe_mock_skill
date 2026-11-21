@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-screen-reports-home",
+  "name": "URY admin Reports home",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-reports.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Reports landing screen at 1440x900 inside the admin shell with the Reports group open: the four reportsRegistry groups (Sales Summary 8, Customers & Items 5, Employees & Operations 4, Financial 1) as sections of link cards with the registry icons.",
+    "Shown when no report is chosen (the live route redirects to Today's Sales). Arabic comes from ury/translations/ar.csv; \"Amount\", the item, group, branch and breakup names and the sample dates are translated here because ar.csv has no usable entry. \"# Orders\" and \"% of Total\" are hard-coded English in the source and stay English. Header cells follow data-table.tsx (12px/500 text-tertiary)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

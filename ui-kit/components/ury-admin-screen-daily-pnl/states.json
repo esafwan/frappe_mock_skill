@@ -1,0 +1,62 @@
+{
+  "component": "ury-admin-screen-daily-pnl",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "profit-day": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "profit": true
+      },
+      "screenshot": "states/profit-day.png",
+      "preview": "states/profit-day.html",
+      "description": "A profitable day: Gross Profit takes the success tint with a plus sign and the Gross Profit KPI turns success; Net Profit stays negative."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No submitted Daily P&L for this branch and date: the warning Alert.",
+      "alias": "empty"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "isLoading: the \"Loading…\" line under the header.",
+      "alias": "loading"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no error state of its own (the page shows a red banner above it)"
+    }
+  }
+}

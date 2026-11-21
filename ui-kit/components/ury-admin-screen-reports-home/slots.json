@@ -1,0 +1,440 @@
+{
+  "component": "ury-admin-screen-reports-home",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "rh_desc": {
+      "type": "text",
+      "sample": "Select a report from the sidebar.",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "rh_n_rg_sales": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rh_n_rg_customers": {
+      "type": "text",
+      "sample": "5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rh_n_rg_employees": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rh_n_rg_financial": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_sales": {
+      "type": "text",
+      "sample": "Sales Summary",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_today": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise": {
+      "type": "text",
+      "sample": "Daywise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_daywise_inv": {
+      "type": "text",
+      "sample": "Daywise Invoices",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_month": {
+      "type": "text",
+      "sample": "Month Wise Sales",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "r_time": {
+      "type": "text",
+      "sample": "Time Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_service": {
+      "type": "text",
+      "sample": "Service Wise Sales",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cancelled": {
+      "type": "text",
+      "sample": "Cancelled Invoices",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "r_avg_bill": {
+      "type": "text",
+      "sample": "Average Bill Value",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_customers": {
+      "type": "text",
+      "sample": "Customers & Items",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_sales": {
+      "type": "text",
+      "sample": "Item Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_item_hist": {
+      "type": "text",
+      "sample": "Item-wise Purchase History",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "r_customer": {
+      "type": "text",
+      "sample": "Customer Data",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_cust_daywise": {
+      "type": "text",
+      "sample": "Daywise Customer Details",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_repeat": {
+      "type": "text",
+      "sample": "Repeated Customers",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_employees": {
+      "type": "text",
+      "sample": "Employees & Operations",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_sales": {
+      "type": "text",
+      "sample": "Employee Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_comm": {
+      "type": "text",
+      "sample": "Employee Commission",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "r_emp_item": {
+      "type": "text",
+      "sample": "Employee Item Wise Sales",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "r_work_orders": {
+      "type": "text",
+      "sample": "Completed Work Orders",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "rg_financial": {
+      "type": "text",
+      "sample": "Financial",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r_pnl": {
+      "type": "text",
+      "sample": "Daily P&L",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

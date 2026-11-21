@@ -1,0 +1,55 @@
+{
+  "component": "ury-admin-screen-reports-home",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "month-wise-sales"
+      },
+      "screenshot": "states/card-hover.png",
+      "preview": "states/card-hover.html",
+      "description": "A report card hovered: bg-muted/50, primary border tint and icon.",
+      "alias": "card-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "card-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "month-wise-sales"
+      },
+      "screenshot": "states/card-hover.png",
+      "preview": "states/card-hover.html",
+      "description": "A report card hovered: bg-muted/50, primary border tint and icon."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no error state of its own (the page shows a red banner above it)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the screen has no empty state"
+    }
+  }
+}

@@ -1,0 +1,833 @@
+{
+  "component": "ury-admin-screen-report",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "ury-admin-screen-report",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "ury-admin-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 49
+    },
+    {
+      "id": "ury-admin-header.logo",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 8,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.divider",
+      "tag": "div",
+      "interactive": false,
+      "x": 72,
+      "y": 16,
+      "w": 1,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.breadcrumbs",
+      "tag": "div",
+      "interactive": false,
+      "x": 89,
+      "y": 17.75,
+      "w": 140.69,
+      "h": 12.5
+    },
+    {
+      "id": "ury-admin-header.ask",
+      "tag": "button",
+      "interactive": true,
+      "x": 431.81,
+      "y": 2,
+      "w": 288,
+      "h": 44
+    },
+    {
+      "id": "ury-admin-header.company",
+      "tag": "button",
+      "interactive": true,
+      "x": 731.81,
+      "y": 10,
+      "w": 200.13,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.branch",
+      "tag": "button",
+      "interactive": true,
+      "x": 943.94,
+      "y": 10,
+      "w": 164.47,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.open-pos",
+      "tag": "a",
+      "interactive": true,
+      "x": 1120.41,
+      "y": 8,
+      "w": 102.17,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.bell",
+      "tag": "button",
+      "interactive": true,
+      "x": 1234.58,
+      "y": 10,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.bell-count",
+      "tag": "span",
+      "interactive": false,
+      "x": 1250.58,
+      "y": 6,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1274.58,
+      "y": 10,
+      "w": 141.42,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar",
+      "tag": "aside",
+      "interactive": false,
+      "x": 0,
+      "y": 49,
+      "w": 232,
+      "h": 852
+    },
+    {
+      "id": "ury-admin-sidebar.toggle",
+      "tag": "button",
+      "interactive": true,
+      "x": 195,
+      "y": 57,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar.day-card",
+      "tag": "div",
+      "interactive": false,
+      "x": 10,
+      "y": 95,
+      "w": 211,
+      "h": 99
+    },
+    {
+      "id": "ury-admin-sidebar.group.plan",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 204,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.sales-plan",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 236,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.requirements",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 269,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.operate",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 314,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 346,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.service",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 379,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.observe",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 424,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.department-profitability",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 456,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-variance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 489,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-compliance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 522,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.close-day",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 555,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.control",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 600,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.wastage",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 632,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.overdue-yield-checks",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 665,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.stock-reservations",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 698,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.kot-error-log",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 731,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.menu-routing",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 764,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.reports",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 809,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-today-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 866,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 899,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 932,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-month-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 965,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-time-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 998,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-service-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1031,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-cancelled-invoices",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1064,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-average-bill-value",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1097,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1159,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-item-wise-purchase-history",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1192,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-customer-data",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1245,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daywise-customer-details",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1278,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-repeated-customers",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1331,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1393,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-commission",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1426,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-employee-item-wise-sales",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1459,
+      "w": 191,
+      "h": 51
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-completed-work-orders",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1512,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.reports-daily-pnl",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 1574,
+      "w": 191,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.setup",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 1622,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-main",
+      "tag": "main",
+      "interactive": false,
+      "x": 232,
+      "y": 49,
+      "w": 1208,
+      "h": 851
+    },
+    {
+      "id": "ury-admin-screen-report.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 73,
+      "w": 1160,
+      "h": 52
+    },
+    {
+      "id": "ury-admin-screen-report.header.title",
+      "tag": "h1",
+      "interactive": false,
+      "x": 256,
+      "y": 73,
+      "w": 569.78,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-screen-report.header.desc",
+      "tag": "p",
+      "interactive": false,
+      "x": 256,
+      "y": 105,
+      "w": 569.78,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-report.header.actions",
+      "tag": "div",
+      "interactive": false,
+      "x": 849.78,
+      "y": 91,
+      "w": 566.22,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-screen-report.updated",
+      "tag": "span",
+      "interactive": false,
+      "x": 1289.94,
+      "y": 91,
+      "w": 126.06,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar",
+      "tag": "div",
+      "interactive": false,
+      "x": 232,
+      "y": 141,
+      "w": 1208,
+      "h": 57
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar.date",
+      "tag": "button",
+      "interactive": true,
+      "x": 256,
+      "y": 149,
+      "w": 228.39,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar.branch",
+      "tag": "div",
+      "interactive": false,
+      "x": 496.39,
+      "y": 149,
+      "w": 192,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar.multi",
+      "tag": "div",
+      "interactive": false,
+      "x": 700.39,
+      "y": 149,
+      "w": 288,
+      "h": 40
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar.multi.chip-0",
+      "tag": "span",
+      "interactive": false,
+      "x": 713.39,
+      "y": 158,
+      "w": 77.44,
+      "h": 22
+    },
+    {
+      "id": "ury-admin-screen-report.filter-bar.multi.chip-1",
+      "tag": "span",
+      "interactive": false,
+      "x": 796.83,
+      "y": 158,
+      "w": 99.72,
+      "h": 22
+    },
+    {
+      "id": "ury-admin-screen-report.kpis",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 214,
+      "w": 1160,
+      "h": 87.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-0",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 214,
+      "w": 175.83,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-1",
+      "tag": "div",
+      "interactive": false,
+      "x": 431.83,
+      "y": 214,
+      "w": 196.84,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-2",
+      "tag": "div",
+      "interactive": false,
+      "x": 628.67,
+      "y": 214,
+      "w": 196.83,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-3",
+      "tag": "div",
+      "interactive": false,
+      "x": 825.5,
+      "y": 214,
+      "w": 196.84,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-4",
+      "tag": "div",
+      "interactive": false,
+      "x": 1022.34,
+      "y": 214,
+      "w": 196.83,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.kpis.kpi-5",
+      "tag": "div",
+      "interactive": false,
+      "x": 1219.17,
+      "y": 214,
+      "w": 196.83,
+      "h": 70.3
+    },
+    {
+      "id": "ury-admin-screen-report.section",
+      "tag": "h2",
+      "interactive": false,
+      "x": 256,
+      "y": 325.3,
+      "w": 1160,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-report.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 353.3,
+      "w": 1160,
+      "h": 365
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-0",
+      "tag": "th",
+      "interactive": false,
+      "x": 257,
+      "y": 354.3,
+      "w": 285.22,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-1",
+      "tag": "th",
+      "interactive": false,
+      "x": 542.22,
+      "y": 354.3,
+      "w": 182.06,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-2",
+      "tag": "th",
+      "interactive": false,
+      "x": 724.28,
+      "y": 354.3,
+      "w": 105.39,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-3",
+      "tag": "th",
+      "interactive": false,
+      "x": 829.67,
+      "y": 354.3,
+      "w": 225.63,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-4",
+      "tag": "th",
+      "interactive": false,
+      "x": 1055.3,
+      "y": 354.3,
+      "w": 186.48,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.th-5",
+      "tag": "th",
+      "interactive": false,
+      "x": 1241.78,
+      "y": 354.3,
+      "w": 173.22,
+      "h": 30.5
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-0",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 384.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-1",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 421.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-2",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 458.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-3",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 495.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-4",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 532.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-5",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 569.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-6",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 606.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.row-7",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 643.8,
+      "w": 1158,
+      "h": 37
+    },
+    {
+      "id": "ury-admin-screen-report.table.footer",
+      "tag": "tr",
+      "interactive": false,
+      "x": 257,
+      "y": 680.8,
+      "w": 1158,
+      "h": 36.5
+    },
+    {
+      "id": "ury-admin-screen-report.pagination",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 742.3,
+      "w": 1160,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-report.pagination.prev",
+      "tag": "button",
+      "interactive": true,
+      "x": 1247.55,
+      "y": 742.3,
+      "w": 79.67,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-report.pagination.next",
+      "tag": "button",
+      "interactive": true,
+      "x": 1335.22,
+      "y": 742.3,
+      "w": 80.78,
+      "h": 36
+    }
+  ]
+}

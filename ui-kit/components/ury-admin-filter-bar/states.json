@@ -1,0 +1,85 @@
+{
+  "component": "ury-admin-filter-bar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "date"
+      },
+      "screenshot": "states/date-hover.png",
+      "preview": "states/date-hover.html",
+      "description": "Date range trigger hovered: hover:bg-muted/50.",
+      "alias": "date-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "multi-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "multiEmpty": true
+      },
+      "screenshot": "states/multi-empty.png",
+      "preview": "states/multi-empty.html",
+      "description": "MultiSelect with nothing chosen: gray-400 placeholder instead of chips."
+    },
+    "all-branches": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "branchAll": true
+      },
+      "screenshot": "states/all-branches.png",
+      "preview": "states/all-branches.html",
+      "description": "Branch select on All Branches."
+    },
+    "date-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "date"
+      },
+      "screenshot": "states/date-hover.png",
+      "preview": "states/date-hover.html",
+      "description": "Date range trigger hovered: hover:bg-muted/50."
+    },
+    "branch-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "branch"
+      },
+      "screenshot": "states/branch-hover.png",
+      "preview": "states/branch-hover.html",
+      "description": "Branch select hovered: border-gray-300."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the filter bar has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the filter bar has no error state of its own (the page shows a red banner above it)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the filter bar has no loading state"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the filter bar has no empty state"
+    }
+  }
+}

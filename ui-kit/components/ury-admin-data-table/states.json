@@ -1,0 +1,91 @@
+{
+  "component": "ury-admin-data-table",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Row hovered: hover:bg-muted/50.",
+      "alias": "row-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "isLoading: a single \"Loading…\" row, p-8 text-center text-muted-foreground.",
+      "alias": "loading"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No rows: the \"No results found.\" message row.",
+      "alias": "empty"
+    },
+    "row-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Row hovered: hover:bg-muted/50."
+    },
+    "row-tones": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "tones": [
+          "danger",
+          "warning",
+          "selected"
+        ]
+      },
+      "screenshot": "states/row-tones.png",
+      "preview": "states/row-tones.html",
+      "description": "rowTone danger / warning / selected: destructive-tint, warning-tint and primary-tint washes."
+    },
+    "no-footer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "screenshot": "states/no-footer.png",
+      "preview": "states/no-footer.html",
+      "description": "Plain DataTable without the totals row."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the table has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the table has no error state of its own (the page shows a red banner above it)"
+    }
+  }
+}
