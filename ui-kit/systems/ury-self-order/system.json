@@ -1,0 +1,55 @@
+{
+ "id": "ury-self-order",
+ "name": "URY Self Order (table QR ordering)",
+ "status": "planned",
+ "partOf": "ury",
+ "source": {
+  "app": "ury",
+  "branch": "version-16",
+  "commit": "100c43fe2e",
+  "path": "/Users/safwan/Code/ury-v16-latest/self-order",
+  "root": "/Users/safwan/Code/ury-v16-latest"
+ },
+ "componentGroup": "ury-self-order",
+ "componentPrefix": "ury-self-order-",
+ "captureMode": {
+  "kind": "static",
+  "how": "Hand-authored HTML/CSS from the v16 source class lists (scripts/ury-v16/self-order/*.mjs) rendered through scripts/static-capture.mjs (scripts/specs-ury-self-order.mjs)."
+ },
+ "variableSystem": {
+  "kind": "hsl-vars",
+  "themeAttribute": "class:dark",
+  "theme": {
+   "light": null,
+   "dark": "class=\"dark\" on <html>"
+  },
+  "files": {
+   "tokens": "tokens/css/ury-v16/ury-ui-tokens.css",
+   "base": "tokens/css/ury-v16/ury-ui-base.css",
+   "fonts": "tokens/css/ury-v16/ury-fonts.css",
+   "components": "tokens/css/ury-v16/components/*.css"
+  }
+ },
+ "modes": [
+  "light",
+  "dark",
+  "rtl"
+ ],
+ "rtl": {
+  "supported": true,
+  "mechanism": "dir=\"rtl\" on root; logical CSS properties; Arabic from locale files"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 390,
+   "h": 844,
+   "deviceScaleFactor": 2
+  }
+ },
+ "coverage": [
+  "menu browsing",
+  "cart",
+  "order status",
+  "self-order screens"
+ ]
+}
