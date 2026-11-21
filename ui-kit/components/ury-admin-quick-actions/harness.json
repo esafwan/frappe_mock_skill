@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-quick-actions",
+  "name": "URY admin quick actions",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1164,
+    "h": 291
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Quick Operations & Setup (QuickActions.tsx): header row with a bottom border and \"Fast action shortcuts\", then six cards (xl:grid-cols-6, gap 16): Open POS Terminal (solid primary button) and five outline \"+ Add\" shortcuts. Card rounded-[9px] border-hair p-[14px_16px]; 40px primary-50 icon tile; title 14/700; description 12px text-tertiary clamped to two lines. Arabic comes from ury/translations/ar.csv; payment-mode names (Cash, Card, Online, Wallet), the \"Wallet\" and sample customer, menu-item and invoice names, \"POS\", the action button captions and the toast have no ar.csv entry and are translated here (the toast text is an English literal in the source and stays English).",
+    "Shown in a card or page with p-6; the header uses -mx-6 -mt-6 to run edge to edge."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1164,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

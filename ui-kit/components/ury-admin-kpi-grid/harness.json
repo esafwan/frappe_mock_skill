@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-kpi-grid",
+  "name": "URY admin KPI grid",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1116,
+    "h": 120.75
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Top of the Service Board (KPIGrid.tsx): two chrome link buttons (POS, Mosaic) over a KpiStrip of four live metrics: Today's Sales (success tone), Orders Today, Avg. Order Value and Active Tables. KpiStrip is borderless: 11px label, 25px/600 tabular value, hairline dividers and a border-b. Money values are typed currency slots. Arabic comes from ury/translations/ar.csv; payment-mode names (Cash, Card, Online, Wallet), the \"Wallet\" and sample customer, menu-item and invoice names, \"POS\", the action button captions and the toast have no ar.csv entry and are translated here (the toast text is an English literal in the source and stays English).",
+    "Use as the headline stats of the admin dashboard; the stat-cards variant is the boxed StatCard form used for toned metrics with deltas."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1116,
+  "height": null,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

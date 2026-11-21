@@ -1,0 +1,97 @@
+{
+  "component": "ury-admin-kpi-grid",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "stat-cards": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": true
+      },
+      "screenshot": "states/stat-cards.png",
+      "preview": "states/stat-cards.html",
+      "description": "StatCard row (packages/ui stat-card.tsx): rounded-lg border, p-5, toned top rail and icon chip, uppercase 12px label, 3xl value, delta with arrow (▲ ▼ —) and sign. Used by report pages; the Service Board itself renders the KpiStrip."
+    },
+    "stat-cards-full": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": true,
+        "full": true
+      },
+      "screenshot": "states/stat-cards-full.png",
+      "preview": "states/stat-cards-full.html",
+      "description": "StatCard row with the occupancy warning tone and the \"Floor nearly full\" hint (occupancy 0.85 or more)."
+    },
+    "floor-full": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "full": true
+      },
+      "screenshot": "states/floor-full.png",
+      "preview": "states/floor-full.html",
+      "description": "Active Tables at 85 percent or more of the floor: value turns text-warning-600 and the hint \"Floor nearly full\" appears."
+    },
+    "warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "full": true
+      },
+      "screenshot": "states/floor-full.png",
+      "preview": "states/floor-full.html",
+      "description": "Active Tables at 85 percent or more of the floor: value turns text-warning-600 and the hint \"Floor nearly full\" appears.",
+      "alias": "floor-full"
+    },
+    "mixed-currency": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mixed": true
+      },
+      "screenshot": "states/mixed-currency.png",
+      "preview": "states/mixed-currency.html",
+      "description": "More than one currency in scope: one figure per currency joined by \" · \" and the hint \"Multiple currencies — not summed\"."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "loading is true: a centred Spinner (py-8) replaces the KpiStrip.",
+      "alias": "loading"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the KPI grid has no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: an error replaces the whole section (see ury-admin-screen-dashboard error)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-screen-dashboard",
+  "name": "URY admin screen: Dashboard",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Service Board at 1440x900 inside the admin shell (header, sidebar with the Service Board link at /dashboard active). Page content (max 1440, px 22, pt 20): link cards, KPI strip, then Live POS Transactions in a DataTable. The analytics charts are commented out in DashboardPage.tsx, so the screen omits them; see ury-admin-chart-card. Arabic comes from ury/translations/ar.csv; payment-mode names (Cash, Card, Online, Wallet), the \"Wallet\" and sample customer, menu-item and invoice names, \"POS\", the action button captions and the toast have no ar.csv entry and are translated here (the toast text is an English literal in the source and stays English).",
+    "The landing page of the admin app after sign-in."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,727 @@
+{
+  "component": "ury-admin-screen-dashboard",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_pos_sub": {
+      "type": "text",
+      "sample": "Billing & order taking",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "k_pos": {
+      "type": "text",
+      "sample": "POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_mosaic_sub": {
+      "type": "text",
+      "sample": "Kitchen Display System",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "k_mosaic": {
+      "type": "text",
+      "sample": "Mosaic",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_sales": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "kv_sales": {
+      "type": "currency",
+      "sample": "AED 18,640.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_orders": {
+      "type": "text",
+      "sample": "Orders Today",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_orders_val": {
+      "type": "text",
+      "sample": "128",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_avg": {
+      "type": "text",
+      "sample": "Avg. Order Value",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "kv_avg": {
+      "type": "currency",
+      "sample": "AED 145.63",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_tables": {
+      "type": "text",
+      "sample": "Active Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_tables_val": {
+      "type": "text",
+      "sample": "14 / 22",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_title": {
+      "type": "text",
+      "sample": "Live POS Transactions",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "t_sub": {
+      "type": "text",
+      "sample": "Real-time sales and active checkouts",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_inv": {
+      "type": "text",
+      "sample": "Invoice ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_cust": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_tbl": {
+      "type": "text",
+      "sample": "Table / Location",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_ot": {
+      "type": "text",
+      "sample": "Order Type",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_dt": {
+      "type": "text",
+      "sample": "Date & Time",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_st": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_h_gt": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n0": {
+      "type": "text",
+      "sample": "INV-2026-00128",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_walkin": {
+      "type": "text",
+      "sample": "Walk-in Customer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_t0": {
+      "type": "text",
+      "sample": "T-04",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_ot_dinein": {
+      "type": "text",
+      "sample": "Dine In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d0": {
+      "type": "text",
+      "sample": "2026-11-21 02:14:08 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "t_st_paid": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a0": {
+      "type": "currency",
+      "sample": "AED 86.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n1": {
+      "type": "text",
+      "sample": "INV-2026-00127",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_c1": {
+      "type": "text",
+      "sample": "Aisha Rahman",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_counter": {
+      "type": "text",
+      "sample": "Counter",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_ot_takeaway": {
+      "type": "text",
+      "sample": "Take Away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d1": {
+      "type": "text",
+      "sample": "2026-11-21 02:09:41 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a1": {
+      "type": "currency",
+      "sample": "AED 142.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n2": {
+      "type": "text",
+      "sample": "INV-2026-00126",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_c2": {
+      "type": "text",
+      "sample": "Omar Khalid",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_t2": {
+      "type": "text",
+      "sample": "T-11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d2": {
+      "type": "text",
+      "sample": "2026-11-21 01:58:19 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "t_st_submitted": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a2": {
+      "type": "currency",
+      "sample": "AED 318.75",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n3": {
+      "type": "text",
+      "sample": "INV-2026-00125",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t_ot_delivery": {
+      "type": "text",
+      "sample": "Delivery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d3": {
+      "type": "text",
+      "sample": "2026-11-21 01:47:03 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a3": {
+      "type": "currency",
+      "sample": "AED 64.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n4": {
+      "type": "text",
+      "sample": "INV-2026-00124",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_c4": {
+      "type": "text",
+      "sample": "Layla Haddad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_t4": {
+      "type": "text",
+      "sample": "T-07",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d4": {
+      "type": "text",
+      "sample": "2026-11-21 01:36:55 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "t_st_draft": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a4": {
+      "type": "currency",
+      "sample": "AED 205.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n5": {
+      "type": "text",
+      "sample": "INV-2026-00123",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_c5": {
+      "type": "text",
+      "sample": "Yusuf Ahmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_t5": {
+      "type": "text",
+      "sample": "T-02",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d5": {
+      "type": "text",
+      "sample": "2026-11-21 01:21:30 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a5": {
+      "type": "currency",
+      "sample": "AED 97.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n6": {
+      "type": "text",
+      "sample": "INV-2026-00122",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d6": {
+      "type": "text",
+      "sample": "2026-11-21 01:12:47 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a6": {
+      "type": "currency",
+      "sample": "AED 45.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_n7": {
+      "type": "text",
+      "sample": "INV-2026-00121",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_c7": {
+      "type": "text",
+      "sample": "Mariam Saleh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_t7": {
+      "type": "text",
+      "sample": "T-09",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_d7": {
+      "type": "text",
+      "sample": "2026-11-21 12:58:12 PM",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "tx_a7": {
+      "type": "currency",
+      "sample": "AED 276.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "loading": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_tables_full": {
+      "type": "text",
+      "sample": "19 / 22",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_full": {
+      "type": "text",
+      "sample": "Floor nearly full",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "t_empty": {
+      "type": "text",
+      "sample": "No transactions recorded yet today.",
+      "maxLength": 56,
+      "where": "text",
+      "element": "text"
+    },
+    "s_err": {
+      "type": "text",
+      "sample": "Unable to load Service Board data. Please retry.",
+      "maxLength": 77,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

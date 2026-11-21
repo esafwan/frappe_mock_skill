@@ -1,0 +1,398 @@
+{
+  "component": "ury-admin-chart-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "c_trend": {
+      "type": "text",
+      "sample": "Sales Trend",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d1": {
+      "type": "text",
+      "sample": "11/15",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d2": {
+      "type": "text",
+      "sample": "11/16",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d3": {
+      "type": "text",
+      "sample": "11/17",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d4": {
+      "type": "text",
+      "sample": "11/18",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d5": {
+      "type": "text",
+      "sample": "11/19",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d6": {
+      "type": "text",
+      "sample": "11/20",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "xd_d7": {
+      "type": "text",
+      "sample": "11/21",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_6000": {
+      "type": "text",
+      "sample": "AED6K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_8000": {
+      "type": "text",
+      "sample": "AED8K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_10000": {
+      "type": "text",
+      "sample": "AED10K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_12000": {
+      "type": "text",
+      "sample": "AED12K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_14000": {
+      "type": "text",
+      "sample": "AED14K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_order": {
+      "type": "text",
+      "sample": "Order Type Split",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "pct_o1": {
+      "type": "text",
+      "sample": "52%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pct_o2": {
+      "type": "text",
+      "sample": "31%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pct_o3": {
+      "type": "text",
+      "sample": "17%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ot_o1": {
+      "type": "text",
+      "sample": "Dine In",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ot_o2": {
+      "type": "text",
+      "sample": "Take Away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ot_o3": {
+      "type": "text",
+      "sample": "Delivery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_pay": {
+      "type": "text",
+      "sample": "Payment Breakdown",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "pm_p1": {
+      "type": "text",
+      "sample": "Cash",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pm_p2": {
+      "type": "text",
+      "sample": "Card",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pm_p3": {
+      "type": "text",
+      "sample": "Online",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pm_p4": {
+      "type": "text",
+      "sample": "Wallet",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_0": {
+      "type": "text",
+      "sample": "AED0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_2000": {
+      "type": "text",
+      "sample": "AED2K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "yt_4000": {
+      "type": "text",
+      "sample": "AED4K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_top": {
+      "type": "text",
+      "sample": "Top Selling Menu Items",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "c_top_sub": {
+      "type": "text",
+      "sample": "Highest grossing items ranked by order count & volume",
+      "maxLength": 85,
+      "where": "text",
+      "element": "text"
+    },
+    "c_ranked": {
+      "type": "text",
+      "sample": "Ranked Top",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_ranked_n": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n0": {
+      "type": "text",
+      "sample": "Butter Chicken",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r0": {
+      "type": "currency",
+      "sample": "AED 8,370.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_cat": {
+      "type": "text",
+      "sample": "Category:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_cat": {
+      "type": "text",
+      "sample": "Sales Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c0": {
+      "type": "text",
+      "sample": "186",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_ordered": {
+      "type": "text",
+      "sample": "items ordered",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n1": {
+      "type": "text",
+      "sample": "Paneer Tikka Masala",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r1": {
+      "type": "currency",
+      "sample": "AED 5,320.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c1": {
+      "type": "text",
+      "sample": "152",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n2": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r2": {
+      "type": "currency",
+      "sample": "AED 6,550.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c2": {
+      "type": "text",
+      "sample": "131",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n3": {
+      "type": "text",
+      "sample": "Garlic Naan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r3": {
+      "type": "currency",
+      "sample": "AED 1,180.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c3": {
+      "type": "text",
+      "sample": "118",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n4": {
+      "type": "text",
+      "sample": "Masala Chai",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r4": {
+      "type": "currency",
+      "sample": "AED 970.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c4": {
+      "type": "text",
+      "sample": "97",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_n5": {
+      "type": "text",
+      "sample": "Gulab Jamun",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_r5": {
+      "type": "currency",
+      "sample": "AED 1,110.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ti_c5": {
+      "type": "text",
+      "sample": "74",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_top_empty": {
+      "type": "text",
+      "sample": "No top items data available",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "loading": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_trend_empty": {
+      "type": "text",
+      "sample": "No sales trend data available",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

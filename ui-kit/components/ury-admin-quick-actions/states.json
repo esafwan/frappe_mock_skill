@@ -1,0 +1,75 @@
+{
+  "component": "ury-admin-quick-actions",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 2
+      },
+      "screenshot": "states/card-hover.png",
+      "preview": "states/card-hover.html",
+      "description": "Action card hovered: hover:bg-muted/50.",
+      "alias": "card-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "toast": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "toast": true
+      },
+      "screenshot": "states/toast.png",
+      "preview": "states/toast.html",
+      "description": "Toast banner above the header after a successful add: rounded-[9px] bg-primary-900 text-white, message plus a Dismiss button."
+    },
+    "card-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 2
+      },
+      "screenshot": "states/card-hover.png",
+      "preview": "states/card-hover.html",
+      "description": "Action card hovered: hover:bg-muted/50."
+    },
+    "button-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hoverBtn": 3
+      },
+      "screenshot": "states/button-hover.png",
+      "preview": "states/button-hover.html",
+      "description": "Outline action button hovered: hover:bg-primary-50."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the quick-actions grid has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the quick-actions grid has no error state of its own"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the quick-actions grid has no loading state in the source"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

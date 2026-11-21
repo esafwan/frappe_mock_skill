@@ -1,0 +1,100 @@
+{
+  "component": "ury-admin-chart-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "donut": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "donut"
+      },
+      "screenshot": "states/donut.png",
+      "preview": "states/donut.html",
+      "description": "PieChartCard (Order Type Split): donut innerRadius 65, outerRadius 100, white 1px sector strokes, percent labels with leader lines, coloured legend."
+    },
+    "payment-bars": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "bars"
+      },
+      "screenshot": "states/payment-bars.png",
+      "preview": "states/payment-bars.html",
+      "description": "BarChartCard (Payment Breakdown drawn as bars): maxBarSize 56, dashed grid, mono 11px ticks with compact currency. The source draws Payment Breakdown as a donut; the bar form is the same BarChartCard used for Peak Sales Distribution and Revenue by Branch."
+    },
+    "top-items": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "top"
+      },
+      "screenshot": "states/top-items.png",
+      "preview": "states/top-items.html",
+      "description": "Top Selling Menu Items: Card padding lg rounded-xl, two-column ranked list with a progress bar (purple-600 to purple-400) per item and a \"Ranked Top\" badge."
+    },
+    "top-items-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "top-empty"
+      },
+      "screenshot": "states/top-items-empty.png",
+      "preview": "states/top-items-empty.html",
+      "description": "Top Selling Menu Items with no rows: dashed empty box with \"No top items data available\"."
+    },
+    "top-items-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "top-loading"
+      },
+      "screenshot": "states/top-items-loading.png",
+      "preview": "states/top-items-loading.html",
+      "description": "Top Selling Menu Items while loading: centred Spinner (py-12)."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "ChartLoading: h-64 rounded-lg bordered box with a centred Spinner."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "ChartEmpty: h-64 dashed box with the \"No sales trend data available\" message."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the chart card has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the chart card has no error state of its own"
+    }
+  }
+}

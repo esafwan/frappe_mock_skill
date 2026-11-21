@@ -1,0 +1,79 @@
+{
+  "component": "ury-admin-screen-dashboard",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "loading skeleton: the KPI strip and the transactions table are each replaced by a centred Spinner (py-8 and py-12); the link cards stay.",
+      "alias": "loading"
+    },
+    "floor-full": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "full": true
+      },
+      "screenshot": "states/floor-full.png",
+      "preview": "states/floor-full.html",
+      "description": "Active Tables at 19 / 22: warning-toned value and the \"Floor nearly full\" hint."
+    },
+    "warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "full": true
+      },
+      "screenshot": "states/floor-full.png",
+      "preview": "states/floor-full.html",
+      "description": "Active Tables at 19 / 22: warning-toned value and the \"Floor nearly full\" hint.",
+      "alias": "floor-full"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "empty": true
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No transactions today: the table shows \"No transactions recorded yet today.\""
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "error": true
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Fetch failed: the KPI section shows the destructive alert text instead of the link cards and strip.",
+      "alias": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the dashboard screen has no disabled state"
+    }
+  }
+}
