@@ -1,0 +1,256 @@
+{
+  "component": "pos-table-transfer-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "transfer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer"
+      },
+      "screenshot": "states/transfer.png",
+      "preview": "states/transfer.html",
+      "description": "Transfer table: destination list grouped by room, confirm disabled until a table is picked."
+    },
+    "transfer-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "sel": 2
+      },
+      "screenshot": "states/transfer-selected.png",
+      "preview": "states/transfer-selected.html",
+      "description": "Destination chosen: primary border and primary-50/40 fill, Transfer enabled."
+    },
+    "transfer-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "state": "loading"
+      },
+      "screenshot": "states/transfer-loading.png",
+      "preview": "states/transfer-loading.html",
+      "description": "Destination tables still loading."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "state": "loading"
+      },
+      "screenshot": "states/transfer-loading.png",
+      "preview": "states/transfer-loading.html",
+      "description": "Destination tables still loading.",
+      "alias": "transfer-loading"
+    },
+    "transfer-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "state": "empty"
+      },
+      "screenshot": "states/transfer-empty.png",
+      "preview": "states/transfer-empty.html",
+      "description": "No vacant tables in the branch."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "state": "empty"
+      },
+      "screenshot": "states/transfer-empty.png",
+      "preview": "states/transfer-empty.html",
+      "description": "No vacant tables in the branch.",
+      "alias": "transfer-empty"
+    },
+    "transfer-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "error": true,
+        "sel": 0
+      },
+      "screenshot": "states/transfer-error.png",
+      "preview": "states/transfer-error.html",
+      "description": "Transfer rejected: red message above the footer."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "transfer",
+        "error": true,
+        "sel": 0
+      },
+      "screenshot": "states/transfer-error.png",
+      "preview": "states/transfer-error.html",
+      "description": "Transfer rejected: red message above the footer.",
+      "alias": "transfer-error"
+    },
+    "merge": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge"
+      },
+      "screenshot": "states/merge.png",
+      "preview": "states/merge.html",
+      "description": "Merge with a table: two-column checklist of free tables."
+    },
+    "merge-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge",
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "screenshot": "states/merge-selected.png",
+      "preview": "states/merge-selected.html",
+      "description": "Two tables ticked: primary borders, count badge in the footer, Merge enabled."
+    },
+    "merge-occupied-hint": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge",
+        "sel": [
+          1
+        ]
+      },
+      "values": {
+        "merge_desc": "Add a free table to this active party",
+        "merge_selected": "Merge 1 tables"
+      },
+      "screenshot": "states/merge-occupied-hint.png",
+      "preview": "states/merge-occupied-hint.html",
+      "description": "Source table already occupied: description changes to the active-party hint."
+    },
+    "merge-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge",
+        "empty": true
+      },
+      "screenshot": "states/merge-empty.png",
+      "preview": "states/merge-empty.html",
+      "description": "No free table to merge."
+    },
+    "merging": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge",
+        "phase": "merging"
+      },
+      "screenshot": "states/merging.png",
+      "preview": "states/merging.html",
+      "description": "Merging phase: pulsing link icon, no close button."
+    },
+    "merge-done": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "merge",
+        "phase": "done"
+      },
+      "screenshot": "states/merge-done.png",
+      "preview": "states/merge-done.html",
+      "description": "Done phase: green check and success message."
+    },
+    "unmerge": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "unmerge"
+      },
+      "screenshot": "states/unmerge.png",
+      "preview": "states/unmerge.html",
+      "description": "Confirm dialog before unmerging a table group; destructive confirm button."
+    },
+    "captain-transfer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "captain"
+      },
+      "screenshot": "states/captain-transfer.png",
+      "preview": "states/captain-transfer.html",
+      "description": "Transfer captain: current captain, search and captain list."
+    },
+    "captain-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "captain",
+        "sel": 1
+      },
+      "screenshot": "states/captain-selected.png",
+      "preview": "states/captain-selected.html",
+      "description": "Captain chosen: primary border, Transfer enabled."
+    },
+    "captain-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "captain",
+        "state": "loading"
+      },
+      "screenshot": "states/captain-loading.png",
+      "preview": "states/captain-loading.html",
+      "description": "Captain search in flight."
+    },
+    "captain-empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "captain",
+        "state": "empty"
+      },
+      "screenshot": "states/captain-empty.png",
+      "preview": "states/captain-empty.html",
+      "description": "No captain matched."
+    },
+    "captain-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "captain",
+        "state": "error"
+      },
+      "screenshot": "states/captain-error.png",
+      "preview": "states/captain-error.html",
+      "description": "Captain list failed to load."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "the disabled state is the unselected confirm button shown in every picker kind"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "component": "pos-bill-split-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "item-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "0": 1
+        }
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 154,
+          "currency": "AED",
+          "sample": "AED 154.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 22,
+          "currency": "AED",
+          "sample": "AED 22.00"
+        }
+      },
+      "screenshot": "states/item-selected.png",
+      "preview": "states/item-selected.html",
+      "description": "One single-quantity line ticked (dark check box, primary-50/40 row); Split bill enabled."
+    },
+    "qty-move": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "1": 2
+        }
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 128,
+          "currency": "AED",
+          "sample": "AED 128.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 48,
+          "currency": "AED",
+          "sample": "AED 48.00"
+        }
+      },
+      "screenshot": "states/qty-move.png",
+      "preview": "states/qty-move.html",
+      "description": "Line with quantity 3: the Qty to move stepper appears, 2 of 3 moving."
+    },
+    "multi-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "0": 1,
+          "1": 2
+        }
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 106,
+          "currency": "AED",
+          "sample": "AED 106.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 70,
+          "currency": "AED",
+          "sample": "AED 70.00"
+        }
+      },
+      "screenshot": "states/multi-selected.png",
+      "preview": "states/multi-selected.html",
+      "description": "Two lines selected."
+    },
+    "new-customer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "0": 1
+        },
+        "same": false
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 154,
+          "currency": "AED",
+          "sample": "AED 154.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 22,
+          "currency": "AED",
+          "sample": "AED 22.00"
+        }
+      },
+      "screenshot": "states/new-customer.png",
+      "preview": "states/new-customer.html",
+      "description": "Same-as-original unchecked: customer search field appears."
+    },
+    "new-customer-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "0": 1
+        },
+        "same": false,
+        "customer": "value"
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 154,
+          "currency": "AED",
+          "sample": "AED 154.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 22,
+          "currency": "AED",
+          "sample": "AED 22.00"
+        }
+      },
+      "screenshot": "states/new-customer-selected.png",
+      "preview": "states/new-customer-selected.html",
+      "description": "New-bill customer chosen: name and phone with a Change button."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": {
+          "0": 1,
+          "1": 3
+        },
+        "error": true
+      },
+      "values": {
+        "stays_total": {
+          "type": "currency",
+          "amount": 82,
+          "currency": "AED",
+          "sample": "AED 82.00"
+        },
+        "moves_total": {
+          "type": "currency",
+          "amount": 94,
+          "currency": "AED",
+          "sample": "AED 94.00"
+        }
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Validation message when every unit would move off the original bill.",
+      "alias": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "the disabled state is the Split bill button with nothing selected (default)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the submit label switches to Loading... only while the request is in flight"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the dialog always lists the invoice items"
+    }
+  }
+}

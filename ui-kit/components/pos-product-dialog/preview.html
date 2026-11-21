@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>POS Product Dialog</title>
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-fonts.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-ui-tokens.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/ury-ui-base.css">
+<link rel="stylesheet" href="../../tokens/css/ury-v16/components/pos-dialogs.css">
+<style>html,body{margin:0}body{background:hsl(var(--background));min-height:900px}#ui-kit-stage{position:absolute;left:0;top:0;width:1440px;height:900px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style></head>
+<body>
+<div id="ui-kit-stage">
+<div class="u-dialog-wrap pd" data-ui="pos-product-dialog" style="width:1440px;height:900px"><div class="u-dialog-scrim"></div><div class="u-dialog pd-dlg--scroll pd-product" role="dialog" aria-modal="true" data-ui="dialog"><div class="pd-product__media" data-ui="media"><img src="../../data/images/mediterranean/hummus.jpg" alt="Hummus" data-ui="image"><button type="button" class="u-btn u-btn--outline u-btn--icon pd-product__close" aria-label="Close" data-ui="close"><svg class="lucide lucide-x" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+<div class="pd-product__col" data-ui="details">
+<h2 class="pd-product__title" data-ui="item-name">Hummus</h2>
+<div class="pd-product__meta"><span class="pd-product__code">Hummus</span><span class="pd-product__dot">&bull;</span><span class="pd-product__course">Cold Meze</span></div>
+<div class="pd-product__sec" data-ui="instructions"><h3>Special Instructions</h3><input class="pd-input" type="text" placeholder="Add any special instructions or notes for this item..." value="" data-ui="comments"></div>
+<div class="pd-product__sec" data-ui="quantity"><h3>Quantity</h3><div class="pd-product__qty" role="group"><button type="button" class="u-btn u-btn--outline u-btn--icon" aria-label="Decrease" data-ui="qty-minus"><svg class="lucide lucide-minus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><input class="pd-input pd-input--qty" type="number" value="1" data-ui="qty-input"><button type="button" class="u-btn u-btn--outline u-btn--icon" aria-label="Increase" data-ui="qty-plus"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div>
+<div class="pd-product__sec" data-ui="variants"><h3>Variants</h3><div class="pd-product__variants"><button type="button" class="u-btn u-btn--outline pd-pick is-sel" aria-pressed="true" data-ui="variant-1"><div class="pd-pick__name">Hummus</div><div class="pd-pick__price"><span class="u-num">AED 22.00</span></div></button><button type="button" class="u-btn u-btn--outline pd-pick" aria-pressed="false" data-ui="variant-2"><div class="pd-pick__name">Hummus with Pine Nuts</div><div class="pd-pick__price"><span class="u-num">AED 28.00</span></div></button></div></div>
+</div>
+<div class="pd-product__col pd-product__col--side" data-ui="side">
+<div class="pd-product__addons"><div data-ui="addons"><h3>Add-ons</h3><div class="pd-product__addon-list"><button type="button" class="u-btn u-btn--outline pd-pick pd-pick--addon" aria-pressed="false" data-ui="addon-1"><div style="display:flex;align-items:center;justify-content:space-between;width:100%"><span>Extra Pita Bread</span><span class="pd-pick__price" style="font-weight:400">+<span class="u-num">AED 3.00</span></span></div></button><button type="button" class="u-btn u-btn--outline pd-pick pd-pick--addon" aria-pressed="false" data-ui="addon-2"><div style="display:flex;align-items:center;justify-content:space-between;width:100%"><span>Olive Oil Drizzle</span><span class="pd-pick__price" style="font-weight:400">+<span class="u-num">AED 2.00</span></span></div></button><button type="button" class="u-btn u-btn--outline pd-pick pd-pick--addon" aria-pressed="false" data-ui="addon-3"><div style="display:flex;align-items:center;justify-content:space-between;width:100%"><span>Spicy Harissa</span><span class="pd-pick__price" style="font-weight:400">+<span class="u-num">AED 4.00</span></span></div></button></div></div></div>
+<div class="pd-product__foot" data-ui="total-bar"><div class="pd-product__total"><span>Total&nbsp;</span><span data-ui="total"><span class="u-num">AED 22.00</span></span></div>
+<button type="button" class="u-btn u-btn--default u-btn--lg pd-product__submit" data-ui="submit">Add to Order</button></div>
+</div></div></div>
+</div>
+</body></html>

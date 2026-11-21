@@ -1,0 +1,160 @@
+{
+  "component": "pos-customer-picker",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "searching": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "searching",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/searching.png",
+      "preview": "states/searching.html",
+      "description": "Search request in flight: spinner row above the Add New row."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "searching",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/searching.png",
+      "preview": "states/searching.html",
+      "description": "Search request in flight: spinner row above the Add New row.",
+      "alias": "searching"
+    },
+    "typed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "query": "{{query}}",
+        "hl": 1
+      },
+      "screenshot": "states/typed.png",
+      "preview": "states/typed.html",
+      "description": "Query typed, second result highlighted (primary-50)."
+    },
+    "no-results": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "none",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/no-results.png",
+      "preview": "states/no-results.html",
+      "description": "No customer matched."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "none",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/no-results.png",
+      "preview": "states/no-results.html",
+      "description": "No customer matched.",
+      "alias": "no-results"
+    },
+    "search-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "error",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/search-error.png",
+      "preview": "states/search-error.html",
+      "description": "Search failed."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "error",
+        "query": "{{query}}"
+      },
+      "screenshot": "states/search-error.png",
+      "preview": "states/search-error.html",
+      "description": "Search failed.",
+      "alias": "search-error"
+    },
+    "add-new-highlighted": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hl": 3
+      },
+      "screenshot": "states/add-new-highlighted.png",
+      "preview": "states/add-new-highlighted.html",
+      "description": "Keyboard highlight on the Add New Customer row."
+    },
+    "selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "value": true,
+        "list": false
+      },
+      "screenshot": "states/selected.png",
+      "preview": "states/selected.html",
+      "description": "Customer chosen: card with name, phone and Change."
+    },
+    "create": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "dialog": true
+      },
+      "screenshot": "states/create.png",
+      "preview": "states/create.html",
+      "description": "Add New Customer dialog opened from the dropdown."
+    },
+    "create-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "dialog": true,
+        "phoneError": "{{invalid_phone}}",
+        "error": "{{create_failed}}"
+      },
+      "screenshot": "states/create-error.png",
+      "preview": "states/create-error.html",
+      "description": "Create failed with an invalid phone: red banner, destructive field border and message."
+    },
+    "creating": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "dialog": true,
+        "creating": true
+      },
+      "screenshot": "states/creating.png",
+      "preview": "states/creating.html",
+      "description": "Create request in flight: submit disabled with spinner and Adding Customer..."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the disabled state only dims the field"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "pos-table-transfer-dialog",
+  "name": "POS Table Transfer Dialog",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dialogs.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Table action dialogs of the dine-in floor, one component with four kinds: transfer (TablePickerDialog: current table, search, vacant tables grouped by room), merge (MultiSelectTableDialog: two-column table checklist with selected-count badge, merging and done phases), unmerge (ConfirmDialog with a danger button) and captain-transfer (UserPickerDialog: current captain, search, captain list).",
+    "Shown from the table actions menu (Transfer table, Merge tables, Unmerge tables, Transfer captain)."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {
+    "kind": "transfer"
+  },
+  "canvas": "hsl(var(--background))"
+}

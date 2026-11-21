@@ -1,0 +1,42 @@
+{
+  "id": "pos-bill-merge-dialog",
+  "name": "POS Bill Merge Dialog",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dialogs.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Merge bill dialog (BillMergeDialog.tsx): 672px dialog capped at 85vh with a search field, a scrolling list of open bills (name, customer and table, amount) and a Load more button. The combined total is not part of this dialog; it appears on the merged bill panel after merging.",
+    "Shown from the order actions menu when another open bill should be merged into the current one."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

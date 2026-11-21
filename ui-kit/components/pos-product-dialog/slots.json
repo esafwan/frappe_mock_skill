@@ -1,0 +1,195 @@
+{
+  "component": "pos-product-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "item_image": {
+      "type": "image",
+      "sample": "../../data/images/mediterranean/hummus.jpg",
+      "maxLength": 68,
+      "where": "text",
+      "element": "text"
+    },
+    "item_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item_code": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "course_label": {
+      "type": "text",
+      "sample": "Cold Meze",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "special_label": {
+      "type": "text",
+      "sample": "Special Instructions",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "special_ph": {
+      "type": "text",
+      "sample": "Add any special instructions or notes for this item...",
+      "maxLength": 87,
+      "where": "text",
+      "element": "text"
+    },
+    "special_text": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty_label": {
+      "type": "text",
+      "sample": "Quantity",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "variants_label": {
+      "type": "text",
+      "sample": "Variants",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v1_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v1_price": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v2_name": {
+      "type": "text",
+      "sample": "Hummus with Pine Nuts",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "v2_price": {
+      "type": "currency",
+      "sample": "AED 28.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "addons_label": {
+      "type": "text",
+      "sample": "Add-ons",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a1_name": {
+      "type": "text",
+      "sample": "Extra Pita Bread",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "a1_price": {
+      "type": "currency",
+      "sample": "AED 3.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a2_name": {
+      "type": "text",
+      "sample": "Olive Oil Drizzle",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "a2_price": {
+      "type": "currency",
+      "sample": "AED 2.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a3_name": {
+      "type": "text",
+      "sample": "Spicy Harissa",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "a3_price": {
+      "type": "currency",
+      "sample": "AED 4.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "loading_addons": {
+      "type": "text",
+      "sample": "Loading add-ons...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "no_addons": {
+      "type": "text",
+      "sample": "No add ons",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "addons_error": {
+      "type": "text",
+      "sample": "Failed to fetch item details",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "total_label": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "submit_text": {
+      "type": "text",
+      "sample": "Add to Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

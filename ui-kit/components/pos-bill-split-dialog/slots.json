@@ -1,0 +1,328 @@
+{
+  "component": "pos-bill-split-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "split_title": {
+      "type": "text",
+      "sample": "Split bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "split_desc": {
+      "type": "text",
+      "sample": "Choose items to move to a new bill from INV-0042",
+      "maxLength": 77,
+      "where": "text",
+      "element": "text"
+    },
+    "si1_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si1_avail": {
+      "type": "text",
+      "sample": "1 available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si1_amount": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si2_name": {
+      "type": "text",
+      "sample": "Moutabal",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si2_avail": {
+      "type": "text",
+      "sample": "3 available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si2_amount": {
+      "type": "currency",
+      "sample": "AED 72.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si3_name": {
+      "type": "text",
+      "sample": "Tabbouleh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si3_avail": {
+      "type": "text",
+      "sample": "1 available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si3_amount": {
+      "type": "currency",
+      "sample": "AED 26.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si4_name": {
+      "type": "text",
+      "sample": "Fattoush",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si4_avail": {
+      "type": "text",
+      "sample": "2 available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "si4_amount": {
+      "type": "currency",
+      "sample": "AED 56.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "move_qty": {
+      "type": "text",
+      "sample": "Qty to move",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer_for_new_bill": {
+      "type": "text",
+      "sample": "Customer for new bill",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "same_as_original": {
+      "type": "text",
+      "sample": "Same customer as original bill",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "stays_on_bill": {
+      "type": "text",
+      "sample": "Stays on original bill",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "stays_total": {
+      "type": "currency",
+      "sample": "AED 176.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "moves_to_new_bill": {
+      "type": "text",
+      "sample": "Moves to new bill",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "moves_total": {
+      "type": "currency",
+      "sample": "AED 0.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cannot_move_all": {
+      "type": "text",
+      "sample": "At least one item must remain on the original bill",
+      "maxLength": 80,
+      "where": "text",
+      "element": "text"
+    },
+    "split_confirm": {
+      "type": "text",
+      "sample": "Split bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "search_ph": {
+      "type": "text",
+      "sample": "Search customer...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "change": {
+      "type": "text",
+      "sample": "Change",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_new": {
+      "type": "text",
+      "sample": "Add New Customer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "searching": {
+      "type": "text",
+      "sample": "Searching...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "no_customers": {
+      "type": "text",
+      "sample": "No customers found",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "failed_search": {
+      "type": "text",
+      "sample": "Failed to search customers",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "cust1_name": {
+      "type": "text",
+      "sample": "Ahmed Khalil",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cust1_phone": {
+      "type": "text",
+      "sample": "+971 50 555 0123",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "cust2_name": {
+      "type": "text",
+      "sample": "Fatima Noor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cust2_phone": {
+      "type": "text",
+      "sample": "+971 55 555 0187",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "cust3_name": {
+      "type": "text",
+      "sample": "Hassan Ali",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cust3_phone": {
+      "type": "text",
+      "sample": "+971 52 555 0142",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "query": {
+      "type": "text",
+      "sample": "Ah",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "create_title": {
+      "type": "text",
+      "sample": "Add New Customer",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "name_label": {
+      "type": "text",
+      "sample": "Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "phone_label": {
+      "type": "text",
+      "sample": "Phone",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "new_name": {
+      "type": "text",
+      "sample": "Ahmed Khalil",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "new_phone": {
+      "type": "text",
+      "sample": "+971505550123",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_button": {
+      "type": "text",
+      "sample": "Add Customer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "adding": {
+      "type": "text",
+      "sample": "Adding Customer...",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "invalid_phone": {
+      "type": "text",
+      "sample": "Invalid mobile number format",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "create_failed": {
+      "type": "text",
+      "sample": "Failed to create customer",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

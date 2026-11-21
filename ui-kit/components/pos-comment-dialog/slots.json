@@ -1,0 +1,48 @@
+{
+  "component": "pos-comment-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Order Comments",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "label": {
+      "type": "text",
+      "sample": "Add comments for this order",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "placeholder": {
+      "type": "text",
+      "sample": "Enter any special instructions or comments...",
+      "maxLength": 72,
+      "where": "text",
+      "element": "text"
+    },
+    "comment_text": {
+      "type": "text",
+      "sample": "Please bring the bill to the table.",
+      "maxLength": 56,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "save": {
+      "type": "text",
+      "sample": "Save Comment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

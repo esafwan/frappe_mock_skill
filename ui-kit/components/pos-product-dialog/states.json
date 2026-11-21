@@ -1,0 +1,274 @@
+{
+  "component": "pos-product-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "variant-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "selVariant": 1
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        },
+        "total": {
+          "type": "currency",
+          "amount": 28,
+          "currency": "AED",
+          "sample": "AED 28.00"
+        }
+      },
+      "screenshot": "states/variant-selected.png",
+      "preview": "states/variant-selected.html",
+      "description": "Second variant chosen: blue-500 border and blue-50 fill on the variant row; total follows the variant price."
+    },
+    "addons-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        },
+        "qty": {
+          "type": "number",
+          "sample": "2"
+        },
+        "total": {
+          "type": "currency",
+          "amount": 54,
+          "currency": "AED",
+          "sample": "AED 54.00"
+        },
+        "special_text": "Less lemon, please"
+      },
+      "screenshot": "states/addons-selected.png",
+      "preview": "states/addons-selected.html",
+      "description": "Two add-ons toggled on, quantity 2 and a special instruction; total = (22 + 3 + 2) x 2."
+    },
+    "edit-mode": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": [
+          0
+        ]
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        },
+        "qty": {
+          "type": "number",
+          "sample": "2"
+        },
+        "total": {
+          "type": "currency",
+          "amount": 50,
+          "currency": "AED",
+          "sample": "AED 50.00"
+        },
+        "special_text": "Less lemon, please",
+        "submit_text": "Update Order"
+      },
+      "screenshot": "states/edit-mode.png",
+      "preview": "states/edit-mode.html",
+      "description": "Editing a cart line: the submit button reads Update Order."
+    },
+    "no-image": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "img": false
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/no-image.png",
+      "preview": "states/no-image.html",
+      "description": "Item without a photo (or the image failed to load): gray-200 tile with the first two letters of the item name."
+    },
+    "addons-loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "loading"
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/addons-loading.png",
+      "preview": "states/addons-loading.html",
+      "description": "Add-ons still loading from the Item doc."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "loading"
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/addons-loading.png",
+      "preview": "states/addons-loading.html",
+      "description": "Add-ons still loading from the Item doc.",
+      "alias": "addons-loading"
+    },
+    "addons-error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "error"
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/addons-error.png",
+      "preview": "states/addons-error.html",
+      "description": "Add-ons fetch failed: red message in place of the add-on list."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "error"
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/addons-error.png",
+      "preview": "states/addons-error.html",
+      "description": "Add-ons fetch failed: red message in place of the add-on list.",
+      "alias": "addons-error"
+    },
+    "no-addons": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "none",
+        "variants": false
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/no-addons.png",
+      "preview": "states/no-addons.html",
+      "description": "Item without add-ons (and without variants): gray No add ons note."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "addons": "none",
+        "variants": false
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        }
+      },
+      "screenshot": "states/no-addons.png",
+      "preview": "states/no-addons.html",
+      "description": "Item without add-ons (and without variants): gray No add ons note.",
+      "alias": "no-addons"
+    },
+    "submit-disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "submitDisabled": true
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        },
+        "qty": {
+          "type": "number",
+          "sample": "0"
+        },
+        "total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/submit-disabled.png",
+      "preview": "states/submit-disabled.html",
+      "description": "Quantity 0: submit is disabled (50% opacity) and the total is zero."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "submitDisabled": true
+      },
+      "values": {
+        "item_image": {
+          "type": "image",
+          "sample": "../../../data/images/mediterranean/hummus.jpg"
+        },
+        "qty": {
+          "type": "number",
+          "sample": "0"
+        },
+        "total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/submit-disabled.png",
+      "preview": "states/submit-disabled.html",
+      "description": "Quantity 0: submit is disabled (50% opacity) and the total is zero.",
+      "alias": "submit-disabled"
+    }
+  }
+}

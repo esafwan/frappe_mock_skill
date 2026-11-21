@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>POS Table Select Dialog / loading-tables</title>
+<link rel="stylesheet" href="../../../tokens/css/ury-v16/ury-fonts.css">
+<link rel="stylesheet" href="../../../tokens/css/ury-v16/ury-ui-tokens.css">
+<link rel="stylesheet" href="../../../tokens/css/ury-v16/ury-ui-base.css">
+<link rel="stylesheet" href="../../../tokens/css/ury-v16/components/pos-dialogs.css">
+<style>html,body{margin:0}body{background:hsl(var(--background));min-height:900px}#ui-kit-stage{position:absolute;left:0;top:0;width:1440px;height:900px}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style></head>
+<body>
+<div id="ui-kit-stage">
+<div class="u-dialog-wrap pd" data-ui="pos-table-select-dialog" style="width:1440px;height:900px"><div class="u-dialog-scrim"></div><div class="u-dialog pd-sel" role="dialog" aria-modal="true" data-ui="dialog"><div class="pd-sel__head" data-ui="header"><h2 class="pd-sel__title">Select Table</h2><button type="button" class="u-btn u-btn--ghost u-btn--icon" aria-label="Close" data-ui="close"><svg class="lucide lucide-x" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+<div class="pd-sel__body"><div class="pd-rooms" data-ui="rooms"><button type="button" class="u-btn u-btn--tab pd-room" data-selected="true" data-ui="room-1">Main Hall</button><button type="button" class="u-btn u-btn--tab pd-room" data-selected="false" data-ui="room-2">Terrace</button><button type="button" class="u-btn u-btn--tab pd-room" data-selected="false" data-ui="room-3">Private Room</button></div><div class="pd-spinner" role="status"><div><div class="pd-spinner__ring" aria-hidden="true"></div><p class="pd-spinner__msg">Loading tables...</p></div></div></div></div></div>
+</div>
+</body></html>

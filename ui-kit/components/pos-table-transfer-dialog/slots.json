@@ -1,0 +1,384 @@
+{
+  "component": "pos-table-transfer-dialog",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "transfer_title": {
+      "type": "text",
+      "sample": "Transfer table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "transfer_desc": {
+      "type": "text",
+      "sample": "Move order from T3 to any vacant table in this branch",
+      "maxLength": 85,
+      "where": "text",
+      "element": "text"
+    },
+    "current_table": {
+      "type": "text",
+      "sample": "Current table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "source_table": {
+      "type": "text",
+      "sample": "T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "transfer_search_ph": {
+      "type": "text",
+      "sample": "Search by table or room",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "room1": {
+      "type": "text",
+      "sample": "Main Hall",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room2": {
+      "type": "text",
+      "sample": "Terrace",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt1_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt1_seats": {
+      "type": "text",
+      "sample": "4 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt2_name": {
+      "type": "text",
+      "sample": "T2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt2_seats": {
+      "type": "text",
+      "sample": "2 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt3_name": {
+      "type": "text",
+      "sample": "T7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt3_seats": {
+      "type": "text",
+      "sample": "6 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt4_name": {
+      "type": "text",
+      "sample": "T8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dt4_seats": {
+      "type": "text",
+      "sample": "4 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "transfer_confirm": {
+      "type": "text",
+      "sample": "Transfer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "no_dest": {
+      "type": "text",
+      "sample": "No vacant tables available in this branch",
+      "maxLength": 66,
+      "where": "text",
+      "element": "text"
+    },
+    "loading": {
+      "type": "text",
+      "sample": "Loading...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "transfer_failed": {
+      "type": "text",
+      "sample": "Failed to transfer table",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_title": {
+      "type": "text",
+      "sample": "Merge with T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_desc": {
+      "type": "text",
+      "sample": "Select one or more tables to merge with",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "mt1_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt1_seats": {
+      "type": "text",
+      "sample": "4 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt2_name": {
+      "type": "text",
+      "sample": "T2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt2_seats": {
+      "type": "text",
+      "sample": "2 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt3_name": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt3_seats": {
+      "type": "text",
+      "sample": "4 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt4_name": {
+      "type": "text",
+      "sample": "T5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt4_seats": {
+      "type": "text",
+      "sample": "6 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt5_name": {
+      "type": "text",
+      "sample": "T6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt5_seats": {
+      "type": "text",
+      "sample": "2 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt6_name": {
+      "type": "text",
+      "sample": "T8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "mt6_seats": {
+      "type": "text",
+      "sample": "4 Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_selected": {
+      "type": "text",
+      "sample": "Merge 2 tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_confirm": {
+      "type": "text",
+      "sample": "Merge",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merging": {
+      "type": "text",
+      "sample": "Merging tables...",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_done": {
+      "type": "text",
+      "sample": "Tables merged successfully",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_empty": {
+      "type": "text",
+      "sample": "No available tables to merge",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "unmerge_title": {
+      "type": "text",
+      "sample": "Unmerge table group?",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "unmerge_desc": {
+      "type": "text",
+      "sample": "This will separate T3, T4. They will no longer be linked.",
+      "maxLength": 92,
+      "where": "text",
+      "element": "text"
+    },
+    "unmerge_confirm": {
+      "type": "text",
+      "sample": "Unmerge",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "captain_title": {
+      "type": "text",
+      "sample": "Transfer captain",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "captain_desc": {
+      "type": "text",
+      "sample": "Choose a new captain for this order",
+      "maxLength": 56,
+      "where": "text",
+      "element": "text"
+    },
+    "current_captain": {
+      "type": "text",
+      "sample": "Current captain",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "captain_current": {
+      "type": "text",
+      "sample": "sara.captain@example.com",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "captain_search_ph": {
+      "type": "text",
+      "sample": "Search by name or email",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "cap1_name": {
+      "type": "text",
+      "sample": "Omar Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cap1_email": {
+      "type": "text",
+      "sample": "omar.nasser@example.com",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "cap2_name": {
+      "type": "text",
+      "sample": "Layla Haddad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cap2_email": {
+      "type": "text",
+      "sample": "layla.haddad@example.com",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "cap3_name": {
+      "type": "text",
+      "sample": "Yusuf Rahman",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cap3_email": {
+      "type": "text",
+      "sample": "yusuf.rahman@example.com",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "no_captains": {
+      "type": "text",
+      "sample": "No captains found",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

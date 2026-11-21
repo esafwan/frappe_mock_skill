@@ -1,0 +1,42 @@
+{
+  "id": "pos-bill-split-dialog",
+  "name": "POS Bill Split Dialog",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dialogs.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Split bill dialog (BillSplitDialog.tsx): checklist of the invoice lines with 12px check boxes, per-line quantity mover for lines with qty above one, the Customer for new bill box (same-as-original checkbox or a customer picker), a stays / moves totals strip and the Split bill button.",
+    "Shown from the order actions menu when a bill should be split into two."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

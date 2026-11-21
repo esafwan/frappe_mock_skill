@@ -1,0 +1,56 @@
+{
+  "component": "pos-comment-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "focus": true
+      },
+      "screenshot": "states/focus.png",
+      "preview": "states/focus.html",
+      "description": "Textarea focused: primary border with the 2px ring and 2px offset.",
+      "alias": "focus"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true
+      },
+      "screenshot": "states/filled.png",
+      "preview": "states/filled.html",
+      "description": "Existing comment loaded into the textarea."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: both buttons are always enabled"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the dialog has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the dialog saves synchronously"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the empty state is the default (placeholder shown)"
+    }
+  }
+}

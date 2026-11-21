@@ -1,0 +1,13 @@
+{
+  "component": "pos-product-dialog",
+  "note": "slot -> menu expression; applied by tools/render.mjs when --menu is given. Hand-written.",
+  "bind": {
+    "item_name": "menu.items[0].name",
+    "item_code": "menu.items[0].name",
+    "v1_name": "menu.items[0].name",
+    "v1_price": "menu.items[0].price",
+    "total": "menu.items[0].price",
+    "course_label": "menu.items[0].category",
+    "item_image": "menu.items[0].image"
+  }
+}

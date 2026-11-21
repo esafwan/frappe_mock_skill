@@ -1,0 +1,140 @@
+{
+  "component": "pos-table-select-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "table-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "selected": 1
+      },
+      "screenshot": "states/table-selected.png",
+      "preview": "states/table-selected.html",
+      "description": "Currently selected table: primary-600 border and primary-50 fill."
+    },
+    "room-2": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "activeRoom": 1
+      },
+      "screenshot": "states/room-2.png",
+      "preview": "states/room-2.html",
+      "description": "Second room tab selected."
+    },
+    "merged-label": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "merged": true
+      },
+      "screenshot": "states/merged-label.png",
+      "preview": "states/merged-label.html",
+      "description": "Occupied table that is part of a merged group shows the combined label in primary-700."
+    },
+    "reserved-warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "banner": true,
+        "selected": -1
+      },
+      "screenshot": "states/reserved-warning.png",
+      "preview": "states/reserved-warning.html",
+      "description": "Amber warning banner after tapping a table inside its reservation lock window."
+    },
+    "loading-rooms": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading-rooms"
+      },
+      "screenshot": "states/loading-rooms.png",
+      "preview": "states/loading-rooms.html",
+      "description": "Rooms are loading: spinner with message."
+    },
+    "loading-tables": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading-tables"
+      },
+      "screenshot": "states/loading-tables.png",
+      "preview": "states/loading-tables.html",
+      "description": "Tables of the room are loading."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading-tables"
+      },
+      "screenshot": "states/loading-tables.png",
+      "preview": "states/loading-tables.html",
+      "description": "Tables of the room are loading.",
+      "alias": "loading-tables"
+    },
+    "no-rooms": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "no-rooms"
+      },
+      "screenshot": "states/no-rooms.png",
+      "preview": "states/no-rooms.html",
+      "description": "Branch has no rooms."
+    },
+    "no-tables": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "no-tables"
+      },
+      "screenshot": "states/no-tables.png",
+      "preview": "states/no-tables.html",
+      "description": "Room has no tables."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "no-tables"
+      },
+      "screenshot": "states/no-tables.png",
+      "preview": "states/no-tables.html",
+      "description": "Room has no tables.",
+      "alias": "no-tables"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "error"
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Failed to load rooms/tables: red alert icon with message.",
+      "alias": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled state in the source"
+    }
+  }
+}

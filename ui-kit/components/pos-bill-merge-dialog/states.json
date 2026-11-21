@@ -1,0 +1,80 @@
+{
+  "component": "pos-bill-merge-dialog",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "bill-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": 1
+      },
+      "screenshot": "states/bill-selected.png",
+      "preview": "states/bill-selected.html",
+      "description": "A candidate bill chosen: primary border and primary-50/40 fill; Merge bills enabled."
+    },
+    "no-more": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "more": false
+      },
+      "screenshot": "states/no-more.png",
+      "preview": "states/no-more.html",
+      "description": "All candidates loaded: no Load more button."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Initial candidate fetch.",
+      "alias": "loading"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "empty"
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No other open bill to merge.",
+      "alias": "empty"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": 0,
+        "error": true
+      },
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Merge rejected: red message under the list.",
+      "alias": "error"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "the disabled state is the Merge bills button with no bill selected (default)"
+    }
+  }
+}
