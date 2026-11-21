@@ -1,0 +1,48 @@
+{
+  "component": "ury-desk-screen-home",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "charts-scrolled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "scroll": 330
+      },
+      "screenshot": "states/charts-scrolled.png",
+      "preview": "states/charts-scrolled.html",
+      "description": "The workspace scrolled down so the four charts (Daily Sales Trend, Order Type Split, Payment Mode Split, Top Selling Items) fill the viewport."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: workspace widgets have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: failed widgets render the chart error state, not mocked here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows the loaded widget"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the workspace always has its configured widgets"
+    }
+  }
+}

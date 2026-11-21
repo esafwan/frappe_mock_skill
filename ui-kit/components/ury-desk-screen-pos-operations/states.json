@@ -1,0 +1,38 @@
+{
+  "component": "ury-desk-screen-pos-operations",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: workspace widgets have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: failed widgets render the chart error state, not mocked here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows the loaded widget"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the workspace always has its configured widgets"
+    }
+  }
+}

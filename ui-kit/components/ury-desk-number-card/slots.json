@@ -1,0 +1,69 @@
+{
+  "component": "ury-desk-number-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "nc_sales": {
+      "type": "text",
+      "sample": "Sales Today",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_sales": {
+      "type": "currency",
+      "sample": "AED 18,450.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_up": {
+      "type": "text",
+      "sample": "12.5%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_label": {
+      "type": "text",
+      "sample": "vs yesterday",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_down": {
+      "type": "text",
+      "sample": "4.2%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nc_bills": {
+      "type": "text",
+      "sample": "Bills Today",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_bills": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nc_cancel": {
+      "type": "text",
+      "sample": "Cancelled Bills Today",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "v_cancel": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

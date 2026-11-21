@@ -1,0 +1,84 @@
+{
+  "component": "ury-desk-number-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "currency": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "t": "nc_sales",
+        "val": "v_sales"
+      },
+      "screenshot": "states/currency.png",
+      "preview": "states/currency.html",
+      "description": "Sum card (Sales Today): the value is a currency slot."
+    },
+    "count": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "t": "nc_bills",
+        "val": "v_bills"
+      },
+      "screenshot": "states/count.png",
+      "preview": "states/count.html",
+      "description": "Count card (Bills Today): a plain integer."
+    },
+    "percentage-up": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "t": "nc_sales",
+        "val": "v_sales",
+        "stat": "up"
+      },
+      "screenshot": "states/percentage-up.png",
+      "preview": "states/percentage-up.html",
+      "description": "Percentage stat enabled (show_percentage_stats): green arrow-up delta against the previous period."
+    },
+    "percentage-down": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "t": "nc_cancel",
+        "val": "v_cancel",
+        "stat": "down"
+      },
+      "screenshot": "states/percentage-down.png",
+      "preview": "states/percentage-down.html",
+      "description": "Percentage stat enabled: red arrow-down delta."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: workspace widgets have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: failed widgets render the chart error state, not mocked here"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows the loaded widget"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the workspace always has its configured widgets"
+    }
+  }
+}

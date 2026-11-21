@@ -1,0 +1,41 @@
+{
+  "component": "ury-desk-link-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "lk_title1": {
+      "type": "text",
+      "sample": "Kitchen and Billing",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "lk_kot": {
+      "type": "text",
+      "sample": "Kitchen Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "lk_subpos": {
+      "type": "text",
+      "sample": "Sub POS Closing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "lk_term": {
+      "type": "text",
+      "sample": "Payment Terminals",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "lk_tx": {
+      "type": "text",
+      "sample": "Terminal Transactions",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

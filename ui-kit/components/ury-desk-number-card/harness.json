@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-number-card",
+  "name": "URY desk number card",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 320,
+    "h": 83.84375
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-workspace.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY number card: .widget.number-widget-box with a 13px ink-gray-5 title and a 17px semibold value, padding 8 8 8 12; the card menu stays hidden until hover.",
+    "Use for single metrics on a workspace (the URY cards are Sum, Count and Average of POS Invoice, URY KOT and URY Wastage; none shows percentage stats by default)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 320,
+  "height": null,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

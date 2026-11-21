@@ -1,0 +1,42 @@
+{
+  "id": "ury-desk-screen-home",
+  "name": "URY desk screen: URY Home",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css",
+    "ury-v16/components/desk-workspace.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY Home workspace (ury/workspace/ury/ury.json) in the 1440x900 desk shell: Frequently used (6 shortcuts, col-3), Today (7 number cards, col-4) and Trends (4 charts, col-6).",
+    "Landing page of the URY app; the two custom blocks (URY POS, POS V1) are not drawn."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

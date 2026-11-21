@@ -1,0 +1,72 @@
+/* T25: URY v16 desk workspace widgets (frappe/public/scss/desk/desktop.scss + page.scss).
+   Number card, shortcut and link card are .widget boxes placed on the 12-col editor.js grid (.ce-block col-N). */
+.ury-ws { padding: 10px 20px 0; }
+.ury-ws .codex-editor__redactor { display: flex; flex-wrap: wrap; flex-direction: row; margin: 0 -4px; }
+.ury-ws .ce-block { width: 100%; box-sizing: border-box; }
+.ury-ws .ce-block.col-3 { width: 25%; }
+.ury-ws .ce-block.col-4 { width: 33.3333%; }
+.ury-ws .ce-block.col-6 { width: 50%; }
+.ury-ws .ce-block.col-12 { width: 100%; }
+.ury-ws .ce-block__content { max-width: 100%; height: 100%; padding: 7px; box-sizing: border-box; }
+.ury-ws .ce-block__content > div { height: 100%; }
+.ury-ws .ce-header { margin: 0; flex: 1; }
+.ury-ws .ce-header .h4 { font-size: var(--text-lg); color: var(--text-light); }
+.ury-ws .ce-header .h4 b { font-weight: 600; }
+.ury-ws .ce-spacer { height: 30px; }
+.ury-ws-clip { overflow: hidden; height: 100%; }
+
+.ury-ws .widget { display: flex; flex-direction: column; min-height: 1px; padding: 7px; box-sizing: border-box; border-radius: var(--radius-lg); height: 100%; background-color: var(--card-bg); text-align: start; }
+.ury-ws .widget .widget-head { display: flex; justify-content: space-between; align-items: center; }
+.ury-ws .widget .widget-label { min-width: 0; }
+.ury-ws .widget .widget-title { display: flex; align-items: center; font-size: var(--text-base); font-weight: 500; line-height: 1.3em; color: var(--text-color); cursor: default; }
+.ury-ws .widget .widget-control { opacity: 0; height: 0; position: relative; }
+.ury-ws .ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* number card: title 13px ink-gray-5, number 17/600, padding 8 8 8 12, control hidden */
+.ury-ws .widget.number-widget-box { border: 1px solid var(--border-color); padding: 8px 8px 8px 12px; gap: 6px; cursor: pointer; }
+.ury-ws .number-widget-box .widget-title { font-size: 13px; font-weight: 400; color: var(--ink-gray-5); }
+.ury-ws .number-widget-box .widget-body { text-align: start; }
+.ury-ws .number-widget-box .widget-content { display: flex; flex-direction: column; gap: 6px; }
+.ury-ws .number-widget-box .number { font-size: 17px; font-weight: 600; line-height: 1.35; color: var(--ink-gray-8); }
+.ury-ws .number-widget-box .percentage-stat-area { display: inline-flex; align-items: center; gap: 2px; font-size: 13px; font-weight: 500; }
+.ury-ws .number-widget-box .percentage-stat-area .icon { margin: 0; }
+.ury-ws .number-widget-box .green-stat { color: var(--ink-green-7); }
+.ury-ws .number-widget-box .red-stat { color: var(--ink-red-7); }
+.ury-ws .number-widget-box .grey-stat { color: var(--ink-gray-6); }
+.ury-ws .number-widget-box .stat-label { color: var(--ink-gray-5); font-weight: 400; margin-inline-start: 4px; }
+
+/* shortcut: 60px box, p10 12, 1px border */
+.ury-ws .widget.shortcut-widget-box { height: 60px; padding: 10px 12px; border: 1px solid var(--border-color); cursor: pointer; }
+.ury-ws .shortcut-widget-box .widget-title { cursor: pointer; font-size: var(--text-lg); }
+
+/* link card */
+.ury-ws .widget.links-widget-box { padding: 16px 8px 0; background-color: transparent; }
+.ury-ws .links-widget-box .widget-head .widget-label .widget-title { font-size: 13px; font-weight: 500; color: var(--ink-gray-9); }
+.ury-ws .links-widget-box .widget-body { display: flex; flex-direction: column; margin-top: 4px; }
+.ury-ws .links-widget-box .link-item { display: flex; padding-block: 3px; font-size: 13px; font-weight: 400; color: var(--ink-gray-6); text-decoration: none; cursor: pointer; }
+.ury-ws .links-widget-box .link-item.is-hover { color: var(--ink-gray-9); text-decoration: underline; text-underline-offset: 2px; }
+.ury-ws .shortcut-widget-box.is-hover { border-color: var(--invert-neutral); }
+.ury-ws .shortcut-widget-box.is-hover .widget-title { color: var(--invert-neutral); }
+
+/* dashboard chart */
+.ury-ws .widget.dashboard-widget-box { min-height: 240px; border: 1px solid var(--border-color); }
+.ury-ws .dashboard-widget-box .widget-head { padding: 4px 8px; }
+.ury-ws .dashboard-widget-box .widget-subtitle { font-size: 12px; color: var(--text-muted); margin-top: var(--margin-xs, 5px); }
+.ury-ws .dashboard-widget-box .widget-body { text-align: start; padding: 0 8px 8px; }
+.ury-ws svg.frappe-chart { display: block; overflow: visible; }
+.ury-ws .frappe-chart .chart-label, .ury-ws .frappe-chart .legend-label { fill: var(--ink-gray-6); font-size: 10px; font-weight: 400; }
+.ury-ws .frappe-chart .y-axis-label { text-anchor: end; }
+.ury-ws .frappe-chart .x-axis-label { text-anchor: middle; }
+.ury-ws .frappe-chart .grid-line { stroke: var(--outline-gray-1); stroke-width: 1; stroke-dasharray: 2 2; }
+.ury-ws .frappe-chart .base-line { stroke: var(--outline-gray-2); stroke-width: 1; }
+.ury-ws .frappe-chart .dataset-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.ury-ws .frappe-chart .data-point { stroke: var(--card-bg); stroke-width: 1; }
+.ury-ws .frappe-chart .donut-path { stroke: var(--card-bg); stroke-width: 1; }
+.ury-ws .dashboard-widget-box .widget-footer { height: 0; }
+.ury-ws .frappe-chart .ch-1 { --ch: var(--blue-500); } .ury-ws .frappe-chart .ch-2 { --ch: var(--green-500); }
+.ury-ws .frappe-chart .ch-3 { --ch: var(--orange-500); } .ury-ws .frappe-chart .ch-4 { --ch: var(--purple-500); }
+.ury-ws .frappe-chart .ch-5 { --ch: var(--cyan-500); }
+.ury-ws .frappe-chart .dataset-line { stroke: var(--blue-500); }
+.ury-ws .frappe-chart .data-point, .ury-ws .frappe-chart .bar, .ury-ws .frappe-chart .donut-path, .ury-ws .frappe-chart .legend-dot { fill: var(--ch, var(--blue-500)); }
+.ury-ws .frappe-chart .area-fill { fill: var(--blue-500); opacity: .12; stroke: none; }
+.ury-ws .frappe-chart .bar { rx: 2; }
