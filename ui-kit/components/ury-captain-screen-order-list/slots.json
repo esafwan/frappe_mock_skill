@@ -1,0 +1,237 @@
+{
+  "component": "ury-captain-screen-order-list",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Table T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "subtitle": {
+      "type": "text",
+      "sample": "Updating order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tab_menu": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tab_order": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "count": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pax_label": {
+      "type": "text",
+      "sample": "Pax",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pax_value": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_ordered": {
+      "type": "text",
+      "sample": "Already Ordered",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_new": {
+      "type": "text",
+      "sample": "New / Changed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_reduction": {
+      "type": "text",
+      "sample": "Reduction Pending",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "reduce": {
+      "type": "text",
+      "sample": "Reduce & notify kitchen",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_text": {
+      "type": "text",
+      "sample": "No items yet.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "browse": {
+      "type": "text",
+      "sample": "Browse menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_qty": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_name": {
+      "type": "text",
+      "sample": "Fattoush",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_comment": {
+      "type": "text",
+      "sample": "Dressing on the side",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_price": {
+      "type": "currency",
+      "sample": "AED 56.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_price": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_qty": {
+      "type": "text",
+      "sample": "+2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_name": {
+      "type": "text",
+      "sample": "Falafel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_comment": {
+      "type": "text",
+      "sample": "No onions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_price": {
+      "type": "currency",
+      "sample": "AED 48.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l4_qty": {
+      "type": "text",
+      "sample": "+1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l4_name": {
+      "type": "text",
+      "sample": "Kibbeh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l4_price": {
+      "type": "currency",
+      "sample": "AED 32.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l5_qty": {
+      "type": "text",
+      "sample": "−1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l5_name": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l5_price": {
+      "type": "currency",
+      "sample": "AED 22.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total_label": {
+      "type": "text",
+      "sample": "Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 78.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "button": {
+      "type": "text",
+      "sample": "Update Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

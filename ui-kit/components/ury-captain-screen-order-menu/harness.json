@@ -1,0 +1,43 @@
+{
+  "id": "ury-captain-screen-order-menu",
+  "name": "URY Captain screen: Order, Menu tab",
+  "group": "ury-captain",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 390,
+    "h": 844
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/captain.css",
+    "ury-v16/components/captain-screens.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Captain order screen on a phone with the Menu pane active: header (back, \"Table T4\" over \"Updating order\", Menu | Order pill toggle with blue count badge, kebab), the touch menu browser and the sticky send bar.",
+    "Opened from a table card to add items. The Order toggle switches to the order-list screen; below the lg breakpoint only one pane shows. Update Order is hard-coded English in the source."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": 844,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

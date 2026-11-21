@@ -1,0 +1,43 @@
+{
+  "id": "ury-captain-screen-order-lg",
+  "name": "URY Captain screen: Order, tablet",
+  "group": "ury-captain",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1280,
+    "h": 800
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/captain.css",
+    "ury-v16/components/captain-screens.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Captain order screen at the lg breakpoint (tablet): Menu and Order panes side by side (gap 16, p12, white panels with r8 border) and the total + Update Order bar below (mx12 mb12, r8). The pill toggle is hidden.",
+    "Captain on a tablet held landscape (1280x800). View-only shows only the order panel and no send bar."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1280,
+  "height": 800,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

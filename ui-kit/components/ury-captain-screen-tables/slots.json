@@ -1,0 +1,412 @@
+{
+  "component": "ury-captain-screen-tables",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "refresh": {
+      "type": "text",
+      "sample": "Refresh",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_1": {
+      "type": "text",
+      "sample": "Main Hall",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_2": {
+      "type": "text",
+      "sample": "Terrace",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_3": {
+      "type": "text",
+      "sample": "Garden",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_text": {
+      "type": "text",
+      "sample": "No tables found in this room.",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    },
+    "error_text": {
+      "type": "text",
+      "sample": "Unable to load tables",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_status": {
+      "type": "text",
+      "sample": "Free",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_name": {
+      "type": "text",
+      "sample": "T2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_status": {
+      "type": "text",
+      "sample": "Mine",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_elapsed": {
+      "type": "text",
+      "sample": "12m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_total": {
+      "type": "currency",
+      "sample": "AED 54.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_name": {
+      "type": "text",
+      "sample": "T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_status": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_elapsed": {
+      "type": "text",
+      "sample": "45m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_total": {
+      "type": "currency",
+      "sample": "AED 86.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_owner": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_merge": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_name": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_status": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_elapsed": {
+      "type": "text",
+      "sample": "45m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_total": {
+      "type": "currency",
+      "sample": "AED 86.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_owner": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_merge": {
+      "type": "text",
+      "sample": "T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_name": {
+      "type": "text",
+      "sample": "T5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_status": {
+      "type": "text",
+      "sample": "Billed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_elapsed": {
+      "type": "text",
+      "sample": "1h 20m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_total": {
+      "type": "currency",
+      "sample": "AED 210.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_owner": {
+      "type": "text",
+      "sample": "Omar S.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_name": {
+      "type": "text",
+      "sample": "T6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_status": {
+      "type": "text",
+      "sample": "Free",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_name": {
+      "type": "text",
+      "sample": "T7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_status": {
+      "type": "text",
+      "sample": "Layla M.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_elapsed": {
+      "type": "text",
+      "sample": "1h 5m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_total": {
+      "type": "currency",
+      "sample": "AED 132.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_owner": {
+      "type": "text",
+      "sample": "Layla M.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_name": {
+      "type": "text",
+      "sample": "T8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_status": {
+      "type": "text",
+      "sample": "Yusuf A.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_elapsed": {
+      "type": "text",
+      "sample": "1h 25m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_total": {
+      "type": "currency",
+      "sample": "AED 96.75",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_owner": {
+      "type": "text",
+      "sample": "Yusuf A.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_name": {
+      "type": "text",
+      "sample": "T9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_status": {
+      "type": "text",
+      "sample": "Free",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_seats": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_name": {
+      "type": "text",
+      "sample": "T10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_status": {
+      "type": "text",
+      "sample": "Mine",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_elapsed": {
+      "type": "text",
+      "sample": "8m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_total": {
+      "type": "currency",
+      "sample": "AED 38.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "component": "ury-captain-screen-tables",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "empty"
+      },
+      "values": {},
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "Selected room has no tables: Square 32 icon and \"No tables found in this room.\" in gray-500."
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "error"
+      },
+      "values": {},
+      "screenshot": "states/error.png",
+      "preview": "states/error.html",
+      "description": "Tables request failed: AlertTriangle 32 and the error text in red-500."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this screen has no distinct disabled variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this screen has no loading variant"
+    }
+  }
+}

@@ -63,3 +63,8 @@
 .ucs-empty > svg { width: 40px; height: 40px; margin-bottom: 12px; color: hsl(var(--gray-300)); }
 .ucs-empty p { margin: 0; font-size: 14px; line-height: 20px; color: hsl(var(--gray-500)); }
 .ucs-empty .u-btn { margin-top: 12px; }
+/* the source surfaces are literal bg-white, so text on them stays dark in dark mode */
+.ucs-pax-b { background: hsl(var(--white)); color: hsl(var(--gray-900)); }
+.ucs-pax-n { color: hsl(var(--gray-900)); }
+.ucs-lines .ucap-ol { color: hsl(var(--gray-900)); }
+.ucs-lg-panel, .ucs-lg-bar { color: hsl(var(--gray-900)); }
