@@ -69,3 +69,12 @@
 .sota-input:disabled { opacity: .5; cursor: not-allowed; }
 /* spinner: h-4 w-4 rounded-full border-2 border-primary-foreground border-t-transparent (animate-spin frozen for determinism) */
 .sota-spin { width: 16px; height: 16px; border-radius: 9999px; border: 2px solid hsl(var(--primary-foreground)); border-top-color: transparent; }
+
+/* ---------- fixes ---------- */
+.sot-detail__backbtn { display: inline-flex; align-items: center; gap: 4px; }
+.sot-detail__step { display: flex; align-items: center; justify-content: center; }
+.dark .sot-detail__add, .dark .sot-idle-btn, .dark .sota-btn { background: hsl(221 83% 48%); color: #fff; }
+.dark .sota-spin { border-color: #fff; border-top-color: transparent; }
+.sot-pane .so-tabs { padding-inline: 0; }
+.sot-pane .so-tabs { padding-inline: 0; }
+.sot-pane .so-tabs { padding-inline: 0; }

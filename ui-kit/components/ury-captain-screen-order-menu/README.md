@@ -4,7 +4,7 @@ Captain order screen on a phone with the Menu pane active: header (back, "Table 
 
 **When to use:** Opened from a table card to add items. The Order toggle switches to the order-list screen; below the lg breakpoint only one pane shows. Update Order is hard-coded English in the source.
 
-**Slots people usually change:** `image_2` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_3` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_4` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_1` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `price_1` (currency, e.g. "AED 22.00"), `price_2` (currency, e.g. "AED 24.00"). All 35 slots are in `slots.json`.
+**Slots people usually change:** `image_4` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_2` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_3` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_1` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `price_1` (currency, e.g. "AED 22.00"), `price_2` (currency, e.g. "AED 24.00"). All 35 slots are in `slots.json`.
 
 **States:** default (none). Details and class/attribute changes in `states.json`.
 

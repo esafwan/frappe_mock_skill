@@ -580,6 +580,18 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .so-idle__btn { width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: 500; }
 .so-idle .u-dialog-footer { flex-direction: column-reverse; }
 
+/* ---------- fixes: tab fade, per-line cart amounts, back chevron, dark-mode solid buttons ---------- */
+/* the scrolling chip row fades out at its end edge so a clipped chip reads as scrollable, not cut off */
+.so-tabs { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+[dir=rtl] .so-tabs { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.so-cart__amt { min-width: 64px; text-align: end; font-variant-numeric: tabular-nums; font-weight: 500; }
+.so-flip { display: inline-flex; }
+[dir=rtl] .so-flip { transform: scaleX(-1); }
+.dark .so-cart__btn--place, .dark .so-cart__btn--pay, .dark .so-idle__btn, .dark .so-chip--on { background: hsl(221 83% 48%); color: #fff; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }
+
 /* URY v16 self-order MobileQR screens. Class lists mirror self-order/src/layouts/MobileQRLayout.tsx and layouts/shared/{ProductDetail,CartPage,CheckoutScreen,OrderStatusScreen}.tsx
    plus the App.tsx "Starting up…" state (ury-erp/version-16 @100c43fe2e). Loads after self-order.css (shared .so base). Logical properties only. */
 .som { display: flex; flex-direction: column; }
@@ -673,3 +685,12 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .som-srow b { font-weight: 500; }
 .som-acts { margin-top: 32px; display: flex; width: 100%; max-width: 320px; flex-direction: column; gap: 8px; }
 .som-acts .som-btn--out { padding: 12px 0; }
+
+/* ---------- fixes ---------- */
+/* chip row aligns to the 16px page gutter used by the order card, search and grid */
+.som .so-tabs { padding-inline: 16px; }
+/* hero image fixed height so the full detail (incl. Add to cart) fits the 844px viewport */
+.som-detail__img { height: 200px; }
+.som-back__l { display: inline-flex; align-items: center; gap: 4px; }
+.som-qty__b { display: flex; align-items: center; justify-content: center; }
+.dark .som-btn, .dark .som-add { background: hsl(221 83% 48%); color: #fff; }

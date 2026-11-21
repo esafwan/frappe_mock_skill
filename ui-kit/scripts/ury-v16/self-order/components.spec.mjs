@@ -2,6 +2,7 @@
 // Arabic: no self-order locale exists in the source (self-order has no i18n); the fixed UI labels are translated by the kit and item names/categories are
 // Arabic menu vocabulary. RTL is a kit extension (the source has no dir handling).
 import { money } from '../lib.mjs';
+import { photo } from './cafe-images.mjs';
 import { P, so_css, SAMPLE_IMG, categoryTabs, searchBar, productCard, optionRow, cartPanel, idleDialog } from './components.mjs';
 const BASE = { group: 'ury-self-order', static: true, width: 390, dsf: 2, canvas: 'hsl(var(--background))', css: so_css, darkTheme: '.dark', modes: ['light', 'dark', 'rtl'], naDefault: 'touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition' };
 const aed = (n, ar) => (ar ? { ...money(n), sample: `${Number(n).toFixed(2)} د.إ` } : money(n));
@@ -19,7 +20,7 @@ export const specs = [
     render: (v, p) => `<div class="so so-search-wrap" data-ui="${P}search">${searchBar(v, p)}</div>`, props: {},
     variants: { filled: { props: { filled: true }, describe: 'A query is typed: the circular clear button (X, 16px) appears at the end of the field.' } },
     describe: ['Search field: rounded-md border-input bg-background px-3 py-2, 20px magnifier, text-sm input, and an inline clear button once text is entered.', 'Use above the menu grid. Placeholder is "Search menu...". ' + RTL_NOTE] },
-  { ...BASE, id: P + 'product-card', name: 'Self-order product card', slots: { img: { type: 'image', sample: SAMPLE_IMG }, name: 'Espresso', rate: money(12), in_cart: 'In cart: 2', unavail: 'Sold out' },
+  { ...BASE, id: P + 'product-card', name: 'Self-order product card', slots: { img: photo('espresso'), name: 'Espresso', rate: money(12), in_cart: 'In cart: 2', unavail: 'Sold out' },
     rtlValues: { name: 'إسبريسو', rate: aed(12, 1), in_cart: 'في السلة: 2', unavail: 'نفد المخزون' }, na,
     render: (v, p) => `<div class="so so-pc-wrap" data-ui="${P}product-card">${productCard(v, p)}</div>`, props: { size: 'mobile', qty: 2 },
     variants: {
@@ -39,10 +40,10 @@ export const specs = [
     describe: ['Variant or add-on option row from the product detail: flex justify-between rounded-lg border px-4 py-3; selected = border-primary bg-primary/10; rate in muted text, an em dash when the rate is null.', 'Use in the product detail screen under a "Variants" / "Add-ons" heading. ' + RTL_NOTE] },
   { ...BASE, id: P + 'cart-panel', name: 'Self-order cart panel', width: 410, height: 640, slots: {
       order_title: 'Your order so far', cart_title: 'Cart', total_label: 'Total', o1_name: 'Espresso', o1_qty: '1', o1_amount: money(12), o2_name: 'Cappuccino', o2_qty: '2', o2_amount: money(36), order_total: money(48),
-      c1_name: 'Latte', c1_qty: '1', c2_name: 'Croissant', c2_qty: '2', empty_text: 'Tap a menu item to add it to your cart.', count_label: '3 items', cart_total: money(52),
+      c1_name: 'Latte', c1_qty: '1', c1_amount: money(20), c2_name: 'Croissant', c2_qty: '2', c2_amount: money(28), empty_text: 'Tap a menu item to add it to your cart.', count_label: '3 items', cart_total: money(48),
       place_order: 'Place Order', placing: 'Placing order…', pay_online: 'Pay Online', paying: 'Starting payment…', request_bill: 'Request Bill', bill_requested: 'Bill requested — staff notified' },
-    rtlValues: { order_title: 'طلبك حتى الآن', cart_title: 'السلة', total_label: 'المجموع', o1_name: 'إسبريسو', o1_amount: aed(12, 1), o2_name: 'كابتشينو', o2_amount: aed(36, 1), order_total: aed(48, 1), c1_name: 'لاتيه', c2_name: 'كرواسون',
-      empty_text: 'اضغط على عنصر من القائمة لإضافته إلى السلة.', count_label: '3 عناصر', cart_total: aed(52, 1), place_order: 'تأكيد الطلب', placing: 'جارٍ إرسال الطلب…', pay_online: 'الدفع عبر الإنترنت', paying: 'جارٍ بدء الدفع…', request_bill: 'طلب الفاتورة', bill_requested: 'تم طلب الفاتورة — تم إشعار الموظفين' }, na,
+    rtlValues: { order_title: 'طلبك حتى الآن', cart_title: 'السلة', total_label: 'المجموع', o1_name: 'إسبريسو', o1_amount: aed(12, 1), o2_name: 'كابتشينو', o2_amount: aed(36, 1), order_total: aed(48, 1), c1_name: 'لاتيه', c1_amount: aed(20, 1), c2_name: 'كرواسون', c2_amount: aed(28, 1),
+      empty_text: 'اضغط على عنصر من القائمة لإضافته إلى السلة.', count_label: '3 عناصر', cart_total: aed(48, 1), place_order: 'تأكيد الطلب', placing: 'جارٍ إرسال الطلب…', pay_online: 'الدفع عبر الإنترنت', paying: 'جارٍ بدء الدفع…', request_bill: 'طلب الفاتورة', bill_requested: 'تم طلب الفاتورة — تم إشعار الموظفين' }, na,
     render: (v, p) => cartPanel(v, p), props: { order: true, items: 2 },
     variants: {
       'empty-cart': { props: { order: false, items: 0 }, values: { count_label: '0 items', cart_total: money(0) }, describe: 'No order yet and an empty cart: the hint text shows and Place Order is disabled (opacity-50).' },

@@ -91,3 +91,12 @@
 .som-srow b { font-weight: 500; }
 .som-acts { margin-top: 32px; display: flex; width: 100%; max-width: 320px; flex-direction: column; gap: 8px; }
 .som-acts .som-btn--out { padding: 12px 0; }
+
+/* ---------- fixes ---------- */
+/* chip row aligns to the 16px page gutter used by the order card, search and grid */
+.som .so-tabs { padding-inline: 16px; }
+/* hero image fixed height so the full detail (incl. Add to cart) fits the 844px viewport */
+.som-detail__img { height: 200px; }
+.som-back__l { display: inline-flex; align-items: center; gap: 4px; }
+.som-qty__b { display: flex; align-items: center; justify-content: center; }
+.dark .som-btn, .dark .som-add { background: hsl(221 83% 48%); color: #fff; }

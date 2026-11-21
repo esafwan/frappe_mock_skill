@@ -86,6 +86,13 @@
       "where": "text",
       "element": "text"
     },
+    "c1_amount": {
+      "type": "currency",
+      "sample": "AED 20.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
     "c2_name": {
       "type": "text",
       "sample": "Croissant",
@@ -96,6 +103,13 @@
     "c2_qty": {
       "type": "text",
       "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2_amount": {
+      "type": "currency",
+      "sample": "AED 28.00",
       "maxLength": 24,
       "where": "text",
       "element": "text"
@@ -116,7 +130,7 @@
     },
     "cart_total": {
       "type": "currency",
-      "sample": "AED 52.00",
+      "sample": "AED 48.00",
       "maxLength": 24,
       "where": "text",
       "element": "text"

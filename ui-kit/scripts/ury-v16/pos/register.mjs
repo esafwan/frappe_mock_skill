@@ -26,6 +26,11 @@ export const ITEMS = [
   ['stuffed-vine-leaves', 'Stuffed Vine Leaves', 'ورق عنب', 30, 'Cold Meze', 'المقبلات الباردة'],
   ['falafel', 'Falafel', 'فلافل', 24, 'Hot Meze', 'المقبلات الساخنة'],
   ['kibbeh', 'Kibbeh', 'كبة', 32, 'Hot Meze', 'المقبلات الساخنة'],
+  ['sambousek', 'Sambousek', 'سمبوسك', 28, 'Hot Meze', 'المقبلات الساخنة'],
+  ['fried-halloumi', 'Fried Halloumi', 'حلوم مقلي', 32, 'Hot Meze', 'المقبلات الساخنة'],
+  ['batata-harra', 'Batata Harra', 'بطاطا حرة', 26, 'Hot Meze', 'المقبلات الساخنة'],
+  ['shish-tawook', 'Shish Tawook', 'شيش طاووق', 52, 'Grills & Kebabs', 'المشاوي والكباب'],
+  ['lamb-kofta', 'Lamb Kofta', 'كفتة لحم ضأن', 58, 'Grills & Kebabs', 'المشاوي والكباب'],
 ];
 export const CATS = [
   ['Cold Meze', 'المقبلات الباردة', 8, 'UtensilsCrossed'], ['Hot Meze', 'المقبلات الساخنة', 5, 'UtensilsCrossed'], ['Grills & Kebabs', 'المشاوي والكباب', 5, 'Utensils'],
@@ -109,7 +114,7 @@ export function orderPanel({ v = P, lines = 'one', type = 'take_away', update = 
 export const panelStage = (inner) => `<div class="prg" style="display:inline-block;background:hsl(var(--gray-100))">${inner}</div>`;
 
 function registerInner({ v, id, lines = 'one' }) {
-  const main = `<div class="prg-main"><div class="prg-row">${sidebar({ v, id: `${id}.sidebar` })}<div class="prg-center">${filterBar({ v, id: `${id}.filters` })}${grid({ v, qtyOn: lines === 'empty' ? {} : { 1: 'qty_1' }, id: `${id}.grid` })}</div></div>${orderPanel({ v, lines, id: `${id}.panel` })}</div>`;
+  const main = `<div class="prg-main"><div class="prg-row">${sidebar({ v, id: `${id}.sidebar` })}<div class="prg-center">${filterBar({ v, id: `${id}.filters` })}${grid({ v, qtyOn: lines === 'empty' ? {} : { 1: 'qty_1' }, id: `${id}.grid` })}</div></div>${orderPanel({ v, lines, type: 'dine_in', id: `${id}.panel` })}</div>`;
   return header({ v, variant: 'register', id: `${id}.header` }) + main + footer('pos', { v, id: `${id}.footer` });
 }
 export const registerScreen = ({ v = P, id = 'pos-screen-register', lines = 'one' } = {}) => screen(1440, 900, registerInner({ v, id, lines }), id, 'prg prg-screen');

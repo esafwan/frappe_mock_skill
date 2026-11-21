@@ -4,7 +4,7 @@ Full-screen product detail (product_detail_enabled): the layout header, then Pro
 
 **When to use:** Use when a card is tapped and product detail is on. Image height follows the source (natural aspect, w-full). RTL is a kit extension (the source has no dir handling): the kit mirrors with logical properties and translates the fixed UI labels (self-order has no locale file).
 
-**Slots people usually change:** `img` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `cart_total` (currency, e.g. "AED 57.00"), `d_rate` (currency, e.g. "AED 16.00"), `v1_rate` (currency, e.g. "AED 16.00"), `v2_rate` (currency, e.g. "AED 20.00"), `r0` (currency, e.g. "AED 12.00"). All 65 slots are in `slots.json`.
+**Slots people usually change:** `p10_img` (image, e.g. "../../data/images/cafe/iced-am"), `p14_img` (image, e.g. "../../data/images/cafe/hot-cho"), `img` (image, e.g. "../../data/images/cafe/cappucc"), `p4_img` (image, e.g. "../../data/images/cafe/cappucc"), `p5_img` (image, e.g. "../../data/images/cafe/flat-wh"), `p9_img` (image, e.g. "../../data/images/cafe/iced-la"). All 84 slots are in `slots.json`.
 
 **States:** default (none), addon-selected (props), no-options (props). Details and class/attribute changes in `states.json`.
 

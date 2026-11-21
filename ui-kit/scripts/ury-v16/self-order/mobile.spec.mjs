@@ -2,13 +2,14 @@
 // Sources: self-order/src/layouts/MobileQRLayout.tsx, layouts/shared/{ProductDetail,CartPage,CheckoutScreen,OrderStatusScreen}.tsx, App.tsx.
 // Arabic: self-order has no i18n in the source; the fixed UI labels are translated by the kit (RTL is a kit extension) and item names are Arabic menu vocabulary.
 import { ic, money, screen } from '../lib.mjs';
+import { photo } from './cafe-images.mjs';
 import { P, so_css, SAMPLE_IMG, categoryTabs, searchBar, productCard, optionRow } from './components.mjs';
 const CSS = [...so_css, 'ury-v16/components/self-order-mobile.css'];
 const BASE = { group: 'ury-self-order', static: true, width: 390, height: 844, dsf: 3, canvas: 'hsl(var(--background))', css: CSS, darkTheme: '.dark', modes: ['light', 'dark', 'rtl'], naDefault: 'touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition' };
 const aed = (n) => ({ ...money(n), sample: `${Number(n).toFixed(2)} د.إ` });
 const RTL = 'RTL is a kit extension (the source has no dir handling): the kit mirrors with logical properties and translates the fixed UI labels.';
 const na = { hover: 'not applicable: touch UI', focus: 'not applicable: touch UI' };
-const img = { type: 'image', sample: SAMPLE_IMG };
+const img = photo('cappuccino');
 const wrap = (id, inner, cls = '') => screen(390, 844, inner, id, 'so som ' + cls);
 const U = (s) => P + 'screen-' + s;
 
@@ -19,16 +20,16 @@ const catsAr = { all: 'الكل', cat_1: 'إسبريسو', cat_2: 'قهوة با
 const menuSlots = { ...cats, table: 'Table 5', pickup_title: 'Order for Pickup', start_over: 'Start Over', order_title: 'Your order so far', pickup_code_label: 'Pickup code: A-27',
   o1_name: 'Espresso', o1_qty: '1', o1_amount: money(12), o2_name: 'Cappuccino', o2_qty: '2', o2_amount: money(36), total_label: 'Total', order_total: money(48),
   placeholder: 'Search menu...', query: 'Cappuccino',
-  p1_img: img, p1_name: 'Espresso', p1_rate: money(12), p1_in_cart: 'In cart: 1', p1_unavail: 'Sold out',
-  p2_img: img, p2_name: 'Cappuccino', p2_rate: money(18), p2_in_cart: 'In cart: 2', p2_unavail: 'Sold out',
-  p3_img: img, p3_name: 'Latte', p3_rate: money(20), p3_in_cart: 'In cart: 1', p3_unavail: 'Sold out',
-  p4_img: img, p4_name: 'Cold Brew', p4_rate: money(22), p4_in_cart: 'In cart: 1', p4_unavail: 'Not available today',
-  view_cart: 'View Cart (3 items) •', cart_total: money(52), error: 'This link is missing an ordering code. Please rescan the QR code on your table.', starting: 'Starting up…', loading: 'Loading menu…' };
+  p1_img: photo('espresso'), p1_name: 'Espresso', p1_rate: money(12), p1_in_cart: 'In cart: 1', p1_unavail: 'Sold out',
+  p2_img: photo('cappuccino'), p2_name: 'Cappuccino', p2_rate: money(18), p2_in_cart: 'In cart: 2', p2_unavail: 'Sold out',
+  p3_img: photo('latte'), p3_name: 'Latte', p3_rate: money(20), p3_in_cart: 'In cart: 1', p3_unavail: 'Sold out',
+  p4_img: photo('cold-brew'), p4_name: 'Cold Brew', p4_rate: money(22), p4_in_cart: 'In cart: 1', p4_unavail: 'Not available today',
+  view_cart: 'View Cart (3 items) •', cart_total: money(48), error: 'This link is missing an ordering code. Please rescan the QR code on your table.', starting: 'Starting up…', loading: 'Loading menu…' };
 const menuAr = { ...catsAr, table: 'طاولة 5', pickup_title: 'طلب للاستلام', start_over: 'ابدأ من جديد', order_title: 'طلبك حتى الآن', pickup_code_label: 'رمز الاستلام: A-27',
   o1_name: 'إسبريسو', o1_amount: aed(12), o2_name: 'كابتشينو', o2_amount: aed(36), total_label: 'المجموع', order_total: aed(48), placeholder: 'ابحث في القائمة...', query: 'كابتشينو',
   p1_name: 'إسبريسو', p1_rate: aed(12), p1_in_cart: 'في السلة: 1', p1_unavail: 'نفد المخزون', p2_name: 'كابتشينو', p2_rate: aed(18), p2_in_cart: 'في السلة: 2', p2_unavail: 'نفد المخزون',
   p3_name: 'لاتيه', p3_rate: aed(20), p3_in_cart: 'في السلة: 1', p3_unavail: 'نفد المخزون', p4_name: 'قهوة باردة', p4_rate: aed(22), p4_in_cart: 'في السلة: 1', p4_unavail: 'غير متوفر اليوم',
-  view_cart: 'عرض السلة (3 عناصر) •', cart_total: aed(52), error: 'هذا الرابط يفتقد رمز الطلب. يرجى إعادة مسح رمز QR على طاولتك.', starting: 'جارٍ التشغيل…', loading: 'جارٍ تحميل القائمة…' };
+  view_cart: 'عرض السلة (3 عناصر) •', cart_total: aed(48), error: 'هذا الرابط يفتقد رمز الطلب. يرجى إعادة مسح رمز QR على طاولتك.', starting: 'جارٍ التشغيل…', loading: 'جارٍ تحميل القائمة…' };
 const menu = (v, p = {}) => {
   if (p.starting) return wrap(U('menu'), `<div class="som-center som-muted">${v.starting}</div>`);
   if (p.error) return wrap(U('menu'), `<div class="som-center som-center--pad" data-ui="${U('menu')}.error">${v.error}</div>`);
@@ -53,17 +54,17 @@ const detail = (v, p = {}) => {
   if (p.loading) return wrap(id, `<div class="som-stack"><div class="som-muted">${v.loading}</div><button type="button" class="som-back__l" style="font-size:14px;text-decoration:underline">${v.back}</button></div>`);
   if (p.notFound) return wrap(id, `<div class="som-stack"><div class="som-stack__bad">${v.not_found}</div><button type="button" class="som-pill">${v.back_menu}</button></div>`);
   const sec = (h, pre, sel) => `<div class="som-sec" data-ui="${id}.${pre}"><div class="som-sec__h">${v[pre + '_h']}</div><div class="som-sec">${[1, 2].map((i) => optionRow({ name: v[pre.slice(0, 1) + i + '_name'], rate: v[pre.slice(0, 1) + i + '_rate'] }, { selected: sel.includes(i) })).join('')}</div></div>`;
-  return wrap(id, `<div class="som-detail"><div class="som-back"><button type="button" class="som-back__l" data-ui="${id}.back">${v.back}</button></div>
+  return wrap(id, `<div class="som-detail"><div class="som-back"><button type="button" class="som-back__l" data-ui="${id}.back"><span class="so-flip">${ic('ChevronLeft', 16)}</span>${v.back}</button></div>
 <img class="som-detail__img" src="${v.img}" alt="${v.name}" data-ui="${id}.image"><div class="som-detail__body"><div><h1 class="som-detail__h">${v.name}</h1><p class="som-detail__d som-muted">${v.description}</p></div>
 <div class="som-detail__rate">${v.rate}</div>${sec('v', 'variants', [1])}${sec('a', 'addons', [])}
-<div class="som-qty" data-ui="${id}.qty"><button type="button" class="som-qty__b" aria-label="Decrease quantity">-</button><div class="som-qty__n">${v.qty}</div><button type="button" class="som-qty__b" aria-label="Increase quantity">+</button></div>
+<div class="som-qty" data-ui="${id}.qty"><button type="button" class="som-qty__b" aria-label="Decrease quantity">${ic('Minus', 16)}</button><div class="som-qty__n">${v.qty}</div><button type="button" class="som-qty__b" aria-label="Increase quantity">${ic('Plus', 16)}</button></div>
 <button type="button" class="som-add" data-ui="${id}.add">${v.add}</button></div></div>`);
 };
 
 // ---------- Cart / Checkout shared ----------
-const cartSlots = { back: '← Back to menu', title: 'Your Cart', l1_name: 'Espresso', l1_qty: '1', l2_name: 'Cappuccino', l2_qty: '2', note_label: 'Note:', l2_note: 'Less sugar', count: '3 items', total: money(52), checkout: 'Proceed to checkout',
+const cartSlots = { back: '← Back to menu', title: 'Your Cart', l1_name: 'Espresso', l1_qty: '1', l2_name: 'Cappuccino', l2_qty: '2', note_label: 'Note:', l2_note: 'Less sugar', count: '3 items', total: money(48), checkout: 'Proceed to checkout',
   empty: 'Your cart is empty.', browse: 'Browse the menu', zero: '0 items', zero_total: money(0) };
-const cartAr = { back: '← العودة إلى القائمة', title: 'سلتك', l1_name: 'إسبريسو', l2_name: 'كابتشينو', note_label: 'ملاحظة:', l2_note: 'سكر أقل', count: '3 عناصر', total: aed(52), checkout: 'المتابعة إلى الدفع',
+const cartAr = { back: '← العودة إلى القائمة', title: 'سلتك', l1_name: 'إسبريسو', l2_name: 'كابتشينو', note_label: 'ملاحظة:', l2_note: 'سكر أقل', count: '3 عناصر', total: aed(48), checkout: 'المتابعة إلى الدفع',
   empty: 'سلتك فارغة.', browse: 'تصفّح القائمة', zero: '0 عناصر', zero_total: aed(0) };
 const hdr = (id, back, title) => `<header class="som-hdr" data-ui="${id}.header"><button type="button" class="som-hdr__back">${back}</button><h1 class="som-hdr__t">${title}</h1><span class="som-hdr__sp" aria-hidden="true"></span></header>`;
 const cart = (v, p = {}) => {

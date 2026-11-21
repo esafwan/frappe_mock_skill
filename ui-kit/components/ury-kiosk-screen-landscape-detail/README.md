@@ -4,7 +4,7 @@ Product detail modal over the landscape menu: black/50 scrim, panel h-5/6 w-2/3 
 
 **When to use:** Opened by tapping a card when product_detail_enabled is on. The top of the panel is mostly the image; the "options" variant shows it scrolled to the end. Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension.
 
-**Slots people usually change:** `img` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `o1_amount` (currency, e.g. "AED 10.00"), `o2_amount` (currency, e.g. "AED 14.00"), `order_total` (currency, e.g. "AED 24.00"), `cart_total` (currency, e.g. "AED 48.00"), `i1_rate` (currency, e.g. "AED 10.00"). All 91 slots are in `slots.json`.
+**Slots people usually change:** `i11_img` (image, e.g. "../../data/images/cafe/iced-am"), `i15_img` (image, e.g. "../../data/images/cafe/hot-cho"), `i5_img` (image, e.g. "../../data/images/cafe/cappucc"), `i6_img` (image, e.g. "../../data/images/cafe/flat-wh"), `i10_img` (image, e.g. "../../data/images/cafe/iced-la"), `i12_img` (image, e.g. "../../data/images/cafe/iced-mo"). All 106 slots are in `slots.json`.
 
 **States:** default (none), options (props), loading (props), not-found (props). Details and class/attribute changes in `states.json`.
 

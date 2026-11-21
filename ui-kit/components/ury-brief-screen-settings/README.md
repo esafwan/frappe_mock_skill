@@ -4,7 +4,7 @@ Settings sheet: Signed in as row, Appearance, Language for chat and calls and th
 
 **When to use:** Opened from the account menu. Arabic: fixed UI labels translated (brief_app ships no Arabic locale); sample text values are illustrative.
 
-**Slots people usually change:** `h_big` (currency, e.g. "AED 18,420.00"), `v_avg` (currency, e.g. "AED 130.00"), `v_spc` (currency, e.g. "AED 78.00"), `s_who` (text, e.g. "Signed in as owner@example.com"), `s_read` (text, e.g. "Show a play button on replies"), `s_lang` (text, e.g. "Language for chat and calls"). All 29 slots are in `slots.json`.
+**Slots people usually change:** `h_big` (currency, e.g. "AED 18,420.00"), `v_avg` (currency, e.g. "AED 130.00"), `v_spc` (currency, e.g. "AED 78.00"), `s_read` (text, e.g. "Show a play button on replies"), `s_lang` (text, e.g. "Language for chat and calls"), `s_lang_v` (text, e.g. "Automatic (device language)"). All 30 slots are in `slots.json`.
 
 **States:** default (none). Details and class/attribute changes in `states.json`.
 

@@ -1,14 +1,13 @@
-# URY Captain send bar (`ury-captain-send-bar`)
-
-System: ury-captain (static URY v16 mock, source ury-erp/version-16 @100c43fe2e). Mobile 390px at 3x, light / dark / RTL.
+# URY Captain send bar  `ury-captain-send-bar`
 
 Sticky primary action of the captain order screen: "Total" (14/600) with the amount (18/600) and a full width 48px default button (16px text): Send Order, Update Order, or the in-flight Loader2 state.
 
-**When:** Bottom of the captain order screen on mobile (390px).
+**When to use:** Bottom of the captain order screen on mobile (390px).
 
-## Variants
-- `update`: Existing order being changed: label "Update Order" (hard-coded English in the source).
-- `sending`: Submitting a new order: Loader2 and "Sending…", button disabled (opacity .5).
-- `updating`: Submitting an update: Loader2 and "Updating…".
+**Slots people usually change:** `total` (currency, e.g. "AED 78.00"), `button` (text, e.g. "Send Order"), `total_label` (text, e.g. "Total"). All 3 slots are in `slots.json`.
 
-Files: `component.html` (slots as {{name}}), `slots.json`, `states.json`, `measurements.json`, `preview*.html`, `screenshot*.png`.
+**States:** default (none), update (props), sending (props), loading (props), updating (props). Details and class/attribute changes in `states.json`.
+
+**Targeting:** root `data-ui="ury-captain-send-bar"`; 0 interactive elements with measured boxes in `measurements.json` (e.g. none).
+
+**Render:** `node tools/render.mjs ury-captain-send-bar --locale ar-AE/AED --theme dark` · open `preview.html` (JS-free). Needs ury-v16/ury-fonts.css, ury-v16/ury-ui-tokens.css, ury-v16/ury-ui-base.css, ury-v16/components/captain.css from `tokens/css/` and the desk icon sprite (inlined in preview).

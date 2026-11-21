@@ -579,3 +579,15 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .so-idle .u-dialog-header { text-align: center; }
 .so-idle__btn { width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: 500; }
 .so-idle .u-dialog-footer { flex-direction: column-reverse; }
+
+/* ---------- fixes: tab fade, per-line cart amounts, back chevron, dark-mode solid buttons ---------- */
+/* the scrolling chip row fades out at its end edge so a clipped chip reads as scrollable, not cut off */
+.so-tabs { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+[dir=rtl] .so-tabs { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.so-cart__amt { min-width: 64px; text-align: end; font-variant-numeric: tabular-nums; font-weight: 500; }
+.so-flip { display: inline-flex; }
+[dir=rtl] .so-flip { transform: scaleX(-1); }
+.dark .so-cart__btn--place, .dark .so-cart__btn--pay, .dark .so-idle__btn, .dark .so-chip--on { background: hsl(221 83% 48%); color: #fff; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }

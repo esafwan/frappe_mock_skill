@@ -84,3 +84,6 @@
   border-radius: var(--radius-full, 9999px); border: 1px solid var(--dock-bg); background: var(--ink-gray-8);
   font-size: 0; overflow: hidden;
 }
+
+/* dark chrome: the logo PNG has a white tile; invert it so it does not glare */
+[data-theme="dark"] .ury-desk .header-logo img { filter: invert(1) hue-rotate(180deg); }

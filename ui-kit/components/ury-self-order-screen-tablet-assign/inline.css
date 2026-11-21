@@ -580,6 +580,18 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .so-idle__btn { width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: 500; }
 .so-idle .u-dialog-footer { flex-direction: column-reverse; }
 
+/* ---------- fixes: tab fade, per-line cart amounts, back chevron, dark-mode solid buttons ---------- */
+/* the scrolling chip row fades out at its end edge so a clipped chip reads as scrollable, not cut off */
+.so-tabs { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+[dir=rtl] .so-tabs { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.so-cart__amt { min-width: 64px; text-align: end; font-variant-numeric: tabular-nums; font-weight: 500; }
+.so-flip { display: inline-flex; }
+[dir=rtl] .so-flip { transform: scaleX(-1); }
+.dark .so-cart__btn--place, .dark .so-cart__btn--pay, .dark .so-idle__btn, .dark .so-chip--on { background: hsl(221 83% 48%); color: #fff; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }
+.so-tabs { backdrop-filter: none; }
+
 /* URY v16 self-order tablet screens (1280x800). Class lists mirror self-order/src/layouts/TabletLayout.tsx and PortableTabletAssignment.tsx
    (ury-erp/version-16 @100c43fe2e). Builds on self-order.css (.so-* shared primitives). Logical properties only; RTL is a kit extension. */
 
@@ -651,3 +663,12 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .sota-input:disabled { opacity: .5; cursor: not-allowed; }
 /* spinner: h-4 w-4 rounded-full border-2 border-primary-foreground border-t-transparent (animate-spin frozen for determinism) */
 .sota-spin { width: 16px; height: 16px; border-radius: 9999px; border: 2px solid hsl(var(--primary-foreground)); border-top-color: transparent; }
+
+/* ---------- fixes ---------- */
+.sot-detail__backbtn { display: inline-flex; align-items: center; gap: 4px; }
+.sot-detail__step { display: flex; align-items: center; justify-content: center; }
+.dark .sot-detail__add, .dark .sot-idle-btn, .dark .sota-btn { background: hsl(221 83% 48%); color: #fff; }
+.dark .sota-spin { border-color: #fff; border-top-color: transparent; }
+.sot-pane .so-tabs { padding-inline: 0; }
+.sot-pane .so-tabs { padding-inline: 0; }
+.sot-pane .so-tabs { padding-inline: 0; }

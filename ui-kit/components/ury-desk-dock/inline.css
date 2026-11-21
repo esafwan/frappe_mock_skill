@@ -28202,7 +28202,7 @@ table td.dt-cell {
 .pswp--svg .pswp__button,
 .pswp--svg .pswp__button--arrow--left:before,
 .pswp--svg .pswp__button--arrow--right:before {
-  background-image: url(/assets/frappe/images/default-skin.svg) !important;
+  background-image: none !important;
 }
 .pswp--svg .pswp__button--arrow--left,
 .pswp--svg .pswp__button--arrow--right {
@@ -40565,3 +40565,6 @@ div#driver-popover-item .driver-popover-footer button.driver-close-btn {
   border-radius: var(--radius-full, 9999px); border: 1px solid var(--dock-bg); background: var(--ink-gray-8);
   font-size: 0; overflow: hidden;
 }
+
+/* dark chrome: the logo PNG has a white tile; invert it so it does not glare */
+[data-theme="dark"] .ury-desk .header-logo img { filter: invert(1) hue-rotate(180deg); }

@@ -15,7 +15,7 @@ const W = {
   sc_tables: ['Tables', 'الطاولات'], sc_sessions: ['Ordering Sessions', 'جلسات الطلب'], sc_requests: ['Service Requests', 'طلبات الخدمة'], sc_rooms: ['Rooms', 'القاعات'],
   nc_sales: ['Sales Today', 'مبيعات اليوم'], nc_bills: ['Bills Today', 'فواتير اليوم'], nc_avg: ['Average Bill Today', 'متوسط الفاتورة اليوم'], nc_cancel: ['Cancelled Bills Today', 'الفواتير الملغاة اليوم'],
   nc_unsettled: ['Unsettled Bills (All Open)', 'الفواتير غير المسددة (كل المفتوحة)'], nc_kots: ['Open KOTs', 'أوامر المطبخ المفتوحة'], nc_waste: ['Wastage Today', 'هدر اليوم'],
-  v_sales: AED(18450, 'د.إ ١٨٬٤٥٠٫٠٠'), v_bills: ['142', '١٤٢'], v_avg: AED(129.93, 'د.إ ١٢٩٫٩٣'), v_cancel: ['3', '٣'], v_unsettled: ['9', '٩'], v_kots: ['12', '١٢'], v_waste: ['4', '٤'],
+  v_sales: AED(5053.13, 'د.إ ٥٬٠٥٣٫١٣'), v_bills: ['42', '٤٢'], v_avg: AED(120.31, 'د.إ ١٢٠٫٣١'), v_cancel: ['3', '٣'], v_unsettled: ['9', '٩'], v_kots: ['12', '١٢'], v_waste: ['4', '٤'],
   d_up: ['12.5%', '١٢٫٥٪'], d_down: ['4.2%', '٤٫٢٪'], d_label: ['vs yesterday', 'مقارنة بالأمس'],
   ch_trend: ['Daily Sales Trend', 'اتجاه المبيعات اليومي'], ch_type: ['Order Type Split', 'توزيع أنواع الطلبات'], ch_pay: ['Payment Mode Split', 'توزيع طرق الدفع'], ch_top: ['Top Selling Items', 'الأصناف الأكثر مبيعًا'],
   ch_sub: ['Last Month', 'الشهر الماضي'],
@@ -23,12 +23,12 @@ const W = {
   lk_kot: ['Kitchen Orders', 'أوامر المطبخ'], lk_subpos: ['Sub POS Closing', 'إقفال نقطة البيع الفرعية'], lk_term: ['Payment Terminals', 'أجهزة الدفع'], lk_tx: ['Terminal Transactions', 'معاملات أجهزة الدفع'],
   lk_tables: ['Tables', 'الطاولات'], lk_rooms: ['Rooms', 'القاعات'], lk_sess: ['Ordering Sessions', 'جلسات الطلب'], lk_req: ['Service Requests', 'طلبات الخدمة'], lk_orders: ['Orders', 'الطلبات'],
   pc_sales: ["Today's Sales", 'مبيعات اليوم'], pc_bills: ["Today's Bills", 'فواتير اليوم'], pc_avg: ['Average Bill Value', 'متوسط قيمة الفاتورة'], pc_kots: ['Open KOTs', 'أوامر المطبخ المفتوحة'], pc_unsettled: ['Unsettled Bills', 'الفواتير غير المسددة'],
-  pv_sales: AED(6240.5, 'د.إ ٦٬٢٤٠٫٥٠'), pv_bills: ['48', '٤٨'], pv_avg: AED(130, 'د.إ ١٣٠٫٠٠'), pv_kots: ['5', '٥'], pv_unsettled: ['3', '٣'],
+  pv_sales: AED(5053.13, 'د.إ ٥٬٠٥٣٫١٣'), pv_bills: ['42', '٤٢'], pv_avg: AED(120.31, 'د.إ ١٢٠٫٣١'), pv_kots: ['5', '٥'], pv_unsettled: ['3', '٣'],
 };
 // chart sample data
 const MON = [['Nov', 'نوفمبر']]; const dn = (n) => String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
 const XL = [1, 8, 15, 22, 29]; XL.forEach((d, i) => { W['tx' + i] = [`${d} Nov`, `${dn(d)} نوفمبر`]; });
-const YT = [0, 5000, 10000, 15000, 20000]; YT.forEach((y, i) => { W['ty' + i] = [y.toLocaleString('en-US'), dn(y.toLocaleString('en-US')).replace(/,/g, '٬')]; });
+const YT = [0, 2000, 4000, 6000, 8000]; YT.forEach((y, i) => { W['ty' + i] = [y.toLocaleString('en-US'), dn(y.toLocaleString('en-US')).replace(/,/g, '٬')]; });
 const OT = [['Dine In', 'داخل المطعم'], ['Take Away', 'سفري'], ['Delivery', 'توصيل']]; OT.forEach((o, i) => { W['ot' + i] = o; });
 const PM = [['Cash', 'نقدًا'], ['Card', 'بطاقة'], ['Online', 'عبر الإنترنت']]; PM.forEach((o, i) => { W['pm' + i] = o; });
 const IT = [['Chicken Shawarma', 'شاورما دجاج'], ['Beef Burger', 'برغر لحم'], ['Fresh Lime', 'ليمون طازج'], ['Mixed Grill', 'مشاوي مشكلة'], ['Falafel Wrap', 'ساندويتش فلافل']]; IT.forEach((o, i) => { W['it' + i] = o; });
@@ -45,18 +45,18 @@ const numberCard = (v, t, val, o = {}) => {
   const stat = o.stat ? `<div class="card-stats ${o.stat === 'up' ? 'green-stat' : 'red-stat'}"><span class="percentage-stat-area" data-ui="ury-desk-number-card.stat">${arrow(o.stat === 'up')} ${o.stat === 'up' ? v.d_up : v.d_down}<span class="stat-label">${v.d_label}</span></span></div>` : '';
   return widget('number-widget-box', v[t], `<div class="widget-body"><div class="widget-content"><div class="number" data-ui="ury-desk-number-card.number">${v[val]}</div>${stat}</div></div>`);
 };
-const ncBlock = (v, t, val, o, col = 4) => block(col, `<div number_card_name="${W[t][0]}">${numberCard(v, t, val, o)}</div>`, o && o.ui);
+const ncBlock = (v, t, val, o, col = 3) => block(col, `<div number_card_name="${W[t][0]}">${numberCard(v, t, val, o)}</div>`, o && o.ui);
 const shortcut = (v, t, hover) => widget('shortcut-widget-box' + (hover ? ' is-hover' : ''), v[t], '');
-const scBlock = (v, t, hover) => block(3, `<div shortcut_name="${W[t][0]}">${shortcut(v, t, hover)}</div>`);
+const scBlock = (v, t, hover) => block(4, `<div shortcut_name="${W[t][0]}">${shortcut(v, t, hover)}</div>`);
 const linkCard = (v, title, items, hoverIdx = -1) => widget('links-widget-box', v[title], `<div class="widget-body">${items.map((k, i) => `<a class="link-item${i === hoverIdx ? ' is-hover' : ''}"><span class="link-text ellipsis">${v[k]}</span></a>`).join('')}</div>`);
 const lcBlock = (v, title, items, hv) => block(4, `<div card_name="${W[title][0]}">${linkCard(v, title, items, hv)}</div>`);
 
 // ---- frappe-chart style SVG (static) ----
 const CW = 534, CH = 205, L = 48, R = 12, T = 12, B = 28;
-const frame = (inner) => `<svg class="frappe-chart chart" width="${CW}" height="${CH}" viewBox="0 0 ${CW} ${CH}"><g class="chart-draw-area">${inner}</g></svg>`;
+const frame = (inner) => `<svg class="frappe-chart chart" style="max-width:100%;height:auto" width="${CW}" height="${CH}" viewBox="0 0 ${CW} ${CH}"><g class="chart-draw-area">${inner}</g></svg>`;
 const yAxis = (v, pre, n = 5) => Array.from({ length: n }, (_, i) => { const y = T + (CH - T - B) * (1 - i / (n - 1)); return `<line class="${i ? 'grid-line' : 'base-line'}" x1="${L}" x2="${CW - R}" y1="${y}" y2="${y}"/><text class="chart-label y-axis-label" x="${L - 8}" y="${y + 3}">${v[pre + i]}</text>`; }).join('');
 const lineChart = (v) => {
-  const pts = [2.5, 4, 3.2, 5.8, 8.2, 6.4, 7.1, 9.5, 8.8, 11.2, 10.4, 12.6, 11.9, 14.2, 13.1, 15.8, 14.6, 13.2, 15.1, 16.4, 15.7, 17.2, 16.1, 18.0, 15.4, 16.9, 17.6, 15.9, 17.3, 18.4].map((k, i, a) => [L + 10 + (CW - L - R - 20) * i / (a.length - 1), T + (CH - T - B) * (1 - k / 20)]);
+  const pts = [2.5, 4, 3.2, 5.8, 8.2, 6.4, 7.1, 9.5, 8.8, 11.2, 10.4, 12.6, 11.9, 14.2, 13.1, 15.8, 14.6, 13.2, 15.1, 16.4, 15.7, 17.2, 16.1, 18.0, 15.4, 16.9, 17.6, 15.9, 17.3, 18.4].map((k, i, a) => [L + 10 + (CW - L - R - 20) * i / (a.length - 1), T + (CH - T - B) * (1 - (i === a.length - 1 ? 12.63 : k * 0.62) / 20)]);
   const d = pts.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ');
   const base = CH - B; const area = `${d} L${pts[pts.length - 1][0].toFixed(1)} ${base} L${pts[0][0].toFixed(1)} ${base} Z`;
   const xs = XL.map((_, i) => `<text class="chart-label x-axis-label" x="${(L + 10 + (CW - L - R - 20) * (XL[i] - 1) / 29).toFixed(1)}" y="${CH - 8}">${v['tx' + i]}</text>`).join('');
@@ -88,7 +88,7 @@ const homeBody = (v, o = {}) => redactor(
 const operateBody = (v) => redactor(
   header(v.h_freq) + ['sc_kitchen', 'sc_tables', 'sc_subpos', 'sc_sessions', 'sc_requests', 'sc_rooms'].map((k) => scBlock(v, k)).join('') + spacer()
   + lcBlock(v, 'lk_title1', ['lk_kot', 'lk_subpos', 'lk_term', 'lk_tx']) + lcBlock(v, 'lk_title2', ['lk_tables', 'lk_rooms', 'lk_sess', 'lk_req']) + lcBlock(v, 'lk_title3', ['lk_orders']));
-const posBody = (v) => redactor([['pc_sales', 'pv_sales'], ['pc_bills', 'pv_bills'], ['pc_avg', 'pv_avg'], ['pc_kots', 'pv_kots'], ['pc_unsettled', 'pv_unsettled']].map(([t, x]) => ncBlock(v, t, x)).join(''));
+const posBody = (v) => redactor([['pc_sales', 'pv_sales'], ['pc_bills', 'pv_bills'], ['pc_avg', 'pv_avg'], ['pc_kots', 'pv_kots'], ['pc_unsettled', 'pv_unsettled']].map(([t, x]) => ncBlock(v, t, x, {}, 4)).join(''));
 
 // ---- spec plumbing ----
 const proxy = (used) => new Proxy({}, { get: (_, k) => (used.add(String(k)), `{{${String(k)}}}`) });

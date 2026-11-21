@@ -139,12 +139,12 @@ const orderForm = (tab) => {
   } else {
     body = section('', [[{ t: 'Link', f: 'add_item', label: 'Add Item', ar: 'إضافة صنف', v: { en: 'Chicken Biryani', ar: 'برياني دجاج' } }], [{ t: 'Currency', f: 'grand_total', label: 'Grand Total', ar: 'المجموع الإجمالي', ro: 1, v: { amount: 86, ar: 'د.إ 86.00' } }]])
       + section(lbl('additional_details', 'Additional Details', 'تفاصيل إضافية'), [[]])
-      + wideSection('', fieldTable('items', 'Items', 'الاصناف',
-        [{ f: 'item', label: 'Item', ar: 'الصنف', w: 200 }, { f: 'item_name', label: 'Item Name', ar: 'اسم السلعة', w: 200 }, { f: 'qty', label: 'Qty', ar: 'الكمية', w: 100, right: true }, { f: 'rate', label: 'Rate', ar: 'سعر السلعة المفردة', w: 120, right: true, money: true }, { f: 'comments', label: 'Comments', ar: 'تعليقات', w: 160 }],
+      + wideSection('', fieldTable('items', 'Items', 'الأصناف',
+        [{ f: 'item', label: 'Item', ar: 'الصنف', w: 170 }, { f: 'item_name', label: 'Item Name', ar: 'اسم السلعة', w: 170 }, { f: 'qty', label: 'Qty', ar: 'الكمية', w: 80, right: true }, { f: 'rate', label: 'Rate', ar: 'سعر السلعة المفردة', w: 110, right: true, money: true }, { f: 'comments', label: 'Comments', ar: 'تعليقات', w: 150 }],
         [[{ en: 'Chicken Biryani', ar: 'برياني دجاج' }, { en: 'Chicken Biryani', ar: 'برياني دجاج' }, { en: '2', ar: '2' }, { amount: 28, ar: 'د.إ 28.00' }, { en: 'Less spicy', ar: 'أقل حدة' }],
           [{ en: 'Mint Lemonade', ar: 'ليمون بالنعناع' }, { en: 'Mint Lemonade', ar: 'ليمون بالنعناع' }, { en: '3', ar: '3' }, { amount: 10, ar: 'د.إ 10.00' }, { en: '', ar: '' }]]))
-      + section('', [[{ t: 'Link', f: 'waiter', label: 'Waiter', ar: 'النادل', ro: 1, v: { en: 'rashid@example.com', ar: 'rashid@example.com' } }, { t: 'Link', f: 'pos_profile', label: 'POS Profile', ar: 'الملف الشخصي لنقطة البيع', ro: 1, v: { en: 'Spice Garden POS', ar: 'سبايس غاردن POS' } }],
-        [{ t: 'Link', f: 'cashier', label: 'Cashier', ar: 'أمين الصندوق', ro: 1, v: { en: 'cashier@example.com', ar: 'cashier@example.com' } }, { t: 'Data', f: 'comments_h', label: 'Comments', ar: 'تعليقات' }]]);
+      + section('', [[{ t: 'Link', f: 'waiter', label: 'Waiter', ar: 'النادل', ro: 1, v: { en: 'Rashid Khan', ar: 'راشد خان' } }, { t: 'Link', f: 'pos_profile', label: 'POS Profile', ar: 'الملف الشخصي لنقطة البيع', ro: 1, v: { en: 'Spice Garden POS', ar: 'سبايس غاردن POS' } }],
+        [{ t: 'Link', f: 'cashier', label: 'Cashier', ar: 'أمين الصندوق', ro: 1, v: { en: 'Fatima Noor', ar: 'فاطمة نور' } }, { t: 'Data', f: 'comments_h', label: 'Comments', ar: 'تعليقات' }]]);
   }
   return formLayout(tabs(orderTabs, tab), body);
 };

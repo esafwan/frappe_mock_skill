@@ -4,7 +4,7 @@ URY Home workspace (ury/workspace/ury/ury.json) in the 1440x900 desk shell: Freq
 
 **When to use:** Landing page of the URY app; the two custom blocks (URY POS, POS V1) are not drawn.
 
-**Slots people usually change:** `v_sales` (currency, e.g. "AED 18,450.00"), `v_avg` (currency, e.g. "AED 129.93"), `nav_s11_12` (text, e.g. "Branch Operating Exception"), `nav_s11_18` (text, e.g. "Fulfilment Posting Intents"), `nc_unsettled` (text, e.g. "Unsettled Bills (All Open)"), `nav_s11_11` (text, e.g. "Branch Operating Schedule"). All 172 slots are in `slots.json`.
+**Slots people usually change:** `v_sales` (currency, e.g. "AED 5,053.13"), `v_avg` (currency, e.g. "AED 120.31"), `nav_s11_12` (text, e.g. "Branch Operating Exception"), `nav_s11_18` (text, e.g. "Fulfilment Posting Intents"), `nc_unsettled` (text, e.g. "Unsettled Bills (All Open)"), `nav_s11_11` (text, e.g. "Branch Operating Schedule"). All 172 slots are in `slots.json`.
 
 **States:** default (none), charts-scrolled (props). Details and class/attribute changes in `states.json`.
 

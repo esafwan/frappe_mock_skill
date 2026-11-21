@@ -112,6 +112,7 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   let inlineCss = '';
   for (const st of document.querySelectorAll('style')) { if (st.dataset.uikit || /ui-kit-freeze/.test(st.id)) continue; let rules; try { rules = st.sheet.cssRules; } catch { continue; }
     for (const r of rules) { if (r.type === 1 ? relevant(r.selectorText) : (r.type === 5 || r.type === 7)) inlineCss += r.cssText + '\n'; } }
+  inlineCss = inlineCss.replace(/url\(\s*["']?\/[^)]*\)/g, 'none'); // absolute-path urls (photoswipe skin) cannot resolve offline
   for (const im of images) slots.push({ name: im.slot, type: 'image', sample: im.file, maxLength: 0, where: 'attr:src', element: 'img' });
   return { images, inlineCss, html: clone.outerHTML, slots, ancestors, bg, boxes, size: { w: rr.width, h: rr.height }, display: cs.display, position: cs.position,
     font: getComputedStyle(document.body).fontFamily };

@@ -4,7 +4,7 @@ Captain order screen at the lg breakpoint (tablet): Menu and Order panes side by
 
 **When to use:** Captain on a tablet held landscape (1280x800). View-only shows only the order panel and no send bar.
 
-**Slots people usually change:** `image_2` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_3` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_4` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_1` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `price_1` (currency, e.g. "AED 22.00"), `price_2` (currency, e.g. "AED 24.00"). All 60 slots are in `slots.json`.
+**Slots people usually change:** `image_4` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_2` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_3` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `image_1` (image, e.g. "data:image/jpeg;base64,/9j/4AA"), `price_1` (currency, e.g. "AED 22.00"), `price_2` (currency, e.g. "AED 24.00"). All 60 slots are in `slots.json`.
 
 **States:** default (none), view-only (props). Details and class/attribute changes in `states.json`.
 

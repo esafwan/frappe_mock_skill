@@ -28202,7 +28202,7 @@ table td.dt-cell {
 .pswp--svg .pswp__button,
 .pswp--svg .pswp__button--arrow--left:before,
 .pswp--svg .pswp__button--arrow--right:before {
-  background-image: url(/assets/frappe/images/default-skin.svg) !important;
+  background-image: none !important;
 }
 .pswp--svg .pswp__button--arrow--left,
 .pswp--svg .pswp__button--arrow--right {
@@ -40900,6 +40900,9 @@ body.dt-resize {
   font-size: 0; overflow: hidden;
 }
 
+/* dark chrome: the logo PNG has a white tile; invert it so it does not glare */
+[data-theme="dark"] .ury-desk .header-logo img { filter: invert(1) hue-rotate(180deg); }
+
 /* T27: URY desk list / form / report screens. frappe-desk.css carries the real list, form and datatable rules; this file only pins the mock
    (30px list rows, flow-positioned datatable rows, layout of the page body under the shell). */
 .ury-desk-page-body { overflow: hidden; }
@@ -40949,3 +40952,6 @@ body.dt-resize {
 .ury-desk-page-body .dt-cell--header .dt-cell__content { padding-right: 0; padding-inline: 0.5rem 1rem; }
 .ury-desk-page-body .report-view .frappe-list, .ury-desk-page-body .report-view .report-filters { padding-inline: 15px; }
 .ury-desk-page-body .grid-body input[type="checkbox"] { margin: 0; }
+.ury-desk-page-body .report-view .frappe-list { padding-inline: 0; }
+.ury-desk-page-body .report-view .datatable-wrapper, .ury-desk-page-body .report-view .result { padding-inline: 0; margin-inline: 0; }
+.ury-desk-page-body .datatable { max-width: none; }

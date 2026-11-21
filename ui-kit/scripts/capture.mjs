@@ -8,7 +8,7 @@ import { specs as deskSpecs } from './specs.mjs';
 const posSpecs = fs.existsSync(new URL('./specs-pos.mjs', import.meta.url)) ? (await import('./specs-pos.mjs')).specs : [];
 const hufSpecs = fs.existsSync(new URL('./specs-huf.mjs', import.meta.url)) ? (await import('./specs-huf.mjs')).specs : [];
 // Static-HTML spec sources (native mobile systems, see static-capture.mjs): auto-loaded when present.
-const STATIC_SPEC_FILES = ['specs-huf-ios.mjs', 'specs-huf-android.mjs'];
+const STATIC_SPEC_FILES = ['specs-huf-ios.mjs', 'specs-huf-android.mjs', ...['pos-static', 'captain', 'mosaic', 'self-order', 'kiosk', 'admin', 'brief', 'desk'].map((s) => `specs-ury-${s}.mjs`)];
 const staticSpecs = []; for (const f of STATIC_SPEC_FILES) if (fs.existsSync(new URL('./' + f, import.meta.url))) staticSpecs.push(...(await import('./' + f)).specs.map((x) => ({ ...x, static: true })));
 const specs = [...deskSpecs, ...posSpecs, ...hufSpecs];
 

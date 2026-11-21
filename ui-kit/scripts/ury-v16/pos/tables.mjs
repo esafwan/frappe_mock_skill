@@ -41,13 +41,14 @@ export const TABLES = [
 export const room = (n) => (n <= 10 ? 'room_a' : 'room_b');
 
 // ---- slots (English from pos/src/i18n/locales/en.json) and Arabic (ar.json) ----
+const AD = (x) => String(x).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
 const L = {
   l_room: ['Room', 'غرفة'], l_started: ['Started at:', 'بدأ في'], l_seats: ['Seats', 'مقاعد'], no_time: ['—', '—'],
   b_occupied: ['Occupied', 'مشغول'], b_available: ['Available', 'متاح'], b_reserved: ['Reserved', 'محجوزة'], b_merged: ['Merged', 'مدمج'],
   take_away: ['Take away', 'سفري'], res_for: ['Reserved for 7:30 PM', 'محجوزة لـ ٧:٣٠ م'],
   btn_preview: ['Preview', 'معاينة'], btn_print: ['Print', 'طباعة'], btn_printing: ['Printing...', 'جارٍ الطباعة...'],
   merge_label: ['With T6 + T7', 'مع T6 + T7'],
-  room_a: ['Main Hall', 'القاعة الرئيسية'], room_b: ['Terrace', 'التراس'], count_a: ['4', '4'], count_b: ['1', '1'],
+  room_a: ['Main Hall', 'القاعة الرئيسية'], room_b: ['Terrace', 'التراس'], count_a: ['4', AD(4)], count_b: ['1', AD(1)],
   layout_view: ['Layout View', 'عرض المخطط'], grid_view: ['Grid View', 'عرض الشبكة'], layout: ['Layout', 'مخطط'],
   edit_layout: ['Edit Layout', 'تعديل المخطط'], finish_editing: ['Finish Editing', 'إنهاء التعديل'],
   zoom_pct: ['100%', '100%'],
@@ -63,7 +64,7 @@ const L = {
 };
 for (const t of TABLES) {
   L[`t${t.n}_name`] = [`T${t.n}`, `T${t.n}`];
-  L[`t${t.n}_seats`] = [String(t.seats), String(t.seats)];
+  L[`t${t.n}_seats`] = [String(t.seats), AD(t.seats)];
   if (t.time) L[`t${t.n}_time`] = [t.time, t.time.replace(/(\d+):(\d+) (AM|PM)/, (_, h, m, ap) => `${h}:${m} ${ap === 'AM' ? 'ص' : 'م'}`).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d])];
 }
 export const SLOTS = Object.fromEntries(Object.entries(L).map(([k, [en]]) => [k, en]));
