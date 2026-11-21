@@ -5,7 +5,7 @@ const ph = (k) => ({ search_placeholder: PLACEHOLDERS[k][0] });
 const R = (keys) => pick(SHELL_RTL, keys.filter((k) => k in SHELL_RTL));
 const hk = HEADER_KEYS, uk = ['user_name', 'user_email', 'menu_close_shift', 'menu_dashboard', 'menu_desk', 'menu_clear_cache', 'menu_logout'];
 const pk = ['pw_title', 'pw_desc', 'pw_sync', 'pw_stale', 'pw_success', 'pw_failed', 'st_excellent', 'st_fair', 'st_critical', 'p1_name', 'p1_ok', 'p1_fail', 'p1_time', 'p2_name', 'p2_ok', 'p2_fail', 'p2_time', 'p3_name', 'p3_ok', 'p3_fail', 'p3_time'];
-const sk = ['search_key', 'sp_query', 'sp_placeholder', 'sp_hint', 'sp_empty', ...Object.keys(SHELL_SLOTS).filter((k) => /^sp_i/.test(k))];
+const sk = ['search_key', 'sp_query', 'sp_placeholder', 'sp_hint', 'sp_empty', ...Object.keys(SHELL_SLOTS).filter((k) => /^sp_(i|sec_|o_|c_)/.test(k))];
 const footerV = Object.fromEntries(['dashboard', 'pos', 'tables', 'reservations', 'orders', 'sessions', 'settings'].map((k) => [`active-${k}`, { props: { active: k }, describe: `${k} tab active (chip foreground/background, primary 600 label)` }]));
 export const specs = [
   { ...base, id: 'pos-header', name: 'POS header', width: 1440, slots: pick(SHELL_SLOTS, hk), rtlValues: R(hk), props: { variant: 'register', printer: 'online' },
@@ -36,13 +36,13 @@ export const specs = [
       fair: { props: { cards: ['online', 'fair'] }, describe: 'A printer with fair health (warning badge)' },
       alert: { props: { cards: ['online', 'offline'], alert: true }, describe: 'Refresh failed: orange stale-data banner above the cards' },
     },
-    describe: ['Printer Health dialog: title, last-synced line, Sync Now button and one card per printer.', 'Opened from the printer status button. PrinterWatch has no ar.json keys: its fixed labels are translated for RTL.'] },
-  { ...base, id: 'pos-spotlight', name: 'POS spotlight search', width: 720, slots: pick(SHELL_SLOTS, sk), rtlValues: R(sk), props: { items: [1, 2, 3], selected: 0 },
+    describe: ['Printer Health dialog: title, last-synced line, Sync Now button and one card per printer.', 'Opened from the printer status button. PrinterWatch has no ar.json keys: its RTL labels are author translations and NEED NATIVE REVIEW.'] },
+  { ...base, id: 'pos-spotlight', name: 'POS spotlight search', width: 720, slots: pick(SHELL_SLOTS, sk), rtlValues: R(sk), props: { items: [1, 2, 3], selected: 0, sections: true },
     render: (v, p) => spotlight({ v, ...p }),
     variants: {
       'second-selected': { props: { selected: 1 }, describe: 'Arrow-down moved the highlight to the second row' },
-      query: { props: { items: [1] }, values: { sp_query: 'Hum' }, describe: 'Typed query narrows the list' },
+      query: { props: { items: [1], sections: false }, values: { sp_query: 'Hum' }, describe: 'Typed query narrows the list' },
       empty: { props: { items: [] }, values: { sp_query: 'xyz' }, describe: 'No match: No items found' },
     },
-    describe: ['Command palette dialog (Ctrl+K): search input, menu item results with 48px thumbnails and prices, and a keyboard hint.', 'The source marks Spotlight as not currently used and has no Orders/Customers sections, so only the menu results are drawn.'] },
+    describe: ['Command palette dialog (Ctrl+K): search input, results grouped under Menu / Orders / Customers headings with 48px thumbnails, and a keyboard hint.', 'The source marks Spotlight as not currently used and draws menu rows only; the section headings and the order and customer rows come from the task spec. The Customers label is an author translation in RTL.'] },
 ];

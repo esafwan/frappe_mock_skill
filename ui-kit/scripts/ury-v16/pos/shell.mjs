@@ -45,6 +45,9 @@ export const SHELL_SLOTS = {
   sp_i1_name: 'Hummus', sp_i1_cat: 'Cold Meze', sp_i1_price: money(22),
   sp_i2_name: 'Moutabal', sp_i2_cat: 'Cold Meze', sp_i2_price: money(24),
   sp_i3_name: 'Baba Ghanoush', sp_i3_cat: 'Cold Meze', sp_i3_price: money(24),
+  sp_sec_menu: 'Menu', sp_sec_orders: 'Orders', sp_sec_customers: 'Customers',
+  sp_o_name: 'INV-2026-00142', sp_o_sub: 'Table 4', sp_o_price: money(68),
+  sp_c_name: 'Rashid Mansoor', sp_c_sub: 'rashid@example.com',
   sp_i1_img: { type: 'image', sample: IMG.t1 },
   sp_i2_img: { type: 'image', sample: IMG.t2 },
   sp_i3_img: { type: 'image', sample: IMG.t3 },
@@ -57,12 +60,13 @@ export const SHELL_RTL = {
   menu_clear_cache: 'مسح ذاكرة التخزين المؤقت', menu_logout: 'تسجيل الخروج',
   nav_dashboard: 'لوحة التحكم', nav_pos: 'نقطة البيع', nav_tables: 'الطاولات', nav_reservations: 'الحجوزات',
   nav_orders: 'الطلبات', nav_sessions: 'الجلسات', nav_settings: 'الإعدادات',
-  // PrinterWatch has no ar.json keys (hard-coded English in the source); fixed UI labels translated here
+  // NEEDS NATIVE REVIEW: PrinterWatch.tsx hard-codes English (no ar.json keys), so every pw_*/st_*/pN_name label below is translated by the kit author, not taken from ar.json. Spotlight section 'Customers' (العملاء) is likewise not an ar.json key.
   pw_title: 'صحة الطابعات', pw_desc: 'آخر مزامنة: 21/11/2026، 14:32:08', pw_sync: 'مزامنة الآن',
   pw_stale: 'تعذر التحديث. يتم عرض آخر حالة من 21/11/2026، 14:32:08.',
   pw_success: 'نجاح:', pw_failed: 'فشل:', st_excellent: 'ممتاز', st_fair: 'متوسط', st_critical: 'حرج',
   p1_name: 'طابعة المطبخ', p2_name: 'طابعة البار', p3_name: 'طابعة الإيصالات',
   sp_placeholder: 'ابحث في أصناف القائمة...', sp_hint: 'استخدم ↑↓ للتنقل وEnter للاختيار', sp_empty: 'لم يتم العثور على عناصر',
+  sp_sec_menu: 'القائمة', sp_sec_orders: 'الطلبات', sp_sec_customers: 'العملاء', sp_o_sub: 'طاولة 4', sp_c_name: 'راشد منصور',
   sp_i1_name: 'حمص', sp_i2_name: 'متبّل', sp_i3_name: 'بابا غنوج',
   sp_i1_cat: 'المقبلات الباردة', sp_i2_cat: 'المقبلات الباردة', sp_i3_cat: 'المقبلات الباردة',
 };
@@ -111,8 +115,13 @@ export function printerWatch({ v = P, cards = ['online', 'offline'], alert = fal
   return `<div class="psh psh-stage psh-stage--scrim" data-ui="${id}"><div class="psh-dialog psh-dialog--pw" data-ui="${id}.dialog"><div class="psh-dialog__head"><div class="psh-dialog__headrow"><div><h2 class="psh-dialog__title">${v.pw_title}</h2><p class="psh-dialog__desc">${v.pw_desc}</p></div><button type="button" class="psh-sync" data-ui="${id}.sync">${I('RefreshCw', 14)}<span>${v.pw_sync}</span></button></div><button type="button" class="psh-close" aria-label="Close">${I('X', 16)}</button></div><div class="psh-dialog__body">${alert ? `<div class="psh-alert" data-ui="${id}.alert">${I('CircleAlert', 16, 'psh-alert__icon')}<span>${v.pw_stale}</span></div>` : ''}<ul class="psh-plist">${li}</ul></div></div></div>`;
 }
 
-// spotlight({v, items:[1,2,3], selected:0, query:''}) ; items [] renders the empty state
-export function spotlight({ v = P, items = [1, 2, 3], selected = 0, id = 'pos-spotlight' } = {}) {
+// spotlight({v, items:[1,2,3], selected:0, sections:true}) ; items [] renders the empty state
+// Source Spotlight.tsx renders menu rows only; the Menu / Orders / Customers section headings and the order and customer rows follow the task spec.
+export function spotlight({ v = P, items = [1, 2, 3], selected = 0, sections = true, id = 'pos-spotlight' } = {}) {
   const rows = items.map((n, i) => `<button type="button" class="psh-sprow${i === selected ? ' is-selected' : ''}"><img class="psh-thumb" alt="${v['sp_i' + n + '_name']}" src="${v['sp_i' + n + '_img']}"><div class="psh-sprow__text"><div class="psh-sprow__name">${v['sp_i' + n + '_name']}</div><div class="psh-sprow__cat">${v['sp_i' + n + '_cat']}</div></div><div class="psh-sprow__price"><div>${v['sp_i' + n + '_price']}</div></div></button>`).join('');
-  return `<div class="psh psh-stage psh-stage--scrim" data-ui="${id}"><div class="psh-dialog psh-dialog--sp" data-ui="${id}.dialog"><div class="psh-spin" data-ui="${id}.input">${I('Search', 20, 'psh-spin__icon')}<input type="text" readonly placeholder="${v.sp_placeholder}" value="${v.sp_query}"><button type="button" class="psh-spin__x" aria-label="Close">${I('X', 20)}</button></div><div class="psh-splist" data-ui="${id}.results">${rows || `<div class="psh-spempty">${v.sp_empty}</div>`}</div><div class="psh-sphint"><span>${v.sp_hint}</span><div class="psh-kbd">${I('Command', 16)}<span>${v.search_key}</span></div></div></div></div>`;
+  const sec = (k, body) => `<div class="psh-spsec" data-ui="${id}.section-${k}"><div class="psh-spsec__h">${v['sp_sec_' + k]}</div>${body}</div>`;
+  const ord = `<button type="button" class="psh-sprow"><span class="psh-thumb psh-thumb--icon">${I('ReceiptText', 20)}</span><div class="psh-sprow__text"><div class="psh-sprow__name">${v.sp_o_name}</div><div class="psh-sprow__cat">${v.sp_o_sub}</div></div><div class="psh-sprow__price"><div>${v.sp_o_price}</div></div></button>`;
+  const cus = `<button type="button" class="psh-sprow"><span class="psh-thumb psh-thumb--icon">${I('User', 20)}</span><div class="psh-sprow__text"><div class="psh-sprow__name">${v.sp_c_name}</div><div class="psh-sprow__cat">${v.sp_c_sub}</div></div></button>`;
+  const body = !rows ? `<div class="psh-spempty">${v.sp_empty}</div>` : sections ? sec('menu', rows) + sec('orders', ord) + sec('customers', cus) : rows;
+  return `<div class="psh psh-stage psh-stage--scrim" data-ui="${id}"><div class="psh-dialog psh-dialog--sp" data-ui="${id}.dialog"><div class="psh-spin" data-ui="${id}.input">${I('Search', 20, 'psh-spin__icon')}<input type="text" readonly placeholder="${v.sp_placeholder}" value="${v.sp_query}"><button type="button" class="psh-spin__x" aria-label="Close">${I('X', 20)}</button></div><div class="psh-splist${sections && rows ? ' psh-splist--sec' : ''}" data-ui="${id}.results">${body}</div><div class="psh-sphint"><span>${v.sp_hint}</span><div class="psh-kbd">${I('Command', 16)}<span>${v.search_key}</span></div></div></div></div>`;
 }
