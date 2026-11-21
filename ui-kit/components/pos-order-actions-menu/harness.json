@@ -1,0 +1,43 @@
+{
+  "id": "pos-order-actions-menu",
+  "name": "POS order actions menu",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 480,
+    "h": 360
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css",
+    "ury-v16/components/pos-orders.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "192px popover under the three-dot button: Merge Bill and Split Bill items (rounded-lg, border, shadow-lg), plus the cancel-reason dialog as a variant.",
+    "Order detail header, when the order can be split or merged."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 480,
+  "height": 360,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

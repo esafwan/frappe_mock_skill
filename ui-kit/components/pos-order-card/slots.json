@@ -1,0 +1,90 @@
+{
+  "component": "pos-order-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "INV-0042",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "meta": {
+      "type": "text",
+      "sample": "Table T4 • Dine In",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "status": {
+      "type": "text",
+      "sample": "Unbilled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer": {
+      "type": "text",
+      "sample": "Khalid Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "time": {
+      "type": "text",
+      "sample": "Nov 21, 9:42 AM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 132.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "warn": {
+      "type": "text",
+      "sample": "12m",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tag_split": {
+      "type": "text",
+      "sample": "Split 1 of 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "note_split": {
+      "type": "text",
+      "sample": "Split from INV-0040",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "tag_merged": {
+      "type": "text",
+      "sample": "Merged Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "note_merged": {
+      "type": "text",
+      "sample": "Includes INV-0047",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "total_merged": {
+      "type": "currency",
+      "sample": "AED 186.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

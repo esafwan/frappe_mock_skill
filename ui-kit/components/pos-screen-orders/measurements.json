@@ -1,0 +1,446 @@
+{
+  "component": "pos-screen-orders",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "pos-screen-orders",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "pos-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 48
+    },
+    {
+      "id": "pos-header.logo",
+      "tag": "div",
+      "interactive": false,
+      "x": 24,
+      "y": 7.5,
+      "w": 96,
+      "h": 32
+    },
+    {
+      "id": "pos-header.search",
+      "tag": "div",
+      "interactive": false,
+      "x": 256.83,
+      "y": 9.5,
+      "w": 672,
+      "h": 28
+    },
+    {
+      "id": "pos-header.printer",
+      "tag": "button",
+      "interactive": true,
+      "x": 1065.66,
+      "y": 9.5,
+      "w": 167.53,
+      "h": 28
+    },
+    {
+      "id": "pos-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1249.19,
+      "y": 9.5,
+      "w": 166.81,
+      "h": 28
+    },
+    {
+      "id": "pos-orders-sidebar",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 48,
+      "w": 256,
+      "h": 852
+    },
+    {
+      "id": "pos-orders-sidebar.draft",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 117,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-sidebar.unbilled",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 161,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-sidebar.recently_paid",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 205,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-sidebar.paid",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 249,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-sidebar.consolidated",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 293,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-sidebar.return",
+      "tag": "button",
+      "interactive": true,
+      "x": 41,
+      "y": 337,
+      "w": 173,
+      "h": 40
+    },
+    {
+      "id": "pos-orders-middle",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 48,
+      "w": 1184,
+      "h": 852
+    },
+    {
+      "id": "pos-orders-grid",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 64,
+      "w": 768,
+      "h": 374
+    },
+    {
+      "id": "pos-order-card-1",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 64,
+      "w": 245.33,
+      "h": 171
+    },
+    {
+      "id": "pos-order-card-1.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 65,
+      "w": 243.33,
+      "h": 73
+    },
+    {
+      "id": "pos-order-card-1.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 451,
+      "y": 101,
+      "w": 53.33,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-1.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 138,
+      "w": 243.33,
+      "h": 96
+    },
+    {
+      "id": "pos-order-card-1.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 285,
+      "y": 194,
+      "w": 219.33,
+      "h": 28
+    },
+    {
+      "id": "pos-order-card-2",
+      "tag": "div",
+      "interactive": false,
+      "x": 533.33,
+      "y": 64,
+      "w": 245.33,
+      "h": 171
+    },
+    {
+      "id": "pos-order-card-2.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 534.33,
+      "y": 65,
+      "w": 243.33,
+      "h": 81
+    },
+    {
+      "id": "pos-order-card-2.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 644.59,
+      "y": 105,
+      "w": 71.14,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-2.warn",
+      "tag": "span",
+      "interactive": false,
+      "x": 719.73,
+      "y": 105,
+      "w": 45.92,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-2.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 534.33,
+      "y": 146,
+      "w": 243.33,
+      "h": 88
+    },
+    {
+      "id": "pos-order-card-2.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 546.33,
+      "y": 194,
+      "w": 219.33,
+      "h": 28
+    },
+    {
+      "id": "pos-order-card-3",
+      "tag": "div",
+      "interactive": false,
+      "x": 794.66,
+      "y": 64,
+      "w": 245.33,
+      "h": 171
+    },
+    {
+      "id": "pos-order-card-3.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 795.66,
+      "y": 65,
+      "w": 243.33,
+      "h": 73
+    },
+    {
+      "id": "pos-order-card-3.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 923.2,
+      "y": 101,
+      "w": 103.78,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-3.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 795.66,
+      "y": 138,
+      "w": 243.33,
+      "h": 96
+    },
+    {
+      "id": "pos-order-card-3.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 807.66,
+      "y": 194,
+      "w": 219.33,
+      "h": 28
+    },
+    {
+      "id": "pos-order-card-4",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 251,
+      "w": 245.33,
+      "h": 187
+    },
+    {
+      "id": "pos-order-card-4.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 252,
+      "w": 243.33,
+      "h": 73
+    },
+    {
+      "id": "pos-order-card-4.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 456.13,
+      "y": 288,
+      "w": 48.2,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-4.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 325,
+      "w": 243.33,
+      "h": 112
+    },
+    {
+      "id": "pos-order-card-4.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 285,
+      "y": 397,
+      "w": 219.33,
+      "h": 28
+    },
+    {
+      "id": "pos-order-card-5",
+      "tag": "div",
+      "interactive": false,
+      "x": 533.33,
+      "y": 251,
+      "w": 245.33,
+      "h": 187
+    },
+    {
+      "id": "pos-order-card-5.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 537.33,
+      "y": 252,
+      "w": 240.33,
+      "h": 97
+    },
+    {
+      "id": "pos-order-card-5.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 712.33,
+      "y": 288,
+      "w": 53.33,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-5.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 537.33,
+      "y": 349,
+      "w": 240.33,
+      "h": 88
+    },
+    {
+      "id": "pos-order-card-5.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 549.33,
+      "y": 397,
+      "w": 216.33,
+      "h": 28
+    },
+    {
+      "id": "pos-order-card-6",
+      "tag": "div",
+      "interactive": false,
+      "x": 794.66,
+      "y": 251,
+      "w": 245.33,
+      "h": 187
+    },
+    {
+      "id": "pos-order-card-6.head",
+      "tag": "div",
+      "interactive": false,
+      "x": 798.66,
+      "y": 252,
+      "w": 240.33,
+      "h": 97
+    },
+    {
+      "id": "pos-order-card-6.status",
+      "tag": "span",
+      "interactive": false,
+      "x": 955.84,
+      "y": 288,
+      "w": 71.14,
+      "h": 24
+    },
+    {
+      "id": "pos-order-card-6.body",
+      "tag": "div",
+      "interactive": false,
+      "x": 798.66,
+      "y": 349,
+      "w": 240.33,
+      "h": 88
+    },
+    {
+      "id": "pos-order-card-6.total",
+      "tag": "div",
+      "interactive": false,
+      "x": 810.66,
+      "y": 397,
+      "w": 216.33,
+      "h": 28
+    },
+    {
+      "id": "pos-orders-pager",
+      "tag": "div",
+      "interactive": false,
+      "x": 272,
+      "y": 454,
+      "w": 768,
+      "h": 32
+    },
+    {
+      "id": "pos-order-detail",
+      "tag": "div",
+      "interactive": false,
+      "x": 1056,
+      "y": 48,
+      "w": 384,
+      "h": 836
+    }
+  ]
+}

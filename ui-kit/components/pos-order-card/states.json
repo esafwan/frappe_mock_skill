@@ -1,0 +1,141 @@
+{
+  "component": "pos-order-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "draft": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "draft"
+      },
+      "values": {
+        "status": "Draft",
+        "name": "INV-0041",
+        "meta": "Table T2 • Dine In"
+      },
+      "screenshot": "states/draft.png",
+      "preview": "states/draft.html",
+      "description": "Draft order: secondary badge, no tags."
+    },
+    "paid": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "paid"
+      },
+      "values": {
+        "status": "Paid",
+        "name": "INV-0044",
+        "meta": "Delivery",
+        "customer": "Yusuf Ali",
+        "total": {
+          "type": "currency",
+          "amount": 210,
+          "currency": "AED",
+          "sample": "AED 210.00"
+        }
+      },
+      "screenshot": "states/paid.png",
+      "preview": "states/paid.html",
+      "description": "Paid order: default (neutral) status badge (Recently Paid and Consolidated use the same variant)."
+    },
+    "cancelled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "return"
+      },
+      "values": {
+        "status": "Return",
+        "name": "INV-0048"
+      },
+      "screenshot": "states/cancelled.png",
+      "preview": "states/cancelled.html",
+      "description": "Cancelled / returned order: destructive Return badge (the card has no separate \"cancelled\" status; Return is the destructive one in getBadgeVariant)."
+    },
+    "print-warning": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "unbilled",
+        "warn": true
+      },
+      "screenshot": "states/print-warning.png",
+      "preview": "states/print-warning.html",
+      "description": "Print warning: red-outline tag with the elapsed time beside the status badge (custom_invoice_warning_time exceeded)."
+    },
+    "split": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "draft",
+        "split": true
+      },
+      "values": {
+        "status": "Draft",
+        "name": "INV-0045"
+      },
+      "screenshot": "states/split.png",
+      "preview": "states/split.html",
+      "description": "Split bill: tagAccent \"Split n of m\" tag, 4px primary-500 start border and the primary-700 \"Split from\" note."
+    },
+    "merged": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "unbilled",
+        "merged": true
+      },
+      "values": {
+        "status": "Unbilled",
+        "name": "INV-0046"
+      },
+      "screenshot": "states/merged.png",
+      "preview": "states/merged.html",
+      "description": "Merged bill: \"Merged Bill\" tag, 4px primary-500 start border, primary-700 \"Includes\" note and the combined total."
+    },
+    "selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "unbilled",
+        "selected": true
+      },
+      "screenshot": "states/selected.png",
+      "preview": "states/selected.html",
+      "description": "Selected card: ring-2 blue-500 plus shadow-lg."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

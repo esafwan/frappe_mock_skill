@@ -1,0 +1,74 @@
+{
+  "component": "pos-order-actions-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "split"
+      },
+      "screenshot": "states/hover.png",
+      "preview": "states/hover.html",
+      "description": "Pointer over an item: gray-100 background."
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "merge-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "split": false
+      },
+      "screenshot": "states/merge-only.png",
+      "preview": "states/merge-only.html",
+      "description": "Only Merge Bill is allowed."
+    },
+    "split-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "merge": false
+      },
+      "screenshot": "states/split-only.png",
+      "preview": "states/split-only.html",
+      "description": "Only Split Bill is allowed."
+    },
+    "cancel-reason": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cancel": true
+      },
+      "screenshot": "states/cancel-reason.png",
+      "preview": "states/cancel-reason.html",
+      "description": "Cancel Order dialog with the \"Enter cancel reason\" textarea (opened from the red X button, shown here beside the menu)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

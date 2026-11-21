@@ -1,0 +1,103 @@
+{
+  "component": "pos-order-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "paid": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "paid"
+      },
+      "values": {
+        "d_status": "Paid"
+      },
+      "screenshot": "states/paid.png",
+      "preview": "states/paid.html",
+      "description": "Paid order: no edit / cancel buttons and no Payment button, just Print and the total."
+    },
+    "with-actions": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "actions": true,
+        "menu": true
+      },
+      "screenshot": "states/with-actions.png",
+      "preview": "states/with-actions.html",
+      "description": "Split / merge allowed: the three-dot actions button precedes Edit and Cancel; popover open."
+    },
+    "discount": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "discount": true,
+        "reduce": true
+      },
+      "screenshot": "states/discount.png",
+      "preview": "states/discount.html",
+      "description": "Discounted item (-n% red-50 badge) and printed invoice: round 20px minus buttons to reduce quantity."
+    },
+    "split": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "split": true
+      },
+      "screenshot": "states/split.png",
+      "preview": "states/split.html",
+      "description": "Split bill: Split n of m tag and the Related Bills panel (primary-200 2px border, primary-50/60 fill) with the siblings."
+    },
+    "merged": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "merged": true
+      },
+      "screenshot": "states/merged.png",
+      "preview": "states/merged.html",
+      "description": "Merged bill: Merged Bill tag and panel; footer shows the combined total (label above the value)."
+    },
+    "cancel-dialog": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cancelDlg": true
+      },
+      "screenshot": "states/cancel-dialog.png",
+      "preview": "states/cancel-dialog.html",
+      "description": "Cancel Order dialog open over the panel with the reason textarea."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

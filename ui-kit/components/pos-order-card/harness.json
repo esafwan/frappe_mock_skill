@@ -1,0 +1,45 @@
+{
+  "id": "pos-order-card",
+  "name": "POS order card",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 246,
+    "h": 163
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css",
+    "ury-v16/components/pos-orders.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Order card on the Orders grid (Card p-0): gray-50 header with order name, link tags, table / order type and status badge, then customer, date and total.",
+    "One card per order in the 3-column grid; click selects it and fills the detail panel."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 246,
+  "height": null,
+  "props": {
+    "status": "unbilled"
+  },
+  "canvas": "hsl(var(--background))"
+}

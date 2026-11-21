@@ -1,0 +1,426 @@
+{
+  "component": "pos-order-detail",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "edit_order": {
+      "type": "text",
+      "sample": "Edit order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_order": {
+      "type": "text",
+      "sample": "Cancel order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "payment": {
+      "type": "text",
+      "sample": "Payment",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 132.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "name": {
+      "type": "text",
+      "sample": "INV-0042",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "d_status": {
+      "type": "text",
+      "sample": "Unbilled",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "customer": {
+      "type": "text",
+      "sample": "Khalid Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "time": {
+      "type": "text",
+      "sample": "Nov 21, 9:42 AM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "waiter": {
+      "type": "text",
+      "sample": "Omar Farouk",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "table": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "items_title": {
+      "type": "text",
+      "sample": "Order Items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item1": {
+      "type": "text",
+      "sample": "Chicken Shawarma Plate",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "qty1": {
+      "type": "text",
+      "sample": "Qty: 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt1": {
+      "type": "currency",
+      "sample": "AED 72.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item2": {
+      "type": "text",
+      "sample": "Hummus",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "qty2": {
+      "type": "text",
+      "sample": "Qty: 1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt2": {
+      "type": "currency",
+      "sample": "AED 18.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "item3": {
+      "type": "text",
+      "sample": "Fresh Lemon Mint",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "qty3": {
+      "type": "text",
+      "sample": "Qty: 3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "amt3": {
+      "type": "currency",
+      "sample": "AED 36.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "taxes_title": {
+      "type": "text",
+      "sample": "Taxes & Charges",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tax1": {
+      "type": "text",
+      "sample": "VAT 5%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tax1_amt": {
+      "type": "currency",
+      "sample": "AED 6.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tax2": {
+      "type": "text",
+      "sample": "Service Charge",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tax2_amt": {
+      "type": "currency",
+      "sample": "AED 6.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "print": {
+      "type": "text",
+      "sample": "Print",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_actions": {
+      "type": "text",
+      "sample": "Order actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_bill": {
+      "type": "text",
+      "sample": "Merge Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "split_bill": {
+      "type": "text",
+      "sample": "Split Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "discount": {
+      "type": "text",
+      "sample": "-10%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "reduce_label": {
+      "type": "text",
+      "sample": "Reduce quantity of Chicken Shawarma Plate",
+      "maxLength": 66,
+      "where": "text",
+      "element": "text"
+    },
+    "tag_split": {
+      "type": "text",
+      "sample": "Split 1 of 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "related_bills": {
+      "type": "text",
+      "sample": "Related Bills",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_original": {
+      "type": "text",
+      "sample": "Open Original",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "prev_bill": {
+      "type": "text",
+      "sample": "Previous bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "next_bill": {
+      "type": "text",
+      "sample": "Next bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sib1": {
+      "type": "text",
+      "sample": "INV-0042",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_current": {
+      "type": "text",
+      "sample": "Current",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "split_ind1": {
+      "type": "text",
+      "sample": "Split 1 of 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sib1_total": {
+      "type": "currency",
+      "sample": "AED 66.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sib2": {
+      "type": "text",
+      "sample": "INV-0040",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_original": {
+      "type": "text",
+      "sample": "Original",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_paid": {
+      "type": "text",
+      "sample": "Paid",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "split_ind2": {
+      "type": "text",
+      "sample": "Split 2 of 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sib2_total": {
+      "type": "currency",
+      "sample": "AED 66.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "tag_merged": {
+      "type": "text",
+      "sample": "Merged Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "combined_total": {
+      "type": "text",
+      "sample": "Combined Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "combined_value": {
+      "type": "currency",
+      "sample": "AED 186.25",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_secondary": {
+      "type": "text",
+      "sample": "Open Merged Bill",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "sec_name": {
+      "type": "text",
+      "sample": "INV-0047",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sec_total": {
+      "type": "currency",
+      "sample": "AED 54.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merged_items": {
+      "type": "text",
+      "sample": "Items from merged bill",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "m_item": {
+      "type": "text",
+      "sample": "Mixed Grill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_item_calc": {
+      "type": "currency",
+      "sample": "AED 27.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_title": {
+      "type": "text",
+      "sample": "Cancel order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_desc": {
+      "type": "text",
+      "sample": "Please enter a reason for cancelling.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_placeholder": {
+      "type": "text",
+      "sample": "Enter cancel reason",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_confirm_cancel": {
+      "type": "text",
+      "sample": "Confirm Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

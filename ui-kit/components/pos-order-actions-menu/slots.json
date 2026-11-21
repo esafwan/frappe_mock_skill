@@ -1,0 +1,62 @@
+{
+  "component": "pos-order-actions-menu",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "merge_bill": {
+      "type": "text",
+      "sample": "Merge Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "split_bill": {
+      "type": "text",
+      "sample": "Split Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_actions": {
+      "type": "text",
+      "sample": "Order actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_title": {
+      "type": "text",
+      "sample": "Cancel order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_desc": {
+      "type": "text",
+      "sample": "Please enter a reason for cancelling.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel_placeholder": {
+      "type": "text",
+      "sample": "Enter cancel reason",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_confirm_cancel": {
+      "type": "text",
+      "sample": "Confirm Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}
