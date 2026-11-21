@@ -1,0 +1,42 @@
+{
+  "id": "ury-desk-screen-order-form",
+  "name": "URY desk order form",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css",
+    "ury-v16/components/desk-views.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY Order form on the Order tab: Add Item, Grand Total (read only), Additional Details, the Items field-table (URY Order Item: Item, Item Name, Qty, Rate, Comments) and the Waiter / POS Profile / Cashier read-only links.",
+    "The URY Printer Settings child table is a field of URY Production Unit and URY Room, not of URY Order, so it is not drawn here."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

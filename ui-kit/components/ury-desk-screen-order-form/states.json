@@ -1,0 +1,58 @@
+{
+  "component": "ury-desk-screen-order-form",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "customer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "tab": "customer_tab"
+      },
+      "screenshot": "states/customer.png",
+      "preview": "states/customer.html",
+      "description": "Customer tab: Customer Name and Pax (both required) and the Favorite Item section."
+    },
+    "unsaved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unsaved": true
+      },
+      "screenshot": "states/unsaved.png",
+      "preview": "states/unsaved.html",
+      "description": "Unsaved edits: the red Not Saved indicator pill after the breadcrumb."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen composes captured list/form/report markup, read-only fields are shown inside the form"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no validation message is captured on this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    }
+  }
+}

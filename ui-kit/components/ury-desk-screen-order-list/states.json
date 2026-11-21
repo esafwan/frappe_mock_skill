@@ -1,0 +1,48 @@
+{
+  "component": "ury-desk-screen-order-list",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "ury-order": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "doctype": "URY Order"
+      },
+      "screenshot": "states/ury-order.png",
+      "preview": "states/ury-order.html",
+      "description": "URY Order list: ID subject with Customer Name and Pax (in_list_view) and the ID and Customer Name quick filters."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen composes captured list/form/report markup, read-only fields are shown inside the form"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no validation message is captured on this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    }
+  }
+}

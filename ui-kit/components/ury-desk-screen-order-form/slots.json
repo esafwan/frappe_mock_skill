@@ -1,0 +1,1140 @@
+{
+  "component": "ury-desk-screen-order-form",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "crumb_uo": {
+      "type": "text",
+      "sample": "URY Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "crumb_ord": {
+      "type": "text",
+      "sample": "URY-ORD-0038",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_add_item": {
+      "type": "text",
+      "sample": "Add Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_add_item": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_grand_total": {
+      "type": "text",
+      "sample": "Grand Total",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_grand_total": {
+      "type": "currency",
+      "sample": "AED 86.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_additional_details": {
+      "type": "text",
+      "sample": "Additional Details",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "no_col": {
+      "type": "text",
+      "sample": "No.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_item": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_item_name": {
+      "type": "text",
+      "sample": "Item Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_qty": {
+      "type": "text",
+      "sample": "Qty",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_rate": {
+      "type": "text",
+      "sample": "Rate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_comments": {
+      "type": "text",
+      "sample": "Comments",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "gi_0": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_item_0": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_item_name_0": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_qty_0": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_rate_0": {
+      "type": "currency",
+      "sample": "AED 28.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_comments_0": {
+      "type": "text",
+      "sample": "Less spicy",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "gi_1": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_item_1": {
+      "type": "text",
+      "sample": "Mint Lemonade",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_item_name_1": {
+      "type": "text",
+      "sample": "Mint Lemonade",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_qty_1": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_rate_1": {
+      "type": "currency",
+      "sample": "AED 10.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_comments_1": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_items": {
+      "type": "text",
+      "sample": "Items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_row": {
+      "type": "text",
+      "sample": "Add Row",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_waiter": {
+      "type": "text",
+      "sample": "Waiter",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_waiter": {
+      "type": "text",
+      "sample": "rashid@example.com",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "l_pos_profile": {
+      "type": "text",
+      "sample": "POS Profile",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_pos_profile": {
+      "type": "text",
+      "sample": "Spice Garden POS",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "l_cashier": {
+      "type": "text",
+      "sample": "Cashier",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_cashier": {
+      "type": "text",
+      "sample": "cashier@example.com",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "l_comments_h": {
+      "type": "text",
+      "sample": "Comments",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_table_tab": {
+      "type": "text",
+      "sample": "Table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_menu_tab": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_customer_tab": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_order_tab": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_save": {
+      "type": "text",
+      "sample": "Save",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_customer_name": {
+      "type": "text",
+      "sample": "Customer Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_customer_name": {
+      "type": "text",
+      "sample": "Rashid K.",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_no_of_pax": {
+      "type": "text",
+      "sample": "Pax",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_no_of_pax": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_favorite_item_section": {
+      "type": "text",
+      "sample": "Favorite Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pill_ns": {
+      "type": "text",
+      "sample": "Not Saved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_search": {
+      "type": "text",
+      "sample": "Search",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_notification": {
+      "type": "text",
+      "sample": "Notification",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_user_name": {
+      "type": "text",
+      "sample": "Administrator",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_dock_all_apps": {
+      "type": "text",
+      "sample": "All apps",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_title": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_dock_ury": {
+      "type": "text",
+      "sample": "URY",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_dock_analytics": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_home": {
+      "type": "text",
+      "sample": "Home",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s0": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s0_0": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s0_1": {
+      "type": "text",
+      "sample": "Kitchen Display",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s0_2": {
+      "type": "text",
+      "sample": "URY Console",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1_1": {
+      "type": "text",
+      "sample": "Sales Plans",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1_2": {
+      "type": "text",
+      "sample": "Production Settings",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1_3": {
+      "type": "text",
+      "sample": "Item Production Setup",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s1_4": {
+      "type": "text",
+      "sample": "Bulk Production",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_1": {
+      "type": "text",
+      "sample": "Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_2": {
+      "type": "text",
+      "sample": "Kitchen Orders",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_3": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_4": {
+      "type": "text",
+      "sample": "Rooms",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_5": {
+      "type": "text",
+      "sample": "Ordering Sessions",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_6": {
+      "type": "text",
+      "sample": "Sub POS Closing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_7": {
+      "type": "text",
+      "sample": "Service Requests",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_8": {
+      "type": "text",
+      "sample": "Payment Terminals",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s2_9": {
+      "type": "text",
+      "sample": "Terminal Transactions",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_1": {
+      "type": "text",
+      "sample": "Daily P&L",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_2": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_3": {
+      "type": "text",
+      "sample": "Food Cost & Margin",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_4": {
+      "type": "text",
+      "sample": "RevPASH Report",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_5": {
+      "type": "text",
+      "sample": "Table Turnaround Delay",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_6": {
+      "type": "text",
+      "sample": "Avg Per Cover",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s3_7": {
+      "type": "text",
+      "sample": "Cost Variance Snapshot",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_1": {
+      "type": "text",
+      "sample": "Stock Corrections",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_2": {
+      "type": "text",
+      "sample": "Stock Movements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_3": {
+      "type": "text",
+      "sample": "Stock Reservations",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_4": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_5": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_6": {
+      "type": "text",
+      "sample": "Stock Entry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_7": {
+      "type": "text",
+      "sample": "Issue Authorizations",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_8": {
+      "type": "text",
+      "sample": "Checklist Logs",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s4_9": {
+      "type": "text",
+      "sample": "Fulfilment Records",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5": {
+      "type": "text",
+      "sample": "Finance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5_1": {
+      "type": "text",
+      "sample": "Payment Entry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5_2": {
+      "type": "text",
+      "sample": "Journal Entry",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5_3": {
+      "type": "text",
+      "sample": "Chart of Accounts",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s5_4": {
+      "type": "text",
+      "sample": "General Ledger",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6": {
+      "type": "text",
+      "sample": "Purchasing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_1": {
+      "type": "text",
+      "sample": "Purchase Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_2": {
+      "type": "text",
+      "sample": "Purchase Receipt",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_3": {
+      "type": "text",
+      "sample": "Purchase Invoice",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_4": {
+      "type": "text",
+      "sample": "Supplier",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s6_5": {
+      "type": "text",
+      "sample": "Material Request",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7": {
+      "type": "text",
+      "sample": "Staff & Shifts",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_1": {
+      "type": "text",
+      "sample": "Employee",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_2": {
+      "type": "text",
+      "sample": "Attendance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_3": {
+      "type": "text",
+      "sample": "Shift Assignment",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_4": {
+      "type": "text",
+      "sample": "Shift Type",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_5": {
+      "type": "text",
+      "sample": "Employee Checkin",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s7_6": {
+      "type": "text",
+      "sample": "Leave Application",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8": {
+      "type": "text",
+      "sample": "AI Insights",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8_1": {
+      "type": "text",
+      "sample": "Insight Records",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8_2": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8_3": {
+      "type": "text",
+      "sample": "Agent Conversation",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s8_4": {
+      "type": "text",
+      "sample": "Alert Settings",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_1": {
+      "type": "text",
+      "sample": "Branch Manager",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_2": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_3": {
+      "type": "text",
+      "sample": "Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_4": {
+      "type": "text",
+      "sample": "Floor",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_5": {
+      "type": "text",
+      "sample": "People",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_6": {
+      "type": "text",
+      "sample": "Finance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s9_7": {
+      "type": "text",
+      "sample": "Quality",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_1": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_2": {
+      "type": "text",
+      "sample": "Daywise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_3": {
+      "type": "text",
+      "sample": "Month Wise Sales",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_4": {
+      "type": "text",
+      "sample": "Item Wise Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_5": {
+      "type": "text",
+      "sample": "Employee Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s10_6": {
+      "type": "text",
+      "sample": "Unsettled Bills",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_0": {
+      "type": "text",
+      "sample": "Overview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_1": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_2": {
+      "type": "text",
+      "sample": "Restaurant",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_3": {
+      "type": "text",
+      "sample": "POS Profile",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_4": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_5": {
+      "type": "text",
+      "sample": "Menu Course",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_6": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_7": {
+      "type": "text",
+      "sample": "Report Settings",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_8": {
+      "type": "text",
+      "sample": "Feature Flags",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_9": {
+      "type": "text",
+      "sample": "Commission Settings",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_10": {
+      "type": "text",
+      "sample": "AI Settings",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_11": {
+      "type": "text",
+      "sample": "Branch Operating Schedule",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_12": {
+      "type": "text",
+      "sample": "Branch Operating Exception",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_13": {
+      "type": "text",
+      "sample": "Production Department",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_14": {
+      "type": "text",
+      "sample": "Ordering Device",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_15": {
+      "type": "text",
+      "sample": "Self Ordering Profile",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_16": {
+      "type": "text",
+      "sample": "Branch Stock Policy",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_17": {
+      "type": "text",
+      "sample": "Staff Discount Policy",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_s11_18": {
+      "type": "text",
+      "sample": "Fulfilment Posting Intents",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_notif_count": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_user_email": {
+      "type": "text",
+      "sample": "admin@example.com",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_navbar_search": {
+      "type": "text",
+      "sample": "Search or type a command",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "nav_navbar_shortcut": {
+      "type": "text",
+      "sample": "Ctrl+K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

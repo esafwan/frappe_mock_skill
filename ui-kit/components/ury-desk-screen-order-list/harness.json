@@ -1,0 +1,42 @@
+{
+  "id": "ury-desk-screen-order-list",
+  "name": "URY desk order list",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css",
+    "ury-v16/components/desk-views.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY desk Orders page as the POS Invoice list: 30px rows, status indicator badges from pos_invoice_list.js (Paid, Consolidated, Draft, Unpaid, Partly Paid), Customer / Company / Grand Total columns, quick filters from the doctype json.",
+    "Starting frame for order screens in the URY v16 desk; the variant shows the URY Order doctype list."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

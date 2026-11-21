@@ -1,0 +1,48 @@
+{
+  "component": "ury-desk-screen-report",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "revpash": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "report": "revpash"
+      },
+      "screenshot": "states/revpash.png",
+      "preview": "states/revpash.html",
+      "description": "RevPASH Report: Branch, From Date and To Date filters; Date, Total Revenue, No Of Seats, Working hours, RevPASH and Total RevPASH columns from revpash_report.py."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the screen composes captured list/form/report markup, read-only fields are shown inside the form"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no validation message is captured on this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the mock shows loaded data"
+    }
+  }
+}

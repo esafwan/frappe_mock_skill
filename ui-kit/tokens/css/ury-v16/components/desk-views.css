@@ -1,0 +1,18 @@
+/* T27: URY desk list / form / report screens. frappe-desk.css carries the real list, form and datatable rules; this file only pins the mock
+   (30px list rows, flow-positioned datatable rows, layout of the page body under the shell). */
+.ury-desk-page-body { overflow: hidden; }
+.ury-desk-page-body .page-body { height: 100%; overflow: hidden; }
+.ury-desk-page-body .list-row-container .list-row,
+.ury-desk-page-body .list-row-container .list-row-head { height: 30px; min-height: 30px; box-sizing: border-box; }
+.ury-desk-page-body .list-row-col.text-right { justify-content: flex-end; text-align: end; }
+.ury-desk-page-body .list-row-col { flex: 1 1 0; }
+.ury-desk-page-body .list-row-col.list-subject { flex: 0 0 280px; }
+.ury-desk-page-body .vrow { position: relative; top: auto; }
+.ury-desk-page-body .dt-scrollable { height: auto; overflow: visible; }
+.ury-desk-page-body .report-filters { padding-inline: 0; }
+.ury-desk-page-body .section-head .collapse-indicator svg { width: 14px; height: 14px; }
+.ury-desk-page-body .list-row .level-left,
+.ury-desk-page-body .list-row-head .level-left { flex: 1 1 0; min-width: 0; }
+.ury-desk-page-body .list-row .level-right,
+.ury-desk-page-body .list-row-head .level-right { flex: 0 0 210px; width: 210px; justify-content: flex-end; gap: 6px; }
+.ury-desk-page-body .list-row-activity { display: flex; align-items: center; gap: 8px; }

@@ -1,0 +1,42 @@
+{
+  "id": "ury-desk-screen-kot-list",
+  "name": "URY desk Kitchen Orders list",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css",
+    "ury-v16/components/desk-views.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY KOT list (workspace shortcut \"Kitchen Orders\"): ID subject, Order Status badge (Ready For Prepare, Served), Invoice and Date columns, Order Status quick filter.",
+    "Use for kitchen-order oversight scenes in the desk."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}
