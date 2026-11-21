@@ -1,0 +1,45 @@
+{
+  "id": "pos-attention-feed",
+  "name": "POS Act now and Needs attention feeds",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1392,
+    "h": 461.875
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "InsightFeed (Act now: Sparkles title, severity rail border-s-4 red/amber/blue, dismiss X) stacked over AttentionFeed (Needs Attention: title, count badge, rows with a 3px destructive or warning bar).",
+    "Top of the POS Dashboard. The needs-attention severities in Dashboard.tsx are only blocking (destructive) and warning."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1392,
+  "height": null,
+  "props": {
+    "insights": 2,
+    "attention": 3
+  },
+  "canvas": "hsl(var(--background))"
+}

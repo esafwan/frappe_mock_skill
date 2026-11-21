@@ -1,0 +1,54 @@
+{
+  "component": "pos-kpi-strip",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "with-hint": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hint": true
+      },
+      "screenshot": "states/with-hint.png",
+      "preview": "states/with-hint.html",
+      "description": "A stat carrying the optional 11.5px hint line under its value"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Stats still loading: 48px skeleton bar (the page shows animate-pulse; the capture is the static frame)"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "component": "pos-attention-feed",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "att_title": {
+      "type": "text",
+      "sample": "Needs Attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "att_count": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "att1_title": {
+      "type": "text",
+      "sample": "2 order(s) pending payment for over 15 minutes",
+      "maxLength": 74,
+      "where": "text",
+      "element": "text"
+    },
+    "att2_title": {
+      "type": "text",
+      "sample": "1 table(s) occupied for over 60 minutes",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "att3_title": {
+      "type": "text",
+      "sample": "1 POS session(s) left open from a previous day",
+      "maxLength": 74,
+      "where": "text",
+      "element": "text"
+    },
+    "act_title": {
+      "type": "text",
+      "sample": "Act now",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "act_count": {
+      "type": "text",
+      "sample": "2 things worth your attention",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    },
+    "act_empty": {
+      "type": "text",
+      "sample": "Nothing needs attention right now.",
+      "maxLength": 55,
+      "where": "text",
+      "element": "text"
+    },
+    "ins1_title": {
+      "type": "text",
+      "sample": "Hammour stock will run out before the dinner peak",
+      "maxLength": 79,
+      "where": "text",
+      "element": "text"
+    },
+    "ins1_body": {
+      "type": "text",
+      "sample": "At the current sell rate only 3 portions remain for tonight.",
+      "maxLength": 96,
+      "where": "text",
+      "element": "text"
+    },
+    "ins1_branch": {
+      "type": "text",
+      "sample": "Downtown",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ins2_title": {
+      "type": "text",
+      "sample": "Kitchen ticket time is above the usual",
+      "maxLength": 61,
+      "where": "text",
+      "element": "text"
+    },
+    "ins2_body": {
+      "type": "text",
+      "sample": "Average ticket time is 38 min against a usual 31 min.",
+      "maxLength": 85,
+      "where": "text",
+      "element": "text"
+    },
+    "ins2_branch": {
+      "type": "text",
+      "sample": "Downtown",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

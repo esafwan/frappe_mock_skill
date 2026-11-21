@@ -1,0 +1,237 @@
+{
+  "component": "pos-dash-panels",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "fl_title": {
+      "type": "text",
+      "sample": "Floor Load",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w1_name": {
+      "type": "text",
+      "sample": "Sara Khan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w1_n": {
+      "type": "text",
+      "sample": "5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w2_name": {
+      "type": "text",
+      "sample": "Omar Haddad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w2_n": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w3_name": {
+      "type": "text",
+      "sample": "Layla Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w3_n": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w4_name": {
+      "type": "text",
+      "sample": "Yusuf Karim",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w4_n": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "fl_empty": {
+      "type": "text",
+      "sample": "No tables assigned yet",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "os_title": {
+      "type": "text",
+      "sample": "Open Sessions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "os_meta": {
+      "type": "text",
+      "sample": "3 open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "os_view_all": {
+      "type": "text",
+      "sample": "View all",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "os_empty": {
+      "type": "text",
+      "sample": "All sessions closed",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "e1_user": {
+      "type": "text",
+      "sample": "Sara Khan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "e1_when": {
+      "type": "text",
+      "sample": "5h 12m ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "e2_user": {
+      "type": "text",
+      "sample": "Omar Haddad",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "e2_when": {
+      "type": "text",
+      "sample": "3h 40m ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "e3_user": {
+      "type": "text",
+      "sample": "Layla Nasser",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "e3_when": {
+      "type": "text",
+      "sample": "48m ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sb_title": {
+      "type": "text",
+      "sample": "Shift Brief",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sb_badge": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sb_text": {
+      "type": "text",
+      "sample": "AI shift summaries will appear here once connected.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "text"
+    },
+    "nt_title": {
+      "type": "text",
+      "sample": "Recent Notifications",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "nt_empty": {
+      "type": "text",
+      "sample": "No recent notifications",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "n1_msg": {
+      "type": "text",
+      "sample": "A guest has asked for the bill",
+      "maxLength": 48,
+      "where": "text",
+      "element": "text"
+    },
+    "n1_time": {
+      "type": "text",
+      "sample": "just now",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n2_msg": {
+      "type": "text",
+      "sample": "Order # 2026-00142 Delayed",
+      "maxLength": 42,
+      "where": "text",
+      "element": "text"
+    },
+    "n2_time": {
+      "type": "text",
+      "sample": "6 min ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n3_msg": {
+      "type": "text",
+      "sample": "Draft sales plan for 2026-11-22 is ready for review",
+      "maxLength": 82,
+      "where": "text",
+      "element": "text"
+    },
+    "n3_time": {
+      "type": "text",
+      "sample": "1 hr ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n4_msg": {
+      "type": "text",
+      "sample": "Today's sales plan is locked for production",
+      "maxLength": 69,
+      "where": "text",
+      "element": "text"
+    },
+    "n4_time": {
+      "type": "text",
+      "sample": "3 hr ago",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

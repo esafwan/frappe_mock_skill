@@ -1,0 +1,45 @@
+{
+  "id": "pos-kpi-strip",
+  "name": "POS KPI strip",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1392,
+    "h": 102.25
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The four-stat strip at the top of the POS Dashboard: Today's Sales, Orders Today, Avg. Order Value and Active Tables, 11px label over a 25px value, hairline dividers, bottom border with 16px padding.",
+    "Directly under the Needs Attention feed. Currency stats are currency slots; Active Tables is an LTR-isolated fraction."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1392,
+  "height": null,
+  "props": {
+    "loading": false,
+    "hint": false
+  },
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,237 @@
+{
+  "component": "pos-service-line",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "sl_title": {
+      "type": "text",
+      "sample": "Service Line",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_over_n": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_over_label": {
+      "type": "text",
+      "sample": "over time",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_tracked": {
+      "type": "text",
+      "sample": "8 tables tracked",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_warn": {
+      "type": "text",
+      "sample": "2 tables running over time — check on them before the next fire.",
+      "maxLength": 103,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_loading": {
+      "type": "text",
+      "sample": "Loading…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sl_empty": {
+      "type": "text",
+      "sample": "No tables seated yet",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "st_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_seated": {
+      "type": "text",
+      "sample": "Seated",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_fired": {
+      "type": "text",
+      "sample": "Fired",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_served": {
+      "type": "text",
+      "sample": "Served",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_over": {
+      "type": "text",
+      "sample": "Over time",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_open": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_seated": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_fired": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_served": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c_over": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_name": {
+      "type": "text",
+      "sample": "Table 4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_min": {
+      "type": "text",
+      "sample": "72",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_name": {
+      "type": "text",
+      "sample": "Table 9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_min": {
+      "type": "text",
+      "sample": "64",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_name": {
+      "type": "text",
+      "sample": "Table 2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_min": {
+      "type": "text",
+      "sample": "48",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_name": {
+      "type": "text",
+      "sample": "Table 7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_min": {
+      "type": "text",
+      "sample": "41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_name": {
+      "type": "text",
+      "sample": "Table 11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_min": {
+      "type": "text",
+      "sample": "33",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_name": {
+      "type": "text",
+      "sample": "Table 5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_min": {
+      "type": "text",
+      "sample": "26",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_name": {
+      "type": "text",
+      "sample": "Table 3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_min": {
+      "type": "text",
+      "sample": "12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_name": {
+      "type": "text",
+      "sample": "Table 8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_min": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

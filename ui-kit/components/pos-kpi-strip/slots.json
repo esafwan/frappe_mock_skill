@@ -1,0 +1,69 @@
+{
+  "component": "pos-kpi-strip",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "k1_label": {
+      "type": "text",
+      "sample": "Today's Sales",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k1_value": {
+      "type": "currency",
+      "sample": "AED 18,420.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k2_label": {
+      "type": "text",
+      "sample": "Orders Today",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k2_value": {
+      "type": "text",
+      "sample": "142",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k3_label": {
+      "type": "text",
+      "sample": "Avg. Order Value",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "k3_value": {
+      "type": "currency",
+      "sample": "AED 129.72",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k4_label": {
+      "type": "text",
+      "sample": "Active Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k4_value": {
+      "type": "text",
+      "sample": "14 / 22",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k2_hint": {
+      "type": "text",
+      "sample": "vs usual 128",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

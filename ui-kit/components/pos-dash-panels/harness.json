@@ -1,0 +1,44 @@
+{
+  "id": "pos-dash-panels",
+  "name": "POS dashboard right rail",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 340,
+    "h": 903.5
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-dashboard.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "The 340px right column: Floor Load (primary bars per waiter), Open Sessions (gray rows and View all link), Shift Brief (HUF badge) and Recent Notifications (divided list).",
+    "Right side of the Dashboard main grid; mirrors to the left in RTL."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 340,
+  "height": null,
+  "props": {
+    "view": "ready"
+  },
+  "canvas": "hsl(var(--background))"
+}
