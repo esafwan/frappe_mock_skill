@@ -40939,3 +40939,16 @@ body.dt-resize {
 .ury-desk-page-body .grid-row > .data-row > .col:last-child { flex: 0 0 40px; min-width: 40px; }
 .ury-desk-page-body .dt-cell input[type="checkbox"]::after, .ury-desk-page-body .dt-cell input[type="checkbox"]::before { content: none; }
 .ury-desk-page-body .dt-cell--col-0 .dt-cell__content { font-size: 0; }
+/* fix round 2: report datatable follows document direction; header band ends with the last column; filter bar aligned with table */
+.ury-desk-page-body .datatable { width: max-content; max-width: 100%; }
+.ury-desk-page-body .dt-header, .ury-desk-page-body .dt-header > div { width: max-content; }
+.ury-desk-page-body .dt-cell:first-child { border-left: 0; border-inline-start: 1px solid var(--dt-border-color, #d1d8dd); }
+.ury-desk-page-body .dt-cell:last-child, .ury-desk-page-body .dt-cell--header:last-child { border-right: 0; border-inline-end: 1px solid var(--dt-border-color, #d1d8dd); }
+.ury-desk-page-body .dt-cell--sticky { left: auto; inset-inline-start: 0; }
+.ury-desk-page-body .dt-cell--sticky-last::after { right: auto; inset-inline-end: -1px; }
+.ury-desk-page-body .dt-cell--header .dt-cell__content { padding-right: 0; padding-inline: 0.5rem 1rem; }
+.ury-desk-page-body .report-view .frappe-list, .ury-desk-page-body .report-view .report-filters { padding-inline: 15px; }
+.ury-desk-page-body .grid-body input[type="checkbox"] { margin: 0; }
+.ury-desk-page-body .report-view .frappe-list { padding-inline: 0; }
+.ury-desk-page-body .report-view .datatable-wrapper, .ury-desk-page-body .report-view .result { padding-inline: 0; margin-inline: 0; }
+.ury-desk-page-body .datatable { max-width: none; }

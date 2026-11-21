@@ -40,19 +40,19 @@ const lbl = (f, en, ar) => T('l_' + f, en, ar);
 // ---- page head (replaces the shell's empty head) ---------------------------------------------------------------------------------------------
 const btn = (cls, label, o = {}) => `<button class="es-button ${cls}" type="button"${o.variant ? ` data-variant="${o.variant}"` : ''}><span class="es-spinner" aria-hidden="true"></span>${o.icon ? I(o.icon) : ''}<span class="es-button__label">${label}</span>${o.caret ? I('ChevronDown') : ''}</button>`;
 const iconBtn = (name) => `<button class="es-button icon-btn menu-more-button" type="button" data-icon-button="true">${I(name)}</button>`;
-const headActions = (kind) => {
-  if (kind === 'list') return `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><span class="page-icon-group"><button class="text-muted btn btn-default icon-btn">${I('RotateCcw')}</button></span><div class="menu-btn-group">${iconBtn('MoreVertical')}</div>${btn('primary-action', T('h_add', 'Add POS Invoice', 'إضافة فاتورة نقطة بيع'), { variant: 'solid', icon: 'Plus' })}</div></div></div>`;
+const headActions = (kind, addEn = 'Add POS Invoice', addAr = 'إضافة فاتورة نقطة بيع') => {
+  if (kind === 'list') return `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><span class="page-icon-group"><button class="text-muted btn btn-default icon-btn">${I('RotateCcw')}</button></span><div class="menu-btn-group">${iconBtn('MoreVertical')}</div>${btn('primary-action', T('h_add', addEn, addAr), { variant: 'solid', icon: 'Plus' })}</div></div></div>`;
   if (kind === 'report') return `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><div class="menu-btn-group">${btn('', T('h_menu', 'Menu', 'القائمة'), { caret: true })}</div>${btn('primary-action', T('h_refresh', 'Refresh', 'تحديث'), { variant: 'solid' })}</div></div></div>`;
   return `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><span class="page-icon-group"><button class="text-muted btn btn-default prev-doc icon-btn">${I('ChevronLeft')}</button><button class="text-muted btn btn-default next-doc icon-btn">${I('ChevronRight')}</button></span><div class="menu-btn-group">${iconBtn('MoreVertical')}</div>${btn('primary-action', T('h_save', 'Save', 'حفظ'), { variant: 'solid' })}</div></div></div>`;
 };
 const crumbs = (items, status) => `<ol>${items.map((c, i) => (i < items.length - 1 ? `<li><a class="es-breadcrumbs__item" href="#"><span class="es-breadcrumbs__label">${c}</span></a></li>` : `<li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">${c}</span></span></li>`)).join('')}</ol>`;
 const badge = (theme, text, cls = '') => `<span class="es-badge${cls ? ' ' + cls : ''}" data-theme="${theme}"><span class="es-badge__label">${text}</span></span>`;
 let CURID = '';
-const page = (active, kind, crumbList, mainHtml, pill) => {
+const page = (active, kind, crumbList, mainHtml, pill, add) => {
   let h = deskShell(active, `<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main">${mainHtml}</div></div></div></div>`, navV, { id: CURID });
   h = h.replace(/<ol>.*?<\/ol>/, crumbs(crumbList));
   if (pill) h = h.replace('</nav></div></div></div>', `</nav>${badge(pill[0], pill[1], 'page-indicator-pill')}</div></div></div>`);
-  return h.replace('<div class="align-center flex standard-items-section"></div>', headActions(kind));
+  return h.replace('<div class="align-center flex standard-items-section"></div>', headActions(kind, ...(add || [])));
 };
 
 // ---- list view ---------------------------------------------------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ const formLayout = (tabHtml, body) => `<div class="layout-main-section-wrapper">
 const fieldTable = (f, label, ar, cols, rows) => {
   const w = (c) => `flex: 1 0 ${c.w}px; width: ${c.w}px;`;
   const head = `<div class="grid-heading-row"><div class="grid-row"><div class="data-row row m-0"><div class="row-check sortable-handle col"><input type="checkbox" class="grid-row-check" tabindex="-1" disabled></div><div class="row-index sortable-handle grid-static-col col"><span>${T('no_col', 'No.', 'م')}</span></div>${cols.map((c) => `<div class="col grid-static-col${c.right ? ' text-right' : ''}" style="${w(c)}" data-fieldname="${c.f}"><div class="static-area ellipsis${c.reqd ? ' reqd' : ''}">${lbl(c.f, c.label, c.ar)}</div></div>`).join('')}<div class="col grid-static-col pointer"><a>${I('Pencil')}</a></div></div></div></div>`;
-  const body = rows.map((r, i) => `<div class="grid-row" data-idx="${i + 1}"><div class="data-row row m-0"><div class="row-check sortable-handle col"><input type="checkbox" class="grid-row-check" tabindex="-1" disabled></div><div class="row-index sortable-handle grid-static-col col"><span>${T('gi_' + i, String(i + 1))}</span></div>${cols.map((c, j) => `<div class="col grid-static-col${c.right ? ' text-right' : ''}" style="${w(c)}" data-fieldname="${c.f}"><div class="static-area ellipsis">${c.money ? M(`g_${c.f}_${i}`, r[j].amount, r[j].ar) : T(`g_${c.f}_${i}`, r[j].en, r[j].ar)}</div></div>`).join('')}<div class="col"><div class="btn-open-row"><a>${I('ExternalLink')}</a></div></div></div></div>`).join('');
+  const body = rows.map((r, i) => `<div class="grid-row" data-idx="${i + 1}"><div class="data-row row m-0"><div class="row-check sortable-handle col"><input type="checkbox" class="grid-row-check" tabindex="-1" disabled></div><div class="row-index sortable-handle grid-static-col col"><span>${T('gi_' + i, String(i + 1))}</span></div>${cols.map((c, j) => `<div class="col grid-static-col${c.right ? ' text-right' : ''}" style="${w(c)}" data-fieldname="${c.f}"><div class="static-area ellipsis">${c.check ? `<input type="checkbox"${r[j].en === '1' ? ' checked' : ''} disabled>` : c.money ? M(`g_${c.f}_${i}`, r[j].amount, r[j].ar) : T(`g_${c.f}_${i}`, r[j].en, r[j].ar)}</div></div>`).join('')}<div class="col"><div class="btn-open-row"><a>${I('ExternalLink')}</a></div></div></div></div>`).join('');
   return `<div class="frappe-control form-group" data-fieldtype="Table" data-fieldname="${f}" data-ui="ury-desk-screen-form.table"><div class="grid-field"><label class="control-label">${lbl(f, label, ar)}</label><div class="form-grid-container"><div class="form-grid">${head}<div class="grid-body"><div class="rows">${body}</div></div></div></div><div class="grid-footer"><div class="grid-buttons"><button class="es-button grid-add-row" type="button"><span class="es-button__label">${T('add_row', 'Add Row', 'إضافة صف')}</span></button></div></div></div></div>`;
 };
 
@@ -148,6 +148,13 @@ const orderForm = (tab) => {
   }
   return formLayout(tabs(orderTabs, tab), body);
 };
+const puTabs = [{ f: 'tab_general', label: 'General', ar: 'عام' }, { f: 'tab_2_tab', label: 'Operations', ar: 'العمليات' }, { f: 'tab_devices', label: 'Devices and KDS', ar: 'الأجهزة وشاشة المطبخ' }];
+// URY Production Unit (devices tab): the only form that owns the URY Printer Settings child table (field printer_settings, in_list_view: bill, printer).
+const productionUnitForm = () => formLayout(tabs(puTabs, 'tab_devices'),
+  wideSection(lbl('printer_info_section', 'Printer info', 'معلومات الطابعة'), fieldTable('printer_settings', 'Printers', 'الطابعات',
+    [{ f: 'bill', label: 'Bill', ar: 'فاتورة', w: 120, check: true }, { f: 'printer', label: 'Printer', ar: 'طابعة', w: 320 }],
+    [[{ en: '1', ar: '1' }, { en: 'Kitchen Printer', ar: 'طابعة المطبخ' }], [{ en: '0', ar: '0' }, { en: 'Bar Printer', ar: 'طابعة البار' }]]))
+  + section(lbl('section_break_sevj', 'KDS Settings', 'إعدادات شاشة المطبخ'), [[{ t: 'Check', f: 'enable_order_type_wise_display_on_mosaic', label: 'Enable order type wise display on mosaic', ar: 'تمكين العرض حسب نوع الطلب على الشاشة' }], []]));
 const tableTabs = [{ f: 'table_info_tab', label: 'Table Info', ar: 'معلومات الطاولة' }, { f: 'active_info_tab', label: 'Active Info', ar: 'معلومات نشطة' }];
 const tableForm = (tab) => {
   const body = tab === 'active_info_tab'
@@ -168,14 +175,14 @@ const repFilter = (f, label, ar, type, value) => {
 };
 // cols: [{f,label,ar,w,right,money}] rows: [[{en,ar}|{amount,ar}]]
 const datatable = (cols, rows) => {
-  const hdr = `<div class="dt-row dt-row-header" data-is-header="1"><div class="dt-cell dt-cell--col-0 dt-cell--header dt-cell--sticky dt-cell--sticky-top"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--header dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;"><span class="sort-indicator"> </span></div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2} dt-cell--header"><div class="dt-cell__content" style="width: ${c.w}px;${c.right ? ' text-align: right;' : ''}">${lbl('c_' + c.f, c.label, c.ar)}<span class="sort-indicator"> </span><span class="dt-cell__resize-handle"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle">${I('ChevronDown')}</div></div></div></div>`).join('')}</div>`;
-  const body = rows.map((r, ri) => `<div class="dt-row dt-row-${ri} vrow"><div class="dt-cell dt-cell--col-0 dt-cell--sticky"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--sticky dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;">${T('ri_' + ri, String(ri + 1))}</div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2}"><div class="dt-cell__content" style="width: ${c.w}px;">${r[i] === null ? '' : c.money ? `<div style="text-align: right">${M(`rv_${c.f}_${ri}`, r[i].amount, r[i].ar)}</div>` : c.right ? `<div style="text-align: right">${T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div>` : T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div></div>`).join('')}</div>`).join('');
-  return `<div class="frappe-list"><div class="result"><div class="datatable-wrapper"><div class="datatable" dir="ltr"><div class="dt-header"><div>${hdr}</div></div><div class="dt-scrollable">${body}</div><div class="dt-footer"></div></div></div></div></div>`;
+  const hdr = `<div class="dt-row dt-row-header" data-is-header="1"><div class="dt-cell dt-cell--col-0 dt-cell--header dt-cell--sticky dt-cell--sticky-top"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--header dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;"><span class="sort-indicator"> </span></div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2} dt-cell--header"><div class="dt-cell__content" style="width: ${c.w}px;${c.right ? ' text-align: end;' : ''}">${lbl('c_' + c.f, c.label, c.ar)}<span class="sort-indicator"> </span><span class="dt-cell__resize-handle"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle">${I('ChevronDown')}</div></div></div></div>`).join('')}</div>`;
+  const body = rows.map((r, ri) => `<div class="dt-row dt-row-${ri} vrow"><div class="dt-cell dt-cell--col-0 dt-cell--sticky"><div class="dt-cell__content" style="width: 32px;"><input type="checkbox"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--sticky dt-cell--sticky-last"><div class="dt-cell__content" style="width: 40px;">${T('ri_' + ri, String(ri + 1))}</div></div>${cols.map((c, i) => `<div class="dt-cell dt-cell--col-${i + 2}"><div class="dt-cell__content" style="width: ${c.w}px;">${r[i] === null ? '' : c.money ? `<div style="text-align: end">${M(`rv_${c.f}_${ri}`, r[i].amount, r[i].ar)}</div>` : c.right ? `<div style="text-align: end">${T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div>` : T(`rv_${c.f}_${ri}`, r[i].en, r[i].ar)}</div></div>`).join('')}</div>`).join('');
+  return `<div class="frappe-list"><div class="result"><div class="datatable-wrapper"><div class="datatable"><div class="dt-header"><div>${hdr}</div></div><div class="dt-scrollable">${body}</div><div class="dt-footer"></div></div></div></div></div>`;
 };
 const reportPage = (r) => {
   const filters = r === 'todays-sales'
-    ? repFilter('branch', 'Branch', 'فرع', 'Link', { en: 'Downtown', ar: 'وسط المدينة' })
-    : repFilter('branch', 'Branch', 'فرع', 'Link', { en: 'Downtown', ar: 'وسط المدينة' }) + repFilter('start_date', 'From Date', 'من تاريخ', 'Date', { en: '2026-11-15', ar: '15-11-2026' }) + repFilter('end_date', 'To Date', 'إلى تاريخ', 'Date', { en: '2026-11-21', ar: '21-11-2026' });
+    ? repFilter('branch', 'Branch', 'فرع', 'Link')
+    : repFilter('branch', 'Branch', 'فرع', 'Link') + repFilter('start_date', 'From Date', 'من تاريخ', 'Date', { en: '2026-11-15', ar: '15-11-2026' }) + repFilter('end_date', 'To Date', 'إلى تاريخ', 'Date', { en: '2026-11-21', ar: '21-11-2026' });
   const bar = `<div class="page-form flex list-page-form report-filters"><div class="standard-filter-section flex">${filters}</div></div>`;
   let table;
   if (r === 'todays-sales') {
@@ -204,21 +211,22 @@ const wrapRender = (fn) => (v, p) => fn(p || {});
 
 export const specs = [
   mk('ury-desk-screen-order-list', 'URY desk order list', wrapRender((p) => {
-    if (p.doctype === 'URY Order') return page('Orders', 'list', [T('crumb_uo', 'URY Order', 'طلب')], uryOrderList());
+    if (p.doctype === 'URY Order') return page('Orders', 'list', [T('crumb_uo', 'URY Order', 'طلب')], uryOrderList(), null, ['Add URY Order', 'إضافة طلب']);
     return page('Orders', 'list', [T('crumb_pi', 'POS Invoice', 'فاتورة نقطة البيع')], posInvoiceList());
   }), {
     'ury-order': { props: { doctype: 'URY Order' }, describe: 'URY Order list: ID subject with Customer Name and Pax (in_list_view) and the ID and Customer Name quick filters.' },
   }, ['URY desk Orders page as the POS Invoice list: 30px rows, status indicator badges from pos_invoice_list.js (Paid, Consolidated, Draft, Unpaid, Partly Paid), Customer / Company / Grand Total columns, quick filters from the doctype json.',
     'Starting frame for order screens in the URY v16 desk; the variant shows the URY Order doctype list.']),
-  mk('ury-desk-screen-kot-list', 'URY desk Kitchen Orders list', wrapRender((p) => page('Kitchen Orders', 'list', [T('crumb_kot', 'URY KOT', 'أمر المطبخ')], kotList(p.served))), {
+  mk('ury-desk-screen-kot-list', 'URY desk Kitchen Orders list', wrapRender((p) => page('Kitchen Orders', 'list', [T('crumb_kot', 'URY KOT', 'أمر المطبخ')], kotList(p.served), null, ['Add URY KOT', 'إضافة أمر المطبخ'])), {
     served: { props: { served: true }, describe: 'Order Status filter on Served: only served KOTs remain.' },
   }, ['URY KOT list (workspace shortcut "Kitchen Orders"): ID subject, Order Status badge (Ready For Prepare, Served), Invoice and Date columns, Order Status quick filter.',
     'Use for kitchen-order oversight scenes in the desk.']),
-  mk('ury-desk-screen-order-form', 'URY desk order form', wrapRender((p) => page('Orders', 'form', [T('crumb_uo', 'URY Order', 'طلب'), T('crumb_ord', 'URY-ORD-0038', 'URY-ORD-0038')], orderForm(p.tab || 'order_tab'), p.unsaved ? ['red', T('pill_ns', 'Not Saved', 'لم يتم الحفظ')] : null)), {
+  mk('ury-desk-screen-order-form', 'URY desk order form', wrapRender((p) => p.unit ? page('Operate', 'form', [T('crumb_pu', 'URY Production Unit', 'وحدة الإنتاج'), T('crumb_pu1', 'Main Kitchen', 'المطبخ الرئيسي')], productionUnitForm()) : page('Orders', 'form', [T('crumb_uo', 'URY Order', 'طلب'), T('crumb_ord', 'URY-ORD-0038', 'URY-ORD-0038')], orderForm(p.tab || 'order_tab'), p.unsaved ? ['red', T('pill_ns', 'Not Saved', 'لم يتم الحفظ')] : null)), {
     customer: { props: { tab: 'customer_tab' }, describe: 'Customer tab: Customer Name and Pax (both required) and the Favorite Item section.' },
     unsaved: { props: { unsaved: true }, describe: 'Unsaved edits: the red Not Saved indicator pill after the breadcrumb.' },
+    'production-unit': { props: { unit: true }, describe: 'URY Production Unit form, Devices and KDS tab: the URY Printer Settings child table (Bill, Printer) as a field-table. URY Order has no such field, so the child table is shown on the doctype that owns it.' },
   }, ['URY Order form on the Order tab: Add Item, Grand Total (read only), Additional Details, the Items field-table (URY Order Item: Item, Item Name, Qty, Rate, Comments) and the Waiter / POS Profile / Cashier read-only links.',
-    'The URY Printer Settings child table is a field of URY Production Unit and URY Room, not of URY Order, so it is not drawn here.']),
+    'The URY Printer Settings child table is a field of URY Production Unit (not of URY Order), so it is drawn in the production-unit variant.']),
   mk('ury-desk-screen-table-form', 'URY desk table form', wrapRender((p) => page('Tables', 'form', [T('crumb_ut', 'URY Table', 'طاولة'), T('crumb_t1', 'T1', 'T1')], tableForm(p.tab || 'table_info_tab'), p.unsaved ? ['red', T('pill_ns', 'Not Saved', 'لم يتم الحفظ')] : null)), {
     'active-info': { props: { tab: 'active_info_tab' }, describe: 'Active Info tab: Occupied, Latest Invoice Time, Table Shape, Merged With and the Layout Position section.' },
     unsaved: { props: { unsaved: true }, describe: 'Unsaved edits: the red Not Saved indicator pill after the breadcrumb.' },

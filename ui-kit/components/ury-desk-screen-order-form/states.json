@@ -38,6 +38,16 @@
       "preview": "states/unsaved.html",
       "description": "Unsaved edits: the red Not Saved indicator pill after the breadcrumb."
     },
+    "production-unit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unit": true
+      },
+      "screenshot": "states/production-unit.png",
+      "preview": "states/production-unit.html",
+      "description": "URY Production Unit form, Devices and KDS tab: the URY Printer Settings child table (Bill, Printer) as a field-table. URY Order has no such field, so the child table is shown on the doctype that owns it."
+    },
     "disabled": {
       "applicable": false,
       "reason": "not applicable: the screen composes captured list/form/report markup, read-only fields are shown inside the form"
