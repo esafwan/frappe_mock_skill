@@ -1,0 +1,72 @@
+{
+  "component": "ury-kiosk-screen-landscape-cart",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "single-item": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "lines": 1
+      },
+      "values": {
+        "count_label": "1 item",
+        "cart_total": {
+          "type": "currency",
+          "amount": 16,
+          "currency": "AED",
+          "sample": "AED 16.00"
+        }
+      },
+      "screenshot": "states/single-item.png",
+      "preview": "states/single-item.html",
+      "description": "One line: the count label is singular (\"1 item\")."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "lines": 0
+      },
+      "values": {
+        "count_label": "0 items",
+        "cart_total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "Empty cart: \"Your cart is empty.\" with a \"Browse the menu\" button; Proceed to checkout disabled (opacity-50)."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only the disabled buttons shown as variants"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no distinct error state in this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state in this screen"
+    }
+  }
+}

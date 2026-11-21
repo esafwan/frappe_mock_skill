@@ -1,0 +1,44 @@
+{
+  "id": "ury-kiosk-screen-landscape-cart",
+  "name": "URY landscape kiosk cart",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1920,
+    "h": 1080
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-landscape.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Full-screen cart under the repeated kiosk header: CartPage with a bordered \"← Back to menu\" button, centred \"Your Cart\" title, bordered line cards with round −/+ steppers, then the item count, total and a full-width \"Proceed to checkout\" button.",
+    "The kiosk passes className=\"h-full\", which drops CartPage's flex-col, so the footer follows the list instead of sitting at the bottom (faithful to the source). Text uses the shared screen's text-sm at kiosk size. Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1920,
+  "height": 1080,
+  "props": {
+    "lines": 2
+  },
+  "canvas": "hsl(var(--background))"
+}

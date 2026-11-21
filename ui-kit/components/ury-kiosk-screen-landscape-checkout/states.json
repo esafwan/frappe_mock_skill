@@ -1,0 +1,125 @@
+{
+  "component": "ury-kiosk-screen-landscape-checkout",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "pay-online-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": "online"
+      },
+      "screenshot": "states/pay-online-selected.png",
+      "preview": "states/pay-online-selected.html",
+      "description": "Pay Online selected (border-primary, bg-primary/10): the action button becomes \"Pay Online\"."
+    },
+    "paying-online": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": "online",
+        "paying": true
+      },
+      "screenshot": "states/paying-online.png",
+      "preview": "states/paying-online.html",
+      "description": "Online payment starting: \"Starting payment…\", button disabled."
+    },
+    "bill-requested": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": "bill",
+        "billRequested": true
+      },
+      "screenshot": "states/bill-requested.png",
+      "preview": "states/bill-requested.html",
+      "description": "Bill already requested: the bill option is disabled and reads \"Bill requested — staff notified\"."
+    },
+    "payment-request": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "sel": "online",
+        "note": true
+      },
+      "screenshot": "states/payment-request.png",
+      "preview": "states/payment-request.html",
+      "description": "A payment request without a URL was created: the muted text-xs note appears under the options."
+    },
+    "placing": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "placing": true
+      },
+      "screenshot": "states/placing.png",
+      "preview": "states/placing.html",
+      "description": "Order being placed: \"Placing order…\", button disabled."
+    },
+    "counter-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "caps": {
+          "counter": true
+        }
+      },
+      "screenshot": "states/counter-only.png",
+      "preview": "states/counter-only.html",
+      "description": "Only pay_at_counter_enabled: one option, preselected."
+    },
+    "online-only": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "caps": {
+          "online": true
+        }
+      },
+      "screenshot": "states/online-only.png",
+      "preview": "states/online-only.html",
+      "description": "Only customer_payment_enabled: one option, nothing preselected, the action stays \"Place Order\"."
+    },
+    "no-payment-options": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "caps": {}
+      },
+      "screenshot": "states/no-payment-options.png",
+      "preview": "states/no-payment-options.html",
+      "description": "No payment capability: the picker is not rendered and Place Order simply submits the cart."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only the disabled buttons shown as variants"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no distinct error state in this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state in this screen"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state in this screen"
+    }
+  }
+}

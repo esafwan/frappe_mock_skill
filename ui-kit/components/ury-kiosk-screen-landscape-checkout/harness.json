@@ -1,0 +1,42 @@
+{
+  "id": "ury-kiosk-screen-landscape-checkout",
+  "name": "URY landscape kiosk checkout",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1920,
+    "h": 1080
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-landscape.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Checkout under the repeated kiosk header: \"Order Summary\" card with the lines, item count and total, a \"Payment Method\" card with full-width option buttons (Pay Online, Pay at Counter, Request Bill) and a full-width primary action.",
+    "The shared screen is not rescaled for the kiosk, so the cards span the whole 1920px width (mx-4). Which options appear depends on the capabilities. Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1920,
+  "height": 1080,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

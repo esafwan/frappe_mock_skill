@@ -1,0 +1,42 @@
+{
+  "id": "ury-kiosk-screen-landscape-status",
+  "name": "URY landscape kiosk order status",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1920,
+    "h": 1080
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-landscape.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Order confirmation under the repeated kiosk header: \"Order confirmed\", thanks line, a muted pickup-code card (3xl bold code), order / bill status rows (max-w-xs) and a Done button.",
+    "Shown after a successful submit; the post-submit screen is a plain column at 20px/14px type with no kitchen-stage data (none exists in the backend). Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1920,
+  "height": 1080,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

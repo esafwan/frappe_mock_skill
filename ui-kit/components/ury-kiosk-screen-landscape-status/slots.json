@@ -1,0 +1,125 @@
+{
+  "component": "ury-kiosk-screen-landscape-status",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Order for Pickup",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "new_order": {
+      "type": "text",
+      "sample": "New Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "confirmed": {
+      "type": "text",
+      "sample": "Order confirmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "thanks": {
+      "type": "text",
+      "sample": "Thanks — your order has been sent to the restaurant.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "text"
+    },
+    "pickup_label": {
+      "type": "text",
+      "sample": "Pickup code",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pickup_code": {
+      "type": "text",
+      "sample": "K-482",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_status_label": {
+      "type": "text",
+      "sample": "Order status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_status": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill_status_label": {
+      "type": "text",
+      "sample": "Bill status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill_status": {
+      "type": "text",
+      "sample": "Not billed yet",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "requests_label": {
+      "type": "text",
+      "sample": "Open service requests",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_type": {
+      "type": "text",
+      "sample": "Water",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_status": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_type": {
+      "type": "text",
+      "sample": "Cutlery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r2_status": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_more": {
+      "type": "text",
+      "sample": "Add more items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "done": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

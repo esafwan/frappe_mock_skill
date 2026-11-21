@@ -1,0 +1,72 @@
+{
+  "component": "ury-kiosk-screen-landscape-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "options": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "end": true,
+        "sel": [
+          "v1",
+          "a1",
+          "a3"
+        ]
+      },
+      "values": {
+        "qty": "2"
+      },
+      "screenshot": "states/options.png",
+      "preview": "states/options.html",
+      "description": "Panel scrolled to its end: variant and two add-ons selected (border-primary, bg-primary/10), quantity 2, \"Add to cart\"."
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "loading"
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "get_customer_product in flight: \"Loading item...\" with an underlined Back."
+    },
+    "not-found": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "state": "error"
+      },
+      "screenshot": "states/not-found.png",
+      "preview": "states/not-found.html",
+      "description": "Lookup failed: destructive \"Item not found.\" and a \"Back to menu\" pill button."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only the disabled buttons shown as variants"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no distinct error state in this screen"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state in this screen"
+    }
+  }
+}

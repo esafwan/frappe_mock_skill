@@ -1,0 +1,130 @@
+{
+  "component": "ury-kiosk-screen-landscape-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "category-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cat": 2
+      },
+      "screenshot": "states/category-active.png",
+      "preview": "states/category-active.html",
+      "description": "A course chip is active (bg-primary) and the grid shows only that course."
+    },
+    "with-order": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "order": true,
+        "pay": true,
+        "bill": true
+      },
+      "screenshot": "states/with-order.png",
+      "preview": "states/with-order.html",
+      "description": "Running order: the cart panel adds \"Your order so far\", Pay Online and Request Bill."
+    },
+    "empty-cart": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cart": 0
+      },
+      "values": {
+        "count_label": "0 items",
+        "cart_total": {
+          "type": "currency",
+          "amount": 0,
+          "currency": "AED",
+          "sample": "AED 0.00"
+        }
+      },
+      "screenshot": "states/empty-cart.png",
+      "preview": "states/empty-cart.html",
+      "description": "Empty cart: hint text, no \"In cart\" badges, Place Order disabled (opacity-50)."
+    },
+    "submitting": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "submitting": true
+      },
+      "screenshot": "states/submitting.png",
+      "preview": "states/submitting.html",
+      "description": "Order being submitted: \"Placing order…\", button disabled."
+    },
+    "sold-out": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "soldout": 0
+      },
+      "screenshot": "states/sold-out.png",
+      "preview": "states/sold-out.html",
+      "description": "Availability gating: the first card is opacity-50 with a destructive \"Sold out\" reason."
+    },
+    "no-results": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "query": true,
+        "empty": true
+      },
+      "screenshot": "states/no-results.png",
+      "preview": "states/no-results.html",
+      "description": "Search with no hits: the clear button shows and the grid is replaced by \"No items match your search.\"."
+    },
+    "no-items": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "empty": true
+      },
+      "screenshot": "states/no-items.png",
+      "preview": "states/no-items.html",
+      "description": "Empty menu without a query: \"No items available.\" and only the All chip."
+    },
+    "idle": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "idle": true
+      },
+      "screenshot": "states/idle.png",
+      "preview": "states/idle.html",
+      "description": "Unattended-kiosk protection: the \"Still there?\" dialog over the blurred menu."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only the disabled buttons shown as variants"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no distinct error state in this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state in this screen"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state in this screen"
+    }
+  }
+}

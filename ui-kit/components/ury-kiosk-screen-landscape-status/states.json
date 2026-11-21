@@ -1,0 +1,103 @@
+{
+  "component": "ury-kiosk-screen-landscape-status",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "add-more": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "more": true
+      },
+      "screenshot": "states/add-more.png",
+      "preview": "states/add-more.html",
+      "description": "add_to_running_table_enabled: a primary \"Add more items\" button above Done."
+    },
+    "billed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "bill_status": "Billed"
+      },
+      "screenshot": "states/billed.png",
+      "preview": "states/billed.html",
+      "description": "The order has been billed: the bill row reads \"Billed\"."
+    },
+    "pending": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "order_status": "Pending"
+      },
+      "screenshot": "states/pending.png",
+      "preview": "states/pending.html",
+      "description": "Not yet submitted: the order row reads \"Pending\"."
+    },
+    "open-requests": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "requests": 2
+      },
+      "screenshot": "states/open-requests.png",
+      "preview": "states/open-requests.html",
+      "description": "Open service requests listed in a bordered card (type left, status right)."
+    },
+    "table": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "code": false
+      },
+      "values": {
+        "title": "Table 12"
+      },
+      "screenshot": "states/table.png",
+      "preview": "states/table.html",
+      "description": "Dine-in table order: header reads \"Table 12\" and no pickup code card."
+    },
+    "no-status": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "noStatus": true
+      },
+      "screenshot": "states/no-status.png",
+      "preview": "states/no-status.html",
+      "description": "get_order_status returned nothing: only the confirmation, pickup code and Done."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: only the disabled buttons shown as variants"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: no distinct error state in this screen"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: no loading state in this screen"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: no empty state in this screen"
+    }
+  }
+}

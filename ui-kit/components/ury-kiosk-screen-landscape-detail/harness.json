@@ -1,0 +1,42 @@
+{
+  "id": "ury-kiosk-screen-landscape-detail",
+  "name": "URY landscape kiosk product detail",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1920,
+    "h": 1080
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-landscape.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Product detail modal over the landscape menu: black/50 scrim, panel h-5/6 w-2/3 rounded-lg shadow-lg with an underlined Back, a full-width object-cover image (natural height, so the panel scrolls), name, description, price, Variants and Add-ons option rows, quantity stepper and a full-width \"Add to cart\" pill.",
+    "Opened by tapping a card when product_detail_enabled is on. The top of the panel is mostly the image; the \"options\" variant shows it scrolled to the end. Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1920,
+  "height": 1080,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

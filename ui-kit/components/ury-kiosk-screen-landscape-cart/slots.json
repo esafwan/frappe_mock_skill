@@ -1,0 +1,97 @@
+{
+  "component": "ury-kiosk-screen-landscape-cart",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Order for Pickup",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "new_order": {
+      "type": "text",
+      "sample": "New Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "back_label": {
+      "type": "text",
+      "sample": "← Back to menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cart_title": {
+      "type": "text",
+      "sample": "Your Cart",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_name": {
+      "type": "text",
+      "sample": "Latte",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2_name": {
+      "type": "text",
+      "sample": "Cappuccino",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2_qty": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "empty_text": {
+      "type": "text",
+      "sample": "Your cart is empty.",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "browse": {
+      "type": "text",
+      "sample": "Browse the menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "count_label": {
+      "type": "text",
+      "sample": "3 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "cart_total": {
+      "type": "currency",
+      "sample": "AED 48.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "checkout": {
+      "type": "text",
+      "sample": "Proceed to checkout",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

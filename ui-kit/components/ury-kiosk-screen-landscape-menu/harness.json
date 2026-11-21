@@ -1,0 +1,44 @@
+{
+  "id": "ury-kiosk-screen-landscape-menu",
+  "name": "URY landscape kiosk menu",
+  "group": "ury-kiosk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1920,
+    "h": 1080
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/kiosk-landscape.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Landscape kiosk menu at 1920x1080: header (px-10 py-6, 30px semibold title, \"New Order\" button), category chips with a w-80 search in a border-b strip, a five-column grid (xl, gap-6) of rounded-2xl cards with h-40 images, and the persistent w-[420px] cart panel at the end.",
+    "Use as the main ordering screen of an entrance/counter/food-court kiosk. Body text is 18px (text-lg); the grid scrolls in the app, so the lowest row is clipped. Fixed UI labels are author translations for RTL (the self-order app has no locale file) and NEED NATIVE REVIEW; RTL is a kit extension."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 1,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1920,
+  "height": 1080,
+  "props": {
+    "cart": 2
+  },
+  "canvas": "hsl(var(--background))"
+}
