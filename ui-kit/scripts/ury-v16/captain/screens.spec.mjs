@@ -23,7 +23,7 @@ const CARDS = [
   [5, 'billed', 'T5', 'Billed', 'Omar S.', '1h 20m', 210, '6', ''],
   [6, 'free', 'T6', 'Free', '', '', null, '4', ''],
   [7, 'occupied', 'T7', 'Layla M.', 'Layla M.', '1h 5m', 132.25, '4', ''],
-  [8, 'attention', 'T8', 'Yusuf A.', 'Yusuf A.', '1h 25m', 96.75, '2', ''],
+  [8, 'occupied', 'T8', 'Yusuf A.', 'Yusuf A.', '1h 25m', 96.75, '2', ''],
   [9, 'free', 'T9', 'Free', '', '', null, '8', ''],
   [10, 'mine', 'T10', 'Mine', '', '8m', 38, '2', ''],
 ];
@@ -66,7 +66,7 @@ const line = (v, k, i, comment) => {
     + `<p class="ucap-ol-price"><span class="u-num">${v[`l${i}_price`]}</span></p></div><div class="ucap-ol-actions">${acts}</div></div>`;
 };
 const pax = (v, editable) => `<div class="ucs-pax" data-ui="ury-captain-screen-order-pax"><span class="ucs-pax-l">${v.pax_label}</span>`
-  + (editable ? `<div class="ucs-pax-c"><span class="ucs-pax-b">-</span><span class="ucs-pax-n">${v.pax_value}</span><span class="ucs-pax-b">+</span></div>` : `<span class="ucs-pax-v">${v.pax_value}</span>`) + `</div>`;
+  + (editable ? `<div class="ucs-pax-c"><span class="ucs-pax-b">${ic('Minus', 16)}</span><span class="ucs-pax-n">${v.pax_value}</span><span class="ucs-pax-b">${ic('Plus', 16)}</span></div>` : `<span class="ucs-pax-v">${v.pax_value}</span>`) + `</div>`;
 const orderList = (v, p = {}) => {
   const editable = !p.viewOnly;
   let body;
