@@ -612,7 +612,7 @@ html[dir="rtl"] .ucap, html[dir="rtl"] .ucap * { font-family: 'Almarai', system-
 .ucap-tc:not(.ucap-tc--attention) .u-badge--secondary { background: hsl(210 40% 96%); color: hsl(222.2 84% 4.9%); }
 
 /* Menu pane, actions menu, service requests, send bar: source has no dark: classes (white surfaces); pin to the light token set so they are never half-themed. */
-.ucap-mp, .ucap-am, .ucap-sr, .ucap-sb {
+:root:not(.dark) .ucap-mp, :root:not(.dark) .ucap-am, :root:not(.dark) .ucap-sr, :root:not(.dark) .ucap-sb {
   --background: 60.0 11.1% 98.2%;
   --foreground: 240.0 7.1% 5.5%;
   --card: 0 0% 100%;
@@ -724,3 +724,34 @@ html[dir="rtl"] .ucap, html[dir="rtl"] .ucap * { font-family: 'Almarai', system-
   --dialog-max-width: 90rem;
   --dialog-max-height: 90vh;
   color: hsl(var(--foreground)); color-scheme: light; }
+
+/* Dark mode: the captain surfaces follow the theme. Surface/gray scale is re-mapped so white panels become raised dark panels and gray-900 text becomes light. */
+.dark .ucap, .dark .ucs {
+  --white: 222 20% 11%; --gray-50: 222 24% 7%; --gray-100: 222 18% 15%; --gray-200: 222 16% 21%; --gray-300: 222 12% 30%; --gray-400: 222 10% 45%;
+  --gray-500: 222 10% 62%; --gray-600: 222 10% 70%; --gray-700: 222 12% 80%; --gray-800: 222 14% 88%; --gray-900: 222 20% 95%;
+}
+.dark .ucap-tc--free { border-color: hsl(158 55% 38%); background: hsl(158 40% 11%); color: hsl(158 60% 85%); }
+.dark .ucap-tc--mine { border-color: hsl(199 70% 45%); background: hsl(205 45% 13%); color: hsl(199 80% 88%); }
+.dark .ucap-tc--occupied { border-color: hsl(41 80% 50%); background: hsl(38 45% 12%); color: hsl(41 90% 86%); }
+.dark .ucap-tc--billed { border-color: hsl(215 16% 50%); background: hsl(222 20% 15%); color: hsl(210 40% 94%); }
+.dark .ucap-tc:not(.ucap-tc--attention) .u-badge--success { background: hsl(158 45% 20%); color: hsl(158 70% 88%); }
+.dark .ucap-tc:not(.ucap-tc--attention) .u-badge--info { background: hsl(221 55% 25%); color: hsl(221 90% 92%); }
+.dark .ucap-tc:not(.ucap-tc--attention) .u-badge--warning { background: hsl(38 60% 22%); color: hsl(41 95% 88%); }
+.dark .ucap-tc:not(.ucap-tc--attention) .u-badge--secondary { background: hsl(222 18% 24%); color: hsl(210 40% 96%); }
+.dark .ucap-ol--delta { background: hsl(221 45% 14%); }
+.dark .ucap-ol--reduction { background: hsl(0 40% 14%); }
+.dark .ucap-ol--delta .ucap-ol-name { color: hsl(221 90% 88%); }
+.dark .ucap-ol--reduction .ucap-ol-name { color: hsl(0 90% 88%); }
+.dark .ucap-ol--delta .ucap-ol-btn, .dark .ucap-ol--reduction .ucap-ol-btn { background: hsl(222 20% 11%); border-color: hsl(222 12% 30%); color: hsl(222 20% 95%); }
+.dark .ucap-ol--delta .ucap-ol-comment, .dark .ucap-ol--delta .ucap-ol-price, .dark .ucap-ol--reduction .ucap-ol-comment, .dark .ucap-ol--reduction .ucap-ol-price { color: hsl(222 10% 70%); }
+.dark .ucap-mp-grid .u-menu-item-card { background: hsl(var(--white)); }
+.dark .ucap-mp-input, .dark .ucap-mp-chip, .dark .ucap-sb { color: hsl(var(--gray-900)); }
+.dark .ucap-sb .u-btn--default { background: hsl(222 20% 95%); color: hsl(222 24% 7%); }
+
+/* Menu grid: the static mock has no qty stepper, so the 44px stepper reservation and fixed 240px card height are trimmed to keep cards compact. */
+.ucap-mp-grid .u-menu-item-spacer { height: 8px; }
+.ucap-mp-grid .u-menu-item-card { height: 196px; }
+/* Category pills scroll horizontally in the source (overflow-x-auto); hide the scrollbar and fade the clipped end so the cut-off reads as scrollable. */
+.ucap-mp-chips { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+.ucap-mp-chips::-webkit-scrollbar { display: none; }
+[dir="rtl"] .ucap-mp-chips { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 32px), transparent); }
