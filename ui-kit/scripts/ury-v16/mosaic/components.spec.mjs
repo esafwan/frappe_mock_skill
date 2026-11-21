@@ -10,7 +10,7 @@ const dk = (reason) => reason;
 // Arabic: strings from mosaic/src/locales/ar.json; fixed UI labels that have no entry are translated here (noted per spec describe).
 const AR = {
   company: 'الشركة', branch: 'الفرع', allCompanies: 'كل الشركات', allBranches: 'كل الفروع',
-  user: 'سارة أحمد', switchDash: 'التبديل إلى لوحة المعلومات', logout: 'تسجيل الخروج', logo: 'الشعار',
+  user: 'Sara Ahmed', switchDash: 'التبديل إلى لوحة المعلومات', logout: 'تسجيل الخروج', logo: 'الشعار',
 };
 const D = (what, when) => [what, when];
 
@@ -27,9 +27,9 @@ const kotSlots = { table_label: 'Table', table_name: 'T12', takeaway_label: 'Tak
   type_label: 'Cancelled', old_qty: 'Old Qty = 3', disp_label: 'Disposition:', return_label: 'Return to Stock', waste_label: 'Mark as Wasted', disp_done: 'Disposition: Returned to Stock',
   dup_note: 'Duplicate KOT ( CHECK WITH CAPTAIN )', kot_comment: 'No onions please', item_comment: 'Extra spicy',
   agg_label: 'Aggregator', agg_name: 'Talabat', agg_id_label: 'Aggregator ID', agg_id: '48213907', serve_label: 'Serve', confirm_label: 'Confirm' };
-const kotAr = { table_label: 'طاولة', takeaway_label: 'سفري', waiter: 'عمر', order_label: 'طلب', item_1: 'برياني دجاج', item_2: 'دوسا ماسالا', item_3: 'عصير ليمون طازج',
+const kotAr = { table_label: 'طاولة', takeaway_label: 'سفري', waiter: 'Omar', order_label: 'طلب', item_1: 'برياني دجاج', item_2: 'دوسا ماسالا', item_3: 'عصير ليمون طازج',
   st_queued: 'في الانتظار', st_preparing: 'قيد التحضير', st_ready: 'جاهز', st_served: 'قُدِّم', type_label: 'ملغى', old_qty: 'الكمية السابقة = 3', disp_label: 'المعالجة:', return_label: 'إعادة إلى المخزون', waste_label: 'تسجيل كهدر', disp_done: 'المعالجة: أُعيد إلى المخزون',
-  dup_note: 'أمر مطبخ مكرر (راجع الكابتن)', kot_comment: 'بدون بصل من فضلك', item_comment: 'حار إضافي', agg_label: 'منصة التجميع', agg_name: 'طلبات', agg_id_label: 'معرّف المنصة', serve_label: 'تقديم', confirm_label: 'تأكيد' };
+  dup_note: 'أمر مطبخ مكرر (راجع الكابتن)', kot_comment: 'بدون بصل من فضلك', item_comment: 'حار إضافي', agg_label: 'منصة التجميع', agg_name: 'Talabat', agg_id_label: 'معرّف المنصة', serve_label: 'تقديم', confirm_label: 'تأكيد' };
 
 const specs = [
   { ...BASE, id: 'ury-mosaic-header', name: 'Mosaic Header', width: 1440, slots: headerSlots, rtlValues: headerAr,

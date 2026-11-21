@@ -18,16 +18,16 @@ const rekey = (html, from, to) => html.split(`data-ui="${from}`).join(`data-ui="
 const hdrSlots = { logo_alt: 'Logo', user_name: 'Sara Ahmed', user_email: 'sara@example.com', switch_dashboard: 'Switch to Dashboard', logout: 'Logout',
   c_all: 'All Companies', c_1: 'Gulf Hospitality', c_2: 'Harbour Dining', c_3: 'Palm Cafe Group', c_heading: 'Select Active Company', c_sel0: 'All Companies',
   b_all: 'All Branches', b_1: 'Marina Branch', b_2: 'Downtown Branch', b_3: 'Airport Branch', b_heading: 'Select Active Branch', b_sel0: 'All Branches' };
-const hdrAr = { logo_alt: 'الشعار', user_name: 'سارة أحمد', switch_dashboard: 'التبديل إلى لوحة المعلومات', logout: 'تسجيل الخروج', c_all: 'كل الشركات', c_sel0: 'كل الشركات', b_all: 'كل الفروع', b_sel0: 'كل الفروع', c_heading: 'اختر الشركة النشط', b_heading: 'اختر الفرع النشط' };
+const hdrAr = { logo_alt: 'الشعار', user_name: 'Sara Ahmed', switch_dashboard: 'التبديل إلى لوحة المعلومات', logout: 'تسجيل الخروج', c_all: 'كل الشركات', c_sel0: 'كل الشركات', b_all: 'كل الفروع', b_sel0: 'كل الفروع', c_heading: 'اختر الشركة النشط', b_heading: 'اختر الفرع النشط' };
 
 const ITEMS = [['Chicken Biryani', 'برياني دجاج'], ['Masala Dosa', 'دوسا ماسالا'], ['Fresh Lime Soda', 'عصير ليمون طازج'], ['Paneer Tikka', 'بانير تيكا'], ['Garlic Naan', 'نان بالثوم'], ['Mango Lassi', 'لاسي المانجو'], ['Mutton Curry', 'كاري لحم الضأن'], ['Veg Samosa', 'سمبوسة خضار'], ['Filter Coffee', 'قهوة مصفاة']];
-const WAITERS = [['Omar', 'عمر'], ['Layla', 'ليلى'], ['Yusuf', 'يوسف'], ['Huda', 'هدى']];
+const WAITERS = [['Omar', 'Omar'], ['Layla', 'Layla'], ['Yusuf', 'Yusuf'], ['Huda', 'Huda']];
 const kotSlots = { table_label: 'Table', takeaway_label: 'Takeaway', order_label: 'Order', st_queued: 'Queued', st_preparing: 'Preparing', st_ready: 'Ready', st_served: 'Served',
   type_label: 'Cancelled', old_qty: 'Old Qty = 3', disp_label: 'Disposition:', return_label: 'Return to Stock', waste_label: 'Mark as Wasted', disp_done: 'Disposition: Returned to Stock',
   dup_note: 'Duplicate KOT ( CHECK WITH CAPTAIN )', kot_comment: 'No onions please', item_comment: 'Extra spicy',
   agg_label: 'Aggregator', agg_name: 'Talabat', agg_id_label: 'Aggregator ID', agg_id: '48213907', serve_label: 'Serve', confirm_label: 'Confirm' };
 const kotAr = { table_label: 'طاولة', takeaway_label: 'سفري', order_label: 'طلب', st_queued: 'في الانتظار', st_preparing: 'قيد التحضير', st_ready: 'جاهز', st_served: 'قُدِّم', type_label: 'ملغى', old_qty: 'الكمية السابقة = 3', disp_label: 'المعالجة:', return_label: 'إعادة إلى المخزون', waste_label: 'تسجيل كهدر', disp_done: 'المعالجة: أُعيد إلى المخزون',
-  dup_note: 'أمر مطبخ مكرر (راجع الكابتن)', kot_comment: 'بدون بصل من فضلك', item_comment: 'حار إضافي', agg_label: 'منصة التجميع', agg_name: 'طلبات', agg_id_label: 'معرّف المنصة', serve_label: 'تقديم', confirm_label: 'تأكيد' };
+  dup_note: 'أمر مطبخ مكرر (راجع الكابتن)', kot_comment: 'بدون بصل من فضلك', item_comment: 'حار إضافي', agg_label: 'منصة التجميع', agg_name: 'Talabat', agg_id_label: 'معرّف المنصة', serve_label: 'تقديم', confirm_label: 'تأكيد' };
 
 // nine tickets mixing every variant; column assignment is the static masonry result (shortest column first)
 const TICKETS = [
@@ -49,7 +49,7 @@ TICKETS.forEach((t, i) => {
   boardSlots[`order_no_${n}`] = String(40 + n).padStart(4, '0'); boardSlots[`timer_${n}`] = t.timer;
   for (let k = 1; k <= 3; k++) { const it = ITEMS[(i + k - 1) % ITEMS.length]; boardSlots[`item_${k}_${n}`] = it[0]; boardAr[`item_${k}_${n}`] = it[1]; boardSlots[`qty_${k}_${n}`] = String(((i + k) % 3) + 1); }
 });
-boardSlots.type_label_4 = 'Cancelled'; boardSlots.type_label_8 = 'Partially cancelled'; boardAr.type_label_8 = 'ملغى جزئيًا';
+boardSlots.type_label_4 = 'Cancelled'; boardSlots.type_label_8 = 'Partially cancelled'; boardAr.type_label_8 = 'ملغى جزئيًا'; boardAr.type_label_4 = 'ملغى';
 
 const boardInner = (v) => {
   const cols = [0, 1, 2, 3].map((c) => `<div class="mzs-col" data-ui="ury-mosaic-screen-board-col-${c + 1}">${TICKETS.filter((t) => t.col === c).map((t) => {

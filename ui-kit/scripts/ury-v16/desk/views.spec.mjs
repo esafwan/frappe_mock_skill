@@ -83,18 +83,18 @@ const posInvoiceList = () => listBody({
   count: { en: '6 of 142', ar: '6 من 142' },
   rows: [
     ['Walk-in Customer', 'عميل مباشر', 'Paid', 'مدفوع', 'green', 128.5, 'د.إ 128.50', 'ACC-PSINV-2026-00142', '2 minutes ago', 'قبل دقيقتين'],
-    ['Rashid K.', 'راشد ك.', 'Consolidated', 'مدمجة', 'green', 86, 'د.إ 86.00', 'ACC-PSINV-2026-00141', '9 minutes ago', 'قبل 9 دقائق'],
+    ['Rashid K.', 'Rashid K.', 'Consolidated', 'مدمجة', 'green', 86, 'د.إ 86.00', 'ACC-PSINV-2026-00141', '9 minutes ago', 'قبل 9 دقائق'],
     ['Walk-in Customer', 'عميل مباشر', 'Draft', 'مسودة', 'red', 54.25, 'د.إ 54.25', 'ACC-PSINV-2026-00140', '21 minutes ago', 'قبل 21 دقيقة'],
-    ['Layla M.', 'ليلى م.', 'Unpaid', 'غير مدفوع', 'orange', 210, 'د.إ 210.00', 'ACC-PSINV-2026-00139', '1 hour ago', 'قبل ساعة'],
+    ['Layla M.', 'Layla M.', 'Unpaid', 'غير مدفوع', 'orange', 210, 'د.إ 210.00', 'ACC-PSINV-2026-00139', '1 hour ago', 'قبل ساعة'],
     ['Walk-in Customer', 'عميل مباشر', 'Paid', 'مدفوع', 'green', 47.75, 'د.إ 47.75', 'ACC-PSINV-2026-00138', '1 hour ago', 'قبل ساعة'],
-    ['Omar S.', 'عمر س.', 'Partly Paid', 'مدفوع جزئياً', 'yellow', 164, 'د.إ 164.00', 'ACC-PSINV-2026-00137', '2 hours ago', 'قبل ساعتين'],
-  ].map((r, i) => ({ subject: { en: r[0], ar: r[1] }, cells: [A(r[2], r[3], r[4]), { en: r[0], ar: r[1] }, { en: 'Spice Garden', ar: 'سبايس غاردن' }, { amount: r[5], ar: r[6] }, { en: r[7], ar: r[7] }], mod: { en: r[8], ar: r[9] }, cc: String(i % 2) })),
+    ['Omar S.', 'Omar S.', 'Partly Paid', 'مدفوع جزئياً', 'yellow', 164, 'د.إ 164.00', 'ACC-PSINV-2026-00137', '2 hours ago', 'قبل ساعتين'],
+  ].map((r, i) => ({ subject: { en: r[0], ar: r[1] }, cells: [A(r[2], r[3], r[4]), { en: r[0], ar: r[1] }, { en: 'Spice Garden', ar: 'Spice Garden' }, { amount: r[5], ar: r[6] }, { en: r[7], ar: r[7] }], mod: { en: r[8], ar: r[9] }, cc: String(i % 2) })),
 }, filterInput('name', 'ID', 'المعرف') + filterInput('customer', 'Customer', 'العميل', 'Link') + filterInput('company', 'Company', 'شركة', 'Link') + filterInput('status', 'Status', 'الحالة', 'Select') + filterInput('posting_date', 'Date', 'تاريخ', 'Date'), T('sort_mod', 'Last Modified', 'آخر تعديل'));
 const uryOrderList = () => listBody({
   subject: { f: 'name', key: 'sub', label: 'ID', ar: 'المعرف' },
   cols: [{ f: 'customer_name', key: 'cn', label: 'Customer Name', ar: 'اسم العميل' }, { f: 'no_of_pax', key: 'px', label: 'Pax', ar: 'عدد الأفراد', right: true }],
   count: { en: '5 of 38', ar: '5 من 38' },
-  rows: [['URY-ORD-0038', 'Rashid K.', 'راشد ك.', '4'], ['URY-ORD-0037', 'Layla M.', 'ليلى م.', '2'], ['URY-ORD-0036', 'Omar S.', 'عمر س.', '6'], ['URY-ORD-0035', 'Walk-in Customer', 'عميل مباشر', '1'], ['URY-ORD-0034', 'Huda A.', 'هدى أ.', '3']]
+  rows: [['URY-ORD-0038', 'Rashid K.', 'Rashid K.', '4'], ['URY-ORD-0037', 'Layla M.', 'Layla M.', '2'], ['URY-ORD-0036', 'Omar S.', 'Omar S.', '6'], ['URY-ORD-0035', 'Walk-in Customer', 'عميل مباشر', '1'], ['URY-ORD-0034', 'Huda A.', 'Huda A.', '3']]
     .map((r, i) => ({ subject: { en: r[0], ar: r[0] }, cells: [{ en: r[1], ar: r[2] }, { en: r[3], ar: r[3] }], mod: { en: ['3 minutes ago', '14 minutes ago', '32 minutes ago', '1 hour ago', '2 hours ago'][i], ar: ['قبل 3 دقائق', 'قبل 14 دقيقة', 'قبل 32 دقيقة', 'قبل ساعة', 'قبل ساعتين'][i] }, cc: '0' })),
 }, filterInput('name', 'ID', 'المعرف') + filterInput('customer_name', 'Customer Name', 'اسم العميل', 'Link'), T('sort_mod', 'Last Modified', 'آخر تعديل'));
 const kotList = (served) => listBody({
@@ -134,7 +134,7 @@ const orderTabs = [{ f: 'table_tab', label: 'Table', ar: 'جدول' }, { f: 'men
 const orderForm = (tab) => {
   let body;
   if (tab === 'customer_tab') {
-    body = section('', [[{ t: 'Link', f: 'customer_name', label: 'Customer Name', ar: 'اسم العميل', reqd: 1, v: { en: 'Rashid K.', ar: 'راشد ك.' } }], [{ t: 'Int', f: 'no_of_pax', label: 'Pax', ar: 'عدد الأفراد', reqd: 1, v: { en: '4', ar: '4' } }]])
+    body = section('', [[{ t: 'Link', f: 'customer_name', label: 'Customer Name', ar: 'اسم العميل', reqd: 1, v: { en: 'Rashid K.', ar: 'Rashid K.' } }], [{ t: 'Int', f: 'no_of_pax', label: 'Pax', ar: 'عدد الأفراد', reqd: 1, v: { en: '4', ar: '4' } }]])
       + section(lbl('favorite_item_section', 'Favorite Item', 'الصنف المفضل'), [[], []]);
   } else {
     body = section('', [[{ t: 'Link', f: 'add_item', label: 'Add Item', ar: 'إضافة صنف', v: { en: 'Chicken Biryani', ar: 'برياني دجاج' } }], [{ t: 'Currency', f: 'grand_total', label: 'Grand Total', ar: 'المجموع الإجمالي', ro: 1, v: { amount: 86, ar: 'د.إ 86.00' } }]])
@@ -143,7 +143,7 @@ const orderForm = (tab) => {
         [{ f: 'item', label: 'Item', ar: 'الصنف', w: 170 }, { f: 'item_name', label: 'Item Name', ar: 'اسم السلعة', w: 170 }, { f: 'qty', label: 'Qty', ar: 'الكمية', w: 80, right: true }, { f: 'rate', label: 'Rate', ar: 'سعر السلعة المفردة', w: 110, right: true, money: true }, { f: 'comments', label: 'Comments', ar: 'تعليقات', w: 150 }],
         [[{ en: 'Chicken Biryani', ar: 'برياني دجاج' }, { en: 'Chicken Biryani', ar: 'برياني دجاج' }, { en: '2', ar: '2' }, { amount: 28, ar: 'د.إ 28.00' }, { en: 'Less spicy', ar: 'أقل حدة' }],
           [{ en: 'Mint Lemonade', ar: 'ليمون بالنعناع' }, { en: 'Mint Lemonade', ar: 'ليمون بالنعناع' }, { en: '3', ar: '3' }, { amount: 10, ar: 'د.إ 10.00' }, { en: '', ar: '' }]]))
-      + section('', [[{ t: 'Link', f: 'waiter', label: 'Waiter', ar: 'النادل', ro: 1, v: { en: 'Rashid Khan', ar: 'راشد خان' } }, { t: 'Link', f: 'pos_profile', label: 'POS Profile', ar: 'الملف الشخصي لنقطة البيع', ro: 1, v: { en: 'Spice Garden POS', ar: 'سبايس غاردن POS' } }],
+      + section('', [[{ t: 'Link', f: 'waiter', label: 'Waiter', ar: 'النادل', ro: 1, v: { en: 'Rashid Khan', ar: 'Rashid Khan' } }, { t: 'Link', f: 'pos_profile', label: 'POS Profile', ar: 'الملف الشخصي لنقطة البيع', ro: 1, v: { en: 'Spice Garden POS', ar: 'Spice Garden POS' } }],
         [{ t: 'Link', f: 'cashier', label: 'Cashier', ar: 'أمين الصندوق', ro: 1, v: { en: 'Fatima Noor', ar: 'فاطمة نور' } }, { t: 'Data', f: 'comments_h', label: 'Comments', ar: 'تعليقات' }]]);
   }
   return formLayout(tabs(orderTabs, tab), body);
@@ -161,7 +161,7 @@ const tableForm = (tab) => {
     ? section('', [[{ t: 'Check', f: 'occupied', label: 'Occupied', ar: 'مشغولة', ro: 1, checked: 1 }, { t: 'Select', f: 'table_shape', label: 'Table Shape', ar: 'شكل الطاولة', v: { en: 'Rectangle', ar: 'مستطيل' } }, { t: 'Data', f: 'merged_with', label: 'Merged With', ar: 'مدمجة مع', ro: 1, v: { en: 'T2', ar: 'T2' } }], [{ t: 'Time', f: 'latest_invoice_time', label: 'Latest Invoice Time', ar: 'وقت آخر فاتورة', ro: 1, v: { en: '19:42:10', ar: '19:42:10' } }]])
       + section(lbl('layout_position_section', 'Layout Position', 'موضع التخطيط'), [[{ t: 'Float', f: 'layout_x', label: 'Layout X', ar: 'التخطيط X', v: { en: '120', ar: '120' } }, { t: 'Float', f: 'layout_width', label: 'Layout Width', ar: 'عرض التخطيط', v: { en: '96', ar: '96' } }], [{ t: 'Float', f: 'layout_y', label: 'Layout Y', ar: 'التخطيط Y', v: { en: '80', ar: '80' } }, { t: 'Float', f: 'layout_height', label: 'Layout Height', ar: 'ارتفاع التخطيط', v: { en: '64', ar: '64' } }]])
     : section('', [[{ t: 'Int', f: 'no_of_seats', label: 'No of Seats', ar: 'عدد المقاعد', v: { en: '4', ar: '4' } }, { t: 'Int', f: 'minimum_seating', label: 'Minimum Seating', ar: 'الحد الأدنى للمقاعد', v: { en: '2', ar: '2' } }, { t: 'Select', f: 'table_shape', label: 'Table Shape', ar: 'شكل الطاولة', v: { en: 'Rectangle', ar: 'مستطيل' } }],
-      [{ t: 'Link', f: 'restaurant', label: 'Restaurant', ar: 'المطعم', reqd: 1, v: { en: 'Spice Garden', ar: 'سبايس غاردن' } }, { t: 'Link', f: 'restaurant_room', label: 'Restaurant Room', ar: 'قاعة المطعم', reqd: 1, v: { en: 'Main Hall', ar: 'القاعة الرئيسية' } }, { t: 'Link', f: 'branch', label: 'Branch', ar: 'فرع', reqd: 1, ro: 1, v: { en: 'Downtown', ar: 'وسط المدينة' } }]])
+      [{ t: 'Link', f: 'restaurant', label: 'Restaurant', ar: 'المطعم', reqd: 1, v: { en: 'Spice Garden', ar: 'Spice Garden' } }, { t: 'Link', f: 'restaurant_room', label: 'Restaurant Room', ar: 'قاعة المطعم', reqd: 1, v: { en: 'Main Hall', ar: 'القاعة الرئيسية' } }, { t: 'Link', f: 'branch', label: 'Branch', ar: 'فرع', reqd: 1, ro: 1, v: { en: 'Downtown', ar: 'وسط المدينة' } }]])
       + section('', [[{ t: 'Check', f: 'is_take_away', label: 'Is Take Away', ar: 'سفري' }]])
       + section(lbl('layout_position_section', 'Layout Position', 'موضع التخطيط'), [[{ t: 'Float', f: 'layout_x', label: 'Layout X', ar: 'التخطيط X', v: { en: '120', ar: '120' } }, { t: 'Float', f: 'layout_width', label: 'Layout Width', ar: 'عرض التخطيط', v: { en: '96', ar: '96' } }], [{ t: 'Float', f: 'layout_y', label: 'Layout Y', ar: 'التخطيط Y', v: { en: '80', ar: '80' } }, { t: 'Float', f: 'layout_height', label: 'Layout Height', ar: 'ارتفاع التخطيط', v: { en: '64', ar: '64' } }]]);
   return formLayout(tabs(tableTabs, tab), body);
