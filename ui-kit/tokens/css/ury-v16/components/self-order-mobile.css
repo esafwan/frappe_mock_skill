@@ -1,0 +1,93 @@
+/* URY v16 self-order MobileQR screens. Class lists mirror self-order/src/layouts/MobileQRLayout.tsx and layouts/shared/{ProductDetail,CartPage,CheckoutScreen,OrderStatusScreen}.tsx
+   plus the App.tsx "Starting up…" state (ury-erp/version-16 @100c43fe2e). Loads after self-order.css (shared .so base). Logical properties only. */
+.som { display: flex; flex-direction: column; }
+.som-center { display: flex; min-height: 844px; align-items: center; justify-content: center; }
+.som-center--pad { padding: 24px; text-align: center; color: hsl(var(--destructive)); }
+.som-muted { color: hsl(var(--muted-foreground)); }
+
+/* Menu: min-h-screen pb-28 */
+.som-menu { min-height: 844px; padding-bottom: 112px; }
+.som-head { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; border-bottom-width: 1px; background: hsl(var(--background) / .95); padding: 12px 16px; backdrop-filter: blur(8px); }
+.som-head__t { margin: 0; font-size: 18px; line-height: 28px; font-weight: 600; }
+.som-start { border-radius: calc(var(--radius) - 2px); border-width: 1px; padding: 4px 8px; font-size: 12px; line-height: 16px; font-weight: 500; color: hsl(var(--muted-foreground)); }
+.som-err { margin: 12px 16px 0; border-radius: calc(var(--radius) - 2px); background: hsl(var(--destructive) / .1); padding: 12px; font-size: 14px; line-height: 20px; color: hsl(var(--destructive)); }
+.som-order { margin: 16px 16px 0; border-radius: var(--radius); border-width: 1px; padding: 12px; }
+.som-order__h { margin: 0 0 8px; font-size: 14px; line-height: 20px; font-weight: 500; color: hsl(var(--muted-foreground)); }
+.som-code { margin: 0 0 8px; border-radius: calc(var(--radius) - 2px); background: hsl(var(--muted)); padding: 8px; text-align: center; font-size: 14px; line-height: 20px; font-weight: 600; }
+.som-rows { display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 20px; }
+.som-rows li { display: flex; justify-content: space-between; }
+.som-total { margin-top: 8px; display: flex; justify-content: space-between; border-top-width: 1px; padding-top: 8px; font-size: 14px; line-height: 20px; font-weight: 600; }
+.som-search { margin: 16px 16px 0; }
+.som-grid { margin: 16px 16px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.som-grid .so-pc { width: 100%; min-width: 0; }
+.som-grid .so-pc__body { text-align: start; }
+.som-bar { position: absolute; inset-inline: 0; bottom: 0; border-top-width: 1px; background: hsl(var(--background)); padding: 16px; }
+.som-btn { display: block; width: 100%; border-radius: calc(var(--radius) - 2px); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 0; font-weight: 500; }
+.som-btn--out { background: transparent; color: inherit; border-width: 1px; }
+.som-btn:disabled, .som-btn.is-disabled { opacity: .5; }
+
+/* Detail: h-full flex-col; back p-4; image w-full; body p-6 gap-4 */
+.som-detail { height: 844px; overflow: hidden; }
+.som-back { display: flex; align-items: center; gap: 8px; padding: 16px; }
+.som-back__l { font-size: 14px; line-height: 20px; text-decoration: underline; }
+.som-detail__img { display: block; width: 100%; object-fit: cover; }
+.som-detail__body { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+.som-detail__h { margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; }
+.som-detail__d { margin: 4px 0 0; }
+.som-detail__rate { font-size: 18px; line-height: 28px; font-weight: 500; }
+.som-sec { display: flex; flex-direction: column; gap: 8px; }
+.som-sec__h { font-size: 14px; line-height: 20px; font-weight: 600; }
+.som-sec .so-opt { text-align: start; }
+.som-qty { display: flex; align-items: center; gap: 16px; }
+.som-qty__b { width: 36px; height: 36px; border-radius: 9999px; border-width: 1px; font-weight: 600; }
+.som-qty__n { width: 24px; text-align: center; font-weight: 500; }
+.som-add { margin-top: 8px; border-radius: 9999px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 12px 16px; font-weight: 600; }
+.som-stack { height: 844px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center; }
+.som-stack__bad { color: hsl(var(--destructive)); }
+.som-pill { border-radius: 9999px; border-width: 1px; padding: 8px 16px; font-size: 14px; line-height: 20px; font-weight: 500; }
+
+/* Cart / checkout header: flex items-center gap-2 border-b p-4 */
+.som-page { height: 844px; display: flex; flex-direction: column; overflow: hidden; }
+.som-hdr { display: flex; align-items: center; gap: 8px; border-bottom-width: 1px; padding: 16px; }
+.som-hdr__back { border-radius: calc(var(--radius) - 2px); border-width: 1px; padding: 8px 12px; font-size: 14px; line-height: 20px; font-weight: 500; }
+.som-hdr__t { margin: 0; flex: 1 1 0%; text-align: center; font-size: 18px; line-height: 28px; font-weight: 600; }
+.som-hdr__sp { width: 92px; }
+.som-cartbody { flex: 1 1 0%; overflow: hidden; padding: 16px; }
+.som-lines { display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 20px; }
+.som-line { border-radius: var(--radius); border-width: 1px; padding: 12px; }
+.som-line__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.som-line__n { flex: 1 1 0%; font-weight: 500; }
+.som-line__ctl { display: flex; align-items: center; gap: 8px; }
+.som-line__st { width: 28px; height: 28px; border-radius: 9999px; border-width: 1px; font-size: 14px; line-height: 1; }
+.som-line__q { width: 16px; text-align: center; }
+.som-line__note { margin: 4px 0 0; font-size: 12px; line-height: 16px; color: hsl(var(--muted-foreground)); }
+.som-emptyc { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
+.som-emptyc p { color: hsl(var(--muted-foreground)); }
+.som-emptyc .som-pill { border-radius: calc(var(--radius) - 2px); padding: 8px 16px; }
+.som-foot { border-top-width: 1px; padding: 16px; }
+.som-foot__sum { margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; line-height: 20px; font-weight: 600; }
+
+/* Checkout: mx-4 mt-4; cards rounded-lg border p-3 */
+.som-co { flex: 1 1 0%; overflow: hidden; padding-bottom: 16px; }
+.som-co__in { margin: 16px 16px 0; }
+.som-card { border-radius: var(--radius); border-width: 1px; padding: 12px; }
+.som-card + .som-card { margin-top: 16px; }
+.som-pay { display: flex; flex-direction: column; gap: 8px; }
+.som-pay__b { width: 100%; border-radius: calc(var(--radius) - 2px); border-width: 1px; padding: 8px 0; font-size: 14px; line-height: 20px; font-weight: 500; }
+.som-pay__b.is-on { border-color: hsl(var(--primary)); background: hsl(var(--primary) / .1); }
+.som-pay__b:disabled { opacity: .5; }
+.som-info { margin: 8px 0 0; font-size: 12px; line-height: 16px; color: hsl(var(--muted-foreground)); }
+.som-cta { margin-top: 16px; }
+
+/* Status: flex min-h-screen flex-col items-center px-4 py-8 text-center */
+.som-status { min-height: 844px; align-items: center; padding: 32px 16px; text-align: center; }
+.som-status__h { margin: 0; font-size: 20px; line-height: 28px; font-weight: 600; }
+.som-status__p { margin: 8px 0 0; font-size: 14px; line-height: 20px; color: hsl(var(--muted-foreground)); }
+.som-pick { margin-top: 24px; width: 100%; max-width: 320px; border-radius: var(--radius); border-width: 1px; background: hsl(var(--muted)); padding: 16px; }
+.som-pick__l { font-size: 12px; line-height: 16px; text-transform: uppercase; letter-spacing: .025em; color: hsl(var(--muted-foreground)); }
+.som-pick__c { margin-top: 4px; font-size: 30px; line-height: 36px; font-weight: 700; }
+.som-srows { margin-top: 24px; width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 8px; text-align: start; font-size: 14px; line-height: 20px; }
+.som-srow { display: flex; justify-content: space-between; border-radius: calc(var(--radius) - 2px); border-width: 1px; padding: 8px; }
+.som-srow b { font-weight: 500; }
+.som-acts { margin-top: 32px; display: flex; width: 100%; max-width: 320px; flex-direction: column; gap: 8px; }
+.som-acts .som-btn--out { padding: 12px 0; }

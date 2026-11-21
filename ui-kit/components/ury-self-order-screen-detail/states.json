@@ -1,0 +1,54 @@
+{
+  "component": "ury-self-order-screen-detail",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "get_customer_product in flight: centred \"Loading item...\" with an underlined Back link."
+    },
+    "not-found": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "notFound": true
+      },
+      "screenshot": "states/not-found.png",
+      "preview": "states/not-found.html",
+      "description": "No detail returned: destructive \"Item not found.\" and a rounded-full \"Back to menu\" button."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

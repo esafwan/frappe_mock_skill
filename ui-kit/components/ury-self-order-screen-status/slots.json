@@ -1,0 +1,97 @@
+{
+  "component": "ury-self-order-screen-status",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Order confirmed",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "thanks": {
+      "type": "text",
+      "sample": "Thanks — your order has been sent to the restaurant.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "text"
+    },
+    "pickup_label": {
+      "type": "text",
+      "sample": "Pickup code",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pickup_code": {
+      "type": "text",
+      "sample": "A-27",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_label": {
+      "type": "text",
+      "sample": "Order status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "order_val": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill_label": {
+      "type": "text",
+      "sample": "Bill status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill_val": {
+      "type": "text",
+      "sample": "Not billed yet",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "req_h": {
+      "type": "text",
+      "sample": "Open service requests",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_type": {
+      "type": "text",
+      "sample": "Call Waiter",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "r1_status": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "add_more": {
+      "type": "text",
+      "sample": "Add more items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "done": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

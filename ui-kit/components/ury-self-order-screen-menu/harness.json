@@ -1,0 +1,43 @@
+{
+  "id": "ury-self-order-screen-menu",
+  "name": "Self-order mobile menu screen",
+  "group": "ury-self-order",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 390,
+    "h": 844
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/self-order.css",
+    "ury-v16/components/self-order-mobile.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "MobileQR menu at 390x844: sticky blurred header (\"Table 5\" 18/600, \"Start Over\" border button), \"Your order so far\" card with Total row, category chips, search, 2-column product grid (gap 12) and a fixed bottom bar with \"View Cart (3 items) • total\" (rounded-md bg-primary py-3).",
+    "Use as the first screen after scanning a table QR code. RTL is a kit extension (the source has no dir handling): the kit mirrors with logical properties and translates the fixed UI labels."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 3,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 390,
+  "height": 844,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

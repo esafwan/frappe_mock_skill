@@ -1,0 +1,160 @@
+{
+  "component": "ury-self-order-screen-checkout",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "back": {
+      "type": "text",
+      "sample": "← Back to cart",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "title": {
+      "type": "text",
+      "sample": "Checkout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "summary_h": {
+      "type": "text",
+      "sample": "Order Summary",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_name": {
+      "type": "text",
+      "sample": "Espresso",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l1_amount": {
+      "type": "currency",
+      "sample": "AED 12.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_name": {
+      "type": "text",
+      "sample": "Cappuccino",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_qty": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l2_amount": {
+      "type": "currency",
+      "sample": "AED 36.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_name": {
+      "type": "text",
+      "sample": "Latte",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_qty": {
+      "type": "text",
+      "sample": "1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l3_amount": {
+      "type": "currency",
+      "sample": "AED 20.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "count": {
+      "type": "text",
+      "sample": "4 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "total": {
+      "type": "currency",
+      "sample": "AED 68.00",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "method_h": {
+      "type": "text",
+      "sample": "Payment Method",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "online": {
+      "type": "text",
+      "sample": "Pay Online",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "counter": {
+      "type": "text",
+      "sample": "Pay at Counter",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "bill": {
+      "type": "text",
+      "sample": "Request Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "info": {
+      "type": "text",
+      "sample": "Payment request created (68.00 AED) — a staff member will assist with payment.",
+      "maxLength": 125,
+      "where": "text",
+      "element": "text"
+    },
+    "place": {
+      "type": "text",
+      "sample": "Place Order",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "placing": {
+      "type": "text",
+      "sample": "Placing order…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "paying": {
+      "type": "text",
+      "sample": "Starting payment…",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

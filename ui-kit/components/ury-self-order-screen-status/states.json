@@ -1,0 +1,59 @@
+{
+  "component": "ury-self-order-screen-status",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "pickup": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "pickup": true,
+        "requests": false
+      },
+      "screenshot": "states/pickup.png",
+      "preview": "states/pickup.html",
+      "description": "Pickup order: the pickup code card (max-w-xs, bg-muted, text-3xl bold) shows and \"Add more items\" is hidden."
+    },
+    "no-requests": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "requests": false
+      },
+      "screenshot": "states/no-requests.png",
+      "preview": "states/no-requests.html",
+      "description": "No open service requests."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

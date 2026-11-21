@@ -1,0 +1,69 @@
+{
+  "component": "ury-self-order-screen-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: hover/focus are not shown; the source styles only the active/pressed scale transition"
+    },
+    "pickup": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "pickup": true
+      },
+      "values": {},
+      "screenshot": "states/pickup.png",
+      "preview": "states/pickup.html",
+      "description": "QR Pickup session: header reads \"Order for Pickup\" and the order card carries the \"Pickup code\" bar (bg-muted)."
+    },
+    "missing-token": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "error": true
+      },
+      "screenshot": "states/missing-token.png",
+      "preview": "states/missing-token.html",
+      "description": "No ordering context and an error: centred text-destructive message asking to rescan the QR code."
+    },
+    "starting-up": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "starting": true
+      },
+      "screenshot": "states/starting-up.png",
+      "preview": "states/starting-up.html",
+      "description": "Provisioned device bootstrapping (App.tsx): centred muted \"Starting up…\"."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}
