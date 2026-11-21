@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-shell",
+  "name": "URY desk shell",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "1440x900 URY desk composition: pinned dock, 224px sidebar, the top navbar with search, notifications and avatar, and an empty page head.",
+    "Starting frame for the URY desk screens; pass the page content to deskShell(active, mainHtml)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

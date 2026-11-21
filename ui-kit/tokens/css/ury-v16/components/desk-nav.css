@@ -1,0 +1,86 @@
+/* URY v16 desk navigation (T24): sidebar, dock and shell. frappe-desk.css already styles .body-sidebar / .dock / .standard-sidebar-item;
+   this file only carries what frappe scopes to <body> classes or media queries (dock-pinned, dock-active, below-md drawer) and the mock's pinned heights. */
+.ury-desk { --ury-desk-h: 900px; }
+.ury-desk .body-sidebar,
+.ury-desk.body-sidebar-container .body-sidebar { height: var(--ury-desk-h); }
+
+/* ---- dock: body.dock-pinned .dock (dock.scss) ---- */
+.ury-desk-dock--pinned {
+  width: calc(var(--dock-width) + 1px);
+  position: relative; top: auto; inset-inline-start: auto; left: auto;
+  transform: none; transition: none; flex: 0 0 auto;
+  height: var(--ury-desk-h); max-height: none;
+  border-radius: 0; box-shadow: none;
+  border-inline-end: 1px solid var(--outline-gray-1);
+  padding-top: calc(var(--spacing) * 2);
+  overflow: hidden;
+}
+.ury-desk-dock--pinned .dock-items {
+  width: calc(100% + var(--spacing) * 5.5);
+  margin-inline: calc(var(--spacing) * -2.75);
+  padding-block: var(--spacing);
+  min-height: 0; overflow-y: auto; scrollbar-width: none;
+}
+.ury-desk-dock--pinned .dock-logo .header-logo { width: 32px; height: 32px; }
+.ury-desk-dock--pinned .dock-user { display: flex; }
+.ury-desk-dock--pinned .dock-user-button .avatar,
+.ury-desk-dock--pinned .dock-user-button img { width: 28px; height: 28px; }
+/* body.dock-open .dock: the floating tray, revealed (fixed, left 8, vertically centred) */
+.ury-desk-dock--floating { transform: translate(0, -50%); }
+.ury-desk-dock-stage { position: relative; width: 192px; height: var(--ury-desk-h); }
+.ury-desk-dock-stage .ury-desk-dock--pinned { position: absolute; inset-block-start: 0; inset-inline-start: 0; }
+/* tooltip: hovered tile gets its hover fill; the plain tooltip sits 10px to the side of the tile (Tooltip side=right, offset=10) */
+.ury-desk-dock .dock-item.is-hover { background: var(--surface-gray-2); color: var(--dock-ink-hover); }
+.ury-desk-tooltip { position: absolute; inset-inline-start: calc(var(--dock-width) + 1px + 10px); inset-block-start: 185px; white-space: nowrap; }
+.ury-desk-tooltip { transform: translateY(-50%); }
+
+/* ---- sidebar: edge + collapse arrow shown while the pointer is on the edge (.sidebar-edge:hover) ---- */
+.ury-desk-sidebar .sidebar-edge.is-hover::after { background: var(--outline-gray-3); }
+.ury-desk-sidebar .sidebar-collapse-arrow.is-visible { opacity: 1; pointer-events: auto; }
+.ury-desk-sidebar-stage { position: relative; width: calc(var(--sidebar-width) + 12px); height: var(--ury-desk-h); }
+.ury-desk-sidebar-stage > .body-sidebar-container.expanded { width: var(--sidebar-width); }
+.ury-desk-sidebar-stage > .body-sidebar-container:not(.expanded) { width: var(--sidebar-collapsed-width); }
+
+/* ---- sidebar: below md the panel is a drawer over a dimmed page (sidebar.scss media-breakpoint-down(sm)) ---- */
+.ury-desk-drawer { position: relative; overflow: hidden; background: var(--bg-color); }
+.ury-desk-drawer .ury-desk-drawer-page { position: absolute; inset: 0; }
+.ury-desk-drawer .body-sidebar-container { position: absolute; inset-block: 0; inset-inline-start: 0; height: 100%; }
+.ury-desk-drawer .body-sidebar { position: absolute; top: 0; bottom: 0; height: 100%; }
+.ury-desk-drawer .sidebar-edge,
+.ury-desk-drawer .sidebar-collapse-arrow { display: none; }
+.ury-desk-drawer .body-sidebar-container.expanded .overlay {
+  display: block; position: absolute; z-index: 1021; overflow: auto;
+  inset-inline-start: var(--sidebar-width); width: calc(100% - var(--sidebar-width)); height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ---- shell: <body class="desktop-page dock-active dock-pinned"> as a flex row ---- */
+.ury-desk-shell { display: flex; background: var(--bg-color); color: var(--text-color); }
+.ury-desk-shell-row { display: flex; width: 100%; height: 100%; }
+.ury-desk-shell .body-sidebar-container { flex: 0 0 auto; }
+.ury-desk-main { flex: 1 1 0; min-width: 0; }
+.ury-desk-main-col { display: flex; flex-direction: column; height: 100%; }
+.ury-desk-page-body { flex: 1 1 auto; min-height: 0; }
+.ury-desk-shell .navbar-container {
+  display: flex; align-items: center; gap: 10px; justify-content: space-between; width: 100%;
+  padding: 8px 12px; box-sizing: border-box; height: 49px; border-bottom: 1px solid var(--border-color);
+}
+.ury-desk-shell #brand-logo { width: auto; }
+/* body.dock-pinned.dock-active: the dock owns search and notifications, the user chip, and the sidebar header's mark */
+.ury-desk-shell .body-sidebar .dropdown-navbar-user { display: none; }
+.ury-desk-shell .body-sidebar .standard-items-band > .navbar-modal-search-mobile,
+.ury-desk-shell .body-sidebar .standard-items-band > .sidebar-notification { display: none; }
+.ury-desk-shell .body-sidebar .standard-items-band { padding-top: 0; margin-bottom: 0; }
+.ury-desk-shell .body-sidebar-container.expanded .sidebar-header { padding-left: 12px; padding-inline-start: 12px; padding-inline-end: 15px; }
+.ury-desk-shell .body-sidebar-container.expanded .sidebar-header .header-logo { display: none; }
+
+/* ---- RTL: frappe's sidebar rules use physical left/right ---- */
+[dir="rtl"] .ury-desk .title-container { text-align: right; }
+
+/* dock.scss .dock-item .dock-item-dot: unread dot on the bell's corner (not in the compiled frappe-desk.css) */
+.ury-desk-dock .dock-item .dock-item-dot {
+  position: absolute; top: calc(var(--spacing) * 1.25); inset-inline-end: calc(var(--spacing) * 1.25);
+  width: calc(var(--spacing) * 1.75); height: calc(var(--spacing) * 1.75); padding: 0; min-width: 0;
+  border-radius: var(--radius-full, 9999px); border: 1px solid var(--dock-bg); background: var(--ink-gray-8);
+  font-size: 0; overflow: hidden;
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-sidebar",
+  "name": "URY desk sidebar",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 224,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY v16 desk sidebar: logo header, Search and Notification, Home, the Apps group and the 12 URY sections (Apps, Plan, Operate, Observe, Control, Finance, Purchasing, Staff & Shifts, AI Insights, Analytics, Reports, Setup) with their pages, and the user chip.",
+    "Use as the left panel of any URY desk page; beside a pinned dock the dock takes search, notifications, the user chip and the header mark (see ury-desk-shell)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 375,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

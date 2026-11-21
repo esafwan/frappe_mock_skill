@@ -1,0 +1,41 @@
+{
+  "id": "ury-desk-dock",
+  "name": "URY desk dock",
+  "group": "ury-desk",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 57,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "frappe-desk.css",
+    "theme-vars.css",
+    "ury-v16/components/desk-nav.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "URY app dock: 57px pinned column with the URY mark in a 49px band, Search and Notification utilities, the two URY dock tiles (URY, Analytics) in 34px r8 tiles with 22px icons, and the 28px user avatar at the foot.",
+    "Use beside the sidebar on every URY desk page; the tiles are the apps in ury/dock/ury/ury.json. Icons are the lucide glyphs named in that file (it names no soft module icon)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 375,
+  "height": 900,
+  "props": {},
+  "canvas": "var(--bg-color)"
+}

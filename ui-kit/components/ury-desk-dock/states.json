@@ -1,0 +1,68 @@
+{
+  "component": "ury-desk-dock",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "analytics-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "Analytics"
+      },
+      "screenshot": "states/analytics-active.png",
+      "preview": "states/analytics-active.html",
+      "description": "The Analytics tile active instead of URY."
+    },
+    "floating": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "floating"
+      },
+      "screenshot": "states/floating.png",
+      "preview": "states/floating.html",
+      "description": "Floating dock, revealed from the window edge: fixed, 8px in, radius 18, shadow-2xl, padding 8 11 12; no utilities or avatar."
+    },
+    "tooltip": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "tooltip": true
+      },
+      "screenshot": "states/tooltip.png",
+      "preview": "states/tooltip.html",
+      "description": "Hover on the Analytics tile: its fill and the plain right-hand tooltip with the app name."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: nav rows have no disabled state"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: nav has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: nav rows render from the stored Sidebar/Dock doctypes"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the URY sidebar always has Home and its 12 sections"
+    }
+  }
+}
