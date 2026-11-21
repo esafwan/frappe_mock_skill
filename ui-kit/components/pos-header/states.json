@@ -1,0 +1,112 @@
+{
+  "component": "pos-header",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "variant": "default"
+      },
+      "values": {
+        "search_placeholder": "Search orders, menu items, or customers..."
+      },
+      "screenshot": "states/default.png",
+      "preview": "states/default.html",
+      "description": "Any other route: default placeholder"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "orders": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "variant": "orders"
+      },
+      "values": {
+        "search_placeholder": "Search Orders"
+      },
+      "screenshot": "states/orders.png",
+      "preview": "states/orders.html",
+      "description": "Orders route: Search Orders placeholder"
+    },
+    "reservations": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "variant": "reservations"
+      },
+      "values": {
+        "search_placeholder": "Search reservations by customer, table..."
+      },
+      "screenshot": "states/reservations.png",
+      "preview": "states/reservations.html",
+      "description": "Reservations route placeholder"
+    },
+    "dashboard": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "variant": "dashboard"
+      },
+      "screenshot": "states/dashboard.png",
+      "preview": "states/dashboard.html",
+      "description": "Dashboard route hides the search pill"
+    },
+    "printer-offline": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "printer": "offline"
+      },
+      "screenshot": "states/printer-offline.png",
+      "preview": "states/printer-offline.html",
+      "description": "Printer status dot: critical"
+    },
+    "printer-unknown": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "printer": "unknown"
+      },
+      "screenshot": "states/printer-unknown.png",
+      "preview": "states/printer-unknown.html",
+      "description": "Printer status dot: no data (gray-400)"
+    },
+    "no-printer": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "printer": "none"
+      },
+      "screenshot": "states/no-printer.png",
+      "preview": "states/no-printer.html",
+      "description": "Print status disabled in the POS profile: button hidden"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

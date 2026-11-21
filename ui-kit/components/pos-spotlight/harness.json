@@ -1,0 +1,49 @@
+{
+  "id": "pos-spotlight",
+  "name": "POS spotlight search",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 720,
+    "h": 418
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-shell.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Command palette dialog (Ctrl+K): search input, menu item results with 48px thumbnails and prices, and a keyboard hint.",
+    "The source marks Spotlight as not currently used and has no Orders/Customers sections, so only the menu results are drawn."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 720,
+  "height": null,
+  "props": {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "selected": 0
+  },
+  "canvas": "hsl(var(--background))"
+}

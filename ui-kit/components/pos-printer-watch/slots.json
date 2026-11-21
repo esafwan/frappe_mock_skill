@@ -1,0 +1,153 @@
+{
+  "component": "pos-printer-watch",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "pw_title": {
+      "type": "text",
+      "sample": "Printer Health",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pw_desc": {
+      "type": "text",
+      "sample": "Last synced: 21/11/2026, 14:32:08",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "pw_sync": {
+      "type": "text",
+      "sample": "Sync Now",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pw_stale": {
+      "type": "text",
+      "sample": "Unable to refresh. Displaying last status from 21/11/2026, 14:32:08.",
+      "maxLength": 109,
+      "where": "text",
+      "element": "text"
+    },
+    "pw_success": {
+      "type": "text",
+      "sample": "Success:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pw_failed": {
+      "type": "text",
+      "sample": "Failed:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_excellent": {
+      "type": "text",
+      "sample": "Excellent",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_fair": {
+      "type": "text",
+      "sample": "Fair",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "st_critical": {
+      "type": "text",
+      "sample": "Critical",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1_name": {
+      "type": "text",
+      "sample": "Kitchen Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1_ok": {
+      "type": "text",
+      "sample": "128",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1_fail": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p1_time": {
+      "type": "text",
+      "sample": "14:32:08",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2_name": {
+      "type": "text",
+      "sample": "Bar Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2_ok": {
+      "type": "text",
+      "sample": "41",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2_fail": {
+      "type": "text",
+      "sample": "7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p2_time": {
+      "type": "text",
+      "sample": "14:31:52",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3_name": {
+      "type": "text",
+      "sample": "Receipt Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3_ok": {
+      "type": "text",
+      "sample": "96",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3_fail": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p3_time": {
+      "type": "text",
+      "sample": "14:32:01",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

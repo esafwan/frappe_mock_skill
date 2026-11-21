@@ -1,0 +1,55 @@
+{
+  "component": "pos-user-menu",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "user_name": {
+      "type": "text",
+      "sample": "Sinan Khalid",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user_email": {
+      "type": "text",
+      "sample": "sinan@example.com",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_close_shift": {
+      "type": "text",
+      "sample": "Close Shift",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_dashboard": {
+      "type": "text",
+      "sample": "Switch to Dashboard",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_desk": {
+      "type": "text",
+      "sample": "Switch To Desk",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_clear_cache": {
+      "type": "text",
+      "sample": "Clear Cache",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "menu_logout": {
+      "type": "text",
+      "sample": "Logout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

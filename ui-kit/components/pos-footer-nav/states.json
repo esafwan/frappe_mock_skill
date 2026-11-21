@@ -1,0 +1,119 @@
+{
+  "component": "pos-footer-nav",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active-dashboard": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "dashboard"
+      },
+      "screenshot": "states/active-dashboard.png",
+      "preview": "states/active-dashboard.html",
+      "description": "dashboard tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-pos": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "pos"
+      },
+      "screenshot": "states/active-pos.png",
+      "preview": "states/active-pos.html",
+      "description": "pos tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-tables": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "tables"
+      },
+      "screenshot": "states/active-tables.png",
+      "preview": "states/active-tables.html",
+      "description": "tables tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-reservations": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "reservations"
+      },
+      "screenshot": "states/active-reservations.png",
+      "preview": "states/active-reservations.html",
+      "description": "reservations tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-orders": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "orders"
+      },
+      "screenshot": "states/active-orders.png",
+      "preview": "states/active-orders.html",
+      "description": "orders tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-sessions": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "sessions"
+      },
+      "screenshot": "states/active-sessions.png",
+      "preview": "states/active-sessions.html",
+      "description": "sessions tab active (chip foreground/background, primary 600 label)"
+    },
+    "active-settings": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "settings"
+      },
+      "screenshot": "states/active-settings.png",
+      "preview": "states/active-settings.html",
+      "description": "settings tab active (chip foreground/background, primary 600 label)"
+    },
+    "no-reservations": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "active": "pos",
+        "reservations": false
+      },
+      "screenshot": "states/no-reservations.png",
+      "preview": "states/no-reservations.html",
+      "description": "Branch has reservations disabled: 6 items"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

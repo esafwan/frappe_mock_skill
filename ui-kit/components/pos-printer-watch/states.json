@@ -1,0 +1,89 @@
+{
+  "component": "pos-printer-watch",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "online": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": [
+          "online"
+        ]
+      },
+      "screenshot": "states/online.png",
+      "preview": "states/online.html",
+      "description": "Only healthy printers"
+    },
+    "offline": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": [
+          "offline"
+        ]
+      },
+      "screenshot": "states/offline.png",
+      "preview": "states/offline.html",
+      "description": "A critical printer: failed count in red"
+    },
+    "fair": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": [
+          "online",
+          "fair"
+        ]
+      },
+      "screenshot": "states/fair.png",
+      "preview": "states/fair.html",
+      "description": "A printer with fair health (warning badge)"
+    },
+    "alert": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "cards": [
+          "online",
+          "offline"
+        ],
+        "alert": true
+      },
+      "screenshot": "states/alert.png",
+      "preview": "states/alert.html",
+      "description": "Refresh failed: orange stale-data banner above the cards"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}
