@@ -1,0 +1,48 @@
+{
+  "id": "pos-table-actions-menu",
+  "name": "POS table actions menu",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 256,
+    "h": 220
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-tables.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Table actions popover (TableActionsMenu): w-48 card under the three-dot trigger with Merge tables, Transfer table, Transfer captain, plus Reserve and Unmerge tables when they apply.",
+    "Opened from the more button of a table card; occupied tables get transfer actions, available tables get Reserve and, when merged, Unmerge."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 256,
+  "height": null,
+  "props": {
+    "items": [
+      "merge",
+      "transfer",
+      "captain"
+    ]
+  },
+  "canvas": "hsl(var(--background))"
+}

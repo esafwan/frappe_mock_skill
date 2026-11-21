@@ -1,0 +1,44 @@
+{
+  "id": "pos-layout-view",
+  "name": "POS layout view",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 700
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-tables.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Floor-plan layout of one room (LayoutView): header with the Grid View button, the Room | Layout title and the Edit Layout toggle, the zoom column, the pan/zoom hint and the grid canvas with circle, square and rectangle tables sized by seat count.",
+    "Opened from the Layout View button of the Tables route to see or rearrange tables."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": null,
+  "props": {
+    "roomKey": "a"
+  },
+  "canvas": "hsl(var(--background))"
+}

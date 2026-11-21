@@ -1,0 +1,71 @@
+{
+  "component": "pos-screen-tables-layout",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "edit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "edit": true
+      },
+      "screenshot": "states/edit.png",
+      "preview": "states/edit.html",
+      "description": "Edit mode with move badges and the Editing Layout hint."
+    },
+    "selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "selected": 2,
+        "panel": true
+      },
+      "screenshot": "states/selected.png",
+      "preview": "states/selected.html",
+      "description": "Selected occupied table with the Table Info panel."
+    },
+    "edit-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "edit": true,
+        "selected": 2,
+        "panel": true
+      },
+      "screenshot": "states/edit-selected.png",
+      "preview": "states/edit-selected.html",
+      "description": "Edit mode with the Edit Table Settings panel."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled control: the only disabled state is the Printing button, shown as a variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "the tables page error state (red alert icon and message) is a separate full-page state, not part of this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "spinner placeholders are shown as the printing variant where the source animates"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the no-tables state is a page state and is not part of this component"
+    }
+  }
+}

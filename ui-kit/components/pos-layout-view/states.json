@@ -1,0 +1,106 @@
+{
+  "component": "pos-layout-view",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "edit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "edit": true
+      },
+      "screenshot": "states/edit.png",
+      "preview": "states/edit.html",
+      "description": "Edit mode: toggle reads Finish Editing with the primary fill and Save icon, the move badge shows on every table and the Editing Layout hint appears."
+    },
+    "terrace": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "roomKey": "b"
+      },
+      "values": {
+        "room_a": "Terrace"
+      },
+      "screenshot": "states/terrace.png",
+      "preview": "states/terrace.html",
+      "description": "Second room (Terrace) with tables T11 to T14."
+    },
+    "selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "selected": 2,
+        "panel": true
+      },
+      "screenshot": "states/selected.png",
+      "preview": "states/selected.html",
+      "description": "Occupied table selected: primary-600 ring and the Table Info side panel with position, size and the current bill."
+    },
+    "selected-available": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "selected": 1,
+        "panel": true
+      },
+      "screenshot": "states/selected-available.png",
+      "preview": "states/selected-available.html",
+      "description": "Available table selected: Table Info panel without the bill block."
+    },
+    "edit-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "edit": true,
+        "selected": 2,
+        "panel": true
+      },
+      "screenshot": "states/edit-selected.png",
+      "preview": "states/edit-selected.html",
+      "description": "Edit mode with a selected table: Edit Table Settings panel with enabled capacity and shape fields."
+    },
+    "hover-edit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "edit": true,
+        "hoverTable": 3
+      },
+      "screenshot": "states/hover-edit.png",
+      "preview": "states/hover-edit.html",
+      "description": "Edit mode hover on a table: primary-400 ring."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled control: the only disabled state is the Printing button, shown as a variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "the tables page error state (red alert icon and message) is a separate full-page state, not part of this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "spinner placeholders are shown as the printing variant where the source animates"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the no-tables state is a page state and is not part of this component"
+    }
+  }
+}

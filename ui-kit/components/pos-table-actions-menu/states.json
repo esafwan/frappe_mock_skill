@@ -1,0 +1,93 @@
+{
+  "component": "pos-table-actions-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "available": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          "reserve",
+          "merge"
+        ]
+      },
+      "screenshot": "states/available.png",
+      "preview": "states/available.html",
+      "description": "Available table with reservations enabled: Reserve and Merge tables."
+    },
+    "available-merged": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          "reserve",
+          "merge",
+          "unmerge"
+        ]
+      },
+      "screenshot": "states/available-merged.png",
+      "preview": "states/available-merged.html",
+      "description": "Available merged table: adds a divider and the red Unmerge tables item."
+    },
+    "no-captain": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          "merge",
+          "transfer"
+        ]
+      },
+      "screenshot": "states/no-captain.png",
+      "preview": "states/no-captain.html",
+      "description": "Occupied table where captain transfer is disabled in the branch."
+    },
+    "hover-item": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "items": [
+          "merge",
+          "transfer",
+          "captain"
+        ],
+        "hover": true
+      },
+      "screenshot": "states/hover-item.png",
+      "preview": "states/hover-item.html",
+      "description": "Trigger button hovered."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled control: the only disabled state is the Printing button, shown as a variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "static menu"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "static menu"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the no-tables state is a page state and is not part of this component"
+    }
+  }
+}

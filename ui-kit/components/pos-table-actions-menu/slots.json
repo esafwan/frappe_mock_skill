@@ -1,0 +1,41 @@
+{
+  "component": "pos-table-actions-menu",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "m_reserve": {
+      "type": "text",
+      "sample": "Reserve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_merge": {
+      "type": "text",
+      "sample": "Merge tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_unmerge": {
+      "type": "text",
+      "sample": "Unmerge tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_transfer": {
+      "type": "text",
+      "sample": "Transfer table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_captain": {
+      "type": "text",
+      "sample": "Transfer captain",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "pos-table-card-v16",
+  "name": "POS table card (v16)",
+  "group": "pos",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 276,
+    "h": 280
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/pos-tables.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Table card of the POS Tables grid (TableCard): shape icon, name, status badge, actions trigger, room, started-at and seats rows, reservation strip and the Preview / Print footer, min-height 248 with a 2px state border.",
+    "One card per table in the Tables route; green when available, amber when occupied, primary blue when held by a reservation lock."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 276,
+  "height": null,
+  "props": {
+    "t": 1
+  },
+  "canvas": "hsl(var(--background))"
+}

@@ -1,0 +1,68 @@
+{
+  "component": "pos-screen-tables",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "no-reservations": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "reservations": false
+      },
+      "screenshot": "states/no-reservations.png",
+      "preview": "states/no-reservations.html",
+      "description": "Branch without reservations: the reserved lock and the Reserved legend entry are absent."
+    },
+    "menu-open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "menuOn": 2
+      },
+      "screenshot": "states/menu-open.png",
+      "preview": "states/menu-open.html",
+      "description": "Actions menu open on the occupied T2 card."
+    },
+    "hover-card": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hoverOn": 1
+      },
+      "screenshot": "states/hover-card.png",
+      "preview": "states/hover-card.html",
+      "description": "Hover on the available T1 card."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled control: the only disabled state is the Printing button, shown as a variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "the tables page error state (red alert icon and message) is a separate full-page state, not part of this component"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "spinner placeholders are shown as the printing variant where the source animates"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the no-tables state is a page state and is not part of this component"
+    }
+  }
+}

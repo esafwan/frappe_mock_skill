@@ -1,0 +1,475 @@
+{
+  "component": "pos-layout-view",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "room_a": {
+      "type": "text",
+      "sample": "Main Hall",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_b": {
+      "type": "text",
+      "sample": "Terrace",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "grid_view": {
+      "type": "text",
+      "sample": "Grid View",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "layout": {
+      "type": "text",
+      "sample": "Layout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "edit_layout": {
+      "type": "text",
+      "sample": "Edit Layout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "finish_editing": {
+      "type": "text",
+      "sample": "Finish Editing",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "zoom_pct": {
+      "type": "text",
+      "sample": "100%",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hint_view": {
+      "type": "text",
+      "sample": "Use Scroll to zoom • Drag background to pan",
+      "maxLength": 69,
+      "where": "text",
+      "element": "text"
+    },
+    "hint_title": {
+      "type": "text",
+      "sample": "Editing Layout",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hint_drag": {
+      "type": "text",
+      "sample": "• Drag tables to reposition",
+      "maxLength": 44,
+      "where": "text",
+      "element": "text"
+    },
+    "hint_save": {
+      "type": "text",
+      "sample": "• Changes autosave",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "b_available": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_occupied": {
+      "type": "text",
+      "sample": "Occupied",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_edit": {
+      "type": "text",
+      "sample": "Edit Table Settings",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "p_info": {
+      "type": "text",
+      "sample": "Table Info",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_name": {
+      "type": "text",
+      "sample": "Table Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_capacity": {
+      "type": "text",
+      "sample": "Capacity",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_range": {
+      "type": "text",
+      "sample": "Valid range: 1-20 pax",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "p_shape": {
+      "type": "text",
+      "sample": "Shape",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_circle": {
+      "type": "text",
+      "sample": "Circle",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_square": {
+      "type": "text",
+      "sample": "Square",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_rectangle": {
+      "type": "text",
+      "sample": "Rectangle",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_status": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_position": {
+      "type": "text",
+      "sample": "Position",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_size": {
+      "type": "text",
+      "sample": "Size",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_bill": {
+      "type": "text",
+      "sample": "Current Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_total": {
+      "type": "text",
+      "sample": "Total Amount",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_bill_total": {
+      "type": "text",
+      "sample": "86.50",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_x": {
+      "type": "text",
+      "sample": "280px",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_y": {
+      "type": "text",
+      "sample": "60px",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_w": {
+      "type": "text",
+      "sample": "100px",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_h": {
+      "type": "text",
+      "sample": "100px",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "p_cap": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_started": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_name": {
+      "type": "text",
+      "sample": "T2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_time": {
+      "type": "text",
+      "sample": "2:15 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_name": {
+      "type": "text",
+      "sample": "T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_name": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_name": {
+      "type": "text",
+      "sample": "T5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_time": {
+      "type": "text",
+      "sample": "1:40 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_name": {
+      "type": "text",
+      "sample": "T6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_time": {
+      "type": "text",
+      "sample": "12:55 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_name": {
+      "type": "text",
+      "sample": "T7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_name": {
+      "type": "text",
+      "sample": "T8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_seats": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_time": {
+      "type": "text",
+      "sample": "3:05 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_name": {
+      "type": "text",
+      "sample": "T9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_name": {
+      "type": "text",
+      "sample": "T10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_seats": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t11_name": {
+      "type": "text",
+      "sample": "T11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t11_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_name": {
+      "type": "text",
+      "sample": "T12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_time": {
+      "type": "text",
+      "sample": "4:20 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t13_name": {
+      "type": "text",
+      "sample": "T13",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t13_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t14_name": {
+      "type": "text",
+      "sample": "T14",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t14_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

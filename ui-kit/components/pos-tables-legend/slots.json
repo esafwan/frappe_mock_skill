@@ -1,0 +1,34 @@
+{
+  "component": "pos-tables-legend",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "b_available": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_occupied": {
+      "type": "text",
+      "sample": "Occupied",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_merged": {
+      "type": "text",
+      "sample": "Merged",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_reserved": {
+      "type": "text",
+      "sample": "Reserved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

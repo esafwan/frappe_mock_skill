@@ -1,0 +1,48 @@
+{
+  "component": "pos-tables-legend",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "no-reservations": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "reservations": false
+      },
+      "screenshot": "states/no-reservations.png",
+      "preview": "states/no-reservations.html",
+      "description": "Branch has reservations disabled: the Reserved swatch is omitted."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "no disabled control: the only disabled state is the Printing button, shown as a variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "static legend"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "static legend"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "the no-tables state is a page state and is not part of this component"
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "component": "pos-table-card-v16",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "l_room": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_started": {
+      "type": "text",
+      "sample": "Started at:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "l_seats": {
+      "type": "text",
+      "sample": "Seats",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "no_time": {
+      "type": "text",
+      "sample": "—",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_occupied": {
+      "type": "text",
+      "sample": "Occupied",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_available": {
+      "type": "text",
+      "sample": "Available",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "b_reserved": {
+      "type": "text",
+      "sample": "Reserved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "take_away": {
+      "type": "text",
+      "sample": "Take away",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "res_for": {
+      "type": "text",
+      "sample": "Reserved for 7:30 PM",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_preview": {
+      "type": "text",
+      "sample": "Preview",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_print": {
+      "type": "text",
+      "sample": "Print",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "btn_printing": {
+      "type": "text",
+      "sample": "Printing...",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "merge_label": {
+      "type": "text",
+      "sample": "With T6 + T7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_a": {
+      "type": "text",
+      "sample": "Main Hall",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "room_b": {
+      "type": "text",
+      "sample": "Terrace",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_reserve": {
+      "type": "text",
+      "sample": "Reserve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_merge": {
+      "type": "text",
+      "sample": "Merge tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_unmerge": {
+      "type": "text",
+      "sample": "Unmerge tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_transfer": {
+      "type": "text",
+      "sample": "Transfer table",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "m_captain": {
+      "type": "text",
+      "sample": "Transfer captain",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_name": {
+      "type": "text",
+      "sample": "T1",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t1_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_name": {
+      "type": "text",
+      "sample": "T2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t2_time": {
+      "type": "text",
+      "sample": "2:15 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_name": {
+      "type": "text",
+      "sample": "T3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t3_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_name": {
+      "type": "text",
+      "sample": "T4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t4_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_name": {
+      "type": "text",
+      "sample": "T5",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t5_time": {
+      "type": "text",
+      "sample": "1:40 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_name": {
+      "type": "text",
+      "sample": "T6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t6_time": {
+      "type": "text",
+      "sample": "12:55 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_name": {
+      "type": "text",
+      "sample": "T7",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t7_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_name": {
+      "type": "text",
+      "sample": "T8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_seats": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t8_time": {
+      "type": "text",
+      "sample": "3:05 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_name": {
+      "type": "text",
+      "sample": "T9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t9_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_name": {
+      "type": "text",
+      "sample": "T10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t10_seats": {
+      "type": "text",
+      "sample": "8",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t11_name": {
+      "type": "text",
+      "sample": "T11",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t11_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_name": {
+      "type": "text",
+      "sample": "T12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_seats": {
+      "type": "text",
+      "sample": "6",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t12_time": {
+      "type": "text",
+      "sample": "4:20 PM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t13_name": {
+      "type": "text",
+      "sample": "T13",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t13_seats": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t14_name": {
+      "type": "text",
+      "sample": "T14",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "t14_seats": {
+      "type": "text",
+      "sample": "4",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}
