@@ -6,7 +6,7 @@
 // Currency: the source prints raw server strings / numbers; the kit renders every amount as a formatted typed currency slot (money()).
 // Scrollbars are not drawn (overflow-y-auto regions are clipped); the detail modal "options" variants show the panel scrolled to its end.
 import { ic, money, screen } from '../lib.mjs';
-import { SAMPLE_IMG } from '../self-order/components.mjs';
+import { MENU, CATS, CATS_AR, LATTE, CAPP, imgSlots, detailImg, stateImages } from './menu.mjs';
 
 const G = 'ury-kiosk-screen-landscape-';
 const CSS = ['ury-v16/ury-fonts.css', 'ury-v16/ury-ui-tokens.css', 'ury-v16/ury-ui-base.css', 'ury-v16/components/kiosk-landscape.css'];
@@ -16,27 +16,19 @@ const RTL_NOTE = 'Fixed UI labels are author translations for RTL (the self-orde
 const aed = (n) => ({ ...money(n), sample: `${Number(n).toFixed(2)} د.إ` });
 const E = (o) => o;
 
-// ---- sample menu: 5 courses x 3 items (name, Arabic name, rate)
-const CATS = ['Espresso', 'Milk Coffee', 'Filter & Cold Brew', 'Iced', 'Tea & Others'];
-const CATS_AR = ['إسبريسو', 'قهوة بالحليب', 'قهوة مفلترة وباردة', 'مثلجات', 'شاي ومشروبات أخرى'];
-const ITEMS = [
-  ['Espresso', 'إسبريسو', 10], ['Doppio', 'دوبيو', 14], ['Cortado', 'كورتادو', 15],
-  ['Latte', 'لاتيه', 16], ['Cappuccino', 'كابتشينو', 16], ['Flat White', 'فلات وايت', 17],
-  ['V60 Pour Over', 'قهوة مقطرة V60', 18], ['Cold Brew', 'كولد برو', 19], ['Chemex', 'كيمكس', 22],
-  ['Iced Latte', 'لاتيه مثلج', 18], ['Iced Americano', 'أمريكانو مثلج', 15], ['Iced Mocha', 'موكا مثلجة', 20],
-  ['Masala Chai', 'شاي مسالا', 10], ['Green Tea', 'شاي أخضر', 9], ['Hot Chocolate', 'شوكولاتة ساخنة', 14],
-].map(([n, ar, r], i) => ({ n, ar, r, cat: Math.floor(i / 3) + 1 }));
-const LATTE = 3, CAPP = 4; // indexes of the items that sit in the cart
+// ---- shared menu (menu.mjs): 5 courses x 3 items, one photo per item
+const ITEMS = MENU;
+const IMG = (i) => 'i' + (i + 1) + '_img';
 
 const menuSlots = () => {
-  const s = { title: 'Order for Pickup', new_order: 'New Order', all: 'All', placeholder: 'Search menu...', query: 'Sandwich', img: { type: 'image', sample: SAMPLE_IMG },
-    no_results: 'No items match your search.', no_items: 'No items available.', in_cart_1: 'In cart: 1', in_cart_2: 'In cart: 2', unavail: 'Sold out',
+  const s = { title: 'Order for Pickup', new_order: 'New Order', all: 'All', placeholder: 'Search menu...', query: 'Sandwich',     no_results: 'No items match your search.', no_items: 'No items available.', in_cart_1: 'In cart: 1', in_cart_2: 'In cart: 2', unavail: 'Sold out',
     order_title: 'Your order so far', cart_title: 'Cart', total_label: 'Total', o1_name: 'Espresso', o1_qty: '1', o1_amount: money(10), o2_name: 'Doppio', o2_qty: '1', o2_amount: money(14), order_total: money(24),
     c1_name: 'Latte', c1_qty: '1', c2_name: 'Cappuccino', c2_qty: '2', empty_text: 'Tap a menu item to add it to your cart.', count_label: '3 items', cart_total: money(48),
     place_order: 'Place Order', placing: 'Placing order…', pay_online: 'Pay Online', request_bill: 'Request Bill',
     idle_title: 'Still there?', still_here: "I'm still here", close: 'Close' };
   CATS.forEach((c, i) => (s['cat_' + (i + 1)] = c));
   ITEMS.forEach((it, i) => { s['i' + (i + 1) + '_name'] = it.n; s['i' + (i + 1) + '_rate'] = money(it.r); });
+  Object.assign(s, imgSlots(IMG));
   return s;
 };
 const menuRtl = () => {
@@ -64,7 +56,7 @@ const card = (v, id, idx, p) => {
   const it = ITEMS[idx], k = 'i' + (idx + 1) + '_', dis = p.soldout === idx;
   const q = p.cart >= 1 && idx === LATTE ? 1 : p.cart >= 2 && idx === CAPP ? 2 : 0;
   const msg = dis ? `<div class="kl-pc__msg kl-pc__msg--bad">${v.unavail}</div>` : q ? `<div class="kl-pc__msg kl-pc__msg--cart">${v['in_cart_' + q]}</div>` : '';
-  return `<button type="button" class="kl-pc${dis ? ' is-disabled' : ''}"${dis ? ' disabled aria-disabled="true"' : ''} data-ui="${id}.card-${idx + 1}"><img class="kl-pc__img" src="${v.img}" alt="${v[k + 'name']}"><div class="kl-pc__body"><div class="kl-pc__name">${v[k + 'name']}</div><div class="kl-pc__rate">${v[k + 'rate']}</div>${msg}</div></button>`;
+  return `<button type="button" class="kl-pc${dis ? ' is-disabled' : ''}"${dis ? ' disabled aria-disabled="true"' : ''} data-ui="${id}.card-${idx + 1}"><img class="kl-pc__img" src="${v[IMG(idx)]}" alt="${v[k + 'name']}"><div class="kl-pc__body"><div class="kl-pc__name">${v[k + 'name']}</div><div class="kl-pc__rate">${v[k + 'rate']}</div>${msg}</div></button>`;
 };
 const cartPanel = (v, id, p) => {
   const n = p.cart, order = p.order;
@@ -108,7 +100,8 @@ const menuSpec = { ...BASE, id: G + 'menu', name: 'URY landscape kiosk menu', sl
   render: (v, p) => screen(1920, 1080, menu(v, G + 'menu', p), G + 'menu', 'kl'), props: { cart: 2 },
   variants: {
     'category-active': { props: { cat: 2 }, describe: 'A course chip is active (bg-primary) and the grid shows only that course.' },
-    'with-order': { props: { order: true, pay: true, bill: true }, describe: 'Running order: the cart panel adds "Your order so far", Pay Online and Request Bill.' },
+    'with-order': { props: { order: true, pay: true }, describe: 'Running order (pickup): the cart panel adds "Your order so far" and Pay Online. Request Bill is not offered: the backend ANDs request_bill_enabled with a table, so it is False for pickup.' },
+    'table-order': { props: { order: true, pay: true, bill: true }, values: { title: 'Table 12' }, describe: 'Dine-in table order: the header reads "Table 12" and the cart panel adds Pay Online and Request Bill (request_bill_enabled needs a table).' },
     'empty-cart': { props: { cart: 0 }, values: { count_label: '0 items', cart_total: money(0) }, rtlValues: { count_label: '0 عناصر', cart_total: aed(0) }, describe: 'Empty cart: hint text, no "In cart" badges, Place Order disabled (opacity-50).' },
     submitting: { props: { submitting: true }, describe: 'Order being submitted: "Placing order…", button disabled.' },
     'sold-out': { props: { soldout: 0 }, describe: 'Availability gating: the first card is opacity-50 with a destructive "Sold out" reason.' },
@@ -118,7 +111,7 @@ const menuSpec = { ...BASE, id: G + 'menu', name: 'URY landscape kiosk menu', sl
   describe: ['Landscape kiosk menu at 1920x1080: header (px-10 py-6, 30px semibold title, "New Order" button), category chips with a w-80 search in a border-b strip, a five-column grid (xl, gap-6) of rounded-2xl cards with h-40 images, and the persistent w-[420px] cart panel at the end.', 'Use as the main ordering screen of an entrance/counter/food-court kiosk. Body text is 18px (text-lg); the grid scrolls in the app, so the lowest row is clipped. ' + RTL_NOTE] };
 
 // ---------- 2. DETAIL
-const detSlots = () => ({ ...menuSlots(), d_name: 'Cappuccino', d_desc: 'Double espresso with steamed milk and a deep layer of foam.', d_rate: money(16), back: 'Back', variants_label: 'Variants', addons_label: 'Add-ons',
+const detSlots = () => ({ ...menuSlots(), img: detailImg(), d_name: 'Cappuccino', d_desc: 'Double espresso with steamed milk and a deep layer of foam.', d_rate: money(16), back: 'Back', variants_label: 'Variants', addons_label: 'Add-ons',
   v1_name: 'Regular', v1_rate: money(16), v2_name: 'Large', v2_rate: money(20), a1_name: 'Extra shot', a1_rate: money(4), a2_name: 'Oat milk', a2_rate: money(3), a3_name: 'Vanilla syrup', a3_rate: money(2),
   qty: '1', add_to_cart: 'Add to cart', loading: 'Loading item...', not_found: 'Item not found.', back_menu: 'Back to menu' });
 const detRtl = () => ({ ...menuRtl(), d_name: 'كابتشينو', d_desc: 'إسبريسو مزدوج مع حليب مبخّر وطبقة كثيفة من الرغوة.', d_rate: aed(16), back: 'رجوع', variants_label: 'الأنواع', addons_label: 'الإضافات',
@@ -160,7 +153,7 @@ const coRtl = () => ({ title: 'طلب للاستلام', new_order: 'طلب جد
   payment_title: 'طريقة الدفع', pay_online: 'الدفع عبر الإنترنت', pay_counter: 'الدفع عند الكاشير', request_bill: 'طلب الفاتورة', bill_requested: 'تم طلب الفاتورة — تم إشعار الموظفين',
   payment_note: 'تم إنشاء طلب الدفع (48.00 AED) — سيساعدك أحد الموظفين في الدفع.', place_order: 'تأكيد الطلب', placing: 'جارٍ إرسال الطلب…', starting: 'جارٍ بدء الدفع…' });
 const checkout = (v, id, p) => {
-  const caps = p.caps || { online: true, counter: true, bill: true }, hasAny = caps.online || caps.counter || caps.bill;
+  const caps = p.caps || { online: true, counter: true, bill: false }, hasAny = caps.online || caps.counter || caps.bill;
   const sel = p.sel === undefined ? (caps.counter ? 'counter' : null) : p.sel;
   const pm = (key, label, extra = '') => `<button type="button" class="kl-pm${sel === key ? ' kl-pm--on' : ''}${extra}"${extra ? ' disabled' : ''} data-ui="${id}.pm-${key}">${label}</button>`;
   const methods = hasAny ? `<section class="kl-co__sec kl-co__sec--pay" data-ui="${id}.payment"><h2 class="kl-h2">${v.payment_title}</h2><div class="kl-co__pms">${caps.online ? pm('online', v.pay_online) : ''}${caps.counter ? pm('counter', v.pay_counter) : ''}${caps.bill ? pm('bill', p.billRequested ? v.bill_requested : v.request_bill, p.billRequested ? ' is-disabled' : '') : ''}</div>${p.note ? `<p class="kl-co__note">${v.payment_note}</p>` : ''}</section>` : '';
@@ -176,7 +169,8 @@ const coSpec = { ...BASE, id: G + 'checkout', name: 'URY landscape kiosk checkou
   variants: {
     'pay-online-selected': { props: { sel: 'online' }, describe: 'Pay Online selected (border-primary, bg-primary/10): the action button becomes "Pay Online".' },
     'paying-online': { props: { sel: 'online', paying: true }, describe: 'Online payment starting: "Starting payment…", button disabled.' },
-    'bill-requested': { props: { sel: 'bill', billRequested: true }, describe: 'Bill already requested: the bill option is disabled and reads "Bill requested — staff notified".' },
+    'table-order': { props: { caps: { online: true, counter: true, bill: true } }, values: { title: 'Table 12' }, describe: 'Dine-in table order: Request Bill is offered as a third option (request_bill_enabled is ANDed with a table in the backend, so a pickup kiosk never shows it).' },
+    'bill-requested': { props: { caps: { online: true, counter: true, bill: true }, sel: 'bill', billRequested: true }, values: { title: 'Table 12' }, describe: 'Table order, bill already requested: the bill option is disabled and reads "Bill requested — staff notified".' },
     'payment-request': { props: { sel: 'online', note: true }, describe: 'A payment request without a URL was created: the muted text-xs note appears under the options.' },
     placing: { props: { placing: true }, describe: 'Order being placed: "Placing order…", button disabled.' },
     'counter-only': { props: { caps: { counter: true } }, describe: 'Only pay_at_counter_enabled: one option, preselected.' },
@@ -209,4 +203,4 @@ const stSpec = { ...BASE, id: G + 'status', name: 'URY landscape kiosk order sta
     'no-status': { props: { noStatus: true }, describe: 'get_order_status returned nothing: only the confirmation, pickup code and Done.' } },
   describe: ['Order confirmation under the repeated kiosk header: "Order confirmed", thanks line, a muted pickup-code card (3xl bold code), order / bill status rows (max-w-xs) and a Done button.', 'Shown after a successful submit; the post-submit screen is a plain column at 20px/14px type with no kitchen-stage data (none exists in the backend). ' + RTL_NOTE] };
 
-export const specs = [menuSpec, detSpec, cartSpec, coSpec, stSpec];
+export const specs = [menuSpec, detSpec, cartSpec, coSpec, stSpec].map((sp) => (/menu|detail$/.test(sp.id) ? stateImages(sp, IMG) : sp));

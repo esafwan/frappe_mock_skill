@@ -18,24 +18,88 @@
       "applicable": false,
       "reason": "touch UI: hover/focus are not shown; the source styles only hover:bg-muted on category buttons and the active scale transition"
     },
-    "two-lines": {
+    "single-line": {
       "applicable": true,
       "mechanism": "props",
       "props": {
-        "lines": 2
+        "lines": 1
       },
       "values": {
-        "count_label": "3 items",
+        "p0_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/espresso.jpg"
+        },
+        "p1_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/doppio.jpg"
+        },
+        "p2_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/macchiato.jpg"
+        },
+        "p3_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/latte.jpg"
+        },
+        "p4_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/cappuccino.jpg"
+        },
+        "p5_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/flat-white.jpg"
+        },
+        "p6_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/pour-over.jpg"
+        },
+        "p7_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/cold-brew.jpg"
+        },
+        "p8_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/americano.jpg"
+        },
+        "p9_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/iced-latte.jpg"
+        },
+        "p10_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/iced-americano.jpg"
+        },
+        "p11_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/iced-mocha.jpg"
+        },
+        "p12_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/chai-latte.jpg"
+        },
+        "p13_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/tea.jpg"
+        },
+        "p14_img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/hot-chocolate.jpg"
+        },
+        "img": {
+          "type": "image",
+          "sample": "../../../data/images/cafe/cappuccino.jpg"
+        },
+        "count_label": "1 item",
         "cart_total": {
           "type": "currency",
-          "amount": 44,
+          "amount": 16,
           "currency": "AED",
-          "sample": "AED 44.00"
+          "sample": "AED 16.00"
         }
       },
-      "screenshot": "states/two-lines.png",
-      "preview": "states/two-lines.html",
-      "description": "Only Espresso and Cappuccino in the cart."
+      "screenshot": "states/single-line.png",
+      "preview": "states/single-line.html",
+      "description": "Only the Latte in the cart."
     },
     "disabled": {
       "applicable": false,
