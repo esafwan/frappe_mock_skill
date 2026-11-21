@@ -669,3 +669,11 @@ html[dir=rtl], html[dir=rtl] body, html[dir=rtl] button, html[dir=rtl] input, ht
 .dark .pdb .pdb-ins--warning { background: hsl(var(--warning-tint)); }
 .dark .pdb .pdb-ins--info { background: hsl(var(--primary-tint)); }
 .dark .pdb .pdb-ins__body { color: hsl(var(--gray-950)); }
+
+/* dark chips: lift the blue tags and the HUF badge to readable contrast */
+.dark .pdb .pdb-badge--accent { background: hsl(221 55% 24%); color: hsl(221 100% 90%); box-shadow: inset 0 0 0 1px hsl(221 55% 34%); }
+.dark .pdb .pdb-badge--accent .pdb-dot--seated { background: hsl(221 90% 80%); }
+.dark .pdb .pdb-badge--accent .pdb-dot--fired { background: hsl(221 90% 72%); }
+.dark .pdb .pdb-badge--accent .pdb-dot--served { background: hsl(221 80% 62%); }
+.dark .pdb .pdb-huf { background: hsl(221 55% 24%); color: hsl(221 100% 92%); box-shadow: 0 0 0 1px hsl(221 55% 40%); }
+.dark .pdb .pdb-ask__tag { background: hsl(221 55% 24%); color: hsl(221 100% 92%); }

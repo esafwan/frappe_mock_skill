@@ -715,3 +715,13 @@ html[dir=rtl] .prg, html[dir=rtl] .prg button, html[dir=rtl] .prg input { font-f
 /* ---- product dialog overlay ---- */
 .prg-overlay { position: absolute; inset: 0; z-index: 50; }
 .prg-overlay .pd { background: transparent; }
+
+/* screen polish: wrap order-type pills, full category names, course and price on separate lines, kibbeh photo framed on the kibbeh */
+.prg-types { flex-wrap: wrap; overflow-x: visible; }
+.prg-item__lbl span { white-space: normal; overflow: visible; text-overflow: clip; }
+.prg-card__row { flex-direction: column; align-items: flex-start; gap: 2px; }
+.prg-card__course { max-width: 100%; }
+.prg-card__img { overflow: hidden; }
+.prg-card__img img[src$="/kibbeh.jpg"] { object-position: 50% 0; transform: scale(2.3); transform-origin: 50% 0; }
+
+.dark .prg .psh-logo img { filter: brightness(0) invert(1); }
