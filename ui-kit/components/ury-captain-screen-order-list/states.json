@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "view-only": {
       "applicable": true,
@@ -38,12 +38,7 @@
         "view": "empty"
       },
       "values": {
-        "total": {
-          "type": "currency",
-          "amount": 0,
-          "currency": "AED",
-          "sample": "AED 0.00"
-        }
+        "total": "AED 0.00"
       },
       "screenshot": "states/empty.png",
       "preview": "states/empty.html",

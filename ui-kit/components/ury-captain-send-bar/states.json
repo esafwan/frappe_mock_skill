@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "update": {
       "applicable": true,
@@ -24,12 +24,7 @@
       "props": {},
       "values": {
         "button": "Update Order",
-        "total": {
-          "type": "currency",
-          "amount": 134.5,
-          "currency": "AED",
-          "sample": "AED 134.50"
-        }
+        "total": "AED 134.50"
       },
       "screenshot": "states/update.png",
       "preview": "states/update.html",
@@ -70,12 +65,7 @@
       },
       "values": {
         "button": "Updating…",
-        "total": {
-          "type": "currency",
-          "amount": 134.5,
-          "currency": "AED",
-          "sample": "AED 134.50"
-        }
+        "total": "AED 134.50"
       },
       "screenshot": "states/updating.png",
       "preview": "states/updating.html",

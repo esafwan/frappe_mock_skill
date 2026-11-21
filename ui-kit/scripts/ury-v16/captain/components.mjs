@@ -41,10 +41,10 @@ const TAGS = { 1: ['tagSuccess', true], 2: ['tagWarning', false], 3: ['tagDestru
 const menuCard = (v, i, p) => {
   const [tv, dot] = TAGS[i];
   const off = p.browse || i === 3; // browse-only disables every card; an unavailable item is disabled by MenuCard
-  return `<div class="u-menu-item-card${off ? ' u-menu-item-card--disabled' : ''}" role="button" data-ui="ury-captain-menu-card-${i}">`
-    + `<div class="u-menu-item-media"><img alt="" src="${v['image_' + i]}"></div>`
-    + `<div class="u-menu-item-body"><h3 class="u-menu-item-name">${v['name_' + i]}</h3>`
-    + `<div class="u-menu-item-row"><p class="u-menu-item-course">${v['course_' + i]}</p><span class="u-menu-item-price u-num">${v['price_' + i]}</span></div>`
+  return `<div class="u-menu-item-card${off ? ' u-menu-item-card--disabled' : ''}"${off ? ' style="opacity:1"' : ''} role="button" data-ui="ury-captain-menu-card-${i}">`
+    + `<div class="u-menu-item-media"${off ? ' style="opacity:.5"' : ''}><img alt="" src="${v['image_' + i]}"></div>`
+    + `<div class="u-menu-item-body"><h3 class="u-menu-item-name"${off ? ' style="opacity:.5"' : ''}>${v['name_' + i]}</h3>`
+    + `<div class="u-menu-item-row"${off ? ' style="opacity:.5"' : ''}><p class="u-menu-item-course">${v['course_' + i]}</p><span class="u-menu-item-price u-num">${v['price_' + i]}</span></div>`
     + (p.untagged ? '' : `<div class="u-menu-item-tag"><span class="u-badge u-badge--${tv} u-badge--tag">${dot ? '<span class="u-badge-dot"></span>' : ''}${v['tag_' + i]}</span></div>`)
     + `<div class="u-menu-item-spacer" aria-hidden="true"></div></div></div>`;
 };

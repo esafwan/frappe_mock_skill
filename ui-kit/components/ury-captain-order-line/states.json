@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "delta": {
       "applicable": true,
@@ -40,12 +40,7 @@
       "values": {
         "qty_label": "+1",
         "item_name": "Hummus",
-        "price": {
-          "type": "currency",
-          "amount": 22,
-          "currency": "AED",
-          "sample": "AED 22.00"
-        }
+        "price": "AED 22.00"
       },
       "screenshot": "states/delta-no-comment.png",
       "preview": "states/delta-no-comment.html",
@@ -61,12 +56,7 @@
       "values": {
         "qty_label": "−1",
         "item_name": "Kibbeh",
-        "price": {
-          "type": "currency",
-          "amount": 32,
-          "currency": "AED",
-          "sample": "AED 32.00"
-        }
+        "price": "AED 32.00"
       },
       "screenshot": "states/reduction.png",
       "preview": "states/reduction.html",
@@ -83,12 +73,7 @@
         "qty_label": "2",
         "item_name": "Fattoush",
         "comment": "Dressing on the side",
-        "price": {
-          "type": "currency",
-          "amount": 56,
-          "currency": "AED",
-          "sample": "AED 56.00"
-        }
+        "price": "AED 56.00"
       },
       "screenshot": "states/confirmed.png",
       "preview": "states/confirmed.html",

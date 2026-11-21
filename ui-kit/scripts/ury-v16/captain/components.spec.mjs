@@ -8,7 +8,7 @@ import { STATE_NA } from '../lib.mjs';
 import { tableCard, orderLine, menuPane, actionsMenu, serviceRequests, sendBar, IMG } from './components.mjs';
 
 const base = {
-  group: 'ury-captain', static: true, width: 390, dsf: 3, canvas: 'hsl(var(--background))', darkTheme: '.dark', modes: ['light', 'dark', 'rtl'],
+  group: 'ury-captain', static: true, width: 390, dsf: 3, canvas: 'hsl(var(--background))', darkTheme: 'dark', modes: ['light', 'dark', 'rtl'],
   css: ['ury-v16/ury-fonts.css', 'ury-v16/ury-ui-tokens.css', 'ury-v16/ury-ui-base.css', 'ury-v16/components/captain.css'],
   naDefault: STATE_NA.touch,
 };

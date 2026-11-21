@@ -8,15 +8,15 @@
     },
     "hover": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "focus": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "active": {
       "applicable": false,
-      "reason": "touch UI: hover/focus are not shown; pressed state appears as a variant where the source styles it"
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
     },
     "free": {
       "applicable": true,
@@ -45,12 +45,7 @@
         "table_name": "T5",
         "status": "Mine",
         "elapsed": "12m",
-        "total": {
-          "type": "currency",
-          "amount": 54,
-          "currency": "AED",
-          "sample": "AED 54.00"
-        }
+        "total": "AED 54.00"
       },
       "screenshot": "states/mine.png",
       "preview": "states/mine.html",
@@ -66,16 +61,11 @@
       "values": {
         "table_name": "T7",
         "elapsed": "1h 5m",
-        "total": {
-          "type": "currency",
-          "amount": 132.25,
-          "currency": "AED",
-          "sample": "AED 132.25"
-        }
+        "total": "AED 132.25"
       },
       "screenshot": "states/occupied.png",
       "preview": "states/occupied.html",
-      "description": "Occupied by another captain: amber-400 / amber-50 / amber-900, warning badge with the owner name (no separate owner row), elapsed and total."
+      "description": "Occupied by another captain: amber-400 / amber-50 / amber-900, warning badge with the owner name, owner row (User 12), elapsed and total."
     },
     "billed": {
       "applicable": true,
@@ -88,12 +78,7 @@
         "table_name": "T4",
         "status": "Billed",
         "elapsed": "1h 20m",
-        "total": {
-          "type": "currency",
-          "amount": 210,
-          "currency": "AED",
-          "sample": "AED 210.00"
-        }
+        "total": "AED 210.00"
       },
       "screenshot": "states/billed.png",
       "preview": "states/billed.html",
@@ -123,12 +108,7 @@
       "values": {
         "table_name": "T9",
         "elapsed": "1h 25m",
-        "total": {
-          "type": "currency",
-          "amount": 96.75,
-          "currency": "AED",
-          "sample": "AED 96.75"
-        }
+        "total": "AED 96.75"
       },
       "screenshot": "states/attention-newer.png",
       "preview": "states/attention-newer.html",

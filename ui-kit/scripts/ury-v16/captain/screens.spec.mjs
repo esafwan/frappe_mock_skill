@@ -7,7 +7,7 @@ import { ic, money, screen, STATE_NA } from '../lib.mjs';
 import { tableCard, menuPane, sendBar, IMG } from './components.mjs';
 
 const base = {
-  group: 'ury-captain', static: true, dsf: 3, canvas: 'hsl(var(--background))', darkTheme: '.dark', modes: ['light', 'dark', 'rtl'],
+  group: 'ury-captain', static: true, dsf: 3, canvas: 'hsl(var(--background))', darkTheme: 'dark', modes: ['light', 'dark', 'rtl'],
   css: ['ury-v16/ury-fonts.css', 'ury-v16/ury-ui-tokens.css', 'ury-v16/ury-ui-base.css', 'ury-v16/components/captain.css', 'ury-v16/components/captain-screens.css'],
   naDefault: STATE_NA.touch,
 };
