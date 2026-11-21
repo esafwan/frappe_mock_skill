@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-screen-master-list",
+  "name": "URY admin master list (Table)",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-masters.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Schema-driven master list: the Table master from data/schemas/table.json inside the admin shell. Full-bleed toolbar (view toggle, search, Edit Layout, Add Table), a DataTable of tables with shape and status badges, and the SideDrawer form (512px card over a blurred scrim) in the open variants.",
+    "Use for any admin master doctype list that edits through a drawer (Table, Room, Menu). Column and field labels are the schema titles; the toolbar search follows the master-list pattern, the source TablePage itself has no search box."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

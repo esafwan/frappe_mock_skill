@@ -1,0 +1,545 @@
+{
+  "component": "ury-admin-screen-sales-plan",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "ury-admin-screen-sales-plan",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "ury-admin-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 49
+    },
+    {
+      "id": "ury-admin-header.logo",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 8,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.divider",
+      "tag": "div",
+      "interactive": false,
+      "x": 72,
+      "y": 16,
+      "w": 1,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.breadcrumbs",
+      "tag": "div",
+      "interactive": false,
+      "x": 89,
+      "y": 17.75,
+      "w": 99.03,
+      "h": 12.5
+    },
+    {
+      "id": "ury-admin-header.ask",
+      "tag": "button",
+      "interactive": true,
+      "x": 431.81,
+      "y": 2,
+      "w": 288,
+      "h": 44
+    },
+    {
+      "id": "ury-admin-header.company",
+      "tag": "button",
+      "interactive": true,
+      "x": 731.81,
+      "y": 10,
+      "w": 200.13,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.branch",
+      "tag": "button",
+      "interactive": true,
+      "x": 943.94,
+      "y": 10,
+      "w": 164.47,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.open-pos",
+      "tag": "a",
+      "interactive": true,
+      "x": 1120.41,
+      "y": 8,
+      "w": 102.17,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.bell",
+      "tag": "button",
+      "interactive": true,
+      "x": 1234.58,
+      "y": 10,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.bell-count",
+      "tag": "span",
+      "interactive": false,
+      "x": 1250.58,
+      "y": 6,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1274.58,
+      "y": 10,
+      "w": 141.42,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar",
+      "tag": "aside",
+      "interactive": false,
+      "x": 0,
+      "y": 49,
+      "w": 232,
+      "h": 852
+    },
+    {
+      "id": "ury-admin-sidebar.toggle",
+      "tag": "button",
+      "interactive": true,
+      "x": 195,
+      "y": 57,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar.day-card",
+      "tag": "div",
+      "interactive": false,
+      "x": 10,
+      "y": 95,
+      "w": 211,
+      "h": 99
+    },
+    {
+      "id": "ury-admin-sidebar.group.plan",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 204,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.sales-plan",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 236,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.requirements",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 269,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.operate",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 314,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 346,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.service",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 379,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.observe",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 424,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.department-profitability",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 456,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-variance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 489,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-compliance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 522,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.close-day",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 555,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.control",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 600,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.wastage",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 632,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.overdue-yield-checks",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 665,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.stock-reservations",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 698,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.kot-error-log",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 731,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.menu-routing",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 764,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.reports",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 809,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.group.setup",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 856,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-main",
+      "tag": "main",
+      "interactive": false,
+      "x": 232,
+      "y": 49,
+      "w": 1208,
+      "h": 851
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.page",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 73,
+      "w": 1160,
+      "h": 905.75
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 254,
+      "y": 69,
+      "w": 1164,
+      "h": 177
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.actions",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 157,
+      "w": 1116,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.date",
+      "tag": "div",
+      "interactive": false,
+      "x": 769.11,
+      "y": 157,
+      "w": 180,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.enforcement",
+      "tag": "div",
+      "interactive": false,
+      "x": 961.11,
+      "y": 157,
+      "w": 130,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.save-draft",
+      "tag": "button",
+      "interactive": true,
+      "x": 1103.11,
+      "y": 157,
+      "w": 115.75,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.next-action",
+      "tag": "button",
+      "interactive": true,
+      "x": 1230.86,
+      "y": 157,
+      "w": 163.14,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.stepper",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 209,
+      "w": 1116,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.step-0",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 209,
+      "w": 56.7,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.step-1",
+      "tag": "div",
+      "interactive": false,
+      "x": 398.7,
+      "y": 209,
+      "w": 69.53,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.step-2",
+      "tag": "div",
+      "interactive": false,
+      "x": 532.23,
+      "y": 209,
+      "w": 80.25,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.step-3",
+      "tag": "div",
+      "interactive": false,
+      "x": 676.48,
+      "y": 209,
+      "w": 154.28,
+      "h": 20
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.kpis",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 270,
+      "w": 1116,
+      "h": 68.75
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.search",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 362.75,
+      "w": 1116,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.filter-bar",
+      "tag": "div",
+      "interactive": false,
+      "x": 254,
+      "y": 422.75,
+      "w": 1164,
+      "h": 43
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.add-item",
+      "tag": "button",
+      "interactive": true,
+      "x": 1305.53,
+      "y": 431.75,
+      "w": 88.47,
+      "h": 24
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.group-kitchen",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 477.75,
+      "w": 1116,
+      "h": 355
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.table",
+      "tag": "div",
+      "interactive": false,
+      "x": 293,
+      "y": 557.75,
+      "w": 1086,
+      "h": 266
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.row-1",
+      "tag": "tr",
+      "interactive": false,
+      "x": 293,
+      "y": 588.25,
+      "w": 1086,
+      "h": 59
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.row-2",
+      "tag": "tr",
+      "interactive": false,
+      "x": 293,
+      "y": 647.25,
+      "w": 1086,
+      "h": 59
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.row-3",
+      "tag": "tr",
+      "interactive": false,
+      "x": 293,
+      "y": 706.25,
+      "w": 1086,
+      "h": 59
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.row-4",
+      "tag": "tr",
+      "interactive": false,
+      "x": 293,
+      "y": 765.25,
+      "w": 1086,
+      "h": 58.5
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.group-bar",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 852.75,
+      "w": 1116,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-sales-plan.group-bakery",
+      "tag": "div",
+      "interactive": false,
+      "x": 278,
+      "y": 908.75,
+      "w": 1116,
+      "h": 36
+    }
+  ]
+}

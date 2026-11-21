@@ -1,0 +1,102 @@
+{
+  "component": "ury-admin-screen-printer-config",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "add-printer-dialog": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "dialog": "add"
+      },
+      "screenshot": "states/add-printer-dialog.png",
+      "preview": "states/add-printer-dialog.html",
+      "description": "Add Network Printer dialog: max-w-md card with four fields (name and device are required), Cancel and the accent Add Printer button."
+    },
+    "delete-printer-dialog": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "dialog": "delete"
+      },
+      "screenshot": "states/delete-printer-dialog.png",
+      "preview": "states/delete-printer-dialog.html",
+      "description": "Delete Network Printer confirmation naming the printer, with a destructive Delete action."
+    },
+    "no-network-printers": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "noNet": true
+      },
+      "screenshot": "states/no-network-printers.png",
+      "preview": "states/no-network-printers.html",
+      "description": "Network Printers card with no endpoints: the muted \"No network printers configured.\" line."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "noNet": true
+      },
+      "screenshot": "states/no-network-printers.png",
+      "preview": "states/no-network-printers.html",
+      "description": "Network Printers card with no endpoints: the muted \"No network printers configured.\" line.",
+      "alias": "no-network-printers"
+    },
+    "reprint-off": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "noReprint": true
+      },
+      "screenshot": "states/reprint-off.png",
+      "preview": "states/reprint-off.html",
+      "description": "Enable KOT Reprint switched off: the three reprint selects disappear."
+    },
+    "saving": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "saving": true
+      },
+      "screenshot": "states/saving.png",
+      "preview": "states/saving.html",
+      "description": "Save Changes disabled while saving."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "saving": true
+      },
+      "screenshot": "states/saving.png",
+      "preview": "states/saving.html",
+      "description": "Save Changes disabled while saving.",
+      "alias": "saving"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the printer page has no error state in this mock (server errors surface as toasts)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the printer page has no loading state beyond the variants shown"
+    }
+  }
+}

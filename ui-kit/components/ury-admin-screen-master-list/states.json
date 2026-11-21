@@ -1,0 +1,116 @@
+{
+  "component": "ury-admin-screen-master-list",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Row hovered: bg-muted/50.",
+      "alias": "row-hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "query": "rm_main"
+      },
+      "screenshot": "states/searching.png",
+      "preview": "states/searching.html",
+      "description": "Search field focused with a room typed; the list is filtered to that room.",
+      "alias": "searching"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "drawer-add": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "drawer": "add"
+      },
+      "screenshot": "states/drawer-add.png",
+      "preview": "states/drawer-add.html",
+      "description": "SideDrawer open for a new table: schema defaults (4 seats, Main Hall, Main Branch, Available, Rectangle, layout 0/0/120/80), Table Name empty with its placeholder; 512px card on a bg-black/40 blurred scrim."
+    },
+    "drawer-edit": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "drawer": "edit"
+      },
+      "screenshot": "states/drawer-edit.png",
+      "preview": "states/drawer-edit.html",
+      "description": "SideDrawer open on an existing table: title becomes Edit Dining Table, fields filled, primary action Save Changes."
+    },
+    "grid-view": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": "grid"
+      },
+      "screenshot": "states/grid-view.png",
+      "preview": "states/grid-view.html",
+      "description": "Grid view toggle active: table cards with shape and status badges, room name, seat count and branch."
+    },
+    "searching": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "query": "rm_main"
+      },
+      "screenshot": "states/searching.png",
+      "preview": "states/searching.html",
+      "description": "Search field focused with a room typed; the list is filtered to that room."
+    },
+    "row-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/row-hover.png",
+      "preview": "states/row-hover.html",
+      "description": "Row hovered: bg-muted/50."
+    },
+    "empty": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "empty": true
+      },
+      "screenshot": "states/empty.png",
+      "preview": "states/empty.html",
+      "description": "No tables configured: centred card with the Grid icon, heading, hint and Add Table.",
+      "alias": "empty"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "loading": true
+      },
+      "screenshot": "states/loading.png",
+      "preview": "states/loading.html",
+      "description": "Loading: bordered card with the primary ring spinner.",
+      "alias": "loading"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the master list has no disabled state beyond the variants shown"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the master list has no error state in this mock (server errors surface as toasts)"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ury-admin-screen-setup-wizard",
+  "name": "URY admin setup wizard",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css",
+    "ury-v16/components/admin-masters.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Setup wizard full-page card, no admin shell (WizardLayout): header with logo, title and two-step breadcrumb, a Card with the setup form (/setup-wizard/0) or the Configure sidebar and Branch section (/setup-wizard/1), and the sticky footer navigation.",
+    "First-run flow after install: Setup collects company, country and installation type; Configure walks branch, rooms, tables, menu, payments and staff."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1440,
+  "height": 900,
+  "props": {},
+  "canvas": "hsl(var(--background))"
+}

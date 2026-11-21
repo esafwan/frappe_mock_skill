@@ -1,0 +1,783 @@
+{
+  "component": "ury-admin-screen-sales-plan",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_title": {
+      "type": "text",
+      "sample": "Sales Plan — Fri, 21 Nov · Marina Branch",
+      "maxLength": 64,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_jump": {
+      "type": "text",
+      "sample": "Jump to:",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_d1": {
+      "type": "text",
+      "sample": "Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_d2": {
+      "type": "text",
+      "sample": "Bar",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_d3": {
+      "type": "text",
+      "sample": "Bakery",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt_add": {
+      "type": "text",
+      "sample": "Add item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_desc": {
+      "type": "text",
+      "sample": "We've suggested quantities based on similar days. Adjust anything you expect to be different, then submit the plan for approval.",
+      "maxLength": 205,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_date": {
+      "type": "text",
+      "sample": "21-11-2026",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_hard": {
+      "type": "text",
+      "sample": "Hard",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_save_draft": {
+      "type": "text",
+      "sample": "Save Draft",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_submit_rev": {
+      "type": "text",
+      "sample": "Submit for Review",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "lc_draft": {
+      "type": "text",
+      "sample": "Draft",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "lc_review": {
+      "type": "text",
+      "sample": "Review",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "lc_approval": {
+      "type": "text",
+      "sample": "Approval",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "lc_prod": {
+      "type": "text",
+      "sample": "Ready for Production",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_draft": {
+      "type": "text",
+      "sample": "Currently: Draft · Next: Submit for Review",
+      "maxLength": 68,
+      "where": "text",
+      "element": "text"
+    },
+    "k_planned": {
+      "type": "text",
+      "sample": "Planned Qty",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_v1": {
+      "type": "text",
+      "sample": "186",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_hist": {
+      "type": "text",
+      "sample": "History Avg",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_v2": {
+      "type": "text",
+      "sample": "174",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_items": {
+      "type": "text",
+      "sample": "Items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_v3": {
+      "type": "text",
+      "sample": "12",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_search": {
+      "type": "text",
+      "sample": "Search item, department, or production unit",
+      "maxLength": 69,
+      "where": "text",
+      "element": "text"
+    },
+    "g_k_n": {
+      "type": "text",
+      "sample": "4 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_k_p": {
+      "type": "text",
+      "sample": "86 planned",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "filter_k": {
+      "type": "text",
+      "sample": "Filter Kitchen items",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "x_export": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "x_import": {
+      "type": "text",
+      "sample": "Import",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "x_zero": {
+      "type": "text",
+      "sample": "Set all to 0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_item": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_hist": {
+      "type": "text",
+      "sample": "History Insight",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_unit": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "h_var": {
+      "type": "text",
+      "sample": "Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i1": {
+      "type": "text",
+      "sample": "Chicken Biryani",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c1": {
+      "type": "text",
+      "sample": "ITM-0101",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hi1": {
+      "type": "text",
+      "sample": "Last 4 comparable days avg 18 Nos",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "un1": {
+      "type": "text",
+      "sample": "Hot Line",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q1": {
+      "type": "text",
+      "sample": "20",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v1": {
+      "type": "text",
+      "sample": "+2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i2": {
+      "type": "text",
+      "sample": "Lamb Shank",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c2": {
+      "type": "text",
+      "sample": "ITM-0102",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hi2": {
+      "type": "text",
+      "sample": "Last 4 comparable days avg 12 Nos",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "q2": {
+      "type": "text",
+      "sample": "10",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v2": {
+      "type": "text",
+      "sample": "-2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i3": {
+      "type": "text",
+      "sample": "Grilled Hammour",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c3": {
+      "type": "text",
+      "sample": "ITM-0103",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hi3": {
+      "type": "text",
+      "sample": "Last 4 comparable days avg 9 Nos",
+      "maxLength": 52,
+      "where": "text",
+      "element": "text"
+    },
+    "un2": {
+      "type": "text",
+      "sample": "Grill Station",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q3": {
+      "type": "text",
+      "sample": "9",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v3": {
+      "type": "text",
+      "sample": "0",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "i4": {
+      "type": "text",
+      "sample": "Hummus Plate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "c4": {
+      "type": "text",
+      "sample": "ITM-0104",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "hi4": {
+      "type": "text",
+      "sample": "Last 4 comparable days avg 25 Nos",
+      "maxLength": 53,
+      "where": "text",
+      "element": "text"
+    },
+    "un3": {
+      "type": "text",
+      "sample": "Cold Mezze",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "q4": {
+      "type": "text",
+      "sample": "28",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v4": {
+      "type": "text",
+      "sample": "+3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_b_n": {
+      "type": "text",
+      "sample": "3 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_b_p": {
+      "type": "text",
+      "sample": "54 planned",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_c_n": {
+      "type": "text",
+      "sample": "5 items",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_c_p": {
+      "type": "text",
+      "sample": "46 planned",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_submit_apr": {
+      "type": "text",
+      "sample": "Submit for Approval",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_return": {
+      "type": "text",
+      "sample": "Return to Draft",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_prop": {
+      "type": "text",
+      "sample": "Currently: Review · Next: Submit for Approval",
+      "maxLength": 72,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_approve": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_sub": {
+      "type": "text",
+      "sample": "Currently: Review · Next: Approve (manager)",
+      "maxLength": 69,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_mgr": {
+      "type": "text",
+      "sample": "Only managers can approve this plan.",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_lock": {
+      "type": "text",
+      "sample": "Lock for Production",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "sp_cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_appr": {
+      "type": "text",
+      "sample": "Currently: Approval · Next: Lock for Production",
+      "maxLength": 76,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_lock": {
+      "type": "text",
+      "sample": "Currently: Ready for Production · This plan is locked for production.",
+      "maxLength": 111,
+      "where": "text",
+      "element": "text"
+    },
+    "lc_cancelled": {
+      "type": "text",
+      "sample": "Superseded/Cancelled",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "sum_canc": {
+      "type": "text",
+      "sample": "Currently: Superseded/Cancelled · This plan has been superseded or cancelled.",
+      "maxLength": 124,
+      "where": "text",
+      "element": "text"
+    },
+    "k_blocked": {
+      "type": "text",
+      "sample": "Blocked",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "k_v4": {
+      "type": "text",
+      "sample": "2",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "needs_att": {
+      "type": "text",
+      "sample": "Needs Attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

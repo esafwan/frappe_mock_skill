@@ -1,0 +1,874 @@
+{
+  "component": "ury-admin-screen-printer-config",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "logo_alt": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_printer": {
+      "type": "text",
+      "sample": "Printer Configuration",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_tag": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_hint": {
+      "type": "text",
+      "sample": "Ask about tonight…",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "ask_key": {
+      "type": "text",
+      "sample": "⌘K",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "branch": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "open_pos": {
+      "type": "text",
+      "sample": "Open POS",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "notif_label": {
+      "type": "text",
+      "sample": "Open notifications",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "unread": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "user": {
+      "type": "text",
+      "sample": "Admin User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "collapse": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "day_date": {
+      "type": "text",
+      "sample": "Fri, 21 Nov",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_status": {
+      "type": "text",
+      "sample": "Approved",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_attention": {
+      "type": "text",
+      "sample": "3",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_need": {
+      "type": "text",
+      "sample": "need attention",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "day_open": {
+      "type": "text",
+      "sample": "Open",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_plan": {
+      "type": "text",
+      "sample": "Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sales_plan": {
+      "type": "text",
+      "sample": "Sales Plan",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_requirements": {
+      "type": "text",
+      "sample": "Requirements",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_operate": {
+      "type": "text",
+      "sample": "Operate",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service_board": {
+      "type": "text",
+      "sample": "Service Board",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_service": {
+      "type": "text",
+      "sample": "Service",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_observe": {
+      "type": "text",
+      "sample": "Observe",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_profitability": {
+      "type": "text",
+      "sample": "Profitability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_variance": {
+      "type": "text",
+      "sample": "Yield Variance",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_compliance": {
+      "type": "text",
+      "sample": "Yield Compliance",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "n_close_day": {
+      "type": "text",
+      "sample": "Close Day",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_control": {
+      "type": "text",
+      "sample": "Control",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_wastage": {
+      "type": "text",
+      "sample": "Wastage",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_yield_checks": {
+      "type": "text",
+      "sample": "Yield Checks",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_reservations": {
+      "type": "text",
+      "sample": "Reservations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_kot_errors": {
+      "type": "text",
+      "sample": "KOT Errors",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "n_sellability": {
+      "type": "text",
+      "sample": "Sellability",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "g_reports": {
+      "type": "text",
+      "sample": "Reports",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_item": {
+      "type": "text",
+      "sample": "Item",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_menu": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_bom": {
+      "type": "text",
+      "sample": "BOM",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_tables": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_rooms": {
+      "type": "text",
+      "sample": "Rooms",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_pos_profile": {
+      "type": "text",
+      "sample": "POS Profile",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_users": {
+      "type": "text",
+      "sample": "Users",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_branches": {
+      "type": "text",
+      "sample": "Branches",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_self_ordering": {
+      "type": "text",
+      "sample": "Self Ordering",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_aggregators": {
+      "type": "text",
+      "sample": "Aggregators",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_terminals": {
+      "type": "text",
+      "sample": "Payment Terminals",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "s_report_settings": {
+      "type": "text",
+      "sample": "Report Settings",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_ai": {
+      "type": "text",
+      "sample": "AI Assistant",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_commission": {
+      "type": "text",
+      "sample": "Commission",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_units": {
+      "type": "text",
+      "sample": "Production Units",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "s_depts": {
+      "type": "text",
+      "sample": "Departments",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_item_config": {
+      "type": "text",
+      "sample": "Item Config",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "s_yield_standards": {
+      "type": "text",
+      "sample": "Yield Standards",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_title": {
+      "type": "text",
+      "sample": "Printer Configuration",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_desc": {
+      "type": "text",
+      "sample": "Manage network printers and printer assignments across POS Profiles, Production Units, and Rooms.",
+      "maxLength": 156,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_save": {
+      "type": "text",
+      "sample": "Save Changes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_net": {
+      "type": "text",
+      "sample": "Network Printers",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_net_d": {
+      "type": "text",
+      "sample": "Configured CUPS and network printer endpoints.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_add_np": {
+      "type": "text",
+      "sample": "Add Network Printer",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_np_name": {
+      "type": "text",
+      "sample": "Printer Name / ID",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_np_ip": {
+      "type": "text",
+      "sample": "Server IP",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_np_port": {
+      "type": "text",
+      "sample": "Port",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_np_dev": {
+      "type": "text",
+      "sample": "Printer Device Name",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "c_actions": {
+      "type": "text",
+      "sample": "Actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "np1": {
+      "type": "text",
+      "sample": "Kitchen Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ip1": {
+      "type": "text",
+      "sample": "localhost",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt1": {
+      "type": "text",
+      "sample": "631",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dv1": {
+      "type": "text",
+      "sample": "EPSON_TM-T88VI",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "np2": {
+      "type": "text",
+      "sample": "Bar Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "ip2": {
+      "type": "text",
+      "sample": "localhost",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pt2": {
+      "type": "text",
+      "sample": "9100",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "dv2": {
+      "type": "text",
+      "sample": "STAR_TSP100",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_unit_t": {
+      "type": "text",
+      "sample": "URY Production Unit Printer Settings",
+      "maxLength": 58,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_unit_d": {
+      "type": "text",
+      "sample": "Configure KOT and order routing printers for kitchen and bar production units.",
+      "maxLength": 125,
+      "where": "text",
+      "element": "text"
+    },
+    "l_unit": {
+      "type": "text",
+      "sample": "Production Unit",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_unit": {
+      "type": "text",
+      "sample": "Main Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_dept": {
+      "type": "text",
+      "sample": "Kitchen",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_printers": {
+      "type": "text",
+      "sample": "Printers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_add_row": {
+      "type": "text",
+      "sample": "Add Row",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_bill": {
+      "type": "text",
+      "sample": "Bill",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_kot": {
+      "type": "text",
+      "sample": "KOT Print",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_waiter": {
+      "type": "text",
+      "sample": "Waiter Print",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_printer": {
+      "type": "text",
+      "sample": "Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pr1": {
+      "type": "text",
+      "sample": "Kitchen Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pr2": {
+      "type": "text",
+      "sample": "Bar Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_room_t": {
+      "type": "text",
+      "sample": "URY Room Printer Settings",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_room_d": {
+      "type": "text",
+      "sample": "Configure dining area, hall, and room printer routing.",
+      "maxLength": 87,
+      "where": "text",
+      "element": "text"
+    },
+    "l_room": {
+      "type": "text",
+      "sample": "Room",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_room": {
+      "type": "text",
+      "sample": "Main Hall",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_pos_t": {
+      "type": "text",
+      "sample": "POS Profile Printer Settings",
+      "maxLength": 45,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_pos_a": {
+      "type": "text",
+      "sample": "Configure invoice, receipt, and QZ printing for POS profiles.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "text"
+    },
+    "l_pos": {
+      "type": "text",
+      "sample": "POS Profile",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_pos": {
+      "type": "text",
+      "sample": "Marina Counter",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_std": {
+      "type": "text",
+      "sample": "Standard Print Settings",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_pf": {
+      "type": "text",
+      "sample": "Print Format",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_pf": {
+      "type": "text",
+      "sample": "POS Invoice Standard",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_lh": {
+      "type": "text",
+      "sample": "Letter Head",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_lh": {
+      "type": "text",
+      "sample": "Bay Leaf Letterhead",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_tc": {
+      "type": "text",
+      "sample": "Terms and Conditions",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "v_tc": {
+      "type": "text",
+      "sample": "Standard Terms",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_ph": {
+      "type": "text",
+      "sample": "Print Heading",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_ph": {
+      "type": "text",
+      "sample": "Tax Invoice",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_hw": {
+      "type": "text",
+      "sample": "Hardware / QZ Settings",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_qz": {
+      "type": "text",
+      "sample": "QZ Print",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_qz_d": {
+      "type": "text",
+      "sample": "Print through a local QZ Tray client instead of network printers.",
+      "maxLength": 104,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_qzh": {
+      "type": "text",
+      "sample": "QZ Host",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "v_host": {
+      "type": "text",
+      "sample": "localhost",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_reprint": {
+      "type": "text",
+      "sample": "Enable KOT Reprint",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_reprint_d": {
+      "type": "text",
+      "sample": "Allow reprinting KOTs for table and parcel orders.",
+      "maxLength": 80,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_rkf": {
+      "type": "text",
+      "sample": "Reprint KOT Format",
+      "maxLength": 29,
+      "where": "text",
+      "element": "text"
+    },
+    "v_kf": {
+      "type": "text",
+      "sample": "KOT Standard",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_top": {
+      "type": "text",
+      "sample": "Table Order Printer",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_pop": {
+      "type": "text",
+      "sample": "Parcel Order Printer",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_dlg_np": {
+      "type": "text",
+      "sample": "Add Network Printer",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "ph_np": {
+      "type": "text",
+      "sample": "e.g. Kitchen Printer",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "ph_dev": {
+      "type": "text",
+      "sample": "e.g. EPSON_TM-T88VI",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "cancel": {
+      "type": "text",
+      "sample": "Cancel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_dlg_add": {
+      "type": "text",
+      "sample": "Add Printer",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_del_t": {
+      "type": "text",
+      "sample": "Delete Network Printer",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_del_a": {
+      "type": "text",
+      "sample": "Are you sure you want to delete",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_del_b": {
+      "type": "text",
+      "sample": "? Printer assignments referencing it will need to be reconfigured.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_delete": {
+      "type": "text",
+      "sample": "Delete",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "pc_np_none": {
+      "type": "text",
+      "sample": "No network printers configured.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

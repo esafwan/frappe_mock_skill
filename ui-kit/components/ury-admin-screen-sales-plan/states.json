@@ -1,0 +1,122 @@
+{
+  "component": "ury-admin-screen-sales-plan",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/pill-hover.png",
+      "preview": "states/pill-hover.html",
+      "description": "Department pill hovered: bg-primary-tint.",
+      "alias": "pill-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "review": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "review"
+      },
+      "screenshot": "states/review.png",
+      "preview": "states/review.html",
+      "description": "Status Proposed: stepper on Review, next action Submit for Approval, secondary Return to Draft; the draft-only controls (enforcement select, Save Draft, Add item) are gone."
+    },
+    "approval": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "approval"
+      },
+      "screenshot": "states/approval.png",
+      "preview": "states/approval.html",
+      "description": "Submitted for Approval for a non-manager: Approve is disabled and \"Only managers can approve this plan.\" appears beside the stepper."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "approval"
+      },
+      "screenshot": "states/approval.png",
+      "preview": "states/approval.html",
+      "description": "Submitted for Approval for a non-manager: Approve is disabled and \"Only managers can approve this plan.\" appears beside the stepper.",
+      "alias": "approval"
+    },
+    "approved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "approved"
+      },
+      "screenshot": "states/approved.png",
+      "preview": "states/approved.html",
+      "description": "Status Approved: stepper on Approval with two complete steps, next action Lock for Production, destructive Cancel."
+    },
+    "locked": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "locked"
+      },
+      "screenshot": "states/locked.png",
+      "preview": "states/locked.html",
+      "description": "Locked for Production: every step complete, no next action, Cancel only."
+    },
+    "cancelled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "status": "cancelled"
+      },
+      "screenshot": "states/cancelled.png",
+      "preview": "states/cancelled.html",
+      "description": "Superseded/Cancelled: the stepper collapses to a destructive X badge with the terminal summary."
+    },
+    "blocked": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "blocked": true
+      },
+      "screenshot": "states/blocked.png",
+      "preview": "states/blocked.html",
+      "description": "Items without history or a production unit: a Blocked KPI in warning tone and the collapsed Needs Attention panel with its count badge."
+    },
+    "pill-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/pill-hover.png",
+      "preview": "states/pill-hover.html",
+      "description": "Department pill hovered: bg-primary-tint."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the Sales Plan page has no error state in this mock (server errors surface as toasts)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the Sales Plan page has no loading state beyond the variants shown"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the Sales Plan page has no empty state beyond the variants shown"
+    }
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "component": "ury-admin-screen-setup-wizard",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "w_logo": {
+      "type": "text",
+      "sample": "URY Logo",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_title": {
+      "type": "text",
+      "sample": "Let's get your restaurant ready",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    },
+    "w_setup": {
+      "type": "text",
+      "sample": "Setup",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_configure": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_company": {
+      "type": "text",
+      "sample": "Company Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_company": {
+      "type": "text",
+      "sample": "Bay Leaf Hospitality",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "w_abbr": {
+      "type": "text",
+      "sample": "Company Abbreviation",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_abbr": {
+      "type": "text",
+      "sample": "BLH",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_abbr_d": {
+      "type": "text",
+      "sample": "Used as a short prefix for your invoice numbers. Auto-filled from your company name — edit if you'd like something different.",
+      "maxLength": 200,
+      "where": "text",
+      "element": "text"
+    },
+    "w_lang": {
+      "type": "text",
+      "sample": "Your Language",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_lang": {
+      "type": "text",
+      "sample": "English",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_country": {
+      "type": "text",
+      "sample": "Your Country",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_country": {
+      "type": "text",
+      "sample": "United Arab Emirates",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "w_tz": {
+      "type": "text",
+      "sample": "Timezone",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_tz": {
+      "type": "text",
+      "sample": "Asia/Dubai",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_cur": {
+      "type": "text",
+      "sample": "Currency",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_cur": {
+      "type": "text",
+      "sample": "AED",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_chart": {
+      "type": "text",
+      "sample": "Chart of Accounts",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_chart": {
+      "type": "text",
+      "sample": "United Arab Emirates - Chart of Accounts",
+      "maxLength": 64,
+      "where": "text",
+      "element": "text"
+    },
+    "w_chart_d": {
+      "type": "text",
+      "sample": "A template for how your income and expenses get categorized. We've picked one for your country — you usually don't need to change this.",
+      "maxLength": 216,
+      "where": "text",
+      "element": "text"
+    },
+    "w_fy": {
+      "type": "text",
+      "sample": "Financial Year Begins On",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "w_v_fy": {
+      "type": "text",
+      "sample": "01-01-2026",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_fy_d": {
+      "type": "text",
+      "sample": "When your financial year starts. Most businesses use the default for their country — change this only if your accountant asks you to.",
+      "maxLength": 213,
+      "where": "text",
+      "element": "text"
+    },
+    "w_install": {
+      "type": "text",
+      "sample": "Installation Type",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "w_min": {
+      "type": "text",
+      "sample": "Minimal Installation",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "w_adv": {
+      "type": "text",
+      "sample": "Advanced Installation",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "w_demo": {
+      "type": "text",
+      "sample": "Set up with demo data",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "w_demo_d": {
+      "type": "text",
+      "sample": "Adds a sample branch, rooms, tables, menu, and POS you can change or delete later.",
+      "maxLength": 132,
+      "where": "text",
+      "element": "text"
+    },
+    "w_continue": {
+      "type": "text",
+      "sample": "Continue",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_conf": {
+      "type": "text",
+      "sample": "Configuration",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_branch": {
+      "type": "text",
+      "sample": "Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_rooms": {
+      "type": "text",
+      "sample": "Rooms",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_tables": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_menu": {
+      "type": "text",
+      "sample": "Menu",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_pay": {
+      "type": "text",
+      "sample": "Payments",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_n_user": {
+      "type": "text",
+      "sample": "User",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_s_title": {
+      "type": "text",
+      "sample": "Branch Details",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_s_desc": {
+      "type": "text",
+      "sample": "Set up your main branch name, invoice numbering, and tax details.",
+      "maxLength": 104,
+      "where": "text",
+      "element": "text"
+    },
+    "w_bname": {
+      "type": "text",
+      "sample": "Branch Name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_bname_v": {
+      "type": "text",
+      "sample": "Marina Branch",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_btax": {
+      "type": "text",
+      "sample": "Tax ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_ph_tax": {
+      "type": "text",
+      "sample": "Optional",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_tax_d": {
+      "type": "text",
+      "sample": "Optional, add this now or later.",
+      "maxLength": 52,
+      "where": "text",
+      "element": "text"
+    },
+    "w_binv": {
+      "type": "text",
+      "sample": "Invoice Prefix",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_binv_v": {
+      "type": "text",
+      "sample": "INV-",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_inv_d": {
+      "type": "text",
+      "sample": "Shown at the start of every bill number, like INV-0001.",
+      "maxLength": 88,
+      "where": "text",
+      "element": "text"
+    },
+    "w_agg_sw": {
+      "type": "text",
+      "sample": "Takes orders through food-delivery apps",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    },
+    "w_prev": {
+      "type": "text",
+      "sample": "Previous",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_later": {
+      "type": "text",
+      "sample": "the data can be changed later",
+      "maxLength": 47,
+      "where": "text",
+      "element": "text"
+    },
+    "w_defaults": {
+      "type": "text",
+      "sample": "Finish with defaults",
+      "maxLength": 32,
+      "where": "text",
+      "element": "text"
+    },
+    "w_next": {
+      "type": "text",
+      "sample": "Next",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_bagg": {
+      "type": "text",
+      "sample": "Aggregator Prefix",
+      "maxLength": 28,
+      "where": "text",
+      "element": "text"
+    },
+    "w_agg_v": {
+      "type": "text",
+      "sample": "AGG-",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "w_agg_d": {
+      "type": "text",
+      "sample": "A separate bill number series for delivery app orders.",
+      "maxLength": 87,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

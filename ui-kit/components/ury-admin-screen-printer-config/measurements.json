@@ -1,0 +1,608 @@
+{
+  "component": "ury-admin-screen-printer-config",
+  "viewport": {
+    "w": 1440,
+    "h": 900,
+    "deviceScaleFactor": 2
+  },
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "elements": [
+    {
+      "id": "ury-admin-screen-printer-config",
+      "tag": "div",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "id": "ury-admin-header",
+      "tag": "header",
+      "interactive": false,
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 49
+    },
+    {
+      "id": "ury-admin-header.logo",
+      "tag": "a",
+      "interactive": true,
+      "x": 24,
+      "y": 8,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.divider",
+      "tag": "div",
+      "interactive": false,
+      "x": 72,
+      "y": 16,
+      "w": 1,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.breadcrumbs",
+      "tag": "div",
+      "interactive": false,
+      "x": 89,
+      "y": 17.75,
+      "w": 172.03,
+      "h": 12.5
+    },
+    {
+      "id": "ury-admin-header.ask",
+      "tag": "button",
+      "interactive": true,
+      "x": 431.81,
+      "y": 2,
+      "w": 288,
+      "h": 44
+    },
+    {
+      "id": "ury-admin-header.company",
+      "tag": "button",
+      "interactive": true,
+      "x": 731.81,
+      "y": 10,
+      "w": 200.13,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.branch",
+      "tag": "button",
+      "interactive": true,
+      "x": 943.94,
+      "y": 10,
+      "w": 164.47,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.open-pos",
+      "tag": "a",
+      "interactive": true,
+      "x": 1120.41,
+      "y": 8,
+      "w": 102.17,
+      "h": 32
+    },
+    {
+      "id": "ury-admin-header.bell",
+      "tag": "button",
+      "interactive": true,
+      "x": 1234.58,
+      "y": 10,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-header.bell-count",
+      "tag": "span",
+      "interactive": false,
+      "x": 1250.58,
+      "y": 6,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "id": "ury-admin-header.user",
+      "tag": "button",
+      "interactive": true,
+      "x": 1274.58,
+      "y": 10,
+      "w": 141.42,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar",
+      "tag": "aside",
+      "interactive": false,
+      "x": 0,
+      "y": 49,
+      "w": 232,
+      "h": 852
+    },
+    {
+      "id": "ury-admin-sidebar.toggle",
+      "tag": "button",
+      "interactive": true,
+      "x": 195,
+      "y": 57,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-sidebar.day-card",
+      "tag": "div",
+      "interactive": false,
+      "x": 10,
+      "y": 95,
+      "w": 211,
+      "h": 99
+    },
+    {
+      "id": "ury-admin-sidebar.group.plan",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 204,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.sales-plan",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 236,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.requirements",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 269,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.operate",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 314,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.dashboard",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 346,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.service",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 379,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.observe",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 424,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.department-profitability",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 456,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-variance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 489,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-compliance",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 522,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.close-day",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 555,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.control",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 600,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.wastage",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 632,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.overdue-yield-checks",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 665,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.stock-reservations",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 698,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.kot-error-log",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 731,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.menu-routing",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 764,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.group.reports",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 809,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.group.setup",
+      "tag": "button",
+      "interactive": true,
+      "x": 16,
+      "y": 856,
+      "w": 199,
+      "h": 30
+    },
+    {
+      "id": "ury-admin-sidebar.link.item",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 890,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.menu",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 923,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.bom",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 956,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.table",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 989,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.room",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1022,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.pos-profile",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1055,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.user",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1088,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.branch",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1121,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.self-ordering-profile",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1154,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.aggregator",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1187,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.payment-terminals",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1220,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.printer-config",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1253,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.report-settings",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1286,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.ai-settings",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1319,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.commission-settings",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1352,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.production-unit",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1385,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.production-department",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1418,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.item-production-config",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1451,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-sidebar.link.yield-standards",
+      "tag": "a",
+      "interactive": true,
+      "x": 16,
+      "y": 1484,
+      "w": 199,
+      "h": 31
+    },
+    {
+      "id": "ury-admin-main",
+      "tag": "main",
+      "interactive": false,
+      "x": 232,
+      "y": 49,
+      "w": 1208,
+      "h": 851
+    },
+    {
+      "id": "ury-admin-screen-printer-config.page",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 49,
+      "w": 1160,
+      "h": 998
+    },
+    {
+      "id": "ury-admin-screen-printer-config.header",
+      "tag": "div",
+      "interactive": false,
+      "x": 232,
+      "y": 49,
+      "w": 1208,
+      "h": 85
+    },
+    {
+      "id": "ury-admin-screen-printer-config.save",
+      "tag": "button",
+      "interactive": true,
+      "x": 1274.95,
+      "y": 79,
+      "w": 141.05,
+      "h": 36
+    },
+    {
+      "id": "ury-admin-screen-printer-config.section-network",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 150,
+      "w": 572,
+      "h": 214
+    },
+    {
+      "id": "ury-admin-screen-printer-config.add-network-printer",
+      "tag": "button",
+      "interactive": true,
+      "x": 653.39,
+      "y": 167,
+      "w": 157.61,
+      "h": 28
+    },
+    {
+      "id": "ury-admin-screen-printer-config.network-table",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 223,
+      "w": 538,
+      "h": 124
+    },
+    {
+      "id": "ury-admin-screen-printer-config.section-unit",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 380,
+      "w": 572,
+      "h": 368
+    },
+    {
+      "id": "ury-admin-screen-printer-config.unit-printers",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 559,
+      "w": 538,
+      "h": 172
+    },
+    {
+      "id": "ury-admin-screen-printer-config.section-room",
+      "tag": "div",
+      "interactive": false,
+      "x": 256,
+      "y": 764,
+      "w": 572,
+      "h": 283
+    },
+    {
+      "id": "ury-admin-screen-printer-config.room-printers",
+      "tag": "div",
+      "interactive": false,
+      "x": 273,
+      "y": 907,
+      "w": 538,
+      "h": 123
+    },
+    {
+      "id": "ury-admin-screen-printer-config.section-pos-profile",
+      "tag": "div",
+      "interactive": false,
+      "x": 844,
+      "y": 150,
+      "w": 572,
+      "h": 782
+    },
+    {
+      "id": "ury-admin-screen-printer-config.pos-printers",
+      "tag": "div",
+      "interactive": false,
+      "x": 861,
+      "y": 792,
+      "w": 538,
+      "h": 123
+    }
+  ]
+}

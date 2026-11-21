@@ -1,0 +1,113 @@
+{
+  "component": "ury-admin-screen-setup-wizard",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": true
+      },
+      "screenshot": "states/continue-hover.png",
+      "preview": "states/continue-hover.html",
+      "description": "Continue hovered: bg-foreground/90.",
+      "alias": "continue-hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "focus": true
+      },
+      "screenshot": "states/field-focus.png",
+      "preview": "states/field-focus.html",
+      "description": "Company Name focused: primary border and ring halo.",
+      "alias": "field-focus"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "configure": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": 1
+      },
+      "screenshot": "states/configure.png",
+      "preview": "states/configure.html",
+      "description": "/setup-wizard/1 (ConfigurePage): Setup step is done (primary check), Configure active; sidebar of six sections with Branch active, SectionShell heading and the BranchSection form; footer has Previous on the start and \"Finish with defaults\" plus Next on the end."
+    },
+    "configure-aggregator": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "step": 1,
+        "agg": true
+      },
+      "screenshot": "states/configure-aggregator.png",
+      "preview": "states/configure-aggregator.html",
+      "description": "Configure step with the delivery-apps switch on, which reveals the Aggregator Prefix field."
+    },
+    "advanced-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "install": "advanced"
+      },
+      "screenshot": "states/advanced-selected.png",
+      "preview": "states/advanced-selected.html",
+      "description": "Advanced Installation card selected (border-2 border-primary bg-primary-50)."
+    },
+    "demo-on": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "demo": true
+      },
+      "screenshot": "states/demo-on.png",
+      "preview": "states/demo-on.html",
+      "description": "Set up with demo data switched on."
+    },
+    "field-focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "focus": true
+      },
+      "screenshot": "states/field-focus.png",
+      "preview": "states/field-focus.html",
+      "description": "Company Name focused: primary border and ring halo."
+    },
+    "continue-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": true
+      },
+      "screenshot": "states/continue-hover.png",
+      "preview": "states/continue-hover.html",
+      "description": "Continue hovered: bg-foreground/90."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the wizard has no disabled state beyond the variants shown"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the wizard has no error state in this mock (server errors surface as toasts)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the wizard has no loading state beyond the variants shown"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the wizard has no empty state beyond the variants shown"
+    }
+  }
+}

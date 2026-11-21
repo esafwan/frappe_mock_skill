@@ -1,0 +1,82 @@
+{
+  "component": "ury-admin-screen-master-form",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "focus": true
+      },
+      "screenshot": "states/field-focus.png",
+      "preview": "states/field-focus.html",
+      "description": "Branch Name focused: primary border and the 2px ring halo.",
+      "alias": "field-focus"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "view-mode": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "view": true
+      },
+      "screenshot": "states/view-mode.png",
+      "preview": "states/view-mode.html",
+      "description": "Read-only detail (isEditMode false): every field disabled (opacity-50, bg-gray-100, no shadow) and the header action is Edit."
+    },
+    "field-focus": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "focus": true
+      },
+      "screenshot": "states/field-focus.png",
+      "preview": "states/field-focus.html",
+      "description": "Branch Name focused: primary border and the 2px ring halo."
+    },
+    "saving": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "saving": true
+      },
+      "screenshot": "states/saving.png",
+      "preview": "states/saving.html",
+      "description": "Save button disabled while the request is in flight (opacity-50, pointer events off)."
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "saving": true
+      },
+      "screenshot": "states/saving.png",
+      "preview": "states/saving.html",
+      "description": "Save button disabled while the request is in flight (opacity-50, pointer events off).",
+      "alias": "saving"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the master form has no error state in this mock (server errors surface as toasts)"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the master form has no loading state beyond the variants shown"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the master form has no empty state beyond the variants shown"
+    }
+  }
+}
