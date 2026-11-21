@@ -1,0 +1,97 @@
+{
+  "component": "ury-admin-header",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "company"
+      },
+      "screenshot": "states/company-hover.png",
+      "preview": "states/company-hover.html",
+      "description": "Company button hovered: bg-muted/70.",
+      "alias": "company-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "no-unread": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "unread": false
+      },
+      "screenshot": "states/no-unread.png",
+      "preview": "states/no-unread.html",
+      "description": "Bell without the unread badge (unreadCount is 0)."
+    },
+    "all-scope": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {},
+      "values": {
+        "company": "All Companies",
+        "branch": "All Branches"
+      },
+      "screenshot": "states/all-scope.png",
+      "preview": "states/all-scope.html",
+      "description": "Company and branch both set to All, the default scope."
+    },
+    "reports-route": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "route": "/reports/today-sales"
+      },
+      "screenshot": "states/reports-route.png",
+      "preview": "states/reports-route.html",
+      "description": "Breadcrumb on a report route: Reports / Today's Sales."
+    },
+    "company-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "company"
+      },
+      "screenshot": "states/company-hover.png",
+      "preview": "states/company-hover.html",
+      "description": "Company button hovered: bg-muted/70."
+    },
+    "user-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "user"
+      },
+      "screenshot": "states/user-hover.png",
+      "preview": "states/user-hover.html",
+      "description": "User menu button hovered: bg-muted."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the header has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the header has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the header has no loading state (DayStatusCard loading dots are not part of this mock)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the header has no empty state"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "component": "ury-admin-page-toolbar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/pill-hover.png",
+      "preview": "states/pill-hover.html",
+      "description": "Department pill hovered: bg-primary-tint.",
+      "alias": "pill-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "no-filter-bar": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filters": false
+      },
+      "screenshot": "states/no-filter-bar.png",
+      "preview": "states/no-filter-bar.html",
+      "description": "PageToolbar only, without the sticky filter bar."
+    },
+    "pill-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": 1
+      },
+      "screenshot": "states/pill-hover.png",
+      "preview": "states/pill-hover.html",
+      "description": "Department pill hovered: bg-primary-tint."
+    },
+    "reports-route": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "route": "/reports/today-sales"
+      },
+      "screenshot": "states/reports-route.png",
+      "preview": "states/reports-route.html",
+      "description": "Breadcrumb for a report page."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the toolbar has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the toolbar has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the toolbar has no loading state (DayStatusCard loading dots are not part of this mock)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the toolbar has no empty state"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "component": "ury-admin-sidebar",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "/service"
+      },
+      "screenshot": "states/link-hover.png",
+      "preview": "states/link-hover.html",
+      "description": "Inactive link hovered: bg-hair/60, text-foreground.",
+      "alias": "link-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "collapsed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "collapsed": true
+      },
+      "screenshot": "states/collapsed.png",
+      "preview": "states/collapsed.html",
+      "description": "Collapsed rail, 64px wide: icon-only links, no group headers, phase strip only."
+    },
+    "reports-open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "reports": true,
+        "route": "/reports/today-sales"
+      },
+      "screenshot": "states/reports-open.png",
+      "preview": "states/reports-open.html",
+      "description": "Reports group expanded with its four sub-groups; active report highlighted."
+    },
+    "setup-open": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "setup": true,
+        "route": "/printer-config"
+      },
+      "screenshot": "states/setup-open.png",
+      "preview": "states/setup-open.html",
+      "description": "Setup disclosure expanded; Printer Configuration active."
+    },
+    "link-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "hover": "/service"
+      },
+      "screenshot": "states/link-hover.png",
+      "preview": "states/link-hover.html",
+      "description": "Inactive link hovered: bg-hair/60, text-foreground."
+    },
+    "collapsed-reports": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "collapsed": true,
+        "reports": true,
+        "route": "/reports/today-sales"
+      },
+      "screenshot": "states/collapsed-reports.png",
+      "preview": "states/collapsed-reports.html",
+      "description": "Collapsed rail with the Reports icons listed."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the sidebar has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the sidebar has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the sidebar has no loading state (DayStatusCard loading dots are not part of this mock)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the sidebar has no empty state"
+    }
+  }
+}

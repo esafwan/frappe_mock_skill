@@ -1,0 +1,92 @@
+{
+  "component": "ury-admin-scope-menu",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "selected": "all",
+        "hover": 1
+      },
+      "screenshot": "states/item-hover.png",
+      "preview": "states/item-hover.html",
+      "description": "Row hovered: bg-muted.",
+      "alias": "item-hover"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pointer UI: hover/focus are shown as variants where the source styles them"
+    },
+    "company-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "selected": 0
+      },
+      "screenshot": "states/company-selected.png",
+      "preview": "states/company-selected.html",
+      "description": "Company list with one company selected (primary-tint row, check)."
+    },
+    "branch-all": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "branch",
+        "selected": "all"
+      },
+      "screenshot": "states/branch-all.png",
+      "preview": "states/branch-all.html",
+      "description": "Branch dropdown, All Branches selected."
+    },
+    "branch-selected": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "branch",
+        "selected": 1
+      },
+      "screenshot": "states/branch-selected.png",
+      "preview": "states/branch-selected.html",
+      "description": "Branch dropdown with a single branch selected."
+    },
+    "item-hover": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "kind": "company",
+        "selected": "all",
+        "hover": 1
+      },
+      "screenshot": "states/item-hover.png",
+      "preview": "states/item-hover.html",
+      "description": "Row hovered: bg-muted."
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: the menu has no disabled state in the source"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: the menu has no error state"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: the menu has no loading state (DayStatusCard loading dots are not part of this mock)"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: the menu has no empty state"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "ury-admin-page-toolbar",
+  "name": "URY admin page toolbar",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 1208,
+    "h": 162.5
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Full-bleed PageToolbar (breadcrumb, 18px/600 title, view toggle, border-b) followed by the sticky filter bar (bg-background/95 with blur, border-b, px 24 py 8) holding the \"Jump to\" pills and the Add item button.",
+    "First block inside the admin main area. The toolbar punches through the 24px gutter. Arabic comes from ury/translations/ar.csv; \"Plan\", \"Setup\", the sample company, branch and department names and the sample date are translated here because ar.csv has no entry for them."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 1208,
+  "height": null,
+  "props": {
+    "route": "/sales-plan"
+  },
+  "canvas": "hsl(var(--background))"
+}

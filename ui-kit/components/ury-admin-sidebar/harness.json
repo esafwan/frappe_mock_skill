@@ -1,0 +1,44 @@
+{
+  "id": "ury-admin-sidebar",
+  "name": "URY admin sidebar",
+  "group": "ury-admin",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 232,
+    "h": 852
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "ury-v16/ury-fonts.css",
+    "ury-v16/ury-ui-tokens.css",
+    "ury-v16/ury-ui-base.css",
+    "ury-v16/components/admin-shell.css"
+  ],
+  "modes": [
+    "light",
+    "dark",
+    "rtl"
+  ],
+  "describe": [
+    "Navigation rail: DayStatusCard, Plan / Operate / Observe / Control groups, a Reports disclosure and a Setup disclosure pinned to the bottom. 232px expanded, 64px collapsed; the active link is a raised card chip with a primary-coloured icon.",
+    "Left of every admin screen. Show the collapsed and Reports-open variants for those states. Arabic comes from ury/translations/ar.csv; \"Plan\", \"Setup\", the sample company, branch and department names and the sample date are translated here because ar.csv has no entry for them."
+  ],
+  "darkTheme": ".dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 232,
+  "height": 900,
+  "props": {
+    "route": "/sales-plan"
+  },
+  "canvas": "hsl(var(--background))"
+}
