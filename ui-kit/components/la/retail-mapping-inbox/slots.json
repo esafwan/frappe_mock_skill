@@ -1,0 +1,280 @@
+{
+ "slots": {
+  "desc": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "tab1": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab2": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab3": {
+   "type": "text",
+   "sample": "Mapping inbox",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab4": {
+   "type": "text",
+   "sample": "Retail settings",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "segOpen": {
+   "type": "text",
+   "sample": "Open",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "segMapped": {
+   "type": "text",
+   "sample": "Mapped",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "segAside": {
+   "type": "text",
+   "sample": "Set aside",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "count": {
+   "type": "number",
+   "sample": "4",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "reasonLabel": {
+   "type": "text",
+   "sample": "Reason",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "reasonValue": {
+   "type": "text",
+   "sample": "Any",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "colSku": {
+   "type": "text",
+   "sample": "SKU",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colWhy": {
+   "type": "text",
+   "sample": "Why it is here",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "colBills": {
+   "type": "text",
+   "sample": "Bills",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colSeen": {
+   "type": "text",
+   "sample": "Last seen",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "colCategory": {
+   "type": "text",
+   "sample": "Category",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "chooseCategory": {
+   "type": "text",
+   "sample": "Choose a category",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "datePh": {
+   "type": "text",
+   "sample": "dd/mm/yyyy",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "btnMap": {
+   "type": "text",
+   "sample": "Map",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "btnAside": {
+   "type": "text",
+   "sample": "Set aside",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "cat1": {
+   "type": "text",
+   "sample": "Staples",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "cat2": {
+   "type": "text",
+   "sample": "Dairy",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "cat3": {
+   "type": "text",
+   "sample": "Bakery",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "cat4": {
+   "type": "text",
+   "sample": "Beverages",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "emptyTitle": {
+   "type": "text",
+   "sample": "Nothing to map",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "emptyBody": {
+   "type": "text",
+   "sample": "Every item the till has seen is mapped to a category.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "r1_sku": {
+   "type": "text",
+   "sample": "RICE1",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r1_why": {
+   "type": "text",
+   "sample": "No category yet",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "r1_hint": {
+   "type": "text",
+   "sample": "Pick the category this item belongs to.",
+   "maxLength": 88,
+   "where": "text"
+  },
+  "r1_bills": {
+   "type": "number",
+   "sample": "6",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r1_seen": {
+   "type": "date",
+   "sample": "Nov 22, 2026, 10:44 AM",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "r2_sku": {
+   "type": "text",
+   "sample": "SNAC1",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r2_why": {
+   "type": "text",
+   "sample": "More than one category fits",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "r2_hint": {
+   "type": "text",
+   "sample": "Pick the one category that is right for this item.",
+   "maxLength": 88,
+   "where": "text"
+  },
+  "r2_bills": {
+   "type": "number",
+   "sample": "4",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r2_seen": {
+   "type": "date",
+   "sample": "Nov 22, 2026, 10:44 AM",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "r3_sku": {
+   "type": "text",
+   "sample": "2312345012349",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r3_why": {
+   "type": "text",
+   "sample": "Weighed item barcode",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "r3_hint": {
+   "type": "text",
+   "sample": "Weighed items carry a price or weight in the barcode. Map the product code once.",
+   "maxLength": 88,
+   "where": "text"
+  },
+  "r3_bills": {
+   "type": "number",
+   "sample": "3",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r3_seen": {
+   "type": "date",
+   "sample": "Nov 22, 2026, 10:44 AM",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "r4_sku": {
+   "type": "text",
+   "sample": "TEA1",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r4_why": {
+   "type": "text",
+   "sample": "No category yet",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "r4_hint": {
+   "type": "text",
+   "sample": "Pick the category this item belongs to.",
+   "maxLength": 88,
+   "where": "text"
+  },
+  "r4_bills": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r4_seen": {
+   "type": "date",
+   "sample": "Nov 22, 2026, 10:44 AM",
+   "maxLength": 26,
+   "where": "text"
+  }
+ }
+}
