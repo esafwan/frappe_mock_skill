@@ -1,0 +1,56 @@
+{
+ "id": "la-activity-feed",
+ "name": "Member activity feed (date groups, kind, note, points)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "shell": true,
+ "css": [
+  "tokens/css/la-desk-feedform.css"
+ ],
+ "states": [
+  "populated",
+  "empty",
+  "earned",
+  "redeemed",
+  "bonus"
+ ],
+ "stateText": {
+  "earned": {
+   "kind": {
+    "en": "Earned",
+    "ar": "اكتساب"
+   },
+   "note": {
+    "en": "purchase",
+    "ar": "عملية شراء"
+   },
+   "points": "+396"
+  },
+  "redeemed": {
+   "kind": {
+    "en": "Redeemed",
+    "ar": "استبدال"
+   },
+   "note": {
+    "en": "redeem reward voucher",
+    "ar": "استبدال قسيمة مكافأة"
+   },
+   "points": "-4,600"
+  },
+  "bonus": {
+   "kind": {
+    "en": "Bonus",
+    "ar": "مكافأة"
+   },
+   "note": {
+    "en": "birthday bonus",
+    "ar": "مكافأة عيد ميلاد"
+   },
+   "points": "+100"
+  }
+ }
+}
