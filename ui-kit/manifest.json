@@ -56525,6 +56525,217 @@
         "program": "la-report-filters.program-value",
         "reset": "la-report-filters.reset"
       }
+    },
+    "la-counter-home": {
+      "id": "la-counter-home",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/counter-home.page.json",
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "components": [
+        "la-counter-shell",
+        "la-counter-card"
+      ],
+      "interactionTargets": {
+        "la-counter-home.card-find": "tap: opens Find / enrol member",
+        "la-counter-home.card-scan": "tap: opens Scan card",
+        "la-counter-home.card-bill": "tap: opens New bill"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/counter-home.html",
+          "desc": "Populated, light, en / AED"
+        },
+        "dark": {
+          "file": "pages/la/counter-home.dark.html",
+          "desc": "Populated, dark (estimated tokens)"
+        },
+        "ar-AED": {
+          "file": "pages/la/counter-home.ar-AED.html",
+          "desc": "Populated, RTL Arabic, AED"
+        },
+        "ar-AED.dark": {
+          "file": "pages/la/counter-home.ar-AED.dark.html",
+          "desc": "RTL Arabic dark"
+        },
+        "en-INR": {
+          "file": "pages/la/counter-home.en-INR.html",
+          "desc": "Populated, INR locale"
+        },
+        "pressed": {
+          "file": "pages/la/counter-home.pressed.html",
+          "desc": "Find card pressed (tap feedback)"
+        },
+        "pressed.dark": {
+          "file": "pages/la/counter-home.pressed.dark.html",
+          "desc": "Find card pressed, dark"
+        },
+        "pressed.ar-AED": {
+          "file": "pages/la/counter-home.pressed.ar-AED.html",
+          "desc": "Find card pressed, RTL"
+        },
+        "empty": {
+          "file": "pages/la/counter-home.empty.html",
+          "desc": "No counter permissions"
+        },
+        "empty.dark": {
+          "file": "pages/la/counter-home.empty.dark.html",
+          "desc": "No counter permissions, dark"
+        },
+        "empty.ar-AED": {
+          "file": "pages/la/counter-home.empty.ar-AED.html",
+          "desc": "No counter permissions, RTL"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-counter-home",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          }
+        },
+        {
+          "id": "la-counter-home.topbar",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 52
+          }
+        },
+        {
+          "id": "la-counter-home.title",
+          "box": {
+            "x": 16,
+            "y": 14.1,
+            "w": 68.7,
+            "h": 23.8
+          }
+        },
+        {
+          "id": "la-counter-home.user-badge",
+          "box": {
+            "x": 343,
+            "y": 16.2,
+            "w": 31,
+            "h": 19.6
+          }
+        },
+        {
+          "id": "la-counter-home.body",
+          "box": {
+            "x": 0,
+            "y": 52,
+            "w": 390,
+            "h": 340
+          }
+        },
+        {
+          "id": "la-counter-home.screen-title",
+          "box": {
+            "x": 16,
+            "y": 69,
+            "w": 358,
+            "h": 26
+          }
+        },
+        {
+          "id": "la-counter-home.list",
+          "box": {
+            "x": 16,
+            "y": 112,
+            "w": 358,
+            "h": 264
+          }
+        },
+        {
+          "id": "la-counter-home.card-find",
+          "box": {
+            "x": 16,
+            "y": 112,
+            "w": 358,
+            "h": 80
+          }
+        },
+        {
+          "id": "la-counter-home.card-find-title",
+          "box": {
+            "x": 32,
+            "y": 128,
+            "w": 326,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-home.card-find-subtitle",
+          "box": {
+            "x": 32,
+            "y": 156,
+            "w": 326,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-home.card-scan",
+          "box": {
+            "x": 16,
+            "y": 204,
+            "w": 358,
+            "h": 80
+          }
+        },
+        {
+          "id": "la-counter-home.card-scan-title",
+          "box": {
+            "x": 32,
+            "y": 220,
+            "w": 326,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-home.card-scan-subtitle",
+          "box": {
+            "x": 32,
+            "y": 248,
+            "w": 326,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-home.card-bill",
+          "box": {
+            "x": 16,
+            "y": 296,
+            "w": 358,
+            "h": 80
+          }
+        },
+        {
+          "id": "la-counter-home.card-bill-title",
+          "box": {
+            "x": 32,
+            "y": 312,
+            "w": 326,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-home.card-bill-subtitle",
+          "box": {
+            "x": 32,
+            "y": 340,
+            "w": 326,
+            "h": 20
+          }
+        }
+      ]
     }
   },
   "data": {

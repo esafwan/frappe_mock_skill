@@ -68,3 +68,7 @@ html[data-system="la"] body.la-root{background:var(--lc-bg);color:var(--lc-ink)}
 .lc-result[data-state="loading"] .lc-skel{display:block}
 .lc-skel i{display:block;height:16px;border-radius:4px;background:var(--lc-skel);margin-block-end:12px}
 .lc-skel i:nth-child(1){width:45%;height:20px}.lc-skel i:nth-child(2){width:30%}.lc-skel i:nth-child(3){width:100%;height:48px;border-radius:8px;margin:0}
+/* counter shell tokens (la-counter-shell): topbar 52px navy, body on --lc-bg. Reference s07-int-home.png. Dark values (est). */
+:root,[data-theme="light"]{--la-cshell-bg:var(--lc-bg);--la-cshell-text:var(--lc-ink);--la-cshell-bar:#101828;--la-cshell-bar-text:#ffffff;--la-cshell-badge:#d1d5dc;--la-cshell-muted:var(--lc-ink-3);--la-cshell-h:52px;--la-cshell-pad:16px;--la-cshell-screen-gap:17px}
+[data-theme="dark"]{--la-cshell-bar:#161e2e;--la-cshell-bar-text:#f2f4f7;--la-cshell-badge:#98a2b3}
+.la-cshell-screen{margin-block-end:var(--la-cshell-screen-gap,12px)}
