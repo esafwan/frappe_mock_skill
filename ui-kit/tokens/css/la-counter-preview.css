@@ -1,0 +1,9 @@
+/* Counter bill -> earn preview page (la-counter-preview). Reference: s07c-preview.png (390x844). Only --lc-* tokens. */
+.lcp-card{display:block;background:var(--lc-surface);border-radius:var(--lc-r);box-shadow:var(--lc-shadow);padding:var(--lc-pad)}
+.lcp-lbl{font-size:14px;line-height:20px;color:var(--lc-ink-2)}
+.lcp-lbl+.lcp-val{margin-block-start:0}
+.lcp-val{font-size:24px;line-height:32px;font-weight:700;color:var(--lc-ink);letter-spacing:-.025em;margin-block-end:8px;unicode-bidi:plaintext;text-align:start}
+.lcp-val.is-lg{font-size:30px;line-height:36px;margin-block-end:1px}
+.lcp-val.is-mid{opacity:.55}
+.lcp-note{font-size:14px;line-height:20px;color:var(--lc-ink-3);margin-block-start:4px}
+.lcp-stack{display:flex;flex-direction:column;gap:12px;margin-block-start:12px}
