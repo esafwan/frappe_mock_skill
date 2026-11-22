@@ -21,3 +21,4 @@ if (fs.existsSync(pdir)) for (const f of fs.readdirSync(pdir).filter(x => x.ends
     targets: main.map(x => ({ id: x.id, box: { x: x.x, y: x.y, w: x.w, h: x.h } })),
     variants: vs.map(k => ({ file: `pages/la/${k}.html`, ownScreenshot: `pages/la/shots/${k}.png`, targets: b.variants[k].map(x => ({ id: x.id, box: { x: x.x, y: x.y, w: x.w, h: x.h } })) })) }; }
 fs.writeFileSync(ROOT + 'manifest.json', JSON.stringify(m, null, 2)); console.log('manifest-la:', laComponents().length, 'components');
+await import('./la-manifest-sidecars.mjs');
