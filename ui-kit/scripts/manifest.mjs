@@ -38,7 +38,7 @@ const WHEN = {
 };
 const manifest = { name: 'ury-ui-kit', version: '1.0.0', viewport: { w: 1440, h: 900, deviceScaleFactor: 2 }, modes: ['light', 'dark', 'rtl'], systems: {}, components: {}, pages: {}, data: { menus: [], universals: 'data/universals/index.json' } };
 const reg = JSON.parse(fs.readFileSync(ROOT + 'systems/registry.json')); manifest.systems = reg.systems; manifest.defaultSystem = reg.default;
-for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
+for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (p.endsWith('.json') && fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
 const groupToSystem = { desk: 'frappe-desk', pos: 'ury-pos' };
 for (const id of fs.readdirSync(ROOT + 'components').sort()) {
   const dir = ROOT + 'components/' + id + '/'; if (!fs.existsSync(dir + 'harness.json')) continue;
@@ -73,3 +73,4 @@ for (const f of fs.existsSync(ROOT + 'data/menus') ? fs.readdirSync(ROOT + 'data
 if (fs.existsSync(ROOT + 'pages')) for (const f of fs.readdirSync(ROOT + 'pages')) if (f.endsWith('.page.json')) { const p = JSON.parse(fs.readFileSync(ROOT + 'pages/' + f)); manifest.pages[p.id] = { id: p.id, title: p.title, system: p.system, html: `pages/${p.id}.html`, components: p.components }; }
 fs.writeFileSync(ROOT + 'manifest.json', JSON.stringify(manifest, null, 2));
 console.log('manifest:', Object.keys(manifest.components).length, 'components', Object.keys(manifest.pages).length, 'pages', manifest.data.menus.length, 'menus');
+await import('./manifest-la.mjs');

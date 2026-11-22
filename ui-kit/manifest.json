@@ -29912,6 +29912,154 @@
         }
       ],
       "dataBindings": null
+    },
+    "la-shell": {
+      "id": "la-shell",
+      "name": "Loyal Arrow desk shell (dock, sidebar, header, body slot)",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "kind": "shell",
+      "path": "components/la/shell/",
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "states": [
+        "default"
+      ],
+      "files": {
+        "html": "component.html",
+        "slots": "slots.json",
+        "meta": "component.json",
+        "preview": "preview.html",
+        "previewDark": "preview.dark.html",
+        "previewRtl": "preview.rtl.html",
+        "measurements": "measurements.json"
+      },
+      "slots": {
+        "workspace_name": {
+          "type": "text",
+          "sample": "Loyal Arrow",
+          "maxLength": 24
+        },
+        "item_1": {
+          "type": "text",
+          "sample": "Members",
+          "maxLength": 28
+        },
+        "item_active": {
+          "type": "text",
+          "sample": "Retail",
+          "maxLength": 28
+        },
+        "page_title": {
+          "type": "text",
+          "sample": "Retail",
+          "maxLength": 40
+        }
+      },
+      "targets": [
+        {
+          "id": "la-shell",
+          "tag": "div",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900
+          }
+        },
+        {
+          "id": "la-shell.dock",
+          "tag": "nav",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 56,
+            "h": 900
+          }
+        },
+        {
+          "id": "la-shell.brand",
+          "tag": "span",
+          "box": {
+            "x": 11.5,
+            "y": 8,
+            "w": 32,
+            "h": 32
+          }
+        },
+        {
+          "id": "la-shell.sidebar",
+          "tag": "aside",
+          "box": {
+            "x": 56,
+            "y": 0,
+            "w": 225,
+            "h": 900
+          }
+        },
+        {
+          "id": "la-shell.workspace",
+          "tag": "div",
+          "box": {
+            "x": 64,
+            "y": 8,
+            "w": 208,
+            "h": 30
+          }
+        },
+        {
+          "id": "la-shell.item-1",
+          "tag": "div",
+          "box": {
+            "x": 64,
+            "y": 38,
+            "w": 208,
+            "h": 30
+          }
+        },
+        {
+          "id": "la-shell.item-active",
+          "tag": "div",
+          "box": {
+            "x": 64,
+            "y": 68,
+            "w": 208,
+            "h": 30
+          }
+        },
+        {
+          "id": "la-shell.main",
+          "tag": "main",
+          "box": {
+            "x": 281,
+            "y": 0,
+            "w": 1159,
+            "h": 900
+          }
+        },
+        {
+          "id": "la-shell.header",
+          "tag": "header",
+          "box": {
+            "x": 281,
+            "y": 0,
+            "w": 1159,
+            "h": 48
+          }
+        },
+        {
+          "id": "la-shell.body",
+          "tag": "div",
+          "box": {
+            "x": 281,
+            "y": 48,
+            "w": 1159,
+            "h": 852
+          }
+        }
+      ]
     }
   },
   "pages": {

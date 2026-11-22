@@ -1,0 +1,41 @@
+/* Loyal Arrow desk tokens. Sampled from real screenshots (rs-p1b-missions-ui, 1440x900). Estimated values are marked (est). */
+:root,[data-theme="light"]{
+  --la-bg:#ffffff;            /* page body */
+  --la-subtle:#f3f3f3;        /* sidebar, inputs, table head */
+  --la-dock:#f8f8f8;          /* left dock rail */
+  --la-border:#ededed;
+  --la-text:#171717;
+  --la-text-muted:#525252;
+  --la-text-faint:#999999;
+  --la-primary:#005cad;       /* primary button, active tab, links */
+  --la-primary-text:#ffffff;
+  --la-tab-line:#005cad;
+  --la-brand:#2b4acb;         /* Loyal Arrow arrow tile in dock */
+  --la-avatar-bg:#ffefe4;
+  --la-pill-amber-bg:#fff4d3;--la-pill-amber-fg:#91400d;
+  --la-pill-green-bg:#e4faeb;--la-pill-green-fg:#075e35;
+  --la-pill-gray-bg:#f3f3f3;--la-pill-gray-fg:#525252;
+  --la-pill-red-bg:#ffe5e5;--la-pill-red-fg:#b52a2a;   /* (est) */
+  --la-sel-bg:#ffffff;        /* active sidebar item */
+  --la-shadow-sel:0 0 0 1px #ededed;
+}
+[data-theme="dark"]{
+  --la-bg:#171717;--la-subtle:#292929;--la-dock:#1f1f1f;--la-border:#242424;
+  --la-text:#d9d9d9;--la-text-muted:#999999;--la-text-faint:#676767;
+  --la-primary:#349bef;--la-primary-text:#171717;--la-tab-line:#0c59a2;
+  --la-brand:#2b4acb;--la-avatar-bg:#823906;
+  --la-pill-amber-bg:#452608;--la-pill-amber-fg:#ffd58a;   /* fg (est) */
+  --la-pill-green-bg:#0e3521;--la-pill-green-fg:#9be6c1;
+  --la-pill-gray-bg:#292929;--la-pill-gray-fg:#999999;
+  --la-pill-red-bg:#4a1717;--la-pill-red-fg:#ffb3b3;       /* (est) */
+  --la-sel-bg:#171717;--la-shadow-sel:0 0 0 1px #242424;
+}
+:root{
+  --la-font:"InterVariable",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --la-font-ar:"Noto Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --la-text-sm:13px;--la-text-base:14px;--la-text-lg:18px;--la-text-xl:20px;
+  --la-radius-sm:4px;--la-radius:6px;--la-radius-lg:8px;--la-radius-pill:10px;   /* (est) */
+  --la-dock-w:56px;--la-sidebar-w:225px;--la-header-h:48px;--la-pad:16px;--la-gap:12px;
+  --la-ctl-h:29px;--la-pill-h:20px;
+  --la-device-w:390px;--la-device-h:844px;
+}
