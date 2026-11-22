@@ -1,0 +1,28 @@
+/* la-retail-settings: page layout only. Tokens + logical properties; reuses la-fcard, la-chk, la-pa. */
+.la-rs .la-rs-card{border:1px solid var(--la-border);border-radius:var(--la-radius-lg);background:var(--la-bg);padding:15px 16px 17px;margin-block-start:16px}
+.la-rs .la-tabs{margin-block-end:0}
+.la-rs .la-rs-features{margin-block-end:0;padding-block-end:22px}
+.la-rs .la-tabs{padding-inline:12px;gap:28px}.la-rs .la-tabs .la-tab{padding-inline:0}
+.la-rs{font-size:12.3px}.la-rs .la-fcard-title,.la-rs .la-fcard-desc,.la-rs-title,.la-rs-sub,.la-rs-select,.la-rs-opt{font-size:12.3px}
+.la-rs .la-rs-basis{margin-block-start:1px;padding-block-end:26px}
+.la-rs-title{margin:0;font-size:12.5px;font-weight:600;line-height:19px;color:var(--la-text)}
+.la-rs-sub{margin:0;font-size:12.5px;line-height:19px;color:var(--la-text-muted)}
+.la-rs-features .la-rs-sub{margin-block:6px 0}
+.la-rs-grid{display:flex;flex-wrap:wrap;column-gap:9px;row-gap:16px;margin-block-start:0}
+.la-rs .la-fcard{max-width:none;display:block}
+.la-rs .la-fcard .la-chk{width:13px;height:13px}
+.la-rs .la-fcard.is-checked .la-chk,.la-rs .la-chk.is-checked{background:var(--la-text);border-color:var(--la-text)}
+.la-rs .la-fcard.is-off,.la-rs .la-chk.is-off{}
+.la-rs-selwrap{position:relative;margin-block-start:6px}
+.la-rs-select{height:28px;display:flex;align-items:center;padding-inline:12px;background:var(--la-subtle);border-radius:var(--la-radius);font-size:12.5px;color:var(--la-text);border:1px solid transparent}
+.la-rs-select.is-open{background:var(--la-bg);border-color:var(--la-primary);box-shadow:0 0 0 2px var(--la-focus-ring)}
+.la-rs-menu{display:none;position:absolute;inset-inline:0;top:32px;z-index:2;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);box-shadow:0 6px 16px rgb(0 0 0/.12);padding:4px;flex-direction:column}
+.la-rs-menu.is-shown{display:flex}
+.la-rs-opt{height:26px;display:flex;align-items:center;padding-inline:8px;border-radius:var(--la-radius);font-size:12.5px}
+.la-rs-opt:first-child{background:var(--la-subtle)}
+.la-rs-basis .la-rs-sub{margin-block-start:-1px}
+.la-rs-save{align-self:flex-start;margin-block-start:1px;height:28px;padding-inline:8px;font-size:12.5px;border-radius:var(--la-radius-lg)}
+.la-rs-save.is-disabled{background:var(--la-subtle);border-color:var(--la-subtle);color:var(--la-text-faint)}
+.la-rs .la-inbox-desc{padding-block:5px 12px}
+.la-shell:has(.la-rs) .la-header-actions{display:none}
+.la-rs .la-rs-sub{font-size:12.2px}

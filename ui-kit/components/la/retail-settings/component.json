@@ -1,0 +1,29 @@
+{
+ "id": "la-retail-settings",
+ "name": "Retail settings (feature toggles + earn basis + Save)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": true,
+ "shellState": "section-expanded",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "css": [
+  "la-desk-inbox.css",
+  "la-desk-nav.css",
+  "la-desk-admin.css",
+  "la-desk-components.css",
+  "la-desk-retail-settings.css"
+ ],
+ "states": [
+  "populated",
+  "dirty",
+  "empty",
+  "all-on",
+  "basis-open"
+ ],
+ "defaultState": "populated",
+ "reference": "rs-p1a-admin-ui/after_retail-settings_1440_light.png",
+ "notes": "Interaction targets: f-<key>.check (tick a feature; dirty = Category missions ticked), basis-select / basis-menu / basis-opt-n, save (disabled until a change: is-disabled -> primary in dirty). Flags f{n}_chk / saveCls / basisCls / menuCls are class slots set by scripts/la-page-retail-settings.mjs from data/<region>/retail_settings.json."
+}
