@@ -78545,6 +78545,215 @@
           }
         }
       ]
+    },
+    "la-counter-void": {
+      "id": "la-counter-void",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/counter-void.page.json",
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "components": [
+        "la-void-form"
+      ],
+      "interactionTargets": {
+        "la-counter-void.reason": "tap: choose reason",
+        "la-counter-void.submit": "tap: Undo bill",
+        "la-counter-void.request": "tap: Request manager approval (expired)",
+        "la-counter-void.back": "tap: Back to counter (done)"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/counter-void.html",
+          "desc": "Form: reason chosen, Undo bill ready; light, en, reference values"
+        },
+        "dark": {
+          "file": "pages/la/counter-void.dark.html",
+          "desc": "Form: reason chosen, Undo bill ready; dark (estimated tokens)"
+        },
+        "ar-AED": {
+          "file": "pages/la/counter-void.ar-AED.html",
+          "desc": "Form: reason chosen, Undo bill ready; RTL Arabic, AED"
+        },
+        "ar-AED.dark": {
+          "file": "pages/la/counter-void.ar-AED.dark.html",
+          "desc": "Form: reason chosen, Undo bill ready; RTL Arabic dark"
+        },
+        "en-INR": {
+          "file": "pages/la/counter-void.en-INR.html",
+          "desc": "Form: reason chosen, Undo bill ready; INR (shows bill amount)"
+        },
+        "kw-KWD": {
+          "file": "pages/la/counter-void.kw-KWD.html",
+          "desc": "Form: reason chosen, Undo bill ready; KWD 3-decimal (shows bill amount)"
+        },
+        "empty": {
+          "file": "pages/la/counter-void.empty.html",
+          "desc": "Form: reason not chosen yet; light, en, reference values"
+        },
+        "empty.dark": {
+          "file": "pages/la/counter-void.empty.dark.html",
+          "desc": "Form: reason not chosen yet; dark (estimated tokens)"
+        },
+        "empty.ar-AED": {
+          "file": "pages/la/counter-void.empty.ar-AED.html",
+          "desc": "Form: reason not chosen yet; RTL Arabic, AED"
+        },
+        "done": {
+          "file": "pages/la/counter-void.done.html",
+          "desc": "Done: bill undone with shortfall note; light, en, reference values"
+        },
+        "done.dark": {
+          "file": "pages/la/counter-void.done.dark.html",
+          "desc": "Done: bill undone with shortfall note; dark (estimated tokens)"
+        },
+        "done.ar-AED": {
+          "file": "pages/la/counter-void.done.ar-AED.html",
+          "desc": "Done: bill undone with shortfall note; RTL Arabic, AED"
+        },
+        "done.ar-AED.dark": {
+          "file": "pages/la/counter-void.done.ar-AED.dark.html",
+          "desc": "Done: bill undone with shortfall note; RTL Arabic dark"
+        },
+        "done.en-INR": {
+          "file": "pages/la/counter-void.done.en-INR.html",
+          "desc": "Done: bill undone with shortfall note; INR (shows bill amount)"
+        },
+        "done.kw-KWD": {
+          "file": "pages/la/counter-void.done.kw-KWD.html",
+          "desc": "Done: bill undone with shortfall note; KWD 3-decimal (shows bill amount)"
+        },
+        "zero": {
+          "file": "pages/la/counter-void.zero.html",
+          "desc": "Done: nothing to take back (zero points); light, en, reference values"
+        },
+        "zero.dark": {
+          "file": "pages/la/counter-void.zero.dark.html",
+          "desc": "Done: nothing to take back (zero points); dark (estimated tokens)"
+        },
+        "zero.ar-AED": {
+          "file": "pages/la/counter-void.zero.ar-AED.html",
+          "desc": "Done: nothing to take back (zero points); RTL Arabic, AED"
+        },
+        "expired": {
+          "file": "pages/la/counter-void.expired.html",
+          "desc": "Expired: undo window passed, request manager approval; light, en, reference values"
+        },
+        "expired.dark": {
+          "file": "pages/la/counter-void.expired.dark.html",
+          "desc": "Expired: undo window passed, request manager approval; dark (estimated tokens)"
+        },
+        "expired.ar-AED": {
+          "file": "pages/la/counter-void.expired.ar-AED.html",
+          "desc": "Expired: undo window passed, request manager approval; RTL Arabic, AED"
+        },
+        "expired.ar-AED.dark": {
+          "file": "pages/la/counter-void.expired.ar-AED.dark.html",
+          "desc": "Expired: undo window passed, request manager approval; RTL Arabic dark"
+        },
+        "expired.en-INR": {
+          "file": "pages/la/counter-void.expired.en-INR.html",
+          "desc": "Expired: undo window passed, request manager approval; INR (shows bill amount)"
+        },
+        "expired.kw-KWD": {
+          "file": "pages/la/counter-void.expired.kw-KWD.html",
+          "desc": "Expired: undo window passed, request manager approval; KWD 3-decimal (shows bill amount)"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-counter-void",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          }
+        },
+        {
+          "id": "la-counter-void.bar",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 52
+          }
+        },
+        {
+          "id": "la-counter-void.user",
+          "box": {
+            "x": 344,
+            "y": 16.2,
+            "w": 30,
+            "h": 19.6
+          }
+        },
+        {
+          "id": "la-counter-void.main",
+          "box": {
+            "x": 0,
+            "y": 52,
+            "w": 390,
+            "h": 792
+          }
+        },
+        {
+          "id": "la-counter-void.title",
+          "box": {
+            "x": 16,
+            "y": 69,
+            "w": 358,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-void.bill",
+          "box": {
+            "x": 16,
+            "y": 112,
+            "w": 358,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-void.policy",
+          "box": {
+            "x": 16,
+            "y": 144,
+            "w": 358,
+            "h": 40
+          }
+        },
+        {
+          "id": "la-counter-void.reason-label",
+          "box": {
+            "x": 16,
+            "y": 196,
+            "w": 358,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-void.reason",
+          "box": {
+            "x": 16,
+            "y": 220,
+            "w": 358,
+            "h": 54
+          }
+        },
+        {
+          "id": "la-counter-void.submit",
+          "box": {
+            "x": 16,
+            "y": 288,
+            "w": 358,
+            "h": 56
+          }
+        }
+      ]
     }
   },
   "data": {
