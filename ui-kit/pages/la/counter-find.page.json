@@ -1,0 +1,3249 @@
+{
+ "id": "la-counter-find",
+ "title": "Counter app Find member",
+ "system": "loyal-arrow-desk",
+ "route": "/counter/find",
+ "reference": "screenshots/s07-int-find.png",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "components": [
+  "la-counter-shell",
+  "la-counter-field",
+  "la-counter-btn",
+  "la-member-result"
+ ],
+ "interactionTargets": {
+  "la-counter-find.lookup": "tap: lookup-by select",
+  "la-counter-find.query-input": "click + type the query",
+  "la-counter-find.find-btn": "tap: Find",
+  "la-counter-find.result-slot": "result slides in (--la-progress 0..1)",
+  "la-counter-find.result": "result card",
+  "la-counter-find.result-continue": "tap: Continue to bill"
+ },
+ "variants": {
+  "default": {
+   "file": "pages/la/counter-find.html",
+   "screenshot": "pages/la/counter-find.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "found",
+   "desc": "Found: query typed, Find pressed, member card shown (the s07-int-find reference state)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 32,
+     "y": 351,
+     "w": 100.9,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 32,
+     "y": 379,
+     "w": 100.9,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 310.9,
+     "y": 351,
+     "w": 47.1,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 310.9,
+     "y": 367,
+     "w": 47.1,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 32,
+     "y": 407,
+     "w": 67.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 107.1,
+     "y": 407,
+     "w": 83.4,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 198.4,
+     "y": 407,
+     "w": 87.8,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 141.3,
+     "y": 451,
+     "w": 107.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "dark": {
+   "file": "pages/la/counter-find.dark.html",
+   "screenshot": "pages/la/counter-find.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "state": "found",
+   "desc": "Found, dark (estimated tokens)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 32,
+     "y": 351,
+     "w": 100.9,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 32,
+     "y": 379,
+     "w": 100.9,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 310.9,
+     "y": 351,
+     "w": 47.1,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 310.9,
+     "y": 367,
+     "w": 47.1,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 32,
+     "y": 407,
+     "w": 67.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 107.1,
+     "y": 407,
+     "w": 83.4,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 198.4,
+     "y": 407,
+     "w": 87.8,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 141.3,
+     "y": 451,
+     "w": 107.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "ar-AED": {
+   "file": "pages/la/counter-find.ar-AED.html",
+   "screenshot": "pages/la/counter-find.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "state": "found",
+   "desc": "Found, Arabic RTL",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 16,
+     "y": 16.2,
+     "w": 29.6,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 317.7,
+     "y": 138,
+     "w": 43.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 293.9,
+     "y": 219,
+     "w": 67.1,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.8,
+     "y": 283,
+     "w": 30.4,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 278.8,
+     "y": 351,
+     "w": 79.2,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 278.8,
+     "y": 379,
+     "w": 79.2,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 32,
+     "y": 351,
+     "w": 41.5,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 32,
+     "y": 367,
+     "w": 41.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 306.4,
+     "y": 407,
+     "w": 51.6,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 235.5,
+     "y": 407,
+     "w": 62.8,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 156.6,
+     "y": 407,
+     "w": 71,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 135.3,
+     "y": 451,
+     "w": 119.5,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "ar-AED.dark": {
+   "file": "pages/la/counter-find.ar-AED.dark.html",
+   "screenshot": "pages/la/counter-find.ar-AED.dark.png",
+   "theme": "dark",
+   "lang": "ar",
+   "state": "found",
+   "desc": "Found, Arabic RTL, dark",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 16,
+     "y": 16.2,
+     "w": 29.6,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 317.7,
+     "y": 138,
+     "w": 43.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 293.9,
+     "y": 219,
+     "w": 67.1,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.8,
+     "y": 283,
+     "w": 30.4,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 278.8,
+     "y": 351,
+     "w": 79.2,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 278.8,
+     "y": 379,
+     "w": 79.2,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 32,
+     "y": 351,
+     "w": 41.5,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 32,
+     "y": 367,
+     "w": 41.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 306.4,
+     "y": 407,
+     "w": 51.6,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 235.5,
+     "y": 407,
+     "w": 62.8,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 156.6,
+     "y": 407,
+     "w": 71,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 135.3,
+     "y": 451,
+     "w": 119.5,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "en-INR": {
+   "file": "pages/la/counter-find.en-INR.html",
+   "screenshot": "pages/la/counter-find.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "found",
+   "desc": "Found, India dataset (no money on this screen; points only)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 77.4,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 32,
+     "y": 351,
+     "w": 80.6,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 32,
+     "y": 379,
+     "w": 80.6,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 310.9,
+     "y": 351,
+     "w": 47.1,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 310.9,
+     "y": 367,
+     "w": 47.1,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 32,
+     "y": 407,
+     "w": 67.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 107.1,
+     "y": 407,
+     "w": 83.3,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 198.4,
+     "y": 407,
+     "w": 82,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 141.3,
+     "y": 451,
+     "w": 107.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "empty": {
+   "file": "pages/la/counter-find.empty.html",
+   "screenshot": "pages/la/counter-find.empty.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "empty",
+   "desc": "Empty: nothing typed, placeholder shown, no result (start of the video)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 283
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 211
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 29,
+     "y": 219,
+     "w": 222.5,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  },
+  "empty.dark": {
+   "file": "pages/la/counter-find.empty.dark.html",
+   "screenshot": "pages/la/counter-find.empty.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "state": "empty",
+   "desc": "Empty, dark",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 283
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 211
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 29,
+     "y": 219,
+     "w": 222.5,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  },
+  "empty.ar-AED": {
+   "file": "pages/la/counter-find.empty.ar-AED.html",
+   "screenshot": "pages/la/counter-find.empty.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "state": "empty",
+   "desc": "Empty, Arabic RTL",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 16,
+     "y": 16.2,
+     "w": 29.6,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 283
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 211
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 317.7,
+     "y": 138,
+     "w": 43.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 167.6,
+     "y": 219,
+     "w": 193.4,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.8,
+     "y": 283,
+     "w": 30.4,
+     "h": 24
+    }
+   ]
+  },
+  "focus": {
+   "file": "pages/la/counter-find.focus.html",
+   "screenshot": "pages/la/counter-find.focus.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "focus",
+   "desc": "Query field focused with caret (cursor click on the input)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 283
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 211
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 31,
+     "y": 219,
+     "w": 222.5,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  },
+  "typing": {
+   "file": "pages/la/counter-find.typing.html",
+   "screenshot": "pages/la/counter-find.typing.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "filled",
+   "desc": "Query typed, Find not pressed yet (cursor target: Find)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 283
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 211
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  },
+  "loading": {
+   "file": "pages/la/counter-find.loading.html",
+   "screenshot": "pages/la/counter-find.loading.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "loading",
+   "desc": "Find pressed: button busy, result skeleton",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 439
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 367
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 191.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 140
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 140
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 32,
+     "y": 351,
+     "w": 326,
+     "h": 108
+    }
+   ]
+  },
+  "sliding": {
+   "file": "pages/la/counter-find.sliding.html",
+   "screenshot": "pages/la/counter-find.sliding.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "found",
+   "desc": "Result card mid slide-in (--la-progress 0.5 on find.result-slot; 0..1 driver)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 347,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 347,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 32,
+     "y": 363,
+     "w": 100.9,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 32,
+     "y": 391,
+     "w": 100.9,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 310.9,
+     "y": 363,
+     "w": 47.1,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 310.9,
+     "y": 379,
+     "w": 47.1,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 32,
+     "y": 419,
+     "w": 67.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 107.1,
+     "y": 419,
+     "w": 83.4,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 198.4,
+     "y": 419,
+     "w": 87.8,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 451,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 141.3,
+     "y": 463,
+     "w": 107.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "zero": {
+   "file": "pages/la/counter-find.zero.html",
+   "screenshot": "pages/la/counter-find.zero.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "zero",
+   "desc": "Found member with 0 points balance (fresh programme)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 467
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 395
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 155.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 168
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 32,
+     "y": 351,
+     "w": 160.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 32,
+     "y": 379,
+     "w": 160.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 310.9,
+     "y": 351,
+     "w": 47.1,
+     "h": 16
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 310.9,
+     "y": 367,
+     "w": 47.1,
+     "h": 28
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 32,
+     "y": 407,
+     "w": 67.1,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 107.1,
+     "y": 407,
+     "w": 75.6,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 190.7,
+     "y": 407,
+     "w": 75.3,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 32,
+     "y": 439,
+     "w": 326,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 141.3,
+     "y": 451,
+     "w": 107.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "not-found": {
+   "file": "pages/la/counter-find.not-found.html",
+   "screenshot": "pages/la/counter-find.not-found.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "not-found",
+   "desc": "Error: query matches no member",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 371
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 299
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 138.2,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 283,
+     "w": 31.1,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 72
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 72
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 32,
+     "y": 351,
+     "w": 326,
+     "h": 40
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "not-found.ar-AED": {
+   "file": "pages/la/counter-find.not-found.ar-AED.html",
+   "screenshot": "pages/la/counter-find.not-found.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "state": "not-found",
+   "desc": "Error: no member, Arabic RTL",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 16,
+     "y": 16.2,
+     "w": 29.6,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 371
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 299
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 317.7,
+     "y": 138,
+     "w": 43.3,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 78
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 236.4,
+     "y": 219,
+     "w": 124.6,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 271,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.8,
+     "y": 283,
+     "w": 30.4,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.result-slot",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 72
+    },
+    {
+     "id": "la-counter-find.result",
+     "x": 16,
+     "y": 335,
+     "w": 358,
+     "h": 72
+    },
+    {
+     "id": "la-counter-find.result-name",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-mobile",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-balance",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-tier",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-pending",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-expiring",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-continue-label",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.result-not-found",
+     "x": 32,
+     "y": 351,
+     "w": 326,
+     "h": 40
+    },
+    {
+     "id": "la-counter-find.result-skeleton",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   ]
+  },
+  "error": {
+   "file": "pages/la/counter-find.error.html",
+   "screenshot": "pages/la/counter-find.error.png",
+   "theme": "light",
+   "lang": "en",
+   "state": "error",
+   "desc": "Error: Find pressed with an empty query (field validation message)",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 323
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 251
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 118
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 16,
+     "y": 263,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 311,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 323,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  },
+  "error.dark": {
+   "file": "pages/la/counter-find.error.dark.html",
+   "screenshot": "pages/la/counter-find.error.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "state": "error",
+   "desc": "Empty-query error, dark",
+   "targets": [
+    {
+     "id": "la-counter-find",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-find.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-find.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-find.user-badge",
+     "x": 343,
+     "y": 16.2,
+     "w": 31,
+     "h": 19.6
+    },
+    {
+     "id": "la-counter-find.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 323
+    },
+    {
+     "id": "la-counter-find.screen-title",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.form",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 251
+    },
+    {
+     "id": "la-counter-find.lookup-label",
+     "x": 16,
+     "y": 108,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.lookup",
+     "x": 16,
+     "y": 132,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.lookup-value",
+     "x": 29,
+     "y": 138,
+     "w": 36,
+     "h": 24
+    },
+    {
+     "id": "la-counter-find.query",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 118
+    },
+    {
+     "id": "la-counter-find.query-label",
+     "x": 16,
+     "y": 181,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-find.query-input",
+     "x": 16,
+     "y": 205,
+     "w": 358,
+     "h": 54
+    },
+    {
+     "id": "la-counter-find.query-value",
+     "x": 29,
+     "y": 219,
+     "w": 98.3,
+     "h": 26
+    },
+    {
+     "id": "la-counter-find.query-placeholder",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-counter-find.query-error",
+     "x": 16,
+     "y": 263,
+     "w": 358,
+     "h": 36
+    },
+    {
+     "id": "la-counter-find.find-btn",
+     "x": 16,
+     "y": 311,
+     "w": 358,
+     "h": 48
+    },
+    {
+     "id": "la-counter-find.find-btn-label",
+     "x": 179.4,
+     "y": 323,
+     "w": 31.1,
+     "h": 24
+    }
+   ]
+  }
+ }
+}

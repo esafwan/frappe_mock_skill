@@ -1,0 +1,11 @@
+/* Counter page-level layout (stack spacing, lookup select, result slide-in). Global primitives only; sampled from s07-int-find.png (390x844). */
+.lc-page-stack{display:flex;flex-direction:column;gap:0}
+.lc-page-stack>*+*{margin-block-start:var(--lc-gap)}
+.lc-page-stack{margin-block-start:-4px}
+.lc-page-stack .lc-label{margin:0}
+.lc-page-stack>.lc-sel{margin-block-start:4px}
+.lc-page-stack>.lc-field{margin-block-start:13px}
+.lc-page-stack>.lc-slide{margin-block-start:16px}
+.lc-sel{display:flex;align-items:center;justify-content:space-between;height:36px;padding-inline:12px;background:var(--lc-bg);border:1px solid var(--lc-ink);border-radius:var(--lc-r-in);font-size:16px;line-height:24px;color:var(--lc-ink)}
+.lc-sel::after{content:"";width:6px;height:6px;margin-inline-end:2px;border-right:1.5px solid var(--lc-ink);border-bottom:1.5px solid var(--lc-ink);transform:rotate(45deg) translateY(-2px)}
+.lc-slide{transform:translateY(calc((1 - var(--la-progress,1)) * 24px));opacity:var(--la-progress,1)}
