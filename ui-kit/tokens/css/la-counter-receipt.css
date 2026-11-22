@@ -1,0 +1,17 @@
+/* Counter bill receipt card (la-counter-bill-card). Reference s07c-receipt.png: card 358x136 @16,104, bg #f0fdf4, ink #0d542b, r16, pad 16.
+   Dark values and the neutral/zero tints are (est): the live Counter app has no dark mode. */
+:root,[data-theme="light"]{--lc-ok-bg:#f0fdf4;--lc-ok-ink:#0d542b;--lc-ok-skel:#c6efd3}
+[data-theme="dark"]{--lc-ok-bg:#0f2a1c;--lc-ok-ink:#a7f3c4;--lc-ok-skel:#1d4a31}
+.lc-bill{display:block;background:var(--lc-ok-bg);color:var(--lc-ok-ink);border-radius:var(--lc-r);padding:var(--lc-pad)}
+.lc-bill-title{font-size:24px;line-height:32px;font-weight:700;letter-spacing:-.025em}
+.lc-bill-line{font-size:16px;line-height:24px}
+.lc-bill-note{display:none}
+.lc-bill[data-state="zero"]{background:var(--lc-amber);color:var(--lc-ink)}
+.lc-bill[data-state="empty"]{background:var(--lc-surface);color:var(--lc-ink-2);box-shadow:var(--lc-shadow)}
+.lc-bill[data-state="empty"] .lc-bill-line{display:none}
+.lc-bill[data-state="empty"] .lc-bill-note{display:block;font-size:16px;line-height:24px}
+.lc-bill[data-state="pending"] .lc-bill-title,.lc-bill[data-state="pending"] .lc-bill-line{color:transparent;background:var(--lc-ok-skel);border-radius:4px;margin-block-end:8px;width:60%;height:16px;overflow:hidden}
+.lc-bill[data-state="pending"] .lc-bill-title{width:45%;height:24px;margin-block-end:12px}
+.lc-bill[data-state="pending"] .lc-bill-line:nth-of-type(3){width:55%}
+.lc-bill-sp{height:12px}
+.lc-bill-wrap{display:flex;flex-direction:column;gap:12px;padding-inline:var(--lc-pad)}

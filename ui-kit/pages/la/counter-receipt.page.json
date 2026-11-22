@@ -1,0 +1,1807 @@
+{
+ "id": "la-counter-receipt",
+ "title": "Counter app Bill booked receipt",
+ "system": "loyal-arrow-desk",
+ "route": "/counter/bill/receipt",
+ "reference": "screenshots/s07c-receipt.png",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "variants": {
+  "default": {
+   "file": "pages/la/counter-receipt.html",
+   "screenshot": "pages/la/counter-receipt.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "desc": "Populated: Bill booked, light, en / INR (reference s07c-receipt)",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "dark": {
+   "file": "pages/la/counter-receipt.dark.html",
+   "screenshot": "pages/la/counter-receipt.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "desc": "Populated, dark (estimated tokens)",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "ar-AED": {
+   "file": "pages/la/counter-receipt.ar-AED.html",
+   "screenshot": "pages/la/counter-receipt.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "Populated, RTL Arabic, AED",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 142.4,
+     "y": 266.2,
+     "w": 105.3,
+     "h": 28
+    }
+   ]
+  },
+  "ar-AED.dark": {
+   "file": "pages/la/counter-receipt.ar-AED.dark.html",
+   "screenshot": "pages/la/counter-receipt.ar-AED.dark.png",
+   "theme": "dark",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "RTL Arabic dark",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 142.4,
+     "y": 266.2,
+     "w": 105.3,
+     "h": 28
+    }
+   ]
+  },
+  "en-INR": {
+   "file": "pages/la/counter-receipt.en-INR.html",
+   "screenshot": "pages/la/counter-receipt.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "desc": "Populated, INR locale",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "en-AED": {
+   "file": "pages/la/counter-receipt.en-AED.html",
+   "screenshot": "pages/la/counter-receipt.en-AED.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "Populated, AED",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "kw-KWD": {
+   "file": "pages/la/counter-receipt.kw-KWD.html",
+   "screenshot": "pages/la/counter-receipt.kw-KWD.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "KWD",
+   "state": "populated",
+   "desc": "Populated, KWD 3-decimal",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "en-SAR": {
+   "file": "pages/la/counter-receipt.en-SAR.html",
+   "screenshot": "pages/la/counter-receipt.en-SAR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "SAR",
+   "state": "populated",
+   "desc": "Populated, SAR",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "en-QAR": {
+   "file": "pages/la/counter-receipt.en-QAR.html",
+   "screenshot": "pages/la/counter-receipt.en-QAR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "QAR",
+   "state": "populated",
+   "desc": "Populated, QAR",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "zero": {
+   "file": "pages/la/counter-receipt.zero.html",
+   "screenshot": "pages/la/counter-receipt.zero.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "zero",
+   "desc": "Zero points earned (bill below minimum)",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "zero.dark": {
+   "file": "pages/la/counter-receipt.zero.dark.html",
+   "screenshot": "pages/la/counter-receipt.zero.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "zero",
+   "desc": "Zero points, dark",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "zero.ar-AED": {
+   "file": "pages/la/counter-receipt.zero.ar-AED.html",
+   "screenshot": "pages/la/counter-receipt.zero.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "zero",
+   "desc": "Zero points, RTL",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 142.4,
+     "y": 266.2,
+     "w": 105.3,
+     "h": 28
+    }
+   ]
+  },
+  "zero.kw-KWD": {
+   "file": "pages/la/counter-receipt.zero.kw-KWD.html",
+   "screenshot": "pages/la/counter-receipt.zero.kw-KWD.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "KWD",
+   "state": "zero",
+   "desc": "Zero points, KWD 3-decimal",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 272.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 221
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 136
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 176.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 200.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 252.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 266.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "empty": {
+   "file": "pages/la/counter-receipt.empty.html",
+   "screenshot": "pages/la/counter-receipt.empty.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "empty",
+   "desc": "Nothing booked (no bill to show)",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 224.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 173
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 88
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.note",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 204.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 218.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "empty.dark": {
+   "file": "pages/la/counter-receipt.empty.dark.html",
+   "screenshot": "pages/la/counter-receipt.empty.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "empty",
+   "desc": "Empty, dark",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 224.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 173
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 88
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.note",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 204.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 218.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "empty.ar-AED": {
+   "file": "pages/la/counter-receipt.empty.ar-AED.html",
+   "screenshot": "pages/la/counter-receipt.empty.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "empty",
+   "desc": "Empty, RTL",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 313.1,
+     "y": 14.1,
+     "w": 60.9,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 224.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 173
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 88
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 326,
+     "h": 32
+    },
+    {
+     "id": "la-counter-receipt.card.note",
+     "x": 32,
+     "y": 152.2,
+     "w": 326,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 204.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 142.4,
+     "y": 218.2,
+     "w": 105.3,
+     "h": 28
+    }
+   ]
+  },
+  "pending": {
+   "file": "pages/la/counter-receipt.pending.html",
+   "screenshot": "pages/la/counter-receipt.pending.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "pending",
+   "desc": "Pre-reveal skeleton (start frame of the success reveal)",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 276.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 225
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 140
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 146.7,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 156.2,
+     "w": 195.6,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 180.2,
+     "w": 179.3,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 204.2,
+     "w": 195.6,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 256.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 270.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  },
+  "pending.dark": {
+   "file": "pages/la/counter-receipt.pending.dark.html",
+   "screenshot": "pages/la/counter-receipt.pending.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "pending",
+   "desc": "Pre-reveal skeleton, dark",
+   "targets": [
+    {
+     "id": "la-counter-receipt",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-receipt.topbar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-receipt.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-receipt.body",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 276.2
+    },
+    {
+     "id": "la-counter-receipt.bill-for",
+     "x": 16,
+     "y": 69,
+     "w": 358,
+     "h": 18.2
+    },
+    {
+     "id": "la-counter-receipt.content",
+     "x": 16,
+     "y": 87.2,
+     "w": 358,
+     "h": 225
+    },
+    {
+     "id": "la-counter-receipt.card",
+     "x": 16,
+     "y": 104.2,
+     "w": 358,
+     "h": 140
+    },
+    {
+     "id": "la-counter-receipt.card.heading",
+     "x": 32,
+     "y": 120.2,
+     "w": 146.7,
+     "h": 24
+    },
+    {
+     "id": "la-counter-receipt.card.amount",
+     "x": 32,
+     "y": 156.2,
+     "w": 195.6,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.card.earned",
+     "x": 32,
+     "y": 180.2,
+     "w": 179.3,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.card.balance",
+     "x": 32,
+     "y": 204.2,
+     "w": 195.6,
+     "h": 16
+    },
+    {
+     "id": "la-counter-receipt.new",
+     "x": 16,
+     "y": 256.2,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-receipt.new.label",
+     "x": 162.4,
+     "y": 270.2,
+     "w": 65.2,
+     "h": 28
+    }
+   ]
+  }
+ }
+}

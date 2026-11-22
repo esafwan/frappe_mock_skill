@@ -78754,6 +78754,221 @@
           }
         }
       ]
+    },
+    "la-counter-receipt": {
+      "id": "la-counter-receipt",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/counter-receipt.page.json",
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "components": [
+        "la-counter-shell",
+        "la-counter-bill-card",
+        "la-counter-btn"
+      ],
+      "interactionTargets": {
+        "la-counter-receipt.card": "reveal: Bill booked success card (pending -> booked)",
+        "la-counter-receipt.card.amount": "highlight: bill amount",
+        "la-counter-receipt.card.earned": "highlight: points earned",
+        "la-counter-receipt.card.balance": "highlight: new balance",
+        "la-counter-receipt.new": "tap: New bill"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/counter-receipt.html",
+          "desc": "Populated: Bill booked, light, en / INR (reference s07c-receipt)"
+        },
+        "dark": {
+          "file": "pages/la/counter-receipt.dark.html",
+          "desc": "Populated, dark (estimated tokens)"
+        },
+        "ar-AED": {
+          "file": "pages/la/counter-receipt.ar-AED.html",
+          "desc": "Populated, RTL Arabic, AED"
+        },
+        "ar-AED.dark": {
+          "file": "pages/la/counter-receipt.ar-AED.dark.html",
+          "desc": "RTL Arabic dark"
+        },
+        "en-INR": {
+          "file": "pages/la/counter-receipt.en-INR.html",
+          "desc": "Populated, INR locale"
+        },
+        "en-AED": {
+          "file": "pages/la/counter-receipt.en-AED.html",
+          "desc": "Populated, AED"
+        },
+        "kw-KWD": {
+          "file": "pages/la/counter-receipt.kw-KWD.html",
+          "desc": "Populated, KWD 3-decimal"
+        },
+        "en-SAR": {
+          "file": "pages/la/counter-receipt.en-SAR.html",
+          "desc": "Populated, SAR"
+        },
+        "en-QAR": {
+          "file": "pages/la/counter-receipt.en-QAR.html",
+          "desc": "Populated, QAR"
+        },
+        "zero": {
+          "file": "pages/la/counter-receipt.zero.html",
+          "desc": "Zero points earned (bill below minimum)"
+        },
+        "zero.dark": {
+          "file": "pages/la/counter-receipt.zero.dark.html",
+          "desc": "Zero points, dark"
+        },
+        "zero.ar-AED": {
+          "file": "pages/la/counter-receipt.zero.ar-AED.html",
+          "desc": "Zero points, RTL"
+        },
+        "zero.kw-KWD": {
+          "file": "pages/la/counter-receipt.zero.kw-KWD.html",
+          "desc": "Zero points, KWD 3-decimal"
+        },
+        "empty": {
+          "file": "pages/la/counter-receipt.empty.html",
+          "desc": "Nothing booked (no bill to show)"
+        },
+        "empty.dark": {
+          "file": "pages/la/counter-receipt.empty.dark.html",
+          "desc": "Empty, dark"
+        },
+        "empty.ar-AED": {
+          "file": "pages/la/counter-receipt.empty.ar-AED.html",
+          "desc": "Empty, RTL"
+        },
+        "pending": {
+          "file": "pages/la/counter-receipt.pending.html",
+          "desc": "Pre-reveal skeleton (start frame of the success reveal)"
+        },
+        "pending.dark": {
+          "file": "pages/la/counter-receipt.pending.dark.html",
+          "desc": "Pre-reveal skeleton, dark"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-counter-receipt",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          }
+        },
+        {
+          "id": "la-counter-receipt.topbar",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 52
+          }
+        },
+        {
+          "id": "la-counter-receipt.title",
+          "box": {
+            "x": 16,
+            "y": 14.1,
+            "w": 68.7,
+            "h": 23.8
+          }
+        },
+        {
+          "id": "la-counter-receipt.body",
+          "box": {
+            "x": 0,
+            "y": 52,
+            "w": 390,
+            "h": 272.2
+          }
+        },
+        {
+          "id": "la-counter-receipt.bill-for",
+          "box": {
+            "x": 16,
+            "y": 69,
+            "w": 358,
+            "h": 18.2
+          }
+        },
+        {
+          "id": "la-counter-receipt.content",
+          "box": {
+            "x": 16,
+            "y": 87.2,
+            "w": 358,
+            "h": 221
+          }
+        },
+        {
+          "id": "la-counter-receipt.card",
+          "box": {
+            "x": 16,
+            "y": 104.2,
+            "w": 358,
+            "h": 136
+          }
+        },
+        {
+          "id": "la-counter-receipt.card.heading",
+          "box": {
+            "x": 32,
+            "y": 120.2,
+            "w": 326,
+            "h": 32
+          }
+        },
+        {
+          "id": "la-counter-receipt.card.amount",
+          "box": {
+            "x": 32,
+            "y": 152.2,
+            "w": 326,
+            "h": 24
+          }
+        },
+        {
+          "id": "la-counter-receipt.card.earned",
+          "box": {
+            "x": 32,
+            "y": 176.2,
+            "w": 326,
+            "h": 24
+          }
+        },
+        {
+          "id": "la-counter-receipt.card.balance",
+          "box": {
+            "x": 32,
+            "y": 200.2,
+            "w": 326,
+            "h": 24
+          }
+        },
+        {
+          "id": "la-counter-receipt.new",
+          "box": {
+            "x": 16,
+            "y": 252.2,
+            "w": 358,
+            "h": 56
+          }
+        },
+        {
+          "id": "la-counter-receipt.new.label",
+          "box": {
+            "x": 162.4,
+            "y": 266.2,
+            "w": 65.2,
+            "h": 28
+          }
+        }
+      ]
     }
   },
   "data": {
