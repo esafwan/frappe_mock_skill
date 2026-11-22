@@ -1,0 +1,42 @@
+/* loyal-arrow-desk: background-report page body (Insights reports). Tokens only (--la-*); logical properties; states via [data-state].
+   --la-progress (0..1) on .la-lia drives the progress fill so the video engine can animate it per frame. */
+.la-lia{--la-progress:1;letter-spacing:-.014em;display:flex;flex-direction:column;min-width:0}
+.la-lia-filters{display:flex;align-items:flex-end;gap:32px;padding-block:11px 12px;border-block-end:1px solid var(--la-border)}
+.la-lia-filters .la-field-label{font-size:12px;color:var(--la-text-muted)}
+.la-lia-filters .la-field-value{font-weight:500}
+.la-lia-filters .la-field-value:empty{background:var(--la-subtle)}
+.la-lia-card{margin-block-start:24px;border:1px solid var(--la-border);border-radius:12px;background:var(--la-bg);min-height:290px;display:flex;align-items:center;justify-content:center}
+.la-lia-empty{display:flex;flex-direction:column;align-items:center;text-align:center}
+.la-lia-ico{width:44px;height:44px;border-radius:50%;background:var(--la-subtle);color:var(--la-text-muted);display:flex;align-items:center;justify-content:center;margin-block-end:12px}
+.la-lia-ico .la-ico{width:18px;height:18px}
+.la-lia-title{font-size:var(--la-text-base);font-weight:500;line-height:20px;color:var(--la-text)}
+.la-lia-body{font-size:var(--la-text-sm);line-height:20px;color:var(--la-text-muted);margin-block-start:3px}
+/* loading: progress */
+.la-lia-progress{width:360px;display:flex;flex-direction:column;align-items:center;text-align:center;padding-block-end:20px}
+.la-lia-track{width:100%;height:6px;border-radius:3px;background:var(--la-subtle);overflow:hidden;margin-block:16px 10px}
+.la-lia-fill{height:100%;width:calc(var(--la-progress) * 100%);background:var(--la-primary);border-radius:3px}
+.la-lia-pct{font-size:var(--la-text-sm);color:var(--la-text-muted);font-variant-numeric:tabular-nums}
+.la-lia-spin{width:18px;height:18px;border-radius:50%;border:2px solid var(--la-border);border-inline-end-color:var(--la-primary)}
+.la-lia .la-btn.is-dark[data-state="busy"]{opacity:.7;gap:8px}
+/* populated */
+.la-lia-kpis{display:flex;gap:16px;margin-block-start:24px}
+.la-lia-kpis .la-kpi{flex:1;width:auto}
+.la-lia-grid{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-block-start:16px;align-items:start}
+.la-lia-panel{border:1px solid var(--la-border);border-radius:12px;background:var(--la-bg);padding:16px;min-width:0}
+.la-lia-panel-title{margin:0 0 12px;font-size:var(--la-text-base);font-weight:500;line-height:20px}
+.la-lia-panel .la-table{border-radius:var(--la-radius-lg)}
+.la-lia-panel .la-table th{padding:8px 12px;font-size:12px;color:var(--la-text-muted)}
+.la-lia-panel .la-table td{padding:9px 12px}
+.la-lia-panel .la-rt-num,.la-lia-panel th.la-rt-num{text-align:end}
+.la-lia-total td{font-weight:600;background:var(--la-subtle)}
+.la-lia-legend{margin-block-start:14px}
+.la-lia-row{display:flex;align-items:center;gap:8px;height:28px;font-size:var(--la-text-sm)}
+.la-lia-row .la-dot{width:8px;height:8px;border-radius:50%;flex:none}
+.la-lia-row .la-dot.s1{background:var(--la-series-1)}.la-lia-row .la-dot.s2{background:var(--la-series-2)}.la-lia-row .la-dot.s3{background:var(--la-series-3)}.la-lia-row .la-dot.s4{background:var(--la-series-4)}
+.la-lia-row-label{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-lia-row-val{color:var(--la-text-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.la-lia-sbar{display:flex;height:12px;border-radius:var(--la-radius-pill);background:var(--la-subtle);overflow:hidden}
+.la-lia-sbar i{height:100%;display:block}
+.la-lia-sbar i.s1{background:var(--la-series-1)}.la-lia-sbar i.s2{background:var(--la-series-2)}.la-lia-sbar i.s3{background:var(--la-series-3)}.la-lia-sbar i.s4{background:var(--la-series-4)}
+.la-lia-note{margin-block-start:12px;font-size:12px;color:var(--la-text-faint)}
+html[dir="rtl"] .la-lia{letter-spacing:0}
