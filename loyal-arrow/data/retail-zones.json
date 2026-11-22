@@ -1,0 +1,13 @@
+{
+ "synthetic": true,
+ "note": "Store-group zone map. Deterministic, hand-authored synthetic data; zone=null means inherit from nearest ancestor with a zone.",
+ "templates": { "KWD": "Hawalli and Salmiya", "AED": "Marina and Deira", "SAR": "Olaya and Malaz", "QAR": "West Bay and Lusail", "INR": "Indiranagar and Koramangala" },
+ "zones": ["Entrance", "Chilled aisle", "Dry goods aisle", "Checkout lane", "Bakery counter"],
+ "categories": [
+  { "id": "food", "name": "Food", "level": 0, "zone": "Entrance" },
+  { "id": "bakery", "name": "Bakery", "level": 1, "zone": null, "populatedZone": "Bakery counter" },
+  { "id": "dairy", "name": "Dairy", "level": 1, "zone": "Chilled aisle" },
+  { "id": "milk", "name": "Milk", "level": 2, "zone": null },
+  { "id": "home", "name": "Home", "level": 0, "zone": null, "populatedZone": "Dry goods aisle" }
+ ]
+}
