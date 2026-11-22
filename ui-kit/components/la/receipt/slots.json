@@ -1,0 +1,94 @@
+{
+ "slots": {
+  "appName": {
+   "type": "text",
+   "sample": "Counter",
+   "maxLength": 16,
+   "where": "top bar title"
+  },
+  "cashier": {
+   "type": "text",
+   "sample": "qa.cashier@example.test",
+   "maxLength": 28,
+   "where": "top bar cashier"
+  },
+  "billFor": {
+   "type": "text",
+   "sample": "Bill for",
+   "maxLength": 16,
+   "where": "member line prefix"
+  },
+  "memberName": {
+   "type": "text",
+   "sample": "Asha Test",
+   "maxLength": 24,
+   "where": "member name (synthetic)"
+  },
+  "heading": {
+   "type": "text",
+   "sample": "Bill booked",
+   "maxLength": 24,
+   "where": "receipt heading"
+  },
+  "amount": {
+   "type": "currency",
+   "sample": "₹500.00",
+   "maxLength": 14,
+   "where": "bill amount"
+  },
+  "earned": {
+   "type": "text",
+   "sample": "Earned 5 points",
+   "maxLength": 28,
+   "where": "points earned line"
+  },
+  "balance": {
+   "type": "text",
+   "sample": "Balance 5 points",
+   "maxLength": 28,
+   "where": "balance line"
+  },
+  "undoBtn": {
+   "type": "text",
+   "sample": "Undo this bill",
+   "maxLength": 24,
+   "where": "outline button"
+  },
+  "newBtn": {
+   "type": "text",
+   "sample": "New bill",
+   "maxLength": 16,
+   "where": "primary button"
+  },
+  "voidedHeading": {
+   "type": "text",
+   "sample": "Bill undone",
+   "maxLength": 24,
+   "where": "voided heading"
+  },
+  "voidedEarned": {
+   "type": "text",
+   "sample": "Points taken back 5",
+   "maxLength": 32,
+   "where": "voided line"
+  },
+  "expiredHeading": {
+   "type": "text",
+   "sample": "Bill booked",
+   "maxLength": 24,
+   "where": "expired heading"
+  },
+  "expiredNote": {
+   "type": "text",
+   "sample": "Undo window has passed. A manager must approve.",
+   "maxLength": 64,
+   "where": "expired note"
+  },
+  "requestBtn": {
+   "type": "text",
+   "sample": "Request manager approval",
+   "maxLength": 32,
+   "where": "button"
+  }
+ }
+}

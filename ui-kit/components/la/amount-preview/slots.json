@@ -1,0 +1,100 @@
+{
+ "slots": {
+  "appName": {
+   "type": "text",
+   "sample": "Counter",
+   "maxLength": 16,
+   "where": "top bar title"
+  },
+  "cashier": {
+   "type": "text",
+   "sample": "qa.cashier@example.test",
+   "maxLength": 28,
+   "where": "top bar cashier"
+  },
+  "billFor": {
+   "type": "text",
+   "sample": "Bill for",
+   "maxLength": 16,
+   "where": "member line prefix"
+  },
+  "memberName": {
+   "type": "text",
+   "sample": "Asha Test",
+   "maxLength": 24,
+   "where": "member name (synthetic)"
+  },
+  "billAmount": {
+   "type": "currency",
+   "sample": "₹500.00",
+   "maxLength": 14,
+   "where": "bill amount shown in card"
+  },
+  "pointsEarned": {
+   "type": "number",
+   "sample": "5",
+   "maxLength": 6,
+   "where": "points the bill earns (count-up target)"
+  },
+  "billLabel": {
+   "type": "text",
+   "sample": "Bill",
+   "maxLength": 16,
+   "where": "label"
+  },
+  "earnLabel": {
+   "type": "text",
+   "sample": "Points earned",
+   "maxLength": 20,
+   "where": "label"
+  },
+  "tierNote": {
+   "type": "text",
+   "sample": "Tier bonus x100",
+   "maxLength": 28,
+   "where": "bonus note"
+  },
+  "continueBtn": {
+   "type": "text",
+   "sample": "Continue without redeeming",
+   "maxLength": 32,
+   "where": "primary button"
+  },
+  "redeemBtn": {
+   "type": "text",
+   "sample": "Redeem points",
+   "maxLength": 20,
+   "where": "button"
+  },
+  "changeBtn": {
+   "type": "text",
+   "sample": "Change amount",
+   "maxLength": 20,
+   "where": "button"
+  },
+  "amountHeading": {
+   "type": "text",
+   "sample": "Bill amount (rupees)",
+   "maxLength": 28,
+   "where": "entry heading"
+  },
+  "amountInput": {
+   "type": "currency",
+   "sample": "250",
+   "maxLength": 12,
+   "where": "amount typed in entry field"
+  },
+  "previewBtn": {
+   "type": "text",
+   "sample": "Preview points",
+   "maxLength": 20,
+   "where": "entry button"
+  },
+  "countingValue": {
+   "type": "number",
+   "sample": "3",
+   "maxLength": 6,
+   "where": "in-flight count-up digit"
+  }
+ }
+}

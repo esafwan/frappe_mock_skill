@@ -1,0 +1,69 @@
+/* Loyal Arrow COUNTER app (mobile cashier PWA) tokens + primitives. Sampled from dumps/screenshots s07c-amount, ui-qa-1/12,14,15,18, s07d, SC2 (390/420 wide, 1x).
+   Distinct from the desk look: slate-900 bar, near-white page, 12px radii. Estimated values marked (est). Components add NO colours of their own. */
+:root,[data-theme="light"]{
+  --la-ct-bar:#101828;--la-ct-bar-text:#ffffff;--la-ct-bar-muted:#d1d5dc;
+  --la-ct-page:#f9fafb;--la-ct-card:#ffffff;--la-ct-text:#101828;--la-ct-muted:#4a5565;--la-ct-faint:#6a7282;--la-ct-ph:#94989f;
+  --la-ct-border:#d1d5dc;--la-ct-focus:#005fcc;
+  --la-ct-btn:#101828;--la-ct-btn-text:#ffffff;--la-ct-danger:#c10007;--la-ct-danger-text:#ffffff;
+  --la-ct-ok-bg:#f0fdf4;--la-ct-ok-fg:#0d542b;
+  --la-ct-warn-bg:#fef3c6;--la-ct-warn-fg:#7b3306;
+  --la-ct-err-bg:#fef2f2;--la-ct-err-fg:#82181a;
+  --la-ct-shadow:0 1px 3px rgba(16,24,40,.12),0 1px 2px rgba(16,24,40,.08);
+}
+[data-theme="dark"]{   /* (est) dark counter theme, not captured in the app */
+  --la-ct-bar:#0b0f19;--la-ct-bar-text:#f3f4f6;--la-ct-bar-muted:#9ca3af;
+  --la-ct-page:#111827;--la-ct-card:#1f2937;--la-ct-text:#f3f4f6;--la-ct-muted:#9ca3af;--la-ct-faint:#6b7280;--la-ct-ph:#6b7280;
+  --la-ct-border:#374151;--la-ct-focus:#4d9bff;
+  --la-ct-btn:#f3f4f6;--la-ct-btn-text:#111827;--la-ct-danger:#dc2626;--la-ct-danger-text:#ffffff;
+  --la-ct-ok-bg:#0f2e1d;--la-ct-ok-fg:#86efac;
+  --la-ct-warn-bg:#3b2a0a;--la-ct-warn-fg:#fcd34d;
+  --la-ct-err-bg:#3b1414;--la-ct-err-fg:#fca5a5;
+  --la-ct-shadow:0 1px 3px rgba(0,0,0,.5);
+}
+.la-ct{width:100%;min-height:100vh;background:var(--la-ct-page);color:var(--la-ct-text);font:400 16px/1.4 var(--la-font);display:flex;flex-direction:column}
+html[dir="rtl"] .la-ct{font-family:var(--la-font-ar)}
+.la-ct *,.la-ct *::before,.la-ct *::after{box-sizing:border-box}
+.la-ct-bar{height:52px;flex:none;background:var(--la-ct-bar);color:var(--la-ct-bar-text);display:flex;align-items:center;justify-content:space-between;padding-inline:16px;font-size:17px;font-weight:700}
+.la-ct-bar-user{font-size:14px;font-weight:400;color:var(--la-ct-bar-muted)}
+.la-ct-main{flex:1;padding:16px;display:flex;flex-direction:column}
+.la-ct-sub{font-size:14px;line-height:20px;color:var(--la-ct-muted);margin-block-end:16px}.la-ct-sub b{font-weight:600}
+.la-ct-h1{font-size:20px;font-weight:700;line-height:28px;margin:0 0 12px}
+.la-ct-label{font-size:17px;font-weight:600;line-height:24px;margin-block:2px 14px}
+.la-ct-label.is-sm{font-size:14px;line-height:20px;margin-block:0 10px}
+.la-ct-hint{font-size:14px;line-height:20px;color:var(--la-ct-muted);margin-block:13px 0}
+.la-ct-field{height:54px;border:1px solid var(--la-ct-border);border-radius:12px;background:var(--la-ct-card);display:flex;align-items:center;padding-inline:16px;font-size:20px}
+.la-ct-field.is-focus{border:2px solid var(--la-ct-focus);padding-inline:15px}
+.la-ct-field.is-sm{height:54px;font-size:17px}.la-ct-field.is-ph{color:var(--la-ct-ph)}
+.la-ct-field.is-select{justify-content:space-between}.la-ct-field.is-select::after{content:"";width:6px;height:6px;border-inline-end:1.5px solid var(--la-ct-muted);border-block-end:1.5px solid var(--la-ct-muted);transform:rotate(45deg);margin-block-start:-3px}
+.la-ct-btn{height:56px;border-radius:12px;border:1px solid var(--la-ct-border);background:var(--la-ct-card);color:var(--la-ct-text);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:400;width:100%}
+.la-ct-btn.is-primary{background:var(--la-ct-btn);border-color:var(--la-ct-btn);color:var(--la-ct-btn-text);font-size:17px;font-weight:700}
+.la-ct-btn.is-strong{font-size:17px;font-weight:700}
+.la-ct-btn.is-lg{font-size:19px;font-weight:400}
+.la-ct-btn.is-danger{background:var(--la-ct-danger);border-color:var(--la-ct-danger);color:var(--la-ct-danger-text)}
+.la-ct-btn.is-sm{height:48px}
+.la-ct-stack{display:flex;flex-direction:column;gap:12px}
+.la-ct-card{background:var(--la-ct-card);border-radius:12px;box-shadow:var(--la-ct-shadow);padding:10px 12px;font-size:17px;line-height:28px}
+.la-ct-card.is-ok{font-size:15px;background:var(--la-ct-ok-bg);color:var(--la-ct-ok-fg);box-shadow:none;padding:16px;line-height:24px}
+.la-ct-card.is-ok .la-ct-title{font-size:23px;font-weight:700;line-height:32px}
+.la-ct-card.is-void{font-size:15px;background:var(--la-ct-err-bg);color:var(--la-ct-err-fg);box-shadow:none;padding:16px;line-height:24px}
+.la-ct-card.is-void .la-ct-title{font-size:23px;font-weight:700;line-height:32px}
+.la-ct-card.is-warn{font-size:15px;background:var(--la-ct-warn-bg);color:var(--la-ct-warn-fg);box-shadow:none;padding:16px;line-height:24px}
+.la-ct-card.is-warn .la-ct-title{font-size:23px;font-weight:700;line-height:32px}
+.la-ct-kv{font-size:14px;color:var(--la-ct-muted);line-height:20px}
+.la-ct-big{font-size:24px;font-weight:700;line-height:32px;margin-block:0 8px}.la-ct-big.is-lg{font-size:32px;line-height:36px;margin-block-end:0}
+.la-ct-lbl{font-size:14px;color:var(--la-ct-muted);line-height:20px}
+.la-ct-note{background:var(--la-ct-warn-bg);color:var(--la-ct-warn-fg);border-radius:4px;padding:8px;font-size:17px;line-height:24px;margin-block:8px}
+.la-ct-alert{background:var(--la-ct-err-bg);color:var(--la-ct-err-fg);border-radius:12px;padding:16px;margin-block:12px}
+.la-ct-alert-title{font-weight:700;font-size:16px}.la-ct-alert-body{font-size:15px;line-height:20px;margin-block:4px 12px}
+.la-ct-seg{display:flex;gap:8px}.la-ct-seg-opt{flex:1;min-height:56px;border:1px solid var(--la-ct-border);border-radius:12px;background:var(--la-ct-card);display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;font-weight:700;line-height:22px;padding:6px 16px}
+.la-ct-seg-opt.is-on{background:var(--la-ct-btn);border-color:var(--la-ct-btn);color:var(--la-ct-btn-text)}
+.la-ct-spacer{flex:none;height:48px}.la-ct-spacer.is-sp14{height:14px}
+.la-ct-count{opacity:.55}   /* mid count-up digits */
+.la-ct-hidden-note{display:none}
+.la-ct .is-mt{margin-block-start:12px}.la-ct .is-mt8{margin-block-start:8px}.la-ct .is-mt12{margin-block-start:12px}
+.la-ct-gap{height:12px}
+.la-ct-card.is-done{padding:16px;line-height:24px}
+.la-ct-done-title{font-size:20px;font-weight:600;line-height:28px}
+.la-ct-line{margin-block:4px 0}.la-ct-card.is-done .la-ct-kv{margin-block-end:3px}.la-ct-card.is-done .la-ct-note{margin-block:4px}
+.la-ct-card.is-stat{padding:16px;line-height:20px;font-size:14px}
+.la-ct-btn.is-tall{height:61px}

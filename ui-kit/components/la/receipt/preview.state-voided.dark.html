@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-system="la" data-theme="dark">
+<head><meta charset="utf-8"><title>Counter: bill receipt (booked / voided / expired)</title>
+<link rel="stylesheet" href="../../../tokens/css/fonts.css">
+<link rel="stylesheet" href="../../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-vars.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-base.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-components.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-data.css">
+<link rel="stylesheet" href="../../../tokens/css/la-counter-base.css">
+<style>html,body{margin:0}*{animation:none!important;transition:none!important;caret-color:transparent!important}#ui-kit-stage{position:absolute;left:0;top:0;width:420px;min-height:820px}</style></head>
+<body class="la-root"><div id="ui-kit-stage">
+<div class="la-ct" data-ui="la-receipt" data-state="voided">
+<div class="la-ct-bar" data-ui="la-receipt.bar"><span>Counter</span><span class="la-ct-bar-user" data-ui="la-receipt.user">qa.cashier@example.test</span></div>
+<div class="la-ct-main" data-ui="la-receipt.main">
+<div class="la-ct-sub" data-ui="la-receipt.member">Bill for <b>Asha Test</b></div>
+<div class="la-ct-card is-void" data-ui="la-receipt.card">
+  <div class="la-ct-title" data-ui="la-receipt.heading">Bill undone</div>
+  <div class="la-num" data-ui="la-receipt.amount">₹500.00</div>
+  <div data-ui="la-receipt.earned">Points taken back 5</div>
+  <div data-ui="la-receipt.balance">Balance 5 points</div>
+</div>
+<div class="la-ct-stack is-mt">
+<div class="la-ct-btn is-primary" data-ui="la-receipt.new">New bill</div>
+</div>
+</div>
+</div>
+
+</div></body></html>

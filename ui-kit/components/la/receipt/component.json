@@ -1,0 +1,20 @@
+{
+ "id": "la-receipt",
+ "name": "Counter: bill receipt (booked / voided / expired)",
+ "system": "loyal-arrow-desk",
+ "kind": "mobile",
+ "viewport": {
+  "w": 420,
+  "h": 820
+ },
+ "shell": false,
+ "css": [
+  "tokens/css/la-counter-base.css"
+ ],
+ "states": [
+  "booked",
+  "voided",
+  "expired"
+ ],
+ "notes": "Counter (cashier PWA) screen body incl. top bar. Reference crops: see refs in component folder."
+}

@@ -1,0 +1,166 @@
+{
+ "slots": {
+  "appName": {
+   "type": "text",
+   "sample": "Counter",
+   "maxLength": 16,
+   "where": "top bar title"
+  },
+  "cashier": {
+   "type": "text",
+   "sample": "qa.cashier@example.test",
+   "maxLength": 28,
+   "where": "top bar cashier"
+  },
+  "billFor": {
+   "type": "text",
+   "sample": "Bill for",
+   "maxLength": 16,
+   "where": "member line prefix"
+  },
+  "memberName": {
+   "type": "text",
+   "sample": "Asha Test",
+   "maxLength": 24,
+   "where": "unused member"
+  },
+  "title": {
+   "type": "text",
+   "sample": "Undo bill",
+   "maxLength": 20,
+   "where": "screen title"
+  },
+  "billId": {
+   "type": "text",
+   "sample": "Bill vhu53pm9p9",
+   "maxLength": 28,
+   "where": "synthetic bill id"
+  },
+  "amountLabel": {
+   "type": "text",
+   "sample": "Amount:",
+   "maxLength": 12,
+   "where": "amount label"
+  },
+  "amountValue": {
+   "type": "currency",
+   "sample": "₹500.00",
+   "maxLength": 14,
+   "where": "bill amount"
+  },
+  "earnedLine": {
+   "type": "text",
+   "sample": "Points earned: 5",
+   "maxLength": 28,
+   "where": "earned line"
+  },
+  "timeLine": {
+   "type": "time",
+   "sample": "Time: 2026-11-07 04:19",
+   "maxLength": 36,
+   "where": "time line"
+  },
+  "cashierLine": {
+   "type": "text",
+   "sample": "Cashier: cs***",
+   "maxLength": 24,
+   "where": "masked cashier"
+  },
+  "statusLine": {
+   "type": "text",
+   "sample": "Status: Booked",
+   "maxLength": 24,
+   "where": "status line"
+  },
+  "policyText": {
+   "type": "text",
+   "sample": "You can undo your own bill within 30 min. After that a manager must approve.",
+   "maxLength": 90,
+   "where": "policy text"
+  },
+  "reasonLabel": {
+   "type": "text",
+   "sample": "Reason (required)",
+   "maxLength": 24,
+   "where": "label"
+  },
+  "reason": {
+   "type": "text",
+   "sample": "Choose a reason",
+   "maxLength": 28,
+   "where": "select placeholder"
+  },
+  "reasonChosen": {
+   "type": "text",
+   "sample": "Customer cancelled",
+   "maxLength": 28,
+   "where": "selected reason"
+  },
+  "button": {
+   "type": "text",
+   "sample": "Undo bill",
+   "maxLength": 16,
+   "where": "danger button"
+  },
+  "doneTitle": {
+   "type": "text",
+   "sample": "Bill undone",
+   "maxLength": 24,
+   "where": "done heading"
+  },
+  "doneReason": {
+   "type": "text",
+   "sample": "Reason: Wrong amount",
+   "maxLength": 36,
+   "where": "done reason"
+  },
+  "takenBack": {
+   "type": "text",
+   "sample": "Points taken back: 10",
+   "maxLength": 32,
+   "where": "line"
+  },
+  "returned": {
+   "type": "text",
+   "sample": "Points redeemed on this bill were returned: 20",
+   "maxLength": 64,
+   "where": "line"
+  },
+  "shortfall": {
+   "type": "text",
+   "sample": "40 points could not be taken back because the member already spent them. A manager has been notified.",
+   "maxLength": 120,
+   "where": "amber note"
+  },
+  "balanceNow": {
+   "type": "text",
+   "sample": "Balance now 0 points",
+   "maxLength": 32,
+   "where": "line"
+  },
+  "backBtn": {
+   "type": "text",
+   "sample": "Back to counter",
+   "maxLength": 24,
+   "where": "outline button"
+  },
+  "expiredTitle": {
+   "type": "text",
+   "sample": "Undo window has passed",
+   "maxLength": 32,
+   "where": "alert title"
+  },
+  "expiredBody": {
+   "type": "text",
+   "sample": "Only a manager can approve this now. You can send a request with the same reason.",
+   "maxLength": 100,
+   "where": "alert body"
+  },
+  "requestBtn": {
+   "type": "text",
+   "sample": "Request manager approval",
+   "maxLength": 32,
+   "where": "alert button"
+  }
+ }
+}
