@@ -13,3 +13,7 @@ Rules: change text only via slots (respect `maxLength`); never fetch at render t
 
 ## Loyal Arrow extension
 See `loyal-arrow/README.md`: brand, sidebar/workspace/report structure, copy, synthetic UAE and India datasets and flow scripts for the Loyal Arrow loyalty app.
+
+## Feature catalogues
+
+Before building a mock or screen for an app (URY, Huf, Huf WhatsApp channel, frappe_whatsapp, Genie, Pulse, DeskAI, Loyal Arrow), read its catalogue in `docs/catalogues/` (index: `docs/catalogues/README.md`). Show only features listed as built, and never mock "Planned" items as shipped.
