@@ -78969,6 +78969,396 @@
           }
         }
       ]
+    },
+    "la-whatsapp-preview": {
+      "id": "la-whatsapp-preview",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/whatsapp-preview.page.json",
+      "viewport": {
+        "w": 430,
+        "h": 932
+      },
+      "components": [],
+      "interactionTargets": {
+        "la-whatsapp-preview.slot-winback": "event: message arrives (typing indicator, then bubble; compare .typing and .sent variants)",
+        "la-whatsapp-preview.typing": "highlight: typing indicator before arrival",
+        "la-whatsapp-preview.bubble-winback": "zoom/highlight: winback message",
+        "la-whatsapp-preview.ticks-winback": "state change: sent -> delivered -> read (ticks turn blue); compare .sent/.delivered/.read variants",
+        "la-whatsapp-preview.points-balance": "highlight: gold underline sweep on points (--sweep 0..100%)",
+        "la-whatsapp-preview.btn-stop": "tap: Stop quick reply",
+        "la-whatsapp-preview.btn-check-welcome": "tap: Check balance quick reply"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/whatsapp-preview.html",
+          "desc": "Thread with winback message sent (single grey tick), light, en / AED"
+        },
+        "dark": {
+          "file": "pages/la/whatsapp-preview.dark.html",
+          "desc": "Sent, dark (estimated tokens)"
+        },
+        "ar-AED": {
+          "file": "pages/la/whatsapp-preview.ar-AED.html",
+          "desc": "Sent, RTL Arabic, AED"
+        },
+        "ar-AED.dark": {
+          "file": "pages/la/whatsapp-preview.ar-AED.dark.html",
+          "desc": "Sent, RTL Arabic, dark"
+        },
+        "en-INR": {
+          "file": "pages/la/whatsapp-preview.en-INR.html",
+          "desc": "Sent, India dataset, INR"
+        },
+        "kw-KWD": {
+          "file": "pages/la/whatsapp-preview.kw-KWD.html",
+          "desc": "Sent, KWD 3-decimal bill amount"
+        },
+        "sent": {
+          "file": "pages/la/whatsapp-preview.sent.html",
+          "desc": "Winback sent: one grey tick"
+        },
+        "sent.dark": {
+          "file": "pages/la/whatsapp-preview.sent.dark.html",
+          "desc": "Winback sent, dark"
+        },
+        "delivered": {
+          "file": "pages/la/whatsapp-preview.delivered.html",
+          "desc": "Winback delivered: two grey ticks"
+        },
+        "delivered.dark": {
+          "file": "pages/la/whatsapp-preview.delivered.dark.html",
+          "desc": "Winback delivered, dark"
+        },
+        "read": {
+          "file": "pages/la/whatsapp-preview.read.html",
+          "desc": "Winback read: two blue ticks"
+        },
+        "read.dark": {
+          "file": "pages/la/whatsapp-preview.read.dark.html",
+          "desc": "Winback read, dark"
+        },
+        "read.ar-AED": {
+          "file": "pages/la/whatsapp-preview.read.ar-AED.html",
+          "desc": "Read, RTL Arabic"
+        },
+        "read.en-INR": {
+          "file": "pages/la/whatsapp-preview.read.en-INR.html",
+          "desc": "Read, INR"
+        },
+        "read.kw-KWD": {
+          "file": "pages/la/whatsapp-preview.read.kw-KWD.html",
+          "desc": "Read, KWD"
+        },
+        "typing": {
+          "file": "pages/la/whatsapp-preview.typing.html",
+          "desc": "Typing indicator, winback about to arrive (bubble hidden in place)"
+        },
+        "typing.dark": {
+          "file": "pages/la/whatsapp-preview.typing.dark.html",
+          "desc": "Typing indicator, dark"
+        },
+        "typing.ar-AED": {
+          "file": "pages/la/whatsapp-preview.typing.ar-AED.html",
+          "desc": "Typing indicator, RTL"
+        },
+        "empty": {
+          "file": "pages/la/whatsapp-preview.empty.html",
+          "desc": "No messages yet"
+        },
+        "empty.dark": {
+          "file": "pages/la/whatsapp-preview.empty.dark.html",
+          "desc": "No messages yet, dark"
+        },
+        "empty.ar-AED": {
+          "file": "pages/la/whatsapp-preview.empty.ar-AED.html",
+          "desc": "No messages yet, RTL"
+        },
+        "zero": {
+          "file": "pages/la/whatsapp-preview.zero.html",
+          "desc": "New member: welcome + winback with 0 points"
+        },
+        "zero.dark": {
+          "file": "pages/la/whatsapp-preview.zero.dark.html",
+          "desc": "Zero balance, dark"
+        },
+        "zero.ar-AED": {
+          "file": "pages/la/whatsapp-preview.zero.ar-AED.html",
+          "desc": "Zero balance, RTL"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-whatsapp-preview",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 430,
+            "h": 932
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.header",
+          "box": {
+            "x": 0,
+            "y": 54,
+            "w": 430,
+            "h": 66
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.avatar",
+          "box": {
+            "x": 44,
+            "y": 62,
+            "w": 44,
+            "h": 44
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.header-name",
+          "box": {
+            "x": 100,
+            "y": 63.1,
+            "w": 240,
+            "h": 21
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.thread",
+          "box": {
+            "x": 0,
+            "y": 120,
+            "w": 430,
+            "h": 723
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.chip-1",
+          "box": {
+            "x": 182,
+            "y": 144,
+            "w": 65.9,
+            "h": 28.8
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.bubble-welcome",
+          "box": {
+            "x": 14,
+            "y": 182.8,
+            "w": 345.7,
+            "h": 183.5
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.sender-welcome",
+          "box": {
+            "x": 27,
+            "y": 192.8,
+            "w": 319.7,
+            "h": 17
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.text-welcome",
+          "box": {
+            "x": 27,
+            "y": 212.8,
+            "w": 319.7,
+            "h": 81.6
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.time-welcome",
+          "box": {
+            "x": 304.6,
+            "y": 297.4,
+            "w": 42.2,
+            "h": 15
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.btn-check-welcome",
+          "box": {
+            "x": 14,
+            "y": 325.3,
+            "w": 345.7,
+            "h": 41
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.chip-2",
+          "box": {
+            "x": 186.8,
+            "y": 382.3,
+            "w": 56.4,
+            "h": 28.8
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.bubble-earned",
+          "box": {
+            "x": 14,
+            "y": 421.1,
+            "w": 345.7,
+            "h": 163.1
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.sender-earned",
+          "box": {
+            "x": 27,
+            "y": 431.1,
+            "w": 319.7,
+            "h": 17
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.text-earned",
+          "box": {
+            "x": 27,
+            "y": 451.1,
+            "w": 319.7,
+            "h": 61.2
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.time-earned",
+          "box": {
+            "x": 304.4,
+            "y": 515.3,
+            "w": 42.4,
+            "h": 15
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.btn-check-earned",
+          "box": {
+            "x": 14,
+            "y": 543.2,
+            "w": 345.7,
+            "h": 41
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.chip-3",
+          "box": {
+            "x": 185.2,
+            "y": 600.2,
+            "w": 59.6,
+            "h": 28.8
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.slot-winback",
+          "box": {
+            "x": 14,
+            "y": 639,
+            "w": 345.7,
+            "h": 183.5
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.typing",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.bubble-winback",
+          "box": {
+            "x": 14,
+            "y": 639,
+            "w": 345.7,
+            "h": 183.5
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.sender-winback",
+          "box": {
+            "x": 27,
+            "y": 649,
+            "w": 319.7,
+            "h": 17
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.text-winback",
+          "box": {
+            "x": 27,
+            "y": 669,
+            "w": 319.7,
+            "h": 81.6
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.points-balance",
+          "box": {
+            "x": 93,
+            "y": 690.4,
+            "w": 74,
+            "h": 18
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.time-winback",
+          "box": {
+            "x": 277.7,
+            "y": 753.6,
+            "w": 47,
+            "h": 15
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.ticks-winback",
+          "box": {
+            "x": 328.7,
+            "y": 755.6,
+            "w": 18,
+            "h": 11
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.btn-stop",
+          "box": {
+            "x": 14,
+            "y": 781.5,
+            "w": 345.7,
+            "h": 41
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.composer",
+          "box": {
+            "x": 0,
+            "y": 843,
+            "w": 430,
+            "h": 89
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.input",
+          "box": {
+            "x": 46,
+            "y": 854,
+            "w": 318,
+            "h": 44
+          }
+        },
+        {
+          "id": "la-whatsapp-preview.send",
+          "box": {
+            "x": 374,
+            "y": 854,
+            "w": 44,
+            "h": 44
+          }
+        }
+      ]
     }
   },
   "data": {
