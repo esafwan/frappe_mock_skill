@@ -1,0 +1,22 @@
+/* loyal-arrow-desk page layout: rpt-loyalty-today. Tokens only (--la-*); logical properties so RTL mirrors. Geometry measured from master2-a8a3d745/rpt-loyalty-today__desktop-light.png (1440x900). */
+.la-pg-rpt{letter-spacing:-.014em;margin-inline-end:10px;margin-block-start:-8px}  /* reference viewport carries a 10px scrollbar gutter */
+html[dir="rtl"] .la-pg-rpt{letter-spacing:0}
+.la-pg-filter{padding-inline:15px;padding-block:0}
+.la-pg-filter-label{display:block;font-size:12px;line-height:14px;color:var(--la-text-muted)}
+.la-pg-chip{display:inline-flex;align-items:center;height:28px;width:165px;margin-block-start:6px;padding-inline:13px;background:var(--la-subtle);border-radius:var(--la-radius);font-size:var(--la-text-sm);font-weight:600;color:var(--la-text)}
+.la-pg-chip.is-unset{color:var(--la-text-faint);font-weight:500}
+.la-pg-kpis{display:flex;justify-content:space-between;padding-inline:20px;margin-block-start:5px}
+.la-pg-kpi{width:171px;height:102px;padding:17px 20px 0;background:var(--la-bg);border:1px solid var(--la-card-border);border-radius:var(--la-card-radius);display:flex;flex-direction:column;overflow:hidden}
+.la-pg-kpi-label{font-size:var(--la-text-sm);line-height:19px;color:var(--la-text-muted);white-space:nowrap;overflow:hidden;margin-inline-end:-20px}
+.la-pg-kpi-value{margin-block-start:17px;font-size:24px;line-height:28px;font-weight:600;color:var(--la-text);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.la-pg-card{margin-block-start:18px;margin-inline:0;border:1px solid var(--la-border);border-radius:12px;padding:0 15px 15px;overflow:hidden}
+.la-pg-grid{width:100%;border-collapse:collapse;font-size:var(--la-text-sm);table-layout:fixed}
+.la-pg-grid th{height:34px;background:var(--la-subtle);font-weight:400;color:var(--la-text-muted);text-align:start;padding:0}
+.la-pg-grid td{height:33px;padding:5px 0 0;border-block-end:1px solid var(--la-border);color:var(--la-text)}
+.la-pg-grid .c-idx{width:42px;padding-inline-start:12px}
+.la-pg-grid th.c-idx{padding-inline-start:0}
+.la-pg-grid .c-metric{width:227px}
+.la-pg-grid .c-val{width:92px;text-align:end;font-variant-numeric:tabular-nums}
+.la-pg-grid .c-fill{width:auto}
+.la-pg-empty{height:180px;text-align:center;color:var(--la-text-muted);font-size:var(--la-text-sm);display:flex;align-items:center;justify-content:center}
+.la-pg-kpi-value{--la-progress:1}
