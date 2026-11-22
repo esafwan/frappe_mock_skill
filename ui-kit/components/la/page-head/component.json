@@ -1,0 +1,25 @@
+{
+ "id": "la-page-head",
+ "name": "Page head (title, status pill, actions, primary action)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": false,
+ "viewport": {
+  "w": 1159,
+  "h": 48
+ },
+ "states": [
+  "default",
+  "dirty",
+  "busy"
+ ],
+ "stateText": {
+  "dirty": {
+   "statusPill": "Not Saved"
+  },
+  "busy": {
+   "primaryAction": "Saving"
+  }
+ },
+ "notes": "Same metrics as la-shell header (48px, 16px pad). Primary action is the dark Save button of the form head. dirty = amber pill (root gets is-dirty); busy = primary disabled with spinner."
+}

@@ -1,5 +1,170 @@
-{"slots":{
- "workspace_name":{"type":"text","sample":"Loyal Arrow","maxLength":24,"where":"text"},
- "item_1":{"type":"text","sample":"Members","maxLength":28,"where":"text"},
- "item_active":{"type":"text","sample":"Retail","maxLength":28,"where":"text"},
- "page_title":{"type":"text","sample":"Retail","maxLength":40,"where":"text"}}}
+{
+ "slots": {
+  "workspaceLabel": {
+   "type": "text",
+   "sample": "Loyal Arrow",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "activeLeaf": {
+   "type": "text",
+   "sample": "Retail",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "avatarInitial": {
+   "type": "text",
+   "sample": "S",
+   "maxLength": 1,
+   "where": "text"
+  },
+  "pageTitle": {
+   "type": "text",
+   "sample": "Loyalty Today",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "pageActions": {
+   "type": "text",
+   "sample": "Actions",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "sidebarItem1": {
+   "type": "text",
+   "sample": "Home",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem2": {
+   "type": "text",
+   "sample": "Members",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem3": {
+   "type": "text",
+   "sample": "Points & rewards",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem4": {
+   "type": "text",
+   "sample": "Campaigns",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem5": {
+   "type": "text",
+   "sample": "Insights",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem6": {
+   "type": "text",
+   "sample": "Arrow AI",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem7": {
+   "type": "text",
+   "sample": "Approvals",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem8": {
+   "type": "text",
+   "sample": "Program setup",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem9": {
+   "type": "text",
+   "sample": "Connections",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem10": {
+   "type": "text",
+   "sample": "System health",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sidebarItem11": {
+   "type": "text",
+   "sample": "Internal records",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "sectionLeaf1": {
+   "type": "text",
+   "sample": "Setup summary",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf2": {
+   "type": "text",
+   "sample": "Loyalty programs",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf3": {
+   "type": "text",
+   "sample": "Tiers",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf4": {
+   "type": "text",
+   "sample": "Earning & Redemption Rules",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf5": {
+   "type": "text",
+   "sample": "Segments",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf6": {
+   "type": "text",
+   "sample": "Settings",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf7": {
+   "type": "text",
+   "sample": "Locations",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf8": {
+   "type": "text",
+   "sample": "Staff",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf9": {
+   "type": "text",
+   "sample": "Service categories",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "sectionLeaf10": {
+   "type": "text",
+   "sample": "Plan and usage",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "homeLeaf": {
+   "type": "text",
+   "sample": "Home",
+   "maxLength": 28,
+   "where": "text"
+  }
+ },
+ "groups": {
+  "sidebarItems": "sidebarItem1..11",
+  "sectionLeaves": "sectionLeaf1..10 (only in section-expanded)"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "id": "la-filter-bar",
+ "name": "Filter bar (3 labelled fields, more filters, reset)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "shell": true,
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "states": [
+  "default",
+  "hover",
+  "focus",
+  "changed"
+ ],
+ "notes": "State is a root modifier class (is-hover/is-focus/is-changed) styled in la-desk-base.css; hover/focus apply to field 2 via .la-filter-bar.is-hover .la-field:nth-child(2), changed amber-outlines field 2 and activates Reset."
+}

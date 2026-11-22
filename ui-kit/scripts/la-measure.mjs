@@ -1,7 +1,7 @@
 // Capture hook for LA components: render light/dark/rtl, screenshot, write measurements.json with pixel boxes of every [data-ui].
 //   node scripts/la-measure.mjs [id ...]      (no ids = all in components/la/)
 import fs from 'fs'; import path from 'path'; import { chromium } from 'playwright';
-import { renderLa, laComponents, laMeta } from '../tools/render-la.mjs'; import { ROOT } from './lib.mjs';
+import { renderLa, laComponents, laMeta, laStates } from '../tools/render-la.mjs'; import { ROOT } from './lib.mjs';
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : laComponents();
 const browser = await chromium.launch(); let bad = 0;
 for (const id of ids) {
@@ -20,6 +20,12 @@ for (const id of ids) {
   for (const st of (meta.states || []).slice(1).concat(meta.states?.length ? [meta.states[0]] : [])) for (const th of ['light', 'dark']) {   // per-state shots
     const f = dir + `preview.state-${st}.${th}.html`; fs.writeFileSync(f, renderLa(id, { state: st, theme: th }));
     const p = await browser.newPage({ viewport: { width: vp.w, height: vp.h }, deviceScaleFactor: 2 }); await p.goto('file://' + f); await p.screenshot({ path: dir + `screenshot.state-${st}.${th}.png` }); await p.close();
+  }
+  // one screenshot per state (light), plus dark+rtl of every state, as screenshot.state-<name>[.dark|.rtl].png
+  for (const st of Object.keys(laStates(id))) for (const [mode, o] of [['light', {}], ['dark', { theme: 'dark' }], ['rtl', { lang: 'ar' }]]) {
+    const f = dir + `preview.state-${st}${mode === 'light' ? '' : '.' + mode}.html`; fs.writeFileSync(f, renderLa(id, { ...o, state: st, in: meta.shell && meta.kind !== 'shell' ? 'shell' : undefined }));
+    const c = await browser.newContext({ viewport: { width: vp.w, height: vp.h }, deviceScaleFactor: 2 }); const p = await c.newPage(); await p.goto('file://' + f); await p.evaluate(() => document.fonts.ready);
+    await p.screenshot({ path: dir + `screenshot.state-${st}${mode === 'light' ? '' : '.' + mode}.png` }); await c.close();
   }
   fs.writeFileSync(dir + 'measurements.json', JSON.stringify(out, null, 1)); console.log('measured', id, out.modes.light.length, 'targets');
 }
