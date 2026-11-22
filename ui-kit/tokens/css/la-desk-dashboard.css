@@ -1,0 +1,46 @@
+/* Loyalty Dashboard page layout (loyal-arrow-desk). Layout only: colours/sizes from --la-* tokens. Logical properties for RTL.
+   --la-progress (0..1, default 1) drives the tier-bar fill, so the video engine can animate it without JS. */
+.la-body{background:var(--la-wash,#fafafb)}[data-theme="light"] .la-body{background:#f8f8f8}.la-dash{--la-progress:1;padding:8px 8px 40px;display:flex;flex-direction:column;gap:0;letter-spacing:-.012em}
+html[dir="rtl"] .la-dash{letter-spacing:0}
+.la-dash-prog{display:flex;align-items:center;gap:12px;height:24px;position:relative}
+.la-dash-prog-label{font-size:var(--la-text-sm);color:var(--la-text-muted)}
+.la-dash-select{height:24px;padding-inline:8px 6px;display:inline-flex;align-items:center;gap:8px;border-radius:var(--la-radius);background:var(--la-subtle);font-size:var(--la-text-sm);font-weight:500}
+.la-dash-select .la-ico{width:14px;height:14px;color:var(--la-text-faint)}
+.la-dash-menu{position:absolute;inset-block-start:30px;inset-inline-start:76px;min-width:220px;padding:4px;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);box-shadow:var(--la-shadow-pop);z-index:3}
+.la-dash-menu .la-menu-item{height:28px;display:flex;align-items:center;padding-inline:8px;border-radius:var(--la-radius);font-size:var(--la-text-sm)}
+.la-dash-menu .la-menu-item.is-active{background:var(--la-subtle);font-weight:500}
+.la-dash-attn{display:flex;align-items:center;gap:12px;margin-block:26px 31px;height:20px}
+.la-dash-h{margin:0;font-size:var(--la-text-base);font-weight:600;line-height:20px;color:var(--la-text)}
+.la-dash-attn .la-pill{height:19px;font-size:11px}
+.la-dash-grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.la-dash-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-block-start:24px}
+.la-dash .la-kpi{width:auto;height:96px;padding:14px 16px 0;border-radius:var(--la-radius-lg)}
+.la-dash .la-kpi-label{font-size:var(--la-text-xs,12px);line-height:16px;font-weight:500;color:var(--la-text)}
+.la-dash .la-kpi-row{margin-block-start:2px}
+.la-dash .la-kpi-value{font-size:20px;line-height:28px;font-weight:600}
+.la-dash .la-kpi-sub{margin-block-start:4px;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-dash-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-block-start:24px;align-items:stretch}
+.la-dash-col{display:flex;flex-direction:column;gap:16px}
+.la-dash .la-dcard{background:var(--la-bg);border:1px solid var(--la-card-border,var(--la-border));border-radius:var(--la-radius-lg);padding:16px}
+.la-dash .la-dcard.is-fill{flex:1}
+.la-dash .la-dcard .la-card-title{font-size:var(--la-text-base);font-weight:600;line-height:20px}
+.la-dash .la-dcard p{margin:8px 0 0;font-size:var(--la-text-sm);line-height:20px;color:var(--la-text-muted)}
+.la-dash .la-sbar{margin-block-start:14px;height:11px}
+.la-dash .la-sbar-fill{width:calc(100% * var(--la-progress,1))}
+.la-dash .la-legend{margin-block-start:10px}
+.la-dash .la-legend-row{height:27px}
+.la-dash-link{display:inline-block;margin-block-start:10px;font-size:var(--la-text-sm);color:var(--la-text);text-decoration:underline}
+.la-dash-act{margin-block-start:8px}
+.la-dash-act-row{display:flex;align-items:center;gap:12px;height:36px;border-block-end:1px solid var(--la-border);font-size:var(--la-text-sm)}
+.la-dash-act-row:last-child{border:0}
+.la-dash-act-main{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-dash-act-main b{font-weight:500;margin-inline-end:8px}.la-dash-act-main span{color:var(--la-text-muted)}
+.la-dash-act-pts{font-variant-numeric:tabular-nums;color:var(--la-pill-green-fg)}.la-dash-act-row.is-out .la-dash-act-pts{color:var(--la-text)}
+.la-dash-hl{margin-block-start:22px}
+.la-dash-hl .la-dcard{padding:16px 16px 4px}
+.la-dash-hrow{display:flex;align-items:center;height:36px;font-size:var(--la-text-sm);border-block-start:1px solid var(--la-border)}
+.la-dash-hrow:first-of-type{border:0;margin-block-start:6px}
+.la-dash-hrow .la-hl-label{flex:1;color:var(--la-text-muted)}
+.la-dash-hrow .la-num{font-variant-numeric:tabular-nums}
+.la-dash-hrow .la-pill{font-size:11px;height:19px}
+.la-dash-hrow.is-pill{height:37px}
