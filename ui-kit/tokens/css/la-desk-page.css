@@ -26,3 +26,7 @@
 .la-pg .la-rt tbody tr:first-child td{border-block-start:1px solid var(--la-border)}
 .la-pg .la-cg tr>:last-child{padding-inline-end:30px}
 .la-pg .la-pg-kpi{letter-spacing:0}
+.la-pg-opts{list-style:none;margin:2px 0 0;padding:4px;width:max-content;min-width:200px;border:1px solid var(--la-border);border-radius:var(--la-radius-lg);background:var(--la-bg);box-shadow:0 4px 12px rgba(0,0,0,.12);position:absolute;z-index:3;inset-inline-start:calc(var(--la-pg-opts-x,98px))}
+.la-pg-opts .la-opt{padding:4px 8px;border-radius:4px;font-size:var(--la-text-sm);color:var(--la-text)}.la-pg-opts .la-opt.is-sel{background:var(--la-subtle)}
+.la-pg{position:relative}
+.la-pg>.la-pg-note{text-align:start;width:100%}
