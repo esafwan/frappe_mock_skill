@@ -56382,6 +56382,149 @@
           "targets": []
         }
       ]
+    },
+    "la-rpt-program-roi": {
+      "id": "la-rpt-program-roi",
+      "title": "Program ROI report",
+      "system": "loyal-arrow-desk",
+      "html": "pages/la/rpt-program-roi.html",
+      "reference": "ux-after-r1/rpt-program-roi__desktop-light.png",
+      "measurements": "pages/la/rpt-program-roi.manifest.json",
+      "components": [
+        "la-shell",
+        "la-report-intro",
+        "la-report-filters",
+        "la-report-notice",
+        "la-roi-kpis",
+        "la-measure-table"
+      ],
+      "variants": [
+        {
+          "file": "pages/la/rpt-program-roi.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.png",
+          "state": "not-enough-data",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.dark.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.dark.png",
+          "state": "not-enough-data",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "dark",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.ar-AED.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.ar-AED.png",
+          "state": "not-enough-data",
+          "lang": "ar",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.en-INR.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.en-INR.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "INR",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.kw-KWD.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.kw-KWD.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "KWD",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.populated.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.populated.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.populated.dark.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.populated.dark.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "dark",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.populated.ar-AED.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.populated.ar-AED.png",
+          "state": "populated",
+          "lang": "ar",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.zero.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.zero.png",
+          "state": "zero",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.empty.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.empty.png",
+          "state": "empty",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "90d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.preset-7d.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.preset-7d.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "7d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.preset-30d.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.preset-30d.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "30d"
+        },
+        {
+          "file": "pages/la/rpt-program-roi.preset-qtd.html",
+          "screenshot": "pages/la/shots/rpt-program-roi.preset-qtd.png",
+          "state": "populated",
+          "lang": "en",
+          "currency": "AED",
+          "theme": "light",
+          "preset": "qtd"
+        }
+      ],
+      "interactionTargets": {
+        "preset-pill-7d..90d": "la-report-filters.pill-1..3 (QTD pill-4, Custom pill-5); active pill via data-state=active-<preset> (re-render variants .preset-7d/.preset-30d/default 90d)",
+        "kpi-to-value": "la-roi-kpis.kpi-N.value (tile la-roi-kpis.kpi-N; label .label; sub .sub)",
+        "notice": "la-report-notice (.text)",
+        "measure-rows": "la-measure-table.row-N / .num-N / .amt-N / .status-N / .note-N",
+        "program": "la-report-filters.program-value",
+        "reset": "la-report-filters.reset"
+      }
     }
   },
   "data": {

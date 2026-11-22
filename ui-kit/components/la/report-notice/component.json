@@ -1,0 +1,27 @@
+{
+ "id": "la-report-notice",
+ "name": "Report notice (info / warning / none)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 1127,
+  "h": 37
+ },
+ "shell": true,
+ "css": [
+  "la-desk-report.css"
+ ],
+ "states": [
+  "info",
+  "warning",
+  "none"
+ ],
+ "stateText": {
+  "warning": {
+   "text": "No loyalty program is set up for this report yet."
+  },
+  "none": {
+   "text": ""
+  }
+ }
+}
