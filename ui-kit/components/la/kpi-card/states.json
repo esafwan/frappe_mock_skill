@@ -1,0 +1,53 @@
+{
+ "states": {
+  "populated": {
+   "set": {}
+  },
+  "zero": {
+   "set": {
+    "value": "0",
+    "sub": "All time",
+    "label": "Redemptions"
+   }
+  },
+  "not-enough-data": {
+   "set": {
+    "value": "—",
+    "sub": "Not enough data yet"
+   }
+  },
+  "delta-up": {
+   "set": {
+    "delta": "+12.5%",
+    "sub": "vs last month"
+   }
+  },
+  "delta-down": {
+   "set": {
+    "delta": "-8.3%",
+    "sub": "vs last month"
+   }
+  },
+  "loading": {
+   "set": {}
+  },
+  "count-up": {
+   "set": {
+    "value": "187"
+   },
+   "progress": 0.62
+  },
+  "currency": {
+   "set": {
+    "label": "Estimated liability",
+    "sub": "From 0 unexpired points (estimate)"
+   },
+   "slotOverrides": {
+    "value": {
+     "type": "currency",
+     "sample": "0"
+    }
+   }
+  }
+ }
+}

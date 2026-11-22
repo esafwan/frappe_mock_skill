@@ -17,7 +17,7 @@ export function laSlotValues(id, o = {}) {
   const slots = JSON.parse(JSON.stringify(J(path.join(D(id), 'slots.json')).slots));
   for (const [k, ov] of Object.entries(st?.slotOverrides || {})) slots[k] = { ...slots[k], ...ov };
   const loc = o.locale ? universals.locales()[o.locale] : null;   // slotOverrides: e.g. switch a slot to type currency for one state
-  const lang = o.lang || loc?.language || 'en'; const cur = o.currency || loc?.currency || null; const i18n = lang !== 'en' ? universals.i18n(lang) : {};
+  const lang = o.lang || loc?.language || 'en'; const cur = o.currency || loc?.currency || (st?.slotOverrides ? 'AED' : null); const i18n = lang !== 'en' ? universals.i18n(lang) : {};
   const bound = fs.existsSync(path.join(D(id), 'texts.json')) ? J(path.join(D(id), 'texts.json')) : {};   // optional per-lang overrides {slot:{ar:"..."}}
   const v = {};
   const stF = path.join(D(id), 'states.json'); const stOv = o.state && fs.existsSync(stF) ? (J(stF)[o.state] || {}) : {};   // optional per-state slot overrides {state:{slot:value}}
@@ -30,7 +30,7 @@ export function laSlotValues(id, o = {}) {
   }
   const stx = o.state || laMeta(id).states?.[0]; const ov = laMeta(id).stateText?.[stx] || {};   // per-state slot overrides: string or {en,ar}
   for (const [k, x] of Object.entries(ov)) { const t = typeof x === 'string' ? x : (x[lang] ?? x.en); if (slots[k]?.maxLength && String(t).length > slots[k].maxLength) throw new Error(`${id}.${k} state ${stx} exceeds maxLength`); v[k] = lang === 'ar' && /^(number|currency|date|time)$/.test(slots[k]?.type) ? digits(String(t)) : t; }
-  Object.assign(v, o.set || {});
+  Object.assign(v, st?.set || {}, o.set || {});   // states.json {states:{name:{set:{slot:value}}}}
   for (const [k, s] of Object.entries(slots)) if (s.type === 'number') v[k + '__raw'] = String(o.set?.[k] ?? s.sample).replace(/[^\d.]/g, '');   // ASCII copy for data-fill attrs
   if ('current' in slots && 'target' in slots) { const c = parseFloat(v.current__raw), t = parseFloat(v.target__raw); v.fill__raw = String(t > 0 ? Math.max(0, Math.min(100, Math.round(c / t * 100))) : 0); }
   return v;

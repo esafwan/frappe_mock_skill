@@ -1,0 +1,71 @@
+/* loyal-arrow-desk widgets: la-kpi-card, la-quick-action, la-chart-line, la-chart-bar. Tokens only (--la-*); logical properties; states via [data-state].
+   Animation drivers: --la-progress (0..1) set on the component root by the video engine / render-la --progress. No JS, no keyframes needed for deterministic frames. */
+.la-page{background:var(--la-page-bg)}
+/* Inter in the real app sets ~0.3px tighter at 11-14px than our webfont; compensate inside these widgets only (never for Arabic: it breaks joining) */
+.la-kpi,.la-qa,.la-chart{letter-spacing:-.014em}
+html[dir="rtl"] .la-kpi,html[dir="rtl"] .la-qa,html[dir="rtl"] .la-chart{letter-spacing:0}
+.la-widget{--la-progress:1}
+/* ---- KPI card ---- */
+.la-kpi{width:269px;height:90px;padding:12px 16px 0;background:var(--la-bg);border:1px solid var(--la-card-border);border-radius:var(--la-card-radius);display:flex;flex-direction:column;overflow:hidden}
+.la-kpi-label{font-size:var(--la-text-xs);line-height:14px;font-weight:500;color:var(--la-text-muted)}
+.la-kpi-row{display:flex;align-items:center;gap:8px;margin-block-start:4px}
+.la-kpi-value{font-size:24px;line-height:28px;font-weight:600;color:var(--la-text);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.la-kpi-delta{height:18px;padding-inline:6px;border-radius:var(--la-radius-pill);font-size:var(--la-text-xs);font-weight:500;display:inline-flex;align-items:center;background:var(--la-pill-gray-bg);color:var(--la-pill-gray-fg)}
+.la-kpi-delta:empty{display:none}
+.la-kpi[data-state="delta-up"] .la-kpi-delta{background:var(--la-pill-green-bg);color:var(--la-pill-green-fg)}
+.la-kpi[data-state="delta-down"] .la-kpi-delta{background:var(--la-pill-red-bg);color:var(--la-pill-red-fg)}
+.la-kpi-sub{margin-block-start:4px;font-size:var(--la-text-xs);line-height:14px;color:var(--la-text-faint)}
+.la-kpi[data-state="not-enough-data"] .la-kpi-value{color:var(--la-text-faint)}
+.la-kpi[data-state="loading"] .la-kpi-label,.la-kpi[data-state="loading"] .la-kpi-value,.la-kpi[data-state="loading"] .la-kpi-sub{color:transparent;background:var(--la-skeleton);border-radius:var(--la-radius-sm);width:max-content;max-width:100%;user-select:none}
+.la-kpi[data-state="loading"] .la-kpi-value{margin-block:2px}
+/* ---- quick action ---- */
+.la-qa{width:205px;height:34px;padding-inline:10px 10px;padding-block-end:2px;display:flex;align-items:center;gap:8px;background:var(--la-bg);border:1px solid var(--la-card-border);border-radius:var(--la-radius);color:var(--la-text);font-size:var(--la-text-base);font-weight:500;line-height:20px;cursor:pointer}
+.la-qa:hover,.la-qa[data-state="hover"]{background:var(--la-hover);border-color:var(--la-border)}
+.la-qa-label{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-qa-icon{width:12px;height:12px;flex:none;color:var(--la-text-muted)}
+html[dir="rtl"] .la-qa-icon{transform:scaleX(-1)}
+.la-qa-badge{height:20px;min-width:20px;padding-inline:8px;border-radius:var(--la-radius-pill);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:400;background:var(--la-chip-bg);color:var(--la-text-muted);font-variant-numeric:tabular-nums}
+.la-qa-badge:empty{display:none}
+/* ---- charts (shared card) ---- */
+.la-chart{position:relative;width:425px;height:347px;background:var(--la-bg);border:1px solid var(--la-card-border);border-radius:var(--la-radius-lg);overflow:hidden}
+.la-chart-title{position:absolute;inset-inline:16px 16px;top:10px;font-size:var(--la-text-base);line-height:20px;font-weight:500;color:var(--la-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-chart-sub{position:absolute;inset-inline:16px 16px;top:36px;font-size:12px;line-height:16px;color:var(--la-text-muted)}
+.la-chart-toolbar{position:absolute;inset-inline:16px 16px;top:58px;height:28px;display:flex;justify-content:flex-end;gap:6px}   /* drop-in slot for filter chips */
+.la-chart-legend{position:absolute;inset-inline-end:16px;top:14px;display:flex;gap:12px;font-size:12px;line-height:16px;color:var(--la-text-muted)}
+.la-chart-legend span:empty{display:none}
+.la-chart-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-end:6px;background:var(--la-chart-1)}
+.la-chart-legend span+span i{background:var(--la-chart-2)}
+.la-plot{position:absolute;inset:0;direction:ltr}   /* time axis stays left-to-right in RTL; only text language changes */
+.la-cgrid{position:absolute;left:101px;width:296px;top:127px;height:171px;display:flex;flex-direction:column;justify-content:space-between}
+.la-cgrid i{display:block;height:1px;background:var(--la-grid)}
+.la-cgrid i:last-child{background:var(--la-grid-base)}
+.la-ys{position:absolute;left:0;width:80px;top:120px;height:185px;display:flex;flex-direction:column;justify-content:space-between;text-align:right;font-size:10px;line-height:14px;color:var(--la-text-muted);font-variant-numeric:tabular-nums}
+.la-xs{position:absolute;left:57px;top:307px;width:352px;display:flex;font-size:10px;line-height:14px;color:var(--la-text-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.la-xs span{width:88px;text-align:center;flex:none}
+.la-chart-empty{position:absolute;left:101px;width:296px;top:127px;height:171px;display:none;align-items:center;justify-content:center;font-size:var(--la-text-sm);color:var(--la-text-faint)}
+.la-chart[data-state="empty"] .la-chart-empty{display:flex}
+.la-chart[data-state="empty"] .la-series,.la-chart[data-state="empty"] .la-cbars{display:none}
+/* line series */
+.la-svg{position:absolute;left:0;top:0;width:423px;height:345px;overflow:visible}
+.la-line-clip{overflow:hidden}
+.la-line{fill:none;stroke:var(--la-chart-1);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--la-progress,1))}
+.la-line.is-b{stroke:var(--la-chart-2)}
+.la-line:not([d]),.la-line[d=""]{display:none}
+.la-chart:not([data-state="two-series"]) .la-line.is-b{display:none}
+.la-chart:not([data-state="two-series"]) .la-chart-legend{display:none}
+/* bars */
+.la-cbars{position:absolute;left:94px;top:127px;width:300px;height:171px}
+.la-cbar{position:absolute;bottom:0;width:11px;height:calc(var(--v,0) * 2.125px * var(--la-progress,1));background:var(--la-chart-1);border-start-start-radius:2px;border-start-end-radius:2px}
+.la-cbar:nth-child(1){left:0.0px}
+.la-cbar:nth-child(2){left:21.8px}
+.la-cbar:nth-child(3){left:43.6px}
+.la-cbar:nth-child(4){left:65.4px}
+.la-cbar:nth-child(5){left:87.2px}
+.la-cbar:nth-child(6){left:109.0px}
+.la-cbar:nth-child(7){left:130.8px}
+.la-cbar:nth-child(8){left:152.6px}
+.la-cbar:nth-child(9){left:174.4px}
+.la-cbar:nth-child(10){left:196.2px}
+.la-cbar:nth-child(11){left:218.0px}
+.la-cbar:nth-child(12){left:239.8px}
+.la-cbar:nth-child(13){left:261.6px}

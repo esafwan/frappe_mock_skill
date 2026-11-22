@@ -1,0 +1,38 @@
+{
+ "id": "la-kpi-card",
+ "name": "Loyal Arrow KPI card (label, big value, sub, optional delta)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 293,
+  "h": 114
+ },
+ "pad": 12,
+ "canvas": "page",
+ "shell": false,
+ "css": [
+  "la-desk-widgets.css"
+ ],
+ "states": [
+  "populated",
+  "zero",
+  "not-enough-data",
+  "delta-up",
+  "delta-down",
+  "loading",
+  "count-up",
+  "currency"
+ ],
+ "reference": {
+  "src": "islands-shots/loyalty-dashboard__desktop-{theme}.png",
+  "crop": [
+   293,
+   168,
+   293,
+   114
+  ]
+ },
+ "animation": {
+  "count-up": "value slot is interpolated per frame by the video engine (tabular-nums keeps width stable); --la-progress is exposed 0..1"
+ }
+}

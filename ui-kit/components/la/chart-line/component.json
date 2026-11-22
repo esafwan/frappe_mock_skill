@@ -1,0 +1,34 @@
+{
+ "id": "la-chart-line",
+ "name": "Loyal Arrow line chart card (title, subtitle, axis labels, 1-2 series)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 449,
+  "h": 371
+ },
+ "pad": 12,
+ "canvas": "page",
+ "shell": false,
+ "css": [
+  "la-desk-widgets.css"
+ ],
+ "states": [
+  "populated",
+  "empty",
+  "draw-in",
+  "two-series"
+ ],
+ "reference": {
+  "src": "ux-after-r1/la-workspace__desktop-{theme}.png",
+  "crop": [
+   417,
+   314,
+   449,
+   371
+  ]
+ },
+ "animation": {
+  "draw-in": "--la-progress 0..1 drives stroke-dashoffset (pathLength=1)"
+ }
+}
