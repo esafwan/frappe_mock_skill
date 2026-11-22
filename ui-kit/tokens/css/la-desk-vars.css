@@ -15,7 +15,11 @@
   --la-pill-amber-bg:#fff4d3;--la-pill-amber-fg:#91400d;
   --la-pill-green-bg:#e4faeb;--la-pill-green-fg:#075e35;
   --la-pill-gray-bg:#f3f3f3;--la-pill-gray-fg:#525252;
-  --la-pill-red-bg:#ffe5e5;--la-pill-red-fg:#b52a2a;   /* (est) */
+  --la-pill-red-bg:#fff5f5;--la-pill-red-fg:#941f1f;   /* sampled rs-p2-retail-ui */
+  --la-avatar-fg:#c2571a;     /* (est) */
+  --la-btn-dark-bg:#171717;--la-btn-dark-fg:#ffffff;   /* Save button in form head */
+  --la-pill-blue-bg:#e6f2ff;--la-pill-blue-fg:#005cad;   /* (est) */
+  --la-hover-bg:#ebebeb;--la-focus-ring:#bcdcf7;          /* (est) */
   --la-sel-bg:#ffffff;        /* active sidebar item */
   --la-shadow-sel:0 0 0 1px #ededed;
 }
@@ -24,11 +28,12 @@
   --la-text:#d9d9d9;--la-text-muted:#999999;--la-text-faint:#676767;
   --la-primary:#349bef;--la-primary-text:#171717;--la-tab-line:#0c59a2;
   --la-brand:#2b4acb;--la-avatar-bg:#823906;
-  --la-pill-amber-bg:#452608;--la-pill-amber-fg:#ffd58a;   /* fg (est) */
+  --la-pill-amber-bg:#452608;--la-pill-amber-fg:#f4c25f;   /* sampled */
   --la-pill-green-bg:#0e3521;--la-pill-green-fg:#9be6c1;
   --la-pill-gray-bg:#292929;--la-pill-gray-fg:#999999;
-  --la-pill-red-bg:#4a1717;--la-pill-red-fg:#ffb3b3;       /* (est) */
-  --la-sel-bg:#171717;--la-shadow-sel:0 0 0 1px #242424;
+  --la-pill-red-bg:#391416;--la-pill-red-fg:#ffc1c1;   /* sampled */
+  --la-pill-blue-bg:#0c2a4a;--la-pill-blue-fg:#8cc7f7;--la-hover-bg:#333333;--la-focus-ring:#0c59a2;   /* (est) */
+  --la-sel-bg:#171717;--la-shadow-sel:0 0 0 1px #242424;--la-avatar-fg:#ffd9bd;--la-btn-dark-bg:#e8e8e8;--la-btn-dark-fg:#171717;   /* avatar-fg, btn-dark (est) */
 }
 :root{
   --la-font:"InterVariable",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -38,4 +43,37 @@
   --la-dock-w:56px;--la-sidebar-w:225px;--la-header-h:48px;--la-pad:16px;--la-gap:12px;
   --la-ctl-h:29px;--la-pill-h:20px;
   --la-device-w:390px;--la-device-h:844px;
+}
+/* widget + counter tokens (sampled: s07*.png counter app, rs-p1b-missions-ui; (est) = estimated) */
+:root,[data-theme="light"]{
+  --la-primary-hover:#004a8c;   /* (est) */
+  --la-disabled-bg:#f3f3f3;--la-disabled-fg:#999999;
+  --la-ctr-bar:#101828;--la-ctr-bar-text:#ffffff;--la-ctr-badge:#d1d5dc;   /* badge (est) */
+  --la-ctr-bg:#f9fafb;--la-ctr-text:#101828;--la-ctr-muted:#4a5565;
+  --la-ctr-h:52px;--la-ctr-pad:16px;
+}
+[data-theme="dark"]{
+  --la-primary-hover:#5aaef2;   /* (est) */
+  --la-disabled-bg:#292929;--la-disabled-fg:#676767;
+  --la-ctr-bar:#030712;--la-ctr-bar-text:#f3f4f6;--la-ctr-badge:#99a1af;   /* dark counter (est: counter app ships light only) */
+  --la-ctr-bg:#101828;--la-ctr-text:#f3f4f6;--la-ctr-muted:#99a1af;
+}
+/* widgets (kpi card, quick action, charts). Sampled from islands-shots/loyalty-dashboard and ux-after-r1/la-workspace. */
+:root,[data-theme="light"]{--la-page-bg:#f8f8f8;--la-card-border:#ededed;--la-grid:#f4f5f5;--la-grid-base:#ededed;--la-chart-1:#0289f7;--la-chart-2:#268c5c;--la-chip-bg:#f3f3f3;--la-hover:#f8f8f8 /* (est) */;--la-skeleton:#ededed}
+[data-theme="dark"]{--la-page-bg:#1f1f1f;--la-card-border:#292929;--la-grid:#232323;--la-grid-base:#2e2e2e;--la-chart-1:#0289f7;--la-chart-2:#7dc5a2 /* (est) */;--la-chip-bg:#292929;--la-hover:#1f1f1f /* (est) */;--la-skeleton:#292929}
+:root{--la-card-radius:10px /* (est) */;--la-text-xs:11px}
+/* nav + status tokens (sampled from rs-p2-retail-ui light/dark; (est) = estimated) */
+:root,[data-theme="light"]{
+  --la-border-strong:#e2e2e2;
+  --la-pill-blue-bg:#e6f4ff;--la-pill-blue-fg:#005cad;
+  --la-banner-err-bg:#fff5f5;--la-banner-err-bd:#ffd8d8;--la-banner-err-bar:#941f1f;
+  --la-banner-warn-bg:#fffbeb;--la-banner-warn-bd:#fff4d3;--la-banner-warn-bar:#91400d;   /* (est) */
+  --la-banner-info-bg:#f5faff;--la-banner-info-bd:#e6f4ff;--la-banner-info-bar:#005cad;   /* (est) */
+}
+[data-theme="dark"]{
+  --la-border-strong:#383838;
+  --la-pill-blue-bg:#0a2e5c;--la-pill-blue-fg:#add2f5;
+  --la-banner-err-bg:#391416;--la-banner-err-bd:#742a2a;--la-banner-err-bar:#ffc1c1;
+  --la-banner-warn-bg:#2b1a07;--la-banner-warn-bd:#452608;--la-banner-warn-bar:#f4c25f;   /* (est) */
+  --la-banner-info-bg:#0b1f3a;--la-banner-info-bd:#0a2e5c;--la-banner-info-bar:#add2f5;   /* (est) */
 }
