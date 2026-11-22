@@ -1,0 +1,286 @@
+{
+ "id": "la-retail-funding",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p2-retail-ui/funding_1440_light.png",
+ "data": "loyal-arrow/data/retail-funding.json (gen_funding.py)",
+ "shell": "la-shell (section-expanded, Retail active)",
+ "states": {
+  "mixed": "retail-funding.html (reference: open 25%, near 86%, full 100%, no cap)",
+  "flip-open": "retail-funding.state-open.html",
+  "flip-near": "retail-funding.state-near.html",
+  "flip-full": "retail-funding.state-full.html",
+  "all-open": "retail-funding.open.html",
+  "all-near-limit": "retail-funding.near-limit.html",
+  "all-full": "retail-funding.full.html",
+  "all-no-cap": "retail-funding.no-cap.html",
+  "zero": "retail-funding.zero.html (0% used)",
+  "empty": "retail-funding.empty.html (no agreements)"
+ },
+ "variants": [
+  "retail-funding.html",
+  "retail-funding.dark.html",
+  "retail-funding.ar-AED.html",
+  "retail-funding.en-INR.html",
+  "retail-funding.kw-KWD.html",
+  "retail-funding.en-AED.html",
+  "retail-funding.state-open.html",
+  "retail-funding.state-near.html",
+  "retail-funding.state-full.html",
+  "retail-funding.state-open.dark.html",
+  "retail-funding.state-near.dark.html",
+  "retail-funding.state-full.dark.html",
+  "retail-funding.state-full.ar-AED.html",
+  "retail-funding.open.html",
+  "retail-funding.near-limit.html",
+  "retail-funding.full.html",
+  "retail-funding.no-cap.html",
+  "retail-funding.zero.html",
+  "retail-funding.zero.dark.html",
+  "retail-funding.empty.html",
+  "retail-funding.empty.dark.html",
+  "retail-funding.empty.ar-AED.html"
+ ],
+ "slots": {
+  "t.dairy_launch": {
+   "type": "text",
+   "sample": "Dairy launch",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.active": {
+   "type": "text",
+   "sample": "Active",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.dalia_dairies": {
+   "type": "text",
+   "sample": "Dalia Dairies",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "t.open": {
+   "type": "text",
+   "sample": "Open",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.export_claim": {
+   "type": "text",
+   "sample": "Export claim",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.breakfast_cereal": {
+   "type": "text",
+   "sample": "Breakfast cereal",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.nordic_cereal_co": {
+   "type": "text",
+   "sample": "Nordic Cereal Co",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "t.near_the_limit": {
+   "type": "text",
+   "sample": "Near the limit",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.summer_bundle": {
+   "type": "text",
+   "sample": "Summer bundle",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.fizzo_beverages": {
+   "type": "text",
+   "sample": "Fizzo Beverages",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.full": {
+   "type": "text",
+   "sample": "Full",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.no_cap": {
+   "type": "text",
+   "sample": "No cap",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.local_bakery_no_cap": {
+   "type": "text",
+   "sample": "Local bakery, no cap",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "t.paused": {
+   "type": "text",
+   "sample": "Paused",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.hearth_bakers": {
+   "type": "text",
+   "sample": "Hearth Bakers",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.funding": {
+   "type": "text",
+   "sample": "Funding",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.placements": {
+   "type": "text",
+   "sample": "Placements",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.store_groups": {
+   "type": "text",
+   "sample": "Store groups",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.experiments": {
+   "type": "text",
+   "sample": "Experiments",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.change_review": {
+   "type": "text",
+   "sample": "Change review",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.agreements": {
+   "type": "text",
+   "sample": "Agreements",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.in_this_programme": {
+   "type": "text",
+   "sample": "In this programme",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.close_to_the_cap": {
+   "type": "text",
+   "sample": "Close to the cap",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.cap_reached": {
+   "type": "text",
+   "sample": "Cap reached",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.claim_month": {
+   "type": "text",
+   "sample": "Claim month",
+   "maxLength": 19,
+   "where": "text"
+  },
+  "t.agreement": {
+   "type": "text",
+   "sample": "Agreement",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.supplier": {
+   "type": "text",
+   "sample": "Supplier",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.used": {
+   "type": "text",
+   "sample": "Used",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.cap": {
+   "type": "text",
+   "sample": "Cap",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.meter": {
+   "type": "text",
+   "sample": "Meter",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.state": {
+   "type": "text",
+   "sample": "State",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.claim": {
+   "type": "text",
+   "sample": "Claim",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.ledger_check": {
+   "type": "text",
+   "sample": "Ledger check",
+   "maxLength": 19,
+   "where": "text"
+  },
+  "t.compares_the_points_charged_": {
+   "type": "text",
+   "sample": "Compares the points charged to suppliers with the points issued on matching bill lines, net of returns.",
+   "maxLength": 147,
+   "where": "text"
+  },
+  "t.from": {
+   "type": "text",
+   "sample": "From",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "t.to": {
+   "type": "text",
+   "sample": "To",
+   "maxLength": 7,
+   "where": "text"
+  },
+  "t.check_the_ledger": {
+   "type": "text",
+   "sample": "Check the ledger",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.no_funding_agreements_yet": {
+   "type": "text",
+   "sample": "No funding agreements yet",
+   "maxLength": 37,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "meter fill": "la-retail-funding.fill-N (width = --fill * --la-progress; animate --la-progress 0..1 on la-retail-funding)",
+  "state flip": "la-retail-funding.state-N inside row-N (data-state open|near-limit|full); sequence state-open -> state-near -> state-full flips agreement 1 and KPI counts",
+  "meter box": "la-retail-funding.bar-N / meter-N",
+  "kpis": "la-retail-funding.kpi-agreements|near|full",
+  "claim month": "la-retail-funding.claim-month",
+  "export": "la-retail-funding.claim-btn-N",
+  "ledger": "la-retail-funding.ledger-from|ledger-to|ledger-check"
+ }
+}

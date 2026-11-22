@@ -1,0 +1,30 @@
+/* loyal-arrow-desk page: retail-funding (supplier funding agreements). Tokens only; logical properties (LTR/RTL).
+   --la-progress (0..1) on .la-fund drives meter fills so the video engine can animate them per frame without JS. */
+.la-fund{text-align:start;--la-progress:1;letter-spacing:-.006em;font-size:var(--la-text-sm);color:var(--la-text)}html[dir="rtl"] .la-fund{letter-spacing:0}
+.la-fund .la-pg-kpis{margin-block-start:16px}
+.la-fund .la-pg-h2{margin:-1px 0 14px}
+.la-fund-lbl{display:block;font-size:var(--la-text-base);line-height:20px;color:var(--la-text)}
+.la-fund-date{display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;height:28px;width:161px;padding-inline:14px 12px;margin-block-start:0;border-radius:var(--la-radius);background:var(--la-subtle);font-size:var(--la-text-base);color:var(--la-text)}
+.la-fund-date.is-sm{width:141px}
+.la-fund-date .la-ico{width:15px;height:15px;color:var(--la-text)}
+.la-fund-tbl{margin-block-start:8px;table-layout:fixed;border-radius:var(--la-radius-lg);font-size:var(--la-text-base)}
+.la-fund-tbl th{height:44px;padding-block:0;padding-inline:16px;box-sizing:border-box;color:var(--la-text);font-weight:500}
+.la-fund-tbl td{height:64px;padding-block:0;padding-inline:16px;box-sizing:border-box;white-space:nowrap;vertical-align:middle}
+.la-fund-tbl td.la-fund-agr{background:var(--la-subtle);font-weight:500;color:var(--la-text-muted);white-space:normal;line-height:19px;border-inline-end:0}
+.la-fund-tbl .la-rt-num{text-align:end}.la-fund-tbl th.la-rt-num{text-align:start}
+.la-fund-meter{display:flex;align-items:center;gap:4px}
+.la-fund-meter .la-cg-meter{width:130px;margin:0;flex:none;height:7px}
+.la-fund .la-cg-fill{width:calc(var(--fill,0) * var(--la-progress,1) * 1%)}
+.la-fund-pct{color:var(--la-text-muted);font-variant-numeric:tabular-nums}
+.la-fund-nocap{color:var(--la-text-muted)}
+.la-fund-tbl .la-pill{height:19px;font-size:11px;padding-inline:9px}
+.la-fund-tbl .la-btn{height:27px;padding-inline:12px;font-size:var(--la-text-base);border-radius:var(--la-radius-lg);border-color:var(--la-border-strong)}
+.la-fund-tr[data-state="near-limit"] .la-cg-fill{background:var(--la-meter)}
+.la-fund-tr[data-state="full"] .la-cg-fill{background:var(--la-meter)}
+.la-fund-tr.is-focus td:not(.la-fund-agr){background:var(--la-row-hover)}
+.la-fund-empty td{height:120px;text-align:center!important;color:var(--la-text-muted)}
+.la-fund-ledger{margin-block-start:-1px}
+.la-fund-ledger .la-pg-h2{margin-block-end:12px}
+.la-fund-note{margin:0 0 11px;font-size:var(--la-text-sm);line-height:20px;color:var(--la-text-muted)}
+.la-fund-lrow{display:flex;align-items:flex-end;gap:12px}
+.la-fund-lrow .la-btn{height:30px;padding-inline:8px;border-radius:var(--la-radius-lg);font-size:var(--la-text-base);border-color:var(--la-border-strong)}
