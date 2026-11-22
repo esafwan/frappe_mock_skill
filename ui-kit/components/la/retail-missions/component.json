@@ -1,0 +1,31 @@
+{
+ "id": "la-retail-missions",
+ "name": "Retail missions (tabs, new-mission sentence form, check-against-last-year results, missions table, progress)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": true,
+ "shellState": "section-expanded",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "css": [
+  "la-desk-inbox.css",
+  "la-desk-nav.css",
+  "la-desk-admin.css",
+  "la-widgets.css",
+  "la-desk-missions.css"
+ ],
+ "states": [
+  "populated",
+  "typing",
+  "empty",
+  "zero",
+  "draft",
+  "active",
+  "paused"
+ ],
+ "defaultState": "populated",
+ "reference": "rs-p1b-missions-ui/after_missions_1440_light.png",
+ "notes": "Interaction targets: f-name f-kind f-count f-unit f-source f-names f-window f-points f-cap (type into), summary, btn-check (Check against last year), btn-save (Save as draft), result/kpi-*, table/row-n/rN-status, progress/progress-bar/progress-fill (mission progress; active+paused only), notice (draft). populated = reference (paused, draft, active rows). Data: data/<region>/missions.json via scripts/la-pages-missions.mjs."
+}

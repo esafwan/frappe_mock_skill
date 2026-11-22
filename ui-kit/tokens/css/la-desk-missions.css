@@ -1,0 +1,27 @@
+/* la-retail-missions: tokens only, logical properties. Form card reuses la-sf; this file adds the two-column layout, result tiles and progress card. */
+.la-ms{display:flex;flex-direction:column;color:var(--la-text)}
+.la-ms .la-tabs{height:35px;padding-inline:0;gap:0}
+.la-ms .la-tabs .la-tab{padding:6px 12px 5px;margin-block-end:-1px}
+.la-ms-cols{display:flex;gap:16px;align-items:flex-start;margin-block-start:16px}
+.la-ms-form{flex:none;width:556px;box-sizing:border-box}
+.la-ms-right{flex:1;min-width:0}
+.la-ms-h2{margin:0 0 5px;font-size:20px;line-height:28px;font-weight:600;color:var(--la-text)}
+.la-ms-table{font-size:12.5px}
+.la-ms-table th{padding:12px 16px;font-weight:500;height:43px}
+.la-ms-table td{vertical-align:top;padding:11px 16px;line-height:19.5px}
+.la-ms-table{table-layout:fixed}
+.la-ms-table th:nth-child(1){width:81px}.la-ms-table th:nth-child(2){width:97px}.la-ms-table th:nth-child(3){width:124px}.la-ms-table th:nth-child(4){width:89px}.la-ms-table th:nth-child(5){width:80px}
+.la-ms-table th,.la-ms-table td{padding-inline:0 4px}.la-ms-table th:first-child,.la-ms-table td:first-child{padding-inline-start:16px}
+.la-ms-notice{margin:8px 0 0;font-size:12.5px;color:var(--la-pill-green-fg)}
+.la-ms-kpis{display:grid;grid-template-columns:210px 210px;gap:8px;margin-block-start:7px}
+.la-ms-kpi{display:flex;flex-direction:column;border:1px solid var(--la-border);border-radius:var(--la-radius-lg);padding:15px 20px 12px}
+.la-ms-kl{font-size:12.5px;color:var(--la-text-muted);line-height:19px}
+.la-ms-kv{font-size:24px;line-height:36px;font-weight:600;margin-block-start:2px;font-variant-numeric:tabular-nums}
+.la-ms-ks{font-size:11px;color:var(--la-text-muted);line-height:16px}
+.la-ms-prog{margin-block-start:16px}
+.la-ms-prog-head{display:flex;justify-content:space-between;align-items:center}
+.la-ms-prog-title{font-size:var(--la-text-sm);font-weight:600}
+.la-ms-prog-name{font-size:12.5px;color:var(--la-text-muted);margin-block:4px 10px}
+.la-ms-prog .la-pmeter-row{display:flex;justify-content:space-between;font-size:12.5px;margin-block-end:6px}
+.la-ms-table tr.is-hit td{background:var(--la-subtle)}
+.la-shell:has(.la-ms) .la-header-actions{display:none}

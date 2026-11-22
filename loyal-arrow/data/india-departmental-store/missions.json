@@ -1,0 +1,77 @@
+{
+ "synthetic": true,
+ "currency": "INR",
+ "last_year_shoppers": 240,
+ "check": {
+  "would_qualify": 192,
+  "pct_of_shoppers": 80,
+  "completions": 192,
+  "points_cost": 19200,
+  "est_cost": 4800,
+  "supplier_funded": 1920,
+  "supplier_share_pct": 40
+ },
+ "draft": {
+  "name_en": "Dates and dairy habit",
+  "kind_en": "Come back and buy again",
+  "count": 4,
+  "unit_en": "bills",
+  "source_en": "these categories",
+  "names_en": "Food/Dates, Food/Dairy",
+  "window": "Ramadan 2026",
+  "points": 100,
+  "cap": 1
+ },
+ "progress": {
+  "mission_id": "M-0003",
+  "current": 74,
+  "target": 192
+ },
+ "missions": [
+  {
+   "id": "M-0001",
+   "name_en": "Switch to the store tea",
+   "kind_en": "Switch to the store brand",
+   "counts": {
+    "verb": "Buy",
+    "n": 2,
+    "unit": "units",
+    "from": "Own Brand"
+   },
+   "window": "Ramadan 2026",
+   "reward_pts": 60,
+   "status": "Paused",
+   "funding": "supplier"
+  },
+  {
+   "id": "M-0002",
+   "name_en": "Try three aisles",
+   "kind_en": "Try several categories",
+   "counts": {
+    "verb": "Buy",
+    "n": 3,
+    "unit": "categories",
+    "from": "Food, Beverages, Fresh"
+   },
+   "window": "Ramadan 2026",
+   "reward_pts": 100,
+   "status": "Draft",
+   "funding": "store"
+  },
+  {
+   "id": "M-0003",
+   "name_en": "Dates and dairy habit",
+   "kind_en": "Come back and buy again",
+   "counts": {
+    "verb": "Buy",
+    "n": 4,
+    "unit": "bills",
+    "from": "Food/Dates, Food/Dairy"
+   },
+   "window": "Ramadan 2026",
+   "reward_pts": 150,
+   "status": "Active",
+   "funding": "supplier"
+  }
+ ]
+}
