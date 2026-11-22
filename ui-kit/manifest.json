@@ -56256,6 +56256,132 @@
           }
         }
       ]
+    },
+    "la-rpt-tier-migration": {
+      "id": "la-rpt-tier-migration",
+      "title": "Tier Migration Matrix report (Loyal Arrow desk)",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "html": "pages/la/rpt-tier-migration.html",
+      "reference": "ux-after-r1/rpt-tier-migration-matrix__desktop-light.png",
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "slots": "pages/la/rpt-tier-migration.slots.json",
+      "data": "loyal-arrow/data/<dataset>/tier_migration.json",
+      "components": [
+        "la-shell",
+        "la-heat-table",
+        "la-kpi-card",
+        "la-stack-bar",
+        "la-preset-pills",
+        "la-filter-bar"
+      ],
+      "states": [
+        "populated",
+        "zero",
+        "empty",
+        "preset",
+        "cell-hl",
+        "grow"
+      ],
+      "interactionTargets": {
+        "la-rpt-tier-migration.preset-7d": "period pill (click to change preset; .preset-qtd variant shows QTD active with new dates)",
+        "la-rpt-tier-migration.preset-30d": "period pill",
+        "la-rpt-tier-migration.preset-90d": "period pill",
+        "la-rpt-tier-migration.preset-qtd": "period pill",
+        "la-rpt-tier-migration.preset-custom": "period pill (active by default)",
+        "la-rpt-tier-migration.cell-rNcM": "matrix cell (6x6, N=row M=col) for zoom/highlight/cursor; .cell-hl variant outlines cell-r3c4 (Bronze to Silver)",
+        "la-rpt-tier-migration.row-N": "matrix row",
+        "la-rpt-tier-migration.split-fill": "split bar fill (width driven by --la-progress; .grow variant = 0.3)",
+        "la-rpt-tier-migration.seg-up": "segment moved up",
+        "la-rpt-tier-migration.seg-same": "segment unchanged",
+        "la-rpt-tier-migration.seg-down": "segment moved down",
+        "la-rpt-tier-migration.about": "About this report link",
+        "la-rpt-tier-migration.field-start-value": "start date",
+        "la-rpt-tier-migration.field-end-value": "end date",
+        "la-rpt-tier-migration.reset": "reset link"
+      },
+      "variants": [
+        {
+          "file": "pages/la/rpt-tier-migration.html",
+          "state": "populated",
+          "variant": "en-AED.light",
+          "screenshot": "pages/la/shots/rpt-tier-migration.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.dark.html",
+          "state": "populated",
+          "variant": "dark",
+          "screenshot": "pages/la/shots/rpt-tier-migration.dark.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.ar-AED.html",
+          "state": "populated",
+          "variant": "ar-AED",
+          "screenshot": "pages/la/shots/rpt-tier-migration.ar-AED.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.en-INR.html",
+          "state": "populated",
+          "variant": "en-INR",
+          "screenshot": "pages/la/shots/rpt-tier-migration.en-INR.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.zero.html",
+          "state": "zero",
+          "variant": "zero",
+          "screenshot": "pages/la/shots/rpt-tier-migration.zero.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.zero.dark.html",
+          "state": "zero",
+          "variant": "zero.dark",
+          "screenshot": "pages/la/shots/rpt-tier-migration.zero.dark.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.empty.html",
+          "state": "empty",
+          "variant": "empty",
+          "screenshot": "pages/la/shots/rpt-tier-migration.empty.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.empty.ar-AED.html",
+          "state": "empty",
+          "variant": "empty.ar-AED",
+          "screenshot": "pages/la/shots/rpt-tier-migration.empty.ar-AED.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.preset-qtd.html",
+          "state": "preset-qtd",
+          "variant": "preset-qtd",
+          "screenshot": "pages/la/shots/rpt-tier-migration.preset-qtd.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.cell-hl.html",
+          "state": "cell-hl",
+          "variant": "cell-hl",
+          "screenshot": "pages/la/shots/rpt-tier-migration.cell-hl.png",
+          "targets": []
+        },
+        {
+          "file": "pages/la/rpt-tier-migration.grow.html",
+          "state": "grow",
+          "variant": "grow",
+          "screenshot": "pages/la/shots/rpt-tier-migration.grow.png",
+          "targets": []
+        }
+      ]
     }
   },
   "data": {
