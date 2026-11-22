@@ -1,0 +1,35 @@
+{
+ "id": "la-retail-windows",
+ "name": "Retail windows (festival window editor card + windows table with Confirm/Edit)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": true,
+ "shellState": "section-expanded",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "css": [
+  "la-desk-inbox.css",
+  "la-desk-nav.css",
+  "la-desk-admin.css",
+  "la-desk-windows.css"
+ ],
+ "states": [
+  "populated",
+  "confirmed",
+  "editing",
+  "empty",
+  "zero"
+ ],
+ "defaultState": "populated",
+ "stateText": {
+  "populated": {},
+  "confirmed": {},
+  "editing": {},
+  "empty": {},
+  "zero": {}
+ },
+ "reference": "rs-p1b-missions-ui/after_windows_1440_light.png",
+ "notes": "Interaction targets: r{n}-confirm (Confirm flips r{n}-status pill amber to green; confirmed state shows row 1 flipped, Confirm button gone), r{n}-edit (loads row into form: editing state), f-key/f-year/f-kind/f-region/f-leadin/f-starts/f-ends/f-notes inputs (-input suffix = the box), f-save, row-{n}. Data via data/<region>/windows.json (gen_windows.py) and scripts/la-pages-windows.mjs. Not in reference: confirmed/editing/empty look (inferred)."
+}
