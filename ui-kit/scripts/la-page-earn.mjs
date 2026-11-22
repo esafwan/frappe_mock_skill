@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Composes pages/la/scheme-form-earn-preview[.variant].html (Loyalty Scheme > Earning tab with the earn-preview trace) from la/shell + synthetic datasets in loyal-arrow/data.
-// Deterministic: no clock/random/network. Then measures every data-ui box per variant into pages/la/scheme-form-earn-preview.page.json and merges manifest.json pages.
+// Deterministic: no clock/random/network. Then measures every data-ui box per variant into pages/la/scheme-form-earn-preview.page.json (page-level targets live in the .page.json; manifest.json is not touched).
 //   node scripts/la-page-earn.mjs [--shots]
 import fs from 'fs'; import path from 'path';
 import { chromium } from 'playwright';
