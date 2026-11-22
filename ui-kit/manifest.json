@@ -78315,6 +78315,280 @@
           }
         }
       ]
+    },
+    "la-counter-redeem": {
+      "id": "la-counter-redeem",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/counter-redeem.page.json",
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "components": [
+        "la-approval-seg"
+      ],
+      "interactionTargets": {
+        "la-counter-redeem.approver": "tap: choose approver (segmented control)",
+        "la-counter-redeem.approver-qr": "tap: Scan QR card",
+        "la-counter-redeem.approver-otp": "tap: Member OTP",
+        "la-counter-redeem.approver-pin": "tap: Manager PIN",
+        "la-counter-redeem.points": "type: points to redeem",
+        "la-counter-redeem.review": "tap: redeem at counter (Review)",
+        "la-counter-redeem.skip": "tap: skip redeeming"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/counter-redeem.html",
+          "desc": "Reference state: nothing typed, Scan QR card selected"
+        },
+        "dark": {
+          "file": "pages/la/counter-redeem.dark.html",
+          "desc": "Reference state: nothing typed, Scan QR card selected"
+        },
+        "ar-AED": {
+          "file": "pages/la/counter-redeem.ar-AED.html",
+          "desc": "RTL Arabic, AED"
+        },
+        "en-INR": {
+          "file": "pages/la/counter-redeem.en-INR.html",
+          "desc": "Reference state: nothing typed, Scan QR card selected"
+        },
+        "filled": {
+          "file": "pages/la/counter-redeem.filled.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "filled.dark": {
+          "file": "pages/la/counter-redeem.filled.dark.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "filled.ar-AED": {
+          "file": "pages/la/counter-redeem.filled.ar-AED.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "filled.en-INR": {
+          "file": "pages/la/counter-redeem.filled.en-INR.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "filled.kw-KWD": {
+          "file": "pages/la/counter-redeem.filled.kw-KWD.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "filled.en-KWD": {
+          "file": "pages/la/counter-redeem.filled.en-KWD.html",
+          "desc": "Points typed (50) with currency value hint"
+        },
+        "otp": {
+          "file": "pages/la/counter-redeem.otp.html",
+          "desc": "Member OTP selected, code sent"
+        },
+        "otp.dark": {
+          "file": "pages/la/counter-redeem.otp.dark.html",
+          "desc": "Member OTP selected, code sent"
+        },
+        "otp.ar-AED": {
+          "file": "pages/la/counter-redeem.otp.ar-AED.html",
+          "desc": "Member OTP selected, code sent"
+        },
+        "otp.en-INR": {
+          "file": "pages/la/counter-redeem.otp.en-INR.html",
+          "desc": "Member OTP selected, code sent"
+        },
+        "pin": {
+          "file": "pages/la/counter-redeem.pin.html",
+          "desc": "Manager PIN selected"
+        },
+        "pin.dark": {
+          "file": "pages/la/counter-redeem.pin.dark.html",
+          "desc": "Manager PIN selected"
+        },
+        "pin.ar-AED": {
+          "file": "pages/la/counter-redeem.pin.ar-AED.html",
+          "desc": "Manager PIN selected"
+        },
+        "pin.en-INR": {
+          "file": "pages/la/counter-redeem.pin.en-INR.html",
+          "desc": "Manager PIN selected"
+        },
+        "zero": {
+          "file": "pages/la/counter-redeem.zero.html",
+          "desc": "Member has no redeemable points; Review disabled"
+        },
+        "zero.dark": {
+          "file": "pages/la/counter-redeem.zero.dark.html",
+          "desc": "Member has no redeemable points; Review disabled"
+        },
+        "zero.ar-AED": {
+          "file": "pages/la/counter-redeem.zero.ar-AED.html",
+          "desc": "Member has no redeemable points; Review disabled"
+        },
+        "zero.en-INR": {
+          "file": "pages/la/counter-redeem.zero.en-INR.html",
+          "desc": "Member has no redeemable points; Review disabled"
+        },
+        "over": {
+          "file": "pages/la/counter-redeem.over.html",
+          "desc": "Typed amount over the 100 point limit; error + Review disabled"
+        },
+        "over.dark": {
+          "file": "pages/la/counter-redeem.over.dark.html",
+          "desc": "Typed amount over the 100 point limit; error + Review disabled"
+        },
+        "over.ar-AED": {
+          "file": "pages/la/counter-redeem.over.ar-AED.html",
+          "desc": "Typed amount over the 100 point limit; error + Review disabled"
+        },
+        "over.en-INR": {
+          "file": "pages/la/counter-redeem.over.en-INR.html",
+          "desc": "Typed amount over the 100 point limit; error + Review disabled"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-counter-redeem",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          }
+        },
+        {
+          "id": "la-counter-redeem.bar",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 52
+          }
+        },
+        {
+          "id": "la-counter-redeem.title",
+          "box": {
+            "x": 16,
+            "y": 14.1,
+            "w": 68.7,
+            "h": 23.8
+          }
+        },
+        {
+          "id": "la-counter-redeem.main",
+          "box": {
+            "x": 0,
+            "y": 52,
+            "w": 390,
+            "h": 792
+          }
+        },
+        {
+          "id": "la-counter-redeem.member",
+          "box": {
+            "x": 16,
+            "y": 68,
+            "w": 358,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-redeem.heading",
+          "box": {
+            "x": 16,
+            "y": 106,
+            "w": 358,
+            "h": 24
+          }
+        },
+        {
+          "id": "la-counter-redeem.points",
+          "box": {
+            "x": 16,
+            "y": 144,
+            "w": 358,
+            "h": 56
+          }
+        },
+        {
+          "id": "la-counter-redeem.points-placeholder",
+          "box": {
+            "x": 33,
+            "y": 158,
+            "w": 13.2,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-redeem.approved-by",
+          "box": {
+            "x": 16,
+            "y": 213,
+            "w": 358,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-redeem.approver",
+          "box": {
+            "x": 16,
+            "y": 243,
+            "w": 358,
+            "h": 58
+          }
+        },
+        {
+          "id": "la-counter-redeem.approver-qr",
+          "box": {
+            "x": 16,
+            "y": 243,
+            "w": 114,
+            "h": 58
+          }
+        },
+        {
+          "id": "la-counter-redeem.approver-otp",
+          "box": {
+            "x": 138,
+            "y": 243,
+            "w": 114,
+            "h": 58
+          }
+        },
+        {
+          "id": "la-counter-redeem.approver-pin",
+          "box": {
+            "x": 260,
+            "y": 243,
+            "w": 114,
+            "h": 58
+          }
+        },
+        {
+          "id": "la-counter-redeem.card-scan",
+          "box": {
+            "x": 16,
+            "y": 309,
+            "w": 358,
+            "h": 56
+          }
+        },
+        {
+          "id": "la-counter-redeem.review",
+          "box": {
+            "x": 16,
+            "y": 411,
+            "w": 358,
+            "h": 56
+          }
+        },
+        {
+          "id": "la-counter-redeem.skip",
+          "box": {
+            "x": 16,
+            "y": 479,
+            "w": 358,
+            "h": 56
+          }
+        }
+      ]
     }
   },
   "data": {
