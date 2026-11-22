@@ -1,0 +1,32 @@
+/* loyal-arrow-desk page layout: la-workspace home (sections, grids, recent-activity lists). Tokens only; logical properties; no colours of its own. */
+.la-ws{width:864px;margin-inline:auto;padding-block-start:8px}
+.la-ws-sec{margin-block-start:13px}.la-ws-sec:first-child{margin-block-start:0}
+.la-ws-h{margin:0 0 14px;font-size:15px;line-height:22px;font-weight:600;color:var(--la-text)}
+.la-ws-grid4{display:grid;grid-template-columns:repeat(4,1fr);column-gap:14.67px}
+.la-ws-cell{min-width:0}
+.la-ws-cell .la-kpi{width:100%;height:86px;padding-block-start:18px}.la-ws-cell .la-kpi-row{margin-block-start:5px}
+.la-ws-cell .la-qa{width:100%}
+.la-ws-charts{display:grid;grid-template-columns:425px 425px;column-gap:14px}
+.la-ws-dd{position:relative;display:inline-flex}
+.la-ws-dd .la-menu{inset-inline-start:0;inset-inline-end:auto;inset-block-start:32px;z-index:3}
+.la-chart-toolbar{align-items:center}.la-chart-toolbar .la-btn-subtle{gap:6px;padding-inline:6px;height:26px;font-size:12px}.la-chart-toolbar .la-iconbtn{width:28px;height:26px}
+.la-chart-toolbar .la-btn-subtle.is-open{background:var(--la-hover)}
+.la-ws-lists{display:grid;grid-template-columns:repeat(3,279px);column-gap:13.5px}
+.la-ws-list{padding-inline:13px}
+.la-ws-lhead{display:flex;align-items:center;justify-content:space-between;height:41px;padding-block-start:5px;margin-block-end:-3px}
+.la-ws-ltitle{margin:0;font-size:var(--la-text-base);line-height:20px;font-weight:500;color:var(--la-text)}
+.la-ws-lbtns{display:flex;gap:6px}
+.la-ws-row{display:flex;align-items:center;gap:10px;height:51px}
+.la-ws-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.la-ws-name{font-size:var(--la-text-base);line-height:20px;color:var(--la-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la-ws-sub{font-size:11px;line-height:15px;color:var(--la-text-muted)}
+.la-ws-row .la-chev{width:12px;height:12px;color:var(--la-text-faint)}
+.la-ws-none{height:51px;display:flex;align-items:center;justify-content:center;font-size:var(--la-text-base);color:var(--la-text-muted)}
+/* the real app sets Inter ~2% tighter than our webfont (never Arabic: it breaks joining) */
+html:not([dir="rtl"]) .la-shell{letter-spacing:-.022em}
+html:not([dir="rtl"]) .la-ws{letter-spacing:-.014em}
+.la-ws-cell .la-kpi-label{font-size:var(--la-text-sm);line-height:18px}
+.la-pg-workspace .la-shell{grid-template-rows:minmax(0,1fr)}
+.la-pg-workspace .la-main{min-height:0}
+.la-pg-workspace .la-sidebar-leaf.is-active::before{display:none}   /* ux-after-r1 reference shows no accent bar on the active leaf */
+.la-ws-cell .la-kpi:has(.la-kpi-sub:not(:empty)){padding-block-start:10px}.la-ws-cell .la-kpi:has(.la-kpi-sub:not(:empty)) .la-kpi-row{margin-block-start:2px}
