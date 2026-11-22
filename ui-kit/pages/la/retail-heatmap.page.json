@@ -1,0 +1,234 @@
+{
+ "id": "la-retail-heatmap",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p1a-heatmap/after_heatmap_1440_light.png",
+ "data": "loyal-arrow/data/retail-heatmap.json",
+ "shell": "la-shell (section-expanded, Retail active)",
+ "states": {
+  "suppressed-cells": "retail-heatmap.html (matches reference)",
+  "populated": "retail-heatmap.full.html",
+  "empty": "retail-heatmap.empty.html (zero)",
+  "hover": "retail-heatmap.hover.html (cell r1c3)"
+ },
+ "variants": [
+  "retail-heatmap.html",
+  "retail-heatmap.dark.html",
+  "retail-heatmap.ar-AED.html",
+  "retail-heatmap.en-INR.html",
+  "retail-heatmap.full.html",
+  "retail-heatmap.full.dark.html",
+  "retail-heatmap.empty.html",
+  "retail-heatmap.empty.dark.html",
+  "retail-heatmap.hover.html",
+  "retail-heatmap.full.ar-AED.html"
+ ],
+ "slots": {
+  "t.hawalli": {
+   "type": "text",
+   "sample": "Hawalli",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.not_enough_data": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.jabriya": {
+   "type": "text",
+   "sample": "Jabriya",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.salmiya": {
+   "type": "text",
+   "sample": "Salmiya",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.grocery": {
+   "type": "text",
+   "sample": "Grocery",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.dairy": {
+   "type": "text",
+   "sample": "Dairy",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.bakery": {
+   "type": "text",
+   "sample": "Bakery",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.home": {
+   "type": "text",
+   "sample": "Home",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.beauty": {
+   "type": "text",
+   "sample": "Beauty",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.product_catalogue_categories": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 89,
+   "where": "text"
+  },
+  "t.catalogue": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.categories": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.heatmap": {
+   "type": "text",
+   "sample": "Heatmap",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.mapping_inbox": {
+   "type": "text",
+   "sample": "Mapping inbox",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.retail_settings": {
+   "type": "text",
+   "sample": "Retail settings",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.category_level": {
+   "type": "text",
+   "sample": "Category level",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.level_1": {
+   "type": "text",
+   "sample": "Level 1",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.bills_with_a_member": {
+   "type": "text",
+   "sample": "Bills with a member",
+   "maxLength": 29,
+   "where": "text"
+  },
+  "t.spent_in_this_period": {
+   "type": "text",
+   "sample": "Spent in this period",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "t.active_members": {
+   "type": "text",
+   "sample": "Active members",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.cells_shown": {
+   "type": "text",
+   "sample": "Cells shown",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.in_this_programme": {
+   "type": "text",
+   "sample": "In this programme",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.stores": {
+   "type": "text",
+   "sample": "Stores",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.category_by_store": {
+   "type": "text",
+   "sample": "Category by store",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.store": {
+   "type": "text",
+   "sample": "Store",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.penetration_and_share_of_wal": {
+   "type": "text",
+   "sample": "Penetration and share of wallet",
+   "maxLength": 46,
+   "where": "text"
+  },
+  "t.category": {
+   "type": "text",
+   "sample": "Category",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.penetration": {
+   "type": "text",
+   "sample": "Penetration",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.share_of_wallet": {
+   "type": "text",
+   "sample": "Share of wallet",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.bills_with_a_member_by_store": {
+   "type": "text",
+   "sample": "Bills with a member, by store",
+   "maxLength": 43,
+   "where": "text"
+  },
+  "t.bills": {
+   "type": "text",
+   "sample": "Bills",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.with_a_member": {
+   "type": "text",
+   "sample": "With a member",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.no_data_in_this_period": {
+   "type": "text",
+   "sample": "No data in this period",
+   "maxLength": 35,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "level switch": "la-retail-heatmap.level-switch",
+  "bars fill": "la-retail-heatmap.bar-rNcM (inner .la-cg-fill width = --fill * --la-progress)",
+  "cell hover": "la-retail-heatmap.cell-rNcM"
+ }
+}

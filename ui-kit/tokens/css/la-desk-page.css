@@ -1,0 +1,28 @@
+/* loyal-arrow-desk page-level layout for composed pages (retail-heatmap). Tokens only; logical properties. */
+.la-pg{display:block;letter-spacing:-.006em}html[dir="rtl"] .la-pg{letter-spacing:0}
+.la-pg-sub{font-size:var(--la-text-sm);line-height:29px;color:var(--la-text-muted);margin:0 0 -4px}
+.la-pg .la-tabs{margin-block-start:0}
+.la-pg-level{display:flex;align-items:center;gap:5px;height:20px;margin-block-start:17px;font-size:var(--la-text-base);color:var(--la-text)}
+.la-select{display:inline-flex;align-items:center;justify-content:space-between;gap:6px;height:20px;padding-inline:4px 3px;border:1px solid var(--la-border-strong);border-radius:4px;background:var(--la-bg);font-size:var(--la-text-sm);color:var(--la-text)}
+.la-select .la-ico{width:10px;height:10px}
+.la-pg-kpis{display:flex;gap:8px;margin-block-start:8px}
+.la-pg-kpi{box-sizing:border-box;height:107px;padding:19px 20px 0;border:1px solid var(--la-border);border-radius:12px;background:var(--la-bg)}
+.la-pg-kpi-label{font-size:12.5px;line-height:16px;color:var(--la-text-muted)}
+.la-pg-kpi-value{font-size:24px;line-height:32px;font-weight:600;color:var(--la-text);font-variant-numeric:tabular-nums;margin-block-start:3px}
+.la-pg-kpi-sub{font-size:12px;line-height:16px;color:var(--la-text);margin-block-start:7px}
+.la-pg-note{font-size:var(--la-text-sm);line-height:20px;color:var(--la-text-muted);margin:1px 0 0}
+.la-pg-cols{display:grid;grid-template-columns:746px 1fr;gap:16px;align-items:start}
+.la-pg-h2{font-size:var(--la-text-xl);line-height:28px;font-weight:600;color:var(--la-text);margin:7px 0 13px}
+.la-pg .la-cat-heat-grid{width:746px}
+.la-pg .la-cg-fill{width:calc(var(--fill,0) * var(--la-progress,1) * 1%)}
+.la-pg .la-cg-cell.is-sup .la-cg-body,.la-pg .la-cg-cell.is-miss .la-cg-body{display:none}
+.la-pg .la-cg-cell.is-sup .la-cg-sup{display:block;padding-block-start:2px}
+.la-pg .la-cg-cell.is-sup{padding-block-end:13px}
+.la-pg .la-cg-cell.is-hover{background:var(--la-row-hover)}
+.la-pg .la-rt{width:100%}.la-pg .la-rt .la-rt-num{width:auto}
+.la-pg .la-rt-empty{display:table-row}.la-pg .la-rt-empty td{height:120px}
+.la-pg .la-rt-wrap{border:1px solid var(--la-border);border-radius:var(--la-radius-lg);overflow:hidden}
+.la-pg .la-rt-wrap .la-rt{border:0}
+.la-pg .la-rt tbody tr:first-child td{border-block-start:1px solid var(--la-border)}
+.la-pg .la-cg tr>:last-child{padding-inline-end:30px}
+.la-pg .la-pg-kpi{letter-spacing:0}
