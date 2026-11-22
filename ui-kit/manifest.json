@@ -29913,6 +29913,80 @@
       ],
       "dataBindings": null
     },
+    "la-scan-frame": {
+      "id": "la-scan-frame",
+      "name": "Counter scan viewfinder with hint",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "kind": "mobile",
+      "path": "components/la/scan-frame/",
+      "viewport": {
+        "w": 390,
+        "h": 520
+      },
+      "states": [
+        "scanning",
+        "hit"
+      ],
+      "files": {
+        "html": "component.html",
+        "slots": "slots.json",
+        "meta": "component.json",
+        "preview": "preview.html",
+        "previewDark": "preview.dark.html",
+        "previewRtl": "preview.rtl.html",
+        "measurements": "measurements.json"
+      },
+      "slots": {
+        "hint": {
+          "type": "text",
+          "sample": "Point the camera at the member's card QR.",
+          "maxLength": 60
+        }
+      },
+      "targets": [
+        {
+          "id": "la-scan-frame",
+          "tag": "div",
+          "box": {
+            "x": 16,
+            "y": 16,
+            "w": 358,
+            "h": 397.59
+          }
+        },
+        {
+          "id": "la-scan-frame.view",
+          "tag": "div",
+          "box": {
+            "x": 16,
+            "y": 16,
+            "w": 358,
+            "h": 358
+          }
+        },
+        {
+          "id": "la-scan-frame.reticle",
+          "tag": "span",
+          "box": {
+            "x": 95,
+            "y": 95,
+            "w": 200,
+            "h": 200
+          }
+        },
+        {
+          "id": "la-scan-frame.hint",
+          "tag": "div",
+          "box": {
+            "x": 16,
+            "y": 374,
+            "w": 358,
+            "h": 39.59
+          }
+        }
+      ]
+    },
     "la-shell": {
       "id": "la-shell",
       "name": "Loyal Arrow desk shell (dock, sidebar, header, body slot)",
@@ -30057,6 +30131,118 @@
             "y": 48,
             "w": 1159,
             "h": 852
+          }
+        }
+      ]
+    },
+    "la-wa-bubble": {
+      "id": "la-wa-bubble",
+      "name": "WhatsApp outgoing message bubble",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "kind": "widget",
+      "path": "components/la/wa-bubble/",
+      "viewport": {
+        "w": 390,
+        "h": 160
+      },
+      "states": [
+        "sent",
+        "delivered",
+        "read",
+        "ltr",
+        "rtl"
+      ],
+      "files": {
+        "html": "component.html",
+        "slots": "slots.json",
+        "meta": "component.json",
+        "preview": "preview.html",
+        "previewDark": "preview.dark.html",
+        "previewRtl": "preview.rtl.html",
+        "measurements": "measurements.json"
+      },
+      "slots": {
+        "senderName": {
+          "type": "text",
+          "sample": "Loyal Arrow",
+          "maxLength": 24
+        },
+        "body": {
+          "type": "text",
+          "sample": "You earned 120 points. Show this message at the counter to redeem.",
+          "maxLength": 160
+        },
+        "time": {
+          "type": "time",
+          "sample": "10:42",
+          "maxLength": 8
+        },
+        "ticks": {
+          "type": "text",
+          "sample": "✓✓",
+          "maxLength": 2
+        }
+      },
+      "targets": [
+        {
+          "id": "la-wa-bubble.chat",
+          "tag": "div",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 160
+          }
+        },
+        {
+          "id": "la-wa-bubble",
+          "tag": "div",
+          "box": {
+            "x": 78,
+            "y": 12,
+            "w": 300,
+            "h": 86
+          }
+        },
+        {
+          "id": "la-wa-bubble.sender",
+          "tag": "span",
+          "box": {
+            "x": 86,
+            "y": 18,
+            "w": 284,
+            "h": 19
+          }
+        },
+        {
+          "id": "la-wa-bubble.body",
+          "tag": "span",
+          "box": {
+            "x": 86,
+            "y": 39,
+            "w": 284,
+            "h": 38
+          }
+        },
+        {
+          "id": "la-wa-bubble.time",
+          "tag": "span",
+          "box": {
+            "x": 328.69,
+            "y": 79,
+            "w": 29.81,
+            "h": 15
+          }
+        },
+        {
+          "id": "la-wa-bubble.ticks",
+          "tag": "span",
+          "box": {
+            "x": 361.5,
+            "y": 79,
+            "w": 8.5,
+            "h": 15
           }
         }
       ]
