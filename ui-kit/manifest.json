@@ -77932,6 +77932,389 @@
           ]
         }
       ]
+    },
+    "la-counter-enrol": {
+      "id": "la-counter-enrol",
+      "system": "loyal-arrow-desk",
+      "group": "la",
+      "path": "pages/la/counter-enrol.page.json",
+      "viewport": {
+        "w": 1706,
+        "h": 897
+      },
+      "components": [
+        "la-counter-shell",
+        "la-counter-field",
+        "la-counter-btn"
+      ],
+      "interactionTargets": {
+        "la-counter-enrol.program-input": "select: choose program",
+        "la-counter-enrol.name-input": "fill: member name",
+        "la-counter-enrol.mobile-input": "fill: mobile",
+        "la-counter-enrol.birthday-input": "fill: optional birthday",
+        "la-counter-enrol.consent-service-box": "tick: service consent",
+        "la-counter-enrol.consent-marketing-box": "tick: marketing consent",
+        "la-counter-enrol.submit": "tap: Enrol (disabled until required fields and consents)"
+      },
+      "variants": {
+        "default": {
+          "file": "pages/la/counter-enrol.html",
+          "desc": "Populated: program, name, mobile filled, both notices loaded and ticked, Enrol enabled",
+          "state": "populated"
+        },
+        "dark": {
+          "file": "pages/la/counter-enrol.dark.html",
+          "desc": "Populated, dark (estimated tokens; live app is light only)",
+          "state": "populated"
+        },
+        "ar-AED": {
+          "file": "pages/la/counter-enrol.ar-AED.html",
+          "desc": "Populated, RTL Arabic, AED dataset",
+          "state": "populated"
+        },
+        "ar-AED.dark": {
+          "file": "pages/la/counter-enrol.ar-AED.dark.html",
+          "desc": "RTL Arabic dark",
+          "state": "populated"
+        },
+        "en-INR": {
+          "file": "pages/la/counter-enrol.en-INR.html",
+          "desc": "Populated, INR dataset (India store)",
+          "state": "populated"
+        },
+        "empty": {
+          "file": "pages/la/counter-enrol.empty.html",
+          "desc": "Blank form, notices loaded, Enrol disabled",
+          "state": "empty"
+        },
+        "empty.dark": {
+          "file": "pages/la/counter-enrol.empty.dark.html",
+          "desc": "Blank form, dark",
+          "state": "empty"
+        },
+        "empty.ar-AED": {
+          "file": "pages/la/counter-enrol.empty.ar-AED.html",
+          "desc": "Blank form, RTL",
+          "state": "empty"
+        },
+        "error": {
+          "file": "pages/la/counter-enrol.error.html",
+          "desc": "Exact reference s07b: blank form, notices still loading, server error banner, Enrol disabled",
+          "state": "error"
+        },
+        "error.dark": {
+          "file": "pages/la/counter-enrol.error.dark.html",
+          "desc": "Reference state, dark",
+          "state": "error"
+        },
+        "error.ar-AED": {
+          "file": "pages/la/counter-enrol.error.ar-AED.html",
+          "desc": "Reference state, RTL",
+          "state": "error"
+        },
+        "duplicate": {
+          "file": "pages/la/counter-enrol.duplicate.html",
+          "desc": "Filled form, duplicate-mobile error, Enrol disabled",
+          "state": "duplicate"
+        },
+        "zero": {
+          "file": "pages/la/counter-enrol.zero.html",
+          "desc": "No programs configured: Program shows empty list, Enrol disabled",
+          "state": "zero"
+        },
+        "focus-name": {
+          "file": "pages/la/counter-enrol.focus-name.html",
+          "desc": "Program chosen, Name focused and empty (cursor target for typing)",
+          "state": "focus-name"
+        },
+        "consent-ticked": {
+          "file": "pages/la/counter-enrol.consent-ticked.html",
+          "desc": "Filled form, consents unticked then service ticked (tick target)",
+          "state": "consent-ticked"
+        },
+        "busy": {
+          "file": "pages/la/counter-enrol.busy.html",
+          "desc": "Submitting: Enrol shows Enrolling..., fields locked",
+          "state": "busy"
+        },
+        "success": {
+          "file": "pages/la/counter-enrol.success.html",
+          "desc": "Enrolled: success banner above Enrol",
+          "state": "success"
+        }
+      },
+      "targets": [
+        {
+          "id": "la-counter-enrol",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1706,
+            "h": 897
+          }
+        },
+        {
+          "id": "la-counter-enrol.topbar",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1706,
+            "h": 52
+          }
+        },
+        {
+          "id": "la-counter-enrol.title",
+          "box": {
+            "x": 16,
+            "y": 16,
+            "w": 67.4,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.form",
+          "box": {
+            "x": 581,
+            "y": 52,
+            "w": 544,
+            "h": 544
+          }
+        },
+        {
+          "id": "la-counter-enrol.heading",
+          "box": {
+            "x": 581,
+            "y": 69,
+            "w": 544,
+            "h": 28
+          }
+        },
+        {
+          "id": "la-counter-enrol.program",
+          "box": {
+            "x": 581,
+            "y": 108,
+            "w": 544,
+            "h": 62
+          }
+        },
+        {
+          "id": "la-counter-enrol.program-label",
+          "box": {
+            "x": 581,
+            "y": 108,
+            "w": 544,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.program-input",
+          "box": {
+            "x": 581,
+            "y": 132,
+            "w": 544,
+            "h": 38
+          }
+        },
+        {
+          "id": "la-counter-enrol.program-value",
+          "box": {
+            "x": 595,
+            "y": 141,
+            "w": 209.1,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.name",
+          "box": {
+            "x": 581,
+            "y": 182,
+            "w": 544,
+            "h": 70
+          }
+        },
+        {
+          "id": "la-counter-enrol.name-label",
+          "box": {
+            "x": 581,
+            "y": 182,
+            "w": 544,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.name-input",
+          "box": {
+            "x": 581,
+            "y": 206,
+            "w": 544,
+            "h": 46
+          }
+        },
+        {
+          "id": "la-counter-enrol.name-value",
+          "box": {
+            "x": 595,
+            "y": 219,
+            "w": 116.5,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.mobile",
+          "box": {
+            "x": 581,
+            "y": 264,
+            "w": 544,
+            "h": 70
+          }
+        },
+        {
+          "id": "la-counter-enrol.mobile-label",
+          "box": {
+            "x": 581,
+            "y": 264,
+            "w": 544,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.mobile-input",
+          "box": {
+            "x": 581,
+            "y": 288,
+            "w": 544,
+            "h": 46
+          }
+        },
+        {
+          "id": "la-counter-enrol.mobile-value",
+          "box": {
+            "x": 595,
+            "y": 301,
+            "w": 109.6,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.birthday",
+          "box": {
+            "x": 581,
+            "y": 346,
+            "w": 544,
+            "h": 70
+          }
+        },
+        {
+          "id": "la-counter-enrol.birthday-label",
+          "box": {
+            "x": 581,
+            "y": 346,
+            "w": 544,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.birthday-input",
+          "box": {
+            "x": 581,
+            "y": 370,
+            "w": 544,
+            "h": 46
+          }
+        },
+        {
+          "id": "la-counter-enrol.birthday-placeholder",
+          "box": {
+            "x": 595,
+            "y": 383,
+            "w": 86,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent",
+          "box": {
+            "x": 581,
+            "y": 438,
+            "w": 544,
+            "h": 98
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-title",
+          "box": {
+            "x": 597,
+            "y": 428,
+            "w": 58.1,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-service",
+          "box": {
+            "x": 593,
+            "y": 468,
+            "w": 520,
+            "h": 32
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-service-box",
+          "box": {
+            "x": 593,
+            "y": 477.5,
+            "w": 13,
+            "h": 13
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-service-text",
+          "box": {
+            "x": 614,
+            "y": 474,
+            "w": 383.8,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-marketing",
+          "box": {
+            "x": 593,
+            "y": 500,
+            "w": 520,
+            "h": 32
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-marketing-box",
+          "box": {
+            "x": 593,
+            "y": 509.5,
+            "w": 13,
+            "h": 13
+          }
+        },
+        {
+          "id": "la-counter-enrol.consent-marketing-text",
+          "box": {
+            "x": 614,
+            "y": 506,
+            "w": 316.6,
+            "h": 20
+          }
+        },
+        {
+          "id": "la-counter-enrol.submit",
+          "box": {
+            "x": 581,
+            "y": 548,
+            "w": 544,
+            "h": 48
+          }
+        }
+      ]
     }
   },
   "data": {
