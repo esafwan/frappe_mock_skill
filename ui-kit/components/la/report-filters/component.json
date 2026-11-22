@@ -1,0 +1,22 @@
+{
+ "id": "la-report-filters",
+ "name": "Report filters (period pills, program, more filters, reset)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 1127,
+  "h": 63
+ },
+ "shell": true,
+ "css": [
+  "la-desk-report.css"
+ ],
+ "states": [
+  "active-90d",
+  "active-7d",
+  "active-30d",
+  "active-qtd",
+  "active-custom"
+ ],
+ "notes": "Pill group is a segmented control; active pill chosen by data-state=active-<preset>. Targets: pill-1..5 (7d..Custom), program-value, more, reset."
+}

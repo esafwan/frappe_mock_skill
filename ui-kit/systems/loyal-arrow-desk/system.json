@@ -1,0 +1,69 @@
+{
+  "id": "loyal-arrow-desk",
+  "name": "Loyal Arrow desk (Frappe v16 desk skinned for Loyal Arrow)",
+  "status": "ready",
+  "extends": "frappe-desk",
+  "source": {
+    "app": "loyal_arrow",
+    "branch": "integration/master-2",
+    "capturedFrom": "dumps/screenshots rs-p1b-missions-ui (1440x900 @1x, light+dark); values sampled from PNG pixels"
+  },
+  "componentGroup": "la",
+  "componentRoot": "components/la/",
+  "variableSystem": {
+    "kind": "css-custom-properties",
+    "themeAttribute": "data-theme",
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "files": {
+      "vars": "tokens/css/la-desk-vars.css",
+      "base": "tokens/css/la-desk-base.css"
+    },
+    "notes": "Loads frappe-desk css first, then la-desk-vars (LA tokens, --la-*) and la-desk-base (shell grid + primitives). Components use only --la-* tokens and la-* classes; no per-component colours."
+  },
+  "tokens": {
+    "css": [
+      "tokens/css/fonts.css",
+      "tokens/css/frappe-desk.css",
+      "tokens/css/la-desk-vars.css",
+      "tokens/css/la-desk-base.css",
+      "tokens/css/la-desk-components.css",
+      "tokens/css/la-desk-data.css"
+    ],
+    "fonts": "tokens/fonts/",
+    "iconSprite": null
+  },
+  "rtl": {
+    "supported": true,
+    "mechanism": "html[dir=rtl]; base css uses logical properties (inline-start/end)"
+  },
+  "layout": {
+    "dock": 56,
+    "sidebar": 225,
+    "header": 48,
+    "bodyPad": 16,
+    "mobile": {
+      "w": 390,
+      "h": 844
+    }
+  },
+  "defaults": {
+    "locale": "en-AE/AED",
+    "theme": "light",
+    "viewport": {
+      "w": 1440,
+      "h": 900,
+      "deviceScaleFactor": 2
+    }
+  },
+  "currencies": [
+    "AED",
+    "SAR",
+    "QAR",
+    "KWD",
+    "INR"
+  ],
+  "dataBindings": "tools/render-la.mjs (slots.json samples + data/universals; --currency/--lang/--theme)"
+}

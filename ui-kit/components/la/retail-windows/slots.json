@@ -1,0 +1,466 @@
+{
+ "slots": {
+  "desc": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "tab1": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab2": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab3": {
+   "type": "text",
+   "sample": "Heatmap",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab4": {
+   "type": "text",
+   "sample": "Festival",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab5": {
+   "type": "text",
+   "sample": "Mapping inbox",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab6": {
+   "type": "text",
+   "sample": "Missions",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab7": {
+   "type": "text",
+   "sample": "Windows",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "tab8": {
+   "type": "text",
+   "sample": "Retail settings",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "formTitle": {
+   "type": "text",
+   "sample": "Add or edit a window",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "lblKey": {
+   "type": "text",
+   "sample": "Festival key",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "lblYear": {
+   "type": "text",
+   "sample": "Year",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lblKind": {
+   "type": "text",
+   "sample": "Kind",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lblRegion": {
+   "type": "text",
+   "sample": "Region",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lblLead": {
+   "type": "text",
+   "sample": "Lead-in starts",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "lblStarts": {
+   "type": "text",
+   "sample": "Starts",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lblEnds": {
+   "type": "text",
+   "sample": "Ends",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lblNotes": {
+   "type": "text",
+   "sample": "Notes",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "valKey": {
+   "type": "text",
+   "sample": "ramadan",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "valYear": {
+   "type": "number",
+   "sample": "2026",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "valKind": {
+   "type": "text",
+   "sample": "Festival",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "valRegion": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "valLead": {
+   "type": "date",
+   "sample": "dd/mm/yyyy",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "valStarts": {
+   "type": "date",
+   "sample": "dd/mm/yyyy",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "valEnds": {
+   "type": "date",
+   "sample": "dd/mm/yyyy",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "valNotes": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "formHint": {
+   "type": "text",
+   "sample": "A new window starts unconfirmed. Changing the dates of a confirmed window takes the confirmation back.",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "btnSave": {
+   "type": "text",
+   "sample": "Save window",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "listTitle": {
+   "type": "text",
+   "sample": "Retail windows",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "colWindow": {
+   "type": "text",
+   "sample": "Window",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colYear": {
+   "type": "text",
+   "sample": "Year",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "colRegion": {
+   "type": "text",
+   "sample": "Region",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colDates": {
+   "type": "text",
+   "sample": "Dates",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colStatus": {
+   "type": "text",
+   "sample": "Status",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "colChange": {
+   "type": "text",
+   "sample": "Change",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "pillNot": {
+   "type": "text",
+   "sample": "Not confirmed",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "pillConfirmed": {
+   "type": "text",
+   "sample": "Confirmed",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "btnConfirm": {
+   "type": "text",
+   "sample": "Confirm",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "btnEdit": {
+   "type": "text",
+   "sample": "Edit",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "emptyTitle": {
+   "type": "text",
+   "sample": "No windows yet",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "emptyBody": {
+   "type": "text",
+   "sample": "Add a festival window to start planning retail campaigns.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "r1_name": {
+   "type": "text",
+   "sample": "Diwali",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r1_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r1_region": {
+   "type": "text",
+   "sample": "India",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r1_dates": {
+   "type": "date",
+   "sample": "2027-10-27 to 2027-10-31 (14 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r2_name": {
+   "type": "text",
+   "sample": "Onam",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r2_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r2_region": {
+   "type": "text",
+   "sample": "India",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r2_dates": {
+   "type": "date",
+   "sample": "2027-09-03 to 2027-09-13 (10 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r3_name": {
+   "type": "text",
+   "sample": "Back To School",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r3_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r3_region": {
+   "type": "text",
+   "sample": "GCC",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r3_dates": {
+   "type": "date",
+   "sample": "2027-08-15 to 2027-09-15 (10 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r4_name": {
+   "type": "text",
+   "sample": "Eid Al Adha",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r4_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r4_region": {
+   "type": "text",
+   "sample": "GCC",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r4_dates": {
+   "type": "date",
+   "sample": "2027-05-16 to 2027-05-19 (7 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r5_name": {
+   "type": "text",
+   "sample": "Eid Al Fitr",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r5_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r5_region": {
+   "type": "text",
+   "sample": "GCC",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r5_dates": {
+   "type": "date",
+   "sample": "2027-03-09 to 2027-03-11 (7 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r6_name": {
+   "type": "text",
+   "sample": "Ramadan",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r6_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r6_region": {
+   "type": "text",
+   "sample": "GCC",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r6_dates": {
+   "type": "date",
+   "sample": "2027-02-08 to 2027-03-08 (10 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r7_name": {
+   "type": "text",
+   "sample": "Pongal",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r7_year": {
+   "type": "number",
+   "sample": "2027",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r7_region": {
+   "type": "text",
+   "sample": "India",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r7_dates": {
+   "type": "date",
+   "sample": "2027-01-13 to 2027-01-16 (7 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r8_name": {
+   "type": "text",
+   "sample": "Dsf",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r8_year": {
+   "type": "number",
+   "sample": "2026",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r8_region": {
+   "type": "text",
+   "sample": "GCC",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r8_dates": {
+   "type": "date",
+   "sample": "2026-12-04 to 2027-01-10 (10 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r9_name": {
+   "type": "text",
+   "sample": "Diwali",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "r9_year": {
+   "type": "number",
+   "sample": "2026",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "r9_region": {
+   "type": "text",
+   "sample": "India",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r9_dates": {
+   "type": "date",
+   "sample": "2026-11-06 to 2026-11-10 (14 day lead-in)",
+   "maxLength": 60,
+   "where": "text"
+  }
+ }
+}

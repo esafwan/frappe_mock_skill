@@ -1,0 +1,338 @@
+{
+ "id": "la-retail-experiments",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p2-retail-ui/experiments_1440_light.png (also _dark, _rtl)",
+ "data": "loyal-arrow/data/retail-experiments.json",
+ "shell": "la-shell (section-expanded, Retail active)",
+ "states": {
+  "result-open": "retail-experiments.html (matches reference: All, 3 rows, completed row expanded)",
+  "all-six": "retail-experiments.full.html",
+  "collapsed": "retail-experiments.collapsed.html (Result closed; cross-fade to base for the expand interaction)",
+  "filter-draft": "retail-experiments.draft.html",
+  "filter-running": "retail-experiments.running.html",
+  "filter-completed": "retail-experiments.completed.html",
+  "filter-cancelled": "retail-experiments.cancelled.html",
+  "empty": "retail-experiments.empty.html",
+  "result-zero": "retail-experiments.zero.html (0.00 / 0.0% / 0 / 0, info banner)",
+  "result-count-mid": "retail-experiments.count-mid.html (lift count-up halfway, +6.3%)"
+ },
+ "variants": [
+  "retail-experiments.html",
+  "retail-experiments.dark.html",
+  "retail-experiments.ar-AED.html",
+  "retail-experiments.ar-AED.dark.html",
+  "retail-experiments.en-INR.html",
+  "retail-experiments.kw-KWD.html",
+  "retail-experiments.full.html",
+  "retail-experiments.collapsed.html",
+  "retail-experiments.draft.html",
+  "retail-experiments.running.html",
+  "retail-experiments.completed.html",
+  "retail-experiments.cancelled.html",
+  "retail-experiments.empty.html",
+  "retail-experiments.empty.dark.html",
+  "retail-experiments.zero.html",
+  "retail-experiments.count-mid.html",
+  "retail-experiments.zero.ar-AED.html"
+ ],
+ "slots": {
+  "t.front_shelf_dates": {
+   "type": "text",
+   "sample": "Front shelf dates",
+   "maxLength": 29,
+   "where": "text"
+  },
+  "t.matched_stores": {
+   "type": "text",
+   "sample": "Matched stores",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.net_sales": {
+   "type": "text",
+   "sample": "Net sales",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.completed": {
+   "type": "text",
+   "sample": "Completed",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.result": {
+   "type": "text",
+   "sample": "Result",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.the_change_is_lifting_this_mea": {
+   "type": "text",
+   "sample": "The change is lifting this measure.",
+   "maxLength": 51,
+   "where": "text"
+  },
+  "t.overlap_warning": {
+   "type": "text",
+   "sample": "Comparison stores share members with changed stores (6.4%). The result may be understated.",
+   "maxLength": 130,
+   "where": "text"
+  },
+  "t.result_heading": {
+   "type": "text",
+   "sample": "Result for Front shelf dates",
+   "maxLength": 52,
+   "where": "text"
+  },
+  "t.effect_per_day": {
+   "type": "text",
+   "sample": "Effect per day",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.lift": {
+   "type": "text",
+   "sample": "Lift",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.compared": {
+   "type": "text",
+   "sample": "Compared",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.changed_comparison": {
+   "type": "text",
+   "sample": "Changed / comparison",
+   "maxLength": 30,
+   "where": "text"
+  },
+  "t.final_result_kept_when_the_exp": {
+   "type": "text",
+   "sample": "Final result, kept when the experiment was completed.",
+   "maxLength": 77,
+   "where": "text"
+  },
+  "t.points_holdout": {
+   "type": "text",
+   "sample": "Points holdout",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.member_holdout": {
+   "type": "text",
+   "sample": "Member holdout",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.bills": {
+   "type": "text",
+   "sample": "Bills",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.running": {
+   "type": "text",
+   "sample": "Running",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.complete": {
+   "type": "text",
+   "sample": "Complete",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.cancel": {
+   "type": "text",
+   "sample": "Cancel",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.cereal_gondola_test": {
+   "type": "text",
+   "sample": "Cereal gondola test",
+   "maxLength": 29,
+   "where": "text"
+  },
+  "t.draft": {
+   "type": "text",
+   "sample": "Draft",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.change": {
+   "type": "text",
+   "sample": "Change",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.pair_stores": {
+   "type": "text",
+   "sample": "Pair stores",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.start": {
+   "type": "text",
+   "sample": "Start",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.delete": {
+   "type": "text",
+   "sample": "Delete",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.no_experiments_yet": {
+   "type": "text",
+   "sample": "No experiments yet",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "t.create_an_experiment_to_compar": {
+   "type": "text",
+   "sample": "Create an experiment to compare changed stores with comparison stores.",
+   "maxLength": 100,
+   "where": "text"
+  },
+  "t.product_catalogue_categories_a": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 89,
+   "where": "text"
+  },
+  "t.funding": {
+   "type": "text",
+   "sample": "Funding",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.placements": {
+   "type": "text",
+   "sample": "Placements",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.store_groups": {
+   "type": "text",
+   "sample": "Store groups",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.experiments": {
+   "type": "text",
+   "sample": "Experiments",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.change_review": {
+   "type": "text",
+   "sample": "Change review",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.all": {
+   "type": "text",
+   "sample": "All",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "t.cancelled": {
+   "type": "text",
+   "sample": "Cancelled",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.new_experiment": {
+   "type": "text",
+   "sample": "New experiment",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.name": {
+   "type": "text",
+   "sample": "Name",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.design": {
+   "type": "text",
+   "sample": "Design",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.measure": {
+   "type": "text",
+   "sample": "Measure",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.dates": {
+   "type": "text",
+   "sample": "Dates",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.status": {
+   "type": "text",
+   "sample": "Status",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.dairy_chiller_refresh": {
+   "type": "text",
+   "sample": "Dairy chiller refresh",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "t.checkout_bonus_points": {
+   "type": "text",
+   "sample": "Checkout bonus points",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "t.weekend_bundle": {
+   "type": "text",
+   "sample": "Weekend bundle",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.no_clear_change_on_this_measur": {
+   "type": "text",
+   "sample": "No clear change on this measure.",
+   "maxLength": 47,
+   "where": "text"
+  },
+  "t.there_is_not_enough_data_to_me": {
+   "type": "text",
+   "sample": "There is not enough data to measure a result yet.",
+   "maxLength": 71,
+   "where": "text"
+  },
+  "t.not_final_yet_still_counting_": {
+   "type": "text",
+   "sample": "Not final yet, still counting.",
+   "maxLength": 56,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "Result button (expand)": "la-retail-experiments.row-1.result-btn",
+  "result panel": "la-retail-experiments.result",
+  "lift count-up": "la-retail-experiments.lift-value (swap text zero -> final, or cross-fade .zero / .count-mid / base)",
+  "effect count-up": "la-retail-experiments.effect-value",
+  "compared": "la-retail-experiments.compared-value",
+  "warning banner": "la-retail-experiments.warning",
+  "status filter": "la-retail-experiments.filter + filter-{all,draft,running,completed,cancelled}",
+  "new experiment": "la-retail-experiments.new-btn",
+  "row actions": "la-retail-experiments.row-N.{result,complete,cancel,change,pair,start,delete}-btn",
+  "status pill": "la-retail-experiments.row-N.status"
+ }
+}

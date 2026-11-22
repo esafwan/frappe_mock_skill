@@ -1,0 +1,43 @@
+/* Loyal Arrow desk: Tier Migration Matrix page layout (la-tmx-*). Tokens only (--la-*), logical properties so RTL works. */
+.la-tmx{display:flex;flex-direction:column}
+.la-tmx-note{height:20px;margin-block-start:1px;display:flex;align-items:center;gap:8px;font-size:var(--la-text-sm);color:var(--la-text-muted);margin-block-end:44px}
+.la-tmx-note .la-tmx-link{color:var(--la-primary);font-weight:500}
+.la-tmx-card{border:1px solid var(--la-card-border);border-radius:var(--la-radius-lg);padding:12px 16px 14px;background:var(--la-bg)}
+.la-tmx-card-title{margin:0;font-size:var(--la-text-sm);font-weight:600;line-height:24px}
+.la-tmx-split{display:flex;height:12px;margin-block-start:8px;border-radius:var(--la-radius-pill);overflow:hidden;background:var(--la-subtle)}
+.la-tmx-split-fill{display:flex;height:100%;width:calc(var(--la-progress,1) * 100%);overflow:hidden}
+.la-tmx-split-fill i{display:block;height:100%;margin-inline-end:2px}
+.la-tmx-split-fill i:last-child{margin-inline-end:0}
+.la-tmx-split-fill .is-up,.la-tmx-leg-h .is-up{background:var(--la-chart-1)}.la-tmx-split-fill .is-same,.la-tmx-leg-h .is-same{background:var(--la-chart-2)}.la-tmx-split-fill .is-down,.la-tmx-leg-h .is-down{background:var(--la-tmx-down,#e5389b)}
+.la-tmx-legend{display:grid;grid-template-columns:repeat(3,1fr);margin-block-start:12px}
+.la-tmx-leg{display:flex;flex-direction:column}
+.la-tmx-leg-h{display:flex;align-items:center;gap:8px;height:18px;font-size:12px;color:var(--la-text-muted)}
+.la-tmx-leg-h i{width:8px;height:8px;border-radius:50%}
+.la-tmx-leg-v{display:flex;align-items:baseline;gap:6px;padding-inline-start:16px;margin-block-start:2px}
+.la-tmx-leg-v b{font-size:15px;font-weight:600;line-height:20px}
+.la-tmx-leg-v span{font-size:12px;color:var(--la-text-muted)}
+.la-tmx-filters{display:flex;align-items:flex-end;gap:32px;margin-block-start:54px;padding-block-end:12px;border-block-end:1px solid var(--la-border)}
+.la-tmx-filters .la-field-label{font-size:var(--la-text-sm);color:var(--la-text);line-height:14px}
+.la-tmx-filters .la-field.is-presets{width:284px;margin-inline-end:-16px}
+.la-tmx-filters .la-field.is-reset{width:auto;padding-inline-start:8px}
+.la-tmx-filters .la-field.is-reset .la-field-value{background:transparent;padding-inline:0;font-weight:400;color:var(--la-text-muted)}
+.la-tmx-toggle{display:flex;height:28px;padding:2px;background:var(--la-subtle);border-radius:var(--la-radius-lg)}
+.la-tmx-toggle span{flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding-inline:12px;font-size:var(--la-text-sm);color:var(--la-text-muted);border-radius:var(--la-radius)}
+.la-tmx-toggle span.is-active{background:var(--la-bg);color:var(--la-text);font-weight:500;box-shadow:0 0 0 1px var(--la-border),0 1px 2px rgba(0,0,0,.06)}
+.la-tmx-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-block-start:25px}
+.la-tmx-kpis .la-kpi{width:auto;height:96px;padding:15px 16px 0}
+.la-tmx-kpis .la-kpi-label{font-size:var(--la-text-sm);line-height:16px;font-weight:400;color:var(--la-text-muted)}
+.la-tmx-kpis .la-kpi-row{margin-block-start:12px}
+.la-tmx-kpis .la-kpi-value{font-size:20px;line-height:28px;font-weight:600}
+.la-tmx-matrix{margin-block-start:41px}
+.la-tmx-matrix .la-heat-card{margin-block-start:0;padding:0 15px 8px}
+.la-tmx-clip{width:1095px;overflow:hidden}
+.la-tmx-matrix .la-heat-grid{width:1095px}
+.la-tmx-matrix .la-heat-grid th:first-child,.la-tmx-matrix .la-heat-grid td:first-child{padding-inline-start:6px}
+.la-tmx-matrix td.la-hc.la-heat-0{border-block-end:1px solid var(--la-border)}
+.la-tmx-matrix td.la-hc.is-hl{outline:2px solid var(--la-primary);outline-offset:-2px;font-weight:600}
+.la-tmx-empty{margin-block-start:41px;border:1px solid var(--la-card-border);border-radius:var(--la-radius-lg);height:249px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:var(--la-wash)}
+.la-tmx-empty b{font-size:17px;font-weight:600;line-height:24px}
+.la-tmx-empty span{font-size:var(--la-text-sm);color:var(--la-text-muted)}
+html[dir=rtl] .la-tmx-matrix .la-heat-grid th{text-align:start}
+.la-tmx-toggle span{white-space:nowrap}

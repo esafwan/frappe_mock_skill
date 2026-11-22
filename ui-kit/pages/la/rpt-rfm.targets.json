@@ -1,0 +1,11871 @@
+{
+ "id": "la-rpt-rfm",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "ux-after-r1/rpt-rfm-segments__desktop-light.png",
+ "interactions": [
+  {
+   "kind": "select-view",
+   "targets": [
+    "la-rfm.view-switch",
+    "la-rfm.view-menu",
+    "la-rfm.view-option-segments",
+    "la-rfm.view-option-grid"
+   ],
+   "note": "cursor to the View select, click (variant view-open shows the menu), choose Grid (variant grid) or Segments (default). Variants: populated(default) | empty (= reference screenshot) | grid | view-open; each with dark, ar-AED, ar-AED.dark, en-INR, kw-KWD (money screens)."
+  },
+  {
+   "kind": "count-up",
+   "targets": [
+    "la-rfm.kpi-1.value",
+    "la-rfm.kpi-2.value",
+    "la-rfm.kpi-3.value",
+    "la-rfm.kpi-4.value"
+   ],
+   "note": "interpolate KPI values 0 -> populated value"
+  },
+  {
+   "kind": "link",
+   "targets": [
+    "la-rfm.about"
+   ],
+   "note": "About this report +"
+  }
+ ],
+ "variants": {
+  "ar-AED.dark": {
+   "file": "pages/la/rpt-rfm.ar-AED.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.ar-AED.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 227
+     }
+    }
+   ]
+  },
+  "ar-AED": {
+   "file": "pages/la/rpt-rfm.ar-AED.html",
+   "screenshot": "pages/la/shots/rpt-rfm.ar-AED.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 227
+     }
+    }
+   ]
+  },
+  "dark": {
+   "file": "pages/la/rpt-rfm.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "empty.ar-AED.dark": {
+   "file": "pages/la/rpt-rfm.empty.ar-AED.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.empty.ar-AED.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 1093,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1111.3,
+      "y": 261,
+      "w": 14.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.empty",
+     "box": {
+      "x": 16,
+      "y": 348,
+      "w": 1127,
+      "h": 247
+     }
+    }
+   ]
+  },
+  "empty.ar-AED": {
+   "file": "pages/la/rpt-rfm.empty.ar-AED.html",
+   "screenshot": "pages/la/shots/rpt-rfm.empty.ar-AED.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 1093,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1111.3,
+      "y": 261,
+      "w": 14.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.empty",
+     "box": {
+      "x": 16,
+      "y": 348,
+      "w": 1127,
+      "h": 247
+     }
+    }
+   ]
+  },
+  "empty.dark": {
+   "file": "pages/la/rpt-rfm.empty.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.empty.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 1093,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 261,
+      "w": 15.3,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.empty",
+     "box": {
+      "x": 297,
+      "y": 348,
+      "w": 1127,
+      "h": 247
+     }
+    }
+   ]
+  },
+  "empty": {
+   "file": "pages/la/rpt-rfm.empty.html",
+   "screenshot": "pages/la/shots/rpt-rfm.empty.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 1093,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 261,
+      "w": 15.3,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.empty",
+     "box": {
+      "x": 297,
+      "y": 348,
+      "w": 1127,
+      "h": 247
+     }
+    }
+   ]
+  },
+  "en-INR": {
+   "file": "pages/la/rpt-rfm.en-INR.html",
+   "screenshot": "pages/la/shots/rpt-rfm.en-INR.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 132.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "grid.ar-AED.dark": {
+   "file": "pages/la/rpt-rfm.grid.ar-AED.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.ar-AED.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 705.3,
+      "y": 151.9,
+      "w": 44.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "grid.ar-AED": {
+   "file": "pages/la/rpt-rfm.grid.ar-AED.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.ar-AED.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 705.3,
+      "y": 151.9,
+      "w": 44.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "grid.dark": {
+   "file": "pages/la/rpt-rfm.grid.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 27.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "grid.en-INR": {
+   "file": "pages/la/rpt-rfm.grid.en-INR.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.en-INR.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 27.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 132.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "grid": {
+   "file": "pages/la/rpt-rfm.grid.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 27.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "grid.kw-KWD": {
+   "file": "pages/la/rpt-rfm.grid.kw-KWD.html",
+   "screenshot": "pages/la/shots/rpt-rfm.grid.kw-KWD.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 27.7,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 197.3,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.grid",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 210
+     }
+    }
+   ]
+  },
+  "default": {
+   "file": "pages/la/rpt-rfm.html",
+   "screenshot": "pages/la/shots/rpt-rfm.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "kw-KWD": {
+   "file": "pages/la/rpt-rfm.kw-KWD.html",
+   "screenshot": "pages/la/shots/rpt-rfm.kw-KWD.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 197.3,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "view-open.ar-AED.dark": {
+   "file": "pages/la/rpt-rfm.view-open.ar-AED.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.ar-AED.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 600,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 605,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 605,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 227
+     }
+    }
+   ]
+  },
+  "view-open.ar-AED": {
+   "file": "pages/la/rpt-rfm.view-open.ar-AED.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.ar-AED.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 1384,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 1396.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 1395.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 1400.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 1159,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 1168,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 1168,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 1168,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 1168,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 1168,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 1168,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 1168,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 1168,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 1168,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 1168,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 1168,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 1168,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 1168,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 1057.6,
+      "y": 12.7,
+      "w": 85.4,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 16,
+      "y": 9.5,
+      "w": 172.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 92,
+      "y": 9.5,
+      "w": 96.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 0,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 16,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 837,
+      "y": 65.9,
+      "w": 306,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 724.7,
+      "y": 65.9,
+      "w": 91.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 16,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 983,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 983,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 791,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 791,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 599,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 599,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 701.5,
+      "y": 151.9,
+      "w": 48.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 600,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 605,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 605,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 455.1,
+      "y": 147,
+      "w": 103.9,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 870.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 887.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 1096,
+      "y": 247,
+      "w": 30,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 887.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 585.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 602.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 685.2,
+      "y": 247,
+      "w": 156,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 602.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 300.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 317.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 518.5,
+      "y": 247,
+      "w": 38,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 317.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 16,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 33,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 242.4,
+      "y": 247,
+      "w": 29.4,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 33,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 16,
+      "y": 331,
+      "w": 1127,
+      "h": 227
+     }
+    }
+   ]
+  },
+  "view-open.dark": {
+   "file": "pages/la/rpt-rfm.view-open.dark.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.dark.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 682,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 687,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 687,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "view-open.en-INR": {
+   "file": "pages/la/rpt-rfm.view-open.en-INR.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.en-INR.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 682,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 687,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 687,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 132.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "view-open": {
+   "file": "pages/la/rpt-rfm.view-open.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 682,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 687,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 687,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 173.1,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  },
+  "view-open.kw-KWD": {
+   "file": "pages/la/rpt-rfm.view-open.kw-KWD.html",
+   "screenshot": "pages/la/shots/rpt-rfm.view-open.kw-KWD.png",
+   "targets": [
+    {
+     "id": "la-shell.dock",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 56,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.brand",
+     "box": {
+      "x": 11.5,
+      "y": 10,
+      "w": 32,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.dock-app",
+     "box": {
+      "x": 10.5,
+      "y": 178,
+      "w": 34,
+      "h": 34
+     }
+    },
+    {
+     "id": "la-shell.avatar",
+     "box": {
+      "x": 15.5,
+      "y": 859,
+      "w": 24,
+      "h": 24
+     }
+    },
+    {
+     "id": "la-shell.sidebar",
+     "box": {
+      "x": 56,
+      "y": 0,
+      "w": 225,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.workspace",
+     "box": {
+      "x": 64,
+      "y": 8,
+      "w": 208,
+      "h": 32
+     }
+    },
+    {
+     "id": "la-shell.item-1",
+     "box": {
+      "x": 64,
+      "y": 49,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "box": {
+      "x": 80,
+      "y": 79,
+      "w": 192,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "box": {
+      "x": 86,
+      "y": 79,
+      "w": 186,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-2",
+     "box": {
+      "x": 64,
+      "y": 109,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-3",
+     "box": {
+      "x": 64,
+      "y": 139,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-4",
+     "box": {
+      "x": 64,
+      "y": 169,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-5",
+     "box": {
+      "x": 64,
+      "y": 199,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-6",
+     "box": {
+      "x": 64,
+      "y": 229,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-7",
+     "box": {
+      "x": 64,
+      "y": 259,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-8",
+     "box": {
+      "x": 64,
+      "y": 289,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-9",
+     "box": {
+      "x": 64,
+      "y": 319,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-10",
+     "box": {
+      "x": 64,
+      "y": 349,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.item-11",
+     "box": {
+      "x": 64,
+      "y": 379,
+      "w": 208,
+      "h": 30
+     }
+    },
+    {
+     "id": "la-shell.main",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 900
+     }
+    },
+    {
+     "id": "la-shell.header",
+     "box": {
+      "x": 281,
+      "y": 0,
+      "w": 1159,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-shell.title",
+     "box": {
+      "x": 297,
+      "y": 12.7,
+      "w": 122.9,
+      "h": 21.6
+     }
+    },
+    {
+     "id": "la-shell.actions",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 183,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.actions-menu",
+     "box": {
+      "x": 1241,
+      "y": 9.5,
+      "w": 107,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-shell.body",
+     "box": {
+      "x": 281,
+      "y": 48,
+      "w": 1159,
+      "h": 852
+     }
+    },
+    {
+     "id": "la-rfm.info",
+     "box": {
+      "x": 297,
+      "y": 64,
+      "w": 1127,
+      "h": 22
+     }
+    },
+    {
+     "id": "la-rfm.live",
+     "box": {
+      "x": 297,
+      "y": 65.9,
+      "w": 308.2,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.about",
+     "box": {
+      "x": 625.2,
+      "y": 65.9,
+      "w": 122.3,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.filters",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 1127,
+      "h": 60
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1",
+     "box": {
+      "x": 297,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-1-value",
+     "box": {
+      "x": 297,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2",
+     "box": {
+      "x": 489,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-filter-bar.field-2-value",
+     "box": {
+      "x": 489,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.field-3",
+     "box": {
+      "x": 681,
+      "y": 127,
+      "w": 160,
+      "h": 48
+     }
+    },
+    {
+     "id": "la-rfm.view-switch",
+     "box": {
+      "x": 681,
+      "y": 147,
+      "w": 160,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-value",
+     "box": {
+      "x": 690,
+      "y": 151.9,
+      "w": 65.5,
+      "h": 18.2
+     }
+    },
+    {
+     "id": "la-rfm.view-menu",
+     "box": {
+      "x": 682,
+      "y": 180,
+      "w": 158,
+      "h": 68
+     }
+    },
+    {
+     "id": "la-rfm.view-option-segments",
+     "box": {
+      "x": 687,
+      "y": 185,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.view-option-grid",
+     "box": {
+      "x": 687,
+      "y": 215,
+      "w": 148,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-filter-bar.more",
+     "box": {
+      "x": 881,
+      "y": 147,
+      "w": 73.6,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpis",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 1127,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1",
+     "box": {
+      "x": 297,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.label",
+     "box": {
+      "x": 314,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.value",
+     "box": {
+      "x": 314,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-1.sub",
+     "box": {
+      "x": 314,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2",
+     "box": {
+      "x": 581.8,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.label",
+     "box": {
+      "x": 598.8,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.value",
+     "box": {
+      "x": 598.8,
+      "y": 247,
+      "w": 197.3,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-2.sub",
+     "box": {
+      "x": 598.8,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3",
+     "box": {
+      "x": 866.5,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.label",
+     "box": {
+      "x": 883.5,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.value",
+     "box": {
+      "x": 883.5,
+      "y": 247,
+      "w": 36.7,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-3.sub",
+     "box": {
+      "x": 883.5,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4",
+     "box": {
+      "x": 1151.3,
+      "y": 212,
+      "w": 272.8,
+      "h": 95
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.label",
+     "box": {
+      "x": 1168.3,
+      "y": 227,
+      "w": 238.8,
+      "h": 16
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.value",
+     "box": {
+      "x": 1168.3,
+      "y": 247,
+      "w": 30.5,
+      "h": 28
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.delta",
+     "box": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     }
+    },
+    {
+     "id": "la-rfm.kpi-4.sub",
+     "box": {
+      "x": 1168.3,
+      "y": 279,
+      "w": 238.8,
+      "h": 14
+     }
+    },
+    {
+     "id": "la-rfm.segments",
+     "box": {
+      "x": 297,
+      "y": 331,
+      "w": 1127,
+      "h": 230
+     }
+    }
+   ]
+  }
+ }
+}

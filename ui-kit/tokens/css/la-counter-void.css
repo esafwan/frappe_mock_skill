@@ -1,0 +1,17 @@
+/* Page-level spacing for the Counter "Undo bill" page (form / empty / done / zero / expired), sampled from s07d-void-form/done/expired.png (390x844, 1x).
+   Only layout metrics; colours stay on --la-ct-* tokens. Scoped to [data-page="counter-void"] so the la/void-form component is untouched. */
+[data-page="counter-void"] .la-ct-h1{margin:1px 0 15px}
+[data-page="counter-void"] .la-ct-sub{margin-block-end:0}
+[data-page="counter-void"] .la-ct-hint{font-size:13px;line-height:20px;margin-block:12px 0}
+[data-page="counter-void"] .la-ct-gap{height:12px}
+[data-page="counter-void"] .la-ct-label.is-sm{margin-block-end:4px}
+[data-page="counter-void"] .la-ct-btn.is-danger{margin-block-start:14px}
+[data-page="counter-void"] .la-ct-alert{margin-block:12px 10px;padding:18px 16px}
+[data-page="counter-void"] .la-ct-alert-body{font-size:14px;margin-block:2px 12px}
+[data-page="counter-void"] .la-ct-alert .la-ct-btn{font-weight:500}
+[data-page="counter-void"] .la-ct-card.is-done{margin-block-start:2px}
+[data-page="counter-void"] .la-ct-card.is-done .la-ct-kv{margin-block-end:5px}
+[data-page="counter-void"] .la-ct-card.is-done .la-ct-note{font-size:16px}
+[data-page="counter-void"] .la-ct-card.is-done~.la-ct-btn{height:61px}
+[data-page="counter-void"] .la-ct-btn.is-dim{opacity:.5}
+[data-page="counter-void"] .la-ct-alert~.la-ct-btn.is-danger{margin-block-start:0}

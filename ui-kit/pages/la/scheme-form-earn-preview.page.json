@@ -1,0 +1,8947 @@
+{
+ "id": "la-scheme-form-earn-preview",
+ "title": "Loyalty Scheme form, Earning tab with earn preview trace",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "dumps/screenshots/rs-p1a-admin-ui/after_earn-preview-trace_1440_light.png",
+ "data": {
+  "source": "loyal-arrow/data/{uae-dubai-supermarket,india-departmental-store}/cfg.json",
+  "note": "spend-per-point, bill and 300% milk bonus are derived deterministically in scripts/la-page-earn.mjs; worth/pt from cfg.redeem_value_per_pt"
+ },
+ "interactions": [
+  {
+   "id": "type-sample-amount",
+   "target": "la-scheme-earn.bill-input",
+   "value": "la-scheme-earn.bill-value",
+   "action": "click, then type the sample bill amount (use .empty -> .typing -> populated as keyframes)"
+  },
+  {
+   "id": "trace-lines-appear",
+   "target": "la-scheme-earn.result",
+   "lines": [
+    "la-scheme-earn.line-1",
+    "la-scheme-earn.line-2",
+    "la-scheme-earn.line-3",
+    "la-scheme-earn.line-4",
+    "la-scheme-earn.line-5",
+    "la-scheme-earn.line-6"
+   ],
+   "action": "set data-reveal 0..6 on the result element (CSS-only) to reveal lines one by one; .typing = reveal 0 + dimmed + hint"
+  },
+  {
+   "id": "item-code",
+   "target": "la-scheme-earn.item-input"
+  },
+  {
+   "id": "save",
+   "target": "la-scheme-earn.save"
+  },
+  {
+   "id": "tab-earning",
+   "target": "la-scheme-earn.tab-earning"
+  }
+ ],
+ "variants": {
+  "scheme-form-earn-preview.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 56,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 711,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.dark.html": {
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.dark.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 56,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 711,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.en-INR.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.en-INR.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 56,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 711,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.ar-AED.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.ar-AED.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1057.9,
+     "y": 157.4,
+     "w": 41.1,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1061.5,
+     "y": 210.4,
+     "w": 37.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 327,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 327,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 327,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 327,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 327,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 393,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 693,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 804,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.en-AED.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.en-AED.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 47.3,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 711,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.kw-KWD.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "KWD",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.kw-KWD.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1057.9,
+     "y": 157.4,
+     "w": 41.1,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1061.5,
+     "y": 210.4,
+     "w": 37.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 327,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 327,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 327,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 327,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 327,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 393,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 693,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 804,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.en-KWD.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "KWD",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.en-KWD.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 47.3,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 356.2,
+     "y": 711,
+     "w": 351.8,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.ar-SAR.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "SAR",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.ar-SAR.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1057.9,
+     "y": 157.4,
+     "w": 41.1,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1061.5,
+     "y": 210.4,
+     "w": 37.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 327,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 327,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 327,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 327,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 327,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 393,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 693,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 804,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.en-QAR.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "QAR",
+   "state": "populated",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.en-QAR.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 275
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 47.3,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 275,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 294,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 313,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 332,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 393,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 410,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 507,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 600,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 711,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 822,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.empty.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "empty",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.empty.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 155
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 104.4,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 53.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 273,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 290,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 387,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 480,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 591,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 702,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.zero.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "zero",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.zero.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 199
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 29.9,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 38
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 317,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 334,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 431,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 524,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 635,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 746,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.typing.html": {
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "typing",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.typing.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 291.8
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 56,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 16.8
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 253.8,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 253.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 272.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 291.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 310.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 329.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 348.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 409.8,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 426.8,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 523.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 616.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 727.8,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 838.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.dark.empty.html": {
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "empty",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.dark.empty.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 155
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 104.4,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 53.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 273,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 290,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 387,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 480,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 591,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 702,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.dark.zero.html": {
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "zero",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.dark.zero.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 199
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 29.9,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 38
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 317,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 334,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 431,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 524,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 635,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 746,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.dark.typing.html": {
+   "theme": "dark",
+   "lang": "en",
+   "currency": "INR",
+   "state": "typing",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.dark.typing.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 0,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 11.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 10.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 15.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 56,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 64,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 64,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 80,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 86,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 64,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 64,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 64,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 64,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 64,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 64,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 64,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 80,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 86,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 86,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 86,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 86,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 86,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 86,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 86,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 86,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 86,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 86,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 86,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 64,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 64,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 64,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 281,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 297,
+     "y": 10.9,
+     "w": 299.8,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 546,
+     "y": 13.5,
+     "w": 50.8,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 1184.6,
+     "y": 9.5,
+     "w": 61.5,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 1366.1,
+     "y": 9.5,
+     "w": 57.9,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 281,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 281,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 296,
+     "y": 48,
+     "w": 58.1,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 389.1,
+     "y": 48,
+     "w": 47.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 471.7,
+     "y": 48,
+     "w": 126.9,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 633.6,
+     "y": 48,
+     "w": 150.5,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 819.1,
+     "y": 48,
+     "w": 99.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 953.8,
+     "y": 48,
+     "w": 62,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 283,
+     "y": 101,
+     "w": 878,
+     "h": 291.8
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 330,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 330,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 342,
+     "y": 157.4,
+     "w": 56,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 330,
+     "y": 186,
+     "w": 179.7,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 330,
+     "y": 208,
+     "w": 179.7,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 342,
+     "y": 210.4,
+     "w": 38.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 330,
+     "y": 231,
+     "w": 784,
+     "h": 16.8
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 330,
+     "y": 253.8,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 330,
+     "y": 253.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 330,
+     "y": 272.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 330,
+     "y": 291.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 330,
+     "y": 310.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 330,
+     "y": 329.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 330,
+     "y": 348.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 283,
+     "y": 409.8,
+     "w": 878,
+     "h": 537
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 314,
+     "y": 426.8,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 314,
+     "y": 523.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 314,
+     "y": 616.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 354,
+     "y": 727.8,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 314,
+     "y": 838.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 1161,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.ar-AED.empty.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "empty",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.ar-AED.empty.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 155
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1041.6,
+     "y": 157.4,
+     "w": 57.4,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1058.3,
+     "y": 210.4,
+     "w": 40.7,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 273,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 290,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 387,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 480,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 573,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 684,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.ar-AED.zero.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "zero",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.ar-AED.zero.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 199
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1072.8,
+     "y": 157.4,
+     "w": 26.3,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1061.5,
+     "y": 210.4,
+     "w": 37.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 0
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 38
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 327,
+     "y": 237,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 327,
+     "y": 256,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 317,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 334,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 431,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 524,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 617,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 728,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  },
+  "scheme-form-earn-preview.ar-AED.typing.html": {
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "typing",
+   "screenshot": "pages/la/shots/scheme-form-earn-preview.ar-AED.typing.png",
+   "targets": [
+    {
+     "id": "la-shell",
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 900
+    },
+    {
+     "id": "la-shell.dock",
+     "x": 1384,
+     "y": 0,
+     "w": 56,
+     "h": 900
+    },
+    {
+     "id": "la-shell.brand",
+     "x": 1396.5,
+     "y": 10,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "id": "la-shell.dock-app",
+     "x": 1395.5,
+     "y": 178,
+     "w": 34,
+     "h": 34
+    },
+    {
+     "id": "la-shell.avatar",
+     "x": 1400.5,
+     "y": 859,
+     "w": 24,
+     "h": 24
+    },
+    {
+     "id": "la-shell.sidebar",
+     "x": 1159,
+     "y": 0,
+     "w": 225,
+     "h": 900
+    },
+    {
+     "id": "la-shell.workspace",
+     "x": 1168,
+     "y": 8,
+     "w": 208,
+     "h": 32
+    },
+    {
+     "id": "la-shell.item-1",
+     "x": 1168,
+     "y": 49,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves-home",
+     "x": 1168,
+     "y": 79,
+     "w": 192,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-home",
+     "x": 1168,
+     "y": 79,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-2",
+     "x": 1168,
+     "y": 109,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-3",
+     "x": 1168,
+     "y": 139,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-4",
+     "x": 1168,
+     "y": 169,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-5",
+     "x": 1168,
+     "y": 199,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-6",
+     "x": 1168,
+     "y": 229,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-7",
+     "x": 1168,
+     "y": 259,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-8",
+     "x": 1168,
+     "y": 289,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaves",
+     "x": 1168,
+     "y": 319,
+     "w": 192,
+     "h": 330
+    },
+    {
+     "id": "la-shell.leaf-1",
+     "x": 1168,
+     "y": 319,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-2",
+     "x": 1168,
+     "y": 351,
+     "w": 186,
+     "h": 26
+    },
+    {
+     "id": "la-shell.leaf-3",
+     "x": 1168,
+     "y": 379,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-4",
+     "x": 1168,
+     "y": 409,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-active",
+     "x": 1168,
+     "y": 439,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-5",
+     "x": 1168,
+     "y": 469,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-6",
+     "x": 1168,
+     "y": 499,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-7",
+     "x": 1168,
+     "y": 529,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-8",
+     "x": 1168,
+     "y": 559,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-9",
+     "x": 1168,
+     "y": 589,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.leaf-10",
+     "x": 1168,
+     "y": 619,
+     "w": 186,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-9",
+     "x": 1168,
+     "y": 649,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-10",
+     "x": 1168,
+     "y": 679,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.item-11",
+     "x": 1168,
+     "y": 709,
+     "w": 208,
+     "h": 30
+    },
+    {
+     "id": "la-shell.main",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 900
+    },
+    {
+     "id": "la-scheme-earn.header",
+     "x": 0,
+     "y": 0,
+     "w": 1159,
+     "h": 48
+    },
+    {
+     "id": "la-scheme-earn.crumb",
+     "x": 937.9,
+     "y": 10.9,
+     "w": 205.1,
+     "h": 25.2
+    },
+    {
+     "id": "la-scheme-earn.status",
+     "x": 937.9,
+     "y": 13.5,
+     "w": 38.5,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.pause",
+     "x": 186.1,
+     "y": 9.5,
+     "w": 84.8,
+     "h": 28
+    },
+    {
+     "id": "la-scheme-earn.save",
+     "x": 16,
+     "y": 9.5,
+     "w": 50.1,
+     "h": 28
+    },
+    {
+     "id": "la-shell.body",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.page",
+     "x": 0,
+     "y": 48,
+     "w": 1159,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.main",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 852
+    },
+    {
+     "id": "la-scheme-earn.tabs",
+     "x": 279,
+     "y": 48,
+     "w": 880,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-overview",
+     "x": 1091.8,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-earning",
+     "x": 1018.6,
+     "y": 48,
+     "w": 38.2,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-spending",
+     "x": 905.3,
+     "y": 48,
+     "w": 78.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-members",
+     "x": 784.6,
+     "y": 48,
+     "w": 85.7,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-applies",
+     "x": 697.3,
+     "y": 48,
+     "w": 52.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.tab-advanced",
+     "x": 631,
+     "y": 48,
+     "w": 31.3,
+     "h": 42
+    },
+    {
+     "id": "la-scheme-earn.preview",
+     "x": 280,
+     "y": 101,
+     "w": 878,
+     "h": 291.8
+    },
+    {
+     "id": "la-scheme-earn.bill",
+     "x": 327,
+     "y": 130,
+     "w": 784,
+     "h": 51
+    },
+    {
+     "id": "la-scheme-earn.bill-input",
+     "x": 327,
+     "y": 152,
+     "w": 784,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.bill-value",
+     "x": 1057.9,
+     "y": 157.4,
+     "w": 41.1,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.item",
+     "x": 939,
+     "y": 186,
+     "w": 172,
+     "h": 45
+    },
+    {
+     "id": "la-scheme-earn.item-input",
+     "x": 939,
+     "y": 208,
+     "w": 172,
+     "h": 23
+    },
+    {
+     "id": "la-scheme-earn.item-value",
+     "x": 1061.5,
+     "y": 210.4,
+     "w": 37.5,
+     "h": 18.2
+    },
+    {
+     "id": "la-scheme-earn.hint",
+     "x": 327,
+     "y": 231,
+     "w": 784,
+     "h": 16.8
+    },
+    {
+     "id": "la-scheme-earn.result",
+     "x": 327,
+     "y": 253.8,
+     "w": 784,
+     "h": 114
+    },
+    {
+     "id": "la-scheme-earn.line-1",
+     "x": 327,
+     "y": 253.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-2",
+     "x": 327,
+     "y": 272.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-3",
+     "x": 327,
+     "y": 291.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-4",
+     "x": 327,
+     "y": 310.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-5",
+     "x": 327,
+     "y": 329.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.line-6",
+     "x": 327,
+     "y": 348.8,
+     "w": 784,
+     "h": 19
+    },
+    {
+     "id": "la-scheme-earn.earn-rate",
+     "x": 280,
+     "y": 409.8,
+     "w": 878,
+     "h": 519
+    },
+    {
+     "id": "la-scheme-earn.rate-title",
+     "x": 311,
+     "y": 426.8,
+     "w": 816,
+     "h": 20
+    },
+    {
+     "id": "la-scheme-earn.currency",
+     "x": 733,
+     "y": 523.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.basis",
+     "x": 733,
+     "y": 616.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.spend",
+     "x": 733,
+     "y": 709.8,
+     "w": 354,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.counted",
+     "x": 733,
+     "y": 820.8,
+     "w": 394,
+     "h": 29
+    },
+    {
+     "id": "la-scheme-earn.rail",
+     "x": 0,
+     "y": 48,
+     "w": 279,
+     "h": 852
+    }
+   ]
+  }
+ }
+}

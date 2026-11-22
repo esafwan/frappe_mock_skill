@@ -1,0 +1,21 @@
+/* Loyal Arrow media tokens: scan viewfinder + WhatsApp bubble. Sampled from s07-int-scan.png (scan); WhatsApp values are the public WhatsApp look (no LA screenshot exists). */
+:root,[data-theme="light"]{--la-scan-bg:#000000;--la-wa-chat-bg:#efeae2;--la-wa-out-bg:#d9fdd3;--la-wa-in-bg:#ffffff;--la-wa-text:#111b21;--la-wa-meta:#667781;--la-wa-sender:#06cf9c;--la-wa-tick-read:#53bdeb;--la-scan-hit:#1f9d55}
+[data-theme="dark"]{--la-scan-bg:#000000;--la-wa-chat-bg:#0b141a;--la-wa-out-bg:#005c4b;--la-wa-in-bg:#202c33;--la-wa-text:#e9edef;--la-wa-meta:#8696a0;--la-wa-sender:#53bdeb;--la-wa-tick-read:#53bdeb;--la-scan-hit:#4ade80}
+/* scan frame: 358x358 viewfinder, caption bar, card 12px radius */
+.la-scan{width:358px;margin:16px;border-radius:12px;overflow:hidden;background:var(--la-bg);box-shadow:0 0 0 1px var(--la-border),0 1px 3px rgba(0,0,0,.08)}
+.la-scan-view{height:358px;background:var(--la-scan-bg);position:relative;display:flex;align-items:center;justify-content:center}
+.la-scan-reticle{width:200px;height:200px;border-radius:16px;border:3px solid rgba(255,255,255,.7)}
+.la-scan[data-state="hit"] .la-scan-reticle{border-color:var(--la-scan-hit);box-shadow:0 0 0 3px var(--la-scan-hit) inset}
+.la-scan[data-state="scanning"] .la-scan-reticle{border-style:dashed}
+.la-scan-hint{padding:10px 12px;font-size:var(--la-text-base);color:var(--la-text-muted);line-height:1.4}
+.la-scan[data-state="hit"] .la-scan-hint{color:var(--la-scan-hit);font-weight:500}
+/* wa bubble */
+.la-wa-chat{width:390px;min-height:160px;padding:12px;background:var(--la-wa-chat-bg);display:flex;flex-direction:column;gap:6px}
+.la-wa{max-width:300px;padding:6px 8px 4px;border-radius:8px;background:var(--la-wa-out-bg);color:var(--la-wa-text);font-size:14.2px;line-height:19px;align-self:flex-end;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.la-wa[data-state="rtl"]{direction:rtl;text-align:start}
+.la-wa[data-state="ltr"]{direction:ltr}
+.la-wa-sender{display:block;font-size:12.8px;font-weight:500;color:var(--la-wa-sender);margin-block-end:2px}
+.la-wa-body{display:block;white-space:normal;overflow-wrap:anywhere}
+.la-wa-meta{display:flex;justify-content:flex-end;align-items:center;gap:3px;font-size:11px;line-height:15px;color:var(--la-wa-meta);margin-block-start:2px;direction:ltr}
+.la-wa-ticks{letter-spacing:-3px;font-size:13px}
+.la-wa[data-state="read"] .la-wa-ticks{color:var(--la-wa-tick-read)}

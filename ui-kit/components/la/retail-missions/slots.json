@@ -1,0 +1,514 @@
+{
+ "slots": {
+  "desc": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "tab1": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab2": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab3": {
+   "type": "text",
+   "sample": "Heatmap",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab4": {
+   "type": "text",
+   "sample": "Festival",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab5": {
+   "type": "text",
+   "sample": "Mapping inbox",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab6": {
+   "type": "text",
+   "sample": "Missions",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab7": {
+   "type": "text",
+   "sample": "Windows",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "tab8": {
+   "type": "text",
+   "sample": "Retail settings",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "title": {
+   "type": "text",
+   "sample": "New mission",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "lbl_name": {
+   "type": "text",
+   "sample": "Name",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "lbl_kind": {
+   "type": "text",
+   "sample": "Kind of mission",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "lbl_earns": {
+   "type": "text",
+   "sample": "A member earns it by buying",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "lbl_from": {
+   "type": "text",
+   "sample": "from",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lbl_names": {
+   "type": "text",
+   "sample": "Names, separated by commas",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "lbl_during": {
+   "type": "text",
+   "sample": "during",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "lbl_and": {
+   "type": "text",
+   "sample": "and earns",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "lbl_upto": {
+   "type": "text",
+   "sample": "points, up to",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "lbl_per": {
+   "type": "text",
+   "sample": "time(s) per member.",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "name": {
+   "type": "text",
+   "sample": "Dates and dairy habit",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "kind": {
+   "type": "text",
+   "sample": "Come back and buy again",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "count": {
+   "type": "number",
+   "sample": "4",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "unit": {
+   "type": "text",
+   "sample": "bills",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "source": {
+   "type": "text",
+   "sample": "these categories",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "names": {
+   "type": "text",
+   "sample": "Food/Dates, Food/Dairy",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "window": {
+   "type": "text",
+   "sample": "Ramadan 2026",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "points": {
+   "type": "number",
+   "sample": "100",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "cap": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "typed_points": {
+   "type": "number",
+   "sample": "10",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "ph_name": {
+   "type": "text",
+   "sample": "Name this mission",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "ph_kind": {
+   "type": "text",
+   "sample": "Choose a kind",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "ph_count": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 4,
+   "where": "text"
+  },
+  "ph_source": {
+   "type": "text",
+   "sample": "Choose what counts",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "ph_window": {
+   "type": "text",
+   "sample": "Choose a window",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "summary": {
+   "type": "text",
+   "sample": "Buy 4 bills from Food/Dates, Food/Dairy during Ramadan 2026 and earn 100 points, up to 1 time(s).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "summary_typing": {
+   "type": "text",
+   "sample": "Buy 4 bills from Food/Dates, Food/Dairy during Ramadan 2026 and earn 10 points, up to 1 time(s).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "summary_empty": {
+   "type": "text",
+   "sample": "Fill in the fields above and your sentence appears here.",
+   "maxLength": 80,
+   "where": "text"
+  },
+  "btn_check": {
+   "type": "text",
+   "sample": "Check against last year",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "btn_save": {
+   "type": "text",
+   "sample": "Save as draft",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "notice": {
+   "type": "text",
+   "sample": "Saved as a draft. It will not run until you activate it.",
+   "maxLength": 64,
+   "where": "text"
+  },
+  "k1_label": {
+   "type": "text",
+   "sample": "Would have qualified",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k1_value": {
+   "type": "number",
+   "sample": "177",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "k1_sub": {
+   "type": "text",
+   "sample": "88.5% of last year's shoppers",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "k2_label": {
+   "type": "text",
+   "sample": "Completions",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "k2_value": {
+   "type": "number",
+   "sample": "177",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "k2_sub": {
+   "type": "text",
+   "sample": "Across everyone who qualified",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "k3_label": {
+   "type": "text",
+   "sample": "Points cost",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "k3_value": {
+   "type": "currency",
+   "sample": "1770",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "k3_sub": {
+   "type": "text",
+   "sample": "17,700 points at redeem value",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "k4_label": {
+   "type": "text",
+   "sample": "Funded by supplier",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "k4_value": {
+   "type": "currency",
+   "sample": "708",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "k4_sub": {
+   "type": "text",
+   "sample": "40% of the points cost",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "h2": {
+   "type": "text",
+   "sample": "Missions",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "col_mission": {
+   "type": "text",
+   "sample": "Mission",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "col_kind": {
+   "type": "text",
+   "sample": "Kind",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "col_counts": {
+   "type": "text",
+   "sample": "What it counts",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "col_window": {
+   "type": "text",
+   "sample": "Window",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "col_reward": {
+   "type": "text",
+   "sample": "Reward",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "col_status": {
+   "type": "text",
+   "sample": "Status",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r1_mission": {
+   "type": "text",
+   "sample": "Switch to the store tea",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_kind": {
+   "type": "text",
+   "sample": "Switch to the store brand",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_counts": {
+   "type": "text",
+   "sample": "Buy 2 units from Own Brand",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "r1_window": {
+   "type": "text",
+   "sample": "Ramadan 2026",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "r1_reward": {
+   "type": "text",
+   "sample": "60 points",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r1_status": {
+   "type": "text",
+   "sample": "Paused",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r2_mission": {
+   "type": "text",
+   "sample": "Try three aisles",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_kind": {
+   "type": "text",
+   "sample": "Try several categories",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_counts": {
+   "type": "text",
+   "sample": "Buy 3 categories from Food, Beverages, Fresh",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r2_window": {
+   "type": "text",
+   "sample": "Ramadan 2026",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "r2_reward": {
+   "type": "text",
+   "sample": "100 points",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r2_status": {
+   "type": "text",
+   "sample": "Draft",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "r3_mission": {
+   "type": "text",
+   "sample": "Dates and dairy habit",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_kind": {
+   "type": "text",
+   "sample": "Come back and buy again",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_counts": {
+   "type": "text",
+   "sample": "Buy 4 bills from Food/Dates, Food/Dairy",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "r3_window": {
+   "type": "text",
+   "sample": "Ramadan 2026",
+   "maxLength": 20,
+   "where": "text"
+  },
+  "r3_reward": {
+   "type": "text",
+   "sample": "150 points",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "r3_status": {
+   "type": "text",
+   "sample": "Active",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "empty_title": {
+   "type": "text",
+   "sample": "No missions yet",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "empty_body": {
+   "type": "text",
+   "sample": "Missions you save appear here.",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "p_title": {
+   "type": "text",
+   "sample": "Mission progress",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "p_name": {
+   "type": "text",
+   "sample": "Dates and dairy habit",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "p_label": {
+   "type": "text",
+   "sample": "Completions so far",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "current": {
+   "type": "number",
+   "sample": "68",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "target": {
+   "type": "number",
+   "sample": "177",
+   "maxLength": 6,
+   "where": "text"
+  },
+  "p_pill": {
+   "type": "text",
+   "sample": "Active",
+   "maxLength": 12,
+   "where": "text"
+  }
+ }
+}

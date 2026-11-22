@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-system="la" data-theme="dark">
+<head><meta charset="utf-8"><title>Counter: redeem approval segmented control (QR / OTP / PIN)</title>
+<link rel="stylesheet" href="../../../tokens/css/fonts.css">
+<link rel="stylesheet" href="../../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-vars.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-base.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-components.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-data.css">
+<link rel="stylesheet" href="../../../tokens/css/la-counter-base.css">
+<style>html,body{margin:0}*{animation:none!important;transition:none!important;caret-color:transparent!important}#ui-kit-stage{position:absolute;left:0;top:0;width:390px;min-height:844px}</style></head>
+<body class="la-root"><div id="ui-kit-stage">
+<div class="la-ct" data-ui="la-approval-seg" data-state="pin">
+<div class="la-ct-bar" data-ui="la-approval-seg.bar"><span>Counter</span><span class="la-ct-bar-user" data-ui="la-approval-seg.user">qa.cashier@example.test</span></div>
+<div class="la-ct-main" data-ui="la-approval-seg.main">
+<div class="la-ct-sub" data-ui="la-approval-seg.member">Bill for <b>SC otp 85331</b></div>
+<div class="la-ct-label" data-ui="la-approval-seg.heading">Points to redeem</div>
+<div class="la-ct-field la-num" data-ui="la-approval-seg.points">50</div>
+<div class="la-ct-hint" data-ui="la-approval-seg.limit">Up to 100 points</div>
+<div class="la-ct-spacer is-sp14"></div>
+<div class="la-ct-label is-sm" data-ui="la-approval-seg.label">Approved by</div>
+<div class="la-ct-seg" data-ui="la-approval-seg.seg">
+  <div class="la-ct-seg-opt" data-ui="la-approval-seg.opt-qr">Scan QR card</div>
+  <div class="la-ct-seg-opt" data-ui="la-approval-seg.opt-otp">Member OTP</div>
+  <div class="la-ct-seg-opt is-on" data-ui="la-approval-seg.opt-pin">Manager PIN</div>
+</div>
+<div class="la-ct-field is-ph is-mt8" data-ui="la-approval-seg.input">Manager PIN</div>
+<div class="la-ct-spacer"></div>
+<div class="la-ct-stack"><div class="la-ct-btn is-primary" data-ui="la-approval-seg.review">Review</div><div class="la-ct-btn is-strong" data-ui="la-approval-seg.skip">Skip redeeming</div></div>
+</div>
+</div>
+
+</div></body></html>

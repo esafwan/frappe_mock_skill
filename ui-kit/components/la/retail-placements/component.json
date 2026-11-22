@@ -1,0 +1,28 @@
+{
+ "id": "la-retail-placements",
+ "name": "Retail placements (tabs, status filter, placements table, inline Checks panel with Record check form)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": false,
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "css": [
+  "la-desk-nav.css",
+  "la-desk-admin.css",
+  "la-desk-placements.css"
+ ],
+ "states": [
+  "populated",
+  "collapsed",
+  "filter-planned",
+  "filter-confirmed",
+  "filter-not-carried-out",
+  "zero",
+  "empty"
+ ],
+ "defaultState": "populated",
+ "reference": "rs-p2-retail-ui/placement_1440_light.png",
+ "notes": "Interaction targets: r{n}-btn-checks (expand Checks), checks (expanded panel), record-find / record-date / record-note (form fields), record-btn (Record check), status-{1..5} (filter), btn-new, row-{n}. Data from data/<region>/placements.json via scripts/la-pages-placements.mjs. Statuses planned / confirmed / not carried out are separate states: populated, filter-planned, filter-confirmed, filter-not-carried-out; zero = Cancelled filter with none; empty = no placements."
+}

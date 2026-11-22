@@ -1,0 +1,40 @@
+{
+ "id": "la-retail-mapping-inbox",
+ "name": "Retail mapping inbox (tabs, status filter, reason, rows with category picker)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "shell": true,
+ "shellState": "section-expanded",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "css": [
+  "la-desk-inbox.css",
+  "la-desk-nav.css",
+  "la-desk-admin.css"
+ ],
+ "states": [
+  "populated",
+  "category-open",
+  "row-mapped",
+  "empty",
+  "zero"
+ ],
+ "defaultState": "populated",
+ "stateText": {
+  "populated": {},
+  "category-open": {},
+  "row-mapped": {
+   "count": "3"
+  },
+  "empty": {
+   "count": "0"
+  },
+  "zero": {
+   "count": "0"
+  }
+ },
+ "reference": "rs-p1a-admin-ui/after_retail-inbox_1440_light.png",
+ "notes": "Interaction targets: r{n}-category (choose category select), r{n}-menu/opt-k (open list in category-open), r{n}-map (Map), r{n}-aside, row-{n} (row that leaves on Map; row-mapped drops row 1). populated=4 open; zero=Open 0 inbox clear; empty=Mapped tab nothing yet. Data from data/<region>/mapping_inbox.json via scripts/la-pages-inbox.mjs."
+}

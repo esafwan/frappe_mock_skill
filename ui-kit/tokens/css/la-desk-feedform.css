@@ -1,0 +1,55 @@
+/* Loyal Arrow desk: activity-feed, consent-chips, earn-preview, form-card. Tokens only, logical properties (LTR/RTL). */
+:root,[data-theme="light"]{--la-solid-bg:#171717;--la-solid-fg:#ffffff;--la-focus:#005cad;--la-error:#b52a2a;--la-error-bg:#ffe5e5}
+[data-theme="dark"]{--la-solid-bg:#e6e6e6;--la-solid-fg:#171717;--la-focus:#349bef;--la-error:#ff8a8a;--la-error-bg:#4a1717}   /* dark values (est) */
+.la-fx-btn{height:var(--la-ctl-h);padding-inline:9px;border-radius:var(--la-radius);display:inline-flex;align-items:center;font-size:var(--la-text-sm);background:var(--la-subtle);color:var(--la-text)}
+.la-fx-btn.is-solid{background:var(--la-solid-bg);color:var(--la-solid-fg)}
+.la-fx-label{font-size:var(--la-text-sm);color:var(--la-text);line-height:18px}
+.la-fx-help{font-size:12px;line-height:18px;color:var(--la-text-faint)}
+.la-fx-input{height:var(--la-ctl-h);padding-inline:12px;background:var(--la-subtle);border-radius:var(--la-radius);display:flex;align-items:center}
+.la-fx-val{font-size:var(--la-text-sm);font-weight:500;color:var(--la-text)}
+/* activity feed (ref: member profile Activity tab) */
+.la-act{width:100%;display:flex;flex-direction:column;gap:14px}
+.la-act-date{font-size:12px;color:var(--la-text-muted);padding-block-end:6px}
+.la-act-card{border:1px solid var(--la-border);border-radius:var(--la-radius-lg);background:var(--la-bg);overflow:hidden}
+.la-act-row{display:flex;align-items:flex-start;gap:16px;padding:10px 16px;min-height:58px}
+.la-act-row+.la-act-row{border-block-start:1px solid var(--la-border)}
+.la-act-time{width:58px;flex:none;font-size:11px;line-height:15px;color:var(--la-text-faint);padding-block-start:3px}
+.la-act-main{flex:1;min-width:0;display:flex;flex-direction:column}
+.la-act-kind{font-size:var(--la-text-sm);font-weight:600;line-height:20px;color:var(--la-text)}
+.la-act-note{font-size:var(--la-text-sm);line-height:18px;color:var(--la-text-muted)}
+.la-act-pts{font-size:var(--la-text-sm);font-weight:500;font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--la-pill-green-fg);padding-block-start:1px;direction:ltr;unicode-bidi:isolate}
+.la-act-row.is-out .la-act-pts{color:var(--la-pill-red-fg)}
+.la-act-empty{display:none;border:1px solid var(--la-border);border-radius:var(--la-radius-lg);padding:32px 16px;text-align:center}
+.la-act-empty-title{font-size:var(--la-text-sm);font-weight:500;color:var(--la-text)}
+.la-act-empty-hint{font-size:12px;color:var(--la-text-faint);margin-block-start:4px}
+.la-act[data-state="empty"] .la-act-group{display:none}
+.la-act[data-state="empty"] .la-act-empty{display:block}
+.la-act[data-state="earned"] .la-act-group+.la-act-group,.la-act[data-state="redeemed"] .la-act-group+.la-act-group,.la-act[data-state="bonus"] .la-act-group+.la-act-group,
+.la-act[data-state="earned"] .la-act-row+.la-act-row,.la-act[data-state="redeemed"] .la-act-row+.la-act-row,.la-act[data-state="bonus"] .la-act-row+.la-act-row{display:none}
+.la-act[data-state="redeemed"] .la-act-pts{color:var(--la-pill-red-fg)}
+.la-act[data-state="earned"] .la-act-pts,.la-act[data-state="bonus"] .la-act-pts{color:var(--la-pill-green-fg)}
+/* consent chips (ref: member form header chips) */
+.la-chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.la-chip{height:30px;padding-inline:13px;border-radius:15px;display:inline-flex;align-items:center;font-size:var(--la-text-sm);background:var(--la-pill-gray-bg);color:var(--la-text)}
+.la-chips[data-state="blocked"] .la-chip{background:var(--la-pill-red-bg);color:var(--la-pill-red-fg)}
+.la-chips-phone{font-size:var(--la-text-sm);color:var(--la-text);padding-inline:4px;direction:ltr;unicode-bidi:isolate}
+/* earn preview (ref: scheme form Earning tab) */
+.la-earn{width:100%;display:flex;flex-direction:column;gap:6px;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);padding:32px 46px}
+.la-earn-in{display:flex;flex-direction:column;gap:4px;margin-block-end:6px}
+.la-earn-in.is-narrow{width:fit-content;min-width:172px}
+.la-earn-out{display:flex;flex-direction:column;font-size:var(--la-text-sm);line-height:19px;color:var(--la-text);margin-block-start:6px}
+.la-earn-hint{display:none;font-size:12px;color:var(--la-text-faint)}
+.la-earn[data-state="typing"] .la-earn-out{opacity:.45}
+.la-earn[data-state="typing"] .la-earn-hint{display:block}
+.la-earn[data-state="typing"] .la-earn-in.is-wide .la-fx-input{box-shadow:0 0 0 2px var(--la-focus)}
+/* form card (ref: member form Identity card) */
+.la-fc{width:100%;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);padding:32px}
+.la-fc-title{font-size:var(--la-text-sm);font-weight:500;color:var(--la-text);line-height:20px;margin-block-end:19px}
+.la-fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px}
+.la-fc-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.la-fc[data-state="default"] .la-fx-val{color:var(--la-text-faint);font-weight:400}
+.la-fc-err{display:none;font-size:12px;line-height:18px;color:var(--la-error)}
+.la-fc[data-state="error"] .la-fc-field.is-bad .la-fx-input{box-shadow:0 0 0 1px var(--la-error);background:var(--la-error-bg)}
+.la-fc[data-state="error"] .la-fc-err{display:block}
+.la-fc[data-state="error"] .la-fc-field.is-bad .la-fx-help{display:none}
+.la-fc-actions{display:flex;gap:8px;justify-content:flex-end;margin-block-start:24px}

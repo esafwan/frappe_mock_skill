@@ -73,3 +73,4 @@ for (const f of fs.existsSync(ROOT + 'data/menus') ? fs.readdirSync(ROOT + 'data
 if (fs.existsSync(ROOT + 'pages')) for (const f of fs.readdirSync(ROOT + 'pages')) if (f.endsWith('.page.json')) { const p = JSON.parse(fs.readFileSync(ROOT + 'pages/' + f)); manifest.pages[p.id] = { id: p.id, title: p.title, system: p.system, html: `pages/${p.id}.html`, components: p.components }; }
 fs.writeFileSync(ROOT + 'manifest.json', JSON.stringify(manifest, null, 2));
 console.log('manifest:', Object.keys(manifest.components).length, 'components', Object.keys(manifest.pages).length, 'pages', manifest.data.menus.length, 'menus');
+await import('./manifest-la.mjs');

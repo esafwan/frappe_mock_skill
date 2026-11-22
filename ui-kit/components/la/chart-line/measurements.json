@@ -1,0 +1,981 @@
+{
+ "id": "la-chart-line",
+ "viewport": {
+  "w": 449,
+  "h": 371
+ },
+ "modes": {
+  "light": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 115,
+    "y": 160,
+    "w": 304,
+    "h": 150
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   }
+  ],
+  "dark": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 115,
+    "y": 160,
+    "w": 304,
+    "h": 150
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   }
+  ],
+  "rtl": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 115,
+    "y": 160,
+    "w": 304,
+    "h": 150
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   }
+  ],
+  "state-empty": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 114,
+    "y": 140,
+    "w": 296,
+    "h": 171
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   }
+  ],
+  "state-draw-in": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 115,
+    "y": 160,
+    "w": 304,
+    "h": 150
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   }
+  ],
+  "state-two-series": [
+   {
+    "id": "la-chart-line",
+    "tag": "div",
+    "x": 12,
+    "y": 12,
+    "w": 425,
+    "h": 347
+   },
+   {
+    "id": "la-chart-line.title",
+    "tag": "div",
+    "x": 29,
+    "y": 23,
+    "w": 391,
+    "h": 20
+   },
+   {
+    "id": "la-chart-line.subtitle",
+    "tag": "div",
+    "x": 29,
+    "y": 49,
+    "w": 391,
+    "h": 16
+   },
+   {
+    "id": "la-chart-line.toolbar",
+    "tag": "div",
+    "x": 29,
+    "y": 71,
+    "w": 391,
+    "h": 28
+   },
+   {
+    "id": "la-chart-line.plot",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 345
+   },
+   {
+    "id": "la-chart-line.y-axis",
+    "tag": "div",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 185
+   },
+   {
+    "id": "la-chart-line.y-1",
+    "tag": "span",
+    "x": 13,
+    "y": 133,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-2",
+    "tag": "span",
+    "x": 13,
+    "y": 190,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-3",
+    "tag": "span",
+    "x": 13,
+    "y": 247,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.y-4",
+    "tag": "span",
+    "x": 13,
+    "y": 304,
+    "w": 80,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-axis",
+    "tag": "div",
+    "x": 70,
+    "y": 320,
+    "w": 352,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-1",
+    "tag": "span",
+    "x": 70,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-2",
+    "tag": "span",
+    "x": 158,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-3",
+    "tag": "span",
+    "x": 246,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.x-4",
+    "tag": "span",
+    "x": 334,
+    "y": 320,
+    "w": 88,
+    "h": 14
+   },
+   {
+    "id": "la-chart-line.empty",
+    "tag": "div",
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.series",
+    "tag": "div",
+    "x": 13,
+    "y": 13,
+    "w": 423,
+    "h": 0
+   },
+   {
+    "id": "la-chart-line.line-a",
+    "tag": "path",
+    "x": 115,
+    "y": 160,
+    "w": 304,
+    "h": 150
+   },
+   {
+    "id": "la-chart-line.line-b",
+    "tag": "path",
+    "x": 115,
+    "y": 233,
+    "w": 304,
+    "h": 77
+   },
+   {
+    "id": "la-chart-line.legend",
+    "tag": "div",
+    "x": 281.91,
+    "y": 27,
+    "w": 138.09,
+    "h": 16
+   }
+  ]
+ }
+}

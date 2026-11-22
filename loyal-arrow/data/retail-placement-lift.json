@@ -1,0 +1,19 @@
+{
+ "synthetic": true,
+ "period": {"from": "2026-10-24", "to": "2026-11-21", "toPlanned": "2026-11-06", "baseFrom": "2026-10-10", "baseTo": "2026-10-23"},
+ "currency_base": "KWD",
+ "rates": {"KWD": {"rate": 1, "dec": 3}, "AED": {"rate": 12, "dec": 2}, "SAR": {"rate": 12, "dec": 2}, "QAR": {"rate": 12, "dec": 2}, "INR": {"rate": 270, "dec": 0}},
+ "placements": ["Ramadan end-cap (end cap)", "Dairy chiller strip (chiller)", "Front-of-store cereal (floor stack)"],
+ "states": {
+  "populated": {"lift": "+12.4%", "basis": "Against 6 matched stores", "basisSub": "Confirmed placement", "liftSub": "Lift over the matched stores", "range": [1.8, 14.2], "matched": 6, "notes": ["range", "few", "beyond"]},
+  "directional": {"lift": "+8.1%", "basis": "Directional: no matched control", "basisSub": "Planned placement", "liftSub": "Test stores, before against during", "matched": 0, "notes": ["planned", "nocontrol"]},
+  "empty": {"lift": "-", "basis": "Not enough data", "basisSub": "Confirmed placement", "liftSub": "Fewer than 10 bills in the period", "matched": 0, "notes": ["overlap"]},
+  "zero": {"lift": "+0.0%", "basis": "Against 6 matched stores", "basisSub": "Confirmed placement", "liftSub": "Lift over the matched stores", "range": [-3.1, 3.4], "matched": 6, "notes": ["range", "few", "beyond"]}
+ },
+ "stores": [
+  {"name": "Hawalli", "role": "Test", "dailyKWD": 412.5, "baseKWD": 371.2},
+  {"name": "Salmiya", "role": "Test", "dailyKWD": 398.0, "baseKWD": 354.9},
+  {"name": "Jabriya", "role": "Matched", "dailyKWD": 301.4, "baseKWD": 296.8},
+  {"name": "Farwaniya", "role": "Matched", "dailyKWD": 288.2, "baseKWD": 281.5}
+ ]
+}

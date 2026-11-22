@@ -1,0 +1,53 @@
+/* la-desk widgets: inline-panel, primary-action, health-list, counter-shell. Tokens only; logical properties. */
+/* primary action (desk button, blue). states via is-* class */
+.la-pa{height:var(--la-ctl-h);padding-inline:8px;border-radius:var(--la-radius);display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--la-primary);background:var(--la-primary);color:var(--la-primary-text);font:500 var(--la-text-sm)/1 var(--la-font);cursor:pointer}
+html[dir="rtl"] .la-pa{font-family:var(--la-font-ar)}
+.la-pa.is-hover{background:var(--la-primary-hover);border-color:var(--la-primary-hover)}
+.la-pa.is-disabled{background:var(--la-disabled-bg);border-color:var(--la-disabled-bg);color:var(--la-disabled-fg);cursor:default}
+.la-pa.is-busy{opacity:.85}
+.la-pa-spin{display:none;width:12px;height:12px;border-radius:50%;border:2px solid currentColor;border-inline-end-color:transparent}
+.la-pa.is-busy .la-pa-spin{display:inline-block}
+/* inline panel (card with title, summary, form, button) */
+.la-ipanel{width:538px;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);padding:var(--la-pad)}
+.la-ipanel-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.la-ipanel-title{font-size:var(--la-text-sm);font-weight:600;color:var(--la-text)}
+.la-ip-chev{width:7px;height:7px;border-block-end:1.5px solid var(--la-text-muted);border-inline-end:1.5px solid var(--la-text-muted);transform:rotate(45deg);margin-inline-end:4px;margin-block-start:-3px}
+.la-ipanel.is-collapsed .la-ip-chev{transform:rotate(-45deg);margin-block-start:0}
+html[dir="rtl"] .la-ipanel.is-collapsed .la-ip-chev{transform:rotate(135deg)}
+.la-ipanel-items{font-size:var(--la-text-sm);color:var(--la-text-muted);margin-block-start:2px}
+.la-ipanel-body{margin-block-start:8px;display:flex;flex-direction:column;gap:4px}
+.la-ipanel.is-collapsed .la-ipanel-body{display:none}
+.la-ip-label{font-size:var(--la-text-sm);color:var(--la-text)}
+.la-ip-input{height:28px;padding-inline:12px;background:var(--la-subtle);border-radius:var(--la-radius);display:flex;align-items:center;font-size:var(--la-text-sm);color:var(--la-text);margin-block-end:8px}
+.la-ipanel-foot{margin-block-start:4px;display:flex;gap:8px}
+/* health list */
+.la-hl{width:420px;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);overflow:hidden}
+.la-hl-row{display:flex;align-items:center;gap:12px;height:44px;padding-inline:16px;font-size:var(--la-text-sm)}
+.la-hl-row+.la-hl-row{border-block-start:1px solid var(--la-border)}
+.la-hl-label{flex:1;color:var(--la-text)}
+.la-hl-value{color:var(--la-text-muted)}
+.la-hl.is-ok .la-pill{background:var(--la-pill-green-bg);color:var(--la-pill-green-fg)}
+.la-hl.is-warning .la-hl-row.is-flag .la-pill{background:var(--la-pill-amber-bg);color:var(--la-pill-amber-fg)}
+.la-hl.is-warning .la-hl-row:not(.is-flag) .la-pill{background:var(--la-pill-green-bg);color:var(--la-pill-green-fg)}
+/* counter shell (390x844 mobile app) */
+.la-cshell{width:var(--la-device-w);height:var(--la-device-h);background:var(--la-cshell-bg);color:var(--la-cshell-text);overflow:hidden;font-family:var(--la-font)}
+html[dir="rtl"] .la-cshell{font-family:var(--la-font-ar)}
+.la-cshell-bar{height:var(--la-cshell-h);background:var(--la-cshell-bar);color:var(--la-cshell-bar-text);display:flex;align-items:center;justify-content:space-between;padding-inline:var(--la-cshell-pad)}
+.la-cshell-title{font-size:17px;font-weight:600}
+.la-cshell-badge{font-size:14px;font-weight:600;color:var(--la-cshell-badge)}
+.la-cshell-body{padding:var(--la-cshell-pad)}
+.la-cshell-screen{font-size:20px;font-weight:600;margin:0 0 14px;line-height:1.3}
+.la-cshell-bill{font-size:13px;color:var(--la-cshell-muted)}
+.la-cshell-bill b{font-weight:600}
+.la-cshell:not(.is-dark-topbar) .la-cshell-badge{display:none}
+.la-ipanel:not(.is-collapsed) .la-ipanel-items.is-summary{display:none}
+.la-ipanel-body .la-ipanel-items{margin-block:0 6px}
+.la-cshell.is-default .la-cshell-screen{display:none}
+.la-cshell-title{font-weight:700}
+.la-cshell-body{padding-block-start:17px}
+.la-cshell-screen{margin-block-end:12px}
+.la-ipanel-body{margin-block-start:9px;gap:0}
+.la-ip-label{line-height:17px;margin-block-end:2px}
+.la-ip-label{font-size:12px}
+.la-ip-input{font-size:12.5px}
+.la-ipanel-body{margin-block-start:8px}

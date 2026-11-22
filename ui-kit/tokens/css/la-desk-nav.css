@@ -1,0 +1,25 @@
+/* la-desk nav + status: la-banner, la-tabs, la-segmented, la-status-pill. Tokens only; logical properties (LTR/RTL). States via [data-state]. */
+/* banner: 45px, 1px border, 4px inline-start bar (sampled experiments_1440_light) */
+.la-banner{display:flex;align-items:center;min-height:45px;padding-inline:16px;border:1px solid var(--la-banner-err-bd);border-inline-start:4px solid var(--la-banner-err-bar);border-radius:var(--la-radius-lg);background:var(--la-banner-err-bg);color:var(--la-text);font-size:12px;letter-spacing:.05px;line-height:20px}
+.la-banner[data-state="info"]{background:var(--la-banner-info-bg);border-color:var(--la-banner-info-bd);border-inline-start-color:var(--la-banner-info-bar)}
+.la-banner[data-state="warning"]{background:var(--la-banner-warn-bg);border-color:var(--la-banner-warn-bd);border-inline-start-color:var(--la-banner-warn-bar)}
+/* tabs: reuse .la-tabs/.la-tab base; active tab via state */
+.la-tabs{height:45px;align-items:flex-end}
+.la-tabs .la-tab{white-space:nowrap;padding-block:11px 5px}
+.la-tabs[data-state="active-1"] .la-tab:nth-child(1),.la-tabs[data-state="active-2"] .la-tab:nth-child(2),.la-tabs[data-state="active-3"] .la-tab:nth-child(3),.la-tabs[data-state="active-4"] .la-tab:nth-child(4),.la-tabs[data-state="active-5"] .la-tab:nth-child(5),.la-tabs[data-state="active-6"] .la-tab:nth-child(6),.la-tabs[data-state="active-7"] .la-tab:nth-child(7){color:var(--la-text);border-block-end-color:var(--la-tab-line);font-weight:400}
+.la-tabs[data-state="hover"] .la-tab:nth-child(1){color:var(--la-text);border-block-end-color:var(--la-tab-line);font-weight:400}
+.la-tabs[data-state="hover"] .la-tab:nth-child(3){color:var(--la-text);border-block-end-color:var(--la-border-strong)}
+/* segmented: container 1px border + 4px pad, options 28px, active = raised white (sampled) */
+.la-segmented{display:inline-flex;gap:4px;padding:4px;background:var(--la-subtle);border:1px solid var(--la-border);border-radius:12px}
+.la-seg-opt{display:inline-flex;align-items:center;gap:8px;height:28px;padding-inline:12px;border:1px solid transparent;border-radius:var(--la-radius-lg);font-size:var(--la-text-sm);letter-spacing:-.25px;color:var(--la-text-muted);white-space:nowrap}
+.la-seg-count{display:none;margin:0;color:var(--la-text-muted);font-variant-numeric:tabular-nums}
+.la-segmented[data-state^="active-"] .la-seg-count,.la-segmented[data-state="with-count"] .la-seg-count{display:none}
+.la-segmented[data-state="active-1"] .la-seg-opt:nth-child(1),.la-segmented[data-state="active-2"] .la-seg-opt:nth-child(2),.la-segmented[data-state="active-3"] .la-seg-opt:nth-child(3),.la-segmented[data-state="active-4"] .la-seg-opt:nth-child(4),.la-segmented[data-state="active-5"] .la-seg-opt:nth-child(5),.la-segmented[data-state="with-count"] .la-seg-opt:nth-child(1){background:var(--la-bg);border-color:var(--la-border-strong);color:var(--la-text);font-weight:400}
+.la-segmented[data-state="with-count"] .la-seg-opt:nth-child(1) .la-seg-count{display:inline;font-weight:400}
+/* status pill: 20px, 11px/500, tone by state */
+.la-status-pill{display:inline-flex;align-items:center;height:var(--la-pill-h);padding-inline:8px;border-radius:var(--la-radius-pill);font-size:11px;font-weight:500;line-height:1;white-space:nowrap;background:var(--la-pill-gray-bg);color:var(--la-pill-gray-fg)}
+.la-status-pill[data-state="active"],.la-status-pill[data-state="open"],.la-status-pill[data-state="in-place"],.la-status-pill[data-state="completed"]{background:var(--la-pill-green-bg);color:var(--la-pill-green-fg)}
+.la-status-pill[data-state="paused"],.la-status-pill[data-state="not-confirmed"],.la-status-pill[data-state="near-limit"],.la-status-pill[data-state="partly"]{background:var(--la-pill-amber-bg);color:var(--la-pill-amber-fg)}
+.la-status-pill[data-state="planned"],.la-status-pill[data-state="running"]{background:var(--la-pill-blue-bg);color:var(--la-pill-blue-fg)}
+.la-status-pill[data-state="full"],.la-status-pill[data-state="not-carried"]{background:var(--la-pill-red-bg);color:var(--la-pill-red-fg)}
+.la-status-pill[data-state="draft"]{background:var(--la-pill-gray-bg);color:var(--la-pill-gray-fg)}

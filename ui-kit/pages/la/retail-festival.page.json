@@ -1,0 +1,251 @@
+{
+ "id": "la-retail-festival",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p1b-festival/after_festival-cohort_1440_light.png",
+ "data": "loyal-arrow/data/retail-festival.json",
+ "shell": "la-shell (section-expanded, Retail active)",
+ "states": {
+  "hidden-days": "retail-festival.html (matches reference; 1 hidden day each year)",
+  "populated": "retail-festival.populated.html (no hidden days)",
+  "zero": "retail-festival.zero.html (0 bills this year)",
+  "empty": "retail-festival.empty.html (no data either year)",
+  "no-lead": "retail-festival.no-lead.html (days before unchecked)",
+  "festival-changed": "retail-festival.festival-diwali.html / .festival-eid.html",
+  "race-half": "line race mid-way via --la-race-this/--la-race-last on chart"
+ },
+ "variants": [
+  "retail-festival.html",
+  "retail-festival.dark.html",
+  "retail-festival.ar-AED.html",
+  "retail-festival.ar-AED.dark.html",
+  "retail-festival.en-INR.html",
+  "retail-festival.kw-KWD.html",
+  "retail-festival.en-AED.html",
+  "retail-festival.populated.html",
+  "retail-festival.populated.dark.html",
+  "retail-festival.populated.ar-AED.html",
+  "retail-festival.zero.html",
+  "retail-festival.zero.dark.html",
+  "retail-festival.empty.html",
+  "retail-festival.empty.dark.html",
+  "retail-festival.empty.ar-AED.html",
+  "retail-festival.no-lead.html",
+  "retail-festival.festival-diwali.html",
+  "retail-festival.festival-eid.html",
+  "retail-festival.race-half.html",
+  "retail-festival.race-start.html"
+ ],
+ "slots": {
+  "t.last_year": {
+   "type": "text",
+   "sample": "Last year",
+   "maxLength": 19,
+   "where": "text"
+  },
+  "t.net_sales": {
+   "type": "text",
+   "sample": "Net sales",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.bills": {
+   "type": "text",
+   "sample": "Bills",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.average_basket": {
+   "type": "text",
+   "sample": "Average basket",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.shoppers": {
+   "type": "text",
+   "sample": "Shoppers",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.shopped_in_both_years": {
+   "type": "text",
+   "sample": "shopped in both years",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "t.came_back": {
+   "type": "text",
+   "sample": "Came back",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.no_data_for_this_festival": {
+   "type": "text",
+   "sample": "No data for this festival",
+   "maxLength": 37,
+   "where": "text"
+  },
+  "t.this_year": {
+   "type": "text",
+   "sample": "This year",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.item": {
+   "type": "text",
+   "sample": "Item",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.value": {
+   "type": "text",
+   "sample": "Value",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.days_compared": {
+   "type": "text",
+   "sample": "Days compared",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.pre_festival_lead_in": {
+   "type": "text",
+   "sample": "Pre-festival lead-in",
+   "maxLength": 35,
+   "where": "text"
+  },
+  "t.days_with_too_little_data": {
+   "type": "text",
+   "sample": "Days with too little data",
+   "maxLength": 37,
+   "where": "text"
+  },
+  "t.not_enough_data": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.day": {
+   "type": "text",
+   "sample": "Day",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.ramadan_2026": {
+   "type": "text",
+   "sample": "Ramadan 2026",
+   "maxLength": 19,
+   "where": "text"
+  },
+  "t.product_catalogue_categories": {
+   "type": "text",
+   "sample": "Product catalogue, categories and the rules that earn on them.",
+   "maxLength": 89,
+   "where": "text"
+  },
+  "t.catalogue": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.categories": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.heatmap": {
+   "type": "text",
+   "sample": "Heatmap",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.festival": {
+   "type": "text",
+   "sample": "Festival",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.mapping_inbox": {
+   "type": "text",
+   "sample": "Mapping inbox",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.missions": {
+   "type": "text",
+   "sample": "Missions",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.windows": {
+   "type": "text",
+   "sample": "Windows",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.retail_settings": {
+   "type": "text",
+   "sample": "Retail settings",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.include_the_days_before": {
+   "type": "text",
+   "sample": "Include the days before",
+   "maxLength": 35,
+   "where": "text"
+  },
+  "t.sales_so_far_this_year_and_l": {
+   "type": "text",
+   "sample": "Sales so far, this year and last year",
+   "maxLength": 61,
+   "where": "text"
+  },
+  "t.how_the_years_line_up": {
+   "type": "text",
+   "sample": "How the years line up",
+   "maxLength": 32,
+   "where": "text"
+  },
+  "t.day_by_day": {
+   "type": "text",
+   "sample": "Day by day",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.none": {
+   "type": "text",
+   "sample": "None",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.diwali_2025": {
+   "type": "text",
+   "sample": "Diwali 2025",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.eid_al_fitr_2026": {
+   "type": "text",
+   "sample": "Eid al-Fitr 2026",
+   "maxLength": 25,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "festival change": "la-retail-festival.festival-select",
+  "include days checkbox": "la-retail-festival.include-days",
+  "line race this year": "la-retail-festival.line-this",
+  "line race last year": "la-retail-festival.line-last",
+  "delta badges": "la-retail-festival.delta-sales|bills|basket|shoppers",
+  "day rows": "la-retail-festival.day-N",
+  "hidden cells": "la-retail-festival.day-N-hidden"
+ }
+}

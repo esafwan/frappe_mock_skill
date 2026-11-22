@@ -1,0 +1,18 @@
+{
+ "id": "la-roi-kpis",
+ "name": "Program ROI KPI row (5 tiles: label, value, sub)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 1127,
+  "h": 112
+ },
+ "shell": true,
+ "css": [
+  "la-desk-report.css"
+ ],
+ "states": [
+  "not-enough-data"
+ ],
+ "notes": "Tiles are targets kpi-1..5 with .value/.label/.sub children (zoom to value). Values are text/currency slots; unavailable = em dash + sub \"Not enough data\"."
+}

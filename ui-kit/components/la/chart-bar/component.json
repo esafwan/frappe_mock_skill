@@ -1,0 +1,33 @@
+{
+ "id": "la-chart-bar",
+ "name": "Loyal Arrow bar chart card (title, subtitle, axis labels, 13 bars)",
+ "system": "loyal-arrow-desk",
+ "kind": "widget",
+ "viewport": {
+  "w": 449,
+  "h": 371
+ },
+ "pad": 12,
+ "canvas": "page",
+ "shell": false,
+ "css": [
+  "la-desk-widgets.css"
+ ],
+ "states": [
+  "populated",
+  "empty",
+  "grow"
+ ],
+ "reference": {
+  "src": "ux-after-r1/la-workspace__desktop-{theme}.png",
+  "crop": [
+   857,
+   314,
+   449,
+   371
+  ]
+ },
+ "animation": {
+  "grow": "--la-progress 0..1 scales bar heights"
+ }
+}

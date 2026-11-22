@@ -1,0 +1,227 @@
+{
+ "page": "la-rpt-liability-aging",
+ "slots": {
+  "title": {
+   "type": "text",
+   "sample": "Liability and Aging",
+   "maxLength": 40,
+   "ar": "الالتزامات والتقادم"
+  },
+  "generate": {
+   "type": "text",
+   "sample": "Generate New Report",
+   "maxLength": 24,
+   "ar": "إنشاء تقرير جديد"
+  },
+  "generating": {
+   "type": "text",
+   "sample": "Generating",
+   "maxLength": 16,
+   "ar": "جارٍ الإنشاء"
+  },
+  "fProgram": {
+   "type": "text",
+   "sample": "Program",
+   "maxLength": 20,
+   "ar": "البرنامج"
+  },
+  "fAsof": {
+   "type": "text",
+   "sample": "As of",
+   "maxLength": 20,
+   "ar": "حتى تاريخ"
+  },
+  "fRedemption": {
+   "type": "text",
+   "sample": "Expected redemption",
+   "maxLength": 28,
+   "ar": "الاسترداد المتوقع"
+  },
+  "program": {
+   "type": "text",
+   "sample": "Hyper Rewards",
+   "maxLength": 24,
+   "ar": "هايبر ريواردز"
+  },
+  "bgTitle": {
+   "type": "text",
+   "sample": "This is a background report",
+   "maxLength": 40,
+   "ar": "هذا تقرير يعمل في الخلفية"
+  },
+  "bgBody": {
+   "type": "text",
+   "sample": "Set the filters and generate a new one.",
+   "maxLength": 60,
+   "ar": "حدّد المرشحات ثم أنشئ تقريرًا جديدًا."
+  },
+  "loadTitle": {
+   "type": "text",
+   "sample": "Generating your report",
+   "maxLength": 40,
+   "ar": "جارٍ إنشاء التقرير"
+  },
+  "loadBody": {
+   "type": "text",
+   "sample": "This runs in the background. You can leave this page.",
+   "maxLength": 70,
+   "ar": "يعمل في الخلفية ويمكنك مغادرة هذه الصفحة."
+  },
+  "loadPct": {
+   "type": "text",
+   "sample": "{p}% complete",
+   "maxLength": 24,
+   "ar": "اكتمل {p}٪"
+  },
+  "emptyTitle": {
+   "type": "text",
+   "sample": "No points outstanding",
+   "maxLength": 40,
+   "ar": "لا توجد نقاط مستحقة"
+  },
+  "emptyBody": {
+   "type": "text",
+   "sample": "There are no unexpired points for these filters.",
+   "maxLength": 70,
+   "ar": "لا توجد نقاط سارية لهذه المرشحات."
+  },
+  "kLiab": {
+   "type": "text",
+   "sample": "Total liability",
+   "maxLength": 28,
+   "ar": "إجمالي الالتزام"
+  },
+  "kPts": {
+   "type": "text",
+   "sample": "Points outstanding",
+   "maxLength": 28,
+   "ar": "النقاط المستحقة"
+  },
+  "kMem": {
+   "type": "text",
+   "sample": "Members with points",
+   "maxLength": 28,
+   "ar": "الأعضاء أصحاب النقاط"
+  },
+  "kExp": {
+   "type": "text",
+   "sample": "Expected redemption",
+   "maxLength": 28,
+   "ar": "الاسترداد المتوقع"
+  },
+  "kLiabSub": {
+   "type": "text",
+   "sample": "At the redemption value",
+   "maxLength": 28,
+   "ar": "بقيمة الاسترداد"
+  },
+  "kPtsSub": {
+   "type": "text",
+   "sample": "Unredeemed and unexpired",
+   "maxLength": 28,
+   "ar": "غير مستردة وسارية"
+  },
+  "kMemSub": {
+   "type": "text",
+   "sample": "In this program",
+   "maxLength": 28,
+   "ar": "في هذا البرنامج"
+  },
+  "kExpSub": {
+   "type": "text",
+   "sample": "Of outstanding value",
+   "maxLength": 28,
+   "ar": "من القيمة المستحقة"
+  },
+  "tTitle": {
+   "type": "text",
+   "sample": "Liability by age of points",
+   "maxLength": 40,
+   "ar": "الالتزام حسب عمر النقاط"
+  },
+  "cBucket": {
+   "type": "text",
+   "sample": "Age of points",
+   "maxLength": 20,
+   "ar": "عمر النقاط"
+  },
+  "cMembers": {
+   "type": "text",
+   "sample": "Members",
+   "maxLength": 14,
+   "ar": "الأعضاء"
+  },
+  "cPoints": {
+   "type": "text",
+   "sample": "Points",
+   "maxLength": 14,
+   "ar": "النقاط"
+  },
+  "cValue": {
+   "type": "text",
+   "sample": "Liability",
+   "maxLength": 14,
+   "ar": "الالتزام"
+  },
+  "days": {
+   "type": "text",
+   "sample": "{a}-{z} days",
+   "maxLength": 24,
+   "ar": "من {a} إلى {z} يومًا"
+  },
+  "daysPlus": {
+   "type": "text",
+   "sample": "{a}+ days",
+   "maxLength": 24,
+   "ar": "أكثر من {a} يومًا"
+  },
+  "total": {
+   "type": "text",
+   "sample": "Total",
+   "maxLength": 14,
+   "ar": "الإجمالي"
+  },
+  "sTitle": {
+   "type": "text",
+   "sample": "Share of liability",
+   "maxLength": 30,
+   "ar": "حصة الالتزام"
+  },
+  "note": {
+   "type": "text",
+   "sample": "Points age from the date they were earned.",
+   "maxLength": 60,
+   "ar": "يُحتسب عمر النقاط من تاريخ اكتسابها."
+  }
+ },
+ "data": {
+  "source": "loyal-arrow/data/uae-dubai-supermarket/bills.json",
+  "asOf": "2026-11-22",
+  "buckets": [
+   [
+    0,
+    20
+   ],
+   [
+    21,
+    40
+   ],
+   [
+    41,
+    60
+   ],
+   [
+    61,
+    999
+   ]
+  ],
+  "expectedRedemptionPct": 40,
+  "displayRates": {
+   "AED": 1,
+   "SAR": 1.02,
+   "QAR": 0.99,
+   "KWD": 0.0834,
+   "INR": 22.6
+  }
+ }
+}

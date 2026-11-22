@@ -1,0 +1,3393 @@
+{
+ "id": "la-counter-redeem",
+ "title": "Counter app: Points to redeem",
+ "system": "loyal-arrow-desk",
+ "route": "/counter/redeem",
+ "reference": "screenshots/s07c-redeem.png",
+ "viewport": {
+  "w": 390,
+  "h": 844
+ },
+ "variants": {
+  "default": {
+   "file": "pages/la/counter-redeem.html",
+   "screenshot": "pages/la/counter-redeem.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "Reference state: nothing typed, Scan QR card selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-placeholder",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 243,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 309,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 411,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 479,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "dark": {
+   "file": "pages/la/counter-redeem.dark.html",
+   "screenshot": "pages/la/counter-redeem.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "Reference state: nothing typed, Scan QR card selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-placeholder",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 243,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 309,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 411,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 479,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "ar-AED": {
+   "file": "pages/la/counter-redeem.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "populated",
+   "desc": "RTL Arabic, AED",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-placeholder",
+     "x": 345.8,
+     "y": 158,
+     "w": 11.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 243,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 309,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 411,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 479,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "en-INR": {
+   "file": "pages/la/counter-redeem.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "populated",
+   "desc": "Reference state: nothing typed, Scan QR card selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-placeholder",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 243,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 243,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 309,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 411,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 479,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled": {
+   "file": "pages/la/counter-redeem.filled.html",
+   "screenshot": "pages/la/counter-redeem.filled.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled.dark": {
+   "file": "pages/la/counter-redeem.filled.dark.html",
+   "screenshot": "pages/la/counter-redeem.filled.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled.ar-AED": {
+   "file": "pages/la/counter-redeem.filled.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.filled.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 334.1,
+     "y": 158,
+     "w": 22.9,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled.en-INR": {
+   "file": "pages/la/counter-redeem.filled.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.filled.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled.kw-KWD": {
+   "file": "pages/la/counter-redeem.filled.kw-KWD.html",
+   "screenshot": "pages/la/counter-redeem.filled.kw-KWD.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "KWD",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 334.1,
+     "y": 158,
+     "w": 22.9,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "filled.en-KWD": {
+   "file": "pages/la/counter-redeem.filled.en-KWD.html",
+   "screenshot": "pages/la/counter-redeem.filled.en-KWD.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "KWD",
+   "state": "filled",
+   "desc": "Points typed (50) with currency value hint",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "otp": {
+   "file": "pages/la/counter-redeem.otp.html",
+   "screenshot": "pages/la/counter-redeem.otp.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "otp",
+   "desc": "Member OTP selected, code sent",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.send-code",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.otp-input",
+     "x": 16,
+     "y": 406,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 508,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 576,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "otp.dark": {
+   "file": "pages/la/counter-redeem.otp.dark.html",
+   "screenshot": "pages/la/counter-redeem.otp.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "otp",
+   "desc": "Member OTP selected, code sent",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.send-code",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.otp-input",
+     "x": 16,
+     "y": 406,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 508,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 576,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "otp.ar-AED": {
+   "file": "pages/la/counter-redeem.otp.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.otp.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "otp",
+   "desc": "Member OTP selected, code sent",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 334.1,
+     "y": 158,
+     "w": 22.9,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.send-code",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.otp-input",
+     "x": 16,
+     "y": 406,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 508,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 576,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "otp.en-INR": {
+   "file": "pages/la/counter-redeem.otp.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.otp.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "otp",
+   "desc": "Member OTP selected, code sent",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.send-code",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.otp-input",
+     "x": 16,
+     "y": 406,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 508,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 576,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "pin": {
+   "file": "pages/la/counter-redeem.pin.html",
+   "screenshot": "pages/la/counter-redeem.pin.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "pin",
+   "desc": "Manager PIN selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.pin-input",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "pin.dark": {
+   "file": "pages/la/counter-redeem.pin.dark.html",
+   "screenshot": "pages/la/counter-redeem.pin.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "pin",
+   "desc": "Manager PIN selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.pin-input",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "pin.ar-AED": {
+   "file": "pages/la/counter-redeem.pin.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.pin.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "pin",
+   "desc": "Manager PIN selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 334.1,
+     "y": 158,
+     "w": 22.9,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.pin-input",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "pin.en-INR": {
+   "file": "pages/la/counter-redeem.pin.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.pin.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "pin",
+   "desc": "Manager PIN selected",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 26.5,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.pin-input",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "zero": {
+   "file": "pages/la/counter-redeem.zero.html",
+   "screenshot": "pages/la/counter-redeem.zero.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "zero",
+   "desc": "Member has no redeemable points; Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "zero.dark": {
+   "file": "pages/la/counter-redeem.zero.dark.html",
+   "screenshot": "pages/la/counter-redeem.zero.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "zero",
+   "desc": "Member has no redeemable points; Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "zero.ar-AED": {
+   "file": "pages/la/counter-redeem.zero.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.zero.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "zero",
+   "desc": "Member has no redeemable points; Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 345.6,
+     "y": 158,
+     "w": 11.4,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "zero.en-INR": {
+   "file": "pages/la/counter-redeem.zero.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.zero.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "zero",
+   "desc": "Member has no redeemable points; Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 13.2,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "over": {
+   "file": "pages/la/counter-redeem.over.html",
+   "screenshot": "pages/la/counter-redeem.over.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "AED",
+   "state": "over",
+   "desc": "Typed amount over the 100 point limit; error + Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 39.7,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "over.dark": {
+   "file": "pages/la/counter-redeem.over.dark.html",
+   "screenshot": "pages/la/counter-redeem.over.dark.png",
+   "theme": "dark",
+   "lang": "en",
+   "currency": "AED",
+   "state": "over",
+   "desc": "Typed amount over the 100 point limit; error + Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 39.7,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "over.ar-AED": {
+   "file": "pages/la/counter-redeem.over.ar-AED.html",
+   "screenshot": "pages/la/counter-redeem.over.ar-AED.png",
+   "theme": "light",
+   "lang": "ar",
+   "currency": "AED",
+   "state": "over",
+   "desc": "Typed amount over the 100 point limit; error + Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 317,
+     "y": 14.1,
+     "w": 57,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 322.7,
+     "y": 158,
+     "w": 34.3,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  },
+  "over.en-INR": {
+   "file": "pages/la/counter-redeem.over.en-INR.html",
+   "screenshot": "pages/la/counter-redeem.over.en-INR.png",
+   "theme": "light",
+   "lang": "en",
+   "currency": "INR",
+   "state": "over",
+   "desc": "Typed amount over the 100 point limit; error + Review disabled",
+   "targets": [
+    {
+     "id": "la-counter-redeem",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 844
+    },
+    {
+     "id": "la-counter-redeem.bar",
+     "x": 0,
+     "y": 0,
+     "w": 390,
+     "h": 52
+    },
+    {
+     "id": "la-counter-redeem.title",
+     "x": 16,
+     "y": 14.1,
+     "w": 68.7,
+     "h": 23.8
+    },
+    {
+     "id": "la-counter-redeem.main",
+     "x": 0,
+     "y": 52,
+     "w": 390,
+     "h": 792
+    },
+    {
+     "id": "la-counter-redeem.member",
+     "x": 16,
+     "y": 68,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.heading",
+     "x": 16,
+     "y": 106,
+     "w": 358,
+     "h": 24
+    },
+    {
+     "id": "la-counter-redeem.points",
+     "x": 16,
+     "y": 144,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.points-value",
+     "x": 33,
+     "y": 158,
+     "w": 39.7,
+     "h": 28
+    },
+    {
+     "id": "la-counter-redeem.hint",
+     "x": 16,
+     "y": 213,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approved-by",
+     "x": 16,
+     "y": 246,
+     "w": 358,
+     "h": 20
+    },
+    {
+     "id": "la-counter-redeem.approver",
+     "x": 16,
+     "y": 276,
+     "w": 358,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-qr",
+     "x": 16,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-otp",
+     "x": 138,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.approver-pin",
+     "x": 260,
+     "y": 276,
+     "w": 114,
+     "h": 58
+    },
+    {
+     "id": "la-counter-redeem.card-scan",
+     "x": 16,
+     "y": 342,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.review",
+     "x": 16,
+     "y": 444,
+     "w": 358,
+     "h": 56
+    },
+    {
+     "id": "la-counter-redeem.skip",
+     "x": 16,
+     "y": 512,
+     "w": 358,
+     "h": 56
+    }
+   ]
+  }
+ }
+}

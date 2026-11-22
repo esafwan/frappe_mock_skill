@@ -1,0 +1,23 @@
+/* Page layout for pages/la/rpt-cohorts*.html (composition only). Tokens only. */
+.la-rpt{display:flex;flex-direction:column}
+.la-rpt-note{height:24px;margin-block-start:0;font-size:var(--la-text-sm);color:var(--la-text-muted);display:flex;gap:8px;align-items:center}
+.la-rpt-note a{color:var(--la-primary);font-weight:500}
+.la-rpt-chart{position:relative;margin-block-start:41px;width:1127px;height:314px;box-sizing:border-box;border:1px solid var(--la-card-border);border-radius:var(--la-radius-lg);background:var(--la-bg);direction:ltr}
+.la-rpt-chart .la-chart-title{position:absolute;left:16px;top:16px;font-size:var(--la-text-sm);font-weight:600;color:var(--la-text)}
+.la-rpt-chart svg{position:absolute;left:0;top:0;width:1127px;height:314px;overflow:visible}
+.la-rpt-chart text{font-size:12px;fill:var(--la-text-muted);font-family:inherit}
+.la-rpt-chart .la-rpt-empty{position:absolute;left:63px;width:1024px;top:86px;height:170px;display:none;align-items:center;justify-content:center;font-size:var(--la-text-sm);color:var(--la-text-faint)}
+.la-rpt[data-state="empty"] .la-rpt-empty,.la-rpt[data-state="zero"] .la-rpt-empty{display:flex}
+.la-rpt[data-state="empty"] .la-line,.la-rpt[data-state="zero"] .la-line{display:none}
+.la-rpt-filters{margin-block-start:50px}
+.la-rpt-heatsel .la-field-value{justify-content:space-between}
+.la-rpt-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-block-start:24px}
+.la-rpt-kpis .la-kpi{width:auto;height:96px;box-sizing:border-box;padding:14px 16px 0;border-radius:var(--la-radius-lg)}
+.la-rpt-kpis .la-kpi-label{font-size:var(--la-text-sm);line-height:18px}
+.la-rpt-kpis .la-kpi-row{margin-block-start:14px}
+.la-rpt-kpis .la-kpi-value{font-size:20px;letter-spacing:.03em}
+.la-rpt-table{margin-block-start:40px;position:relative}
+.la-rpt-table .la-heat-card{margin-block-start:0;padding:0 15px 8px;border-radius:var(--la-radius-lg);overflow:hidden}
+.la-rpt-table .la-heat-grid{width:1111px}
+.la-rpt-tallpad{height:16px}
+.la-rpt-kpis .la-kpi-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

@@ -1,0 +1,526 @@
+{
+ "slots": {
+  "idx_head": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 2,
+   "where": "text"
+  },
+  "col_measure": {
+   "type": "text",
+   "sample": "Measure",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "col_number": {
+   "type": "text",
+   "sample": "Number",
+   "maxLength": 10,
+   "where": "text"
+  },
+  "col_amount": {
+   "type": "text",
+   "sample": "Amount",
+   "maxLength": 10,
+   "where": "text"
+  },
+  "col_status": {
+   "type": "text",
+   "sample": "Status",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "col_note": {
+   "type": "text",
+   "sample": "Note",
+   "maxLength": 10,
+   "where": "text"
+  },
+  "empty_text": {
+   "type": "text",
+   "sample": "No measures to show for this period",
+   "maxLength": 48,
+   "where": "text"
+  },
+  "m1": {
+   "type": "text",
+   "sample": "Members who bought in this period",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num1": {
+   "type": "text",
+   "sample": "0",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt1": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st1": {
+   "type": "text",
+   "sample": "Available",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note1": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m2": {
+   "type": "text",
+   "sample": "Member bills (after refunds)",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num2": {
+   "type": "text",
+   "sample": "0",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt2": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st2": {
+   "type": "text",
+   "sample": "Available",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note2": {
+   "type": "text",
+   "sample": "Purchases of in-scope members; each bill is counted once.",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m3": {
+   "type": "text",
+   "sample": "Member sales",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num3": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt3": {
+   "type": "currency",
+   "sample": "AED 0.00",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st3": {
+   "type": "text",
+   "sample": "Available",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note3": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m4": {
+   "type": "text",
+   "sample": "Average member bill",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num4": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt4": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st4": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note4": {
+   "type": "text",
+   "sample": "no member bills",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m5": {
+   "type": "text",
+   "sample": "Non-member bills (after refunds)",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num5": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt5": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st5": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note5": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m6": {
+   "type": "text",
+   "sample": "Non-member sales",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num6": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt6": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st6": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note6": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m7": {
+   "type": "text",
+   "sample": "Average non-member bill",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num7": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt7": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st7": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note7": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m8": {
+   "type": "text",
+   "sample": "Extra spend per member bill",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num8": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt8": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st8": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note8": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m9": {
+   "type": "text",
+   "sample": "Extra spend per member bill (%)",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num9": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt9": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st9": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note9": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m10": {
+   "type": "text",
+   "sample": "Extra sales from members vs non-members",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num10": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt10": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st10": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note10": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m11": {
+   "type": "text",
+   "sample": "Points redeemed (after cancellations)",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num11": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt11": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st11": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note11": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m12": {
+   "type": "text",
+   "sample": "Value of points redeemed",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num12": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt12": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st12": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note12": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m13": {
+   "type": "text",
+   "sample": "Cost of reward items given",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num13": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt13": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st13": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note13": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m14": {
+   "type": "text",
+   "sample": "Total program cost",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num14": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt14": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st14": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note14": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m15": {
+   "type": "text",
+   "sample": "Return on the program",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num15": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt15": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st15": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note15": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  },
+  "m16": {
+   "type": "text",
+   "sample": "Net result after program cost",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "num16": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "amt16": {
+   "type": "currency",
+   "sample": "",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "st16": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "note16": {
+   "type": "text",
+   "sample": "non-member bill capture is off (the non-member measures need it).",
+   "maxLength": 120,
+   "where": "text"
+  }
+ }
+}

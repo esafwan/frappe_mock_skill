@@ -1,0 +1,1270 @@
+{
+ "slots": {
+  "pageTitle": {
+   "type": "text",
+   "sample": "Expiry Forecast",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "title": {
+   "type": "text",
+   "sample": "Expiring points by day",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "subtitle": {
+   "type": "text",
+   "sample": "Live query as of 2026-11-22 23:59 (Asia/Dubai)",
+   "maxLength": 60,
+   "where": "text"
+  },
+  "f1l": {
+   "type": "text",
+   "sample": "Program",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f1v": {
+   "type": "text",
+   "sample": "Hyper Rewards",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f2l": {
+   "type": "text",
+   "sample": "As of",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f2v": {
+   "type": "date",
+   "sample": "2026-11-22",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f3l": {
+   "type": "text",
+   "sample": "Horizon (days)",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f3v": {
+   "type": "text",
+   "sample": "90",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f4l": {
+   "type": "text",
+   "sample": "Tier",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f4v": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f5l": {
+   "type": "text",
+   "sample": "Location",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "f5v": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "optA": {
+   "type": "number",
+   "sample": "30",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "optB": {
+   "type": "number",
+   "sample": "60",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "optC": {
+   "type": "number",
+   "sample": "90",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "horizon": {
+   "type": "number",
+   "sample": "90",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "y1": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "y2": {
+   "type": "number",
+   "sample": "2,000",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "y3": {
+   "type": "number",
+   "sample": "4,000",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "y4": {
+   "type": "number",
+   "sample": "6,000",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "y5": {
+   "type": "number",
+   "sample": "8,000",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "count": {
+   "type": "number",
+   "sample": "82",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_1": {
+   "type": "number",
+   "sample": "5.95",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_2": {
+   "type": "number",
+   "sample": "6.6",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_3": {
+   "type": "number",
+   "sample": "13.49",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_4": {
+   "type": "number",
+   "sample": "5.66",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_5": {
+   "type": "number",
+   "sample": "3.05",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_6": {
+   "type": "number",
+   "sample": "3.4",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_7": {
+   "type": "number",
+   "sample": "5.36",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_8": {
+   "type": "number",
+   "sample": "13.81",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_9": {
+   "type": "number",
+   "sample": "3.6",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_10": {
+   "type": "number",
+   "sample": "3.21",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_11": {
+   "type": "number",
+   "sample": "8.99",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_12": {
+   "type": "number",
+   "sample": "2.09",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_13": {
+   "type": "number",
+   "sample": "0.86",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_14": {
+   "type": "number",
+   "sample": "1.86",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_15": {
+   "type": "number",
+   "sample": "11.99",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_16": {
+   "type": "number",
+   "sample": "0.59",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_17": {
+   "type": "number",
+   "sample": "1.59",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_18": {
+   "type": "number",
+   "sample": "2.89",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_19": {
+   "type": "number",
+   "sample": "7.95",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_20": {
+   "type": "number",
+   "sample": "5.04",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_21": {
+   "type": "number",
+   "sample": "15.41",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_22": {
+   "type": "number",
+   "sample": "9.1",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_23": {
+   "type": "number",
+   "sample": "15.24",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_24": {
+   "type": "number",
+   "sample": "14.6",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_25": {
+   "type": "number",
+   "sample": "49.25",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_26": {
+   "type": "number",
+   "sample": "10.81",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_27": {
+   "type": "number",
+   "sample": "4.23",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_28": {
+   "type": "number",
+   "sample": "3.34",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_29": {
+   "type": "number",
+   "sample": "7.94",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_30": {
+   "type": "number",
+   "sample": "14.82",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_31": {
+   "type": "number",
+   "sample": "2.7",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_32": {
+   "type": "number",
+   "sample": "14.99",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_33": {
+   "type": "number",
+   "sample": "2.9",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_34": {
+   "type": "number",
+   "sample": "14.47",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_35": {
+   "type": "number",
+   "sample": "12.14",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_36": {
+   "type": "number",
+   "sample": "3.76",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_37": {
+   "type": "number",
+   "sample": "11.84",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_38": {
+   "type": "number",
+   "sample": "3.09",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_39": {
+   "type": "number",
+   "sample": "16.02",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_40": {
+   "type": "number",
+   "sample": "57.53",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_41": {
+   "type": "number",
+   "sample": "3.29",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_42": {
+   "type": "number",
+   "sample": "16.95",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_43": {
+   "type": "number",
+   "sample": "15.21",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_44": {
+   "type": "number",
+   "sample": "2.59",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_45": {
+   "type": "number",
+   "sample": "10.96",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_46": {
+   "type": "number",
+   "sample": "3.11",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_47": {
+   "type": "number",
+   "sample": "1.95",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_48": {
+   "type": "number",
+   "sample": "0.86",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_49": {
+   "type": "number",
+   "sample": "44.34",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_50": {
+   "type": "number",
+   "sample": "10.53",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_51": {
+   "type": "number",
+   "sample": "1.71",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_52": {
+   "type": "number",
+   "sample": "4.23",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_53": {
+   "type": "number",
+   "sample": "6.34",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_54": {
+   "type": "number",
+   "sample": "1.46",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_55": {
+   "type": "number",
+   "sample": "6.73",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_56": {
+   "type": "number",
+   "sample": "4.85",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_57": {
+   "type": "number",
+   "sample": "3.28",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_58": {
+   "type": "number",
+   "sample": "14.5",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_59": {
+   "type": "number",
+   "sample": "7.24",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_60": {
+   "type": "number",
+   "sample": "1.51",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_61": {
+   "type": "number",
+   "sample": "3.23",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_62": {
+   "type": "number",
+   "sample": "11.63",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_63": {
+   "type": "number",
+   "sample": "10.51",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_64": {
+   "type": "number",
+   "sample": "11.85",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_65": {
+   "type": "number",
+   "sample": "3.85",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_66": {
+   "type": "number",
+   "sample": "8.84",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_67": {
+   "type": "number",
+   "sample": "1.51",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_68": {
+   "type": "number",
+   "sample": "7.41",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_69": {
+   "type": "number",
+   "sample": "52.24",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_70": {
+   "type": "number",
+   "sample": "5.39",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_71": {
+   "type": "number",
+   "sample": "7.66",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_72": {
+   "type": "number",
+   "sample": "12.79",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_73": {
+   "type": "number",
+   "sample": "2.6",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_74": {
+   "type": "number",
+   "sample": "0.75",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_75": {
+   "type": "number",
+   "sample": "1.07",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_76": {
+   "type": "number",
+   "sample": "76.42",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_77": {
+   "type": "number",
+   "sample": "1.65",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_78": {
+   "type": "number",
+   "sample": "3.91",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_79": {
+   "type": "number",
+   "sample": "4.21",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_80": {
+   "type": "number",
+   "sample": "8.41",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_81": {
+   "type": "number",
+   "sample": "13.98",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_82": {
+   "type": "number",
+   "sample": "12.21",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_83": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_84": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_85": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_86": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_87": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_88": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_89": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "bar_90": {
+   "type": "number",
+   "sample": "0",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_1": {
+   "type": "date",
+   "sample": "23 Nov",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_1": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_2": {
+   "type": "date",
+   "sample": "2 Dec",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_2": {
+   "type": "number",
+   "sample": "8",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_3": {
+   "type": "date",
+   "sample": "10 Dec",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_3": {
+   "type": "number",
+   "sample": "15",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_4": {
+   "type": "date",
+   "sample": "17 Dec",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_4": {
+   "type": "number",
+   "sample": "22",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_5": {
+   "type": "date",
+   "sample": "25 Dec",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_5": {
+   "type": "number",
+   "sample": "29",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_6": {
+   "type": "date",
+   "sample": "1 Jan",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_6": {
+   "type": "number",
+   "sample": "36",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_7": {
+   "type": "date",
+   "sample": "8 Jan",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_7": {
+   "type": "number",
+   "sample": "43",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_8": {
+   "type": "date",
+   "sample": "16 Jan",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_8": {
+   "type": "number",
+   "sample": "50",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_9": {
+   "type": "date",
+   "sample": "23 Jan",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_9": {
+   "type": "number",
+   "sample": "57",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_10": {
+   "type": "date",
+   "sample": "31 Jan",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_10": {
+   "type": "number",
+   "sample": "64",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_11": {
+   "type": "date",
+   "sample": "8 Feb",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_11": {
+   "type": "number",
+   "sample": "71",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_12": {
+   "type": "date",
+   "sample": "15 Feb",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_12": {
+   "type": "number",
+   "sample": "78",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_13": {
+   "type": "date",
+   "sample": "",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_13": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "x_14": {
+   "type": "date",
+   "sample": "",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "xi_14": {
+   "type": "number",
+   "sample": "82",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "peakIdx": {
+   "type": "number",
+   "sample": "76",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "peakPct": {
+   "type": "number",
+   "sample": "76.42",
+   "maxLength": 6,
+   "where": "css-var"
+  },
+  "peakDate": {
+   "type": "date",
+   "sample": "13 Feb 2027",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "peakValue": {
+   "type": "text",
+   "sample": "6,114 points",
+   "maxLength": 24,
+   "where": "text"
+  },
+  "emptyText": {
+   "type": "text",
+   "sample": "Nothing expires in this period",
+   "maxLength": 48,
+   "where": "text"
+  },
+  "k1l": {
+   "type": "text",
+   "sample": "Expiring points",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k2l": {
+   "type": "text",
+   "sample": "Members",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k3l": {
+   "type": "text",
+   "sample": "Lots",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k4l": {
+   "type": "text",
+   "sample": "Average expiring per day",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k5l": {
+   "type": "text",
+   "sample": "Heaviest day: 2027-02-13",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k1v": {
+   "type": "number",
+   "sample": "65,272",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k2v": {
+   "type": "number",
+   "sample": "58",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k3v": {
+   "type": "number",
+   "sample": "155",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k4v": {
+   "type": "number",
+   "sample": "725",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "k5v": {
+   "type": "number",
+   "sample": "6,114",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h1": {
+   "type": "text",
+   "sample": "",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h2": {
+   "type": "text",
+   "sample": "Expires on",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h3": {
+   "type": "text",
+   "sample": "Tier",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h4": {
+   "type": "text",
+   "sample": "Lots",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h5": {
+   "type": "text",
+   "sample": "Members",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "h6": {
+   "type": "text",
+   "sample": "Expiring points",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_n": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_d": {
+   "type": "date",
+   "sample": "23 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r1_p": {
+   "type": "number",
+   "sample": "476",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_n": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_d": {
+   "type": "date",
+   "sample": "24 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_l": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_m": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r2_p": {
+   "type": "number",
+   "sample": "528",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_n": {
+   "type": "number",
+   "sample": "3",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_d": {
+   "type": "date",
+   "sample": "26 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_t": {
+   "type": "text",
+   "sample": "Gold",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_l": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_m": {
+   "type": "number",
+   "sample": "2",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r3_p": {
+   "type": "number",
+   "sample": "1,079",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_n": {
+   "type": "number",
+   "sample": "4",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_d": {
+   "type": "date",
+   "sample": "27 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r4_p": {
+   "type": "number",
+   "sample": "453",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_n": {
+   "type": "number",
+   "sample": "5",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_d": {
+   "type": "date",
+   "sample": "28 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r5_p": {
+   "type": "number",
+   "sample": "244",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_n": {
+   "type": "number",
+   "sample": "6",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_d": {
+   "type": "date",
+   "sample": "29 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r6_p": {
+   "type": "number",
+   "sample": "272",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_n": {
+   "type": "number",
+   "sample": "7",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_d": {
+   "type": "date",
+   "sample": "30 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_t": {
+   "type": "text",
+   "sample": "Gold",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r7_p": {
+   "type": "number",
+   "sample": "340",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_n": {
+   "type": "number",
+   "sample": "8",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_d": {
+   "type": "date",
+   "sample": "30 Nov 2026",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_t": {
+   "type": "text",
+   "sample": "Silver",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_l": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_m": {
+   "type": "number",
+   "sample": "1",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "r8_p": {
+   "type": "number",
+   "sample": "89",
+   "maxLength": 28,
+   "where": "text"
+  },
+  "tableNote": {
+   "type": "text",
+   "sample": "No lots expire in this period",
+   "maxLength": 48,
+   "where": "text"
+  }
+ }
+}

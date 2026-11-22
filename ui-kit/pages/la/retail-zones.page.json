@@ -1,0 +1,211 @@
+{
+ "id": "la-retail-zones",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p2-retail-ui/zones_1440_light.png",
+ "data": "loyal-arrow/data/retail-zones.json",
+ "states": {
+  "inherited": "retail-zones.html (matches reference)",
+  "populated": "retail-zones.populated.html",
+  "empty": "retail-zones.empty.html",
+  "zero": "retail-zones.zero.html (no categories)",
+  "pick": "retail-zones.pick.html (zone menu open on Home)",
+  "saved": "retail-zones.saved.html (Home set, Clear shown)"
+ },
+ "variants": [
+  "retail-zones.html",
+  "retail-zones.dark.html",
+  "retail-zones.ar-AED.html",
+  "retail-zones.ar-AED.dark.html",
+  "retail-zones.en-INR.html",
+  "retail-zones.kw-KWD.html",
+  "retail-zones.populated.html",
+  "retail-zones.populated.dark.html",
+  "retail-zones.empty.html",
+  "retail-zones.zero.html",
+  "retail-zones.pick.html",
+  "retail-zones.pick.dark.html",
+  "retail-zones.saved.html"
+ ],
+ "slots": {
+  "t.entrance": {
+   "type": "text",
+   "sample": "Entrance",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.food": {
+   "type": "text",
+   "sample": "Food",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.set": {
+   "type": "text",
+   "sample": "Set",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.clear": {
+   "type": "text",
+   "sample": "Clear",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.from_the_category_above": {
+   "type": "text",
+   "sample": "From the category above:",
+   "maxLength": 36,
+   "where": "text"
+  },
+  "t.bakery": {
+   "type": "text",
+   "sample": "Bakery",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.chilled_aisle": {
+   "type": "text",
+   "sample": "Chilled aisle",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.dairy": {
+   "type": "text",
+   "sample": "Dairy",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.milk": {
+   "type": "text",
+   "sample": "Milk",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "t.home": {
+   "type": "text",
+   "sample": "Home",
+   "maxLength": 8,
+   "where": "text"
+  },
+  "t.funding": {
+   "type": "text",
+   "sample": "Funding",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.placements": {
+   "type": "text",
+   "sample": "Placements",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.store_groups": {
+   "type": "text",
+   "sample": "Store groups",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.experiments": {
+   "type": "text",
+   "sample": "Experiments",
+   "maxLength": 18,
+   "where": "text"
+  },
+  "t.change_review": {
+   "type": "text",
+   "sample": "Change review",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.groups": {
+   "type": "text",
+   "sample": "Groups",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.zone_map": {
+   "type": "text",
+   "sample": "Zone map",
+   "maxLength": 21,
+   "where": "text"
+  },
+  "t.set_zones_for": {
+   "type": "text",
+   "sample": "Set zones for",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.template": {
+   "type": "text",
+   "sample": "Template:",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.hawalli_and_salmiya": {
+   "type": "text",
+   "sample": "Hawalli and Salmiya",
+   "maxLength": 29,
+   "where": "text"
+  },
+  "t.category": {
+   "type": "text",
+   "sample": "Category",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.zone": {
+   "type": "text",
+   "sample": "Zone",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.marina_and_deira": {
+   "type": "text",
+   "sample": "Marina and Deira",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.indiranagar_and_koramangala": {
+   "type": "text",
+   "sample": "Indiranagar and Koramangala",
+   "maxLength": 40,
+   "where": "text"
+  },
+  "t.bakery_counter": {
+   "type": "text",
+   "sample": "Bakery counter",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.dry_goods_aisle": {
+   "type": "text",
+   "sample": "Dry goods aisle",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.no_categories_yet": {
+   "type": "text",
+   "sample": "No categories yet",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.checkout_lane": {
+   "type": "text",
+   "sample": "Checkout lane",
+   "maxLength": 21,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "pick zone": "la-retail-zones.zone-N (open: .zone-N.menu, .zone-N.opt-M)",
+  "Set": "la-retail-zones.btn-set-N",
+  "Clear": "la-retail-zones.btn-clear-N",
+  "template": "la-retail-zones.template",
+  "sub-tab Groups/Zone map": "la-retail-zones.seg-1/2",
+  "tabs": "la-retail-zones.tab-1..5"
+ }
+}

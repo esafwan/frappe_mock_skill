@@ -1,0 +1,34 @@
+/* la-desk placements page body (Retail > Placements): tabs, status filter, placements table, inline Checks panel. Tokens only; logical properties. */
+.la-pl{width:1168px;margin-inline-start:136px;padding-block-start:0;text-align:start}
+.la-pl{font-size:12px}
+.la-pl .la-tabs{font-size:12px}
+.la-pl-filters{margin-block-start:16px;display:flex;align-items:center;gap:12px}
+.la-pl-filters .la-btn.is-primary{height:28px;padding-inline:8px;border-radius:var(--la-radius-lg);font-size:12px;font-weight:500}
+.la-pl-wrap{border:1px solid var(--la-border);border-radius:var(--la-radius-lg);overflow:hidden;background:var(--la-bg)}
+.la-pl-table{width:100%;table-layout:fixed;border:0;border-radius:0;border-collapse:collapse;font-size:12px}
+.la-pl-table th{background:var(--la-subtle);font-weight:500;padding:0 16px;height:45px;text-align:start}
+.la-pl-table td{padding:10px 16px 11px;border-block-start:1px solid var(--la-border);vertical-align:top;line-height:19px}
+.la-pl-table tbody tr:first-child td{border-block-start:0}
+.la-pl-table td.la-pl-title{background:var(--la-subtle);font-weight:600;color:var(--la-text-muted);vertical-align:middle}
+.la-pl-table td.la-num,.la-pl-table th.la-num{text-align:end}
+html[dir="rtl"] .la-pl-table td.la-num,html[dir="rtl"] .la-pl-table th.la-num{text-align:start}
+.la-pl-table td .la-pill{height:18px;font-size:11px}
+.la-pl-seen{margin-block-start:4px;color:var(--la-text-muted)}
+.la-pl-acts{display:flex;flex-wrap:wrap;gap:4px;max-width:160px}
+.la-pl-acts .la-btn{height:27px;padding-inline:12px;border-radius:var(--la-radius-lg);font-size:12px}
+.la-pl-table td.la-pl-panelcell{padding:0}
+.la-pl-panel{padding:10px 16px 20px;background:var(--la-bg)}
+.la-pl-panel-title{margin:0 0 12px;font-size:var(--la-text-lg);font-weight:500;line-height:26px}
+.la-pl-checks{margin:0 0 18px;padding-inline-start:40px;list-style:disc;font-size:12px;line-height:20px}
+.la-pl-checks li{padding-inline-start:0}
+.la-pl-checks .la-pill{height:18px;margin-inline-end:4px}
+.la-pl-form{display:flex;align-items:flex-end;font-size:12px}
+.la-pl-fld{display:flex;flex-direction:column;gap:4px}
+.la-pl-lbl{line-height:18px;padding-inline-end:6px;color:var(--la-text)}
+.la-pl-ctl{height:27px;padding-inline:13px;background:var(--la-subtle);display:flex;align-items:center;justify-content:space-between;color:var(--la-text)}
+.la-pl-ctl.is-note{width:159px}.la-pl-ctl.is-sel{width:106px}.la-pl-ctl.is-date{width:140px;padding-inline:13px 10px}
+.la-pl-ctl .la-ico{width:12px;height:12px}
+.la-pl-form .la-btn.is-primary{height:26px;padding-inline:12px;border-radius:var(--la-radius-lg);margin-inline-start:0;font-size:12px;font-weight:500}
+.la-pl-empty{padding:56px 16px;text-align:center;border:1px solid var(--la-border);border-radius:var(--la-radius-lg);background:var(--la-bg)}
+.la-pl-empty-title{font-size:var(--la-text-lg);font-weight:500}
+.la-pl-empty-body{margin-block-start:6px;color:var(--la-text-muted);font-size:var(--la-text-sm)}

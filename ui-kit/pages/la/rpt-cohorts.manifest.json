@@ -1,0 +1,9121 @@
+{
+  "page": "rpt-cohorts",
+  "system": "loyal-arrow-desk",
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "reference": "ux-after-r1/rpt-cohorts__desktop-light.png",
+  "variants": [
+    "",
+    "dark",
+    "ar-AED",
+    "en-INR",
+    "count",
+    "empty",
+    "zero",
+    "tall",
+    "dark.count",
+    "ar-AED.empty"
+  ],
+  "note": "no money on this screen: .en-INR/.ar-AED are locale variants; no .kw-KWD",
+  "interactions": {
+    "heatmap-switch": {
+      "target": "la-rpt-cohorts.filter-heatmap-value",
+      "states": [
+        "percent",
+        "count"
+      ],
+      "swapPage": {
+        "percent": "rpt-cohorts",
+        "count": "rpt-cohorts.count"
+      }
+    },
+    "heat-cell-hover": {
+      "target": "la-rpt-cohorts.cell-r2c3"
+    },
+    "line-draw-in": {
+      "target": "la-rpt-cohorts.chart.line",
+      "drive": "--la-progress 0..1 on an ancestor .la-widget (set style on [data-ui=la-rpt-cohorts.chart])"
+    },
+    "table-scroll": {
+      "target": "la-rpt-cohorts.table"
+    }
+  },
+  "boxes": {
+    "rpt-cohorts.ar-AED.empty": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        1384,
+        0,
+        56,
+        900
+      ],
+      "la-shell.brand": [
+        1397,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        1396,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        1401,
+        859,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        1159,
+        0,
+        225,
+        900
+      ],
+      "la-shell.workspace": [
+        1168,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        1168,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        1168,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        1168,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        1168,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        1168,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        1168,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        1168,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        1168,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        1168,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        1168,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        1168,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        1168,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        1168,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        0,
+        0,
+        1159,
+        900
+      ],
+      "la-shell.header": [
+        0,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        1061,
+        13,
+        82,
+        22
+      ],
+      "la-shell.actions": [
+        16,
+        10,
+        211,
+        28
+      ],
+      "la-shell.actions-menu": [
+        130,
+        10,
+        97,
+        28
+      ],
+      "la-shell.body": [
+        0,
+        48,
+        1159,
+        852
+      ],
+      "la-rpt-cohorts": [
+        16,
+        64,
+        1127,
+        768
+      ],
+      "la-rpt-cohorts.note": [
+        16,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        741,
+        67,
+        91,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        16,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        844,
+        146,
+        282,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        63,
+        378,
+        7,
+        14
+      ],
+      "la-rpt-cohorts.y-20": [
+        56,
+        344,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-40": [
+        56,
+        310,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-60": [
+        56,
+        276,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-80": [
+        56,
+        242,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-100": [
+        49,
+        208,
+        21,
+        14
+      ],
+      "la-rpt-cohorts.x-0": [
+        144,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-1": [
+        288,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-2": [
+        433,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-3": [
+        577,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-4": [
+        722,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-5": [
+        867,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-6": [
+        1011,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.chart.line": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        80,
+        216,
+        1024,
+        170
+      ],
+      "la-rpt-cohorts.filters": [
+        16,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        983,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        983,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        791,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        791,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        599,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        599,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        442,
+        519,
+        125,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        16,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        969,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        986,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        1114,
+        631,
+        12,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        778,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        795,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        923,
+        631,
+        12,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        588,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        605,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        736,
+        631,
+        9,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        397,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        414,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        545,
+        631,
+        9,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        207,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        224,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        355,
+        631,
+        9,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        16,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        33,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        161,
+        631,
+        12,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        16,
+        720,
+        1127,
+        112
+      ],
+      "la-rpt-cohorts.grid": [
+        16,
+        721,
+        1111,
+        102
+      ],
+      "la-rpt-cohorts.head": [
+        16,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        711,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        572,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        433,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        294,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        155,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        16,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-empty": [
+        16,
+        757,
+        1111,
+        66
+      ]
+    },
+    "rpt-cohorts.ar-AED": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        1384,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        1397,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        1396,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        1401,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        1159,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        1168,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        1168,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        1168,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        1168,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        1168,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        1168,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        1168,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        1168,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        1168,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        1168,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        1168,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        1168,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        1168,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        1168,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        0,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        0,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        1061,
+        13,
+        82,
+        22
+      ],
+      "la-shell.actions": [
+        16,
+        10,
+        211,
+        28
+      ],
+      "la-shell.actions-menu": [
+        130,
+        10,
+        97,
+        28
+      ],
+      "la-shell.body": [
+        0,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        16,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        16,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        741,
+        67,
+        91,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        16,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        844,
+        146,
+        282,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        63,
+        378,
+        7,
+        14
+      ],
+      "la-rpt-cohorts.y-20": [
+        56,
+        344,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-40": [
+        56,
+        310,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-60": [
+        56,
+        276,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-80": [
+        56,
+        242,
+        14,
+        14
+      ],
+      "la-rpt-cohorts.y-100": [
+        49,
+        208,
+        21,
+        14
+      ],
+      "la-rpt-cohorts.x-0": [
+        144,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-1": [
+        288,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-2": [
+        433,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-3": [
+        577,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-4": [
+        722,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-5": [
+        867,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.x-6": [
+        1011,
+        394,
+        25,
+        14
+      ],
+      "la-rpt-cohorts.chart.line": [
+        157,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        16,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        983,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        983,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        791,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        791,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        599,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        599,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        442,
+        519,
+        125,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        16,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        969,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        986,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        1069,
+        631,
+        57,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        778,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        795,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        911,
+        631,
+        25,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        588,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        605,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        696,
+        631,
+        49,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        397,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        414,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        486,
+        631,
+        68,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        207,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        224,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        281,
+        631,
+        83,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        16,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        33,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        161,
+        631,
+        12,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        16,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        16,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        16,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        711,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        572,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        433,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        294,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        155,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        16,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        16,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        711,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        572,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        433,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        294,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        155,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        16,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        16,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        711,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        572,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        433,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        294,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        155,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        16,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        16,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        711,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        572,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        433,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        294,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        155,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        16,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        16,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        711,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        572,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        433,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        294,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        155,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        16,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        16,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        711,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        572,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        433,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        294,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        155,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        16,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        16,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        711,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        572,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        433,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        294,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        155,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        16,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        16,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        711,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        572,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        433,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        294,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        155,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        16,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        16,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        711,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        572,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        433,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        294,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        155,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        16,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        16,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        711,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        572,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        433,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        294,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        155,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        16,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        16,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        711,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        572,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        433,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        294,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        155,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        16,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        16,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        711,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        572,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        433,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        294,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        155,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        16,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        16,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        711,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        572,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        433,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        294,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        155,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        16,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        16,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        711,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        572,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        433,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        294,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        155,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        16,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        16,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        711,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        572,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        433,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        294,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        155,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        16,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.count": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.dark.count": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.dark": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.empty": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        900
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        859,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        900
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        900
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        852
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        768
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        361,
+        216,
+        1024,
+        170
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        112
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        102
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-empty": [
+        313,
+        757,
+        1111,
+        66
+      ]
+    },
+    "rpt-cohorts.en-INR": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1244
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1203,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1244
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1244
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1196
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1164
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.tall": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        1260
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        1219,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        1260
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        1260
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        1212
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        1180
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        438,
+        216,
+        867,
+        103
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        60,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        27,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        47,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        67,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        95,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        508
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        498
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-1": [
+        313,
+        757,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c1": [
+        590,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c2": [
+        729,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c3": [
+        868,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c4": [
+        1007,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c5": [
+        1146,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r1c6": [
+        1285,
+        757,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-2": [
+        313,
+        790,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c1": [
+        590,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c2": [
+        729,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c3": [
+        868,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c4": [
+        1007,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c5": [
+        1146,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r2c6": [
+        1285,
+        790,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-3": [
+        313,
+        823,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c1": [
+        590,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c2": [
+        729,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c3": [
+        868,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c4": [
+        1007,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c5": [
+        1146,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r3c6": [
+        1285,
+        823,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-4": [
+        313,
+        856,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c1": [
+        590,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c2": [
+        729,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c3": [
+        868,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c4": [
+        1007,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c5": [
+        1146,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r4c6": [
+        1285,
+        856,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-5": [
+        313,
+        889,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c1": [
+        590,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c2": [
+        729,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c3": [
+        868,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c4": [
+        1007,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c5": [
+        1146,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r5c6": [
+        1285,
+        889,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-6": [
+        313,
+        922,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c1": [
+        590,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c2": [
+        729,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c3": [
+        868,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c4": [
+        1007,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c5": [
+        1146,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r6c6": [
+        1285,
+        922,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-7": [
+        313,
+        955,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c1": [
+        590,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c2": [
+        729,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c3": [
+        868,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c4": [
+        1007,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c5": [
+        1146,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r7c6": [
+        1285,
+        955,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-8": [
+        313,
+        988,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c1": [
+        590,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c2": [
+        729,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c3": [
+        868,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c4": [
+        1007,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c5": [
+        1146,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r8c6": [
+        1285,
+        988,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-9": [
+        313,
+        1021,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c1": [
+        590,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c2": [
+        729,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c3": [
+        868,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c4": [
+        1007,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c5": [
+        1146,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r9c6": [
+        1285,
+        1021,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-10": [
+        313,
+        1054,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c1": [
+        590,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c2": [
+        729,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c3": [
+        868,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c4": [
+        1007,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c5": [
+        1146,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r10c6": [
+        1285,
+        1054,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-11": [
+        313,
+        1087,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c1": [
+        590,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c2": [
+        729,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c3": [
+        868,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c4": [
+        1007,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c5": [
+        1146,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r11c6": [
+        1285,
+        1087,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-12": [
+        313,
+        1120,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c1": [
+        590,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c2": [
+        729,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c3": [
+        868,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c4": [
+        1007,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c5": [
+        1146,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r12c6": [
+        1285,
+        1120,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-13": [
+        313,
+        1153,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c1": [
+        590,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c2": [
+        729,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c3": [
+        868,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c4": [
+        1007,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c5": [
+        1146,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r13c6": [
+        1285,
+        1153,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.row-14": [
+        313,
+        1186,
+        1111,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c1": [
+        590,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c2": [
+        729,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c3": [
+        868,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c4": [
+        1007,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c5": [
+        1146,
+        1186,
+        139,
+        33
+      ],
+      "la-rpt-cohorts.cell-r14c6": [
+        1285,
+        1186,
+        139,
+        33
+      ]
+    },
+    "rpt-cohorts.zero": {
+      "la-shell": [
+        0,
+        0,
+        1440,
+        900
+      ],
+      "la-shell.dock": [
+        0,
+        0,
+        56,
+        900
+      ],
+      "la-shell.brand": [
+        12,
+        10,
+        32,
+        32
+      ],
+      "la-shell.dock-app": [
+        11,
+        178,
+        34,
+        34
+      ],
+      "la-shell.avatar": [
+        16,
+        859,
+        24,
+        24
+      ],
+      "la-shell.sidebar": [
+        56,
+        0,
+        225,
+        900
+      ],
+      "la-shell.workspace": [
+        64,
+        8,
+        208,
+        32
+      ],
+      "la-shell.item-1": [
+        64,
+        49,
+        208,
+        30
+      ],
+      "la-shell.leaves-home": [
+        80,
+        79,
+        192,
+        30
+      ],
+      "la-shell.leaf-home": [
+        86,
+        79,
+        186,
+        30
+      ],
+      "la-shell.item-2": [
+        64,
+        109,
+        208,
+        30
+      ],
+      "la-shell.item-3": [
+        64,
+        139,
+        208,
+        30
+      ],
+      "la-shell.item-4": [
+        64,
+        169,
+        208,
+        30
+      ],
+      "la-shell.item-5": [
+        64,
+        199,
+        208,
+        30
+      ],
+      "la-shell.item-6": [
+        64,
+        229,
+        208,
+        30
+      ],
+      "la-shell.item-7": [
+        64,
+        259,
+        208,
+        30
+      ],
+      "la-shell.item-8": [
+        64,
+        289,
+        208,
+        30
+      ],
+      "la-shell.item-9": [
+        64,
+        319,
+        208,
+        30
+      ],
+      "la-shell.item-10": [
+        64,
+        349,
+        208,
+        30
+      ],
+      "la-shell.item-11": [
+        64,
+        379,
+        208,
+        30
+      ],
+      "la-shell.main": [
+        281,
+        0,
+        1159,
+        900
+      ],
+      "la-shell.header": [
+        281,
+        0,
+        1159,
+        48
+      ],
+      "la-shell.title": [
+        297,
+        13,
+        65,
+        22
+      ],
+      "la-shell.actions": [
+        1203,
+        10,
+        221,
+        28
+      ],
+      "la-shell.actions-menu": [
+        1203,
+        10,
+        107,
+        28
+      ],
+      "la-shell.body": [
+        281,
+        48,
+        1159,
+        852
+      ],
+      "la-rpt-cohorts": [
+        297,
+        64,
+        1127,
+        768
+      ],
+      "la-rpt-cohorts.note": [
+        297,
+        64,
+        1127,
+        24
+      ],
+      "la-rpt-cohorts.about": [
+        625,
+        67,
+        122,
+        18
+      ],
+      "la-rpt-cohorts.chart": [
+        297,
+        129,
+        1127,
+        314
+      ],
+      "la-rpt-cohorts.chart.title": [
+        314,
+        146,
+        1093,
+        20
+      ],
+      "la-rpt-cohorts.y-0": [
+        343,
+        378,
+        8,
+        15
+      ],
+      "la-rpt-cohorts.y-20": [
+        336,
+        344,
+        15,
+        15
+      ],
+      "la-rpt-cohorts.y-40": [
+        335,
+        310,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-60": [
+        335,
+        276,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-80": [
+        335,
+        242,
+        16,
+        15
+      ],
+      "la-rpt-cohorts.y-100": [
+        330,
+        208,
+        21,
+        15
+      ],
+      "la-rpt-cohorts.x-0": [
+        424,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-1": [
+        570,
+        394,
+        25,
+        15
+      ],
+      "la-rpt-cohorts.x-2": [
+        714,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-3": [
+        858,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-4": [
+        1002,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-5": [
+        1148,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.x-6": [
+        1291,
+        394,
+        27,
+        15
+      ],
+      "la-rpt-cohorts.chart.line": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "la-rpt-cohorts.chart.empty": [
+        361,
+        216,
+        1024,
+        170
+      ],
+      "la-rpt-cohorts.filters": [
+        297,
+        493,
+        1127,
+        67
+      ],
+      "la-rpt-cohorts.filter-program": [
+        297,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-program-value": [
+        297,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-asof": [
+        489,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-asof-value": [
+        489,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filter-heatmap": [
+        681,
+        493,
+        160,
+        54
+      ],
+      "la-rpt-cohorts.filter-heatmap-value": [
+        681,
+        519,
+        160,
+        28
+      ],
+      "la-rpt-cohorts.filters.more": [
+        873,
+        519,
+        74,
+        28
+      ],
+      "la-rpt-cohorts.kpis": [
+        297,
+        584,
+        1127,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members": [
+        297,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-members.label": [
+        314,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-members.value": [
+        314,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-cohorts": [
+        488,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-cohorts.label": [
+        505,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-cohorts.value": [
+        505,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m1": [
+        678,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m1.label": [
+        695,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m1.value": [
+        695,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-m6": [
+        869,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-m6.label": [
+        886,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-m6.value": [
+        886,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-best": [
+        1059,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-best.label": [
+        1076,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-best.value": [
+        1076,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.kpi-under": [
+        1250,
+        584,
+        175,
+        96
+      ],
+      "la-rpt-cohorts.kpi-under.label": [
+        1267,
+        599,
+        141,
+        18
+      ],
+      "la-rpt-cohorts.kpi-under.value": [
+        1267,
+        631,
+        14,
+        28
+      ],
+      "la-rpt-cohorts.table": [
+        297,
+        720,
+        1127,
+        112
+      ],
+      "la-rpt-cohorts.grid": [
+        313,
+        721,
+        1111,
+        102
+      ],
+      "la-rpt-cohorts.head": [
+        313,
+        721,
+        1111,
+        36
+      ],
+      "la-rpt-cohorts.col-1": [
+        590,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-2": [
+        729,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-3": [
+        868,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-4": [
+        1007,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-5": [
+        1146,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.col-6": [
+        1285,
+        721,
+        139,
+        36
+      ],
+      "la-rpt-cohorts.row-empty": [
+        313,
+        757,
+        1111,
+        66
+      ]
+    }
+  }
+}

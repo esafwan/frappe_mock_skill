@@ -1,0 +1,259 @@
+{
+ "id": "la-retail-placement-lift",
+ "system": "loyal-arrow-desk",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "reference": "rs-p2-analytics-placement-zone/placement-lift*.png",
+ "data": "loyal-arrow/data/retail-placement-lift.json",
+ "shell": "la-shell (section-expanded, Retail active)",
+ "states": {
+  "populated": "retail-placement-lift.html",
+  "directional": "retail-placement-lift.directional.html",
+  "not-enough-data": "retail-placement-lift.empty.html",
+  "zero": "retail-placement-lift.zero.html",
+  "select-open": "retail-placement-lift.open.html"
+ },
+ "variants": [
+  "retail-placement-lift.html",
+  "retail-placement-lift.dark.html",
+  "retail-placement-lift.ar-AED.html",
+  "retail-placement-lift.en-INR.html",
+  "retail-placement-lift.kw-KWD.html",
+  "retail-placement-lift.directional.html",
+  "retail-placement-lift.directional.dark.html",
+  "retail-placement-lift.directional.ar-AED.html",
+  "retail-placement-lift.empty.html",
+  "retail-placement-lift.empty.dark.html",
+  "retail-placement-lift.empty.ar-AED.html",
+  "retail-placement-lift.zero.html",
+  "retail-placement-lift.zero.dark.html",
+  "retail-placement-lift.open.html",
+  "retail-placement-lift.open.dark.html"
+ ],
+ "slots": {
+  "t.against_6_matched_stores": {
+   "type": "text",
+   "sample": "Against 6 matched stores",
+   "maxLength": 36,
+   "where": "text"
+  },
+  "t.few_stores_in_the_comparison": {
+   "type": "text",
+   "sample": "Few stores in the comparison: read the range, not the single number.",
+   "maxLength": 98,
+   "where": "text"
+  },
+  "t.the_placement_runs_beyond_th": {
+   "type": "text",
+   "sample": "The placement runs beyond the days measured here (data to yesterday, at most 90 days), so this reads the part so far.",
+   "maxLength": 166,
+   "where": "text"
+  },
+  "t.ramadan_end_cap_end_cap_": {
+   "type": "text",
+   "sample": "Ramadan end-cap (end cap)",
+   "maxLength": 37,
+   "where": "text"
+  },
+  "t.dairy_chiller_strip_chiller_": {
+   "type": "text",
+   "sample": "Dairy chiller strip (chiller)",
+   "maxLength": 43,
+   "where": "text"
+  },
+  "t.front_of_store_cereal_floor_": {
+   "type": "text",
+   "sample": "Front-of-store cereal (floor stack)",
+   "maxLength": 51,
+   "where": "text"
+  },
+  "t.hawalli": {
+   "type": "text",
+   "sample": "Hawalli",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.test": {
+   "type": "text",
+   "sample": "Test",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.salmiya": {
+   "type": "text",
+   "sample": "Salmiya",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.jabriya": {
+   "type": "text",
+   "sample": "Jabriya",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.matched": {
+   "type": "text",
+   "sample": "Matched",
+   "maxLength": 12,
+   "where": "text"
+  },
+  "t.farwaniya": {
+   "type": "text",
+   "sample": "Farwaniya",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.stores_in_the_comparison": {
+   "type": "text",
+   "sample": "Stores in the comparison",
+   "maxLength": 36,
+   "where": "text"
+  },
+  "t.store": {
+   "type": "text",
+   "sample": "Store",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.role": {
+   "type": "text",
+   "sample": "Role",
+   "maxLength": 9,
+   "where": "text"
+  },
+  "t.before": {
+   "type": "text",
+   "sample": "Before",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.daily_sales": {
+   "type": "text",
+   "sample": "Daily sales",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.during": {
+   "type": "text",
+   "sample": "During",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.catalogue": {
+   "type": "text",
+   "sample": "Catalogue",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.categories": {
+   "type": "text",
+   "sample": "Categories",
+   "maxLength": 16,
+   "where": "text"
+  },
+  "t.heatmap": {
+   "type": "text",
+   "sample": "Heatmap",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.placement_lift_": {
+   "type": "text",
+   "sample": "Placement lift ",
+   "maxLength": 23,
+   "where": "text"
+  },
+  "t.missions": {
+   "type": "text",
+   "sample": "Missions",
+   "maxLength": 14,
+   "where": "text"
+  },
+  "t.placement": {
+   "type": "text",
+   "sample": "Placement",
+   "maxLength": 15,
+   "where": "text"
+  },
+  "t.placement_lift": {
+   "type": "text",
+   "sample": "Placement lift",
+   "maxLength": 22,
+   "where": "text"
+  },
+  "t.lift_over_the_matched_stores": {
+   "type": "text",
+   "sample": "Lift over the matched stores",
+   "maxLength": 44,
+   "where": "text"
+  },
+  "t.basis": {
+   "type": "text",
+   "sample": "Basis",
+   "maxLength": 11,
+   "where": "text"
+  },
+  "t.confirmed_placement": {
+   "type": "text",
+   "sample": "Confirmed placement",
+   "maxLength": 29,
+   "where": "text"
+  },
+  "t.directional_no_matched_contr": {
+   "type": "text",
+   "sample": "Directional: no matched control",
+   "maxLength": 46,
+   "where": "text"
+  },
+  "t.planned_not_confirmed_planne": {
+   "type": "text",
+   "sample": "Planned, not confirmed. Planned is intent, not proof the display was in place.",
+   "maxLength": 112,
+   "where": "text"
+  },
+  "t.no_comparable_stores_without": {
+   "type": "text",
+   "sample": "No comparable stores without this placement, so this is directional only.",
+   "maxLength": 105,
+   "where": "text"
+  },
+  "t.test_stores_before_against_d": {
+   "type": "text",
+   "sample": "Test stores, before against during",
+   "maxLength": 50,
+   "where": "text"
+  },
+  "t.planned_placement": {
+   "type": "text",
+   "sample": "Planned placement",
+   "maxLength": 26,
+   "where": "text"
+  },
+  "t.not_enough_data": {
+   "type": "text",
+   "sample": "Not enough data",
+   "maxLength": 25,
+   "where": "text"
+  },
+  "t.some_stores_also_carry_anoth": {
+   "type": "text",
+   "sample": "Some stores also carry another placement of the same products shortly before or during this one and are left out.",
+   "maxLength": 161,
+   "where": "text"
+  },
+  "t.fewer_than_10_bills_in_the_p": {
+   "type": "text",
+   "sample": "Fewer than 10 bills in the period",
+   "maxLength": 49,
+   "where": "text"
+  }
+ },
+ "targets": {
+  "placement change": "la-retail-placement-lift.placement-switch",
+  "placement options": "la-retail-placement-lift.option-N (in .open)",
+  "lift value": "la-retail-placement-lift.kpi-lift",
+  "basis": "la-retail-placement-lift.kpi-basis"
+ }
+}

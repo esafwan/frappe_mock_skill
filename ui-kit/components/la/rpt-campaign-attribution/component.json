@@ -1,0 +1,62 @@
+{
+ "id": "la-rpt-campaign-attribution",
+ "name": "Campaign Attribution report body (program filter, Rows card, attribution table / empty state)",
+ "system": "loyal-arrow-desk",
+ "kind": "page-body",
+ "viewport": {
+  "w": 1440,
+  "h": 900
+ },
+ "shell": true,
+ "css": [
+  "la-desk-data.css",
+  "la-desk-reports.css"
+ ],
+ "states": [
+  "populated",
+  "empty",
+  "zero",
+  "filter-open",
+  "filter-changed"
+ ],
+ "reference": {
+  "src": "ux-after-r1/rpt-campaign-attribution__desktop-{theme}.png",
+  "crop": [
+   281,
+   48,
+   1159,
+   852
+  ],
+  "note": "empty state is the pixel reference; populated/zero/filter states are extrapolated from the same tokens"
+ },
+ "stateText": {
+  "populated": {
+   "pageTitle": "Campaign Attribution"
+  },
+  "empty": {
+   "pageTitle": "Campaign Attribution",
+   "rowsValue": "1"
+  },
+  "zero": {
+   "pageTitle": "Campaign Attribution"
+  },
+  "filter-open": {
+   "pageTitle": "Campaign Attribution"
+  },
+  "filter-changed": {
+   "pageTitle": "Campaign Attribution",
+   "programValue": "Fresh Club"
+  }
+ },
+ "interactions": [
+  {
+   "id": "filter-change",
+   "from": "filter-open",
+   "to": "filter-changed",
+   "target": "la-rpt-campaign-attribution.field-program-value",
+   "option": "la-rpt-campaign-attribution.program-opt-2",
+   "note": "click Program -> menu opens -> pick option 2 -> table refreshes"
+  }
+ ],
+ "notes": "Dynamic row values are filled by scripts/la-gen-attribution.mjs from loyal-arrow/data/uae-dubai-supermarket/campaign_attribution.json (currency + AR digits applied there). Interaction targets: field-program(-value), program-menu, program-opt-1..3, rows-value, row-N, uplift-N."
+}

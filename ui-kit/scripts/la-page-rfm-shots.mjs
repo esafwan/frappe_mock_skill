@@ -1,0 +1,15 @@
+// Screenshots + data-ui pixel boxes for pages/la/rpt-rfm*.html (JS off for the shot, proves JS-free). Writes pages/la/shots/<name>.png and pages/la/shots/rpt-rfm.boxes.json
+import fs from 'fs'; import { chromium } from 'playwright'; import { ROOT } from './lib.mjs';
+const dir = ROOT + 'pages/la/'; fs.mkdirSync(dir + 'shots', { recursive: true }); const b = await chromium.launch(); const boxes = {};
+for (const f of fs.readdirSync(dir).filter(f => /^rpt-rfm.*\.html$/.test(f))) {
+  const c = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, javaScriptEnabled: false }); const p = await c.newPage(); await p.goto('file://' + dir + f);
+  await p.screenshot({ path: dir + 'shots/' + f.replace('.html', '.png') }); await c.close();
+  const c2 = await b.newContext({ viewport: { width: 1440, height: 900 } }); const q = await c2.newPage(); await q.goto('file://' + dir + f); await q.evaluate(() => document.fonts.ready);
+  const bx = await q.evaluate(() => [...document.querySelectorAll('[data-ui]')].map(e => { const r = e.getBoundingClientRect(); return { id: e.getAttribute('data-ui'), x: +r.x.toFixed(1), y: +r.y.toFixed(1), w: +r.width.toFixed(1), h: +r.height.toFixed(1) }; }));
+  const ids = bx.map(x => x.id); const dup = ids.filter((x, i) => ids.indexOf(x) !== i); if (dup.length) console.log('DUP', f, dup);
+  boxes[f] = bx; await c2.close(); }
+fs.writeFileSync(dir + 'shots/rpt-rfm.boxes.json', JSON.stringify(boxes));
+// pages/la/rpt-rfm.targets.json: consumed by scripts/manifest-la.mjs -> manifest.pages['la-rpt-rfm'] (does not touch manifest.json itself)
+const variants = {}; for (const [f, bx] of Object.entries(boxes)) { const k = f === 'rpt-rfm.html' ? 'default' : f.replace(/^rpt-rfm\./, '').replace(/\.html$/, ''); variants[k] = { file: 'pages/la/' + f, screenshot: 'pages/la/shots/' + f.replace('.html', '.png'), targets: bx.filter(b => b.id.startsWith('la-rfm.') || b.id.startsWith('la-filter-bar.') || b.id.startsWith('la-shell.')).map(b => ({ id: b.id, box: { x: b.x, y: b.y, w: b.w, h: b.h } })) }; }
+const interactions = [{ kind: 'select-view', targets: ['la-rfm.view-switch', 'la-rfm.view-menu', 'la-rfm.view-option-segments', 'la-rfm.view-option-grid'], note: 'cursor to the View select, click (variant view-open shows the menu), choose Grid (variant grid) or Segments (default). Variants: populated(default) | empty (= reference screenshot) | grid | view-open; each with dark, ar-AED, ar-AED.dark, en-INR, kw-KWD (money screens).' }, { kind: 'count-up', targets: ['la-rfm.kpi-1.value', 'la-rfm.kpi-2.value', 'la-rfm.kpi-3.value', 'la-rfm.kpi-4.value'], note: 'interpolate KPI values 0 -> populated value' }, { kind: 'link', targets: ['la-rfm.about'], note: 'About this report +' }];
+fs.writeFileSync(dir + 'rpt-rfm.targets.json', JSON.stringify({ id: 'la-rpt-rfm', viewport: { w: 1440, h: 900 }, reference: 'ux-after-r1/rpt-rfm-segments__desktop-light.png', interactions, variants }, null, 1)); await b.close(); console.log('shots', Object.keys(boxes).length);

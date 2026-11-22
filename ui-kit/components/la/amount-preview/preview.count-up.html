@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-system="la" data-theme="light">
+<head><meta charset="utf-8"><title>Counter: bill amount + earn preview</title>
+<link rel="stylesheet" href="../../../tokens/css/fonts.css">
+<link rel="stylesheet" href="../../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-vars.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-base.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-components.css">
+<link rel="stylesheet" href="../../../tokens/css/la-desk-data.css">
+<link rel="stylesheet" href="../../../tokens/css/la-counter-base.css">
+<style>html,body{margin:0}*{animation:none!important;transition:none!important;caret-color:transparent!important}#ui-kit-stage{position:absolute;left:0;top:0;width:420px;min-height:820px}</style></head>
+<body class="la-root"><div id="ui-kit-stage">
+<div class="la-ct" data-ui="la-amount-preview" data-state="count-up">
+<div class="la-ct-bar" data-ui="la-amount-preview.bar"><span>Counter</span><span class="la-ct-bar-user" data-ui="la-amount-preview.user">qa.cashier@example.test</span></div>
+<div class="la-ct-main" data-ui="la-amount-preview.main">
+<div class="la-ct-sub" data-ui="la-amount-preview.member">Bill for <b>Asha Test</b></div>
+<div class="la-ct-label" data-ui="la-amount-preview.entry-heading">Bill amount (rupees)</div>
+<div class="la-ct-field is-focus la-num" data-ui="la-amount-preview.entry-input">250</div>
+<div class="la-ct-spacer"></div>
+<div class="la-ct-card is-stat" data-ui="la-amount-preview.card">
+  <div class="la-ct-lbl" data-ui="la-amount-preview.bill-label">Bill</div>
+  <div class="la-ct-big la-num" data-ui="la-amount-preview.bill-amount">₹500.00</div>
+  <div class="la-ct-lbl" data-ui="la-amount-preview.earn-label">Points earned</div>
+  <div class="la-ct-big is-lg la-num la-ct-count" data-ui="la-amount-preview.points-earned">3</div>
+  <div class="la-ct-kv" data-ui="la-amount-preview.tier">Tier bonus x100</div>
+</div>
+<div class="la-ct-spacer"></div>
+<div class="la-ct-btn is-primary" data-ui="la-amount-preview.preview-btn">Preview points</div>
+</div>
+</div>
+
+</div></body></html>
