@@ -1,0 +1,20 @@
+{
+  "component": "huf-ios-project-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "Receivables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "1 agent · 1 loaded chat",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

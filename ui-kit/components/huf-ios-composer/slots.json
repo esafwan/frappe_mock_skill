@@ -1,0 +1,27 @@
+{
+  "component": "huf-ios-composer",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "placeholder": {
+      "type": "text",
+      "sample": "Message",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "placeholder_disabled": {
+      "type": "text",
+      "sample": "Choose an agent to chat",
+      "maxLength": 37,
+      "where": "text",
+      "element": "text"
+    },
+    "draft": {
+      "type": "text",
+      "sample": "Summarize the overdue invoices.",
+      "maxLength": 50,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

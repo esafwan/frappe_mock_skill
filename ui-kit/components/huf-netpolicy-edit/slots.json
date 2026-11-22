@@ -1,0 +1,740 @@
+{
+  "component": "huf-netpolicy-edit",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "0",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Network access policies",
+      "maxLength": 46,
+      "where": "text",
+      "element": "huf-netpolicy-edit.link-24"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Internal services only",
+      "maxLength": 44,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "ID Internal services only",
+      "maxLength": 50,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Save changes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-netpolicy-edit.button-28"
+    },
+    "text_subtitle": {
+      "type": "text",
+      "sample": "General settings",
+      "maxLength": 32,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Name this policy so it can be applied to connections and execution profiles.",
+      "maxLength": 152,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Policy name",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Unique name identifying this network access policy.",
+      "maxLength": 102,
+      "where": "text",
+      "element": "p"
+    },
+    "text_subtitle_2": {
+      "type": "text",
+      "sample": "Rules",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Define the hosts, ports, and protocols this policy allows.",
+      "maxLength": 116,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Host / CIDR",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Port range",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "Protocol",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_3": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "items_center_5": {
+      "type": "text",
+      "sample": "Host / CIDR",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_6": {
+      "type": "text",
+      "sample": "Port range",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_7": {
+      "type": "text",
+      "sample": "Protocol",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_3": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_4": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_5": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_6": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "items_center_8": {
+      "type": "text",
+      "sample": "Host / CIDR",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_9": {
+      "type": "text",
+      "sample": "Port range",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_10": {
+      "type": "text",
+      "sample": "Protocol",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_4": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col_7": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_8": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_9": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Add rule",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-netpolicy-edit.button-45"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Connecting...",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-netpolicy-edit.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-netpolicy-edit.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-netpolicy-edit.button-22"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-netpolicy-edit.button-25"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Edit name",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-netpolicy-edit.button-26"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. Internal services only",
+      "maxLength": 54,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-29"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Internal services only",
+      "maxLength": 44,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-29"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "api.example.com or 10.0.0.0/8",
+      "maxLength": 58,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-30"
+    },
+    "text_ui_text_value_2": {
+      "type": "text",
+      "sample": "10.0.0.0/8",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-30"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "443 or 1000-2000",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-31"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "443",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-31"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_3": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "text",
+      "sample": "api.example.com or 10.0.0.0/8",
+      "maxLength": 58,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-35"
+    },
+    "text_ui_text_value_4": {
+      "type": "text",
+      "sample": "10.0.0.0/8",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-35"
+    },
+    "text_ui_text_placeholder_5": {
+      "type": "text",
+      "sample": "443 or 1000-2000",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-36"
+    },
+    "text_ui_text_value_5": {
+      "type": "text",
+      "sample": "8000-8100",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-36"
+    },
+    "flex_col_value_4": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_5": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_6": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "text_ui_text_placeholder_6": {
+      "type": "text",
+      "sample": "api.example.com or 10.0.0.0/8",
+      "maxLength": 58,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-40"
+    },
+    "text_ui_text_value_6": {
+      "type": "text",
+      "sample": "erp.northwind.example",
+      "maxLength": 42,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-40"
+    },
+    "text_ui_text_placeholder_7": {
+      "type": "text",
+      "sample": "443 or 1000-2000",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-netpolicy-edit.input-41"
+    },
+    "text_ui_text_value_7": {
+      "type": "number",
+      "sample": "443",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-netpolicy-edit.input-41"
+    },
+    "flex_col_value_7": {
+      "type": "text",
+      "sample": "https",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_8": {
+      "type": "text",
+      "sample": "http",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_9": {
+      "type": "text",
+      "sample": "tcp",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-netpolicy-edit.section-46"
+    }
+  }
+}

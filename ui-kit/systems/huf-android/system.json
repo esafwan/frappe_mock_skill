@@ -1,0 +1,63 @@
+{
+ "id": "huf-android",
+ "name": "Huf Android app UI (Material 3, Pixel 5)",
+ "status": "ready",
+ "source": {
+  "app": "huf_mobile/android (Kotlin, Jetpack Compose, Material 3)",
+  "theme": "android/app/src/main/java/ai/huf/mobile/theme/HufTheme.kt",
+  "reference": "systems/huf-android/ref/*.png (emulator Pixel 5, 1080x2340, density 2.625) + ref/index.json"
+ },
+ "componentGroup": "huf-android",
+ "captureMode": {
+  "kind": "static-html",
+  "how": "Hand-authored HTML/CSS recreations (no live app, no network, no JS). Rendered through scripts/static-capture.mjs via scripts/specs-huf-android.mjs, then scripts/huf-mobile/android-meta.mjs adds slot types, typing slots and states. Previews render at the 412x892 dp Pixel 5 viewport; screens are compared to emulator refs with compare-android.mjs.",
+  "builder": "scripts/huf-mobile/build-android.mjs (+ build-android-lib.mjs) generates components/huf-android-*/ and scripts/specs-huf-android.mjs",
+  "specs": "scripts/specs-huf-android.mjs"
+ },
+ "variableSystem": {
+  "kind": "css-custom-properties (--ha-*) mirroring HufTheme LightHufColors / DarkHufColors, HufSpacing, HufRadius, HufLayout",
+  "themeAttribute": {
+   "light": null,
+   "dark": "data-theme=\"dark\" on <html>"
+  },
+  "files": {
+   "vars": "tokens/css/huf-android/tokens.css"
+  }
+ },
+ "tokens": {
+  "css": [
+   "tokens/css/huf-android/fonts.css",
+   "tokens/css/huf-android/tokens.css",
+   "tokens/css/huf-android/components.css"
+  ],
+  "fonts": "Inter variable (OFL, tokens/fonts) with size-adjust 95% standing in for Roboto; Geist Mono for the drawer 'AI PLATFORM' label",
+  "icons": "Material icon paths inlined as SVG (build-android-lib.mjs)"
+ },
+ "modes": [
+  "light",
+  "dark"
+ ],
+ "rtl": {
+  "supported": false,
+  "mechanism": "Compose app supports Arabic (values-ar) but this system ships English only"
+ },
+ "defaults": {
+  "viewport": {
+   "w": 412,
+   "h": 892,
+   "deviceScaleFactor": 2.621
+  },
+  "status": "9:41, wifi, full battery, gesture pill"
+ },
+ "refCompare": "systems/huf-android/ref-compare.json (block-diff mean 8.6 -> 6.9 %)",
+ "counts": {
+  "components": 28,
+  "screens": 33,
+  "refCompareScreens": 25
+ },
+ "animation": {
+  "dataUi": "stable data-ui ids: <component>.<part> (e.g. huf-android-composer.send, huf-android-upload-row.remove)",
+  "typing": "huf-android-composer slot `draft` (typing:true); screens expose it via slots.json typing",
+  "states": "pressed (= active), loading/busy, closed/open for sheets, drawer and menu, failed, verifying"
+ }
+}

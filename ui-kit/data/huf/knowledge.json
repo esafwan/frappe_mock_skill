@@ -1,0 +1,950 @@
+{
+ "$comment": "Fictional knowledge sources for Northwind Trading (see agents.json). Times relative to the fixed capture clock 2026-01-01T09:00:00Z. counts.* are the server-side per-status totals (they may exceed the listed inputs, like a real capped list).",
+ "sources": [
+  {
+   "name": "Northwind Regional Handbooks",
+   "source_name": "Northwind Regional Handbooks",
+   "description": "Store handbooks for every region, synced from cloud storage.",
+   "knowledge_type": "sqlite_hybrid",
+   "scope": "Global",
+   "status": "Indexing",
+   "disabled": 0,
+   "total_chunks": 1218,
+   "total_inputs": 112,
+   "last_indexed_at": "2026-01-01 08:58:00",
+   "modified": "2026-01-01 08:58:00",
+   "creation": "2026-01-01 08:50:00",
+   "embedding_provider": "OpenAI",
+   "embedding_model": "text-embedding-3-small",
+   "vector_dimension": 1536,
+   "chunk_size": 512,
+   "chunk_overlap": 50,
+   "index_size_bytes": 18400000
+  },
+  {
+   "name": "Northwind Support Handbook",
+   "source_name": "Northwind Support Handbook",
+   "description": "Policies, price lists and how-to guides the support team answers from.",
+   "knowledge_type": "sqlite_hybrid",
+   "scope": "Global",
+   "status": "Ready",
+   "disabled": 0,
+   "total_chunks": 412,
+   "total_inputs": 18,
+   "last_indexed_at": "2026-01-01 08:58:00",
+   "modified": "2026-01-01 08:58:00",
+   "creation": "2025-12-20 14:00:00",
+   "embedding_provider": "OpenAI",
+   "embedding_model": "text-embedding-3-small",
+   "vector_dimension": 1536,
+   "chunk_size": 512,
+   "chunk_overlap": 50,
+   "index_size_bytes": 5200000
+  },
+  {
+   "name": "Supplier Contracts",
+   "source_name": "Supplier Contracts",
+   "description": "Signed supplier agreements, rate cards and addenda.",
+   "knowledge_type": "sqlite_fts",
+   "scope": "Global",
+   "status": "Ready",
+   "disabled": 0,
+   "total_chunks": 690,
+   "total_inputs": 42,
+   "last_indexed_at": "2025-12-31 08:55:00",
+   "modified": "2025-12-31 08:55:00",
+   "creation": "2025-12-31 08:30:00",
+   "chunk_size": 512,
+   "chunk_overlap": 50,
+   "index_size_bytes": 7600000
+  },
+  {
+   "name": "Product Catalog",
+   "source_name": "Product Catalog",
+   "description": "Product sheets, specs and care instructions for the full range.",
+   "knowledge_type": "sqlite_hybrid",
+   "scope": "Global",
+   "status": "Ready",
+   "disabled": 0,
+   "total_chunks": 2860,
+   "total_inputs": 144,
+   "last_indexed_at": "2025-12-29 17:20:00",
+   "modified": "2025-12-29 17:20:00",
+   "creation": "2025-12-02 10:00:00",
+   "embedding_provider": "OpenAI",
+   "embedding_model": "text-embedding-3-small",
+   "vector_dimension": 1536,
+   "chunk_size": 512,
+   "chunk_overlap": 50,
+   "index_size_bytes": 31000000
+  },
+  {
+   "name": "Warehouse Manuals",
+   "source_name": "Warehouse Manuals",
+   "description": "Equipment manuals and safety procedures for the warehouse floor.",
+   "knowledge_type": "sqlite_fts",
+   "scope": "Global",
+   "status": "Ready",
+   "disabled": 1,
+   "total_chunks": 530,
+   "total_inputs": 36,
+   "last_indexed_at": "2025-12-12 10:00:00",
+   "modified": "2025-12-12 10:00:00",
+   "creation": "2025-11-20 10:00:00",
+   "chunk_size": 512,
+   "chunk_overlap": 50,
+   "index_size_bytes": 4100000
+  }
+ ],
+ "counts": {
+  "Northwind Support Handbook": {
+   "Indexed": 18
+  },
+  "Supplier Contracts": {
+   "Indexed": 37,
+   "Error": 3,
+   "Skipped": 2
+  },
+  "Northwind Regional Handbooks": {
+   "Indexed": 50,
+   "Skipped": 8,
+   "Processing": 4,
+   "Pending": 50
+  },
+  "Product Catalog": {
+   "Indexed": 144
+  },
+  "Warehouse Manuals": {
+   "Indexed": 36
+  }
+ },
+ "agents": {
+  "Northwind Support Handbook": [
+   "Support Triage",
+   "Store Assistant"
+  ],
+  "Supplier Contracts": [
+   "Invoice Reconciler"
+  ],
+  "Product Catalog": [
+   "Store Assistant",
+   "Support Triage",
+   "Catalog Writer"
+  ],
+  "Northwind Regional Handbooks": [],
+  "Warehouse Manuals": []
+ },
+ "inputs": [
+  {
+   "name": "KI-00001",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 15:12:00",
+   "modified": "2025-12-31 15:12:00",
+   "chunks_created": 38,
+   "ingestion": null,
+   "file_name": "Returns Policy 2026.pdf",
+   "file": "/private/files/Returns_Policy_2026.pdf",
+   "file_type": "PDF",
+   "external_key": "upload://Returns Policy 2026.pdf"
+  },
+  {
+   "name": "KI-00002",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 15:12:00",
+   "modified": "2025-12-31 15:12:00",
+   "chunks_created": 112,
+   "ingestion": null,
+   "file_name": "Price List Q4.xlsx",
+   "file": "/private/files/Price_List_Q4.xlsx",
+   "file_type": "XLSX",
+   "external_key": "upload://Price List Q4.xlsx"
+  },
+  {
+   "name": "KI-00003",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 15:11:00",
+   "modified": "2025-12-31 15:11:00",
+   "chunks_created": 27,
+   "ingestion": null,
+   "file_name": "Shipping Guide.docx",
+   "file": "/private/files/Shipping_Guide.docx",
+   "file_type": "DOCX",
+   "external_key": "upload://Shipping Guide.docx"
+  },
+  {
+   "name": "KI-00004",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 15:11:00",
+   "modified": "2025-12-31 15:11:00",
+   "chunks_created": 19,
+   "ingestion": null,
+   "file_name": "Trail Club Onboarding.pptx",
+   "file": "/private/files/Trail_Club_Onboarding.pptx",
+   "file_type": "PPTX",
+   "external_key": "upload://Trail Club Onboarding.pptx"
+  },
+  {
+   "name": "KI-00005",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 15:10:00",
+   "modified": "2025-12-31 15:10:00",
+   "chunks_created": 24,
+   "ingestion": null,
+   "file_name": "Warranty Terms.pdf",
+   "file": "/private/files/Warranty_Terms.pdf",
+   "file_type": "PDF",
+   "external_key": "upload://Warranty Terms.pdf"
+  },
+  {
+   "name": "KI-00006",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-30 11:40:00",
+   "modified": "2025-12-30 11:40:00",
+   "chunks_created": 9,
+   "ingestion": null,
+   "file_name": "Store Pickup Procedure.docx",
+   "file": "/private/files/Store_Pickup_Procedure.docx",
+   "file_type": "DOCX",
+   "external_key": "upload://Store Pickup Procedure.docx"
+  },
+  {
+   "name": "KI-00007",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-30 11:40:00",
+   "modified": "2025-12-30 11:40:00",
+   "chunks_created": 14,
+   "ingestion": null,
+   "file_name": "Size Chart.xlsx",
+   "file": "/private/files/Size_Chart.xlsx",
+   "file_type": "XLSX",
+   "external_key": "upload://Size Chart.xlsx"
+  },
+  {
+   "name": "KI-00008",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "URL",
+   "status": "Indexed",
+   "creation": "2025-12-29 16:05:00",
+   "modified": "2025-12-29 16:05:00",
+   "chunks_created": 6,
+   "ingestion": null,
+   "url": "https://northwind.example/help/gift-cards",
+   "title": "Gift Card FAQ"
+  },
+  {
+   "name": "KI-00009",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-28 10:20:00",
+   "modified": "2025-12-28 10:20:00",
+   "chunks_created": 31,
+   "ingestion": null,
+   "file_name": "International Shipping Rates.pdf",
+   "file": "/private/files/International_Shipping_Rates.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/support/International Shipping Rates.pdf"
+  },
+  {
+   "name": "KI-00010",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-28 10:20:00",
+   "modified": "2025-12-28 10:20:00",
+   "chunks_created": 22,
+   "ingestion": null,
+   "file_name": "Repairs and Service.docx",
+   "file": "/private/files/Repairs_and_Service.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-docs/support/Repairs and Service.docx"
+  },
+  {
+   "name": "KI-00011",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "Text",
+   "status": "Indexed",
+   "creation": "2025-12-27 09:30:00",
+   "modified": "2025-12-27 09:30:00",
+   "chunks_created": 1,
+   "ingestion": null,
+   "text": "Customer care is open Monday to Friday, 8 am to 6 pm, and Saturday 9 am to 1 pm.",
+   "title": "Contact Hours"
+  },
+  {
+   "name": "KI-00012",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 12,
+   "ingestion": null,
+   "file_name": "Gear Care Instructions.md",
+   "file": "/private/files/Gear_Care_Instructions.md",
+   "file_type": "MD",
+   "external_key": "upload://Gear Care Instructions.md"
+  },
+  {
+   "name": "KI-00013",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 5,
+   "ingestion": null,
+   "file_name": "Price Match Policy.md",
+   "file": "/private/files/Price_Match_Policy.md",
+   "file_type": "MD",
+   "external_key": "upload://Price Match Policy.md"
+  },
+  {
+   "name": "KI-00014",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 8,
+   "ingestion": null,
+   "file_name": "Order Tracking Guide.md",
+   "file": "/private/files/Order_Tracking_Guide.md",
+   "file_type": "MD",
+   "external_key": "upload://Order Tracking Guide.md"
+  },
+  {
+   "name": "KI-00015",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 16,
+   "ingestion": null,
+   "file_name": "Loyalty Points Terms.pdf",
+   "file": "/private/files/Loyalty_Points_Terms.pdf",
+   "file_type": "PDF",
+   "external_key": "upload://Loyalty Points Terms.pdf"
+  },
+  {
+   "name": "KI-00016",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 4,
+   "ingestion": null,
+   "file_name": "Holiday Delivery Calendar.xlsx",
+   "file": "/private/files/Holiday_Delivery_Calendar.xlsx",
+   "file_type": "XLSX",
+   "external_key": "upload://Holiday Delivery Calendar.xlsx"
+  },
+  {
+   "name": "KI-00017",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 11,
+   "ingestion": null,
+   "file_name": "Damaged Item Claims.docx",
+   "file": "/private/files/Damaged_Item_Claims.docx",
+   "file_type": "DOCX",
+   "external_key": "upload://Damaged Item Claims.docx"
+  },
+  {
+   "name": "KI-00018",
+   "knowledge_source": "Northwind Support Handbook",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-20 14:00:00",
+   "modified": "2025-12-20 14:00:00",
+   "chunks_created": 7,
+   "ingestion": null,
+   "file_name": "Store Directory.html",
+   "file": "/private/files/Store_Directory.html",
+   "file_type": "HTML",
+   "external_key": "upload://Store Directory.html"
+  },
+  {
+   "name": "KI-00019",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Error",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00006",
+   "file_name": "Master Supply Agreement - Alder Foods.pdf",
+   "file": "/private/files/Master_Supply_Agreement_-_Alder_Foods.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Master Supply Agreement - Alder Foods.pdf",
+   "error_message": "Could not extract text: PDF is encrypted"
+  },
+  {
+   "name": "KI-00020",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Freight Terms - Bluewater Logistics.pdf",
+   "file": "/private/files/Freight_Terms_-_Bluewater_Logistics.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Freight Terms - Bluewater Logistics.pdf"
+  },
+  {
+   "name": "KI-00021",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Packaging Rate Card 2026.xlsx",
+   "file": "/private/files/Packaging_Rate_Card_2026.xlsx",
+   "file_type": "XLSX",
+   "external_key": "s3://northwind-legal/contracts/Packaging Rate Card 2026.xlsx"
+  },
+  {
+   "name": "KI-00022",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Error",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00006",
+   "file_name": "NDA - Copperleaf Studio.docx",
+   "file": "/private/files/NDA_-_Copperleaf_Studio.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-legal/contracts/NDA - Copperleaf Studio.docx",
+   "error_message": "Could not extract text"
+  },
+  {
+   "name": "KI-00023",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Skipped",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00006",
+   "file_name": "Scanned Lease Annex.pdf",
+   "file": "/private/files/Scanned_Lease_Annex.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Scanned Lease Annex.pdf",
+   "skip_reason": "No Text"
+  },
+  {
+   "name": "KI-00024",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Service Level Schedule.docx",
+   "file": "/private/files/Service_Level_Schedule.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-legal/contracts/Service Level Schedule.docx"
+  },
+  {
+   "name": "KI-00025",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Error",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00006",
+   "file_name": "Pricing Addendum Q1.pdf",
+   "file": "/private/files/Pricing_Addendum_Q1.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Pricing Addendum Q1.pdf",
+   "error_message": "Processing timed out"
+  },
+  {
+   "name": "KI-00026",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Cold Chain Requirements.pdf",
+   "file": "/private/files/Cold_Chain_Requirements.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Cold Chain Requirements.pdf"
+  },
+  {
+   "name": "KI-00027",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Supplier Code of Conduct.pdf",
+   "file": "/private/files/Supplier_Code_of_Conduct.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Supplier Code of Conduct.pdf"
+  },
+  {
+   "name": "KI-00028",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Rebate Schedule.xlsx",
+   "file": "/private/files/Rebate_Schedule.xlsx",
+   "file_type": "XLSX",
+   "external_key": "s3://northwind-legal/contracts/Rebate Schedule.xlsx"
+  },
+  {
+   "name": "KI-00029",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Skipped",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00006",
+   "file_name": "Insurance Certificates.pdf",
+   "file": "/private/files/Insurance_Certificates.zip.txt",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-legal/contracts/Insurance Certificates.pdf",
+   "skip_reason": "Duplicate"
+  },
+  {
+   "name": "KI-00030",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Payment Terms Summary.md",
+   "file": "/private/files/Payment_Terms_Summary.md",
+   "file_type": "MD",
+   "external_key": "s3://northwind-legal/contracts/Payment Terms Summary.md"
+  },
+  {
+   "name": "KI-00031",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Renewal Calendar.xlsx",
+   "file": "/private/files/Renewal_Calendar.xlsx",
+   "file_type": "XLSX",
+   "external_key": "s3://northwind-legal/contracts/Renewal Calendar.xlsx"
+  },
+  {
+   "name": "KI-00032",
+   "knowledge_source": "Supplier Contracts",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2025-12-31 08:40:00",
+   "modified": "2025-12-31 08:40:00",
+   "chunks_created": 18,
+   "ingestion": "ING-00006",
+   "file_name": "Returns to Vendor Policy.docx",
+   "file": "/private/files/Returns_to_Vendor_Policy.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-legal/contracts/Returns to Vendor Policy.docx"
+  },
+  {
+   "name": "KI-00033",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Processing",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00007",
+   "file_name": "Austin Store Handbook.pdf",
+   "file": "/private/files/Austin_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Austin Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00034",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Processing",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00007",
+   "file_name": "Boise Store Handbook.docx",
+   "file": "/private/files/Boise_Store_Handbook.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-docs/handbooks/Boise Store Handbook.docx"
+  },
+  {
+   "name": "KI-00035",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Processing",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00007",
+   "file_name": "Calgary Store Handbook.pdf",
+   "file": "/private/files/Calgary_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Calgary Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00036",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Pending",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00007",
+   "file_name": "Denver Store Handbook.pptx",
+   "file": "/private/files/Denver_Store_Handbook.pptx",
+   "file_type": "PPTX",
+   "external_key": "s3://northwind-docs/handbooks/Denver Store Handbook.pptx"
+  },
+  {
+   "name": "KI-00037",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Pending",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 0,
+   "ingestion": "ING-00007",
+   "file_name": "Halifax Store Handbook.md",
+   "file": "/private/files/Halifax_Store_Handbook.md",
+   "file_type": "MD",
+   "external_key": "s3://northwind-docs/handbooks/Halifax Store Handbook.md"
+  },
+  {
+   "name": "KI-00038",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Leeds Store Handbook.pdf",
+   "file": "/private/files/Leeds_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Leeds Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00039",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Lyon Store Handbook.docx",
+   "file": "/private/files/Lyon_Store_Handbook.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-docs/handbooks/Lyon Store Handbook.docx"
+  },
+  {
+   "name": "KI-00040",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Madrid Store Handbook.pdf",
+   "file": "/private/files/Madrid_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Madrid Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00041",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Oslo Store Handbook.pptx",
+   "file": "/private/files/Oslo_Store_Handbook.pptx",
+   "file_type": "PPTX",
+   "external_key": "s3://northwind-docs/handbooks/Oslo Store Handbook.pptx"
+  },
+  {
+   "name": "KI-00042",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Perth Store Handbook.md",
+   "file": "/private/files/Perth_Store_Handbook.md",
+   "file_type": "MD",
+   "external_key": "s3://northwind-docs/handbooks/Perth Store Handbook.md"
+  },
+  {
+   "name": "KI-00043",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Porto Store Handbook.pdf",
+   "file": "/private/files/Porto_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Porto Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00044",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Seattle Store Handbook.docx",
+   "file": "/private/files/Seattle_Store_Handbook.docx",
+   "file_type": "DOCX",
+   "external_key": "s3://northwind-docs/handbooks/Seattle Store Handbook.docx"
+  },
+  {
+   "name": "KI-00045",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Toronto Store Handbook.pdf",
+   "file": "/private/files/Toronto_Store_Handbook.pdf",
+   "file_type": "PDF",
+   "external_key": "s3://northwind-docs/handbooks/Toronto Store Handbook.pdf"
+  },
+  {
+   "name": "KI-00046",
+   "knowledge_source": "Northwind Regional Handbooks",
+   "input_type": "File",
+   "status": "Indexed",
+   "creation": "2026-01-01 08:52:00",
+   "modified": "2026-01-01 08:52:00",
+   "chunks_created": 21,
+   "ingestion": "ING-00007",
+   "file_name": "Vienna Store Handbook.pptx",
+   "file": "/private/files/Vienna_Store_Handbook.pptx",
+   "file_type": "PPTX",
+   "external_key": "s3://northwind-docs/handbooks/Vienna Store Handbook.pptx"
+  }
+ ],
+ "ingestions": {
+  "Northwind Regional Handbooks": [
+   {
+    "name": "ING-00007",
+    "knowledge_source": "Northwind Regional Handbooks",
+    "status": "Running",
+    "total_items": 112,
+    "submitted_by": "maya@example.com",
+    "started_at": "2026-01-01 08:50:00",
+    "source_kind": "S3",
+    "source_config": {
+     "bucket": "northwind-docs",
+     "prefix": "handbooks/"
+    },
+    "modified": "2026-01-01 08:58:00"
+   }
+  ],
+  "Supplier Contracts": [
+   {
+    "name": "ING-00006",
+    "knowledge_source": "Supplier Contracts",
+    "status": "Completed with Errors",
+    "total_items": 42,
+    "submitted_by": "maya@example.com",
+    "started_at": "2025-12-31 08:30:00",
+    "finished_at": "2025-12-31 08:55:00",
+    "source_kind": "S3",
+    "source_config": {
+     "bucket": "northwind-legal",
+     "prefix": "contracts/"
+    },
+    "modified": "2025-12-31 08:55:00"
+   }
+  ],
+  "Northwind Support Handbook": [
+   {
+    "name": "ING-00005",
+    "knowledge_source": "Northwind Support Handbook",
+    "status": "Completed",
+    "total_items": 7,
+    "submitted_by": "maya@example.com",
+    "started_at": "2025-12-31 15:10:00",
+    "finished_at": "2025-12-31 15:13:00",
+    "source_kind": "Upload",
+    "source_config": {},
+    "modified": "2025-12-31 15:13:00"
+   }
+  ]
+ },
+ "ingestion_status": {
+  "ING-00007": {
+   "counts": {
+    "pending": 50,
+    "processing": 4,
+    "indexed": 50,
+    "error": 0,
+    "skipped": 8,
+    "total": 112
+   },
+   "progress": 0.518,
+   "chunks_written": 1218
+  },
+  "ING-00006": {
+   "counts": {
+    "pending": 0,
+    "processing": 0,
+    "indexed": 37,
+    "error": 3,
+    "skipped": 2,
+    "total": 42
+   },
+   "progress": 1,
+   "chunks_written": 690
+  },
+  "ING-00005": {
+   "counts": {
+    "pending": 0,
+    "processing": 0,
+    "indexed": 7,
+    "error": 0,
+    "skipped": 0,
+    "total": 7
+   },
+   "progress": 1,
+   "chunks_written": 241
+  }
+ },
+ "import_options": {
+  "source_kinds": [
+   "Upload",
+   "Zip",
+   "S3",
+   "SFTP",
+   "Directory"
+  ],
+  "directory_roots": [
+   "/srv/shared/docs"
+  ],
+  "ssh_connections": [
+   {
+    "name": "warehouse-nas",
+    "label": "Warehouse NAS"
+   }
+  ],
+  "s3_configured": true,
+  "max_files": 1000,
+  "max_file_mb": 50,
+  "allowed_extensions": [
+   ".pdf",
+   ".docx",
+   ".xlsx",
+   ".pptx",
+   ".txt",
+   ".md",
+   ".markdown",
+   ".html",
+   ".htm"
+  ]
+ },
+ "ask": {
+  "query": "how do I start a return with a prepaid label",
+  "results": [
+   {
+    "chunk_id": "c1",
+    "input_id": "KI-00001",
+    "input_title": "Returns Policy 2026.pdf",
+    "score": 0.86,
+    "metadata": {
+     "page": 2
+    },
+    "text": "We want you to be confident that the gear you buy will work for your adventures, so the return process is designed to be simple and fair. How to start a return: 1. Sign in to your account and open Order History, then choose \"Start a Return\". 2. Select the items and choose a reason. A prepaid return label will be emailed within 1 business day."
+   },
+   {
+    "chunk_id": "c2",
+    "input_id": "KI-00005",
+    "input_title": "Warranty Terms.pdf",
+    "score": 0.71,
+    "metadata": {
+     "page": 2
+    },
+    "text": "Gather your order number or receipt. If you bought in store, the receipt scan in your account is enough. A warranty specialist replies within 2 business days and issues a prepaid return label if inspection is needed. Inspection takes up to 5 business days after arrival at our service centre."
+   },
+   {
+    "chunk_id": "c3",
+    "input_id": "KI-00001",
+    "input_title": "Returns Policy 2026.pdf",
+    "score": 0.66,
+    "metadata": {
+     "page": 2,
+     "page_end": 3
+    },
+    "text": "Pack the items in the original box or a sturdy bag and drop the parcel at any carrier location. Return shipping fees: returns for exchange or because of a defect are free. For all other returns a flat $6.95 return label fee is deducted from your refund. Trail Club members return everything for free."
+   },
+   {
+    "chunk_id": "c4",
+    "input_id": "KI-00014",
+    "input_title": "Order Tracking Guide.md",
+    "score": 0.52,
+    "metadata": {
+     "chunk_index": 1
+    },
+    "text": "When will I get a tracking number? You receive an order confirmation email immediately after purchase. A second email with a tracking number is sent when your order ships, usually within 1 business day for in-stock items. How to track: sign in and open Order History to see live status."
+   }
+  ],
+  "empty_query": "do you ship to Antarctica"
+ }
+}

@@ -1,0 +1,48 @@
+{
+  "component": "huf-ios-computer-row",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "Office Mac",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "Remote control enabled",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "last_seen": {
+      "type": "text",
+      "sample": "Last seen: Oct 29, 2026 at 12:00 PM",
+      "maxLength": 56,
+      "where": "text",
+      "element": "text"
+    },
+    "mode": {
+      "type": "text",
+      "sample": "Full access",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_online": {
+      "type": "text",
+      "sample": "ONLINE",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "status_offline": {
+      "type": "text",
+      "sample": "OFFLINE",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

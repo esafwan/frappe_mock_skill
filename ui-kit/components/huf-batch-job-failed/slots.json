@@ -1,0 +1,124 @@
+{
+  "component": "huf-batch-job-failed",
+  "slots": {
+    "tracking_tight": {
+      "type": "text",
+      "sample": "Batch job",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "tracking_wide": {
+      "type": "text",
+      "sample": "Failed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Product Description Refresh",
+      "maxLength": 54,
+      "where": "text",
+      "element": "p"
+    },
+    "shrink_0": {
+      "type": "text",
+      "sample": "Agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Product Description Refresh",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_2": {
+      "type": "text",
+      "sample": "Provider",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Gemini",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_3": {
+      "type": "text",
+      "sample": "Requests in this batch",
+      "maxLength": 44,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "number",
+      "sample": "480",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_4": {
+      "type": "text",
+      "sample": "Submitted",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_5": {
+      "type": "text",
+      "sample": "Completed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_5": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "shrink_0_6": {
+      "type": "text",
+      "sample": "Estimated cost",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "Not available",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_destructive": {
+      "type": "text",
+      "sample": "The provider rejected the batch: input file exceeds the 200 MB limit. Split the schedule into smaller groups and run it again.",
+      "maxLength": 252,
+      "where": "text",
+      "element": "div"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Close",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    }
+  }
+}

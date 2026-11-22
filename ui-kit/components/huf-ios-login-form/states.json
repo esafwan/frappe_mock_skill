@@ -1,0 +1,88 @@
+{
+  "component": "huf-ios-login-form",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed",
+      "alias": "pressed"
+    },
+    "api-key": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "api-key"
+      },
+      "screenshot": "states/api-key.png",
+      "preview": "states/api-key.html",
+      "description": "API key and secret"
+    },
+    "filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true
+      },
+      "screenshot": "states/filled.png",
+      "preview": "states/filled.html",
+      "description": "email and password typed, Sign in enabled"
+    },
+    "api-key-filled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "api-key",
+        "filled": true
+      },
+      "screenshot": "states/api-key-filled.png",
+      "preview": "states/api-key-filled.html",
+      "description": "key and secret typed, Sign in enabled"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "filled": true,
+        "pressed": "cta"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

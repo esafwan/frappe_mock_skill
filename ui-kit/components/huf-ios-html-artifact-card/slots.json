@@ -1,0 +1,34 @@
+{
+  "component": "huf-ios-html-artifact-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "title": {
+      "type": "text",
+      "sample": "Receivables dashboard",
+      "maxLength": 34,
+      "where": "text",
+      "element": "text"
+    },
+    "badge": {
+      "type": "text",
+      "sample": "HTML",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "heading": {
+      "type": "text",
+      "sample": "Receivables",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "subheading": {
+      "type": "text",
+      "sample": "Open invoices by customer",
+      "maxLength": 40,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

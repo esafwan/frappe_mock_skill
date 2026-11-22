@@ -1,0 +1,922 @@
+{
+  "component": "huf-knowledge-ask",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-knowledge-ask.link-24"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Northwind Support Handbook",
+      "maxLength": 52,
+      "where": "text",
+      "element": "h1"
+    },
+    "min_w_0": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_w_0_2": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_w_0_3": {
+      "type": "text",
+      "sample": "18 documents",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "min_w_0_4": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_inherit": {
+      "type": "text",
+      "sample": "used by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-26"
+    },
+    "text_inherit_2": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-26"
+    },
+    "text_inherit_3": {
+      "type": "text",
+      "sample": "agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-26"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-27"
+    },
+    "min_w_0_5": {
+      "type": "text",
+      "sample": "These are the passages your agents would read.",
+      "maxLength": 92,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Clear search",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-31"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "PDF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Returns Policy 2026.pdf",
+      "maxLength": 46,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "page 2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "High match",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "We want you to be confident that the gear you buy will work for your adventures, so the",
+      "maxLength": 174,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "process is designed to be simple and fair.",
+      "maxLength": 84,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "How",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "to",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "start",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "a",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": ": 1. Sign in to your account and open Order History, then choose \"",
+      "maxLength": 132,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Start",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "a",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_8": {
+      "type": "text",
+      "sample": "Return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "\". 2. Select the items and choose a reason. A",
+      "maxLength": 90,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_9": {
+      "type": "text",
+      "sample": "prepaid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "label",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "will be emailed",
+      "maxLength": 30,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_12": {
+      "type": "text",
+      "sample": "with",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "in 1 business day.",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Open document",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-32"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "PDF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_13": {
+      "type": "text",
+      "sample": "Warranty Terms.pdf",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "page 2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Good match",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Gather your order number or receipt. If you bought in store, the receipt scan in your account is enough. A warranty specialist replies",
+      "maxLength": 268,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_14": {
+      "type": "text",
+      "sample": "with",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "in 2 business days and issues a",
+      "maxLength": 62,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_15": {
+      "type": "text",
+      "sample": "prepaid",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_ink_16": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_ink_17": {
+      "type": "text",
+      "sample": "label",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "if inspection is needed. Inspection takes up to 5 business days after arrival at our service centre.",
+      "maxLength": 200,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Open document",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-33"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "PDF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_18": {
+      "type": "text",
+      "sample": "Returns Policy 2026.pdf",
+      "maxLength": 46,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "pages 2–3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Good match",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Pack the items in the original box or a sturdy bag and drop the parcel at any carrier location.",
+      "maxLength": 190,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_19": {
+      "type": "text",
+      "sample": "Return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "shipping fees:",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_20": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_20": {
+      "type": "text",
+      "sample": "s for exchange or because of a defect are free. For all other",
+      "maxLength": 122,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_21": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "s a flat $6.95",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_22": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_ink_23": {
+      "type": "text",
+      "sample": "label",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "fee is deducted from your refund. Trail Club members",
+      "maxLength": 104,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_24": {
+      "type": "text",
+      "sample": "return",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "everything for free.",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Open document",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-34"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "MD",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_25": {
+      "type": "text",
+      "sample": "Order Tracking Guide.md",
+      "maxLength": 46,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "passage 2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Good match",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "When will I get a tracking number? You receive an order confirmation email immediately after purchase. A second email",
+      "maxLength": 234,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_26": {
+      "type": "text",
+      "sample": "with",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "a tracking number is sent when your order ships, usually",
+      "maxLength": 112,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_27": {
+      "type": "text",
+      "sample": "with",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "in 1 business day for in-stock items.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_28": {
+      "type": "text",
+      "sample": "How",
+      "maxLength": 20,
+      "where": "text",
+      "element": "mark"
+    },
+    "text_steel_28": {
+      "type": "text",
+      "sample": "to track: sign in and open Order History to see live status.",
+      "maxLength": 120,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_6": {
+      "type": "text",
+      "sample": "Open document",
+      "maxLength": 26,
+      "where": "text",
+      "element": "huf-knowledge-ask.button-35"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-knowledge-ask.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.button-22"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Edit name",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.button-25"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.button-28"
+    },
+    "webkit_search_cancel_button_hidden_placeholder": {
+      "type": "text",
+      "sample": "Ask a question or search these documents…",
+      "maxLength": 82,
+      "where": "attr:placeholder",
+      "element": "huf-knowledge-ask.input-29"
+    },
+    "webkit_search_cancel_button_hidden_arialabel": {
+      "type": "text",
+      "sample": "Ask a question or search these documents…",
+      "maxLength": 82,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.input-29"
+    },
+    "webkit_search_cancel_button_hidden_value": {
+      "type": "text",
+      "sample": "how do I start a return with a prepaid label",
+      "maxLength": 88,
+      "where": "attr:value",
+      "element": "huf-knowledge-ask.input-29"
+    },
+    "focus_visible_ring_ring_arialabel": {
+      "type": "text",
+      "sample": "Clear search",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.button-30"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-ask.section-36"
+    }
+  }
+}

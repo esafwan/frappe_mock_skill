@@ -1,0 +1,34 @@
+{
+  "component": "huf-android-upload-row",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "state": {
+      "type": "class",
+      "sample": "uploading",
+      "maxLength": 10,
+      "where": "class",
+      "element": "huf-android-upload-row"
+    },
+    "filename": {
+      "type": "text",
+      "sample": "invoice-INV-2041.pdf",
+      "maxLength": 36,
+      "where": "text",
+      "element": "huf-android-upload-row"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "Uploading…",
+      "maxLength": 70,
+      "where": "text",
+      "element": "huf-android-upload-row"
+    },
+    "progress": {
+      "type": "html",
+      "sample": "<i class=\"bar\"><b style=\"width:45%\"></b></i>",
+      "maxLength": 120,
+      "where": "text",
+      "element": "huf-android-upload-row"
+    }
+  }
+}

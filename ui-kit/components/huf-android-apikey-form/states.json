@@ -1,0 +1,149 @@
+{
+  "component": "huf-android-apikey-form",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "btn_state": "pressed",
+          "server": "https://acme.example.com",
+          "api_key": "ak_7f3a91c2d4e8b605",
+          "api_secret": "••••••••••••••••",
+          "server_color": "var(--ha-ink)",
+          "key_color": "var(--ha-ink)",
+          "secret_color": "var(--ha-ink)"
+        }
+      },
+      "values": {
+        "btn_state": "pressed",
+        "server": "https://acme.example.com",
+        "api_key": "ak_7f3a91c2d4e8b605",
+        "api_secret": "••••••••••••••••",
+        "server_color": "var(--ha-ink)",
+        "key_color": "var(--ha-ink)",
+        "secret_color": "var(--ha-ink)"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed",
+      "alias": "pressed"
+    },
+    "ready": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "btn_state": "",
+          "server": "https://acme.example.com",
+          "api_key": "ak_7f3a91c2d4e8b605",
+          "api_secret": "••••••••••••••••",
+          "server_color": "var(--ha-ink)",
+          "key_color": "var(--ha-ink)",
+          "secret_color": "var(--ha-ink)"
+        }
+      },
+      "values": {
+        "btn_state": "",
+        "server": "https://acme.example.com",
+        "api_key": "ak_7f3a91c2d4e8b605",
+        "api_secret": "••••••••••••••••",
+        "server_color": "var(--ha-ink)",
+        "key_color": "var(--ha-ink)",
+        "secret_color": "var(--ha-ink)"
+      },
+      "screenshot": "states/ready.png",
+      "preview": "states/ready.html",
+      "description": "ready"
+    },
+    "verifying": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "btn_state": "busy",
+          "submit_pre": "<span class=\"ha-spin w\"></span>",
+          "submit_label": "Verifying connection",
+          "server": "https://acme.example.com",
+          "api_key": "ak_7f3a91c2d4e8b605",
+          "api_secret": "••••••••••••••••",
+          "server_color": "var(--ha-ink)",
+          "key_color": "var(--ha-ink)",
+          "secret_color": "var(--ha-ink)"
+        }
+      },
+      "values": {
+        "btn_state": "busy",
+        "submit_pre": "<span class=\"ha-spin w\"></span>",
+        "submit_label": "Verifying connection",
+        "server": "https://acme.example.com",
+        "api_key": "ak_7f3a91c2d4e8b605",
+        "api_secret": "••••••••••••••••",
+        "server_color": "var(--ha-ink)",
+        "key_color": "var(--ha-ink)",
+        "secret_color": "var(--ha-ink)"
+      },
+      "screenshot": "states/verifying.png",
+      "preview": "states/verifying.html",
+      "description": "Verifying connection (spinner in button)"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "btn_state": "pressed",
+          "server": "https://acme.example.com",
+          "api_key": "ak_7f3a91c2d4e8b605",
+          "api_secret": "••••••••••••••••",
+          "server_color": "var(--ha-ink)",
+          "key_color": "var(--ha-ink)",
+          "secret_color": "var(--ha-ink)"
+        }
+      },
+      "values": {
+        "btn_state": "pressed",
+        "server": "https://acme.example.com",
+        "api_key": "ak_7f3a91c2d4e8b605",
+        "api_secret": "••••••••••••••••",
+        "server_color": "var(--ha-ink)",
+        "key_color": "var(--ha-ink)",
+        "secret_color": "var(--ha-ink)"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Sign in pressed"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "slot-preset",
+      "props": {},
+      "description": "default state: Sign in is disabled until all fields are filled (btn_state \"disabled\")"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

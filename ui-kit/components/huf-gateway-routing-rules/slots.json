@@ -1,0 +1,236 @@
+{
+  "component": "huf-gateway-routing-rules",
+  "slots": {
+    "font_medium": {
+      "type": "text",
+      "sample": "Routing rules",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "Rules are checked from top to bottom. The first match decides where a message goes.",
+      "maxLength": 166,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm": {
+      "type": "text",
+      "sample": "When a message arrives in #warehouse, send it to Order status reply flow",
+      "maxLength": 144,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm_2": {
+      "type": "text",
+      "sample": "When a message arrives in #sales-desk, send it to Lead Qualifier agent",
+      "maxLength": 140,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "When any message arrives, send it to Support Triage agent",
+      "maxLength": 114,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Add a rule",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-gateway-routing-rules.button-19"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Test a message",
+      "maxLength": 28,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "See which rule matches",
+      "maxLength": 44,
+      "where": "text",
+      "element": "huf-gateway-routing-rules.button-23"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Routing rules",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules"
+    },
+    "text_micro_arialabel": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-1"
+    },
+    "text_micro_arialabel_2": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-2"
+    },
+    "data_state_unchecked_bg_input_arialabel": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-3"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-routing-rules.button-3"
+    },
+    "text_ui_text_arialabel": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-5"
+    },
+    "text_ui_text_arialabel_2": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-6"
+    },
+    "text_micro_arialabel_3": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-7"
+    },
+    "text_micro_arialabel_4": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-8"
+    },
+    "data_state_unchecked_bg_input_arialabel_2": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-9"
+    },
+    "data_state_unchecked_bg_input_value_2": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-routing-rules.button-9"
+    },
+    "text_ui_text_arialabel_3": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-11"
+    },
+    "text_ui_text_arialabel_4": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-12"
+    },
+    "text_micro_arialabel_5": {
+      "type": "text",
+      "sample": "Move up",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-13"
+    },
+    "text_micro_arialabel_6": {
+      "type": "text",
+      "sample": "Move down",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-14"
+    },
+    "data_state_unchecked_bg_input_arialabel_3": {
+      "type": "text",
+      "sample": "Rule enabled",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-15"
+    },
+    "data_state_unchecked_bg_input_value_3": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-gateway-routing-rules.button-15"
+    },
+    "text_ui_text_arialabel_5": {
+      "type": "text",
+      "sample": "Edit rule",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-17"
+    },
+    "text_ui_text_arialabel_6": {
+      "type": "text",
+      "sample": "Delete rule",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.button-18"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "Conversation ID",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-routing-rules.input-20"
+    },
+    "text_ui_text_arialabel_7": {
+      "type": "text",
+      "sample": "Conversation ID",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.input-20"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "Sender ID",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-routing-rules.input-21"
+    },
+    "text_ui_text_arialabel_8": {
+      "type": "text",
+      "sample": "Sender ID",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.input-21"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "text",
+      "sample": "Thread ID (optional)",
+      "maxLength": 40,
+      "where": "attr:placeholder",
+      "element": "huf-gateway-routing-rules.input-22"
+    },
+    "text_ui_text_arialabel_9": {
+      "type": "text",
+      "sample": "Thread ID",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-gateway-routing-rules.input-22"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$comment": "Fictional Order Status Bot editor data (Northwind Trading). Times relative to capture clock 2026-01-01T09:00:00Z.",
+  "agent": "Order Status Bot",
+  "modified": "2025-12-29 09:00:00",
+  "workspaceDefault": { "provider": "OpenAI", "model": "gpt-4.1" },
+  "providers": [
+    { "name": "OpenAI", "provider_name": "OpenAI", "provider_brand": "openai" },
+    { "name": "Mistral", "provider_name": "Mistral", "provider_brand": "mistral" },
+    { "name": "Google", "provider_name": "Google", "provider_brand": "google" }
+  ],
+  "models": [
+    { "name": "gpt-4.1", "model_name": "GPT-4.1", "provider": "OpenAI", "modalities": "text,image" },
+    { "name": "gpt-4.1-mini", "model_name": "GPT-4.1 mini", "provider": "OpenAI", "modalities": "text,image" },
+    { "name": "mistral-large", "model_name": "Mistral Large", "provider": "Mistral", "modalities": "text" },
+    { "name": "gemini-2.5-flash", "model_name": "Gemini 2.5 Flash", "provider": "Google", "modalities": "text,image" }
+  ],
+  "sections": {
+    "general": {
+      "agent_name": "Order Status Bot", "agent_modality": "Both", "provider": "OpenAI", "model": "gpt-4.1", "temperature": 0.4, "top_p": 1, "disabled": 0,
+      "description": "Answers where-is-my-order questions on WhatsApp using the Orders table.",
+      "instructions": "You are the Northwind Trading order status assistant. Look up the customer's order by order number or phone number, tell them where it is and when it will arrive, and offer to open a support ticket if it is late.\n\nNever share another customer's details. If you cannot find the order, say so and ask for the order number.",
+      "prompt_mode": "Local",
+      "starter_prompts": [
+        { "name": "sp1", "prompt_text": "Where is my order NW-10482?" },
+        { "name": "sp2", "prompt_text": "Can I change my delivery address?" },
+        { "name": "sp3", "prompt_text": "My package is late" }
+      ],
+      "enable_prompt_caching": 1
+    },
+    "behavior": { "allow_chat": 1, "persist_conversation": 1, "persist_user_history": 1, "enable_multi_run": 0, "allow_ask_user": 1, "allow_rich_elements": 1 },
+    "voice": {}, "embed": {},
+    "permissions": { "allow_all_users": 1, "allow_guest": 0, "allowed_users": [], "allowed_roles": [] },
+    "advanced": { "context_strategy": "Summarize", "history_limit": 20, "max_turns": 10, "agent_color": "#7A5AF0", "show_tool_execution_details": 1 },
+    "tools": {
+      "agent_tool": [ { "name": "at1", "tool": "get-order" }, { "name": "at2", "tool": "search-orders" }, { "name": "at3", "tool": "send-whatsapp-reply" }, { "name": "at4", "tool": "create-support-ticket" } ],
+      "agent_mcp_server": [ { "name": "am1", "mcp_server": "carrier-tracking", "enabled": 1, "tool_count": 6 } ]
+    },
+    "knowledge": {
+      "agent_knowledge": [
+        { "name": "ak1", "knowledge_source": "Northwind Support Handbook", "mode": "Optional", "priority": 0, "max_chunks": 5, "token_budget": 2000 },
+        { "name": "ak2", "knowledge_source": "Shipping and Returns FAQ", "mode": "Mandatory", "priority": 1, "max_chunks": 5, "token_budget": 2000 },
+        { "name": "ak3", "knowledge_source": "Product Catalog", "mode": "Optional", "priority": 2, "max_chunks": 5, "token_budget": 2000 }
+      ]
+    },
+    "skills": { "agent_skill": [] }
+  },
+  "toolFunctions": [
+    { "name": "get-order", "tool_name": "Get Order", "description": "Fetch one order by order number, including status and carrier.", "tool_type": "Get Document", "types": "Get Document", "reference_doctype": "Order" },
+    { "name": "search-orders", "tool_name": "Search Orders", "description": "Find orders by customer phone number or email.", "tool_type": "Get Documents", "types": "Get Documents", "reference_doctype": "Order" },
+    { "name": "send-whatsapp-reply", "tool_name": "Send WhatsApp Reply", "description": "Reply to the customer in the current WhatsApp conversation.", "tool_type": "Custom Function", "types": "Custom Function", "service": "WhatsApp" },
+    { "name": "create-support-ticket", "tool_name": "Create Support Ticket", "description": "Open a ticket for the support team with the order attached.", "tool_type": "Create Document", "types": "Create Document", "reference_doctype": "Ticket" },
+    { "name": "update-delivery-address", "tool_name": "Update Delivery Address", "description": "Change the shipping address on an order that has not shipped.", "tool_type": "Update Document", "types": "Update Document", "reference_doctype": "Order" },
+    { "name": "get-customer", "tool_name": "Get Customer", "description": "Look up a customer record by phone or email.", "tool_type": "Get Document", "types": "Get Document", "reference_doctype": "Customer" },
+    { "name": "run-refund-agent", "tool_name": "Refund Agent", "description": "Hand the conversation to the refunds agent.", "tool_type": "Run Agent", "types": "Run Agent" }
+  ],
+  "toolTypes": [
+    { "name": "Get Document", "name1": "Get Document" }, { "name": "Get Documents", "name1": "Get Documents" }, { "name": "Create Document", "name1": "Create Document" },
+    { "name": "Update Document", "name1": "Update Document" }, { "name": "Custom Function", "name1": "Custom Function" }, { "name": "Run Agent", "name1": "Run Agent" }
+  ],
+  "mcpServers": { "carrier-tracking": { "name": "carrier-tracking", "server_name": "Carrier Tracking", "description": "Live parcel tracking across carriers", "server_url": "https://mcp.example.com/tracking", "enabled": 1 } },
+  "knowledgeSources": [
+    { "name": "Northwind Support Handbook", "source_name": "Northwind Support Handbook", "knowledge_type": "sqlite_hybrid", "status": "Ready", "disabled": 0 },
+    { "name": "Shipping and Returns FAQ", "source_name": "Shipping and Returns FAQ", "knowledge_type": "sqlite_fts", "status": "Ready", "disabled": 0 },
+    { "name": "Product Catalog", "source_name": "Product Catalog", "knowledge_type": "sqlite_hybrid", "status": "Ready", "disabled": 0 },
+    { "name": "Regional Handbooks", "source_name": "Regional Handbooks", "knowledge_type": "sqlite_hybrid", "status": "Indexing", "disabled": 0 },
+    { "name": "Old Price Lists", "source_name": "Old Price Lists", "knowledge_type": "sqlite_fts", "status": "Ready", "disabled": 0 }
+  ],
+  "knowledgeCounts": [
+    { "knowledge_source": "Northwind Support Handbook", "status": "Indexed", "count": 18 },
+    { "knowledge_source": "Shipping and Returns FAQ", "status": "Indexed", "count": 11 },
+    { "knowledge_source": "Shipping and Returns FAQ", "status": "Error", "count": 2 },
+    { "knowledge_source": "Product Catalog", "status": "Indexed", "count": 144 },
+    { "knowledge_source": "Regional Handbooks", "status": "Indexed", "count": 58 },
+    { "knowledge_source": "Regional Handbooks", "status": "Pending", "count": 54 }
+  ]
+}

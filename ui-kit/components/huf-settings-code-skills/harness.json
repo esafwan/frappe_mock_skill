@@ -1,0 +1,82 @@
+{
+  "id": "huf-settings-code-skills",
+  "name": "Settings: Code and skills (flow code switch, skill sources)",
+  "group": "huf",
+  "source": "/settings",
+  "ancestors": [
+    {
+      "tag": "html",
+      "attrs": {
+        "lang": "en"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "body",
+      "attrs": {},
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    }
+  ],
+  "bg": "rgb(251, 251, 253)",
+  "size": {
+    "w": 1440,
+    "h": 900
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "wRtl": null,
+  "rootWRtl": null,
+  "wDark": [
+    1440,
+    1440
+  ],
+  "originRtl": null,
+  "originDark": {
+    "x": 0,
+    "y": 0
+  },
+  "bgDark": "rgb(0, 0, 0)",
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf/pre-develop/index-BZUhpcW-.css",
+    "huf/huf-fonts.css"
+  ],
+  "fonts": "\"Huf Sans\", sans-serif",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Settings landing page \"Code and skills\": the \"Allow code in flows\" switch (on) and the Skill sources list with the built-in huf-skills source and one team source, plus Save.",
+    "Only system administrators can change these; others see a read-only version."
+  ],
+  "darkTheme": "midnight",
+  "app": {
+    "source": "pre-develop",
+    "route": "/settings",
+    "fixtures": [
+      "agents",
+      "settings"
+    ],
+    "time": null
+  },
+  "sprite": true,
+  "inlineCss": "@keyframes swipe-out-left { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-right { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }\n}\n@keyframes swipe-out-up { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-down { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }\n}\n@keyframes sonner-fade-in { \n  0% { opacity: 0; transform: scale(0.8); }\n  100% { opacity: 1; transform: scale(1); }\n}\n@keyframes sonner-fade-out { \n  0% { opacity: 1; transform: scale(1); }\n  100% { opacity: 0; transform: scale(0.8); }\n}\n@keyframes sonner-spin { \n  0% { opacity: 1; }\n  100% { opacity: 0.15; }\n}\n",
+  "pad": {
+    "l": 0,
+    "t": 0,
+    "r": 0,
+    "b": 0
+  },
+  "clip": null
+}

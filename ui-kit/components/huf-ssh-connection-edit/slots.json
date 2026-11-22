@@ -1,0 +1,481 @@
+{
+  "component": "huf-ssh-connection-edit",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-ssh-connection-edit.link-17"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Warehouse label printer host",
+      "maxLength": 56,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "ID SSH-0001",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Test connection",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-ssh-connection-edit.button-19"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Save Changes",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-ssh-connection-edit.button-21"
+    },
+    "text_subtitle": {
+      "type": "text",
+      "sample": "Connection details",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Specify target hostname, port, and authentication credentials",
+      "maxLength": 122,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center": {
+      "type": "text",
+      "sample": "Display name",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Friendly identifier for selecting this connection in agents.",
+      "maxLength": 120,
+      "where": "text",
+      "element": "p"
+    },
+    "text_base": {
+      "type": "text",
+      "sample": "Enable connection",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Disabled connections cannot be executed against by AI agents.",
+      "maxLength": 122,
+      "where": "text",
+      "element": "p"
+    },
+    "items_center_2": {
+      "type": "text",
+      "sample": "Host / IP address",
+      "maxLength": 34,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_3": {
+      "type": "text",
+      "sample": "Port",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_4": {
+      "type": "text",
+      "sample": "SSH username",
+      "maxLength": 24,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_5": {
+      "type": "text",
+      "sample": "Authentication method",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Private Key",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "flex_col": {
+      "type": "text",
+      "sample": "Password",
+      "maxLength": 20,
+      "where": "text",
+      "element": "option"
+    },
+    "flex_col_2": {
+      "type": "text",
+      "sample": "Private Key",
+      "maxLength": 22,
+      "where": "text",
+      "element": "option"
+    },
+    "items_center_6": {
+      "type": "text",
+      "sample": "Private key (PEM format)",
+      "maxLength": 48,
+      "where": "text",
+      "element": "label"
+    },
+    "items_center_7": {
+      "type": "text",
+      "sample": "Passphrase (optional)",
+      "maxLength": 42,
+      "where": "text",
+      "element": "label"
+    },
+    "text_subtitle_2": {
+      "type": "text",
+      "sample": "Host key security & status",
+      "maxLength": 52,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Pinned host key verification prevents MITM attacks",
+      "maxLength": 100,
+      "where": "text",
+      "element": "p"
+    },
+    "block": {
+      "type": "text",
+      "sample": "Host Key Fingerprint",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "break_all": {
+      "type": "text",
+      "sample": "SHA256:Qm5v0xk2b7R1m8pZtYc3uVdL9aHfWn4sJ6eKoT2gXyA",
+      "maxLength": 100,
+      "where": "text",
+      "element": "span"
+    },
+    "block_2": {
+      "type": "text",
+      "sample": "Host Key Type",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "ssh-ed25519",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "block_3": {
+      "type": "text",
+      "sample": "Last Test Status",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Success",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "block_4": {
+      "type": "text",
+      "sample": "Last Error",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "break_words": {
+      "type": "text",
+      "sample": "None",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Enroll / update host key",
+      "maxLength": 48,
+      "where": "text",
+      "element": "huf-ssh-connection-edit.button-32"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Connects to target server to automatically fetch and pin its public host key fingerprint.",
+      "maxLength": 178,
+      "where": "text",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Connecting...",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-ssh-connection-edit.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-ssh-connection-edit.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-ssh-connection-edit.button-15"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-ssh-connection-edit.button-18"
+    },
+    "text_ui_text_placeholder": {
+      "type": "text",
+      "sample": "e.g. Production Web Worker 01",
+      "maxLength": 58,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.input-22"
+    },
+    "text_ui_text_value": {
+      "type": "text",
+      "sample": "Warehouse label printer host",
+      "maxLength": 56,
+      "where": "attr:value",
+      "element": "huf-ssh-connection-edit.input-22"
+    },
+    "data_state_unchecked_bg_input_value": {
+      "type": "text",
+      "sample": "on",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-ssh-connection-edit.button-23"
+    },
+    "text_ui_text_placeholder_2": {
+      "type": "text",
+      "sample": "192.168.1.10 or server.example.com",
+      "maxLength": 68,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.input-25"
+    },
+    "text_ui_text_value_2": {
+      "type": "text",
+      "sample": "10.20.4.15",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-ssh-connection-edit.input-25"
+    },
+    "text_ui_text_placeholder_3": {
+      "type": "number",
+      "sample": "22",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.input-26"
+    },
+    "text_ui_text_value_3": {
+      "type": "number",
+      "sample": "22",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-ssh-connection-edit.input-26"
+    },
+    "text_ui_text_placeholder_4": {
+      "type": "text",
+      "sample": "root or ubuntu or deploy",
+      "maxLength": 48,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.input-27"
+    },
+    "text_ui_text_value_4": {
+      "type": "text",
+      "sample": "deploy",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "huf-ssh-connection-edit.input-27"
+    },
+    "flex_col_value": {
+      "type": "text",
+      "sample": "Password",
+      "maxLength": 20,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "flex_col_value_2": {
+      "type": "text",
+      "sample": "Private Key",
+      "maxLength": 22,
+      "where": "attr:value",
+      "element": "option"
+    },
+    "min_h_120px_placeholder": {
+      "type": "text",
+      "sample": "Leave blank to keep existing private key",
+      "maxLength": 80,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.textarea-30"
+    },
+    "text_ui_text_placeholder_5": {
+      "type": "text",
+      "sample": "Passphrase for encrypted private key",
+      "maxLength": 72,
+      "where": "attr:placeholder",
+      "element": "huf-ssh-connection-edit.input-31"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-ssh-connection-edit.section-33"
+    }
+  }
+}

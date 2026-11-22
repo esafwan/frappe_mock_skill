@@ -1,0 +1,27 @@
+{
+  "component": "huf-android-attachment-chip",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "name": {
+      "type": "text",
+      "sample": "invoice-INV-2041.pdf",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-android-attachment-chip"
+    },
+    "state_class": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-attachment-chip"
+    },
+    "detail": {
+      "type": "text",
+      "sample": "",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-android-attachment-chip"
+    }
+  }
+}

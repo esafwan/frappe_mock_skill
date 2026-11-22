@@ -1,0 +1,117 @@
+{
+  "component": "huf-ios-composer",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "empty",
+        "pressed": "attach"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "attach button pressed",
+      "alias": "pressed"
+    },
+    "draft": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "draft"
+      },
+      "screenshot": "states/draft.png",
+      "preview": "states/draft.html",
+      "description": "drafted message, send arrow"
+    },
+    "busy": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "busy"
+      },
+      "screenshot": "states/busy.png",
+      "preview": "states/busy.html",
+      "description": "response streaming, stop button"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "busy"
+      },
+      "screenshot": "states/busy.png",
+      "preview": "states/busy.html",
+      "description": "response streaming, stop button",
+      "alias": "busy"
+    },
+    "whitespace": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "whitespace"
+      },
+      "screenshot": "states/whitespace.png",
+      "preview": "states/whitespace.html",
+      "description": "whitespace-only draft, send disabled"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "disabled"
+      },
+      "screenshot": "states/disabled.png",
+      "preview": "states/disabled.html",
+      "description": "unavailable agent"
+    },
+    "no-files": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "no-files"
+      },
+      "screenshot": "states/no-files.png",
+      "preview": "states/no-files.html",
+      "description": "agent disallows files: attach dimmed"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "disabled"
+      },
+      "screenshot": "states/disabled.png",
+      "preview": "states/disabled.html",
+      "description": "unavailable agent",
+      "alias": "disabled"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "mode": "empty",
+        "pressed": "attach"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "attach button pressed"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

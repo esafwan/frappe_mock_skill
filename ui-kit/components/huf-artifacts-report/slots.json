@@ -1,0 +1,649 @@
+{
+  "component": "huf-artifacts-report",
+  "slots": {
+    "sr_only": {
+      "type": "text",
+      "sample": "Collapse conversation rail",
+      "maxLength": 52,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_chat_row_hover": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.link-2"
+    },
+    "hover_bg_chat_row_hover_2": {
+      "type": "text",
+      "sample": "New",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.link-3"
+    },
+    "hover_bg_chat_row_hover_3": {
+      "type": "text",
+      "sample": "Projects",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.link-4"
+    },
+    "hover_bg_chat_row_hover_4": {
+      "type": "text",
+      "sample": "Artifacts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.link-5"
+    },
+    "hover_bg_chat_row_hover_5": {
+      "type": "text",
+      "sample": "Scheduled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.link-6"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Recents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-7"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Q4 orders over $5,000",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_2": {
+      "type": "text",
+      "sample": "Q4 orders over $5,000",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "text_white": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_13px": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Q4 orders over $5,000",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "gpt-4.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Conversation actions",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_3": {
+      "type": "text",
+      "sample": "Show analytics",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_4": {
+      "type": "text",
+      "sample": "Show artifacts",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "last_child_mb_0": {
+      "type": "text",
+      "sample": "Show me Q4 sales orders over $5,000 as a report.",
+      "maxLength": 96,
+      "where": "text",
+      "element": "p"
+    },
+    "text_foreground": {
+      "type": "text",
+      "sample": "render_frappe_view",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground_50": {
+      "type": "text",
+      "sample": "·",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "done",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_primary": {
+      "type": "text",
+      "sample": "Check for a procedure",
+      "maxLength": 42,
+      "where": "text",
+      "element": "huf-artifacts-report.button-17"
+    },
+    "last_child_mb_0_2": {
+      "type": "text",
+      "sample": "Six Q4 orders were above $5,000, worth",
+      "maxLength": 76,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold": {
+      "type": "currency",
+      "sample": "$48,920",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "last_child_mb_0_3": {
+      "type": "text",
+      "sample": "together. Bella Cucina and Harbor Deli each placed two.",
+      "maxLength": 110,
+      "where": "text",
+      "element": "p"
+    },
+    "truncate_3": {
+      "type": "text",
+      "sample": "Q4 sales orders over $5,000",
+      "maxLength": 54,
+      "where": "text",
+      "element": "p"
+    },
+    "h_control_sm": {
+      "type": "text",
+      "sample": "Preview",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-19"
+    },
+    "h_control_sm_2": {
+      "type": "text",
+      "sample": "Source",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-20"
+    },
+    "sr_only_5": {
+      "type": "text",
+      "sample": "Copy content",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_6": {
+      "type": "text",
+      "sample": "Download file",
+      "maxLength": 26,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_7": {
+      "type": "text",
+      "sample": "Enter fullscreen",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink_2": {
+      "type": "text",
+      "sample": "Open in Desk",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-artifacts-report.link-24"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "Filters",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_5": {
+      "type": "text",
+      "sample": "Date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "label"
+    },
+    "text_steel_soft_6": {
+      "type": "text",
+      "sample": "Total (USD)",
+      "maxLength": 22,
+      "where": "text",
+      "element": "label"
+    },
+    "hover_bg_paper_deep": {
+      "type": "text",
+      "sample": "Order",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-29"
+    },
+    "hover_bg_paper_deep_2": {
+      "type": "text",
+      "sample": "Customer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-30"
+    },
+    "hover_bg_paper_deep_3": {
+      "type": "text",
+      "sample": "Date",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-artifacts-report.button-31"
+    },
+    "hover_bg_paper_deep_4": {
+      "type": "text",
+      "sample": "Total (USD)",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-artifacts-report.button-32"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "SO-2025-1183",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Bella Cucina",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "date",
+      "sample": "2025-10-14",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_5": {
+      "type": "number",
+      "sample": "9840.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_6": {
+      "type": "text",
+      "sample": "SO-2025-1207",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_7": {
+      "type": "text",
+      "sample": "Harbor Deli",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_8": {
+      "type": "date",
+      "sample": "2025-10-29",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_9": {
+      "type": "number",
+      "sample": "7215.50",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_10": {
+      "type": "text",
+      "sample": "SO-2025-1266",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_11": {
+      "type": "text",
+      "sample": "Green Fork Catering",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_12": {
+      "type": "date",
+      "sample": "2025-11-12",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_13": {
+      "type": "number",
+      "sample": "8460.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_14": {
+      "type": "text",
+      "sample": "SO-2025-1301",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_15": {
+      "type": "text",
+      "sample": "Bella Cucina",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_16": {
+      "type": "date",
+      "sample": "2025-11-27",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_17": {
+      "type": "number",
+      "sample": "6930.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_18": {
+      "type": "text",
+      "sample": "SO-2025-1342",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_19": {
+      "type": "text",
+      "sample": "Harbor Deli",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_20": {
+      "type": "date",
+      "sample": "2025-12-09",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_21": {
+      "type": "number",
+      "sample": "5875.00",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_22": {
+      "type": "text",
+      "sample": "SO-2025-1378",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_23": {
+      "type": "text",
+      "sample": "Old Mill Bakery",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_24": {
+      "type": "date",
+      "sample": "2025-12-18",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_25": {
+      "type": "number",
+      "sample": "10599.50",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_7": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_8": {
+      "type": "text",
+      "sample": "record(s)",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_26": {
+      "type": "text",
+      "sample": "Outputs",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "truncate_4": {
+      "type": "text",
+      "sample": "Q4 sales orders over $5,000",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate_5": {
+      "type": "text",
+      "sample": "Q4 big orders summary",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "gpt-4.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_9": {
+      "type": "text",
+      "sample": "local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_10": {
+      "type": "text",
+      "sample": "AI output can be inaccurate. Double check important info.",
+      "maxLength": 114,
+      "where": "text",
+      "element": "div"
+    },
+    "hover_text_ink_arialabel": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-15"
+    },
+    "rounded_sm_placeholder": {
+      "type": "text",
+      "sample": "Any",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-artifacts-report.input-25"
+    },
+    "rounded_sm_placeholder_2": {
+      "type": "text",
+      "sample": "Any",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-artifacts-report.input-26"
+    },
+    "rounded_sm_placeholder_3": {
+      "type": "text",
+      "sample": "Any",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-artifacts-report.input-27"
+    },
+    "rounded_sm_placeholder_4": {
+      "type": "text",
+      "sample": "Any",
+      "maxLength": 20,
+      "where": "attr:placeholder",
+      "element": "huf-artifacts-report.input-28"
+    },
+    "hover_text_ink_arialabel_2": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-33"
+    },
+    "hover_text_ink_arialabel_3": {
+      "type": "text",
+      "sample": "Mark response helpful",
+      "maxLength": 42,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-34"
+    },
+    "hover_text_ink_arialabel_4": {
+      "type": "text",
+      "sample": "Mark response not helpful",
+      "maxLength": 50,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-35"
+    },
+    "hover_text_ink_title": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "huf-artifacts-report.button-36"
+    },
+    "hover_text_ink_arialabel_5": {
+      "type": "text",
+      "sample": "Regenerate response",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-36"
+    },
+    "hover_text_ink_title_2": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "huf-artifacts-report.link-37"
+    },
+    "hover_text_ink_arialabel_6": {
+      "type": "text",
+      "sample": "View context & cache metrics",
+      "maxLength": 56,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.link-37"
+    },
+    "disabled_opacity_50_placeholder": {
+      "type": "text",
+      "sample": "Write a message…",
+      "maxLength": 32,
+      "where": "attr:placeholder",
+      "element": "huf-artifacts-report.textarea-40"
+    },
+    "disabled_opacity_50_arialabel": {
+      "type": "text",
+      "sample": "Attach file",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-42"
+    },
+    "shrink_0_title": {
+      "type": "text",
+      "sample": "Local browser dictation (not audited by server STT)",
+      "maxLength": 102,
+      "where": "attr:title",
+      "element": "huf-artifacts-report.button-43"
+    },
+    "hover_text_ink_title_3": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "huf-artifacts-report.button-44"
+    },
+    "hover_text_ink_arialabel_7": {
+      "type": "text",
+      "sample": "Talk to this agent",
+      "maxLength": 36,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-44"
+    },
+    "text_paper_arialabel": {
+      "type": "text",
+      "sample": "Send message",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.button-45"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-artifacts-report.section-46"
+    }
+  }
+}

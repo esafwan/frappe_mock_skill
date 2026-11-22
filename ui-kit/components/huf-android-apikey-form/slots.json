@@ -1,0 +1,97 @@
+{
+  "component": "huf-android-apikey-form",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "lead": {
+      "type": "text",
+      "sample": "Sign in to your workspace.",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "hint": {
+      "type": "text",
+      "sample": "Enter your server, API key, and API secret to continue.",
+      "maxLength": 70,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "locale": {
+      "type": "text",
+      "sample": "System",
+      "maxLength": 10,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "btn_state": {
+      "type": "class",
+      "sample": "disabled",
+      "maxLength": 8,
+      "where": "class",
+      "element": "huf-android-apikey-form"
+    },
+    "server": {
+      "type": "text",
+      "sample": "Server",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "api_key": {
+      "type": "text",
+      "sample": "API key",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "api_secret": {
+      "type": "text",
+      "sample": "API secret",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "server_color": {
+      "type": "css",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "key_color": {
+      "type": "css",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "secret_color": {
+      "type": "css",
+      "sample": "var(--ha-secondary)",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "eye": {
+      "type": "html",
+      "sample": "<svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z\"/></svg>",
+      "maxLength": 400,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "submit_pre": {
+      "type": "html",
+      "sample": "",
+      "maxLength": 200,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    },
+    "submit_label": {
+      "type": "text",
+      "sample": "Sign in",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-android-apikey-form"
+    }
+  }
+}

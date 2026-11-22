@@ -1,0 +1,121 @@
+{
+  "component": "huf-desktop-agent-selector",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":hover",
+      "target": "huf-desktop-agent-selector.row",
+      "changes": [
+        {
+          "element": "huf-desktop-agent-selector.search",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-activedescendant": "radix-_r_m_"
+          }
+        },
+        {
+          "element": "huf-desktop-agent-selector.div-3",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-activedescendant": "radix-_r_m_"
+          }
+        },
+        {
+          "element": "#path:18",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-selected": "false",
+            "data-selected": "false"
+          }
+        },
+        {
+          "element": "huf-desktop-agent-selector.row",
+          "addClass": [],
+          "removeClass": [],
+          "attrs": {
+            "aria-selected": "true",
+            "data-selected": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(240, 240, 244)"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "agent row hover"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":focus",
+      "target": "huf-desktop-agent-selector.search",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-desktop-agent-selector.row",
+      "changes": [],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "no distinct pressed style; a press selects the agent and closes the picker, so this is the hover look"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-desktop-agent-selector.search",
+      "changes": [
+        {
+          "element": "huf-desktop-agent-selector.search",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "text",
+          "to": "not-allowed"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    }
+  }
+}

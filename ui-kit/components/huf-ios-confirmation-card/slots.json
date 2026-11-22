@@ -1,0 +1,111 @@
+{
+  "component": "huf-ios-confirmation-card",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "action": {
+      "type": "text",
+      "sample": "Send WhatsApp campaign",
+      "maxLength": 36,
+      "where": "text",
+      "element": "text"
+    },
+    "state_pending": {
+      "type": "text",
+      "sample": "Pending",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "state_sending": {
+      "type": "text",
+      "sample": "Sending…",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "state_approved": {
+      "type": "text",
+      "sample": "Done",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "state_denied": {
+      "type": "text",
+      "sample": "Denied",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "recipients_label": {
+      "type": "text",
+      "sample": "Recipients",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "recipients": {
+      "type": "text",
+      "sample": "128",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "template_label": {
+      "type": "text",
+      "sample": "Template",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "template": {
+      "type": "text",
+      "sample": "payment_reminder_v2",
+      "maxLength": 31,
+      "where": "text",
+      "element": "text"
+    },
+    "channel_label": {
+      "type": "text",
+      "sample": "Channel",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "channel": {
+      "type": "text",
+      "sample": "WhatsApp",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "sample": {
+      "type": "text",
+      "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+      "maxLength": 101,
+      "where": "text",
+      "element": "text"
+    },
+    "expires": {
+      "type": "text",
+      "sample": "Expires in 8:55",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "deny": {
+      "type": "text",
+      "sample": "Deny",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    },
+    "approve": {
+      "type": "text",
+      "sample": "Approve",
+      "maxLength": 24,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "component": "huf-android-upload-row",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no pressed variant for this component"
+    },
+    "queued": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "queued",
+          "detail": "Ready to upload",
+          "progress": ""
+        }
+      },
+      "values": {
+        "state": "queued",
+        "detail": "Ready to upload",
+        "progress": ""
+      },
+      "screenshot": "states/queued.png",
+      "preview": "states/queued.html",
+      "description": "queued"
+    },
+    "uploaded": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "uploaded",
+          "detail": "Uploaded and ready to send",
+          "progress": ""
+        }
+      },
+      "values": {
+        "state": "uploaded",
+        "detail": "Uploaded and ready to send",
+        "progress": ""
+      },
+      "screenshot": "states/uploaded.png",
+      "preview": "states/uploaded.html",
+      "description": "uploaded"
+    },
+    "failed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "failed",
+          "detail": "Could not upload this file.",
+          "progress": ""
+        }
+      },
+      "values": {
+        "state": "failed",
+        "detail": "Could not upload this file.",
+        "progress": ""
+      },
+      "screenshot": "states/failed.png",
+      "preview": "states/failed.html",
+      "description": "failed"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "failed",
+          "detail": "Could not upload this file.",
+          "progress": ""
+        }
+      },
+      "values": {
+        "state": "failed",
+        "detail": "Could not upload this file.",
+        "progress": ""
+      },
+      "screenshot": "states/failed.png",
+      "preview": "states/failed.html",
+      "description": "failed",
+      "alias": "failed"
+    },
+    "half-done": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "progress": "<i class=\"bar\"><b style=\"width:72%\"></b></i>"
+        }
+      },
+      "values": {
+        "progress": "<i class=\"bar\"><b style=\"width:72%\"></b></i>"
+      },
+      "screenshot": "states/half-done.png",
+      "preview": "states/half-done.html",
+      "description": "animate the bar width 0-100%"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

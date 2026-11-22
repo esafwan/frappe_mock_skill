@@ -40,20 +40,20 @@ const WHEN = {
 };
 const manifest = { name: 'ury-ui-kit', version: '1.0.0', viewport: { w: 1440, h: 900, deviceScaleFactor: 2 }, modes: ['light', 'dark', 'rtl'], systems: {}, components: {}, pages: {}, data: { menus: [], universals: 'data/universals/index.json' } };
 const reg = JSON.parse(fs.readFileSync(ROOT + 'systems/registry.json')); manifest.systems = reg.systems; manifest.defaultSystem = reg.default;
-for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
-const groupToSystem = { desk: 'frappe-desk', pos: 'ury-pos' };
+for (const sid of Object.keys(reg.systems)) { const p = ROOT + reg.systems[sid].path; if (p.endsWith('.json') && fs.existsSync(p)) { const sj = JSON.parse(fs.readFileSync(p)); manifest.systems[sid] = { ...reg.systems[sid], name: sj.name, componentGroup: sj.componentGroup }; } }
+const groupToSystem = { desk: 'frappe-desk', pos: 'ury-pos', huf: 'huf' };
 for (const id of fs.readdirSync(ROOT + 'components').sort()) {
-  const dir = ROOT + 'components/' + id + '/'; if (!fs.existsSync(dir + 'harness.json')) continue;
+  const dir = ROOT + 'components/' + id + '/'; if (!['harness.json', 'measurements.json', 'slots.json', 'states.json', 'component.html'].every((f) => fs.existsSync(dir + f))) continue; // skip half-written components (parallel workers)
   const h = JSON.parse(fs.readFileSync(dir + 'harness.json')); const slots = JSON.parse(fs.readFileSync(dir + 'slots.json')).slots;
   const st = JSON.parse(fs.readFileSync(dir + 'states.json')).states; const ms = JSON.parse(fs.readFileSync(dir + 'measurements.json'));
   const states = Object.fromEntries(Object.entries(st).map(([k, v]) => [k, v.applicable ? (v.mechanism || 'yes') : 'n/a']));
   const bindable = fs.existsSync(dir + 'bindings.json');
   manifest.components[id] = { id, name: h.name, system: groupToSystem[h.group] || h.group, group: h.group, path: `components/${id}/`,
-    files: { html: 'component.html', states: 'states.json', slots: 'slots.json', screenshot: 'screenshot.png', screenshotDark: 'screenshot.dark.png', screenshotRtl: 'screenshot.rtl.png', measurements: 'measurements.json', preview: 'preview.html' },
+    files: { html: 'component.html', states: 'states.json', slots: 'slots.json', screenshot: 'screenshot.png', ...(fs.existsSync(dir + 'screenshot.dark.png') ? { screenshotDark: 'screenshot.dark.png' } : {}), ...(fs.existsSync(dir + 'screenshot.rtl.png') ? { screenshotRtl: 'screenshot.rtl.png' } : {}), measurements: 'measurements.json', preview: 'preview.html' }, modes: h.modes || ['light', 'dark', 'rtl'], app: h.app,
     contentHash: crypto.createHash('sha1').update(fs.readFileSync(dir + 'component.html')).digest('hex').slice(0, 12), size: { w: +h.size.w.toFixed(1), h: +h.size.h.toFixed(1) }, css: h.css, slotCount: Object.keys(slots).length, slots: Object.fromEntries(Object.entries(slots).map(([k, v]) => [k, { type: v.type, sample: v.sample, maxLength: v.maxLength }])),
     states, targets: ms.elements.map(e => ({ id: e.id, tag: e.tag, interactive: e.interactive, box: { x: e.x, y: e.y, w: e.w, h: e.h } })), dataBindings: bindable ? `components/${id}/bindings.json` : null };
   // README
-  const [what, when] = WHEN[id] || [h.name, 'Use when a scene needs this element.'];
+  const [what, when] = WHEN[id] || h.describe || [h.name, 'Use when a scene needs this element.'];
   const rank = Object.entries(slots).filter(([, v]) => v.where === 'text' && v.sample.trim().length > 1).sort((a, b) => (b[1].type !== 'text') - (a[1].type !== 'text') || b[1].sample.length - a[1].sample.length).slice(0, 6);
   const readme = `# ${h.name}  \`${id}\`
 
@@ -67,7 +67,7 @@ ${what}
 
 **Targeting:** root \`data-ui="${id}"\`; ${ms.elements.filter(e => e.interactive).length} interactive elements with measured boxes in \`measurements.json\` (e.g. ${ms.elements.filter(e => e.interactive).slice(0, 3).map(e => '`' + e.id + '`').join(', ') || 'none'}).
 
-**Render:** \`node tools/render.mjs ${id} --locale ar-AE/AED --theme dark\` · open \`preview.html\` (JS-free). Needs ${h.css.join(', ')} from \`tokens/css/\` and the desk icon sprite (inlined in preview).
+${h.group === 'huf' ? `**Render:** \`node tools/render.mjs ${id} --set slot=value\` · open \`preview.html\` (JS-free, light only: HUF has no dark theme or RTL). Needs ${h.css.join(', ')} from \`tokens/css/\`; icons are inline SVG. Captured from HUF \`${h.app?.source}\` route \`${h.app?.route}\` with fixtures [${['base', ...(h.app?.fixtures || [])].join(', ')}].` : `**Render:** \`node tools/render.mjs ${id} --locale ar-AE/AED --theme dark\` · open \`preview.html\` (JS-free). Needs ${h.css.join(', ')} from \`tokens/css/\` and the desk icon sprite (inlined in preview).`}
 `;
   fs.writeFileSync(dir + 'README.md', readme);
 }

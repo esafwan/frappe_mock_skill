@@ -1,0 +1,44 @@
+{
+  "component": "huf-android-screen-chats-drawer",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "pressed variants live on the components (see composedOf)"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "sheet-open": {
+      "applicable": true,
+      "mechanism": "screen",
+      "description": "this screen shows chats-drawer open; the closed pose is the chats-drawer component state \"closed\" (translate off-screen)",
+      "component": "huf-android-chats-drawer",
+      "closedState": "closed"
+    }
+  }
+}

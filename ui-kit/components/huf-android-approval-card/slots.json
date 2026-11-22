@@ -1,0 +1,62 @@
+{
+  "component": "huf-android-approval-card",
+  "note": "html-typed slots take markup; class-typed slots take a CSS class token; set typing:true slots character by character for typing animation",
+  "slots": {
+    "state": {
+      "type": "class",
+      "sample": "",
+      "maxLength": 12,
+      "where": "class",
+      "element": "huf-android-approval-card"
+    },
+    "title": {
+      "type": "text",
+      "sample": "Send WhatsApp broadcast",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "status": {
+      "type": "text",
+      "sample": "Pending",
+      "maxLength": 14,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "recipients": {
+      "type": "text",
+      "sample": "120",
+      "maxLength": 6,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "template": {
+      "type": "text",
+      "sample": "promo_nov",
+      "maxLength": 30,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "channel": {
+      "type": "text",
+      "sample": "whatsapp",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "sample": {
+      "type": "text",
+      "sample": "Hi Asha, ...",
+      "maxLength": 90,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    },
+    "footer": {
+      "type": "html",
+      "sample": "<div class=\"acts\"><div class=\"ha-btn-approve\" data-ui=\"huf-android-approval-card.approve\">Approve</div><div class=\"ha-btn-deny\" data-ui=\"huf-android-approval-card.deny\">Deny</div></div>",
+      "maxLength": 600,
+      "where": "text",
+      "element": "huf-android-approval-card"
+    }
+  }
+}

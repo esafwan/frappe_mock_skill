@@ -1,0 +1,31 @@
+{
+ "id": "huf-desktop",
+ "name": "Huf Desktop app UI (Electron + React)",
+ "status": "area",
+ "partOf": "huf",
+ "source": {
+  "app": "huf_desktop",
+  "repo": "https://github.com/tridz-dev/huf_desktop",
+  "commit": "520856539406709cdec85c8f5c6d742d57aa9ddd",
+  "build": "scripts/huf-desktop/build.sh (renderer only: git archive HEAD -> npm ci --ignore-scripts -> vite build with scripts/huf-desktop/renderer.vite.config.mjs into .huf-cache/dist-desktop), then scripts/huf-desktop/tokens.mjs"
+ },
+ "componentGroup": "huf",
+ "componentPrefix": "huf-desktop-",
+ "captureMode": {
+  "kind": "app",
+  "harness": "scripts/huf-desktop/app.mjs (spec.harness = 'huf-desktop'; same openHuf/goHuf/liveCss API as scripts/huf/app.mjs)",
+  "how": "The real renderer served from the dist on http://desktop.mock; the Electron preload bridges (window.desktop, window.approvalPanel) are replaced before the bundle runs by scripts/huf-desktop/bridge.js; the Huf server (https://northwind.huf.example) is answered by scripts/huf-desktop/server.mjs; everything else is aborted. No Electron, no main process, no network.",
+  "fixtures": "data/huf/desktop.json (bridge: connection, workspaces, permission modes, executor, skills, MCP servers, policy; server: agents, conversations, messages; approval: panel states)",
+  "routes": "hash routes '#/chat/<conversation>', '#/settings/<category>'; the approval panel window is 'approval/index.html'",
+  "clock": "2026-01-01T09:00:00Z"
+ },
+ "variableSystem": {
+  "kind": "css-custom-properties on :root (Tailwind v4 theme reads them)",
+  "themeAttribute": { "light": null, "dark": "class=\"dark\" + data-theme=\"dark\" on <html> (previews use data-theme=\"dark\", which the CSS treats identically)" }
+ },
+ "tokens": {
+  "css": "tokens/css/huf-desktop/build/*.css (exact build CSS) + tokens/css/huf-desktop/huf-desktop-fonts.css",
+  "fonts": "Inter and Geist Mono pinned (tokens/fonts, SIL OFL); fontsource and KaTeX files of the build in tokens/css/huf-desktop/fonts/"
+ },
+ "modes": ["light", "dark"]
+}

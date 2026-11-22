@@ -1,0 +1,20 @@
+{
+  "component": "huf-ios-assistant-text",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "text": {
+      "type": "text",
+      "sample": "Three invoices are open, totalling AED 412,900. The oldest is 47 days past terms.",
+      "maxLength": 130,
+      "where": "text",
+      "element": "text"
+    },
+    "note": {
+      "type": "text",
+      "sample": "Choose another agent to start chatting.",
+      "maxLength": 63,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

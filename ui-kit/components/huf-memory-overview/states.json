@@ -1,0 +1,89 @@
+{
+  "component": "huf-memory-overview",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":hover",
+      "target": "main .grid > div:first-child",
+      "changes": [],
+      "computedStyleDelta": {
+        "boxShadow": {
+          "from": "none",
+          "to": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+        }
+      },
+      "screenshot": "states/hover.png",
+      "description": "hover on the \"Prefers weekly summaries on Monday\" card (shadow)"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":focus",
+      "target": "huf-memory-overview.policies",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 510,
+          "after": 571
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "borderColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(122, 90, 240) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png",
+      "description": "Policies tab focused"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "css-pseudo",
+      "pseudo": ":active",
+      "target": "huf-memory-overview.link-1",
+      "changes": [],
+      "computedStyleDelta": {
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(255, 255, 255)"
+        }
+      },
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "capture failed: locator.evaluate: Timeout 15000ms exceeded."
+    },
+    "error": {
+      "applicable": false,
+      "reason": "page-level errors are toasts"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "spinner flashes < 100 ms with mocked data"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "capture huf-memory-overview-empty"
+    }
+  }
+}

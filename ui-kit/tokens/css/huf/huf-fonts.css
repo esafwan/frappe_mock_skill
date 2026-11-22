@@ -1,0 +1,11 @@
+/* HUF fonts, bundled. HUF (pre-develop) declares system stacks: --body/--display = -apple-system, 'SF Pro Text', 'Helvetica Neue', ...
+   and --mono = ui-monospace, 'SF Mono', Menlo. SF Pro / SF Mono cannot be redistributed and resolve to whatever the host has,
+   so captures and previews pin them to Inter (closest open SF Pro look-alike) and Geist Mono (SIL OFL 1.1, see ../../fonts/LICENSES.md).
+   The capture harness injects this same file into the live app, so live screenshots and JS-free previews use identical glyphs.
+   Unlayered :root wins over HUF's @layer base :root declarations. */
+@font-face{font-family:"Huf Sans";font-style:normal;font-weight:100 900;font-display:block;src:url(../../fonts/InterVariable.woff2) format("woff2")}
+@font-face{font-family:"Huf Sans";font-style:italic;font-weight:100 900;font-display:block;src:url(../../fonts/InterVariable-Italic.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:400;font-display:block;src:url(../../fonts/geist-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:500;font-display:block;src:url(../../fonts/geist-mono-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Huf Mono";font-style:normal;font-weight:600 700;font-display:block;src:url(../../fonts/geist-mono-latin-600-normal.woff2) format("woff2")}
+:root{--display:"Huf Sans",sans-serif;--body:"Huf Sans",sans-serif;--mono:"Huf Mono",monospace}

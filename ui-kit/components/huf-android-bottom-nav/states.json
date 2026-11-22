@@ -1,0 +1,168 @@
+{
+  "component": "huf-android-bottom-nav",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "no pressed variant for this component"
+    },
+    "agents-pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "agents_on": "pressed"
+        }
+      },
+      "values": {
+        "agents_on": "pressed"
+      },
+      "screenshot": "states/agents-pressed.png",
+      "preview": "states/agents-pressed.html",
+      "description": "Agents tab pressed (ripple)"
+    },
+    "chat-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "chat_on": "on",
+          "projects_on": "",
+          "agents_on": "",
+          "account_on": "",
+          "automations_on": ""
+        }
+      },
+      "values": {
+        "chat_on": "on",
+        "projects_on": "",
+        "agents_on": "",
+        "account_on": "",
+        "automations_on": ""
+      },
+      "screenshot": "states/chat-active.png",
+      "preview": "states/chat-active.html",
+      "description": "chat-active"
+    },
+    "projects-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "chat_on": "",
+          "projects_on": "on",
+          "agents_on": "",
+          "account_on": "",
+          "automations_on": ""
+        }
+      },
+      "values": {
+        "chat_on": "",
+        "projects_on": "on",
+        "agents_on": "",
+        "account_on": "",
+        "automations_on": ""
+      },
+      "screenshot": "states/projects-active.png",
+      "preview": "states/projects-active.html",
+      "description": "projects-active"
+    },
+    "agents-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "chat_on": "",
+          "projects_on": "",
+          "agents_on": "on",
+          "account_on": "",
+          "automations_on": ""
+        }
+      },
+      "values": {
+        "chat_on": "",
+        "projects_on": "",
+        "agents_on": "on",
+        "account_on": "",
+        "automations_on": ""
+      },
+      "screenshot": "states/agents-active.png",
+      "preview": "states/agents-active.html",
+      "description": "agents-active"
+    },
+    "account-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "chat_on": "",
+          "projects_on": "",
+          "agents_on": "",
+          "account_on": "on",
+          "automations_on": ""
+        }
+      },
+      "values": {
+        "chat_on": "",
+        "projects_on": "",
+        "agents_on": "",
+        "account_on": "on",
+        "automations_on": ""
+      },
+      "screenshot": "states/account-active.png",
+      "preview": "states/account-active.html",
+      "description": "account-active"
+    },
+    "automations-active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "chat_on": "",
+          "projects_on": "",
+          "agents_on": "",
+          "account_on": "",
+          "automations_on": "on"
+        }
+      },
+      "values": {
+        "chat_on": "",
+        "projects_on": "",
+        "agents_on": "",
+        "account_on": "",
+        "automations_on": "on"
+      },
+      "screenshot": "states/automations-active.png",
+      "preview": "states/automations-active.html",
+      "description": "automations-active"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

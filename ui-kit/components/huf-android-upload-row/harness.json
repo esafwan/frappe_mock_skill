@@ -1,0 +1,39 @@
+{
+  "id": "huf-android-upload-row",
+  "name": "Upload row (file icon, filename, status, progress bar, remove) above the composer",
+  "group": "huf-android",
+  "static": true,
+  "source": "static",
+  "ancestors": [],
+  "bg": null,
+  "size": {
+    "w": 412,
+    "h": 64
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf-android/fonts.css",
+    "huf-android/tokens.css",
+    "huf-android/components.css"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Upload row (file icon, filename, status, progress bar, remove) above the composer",
+    "Compose UploadRow: mono filename + mono status line, 2 dp accent progress while uploading. state: \"uploading\" | \"queued\" | \"uploaded\" | \"failed\" (red icon/text, no bar)."
+  ],
+  "darkTheme": "dark",
+  "dsf": 2,
+  "clip": null,
+  "pad": null,
+  "sprite": false,
+  "width": 412,
+  "height": null,
+  "props": {}
+}

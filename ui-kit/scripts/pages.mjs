@@ -1,7 +1,7 @@
 // node scripts/pages.mjs build [ids]   -> pages/<id>.html assembled ONLY from components/<id>/component.html
 // node scripts/pages.mjs verify [ids]  -> screenshot composed page (JS off) vs live page at 1440x900@2x, fail > 0.5%
 import fs from 'fs'; import path from 'path'; import { chromium } from 'playwright'; import { PNG } from 'pngjs'; import pixelmatch from 'pixelmatch';
-import { ROOT, open, go } from './lib.mjs'; import { harnessDoc, fill } from './engine.mjs'; import { slotValues, dropRows } from '../tools/render.mjs';
+import { ROOT, open, go, launch } from './lib.mjs'; import { harnessDoc, fill } from './engine.mjs'; import { slotValues, dropRows } from '../tools/render.mjs';
 const [cmd = 'build', ...only] = process.argv.slice(2);
 const specs = fs.readdirSync(ROOT + 'pages').filter(f => f.endsWith('.page.json')).map(f => JSON.parse(fs.readFileSync(ROOT + 'pages/' + f))).filter(p => !only.length || only.includes(p.id));
 const sprite = (html) => { const m = {}; for (const x of fs.readFileSync(ROOT + 'tokens/icons/sprite.svg.html', 'utf8').matchAll(/<symbol[^>]*id="([^"]+)"[\s\S]*?<\/symbol>/g)) m[x[1]] = x[0];
@@ -23,7 +23,7 @@ if (cmd === 'build' || cmd === 'verify') for (const p of specs) { const { doc, u
   fs.writeFileSync(ROOT + `pages/${p.id}.en-EUR.html`, buildPage({ ...p, locale: 'de-DE/EUR' }).doc);
   for (const v of p.variants || []) { const ar = (v.locale || '').startsWith('ar'); fs.writeFileSync(ROOT + `pages/${p.id}.${v.suffix}.html`, buildPage({ ...p, menu: v.menu, locale: v.locale, rtl: ar, theme: v.theme || p.theme }, { lang: ar ? 'ar' : undefined }).doc); } }
 if (cmd === 'verify') {
-  const { browser, page } = await open(); const b2 = await chromium.launch(); let fail = 0; const report = {};
+  const { browser, page } = await open(); const b2 = await launch(); let fail = 0; const report = {};
   for (const p of specs) for (const mode of ['light', 'dark', 'rtl']) {
     const dark = mode === 'dark', rtl = mode === 'rtl'; const sfx = mode === 'light' ? '' : '.' + mode;
     await go(page, p.url, { dark }); if (rtl) await page.evaluate(() => document.documentElement.setAttribute('dir', 'rtl'));

@@ -1,0 +1,1286 @@
+{
+  "component": "huf-desktop-artifact-document",
+  "slots": {
+    "text_var_ink": {
+      "type": "text",
+      "sample": "Desktop",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Collapse sidebar",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_2": {
+      "type": "text",
+      "sample": "Search conversations",
+      "maxLength": 40,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_bg_chat_row_hover": {
+      "type": "text",
+      "sample": "New chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-3"
+    },
+    "hover_bg_chat_row_hover_2": {
+      "type": "text",
+      "sample": "Projects",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-4"
+    },
+    "hover_bg_chat_row_hover_3": {
+      "type": "text",
+      "sample": "Scheduled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-5"
+    },
+    "hover_bg_chat_row_hover_4": {
+      "type": "text",
+      "sample": "Documents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-6"
+    },
+    "hover_bg_chat_row_hover_5": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-7"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-8"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Huf",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-9"
+    },
+    "hover_text_ink_2": {
+      "type": "text",
+      "sample": "Device",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-10"
+    },
+    "hover_text_ink_3": {
+      "type": "text",
+      "sample": "Recents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-12"
+    },
+    "text_steel_soft": {
+      "type": "relative-time",
+      "sample": "Today",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_soft": {
+      "type": "text",
+      "sample": "Supplier delivery review, Q4",
+      "maxLength": 56,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_3": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_soft_2": {
+      "type": "text",
+      "sample": "On-time delivery by supplier",
+      "maxLength": 56,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_4": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_5": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "relative-time",
+      "sample": "Yesterday",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_soft_3": {
+      "type": "text",
+      "sample": "Invoice gaps from Vera Spice Co.",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_6": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_soft_4": {
+      "type": "text",
+      "sample": "Holiday stock transfer plan",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_7": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_3": {
+      "type": "text",
+      "sample": "Previous 7 days",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_soft_5": {
+      "type": "text",
+      "sample": "Draft PO for Casa Rinaldi",
+      "maxLength": 50,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Buying Assistant",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_8": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_soft_6": {
+      "type": "text",
+      "sample": "Shelf-life claims, December",
+      "maxLength": 54,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_9": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_4": {
+      "type": "text",
+      "sample": "Older",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_soft_7": {
+      "type": "text",
+      "sample": "Catalog copy for spring range",
+      "maxLength": 58,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Catalog Writer",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_10": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink_4": {
+      "type": "text",
+      "sample": "Trash (0)",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-29"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "northwind.huf.example",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_11": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_12": {
+      "type": "text",
+      "sample": "Expand sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_13": {
+      "type": "text",
+      "sample": "New chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_14": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "text",
+      "element": "h1"
+    },
+    "sr_only_15": {
+      "type": "text",
+      "sample": "Open side panel",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only_16": {
+      "type": "text",
+      "sample": "Options",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "leading_relaxed": {
+      "type": "text",
+      "sample": "Write up a reorder policy proposal for chilled goods that I can share with the buyers.",
+      "maxLength": 172,
+      "where": "text",
+      "element": "p"
+    },
+    "whitespace_nowrap": {
+      "type": "text",
+      "sample": "1 hour",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Ran 2 tools",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Read ⁦stockouts_q4.csv⁩, Used ⁦Skill run⁩",
+      "maxLength": 82,
+      "where": "text",
+      "element": "span"
+    },
+    "leading_relaxed_2": {
+      "type": "text",
+      "sample": "Here is the proposal. It raises safety stock only for the two lines with late suppliers.",
+      "maxLength": 176,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_2": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_steel": {
+      "type": "text",
+      "sample": "Document, 181 words",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "text_var_signal_ink": {
+      "type": "text",
+      "sample": "Hide",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-40"
+    },
+    "group_hover_opacity_100": {
+      "type": "text",
+      "sample": "gemini-3.5-flash",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1": {
+      "type": "text",
+      "sample": "Rerun",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_2": {
+      "type": "text",
+      "sample": "Stats",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "max_600px_hidden": {
+      "type": "text",
+      "sample": "supplier-ops",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "max_700px_hidden": {
+      "type": "text",
+      "sample": "gemini-3.5-flash",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "max_600px_hidden_2": {
+      "type": "text",
+      "sample": "Ask every time",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Artifacts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-54"
+    },
+    "hover_text_ink_5": {
+      "type": "text",
+      "sample": "Activity",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-55"
+    },
+    "hover_text_ink_6": {
+      "type": "text",
+      "sample": "Processes",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-56"
+    },
+    "text_var_ink_3": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "520px_inline": {
+      "type": "text",
+      "sample": "Document, 181 words",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_0_5": {
+      "type": "number",
+      "sample": "83",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-61"
+    },
+    "gap_0_5_2": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-61"
+    },
+    "pdf_text": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "border_var_line": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "text",
+      "element": "h1"
+    },
+    "font_semibold": {
+      "type": "text",
+      "sample": "Northwind Trading, supplier operations.",
+      "maxLength": 78,
+      "where": "text",
+      "element": "span"
+    },
+    "leading_relaxed_3": {
+      "type": "text",
+      "sample": "Draft for the January buying meeting.",
+      "maxLength": 74,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_4": {
+      "type": "text",
+      "sample": "Why change it",
+      "maxLength": 26,
+      "where": "text",
+      "element": "h2"
+    },
+    "leading_relaxed_4": {
+      "type": "text",
+      "sample": "Chilled lines were short on 14 of 92 trading days in Q4, almost all after a late Bayside Dairy or Lindqvist Fish delivery. Safety stock today is a flat two days for every line.",
+      "maxLength": 352,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_5": {
+      "type": "text",
+      "sample": "Proposal",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "hover_text_var_ink": {
+      "type": "text",
+      "sample": "Copy",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-66"
+    },
+    "hover_text_var_ink_2": {
+      "type": "text",
+      "sample": "CSV",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-desktop-artifact-document.button-67"
+    },
+    "border_var_line_dark_40": {
+      "type": "text",
+      "sample": "Line group",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "border_var_line_dark_40_2": {
+      "type": "text",
+      "sample": "Supplier",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "border_var_line_dark_40_3": {
+      "type": "text",
+      "sample": "Lead time",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "border_var_line_dark_40_4": {
+      "type": "text",
+      "sample": "Safety stock now",
+      "maxLength": 32,
+      "where": "text",
+      "element": "th"
+    },
+    "border_var_line_dark_40_5": {
+      "type": "text",
+      "sample": "Proposed",
+      "maxLength": 20,
+      "where": "text",
+      "element": "th"
+    },
+    "align_top": {
+      "type": "text",
+      "sample": "Fresh dairy",
+      "maxLength": 22,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_2": {
+      "type": "text",
+      "sample": "Bayside Dairy",
+      "maxLength": 26,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_3": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_4": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_5": {
+      "type": "text",
+      "sample": "3 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_6": {
+      "type": "text",
+      "sample": "Fresh fish",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_7": {
+      "type": "text",
+      "sample": "Lindqvist Fish",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_8": {
+      "type": "text",
+      "sample": "1 day",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_9": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_10": {
+      "type": "text",
+      "sample": "3 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_11": {
+      "type": "text",
+      "sample": "Bakery",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_12": {
+      "type": "text",
+      "sample": "Halden Bakery",
+      "maxLength": 26,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_13": {
+      "type": "text",
+      "sample": "1 day",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_14": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_15": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_16": {
+      "type": "text",
+      "sample": "Produce",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_17": {
+      "type": "text",
+      "sample": "Ortega Produce",
+      "maxLength": 28,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_18": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_19": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "align_top_20": {
+      "type": "text",
+      "sample": "2 days",
+      "maxLength": 20,
+      "where": "text",
+      "element": "td"
+    },
+    "p_inline": {
+      "type": "text",
+      "sample": "Reorder point = average daily demand x (lead time + safety stock).",
+      "maxLength": 132,
+      "where": "text",
+      "element": "li"
+    },
+    "p_inline_2": {
+      "type": "text",
+      "sample": "Review the two raised lines again at the end of February.",
+      "maxLength": 114,
+      "where": "text",
+      "element": "li"
+    },
+    "text_var_ink_6": {
+      "type": "text",
+      "sample": "Cost",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h2"
+    },
+    "leading_relaxed_5": {
+      "type": "text",
+      "sample": "About",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_2": {
+      "type": "currency",
+      "sample": "$18,400",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "leading_relaxed_6": {
+      "type": "text",
+      "sample": "more stock on hand on an average day, against roughly",
+      "maxLength": 106,
+      "where": "text",
+      "element": "p"
+    },
+    "font_semibold_3": {
+      "type": "currency",
+      "sample": "$61,000",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "leading_relaxed_7": {
+      "type": "text",
+      "sample": "of Q4 sales lost to empty shelves.",
+      "maxLength": 68,
+      "where": "text",
+      "element": "p"
+    },
+    "text_var_ink_arialabel": {
+      "type": "text",
+      "sample": "HUF",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "svg"
+    },
+    "hover_text_ink_title": {
+      "type": "text",
+      "sample": "Search conversations",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-2"
+    },
+    "gap_0_5_arialabel": {
+      "type": "text",
+      "sample": "Show chats from",
+      "maxLength": 30,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "text_steel_title": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-14"
+    },
+    "text_steel_title_2": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_2": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-16"
+    },
+    "text_steel_title_3": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "opacity_100_title": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-18"
+    },
+    "text_steel_title_4": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_3": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-20"
+    },
+    "text_steel_title_5": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_4": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-22"
+    },
+    "text_steel_title_6": {
+      "type": "text",
+      "sample": "Buying Assistant",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_5": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-24"
+    },
+    "text_steel_title_7": {
+      "type": "text",
+      "sample": "Operations Analyst",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_6": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-26"
+    },
+    "text_steel_title_8": {
+      "type": "text",
+      "sample": "Catalog Writer",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "media_hover_none_opacity_100_title_7": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-28"
+    },
+    "hover_bg_chat_row_hover_title": {
+      "type": "text",
+      "sample": "Connected to HUF",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-30"
+    },
+    "md_hidden_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-33"
+    },
+    "text_ink_title": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "h1"
+    },
+    "text_ink_title_2": {
+      "type": "text",
+      "sample": "Close side panel",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-34"
+    },
+    "hover_text_ink_title_2": {
+      "type": "text",
+      "sample": "Options",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-35"
+    },
+    "whitespace_nowrap_title": {
+      "type": "text",
+      "sample": "Jan 1, 2026, 7:40 AM",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_7_arialabel": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-36"
+    },
+    "text_var_ink_title": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "rounded_title": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-39"
+    },
+    "rounded_arialabel": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-39"
+    },
+    "cursor_pointer_title": {
+      "type": "text",
+      "sample": "Copy",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-41"
+    },
+    "cursor_pointer_title_2": {
+      "type": "text",
+      "sample": "Retry",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-42"
+    },
+    "group_hover_opacity_100_title": {
+      "type": "text",
+      "sample": "Model used",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "gap_1_title": {
+      "type": "text",
+      "sample": "Rerun",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-43"
+    },
+    "gap_1_title_2": {
+      "type": "text",
+      "sample": "Analytics",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-44"
+    },
+    "w_7_arialabel_2": {
+      "type": "text",
+      "sample": "Copy response",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-45"
+    },
+    "focus_outline_none_placeholder": {
+      "type": "text",
+      "sample": "Type a message…",
+      "maxLength": 30,
+      "where": "attr:placeholder",
+      "element": "huf-desktop-artifact-document.textarea-47"
+    },
+    "disabled_opacity_50_arialabel": {
+      "type": "text",
+      "sample": "Attach file",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-48"
+    },
+    "disabled_opacity_40_title": {
+      "type": "text",
+      "sample": "Start voice conversation",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-49"
+    },
+    "disabled_opacity_40_arialabel": {
+      "type": "text",
+      "sample": "Start voice conversation",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-49"
+    },
+    "disabled_opacity_40_title_2": {
+      "type": "text",
+      "sample": "Send message",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-50"
+    },
+    "disabled_opacity_40_arialabel_2": {
+      "type": "text",
+      "sample": "Send message",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-50"
+    },
+    "gap_1_arialabel": {
+      "type": "text",
+      "sample": "Model and permission",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "max_600px_max_w_none_title": {
+      "type": "text",
+      "sample": "/Users/maya/Northwind/supplier-ops",
+      "maxLength": 68,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-51"
+    },
+    "max_600px_max_w_none_arialabel": {
+      "type": "text",
+      "sample": "Workspace: supplier-ops",
+      "maxLength": 46,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-51"
+    },
+    "max_600px_max_w_170px_title": {
+      "type": "text",
+      "sample": "Operations Analyst · gemini-3.5-flash",
+      "maxLength": 74,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-52"
+    },
+    "data_state_open_text_ink_title": {
+      "type": "text",
+      "sample": "Ask every time",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-53"
+    },
+    "data_state_open_text_ink_arialabel": {
+      "type": "text",
+      "sample": "Permissions: Ask every time",
+      "maxLength": 54,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-53"
+    },
+    "border_s_arialabel": {
+      "type": "text",
+      "sample": "Side panel",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "aside"
+    },
+    "active_bg_var_steel_soft_70_arialabel": {
+      "type": "text",
+      "sample": "Resize side panel",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "gap_1_arialabel_2": {
+      "type": "text",
+      "sample": "Side panel",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "div"
+    },
+    "text_steel_title_9": {
+      "type": "text",
+      "sample": "Pin a second panel below",
+      "maxLength": 48,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-57"
+    },
+    "text_steel_arialabel": {
+      "type": "text",
+      "sample": "Pin a second panel below",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-57"
+    },
+    "hover_text_ink_title_3": {
+      "type": "text",
+      "sample": "Close side panel",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-58"
+    },
+    "hover_text_ink_arialabel": {
+      "type": "text",
+      "sample": "Close side panel",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-58"
+    },
+    "focus_visible_ring_var_signal_title": {
+      "type": "text",
+      "sample": "All outputs",
+      "maxLength": 22,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-59"
+    },
+    "focus_visible_ring_var_signal_arialabel": {
+      "type": "text",
+      "sample": "All outputs",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-59"
+    },
+    "text_var_ink_title_2": {
+      "type": "text",
+      "sample": "Reorder policy for chilled goods",
+      "maxLength": 64,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "pdf_grp_arialabel": {
+      "type": "text",
+      "sample": "Zoom",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "pdf_seg_title": {
+      "type": "text",
+      "sample": "Zoom out (Ctrl −)",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-60"
+    },
+    "pdf_seg_arialabel": {
+      "type": "text",
+      "sample": "Zoom out",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-60"
+    },
+    "gap_0_5_title": {
+      "type": "text",
+      "sample": "Zoom options",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-61"
+    },
+    "gap_0_5_arialabel_2": {
+      "type": "text",
+      "sample": "Zoom 83%, zoom options",
+      "maxLength": 44,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-61"
+    },
+    "pdf_seg_title_2": {
+      "type": "text",
+      "sample": "Zoom in (Ctrl +)",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-62"
+    },
+    "pdf_seg_arialabel_2": {
+      "type": "text",
+      "sample": "Zoom in",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-62"
+    },
+    "pdf_text_title": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-63"
+    },
+    "pdf_text_arialabel": {
+      "type": "text",
+      "sample": "Export",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-63"
+    },
+    "pdf_seg_title_3": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-desktop-artifact-document.button-64"
+    },
+    "pdf_seg_arialabel_3": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.button-64"
+    },
+    "flex_1_arialabel": {
+      "type": "text",
+      "sample": "Document page",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.div-65"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-desktop-artifact-document.section-68"
+    }
+  }
+}

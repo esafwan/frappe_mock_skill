@@ -1,0 +1,635 @@
+{
+  "component": "huf-procedures-detail",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-procedures-detail.link-25"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Look up an order refund",
+      "maxLength": 46,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ui_text": {
+      "type": "text",
+      "sample": "Back",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-procedures-detail.button-27"
+    },
+    "procedure_name_1": {
+      "type": "text",
+      "sample": "Look up an order refund",
+      "maxLength": 46,
+      "where": "text",
+      "element": "h3"
+    },
+    "procedure_name_1_2": {
+      "type": "text",
+      "sample": "Compiled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "procedure_name_1_3": {
+      "type": "text",
+      "sample": "Active",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_muted_foreground": {
+      "type": "text",
+      "sample": "AP-0007",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "Read-only means it can only look things up, never change data — safe to turn on directly.",
+      "maxLength": 178,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ui_text_2": {
+      "type": "text",
+      "sample": "Test",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-procedures-detail.button-28"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Procedure ID",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "font_mono": {
+      "type": "text",
+      "sample": "refund-lookup",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Version",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": "Fingerprint",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "sha256:9f2c41ab7e03d5c8",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Schema Version",
+      "maxLength": 28,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm_2": {
+      "type": "number",
+      "sample": "1.2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "Read-only",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm_3": {
+      "type": "text",
+      "sample": "Yes",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Contains Writes",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm_4": {
+      "type": "text",
+      "sample": "No",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Contains Code",
+      "maxLength": 26,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm_5": {
+      "type": "text",
+      "sample": "No",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_sm_6": {
+      "type": "relative-time",
+      "sample": "2 hours ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "procedure_name_2": {
+      "type": "text",
+      "sample": "Validation status",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground_2": {
+      "type": "text",
+      "sample": "Fingerprinted — passed validation",
+      "maxLength": 66,
+      "where": "text",
+      "element": "p"
+    },
+    "procedure_name_3": {
+      "type": "text",
+      "sample": "Definition",
+      "maxLength": 20,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground_3": {
+      "type": "text",
+      "sample": "The compiled procedure graph, rendered read-only.",
+      "maxLength": 98,
+      "where": "text",
+      "element": "p"
+    },
+    "overflow_auto": {
+      "type": "text",
+      "sample": "{ \"nodes\": [ { \"id\": \"n1\", \"type\": \"tool\", \"tool\": \"get_order\", \"input\": { \"order_id\": \"{{input.order_id}}\" } }, { \"id\": \"n2\", \"type\": \"tool\", \"tool\": \"get_refund_status\", \"input\": { \"order_id\": \"{{n1.id}}\" } } ] }",
+      "maxLength": 428,
+      "where": "text",
+      "element": "pre"
+    },
+    "procedure_name_4": {
+      "type": "text",
+      "sample": "Version history",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_muted_foreground_4": {
+      "type": "text",
+      "sample": "Other versions sharing this procedure_id.",
+      "maxLength": 82,
+      "where": "text",
+      "element": "p"
+    },
+    "text_sm_7": {
+      "type": "text",
+      "sample": "v",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_sm_8": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_wide": {
+      "type": "text",
+      "sample": "Disabled",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_11": {
+      "type": "relative-time",
+      "sample": "3 weeks ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "text_sm_9": {
+      "type": "text",
+      "sample": "v",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_sm_10": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "tracking_wide_2": {
+      "type": "text",
+      "sample": "Archived",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_12": {
+      "type": "relative-time",
+      "sample": "1 month ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-procedures-detail.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-procedures-detail.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-procedures-detail.button-22"
+    },
+    "shrink_0_arialabel": {
+      "type": "text",
+      "sample": "Back",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "huf-procedures-detail.link-24"
+    },
+    "shrink_0_arialabel_2": {
+      "type": "text",
+      "sample": "breadcrumb",
+      "maxLength": 20,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-procedures-detail.button-26"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-procedures-detail.section-29"
+    }
+  }
+}

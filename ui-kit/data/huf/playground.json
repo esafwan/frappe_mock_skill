@@ -1,0 +1,42 @@
+{
+  "$comment": "Fictional Playground data (Northwind Trading). Prompts, responses, traces and ledger entries are static; the app calls are answered by scripts/huf/fixtures/playground.mjs. Times relative to the fixed clock 2026-01-01T09:00:00Z.",
+  "agentRunId": "RUN-0412",
+  "single": {
+    "agent": "Order Status Bot",
+    "prompt": "A customer on WhatsApp asks: \"Where is my order NW-20418? It was supposed to arrive Tuesday.\" Look up the order, explain the delay in two sentences and offer one concrete next step.",
+    "criteria": "Mentions the carrier and the new delivery date. Apologises once. Offers a clear next step. No more than 60 words.",
+    "response": "Order NW-20418 left our Rotterdam warehouse on Monday and is now with DHL Freight in Antwerp, where a customs hold added a day to the trip. The new delivery date is Thursday, January 8. I'm sorry for the wait. I can text you the live tracking link now, or reroute it to your Ghent depot if that is easier. Which would you like?",
+    "latency_ms": 2840, "input_tokens": 412, "output_tokens": 96, "cost": 0.0018,
+    "evaluation": { "passed": true, "score": 0.92, "reasoning": "carrier, new date and next step all present; 58 words" },
+    "steps": [
+      { "name": "RUN-0412-1", "sequence": 1, "agent": "Order Status Bot", "run_kind": "Agent", "status": "Success", "start_time": "2026-01-01 08:59:57.000", "end_time": "2026-01-01 08:59:58.300", "provider": "OpenAI", "model": "gpt-4.1", "input_tokens": 236, "output_tokens": 41, "cost": 0.0008 },
+      { "name": "RUN-0412-2", "sequence": 2, "agent": "lookup_order", "run_kind": "Tool", "status": "Success", "start_time": "2026-01-01 08:59:58.300", "end_time": "2026-01-01 08:59:58.520", "provider": "", "model": "", "input_tokens": 0, "output_tokens": 0, "cost": 0 },
+      { "name": "RUN-0412-3", "sequence": 3, "agent": "Order Status Bot", "run_kind": "Agent", "status": "Success", "start_time": "2026-01-01 08:59:58.520", "end_time": "2026-01-01 08:59:59.840", "provider": "OpenAI", "model": "gpt-4.1", "input_tokens": 176, "output_tokens": 55, "cost": 0.001 }
+    ]
+  },
+  "direct": {
+    "provider": "OpenAI", "model": "gpt-4.1-mini", "temperature": "0.3", "maxTokens": "800",
+    "prompt": "Write a friendly two-line WhatsApp message telling a wholesale customer that their spring restock order has shipped and arrives Thursday."
+  },
+  "compare": {
+    "prompt": "Write a two-sentence WhatsApp reply telling a customer their order NW-20418 is delayed by one day because of a customs hold, and offer to send tracking.",
+    "a": { "provider": "OpenAI", "model": "gpt-4.1-mini", "temperature": "0.2", "maxTokens": "300",
+      "response": "Hi! Order NW-20418 is delayed by one day because of a customs hold and will now arrive Thursday. I'm sorry for the wait, shall I send you the tracking link?",
+      "latency_ms": 1210, "input_tokens": 58, "output_tokens": 38, "cost": 0.0001 },
+    "b": { "provider": "Mistral", "model": "mistral-large", "temperature": "0.7", "maxTokens": "300",
+      "response": "Hello! Order NW-20418 is running one day late due to a customs hold and should now arrive Thursday. Apologies for the delay, I can send you the live tracking link whenever you like.",
+      "latency_ms": 1780, "input_tokens": 61, "output_tokens": 41, "cost": 0.0002 }
+  },
+  "templates": [
+    { "name": "PROMPT-0001", "title": "Order delay apology", "description": "Explains a shipping delay in two sentences and offers tracking.", "is_active": 1, "visibility": "Public", "tags": "support, whatsapp", "prompt_body": "Write a two-sentence reply explaining the delay and offer tracking." },
+    { "name": "PROMPT-0002", "title": "Supplier invoice summary", "description": "Summarise a supplier invoice and flag mismatches against the purchase order.", "is_active": 1, "visibility": "App", "tags": "finance", "prompt_body": "Summarise the invoice." },
+    { "name": "PROMPT-0003", "title": "Lead first-touch reply", "description": "Drafts a short, friendly first reply to a new wholesale lead.", "is_active": 1, "visibility": "Private", "tags": "sales, crm", "prompt_body": "Draft a first reply." },
+    { "name": "PROMPT-0004", "title": "Weekly ops digest", "description": "Turns the week's order and returns numbers into five bullet points.", "is_active": 1, "visibility": "Public", "tags": "ops, reporting", "prompt_body": "Write the digest." },
+    { "name": "PROMPT-0005", "title": "Returns policy answer", "description": "Answers return questions strictly from the knowledge base and cites the section.", "is_active": 1, "visibility": "App", "tags": "support, knowledge", "prompt_body": "Answer the return question." }
+  ],
+  "ledger": [
+    { "id": "seed-3", "minutesAgo": 18, "status": "ok", "model": "gpt-4.1-mini", "latencyMs": 1320, "tokens": 188, "prompt": "Summarise the Q4 price list changes for the sales team in three bullets.", "provider": "OpenAI" },
+    { "id": "seed-2", "minutesAgo": 41, "status": "ok", "model": "mistral-large", "latencyMs": 2150, "tokens": 264, "prompt": "Rewrite the returns policy intro in a warmer tone.", "provider": "Mistral" },
+    { "id": "seed-1", "minutesAgo": 96, "status": "held", "model": "gemini-2.5-flash", "latencyMs": 640, "tokens": 0, "prompt": "Classify this ticket: refund request for damaged pasta shipment.", "provider": "Google" }
+  ]
+}

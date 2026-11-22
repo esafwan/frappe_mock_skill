@@ -1,0 +1,167 @@
+{
+  "component": "huf-android-approval-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: Android has no hover or keyboard-focus variant in the emulator captures; use the pressed state (active) instead"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "press-approve"
+        }
+      },
+      "values": {
+        "state": "press-approve"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Approve button pressed",
+      "alias": "pressed"
+    },
+    "sending": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "status": "Sending…",
+          "footer": "<div class=\"busy\"><span class=\"ha-spin\"></span>Sending…</div>"
+        }
+      },
+      "values": {
+        "status": "Sending…",
+        "footer": "<div class=\"busy\"><span class=\"ha-spin\"></span>Sending…</div>"
+      },
+      "screenshot": "states/sending.png",
+      "preview": "states/sending.html",
+      "description": "sending"
+    },
+    "approved": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "approved",
+          "status": "Approved",
+          "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>Sent to 120 recipients</div>"
+        }
+      },
+      "values": {
+        "state": "approved",
+        "status": "Approved",
+        "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\"/></svg>Sent to 120 recipients</div>"
+      },
+      "screenshot": "states/approved.png",
+      "preview": "states/approved.html",
+      "description": "approved"
+    },
+    "pressed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "press-approve"
+        }
+      },
+      "values": {
+        "state": "press-approve"
+      },
+      "screenshot": "states/pressed.png",
+      "preview": "states/pressed.html",
+      "description": "Approve button pressed"
+    },
+    "denied": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "denied",
+          "status": "Denied",
+          "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"/></svg>Denied</div>"
+        }
+      },
+      "values": {
+        "state": "denied",
+        "status": "Denied",
+        "footer": "<div class=\"res\"><svg class=\"ha-ico \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"/></svg>Denied</div>"
+      },
+      "screenshot": "states/denied.png",
+      "preview": "states/denied.html",
+      "description": "denied"
+    },
+    "pending-expiring": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "disabled",
+          "recipients": "128",
+          "template": "payment_reminder_v2",
+          "channel": "WhatsApp",
+          "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+          "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+        }
+      },
+      "values": {
+        "state": "disabled",
+        "recipients": "128",
+        "template": "payment_reminder_v2",
+        "channel": "WhatsApp",
+        "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+        "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+      },
+      "screenshot": "states/pending-expiring.png",
+      "preview": "states/pending-expiring.html",
+      "description": "pending-expiring"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "over": {
+          "state": "disabled",
+          "recipients": "128",
+          "template": "payment_reminder_v2",
+          "channel": "WhatsApp",
+          "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+          "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+        }
+      },
+      "values": {
+        "state": "disabled",
+        "recipients": "128",
+        "template": "payment_reminder_v2",
+        "channel": "WhatsApp",
+        "sample": "Hi Ahmed, your invoice INV-2041 for AED 4,200 is due on 20 Nov.",
+        "footer": "<div class=\"exp\">Expires in 8:38</div><div class=\"acts\"><div class=\"ha-btn-approve\">Approve</div><div class=\"ha-btn-deny\">Deny</div></div>"
+      },
+      "screenshot": "states/pending-expiring.png",
+      "preview": "states/pending-expiring.html",
+      "description": "Approve/Deny dimmed while the card is not decidable",
+      "alias": "pending-expiring"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct error variant"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct loading variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

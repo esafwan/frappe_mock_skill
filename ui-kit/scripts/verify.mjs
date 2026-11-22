@@ -1,12 +1,14 @@
 import fs from 'fs'; import { chromium } from 'playwright'; import { PNG } from 'pngjs'; import pixelmatch from 'pixelmatch';
-import { ROOT } from './lib.mjs';
+import { ROOT, launch } from './lib.mjs';
 const only = process.argv.slice(2); const LIM = 0.005;
-const ids = fs.readdirSync(ROOT + 'components').filter(d => fs.existsSync(ROOT + `components/${d}/harness.json`) && (!only.length || only.includes(d)));
-const browser = await chromium.launch(); let fail = 0; const report = {};
+const want = (id) => !only.length || only.some((o) => (o.includes('*') ? new RegExp('^' + o.replace(/\*/g, '.*') + '$').test(id) : o === id));
+const ids = fs.readdirSync(ROOT + 'components').filter(d => fs.existsSync(ROOT + `components/${d}/harness.json`) && want(d));
+const browser = await launch(); let fail = 0; const report = {};
 for (const id of ids) {
   const dir = ROOT + 'components/' + id + '/';
-  for (const mode of ['light', 'dark', 'rtl']) { const dark = mode === 'dark';
-    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, javaScriptEnabled: false });
+  const modes = JSON.parse(fs.readFileSync(dir + 'harness.json')).modes || ['light', 'dark', 'rtl']; // huf: light only
+  for (const mode of modes) { const dark = mode === 'dark';
+    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: JSON.parse(fs.readFileSync(dir + 'harness.json')).dsf || 2, javaScriptEnabled: false });
     const page = await ctx.newPage(); const reqs = [];
     page.on('request', r => { if (!r.url().startsWith('file:') && !r.url().startsWith('data:')) reqs.push(r.url()); });
     await page.goto('file://' + dir + (mode === 'light' ? 'preview.html' : `preview.${mode}.html`)); await page.evaluate?.(() => 0).catch(() => {});
@@ -24,4 +26,5 @@ for (const id of ids) {
     await ctx.close();
   }
 }
-fs.writeFileSync(ROOT + 'verify-report.json', JSON.stringify(report, null, 2)); await browser.close(); process.exit(fail ? 1 : 0);
+const RP = process.env.VERIFY_REPORT || ROOT + 'verify-report.json'; let prev = {}; try { prev = JSON.parse(fs.readFileSync(RP)); } catch {} // merge: partial runs keep other ids
+fs.writeFileSync(RP, JSON.stringify({ ...prev, ...report }, null, 2)); await browser.close(); process.exit(fail ? 1 : 0);

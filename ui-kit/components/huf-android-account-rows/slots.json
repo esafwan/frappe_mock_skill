@@ -1,0 +1,27 @@
+{
+  "component": "huf-android-account-rows",
+  "note": "{{<slot>_initials}} placeholders are derived from the slot value (first letters of each word)",
+  "slots": {
+    "server": {
+      "type": "text",
+      "sample": "https://acme.example.com",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    },
+    "saved_name": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 26,
+      "where": "text",
+      "element": "text"
+    },
+    "saved_url": {
+      "type": "text",
+      "sample": "https://acme.example.com",
+      "maxLength": 39,
+      "where": "text",
+      "element": "text"
+    }
+  }
+}

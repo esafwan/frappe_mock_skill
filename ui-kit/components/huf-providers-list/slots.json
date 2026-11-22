@@ -1,0 +1,824 @@
+{
+  "component": "huf-providers-list",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "General",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "AI providers & models",
+      "maxLength": 42,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "MCP servers",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Gateways",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Channels",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Telegram",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Integrations",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Code execution",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "SSH connections",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Members",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Developer",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "AI providers",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "Add provider",
+      "maxLength": 24,
+      "where": "text",
+      "element": "huf-providers-list.button-17"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-list.link-18"
+    },
+    "hover_text_ink": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-providers-list.link-19"
+    },
+    "provider_name_1": {
+      "type": "text",
+      "sample": "Get started with AI",
+      "maxLength": 38,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "Pick a free-friendly starter path, add its key, and Huf will prepare a model for your first agent.",
+      "maxLength": 196,
+      "where": "text",
+      "element": "p"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Try OpenRouter free",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft": {
+      "type": "text",
+      "sample": "openrouter/free",
+      "maxLength": 30,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Try Gemini with Google AI Studio",
+      "maxLength": 64,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_soft_2": {
+      "type": "text",
+      "sample": "gemini-3.5-flash",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "provider_name_2": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem": {
+      "type": "text",
+      "sample": "Cloud API provider",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Configured",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "openai",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "gpt-4.1-mini",
+      "maxLength": 24,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_2": {
+      "type": "text",
+      "sample": "gpt-4.1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_3": {
+      "type": "text",
+      "sample": "text-embedding-3-small",
+      "maxLength": 44,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_name_3": {
+      "type": "text",
+      "sample": "Anthropic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_2": {
+      "type": "text",
+      "sample": "Cloud API provider",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "Configured",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_9": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_10": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_12": {
+      "type": "text",
+      "sample": "anthropic",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_4": {
+      "type": "text",
+      "sample": "claude-sonnet-4-5",
+      "maxLength": 34,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_name_4": {
+      "type": "text",
+      "sample": "Northwind Ollama",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_3": {
+      "type": "text",
+      "sample": "Self-hosted endpoint",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_14": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_15": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "ollama",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_5": {
+      "type": "text",
+      "sample": "llama3.1:8b",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_6": {
+      "type": "text",
+      "sample": "qwen2.5:14b",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "text_10px_7": {
+      "type": "text",
+      "sample": "nomic-embed-text",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_name_5": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_4": {
+      "type": "text",
+      "sample": "Cloud API provider",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_18": {
+      "type": "text",
+      "sample": "Configured",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_20": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "google",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_8": {
+      "type": "text",
+      "sample": "gemini-2.5-flash",
+      "maxLength": 32,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_name_6": {
+      "type": "text",
+      "sample": "Mistral",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_5": {
+      "type": "text",
+      "sample": "Cloud API provider",
+      "maxLength": 36,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "Configured",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_24": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_25": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_26": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "mistral",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_9": {
+      "type": "text",
+      "sample": "mistral-large-latest",
+      "maxLength": 40,
+      "where": "text",
+      "element": "div"
+    },
+    "provider_name_7": {
+      "type": "text",
+      "sample": "Warehouse LM Studio",
+      "maxLength": 38,
+      "where": "text",
+      "element": "span"
+    },
+    "min_h_2_5rem_6": {
+      "type": "text",
+      "sample": "Self-hosted endpoint",
+      "maxLength": 40,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_28": {
+      "type": "text",
+      "sample": "Local",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "Models",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_30": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_31": {
+      "type": "text",
+      "sample": "Brand",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_32": {
+      "type": "text",
+      "sample": "lmstudio",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_10px_10": {
+      "type": "text",
+      "sample": "phi-4-mini",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_33": {
+      "type": "text",
+      "sample": "Showing all 6 providers",
+      "maxLength": 46,
+      "where": "text",
+      "element": "div"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Live updates off",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-providers-list.span-13"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-15"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-providers-list.button-15"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search providers...",
+      "maxLength": 38,
+      "where": "attr:placeholder",
+      "element": "huf-providers-list.search"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search providers",
+      "maxLength": 32,
+      "where": "attr:aria-label",
+      "element": "huf-providers-list.search"
+    },
+    "border_ink_arialabel": {
+      "type": "text",
+      "sample": "Provider and model sections",
+      "maxLength": 54,
+      "where": "attr:aria-label",
+      "element": "nav"
+    },
+    "provider_name_2_alt": {
+      "type": "text",
+      "sample": "openai logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_2_title": {
+      "type": "text",
+      "sample": "OpenAI",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-22"
+    },
+    "w_8_title_2": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-23"
+    },
+    "provider_name_3_alt": {
+      "type": "text",
+      "sample": "anthropic logo",
+      "maxLength": 28,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_3_title": {
+      "type": "text",
+      "sample": "Anthropic",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_3": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-24"
+    },
+    "w_8_title_4": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-25"
+    },
+    "provider_name_4_alt": {
+      "type": "text",
+      "sample": "ollama logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_4_title": {
+      "type": "text",
+      "sample": "Northwind Ollama",
+      "maxLength": 32,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_5": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-26"
+    },
+    "w_8_title_6": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-27"
+    },
+    "provider_name_5_alt": {
+      "type": "text",
+      "sample": "google logo",
+      "maxLength": 22,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_5_title": {
+      "type": "text",
+      "sample": "Google",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_7": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-28"
+    },
+    "w_8_title_8": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-29"
+    },
+    "provider_name_6_alt": {
+      "type": "text",
+      "sample": "mistral logo",
+      "maxLength": 24,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_6_title": {
+      "type": "text",
+      "sample": "Mistral",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_9": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-30"
+    },
+    "w_8_title_10": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-31"
+    },
+    "provider_name_7_alt": {
+      "type": "text",
+      "sample": "lmstudio logo",
+      "maxLength": 26,
+      "where": "attr:alt",
+      "element": "img"
+    },
+    "provider_name_7_title": {
+      "type": "text",
+      "sample": "Warehouse LM Studio",
+      "maxLength": 38,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "w_8_title_11": {
+      "type": "text",
+      "sample": "Configure",
+      "maxLength": 20,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-32"
+    },
+    "w_8_title_12": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-providers-list.button-33"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-providers-list.section-34"
+    },
+    "image_1": {
+      "type": "image",
+      "sample": "assets/image_1.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    },
+    "image_2": {
+      "type": "image",
+      "sample": "assets/image_2.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    },
+    "image_3": {
+      "type": "image",
+      "sample": "assets/image_3.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    },
+    "image_4": {
+      "type": "image",
+      "sample": "assets/image_4.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    },
+    "image_5": {
+      "type": "image",
+      "sample": "assets/image_5.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    },
+    "image_6": {
+      "type": "image",
+      "sample": "assets/image_6.svg",
+      "maxLength": 0,
+      "where": "attr:src",
+      "element": "img"
+    }
+  }
+}

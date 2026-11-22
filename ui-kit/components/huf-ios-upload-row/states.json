@@ -1,0 +1,78 @@
+{
+  "component": "huf-ios-upload-row",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "focus": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "active": {
+      "applicable": false,
+      "reason": "touch UI: iOS has no hover/focus/pressed variants in the simulator captures"
+    },
+    "uploading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "progress": 70
+      },
+      "screenshot": "states/uploading.png",
+      "preview": "states/uploading.html",
+      "description": "upload at 70 %"
+    },
+    "loading": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "progress": 70
+      },
+      "screenshot": "states/uploading.png",
+      "preview": "states/uploading.html",
+      "description": "upload at 70 %",
+      "alias": "uploading"
+    },
+    "failed": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "failed": true
+      },
+      "values": {
+        "filename": "site-photo-4.heic"
+      },
+      "screenshot": "states/failed.png",
+      "preview": "states/failed.html",
+      "description": "upload failed"
+    },
+    "error": {
+      "applicable": true,
+      "mechanism": "props",
+      "props": {
+        "failed": true
+      },
+      "values": {
+        "filename": "site-photo-4.heic"
+      },
+      "screenshot": "states/failed.png",
+      "preview": "states/failed.html",
+      "description": "upload failed",
+      "alias": "failed"
+    },
+    "disabled": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct disabled variant"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "not applicable: this component has no distinct empty variant"
+    }
+  }
+}

@@ -10,6 +10,8 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   const root = document.querySelector(rootSel);
   if (!root) throw new Error('root not found ' + rootSel);
   root.setAttribute('data-ui', id);
+  // optional semantic slot names (spec.slotNames: { selector: 'name' }): text/attr slots inside a match are named <name>[_<n>]
+  for (const [sel, nm] of Object.entries(names || {})) { const els = root.matches(sel) ? [root] : [...root.querySelectorAll(sel)]; els.forEach((el, i) => el.setAttribute('data-slot-name', els.length > 1 ? `${nm}_${i + 1}` : nm)); }
   for (const [tid, sel] of Object.entries(targets || {})) {
     const els = root.matches(sel) ? [root] : [...root.querySelectorAll(sel)];
     els.forEach((el, i) => el.setAttribute('data-ui', els.length > 1 ? `${id}.${tid}-${i + 1}` : `${id}.${tid}`));
@@ -71,7 +73,8 @@ export async function extractInPage({ rootSel, id, targets, names }) {
   const typeOf = (s) => /^[\s]*[-+]?[₹$€£]?\s?[\d,]+(\.\d+)?\s?[%₹$€£]?\s*$/.test(s) ? (/[₹$€£]/.test(s) ? 'currency' : 'number')
     : /^\d{1,2}[-/.]\d{1,2}[-/.]\d{2,4}$|^\d{4}-\d{2}-\d{2}/.test(s) ? 'date' : /^\d{1,2}:\d{2}/.test(s) ? 'time' : /ago$|^(Yesterday|Today)/.test(s) ? 'relative-time' : 'text';
   const nameFor = (el, kind) => {
-    let e = el, base = '';
+    let e = el, base = ''; const named = el.closest?.('[data-slot-name]');
+    if (named) { base = named.getAttribute('data-slot-name'); if (kind) base += '_' + kind.replace(/[^a-z]/g, ''); used[base] = (used[base] || 0) + 1; return used[base] > 1 ? `${base}_${used[base]}` : base; }
     while (e && e !== clone) { const cls = [...e.classList || []].filter(c => !/^(col|row|d-|ml|mr|mt|mb|p[xytblr]?-|m[xytblr]?-)/.test(c)); if (cls.length) { base = cls[cls.length - 1]; break; } e = e.parentElement; }
     base = (base || el.tagName.toLowerCase()).replace(/[^a-z0-9]+/gi, '_').replace(/^_|_$/g, '').toLowerCase();
     if (kind) base += '_' + kind.replace(/[^a-z]/g, '');
@@ -95,6 +98,8 @@ export async function extractInPage({ rootSel, id, targets, names }) {
       el.setAttribute(a, addSlot(nameFor(el, a), v, a, el, a));
     }
   }
+  clone.querySelectorAll('[data-slot-name]').forEach((e) => e.removeAttribute('data-slot-name')); if (clone.hasAttribute('data-slot-name')) clone.removeAttribute('data-slot-name');
+  root.querySelectorAll('[data-slot-name]').forEach((e) => e.removeAttribute('data-slot-name')); root.removeAttribute('data-slot-name');
   // ancestors
   const ancestors = []; let p = root.parentElement;
   while (p) { const rb = p.getBoundingClientRect(); const o = { tag: p.tagName.toLowerCase(), attrs: {}, w: +rb.width.toFixed(2), x: rb.x + scrollX, y: rb.y + scrollY, display: getComputedStyle(p).display, position: getComputedStyle(p).position }; for (const a of p.attributes) if (!/^on|^data-ui$/i.test(a.name) && !(a.name === 'style' && p.tagName === 'BODY')) o.attrs[a.name] = a.value;
@@ -129,7 +134,8 @@ const escapeAttrSafe = (v) => String(v).replace(/&/g, '&amp;').replace(/</g, '&l
 export function harnessDoc(meta, bodyHtml, { dark = false, rtl = false, title = '' } = {}) {
   const ws = rtl ? meta.wRtl : dark ? meta.wDark : null; const c = chain(ws && ws.length === meta.ancestors.length ? meta.ancestors.map((a, i) => ({ ...a, w: ws[i] })) : meta.ancestors, bodyHtml);
   let ha = c.htmlAttrs.replace(/ data-theme="[^"]*"/, '').replace(/ dir="[^"]*"/, '');
-  ha += ` data-theme="${dark ? 'dark' : 'light'}"` + (rtl ? ' dir="rtl"' : '');
+  // meta.darkTheme: system whose dark theme is a named data-theme and whose light theme has NO attribute (huf: "midnight")
+  ha += (meta.darkTheme ? (dark ? ` data-theme="${meta.darkTheme}"` : '') : ` data-theme="${dark ? 'dark' : 'light'}"`) + (rtl ? ' dir="rtl"' : '');
   const css = ['frappe-desk.css', 'frappe-report.css', 'erpnext-erpnext.css', 'hrms-hrms.css'].filter(f => !meta.css || meta.css.includes(f));
   const links = (meta.css || css).map(f => `<link rel="stylesheet" href="${meta.cssBase}${f}">`).join('\n');
   const pd = meta.pad || {}; const og = (rtl && meta.originRtl) || (dark && meta.originDark) || meta.origin; const stub = `html,body{margin:0}body{background:${(dark && meta.bgDark) || meta.bg};min-height:${meta.clip ? meta.clip.h : 0}px}#ui-kit-stage{position:absolute;left:${(pd.l || 0) + (og ? og.x : 0)}px;top:${(pd.t || 0) + (og ? og.y : 0)}px;width:${Math.ceil(meta.stageW || meta.size.w)}px}${rtl && meta.rootWRtl ? `[data-ui="${meta.id}"]{width:${meta.rootWRtl}px!important;flex:none!important;box-sizing:border-box}` : ''}*{animation:none!important;transition:none!important;caret-color:transparent!important}`;

@@ -1,0 +1,817 @@
+{
+  "component": "huf-knowledge-library",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_3": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_micro": {
+      "type": "text",
+      "sample": "New knowledge source",
+      "maxLength": 40,
+      "where": "text",
+      "element": "huf-knowledge-library.button-25"
+    },
+    "text_steel_4": {
+      "type": "text",
+      "sample": "Status",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_5": {
+      "type": "text",
+      "sample": ":",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_6": {
+      "type": "text",
+      "sample": "All",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "font_semibold": {
+      "type": "text",
+      "sample": "Northwind Regional Handbooks",
+      "maxLength": 56,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "Updating",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_7": {
+      "type": "text",
+      "sample": "104 documents",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_8": {
+      "type": "text",
+      "sample": "· Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_9": {
+      "type": "relative-time",
+      "sample": "2 mins ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs": {
+      "type": "text",
+      "sample": "Adding documents. You can still search what is ready.",
+      "maxLength": 106,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_2": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-library.button-27"
+    },
+    "font_semibold_2": {
+      "type": "text",
+      "sample": "Northwind Support Handbook",
+      "maxLength": 52,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_10px_2": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_10": {
+      "type": "text",
+      "sample": "18 documents",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_11": {
+      "type": "text",
+      "sample": "· Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_12": {
+      "type": "relative-time",
+      "sample": "2 mins ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_13": {
+      "type": "text",
+      "sample": "Used by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_14": {
+      "type": "number",
+      "sample": "2",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_15": {
+      "type": "text",
+      "sample": "agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_2": {
+      "type": "text",
+      "sample": "Agents can search this.",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_3": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-library.button-29"
+    },
+    "font_semibold_3": {
+      "type": "text",
+      "sample": "Supplier Contracts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_10px_3": {
+      "type": "text",
+      "sample": "Needs attention",
+      "maxLength": 30,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_16": {
+      "type": "text",
+      "sample": "40 documents",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_17": {
+      "type": "text",
+      "sample": "· Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_18": {
+      "type": "relative-time",
+      "sample": "1 day ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_19": {
+      "type": "text",
+      "sample": "Used by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_20": {
+      "type": "number",
+      "sample": "1",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_21": {
+      "type": "text",
+      "sample": "agent",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_3": {
+      "type": "text",
+      "sample": "3 documents could not be read.",
+      "maxLength": 60,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_4": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-library.button-31"
+    },
+    "font_semibold_4": {
+      "type": "text",
+      "sample": "Product Catalog",
+      "maxLength": 30,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_10px_4": {
+      "type": "text",
+      "sample": "Ready",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_22": {
+      "type": "text",
+      "sample": "144 documents",
+      "maxLength": 26,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_23": {
+      "type": "text",
+      "sample": "· Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_24": {
+      "type": "relative-time",
+      "sample": "2 days ago",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_25": {
+      "type": "text",
+      "sample": "Used by",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_26": {
+      "type": "number",
+      "sample": "3",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_27": {
+      "type": "text",
+      "sample": "agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_4": {
+      "type": "text",
+      "sample": "Agents can search this.",
+      "maxLength": 46,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_5": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-library.button-33"
+    },
+    "font_semibold_5": {
+      "type": "text",
+      "sample": "Warehouse Manuals",
+      "maxLength": 34,
+      "where": "text",
+      "element": "h3"
+    },
+    "text_10px_5": {
+      "type": "text",
+      "sample": "Paused",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_steel_28": {
+      "type": "text",
+      "sample": "36 documents",
+      "maxLength": 24,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_29": {
+      "type": "text",
+      "sample": "· Updated",
+      "maxLength": 20,
+      "where": "text",
+      "element": "p"
+    },
+    "text_steel_30": {
+      "type": "relative-time",
+      "sample": "2 weeks ago",
+      "maxLength": 22,
+      "where": "text",
+      "element": "p"
+    },
+    "text_xs_5": {
+      "type": "text",
+      "sample": "Turned off. Agents cannot use it.",
+      "maxLength": 66,
+      "where": "text",
+      "element": "p"
+    },
+    "text_micro_6": {
+      "type": "text",
+      "sample": "Add content",
+      "maxLength": 22,
+      "where": "text",
+      "element": "huf-knowledge-library.button-35"
+    },
+    "text_steel_31": {
+      "type": "text",
+      "sample": "Showing all 5 knowledge sources",
+      "maxLength": 62,
+      "where": "text",
+      "element": "div"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Connecting...",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.button-22"
+    },
+    "max_1023px_min_w_11_arialabel": {
+      "type": "text",
+      "sample": "Pending approvals",
+      "maxLength": 34,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.button-24"
+    },
+    "placeholder_text_steel_soft_placeholder": {
+      "type": "text",
+      "sample": "Search knowledge sources...",
+      "maxLength": 54,
+      "where": "attr:placeholder",
+      "element": "huf-knowledge-library.search"
+    },
+    "placeholder_text_steel_soft_arialabel": {
+      "type": "text",
+      "sample": "Search knowledge sources",
+      "maxLength": 48,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.search"
+    },
+    "svg_opacity_100_arialabel": {
+      "type": "text",
+      "sample": "Status: All",
+      "maxLength": 22,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.button-26"
+    },
+    "font_semibold_title": {
+      "type": "text",
+      "sample": "Northwind Regional Handbooks",
+      "maxLength": 56,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_10px_title": {
+      "type": "text",
+      "sample": "Adding documents. You can still search what is ready.",
+      "maxLength": 106,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_ui_text_title": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-28"
+    },
+    "font_semibold_title_2": {
+      "type": "text",
+      "sample": "Northwind Support Handbook",
+      "maxLength": 52,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_10px_title_2": {
+      "type": "text",
+      "sample": "Agents can search this.",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_ui_text_title_2": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-30"
+    },
+    "font_semibold_title_3": {
+      "type": "text",
+      "sample": "Supplier Contracts",
+      "maxLength": 36,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_10px_title_3": {
+      "type": "text",
+      "sample": "3 documents could not be read.",
+      "maxLength": 60,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_ui_text_title_3": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-32"
+    },
+    "font_semibold_title_4": {
+      "type": "text",
+      "sample": "Product Catalog",
+      "maxLength": 30,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_10px_title_4": {
+      "type": "text",
+      "sample": "Agents can search this.",
+      "maxLength": 46,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_ui_text_title_4": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-34"
+    },
+    "font_semibold_title_5": {
+      "type": "text",
+      "sample": "Warehouse Manuals",
+      "maxLength": 34,
+      "where": "attr:title",
+      "element": "h3"
+    },
+    "text_10px_title_5": {
+      "type": "text",
+      "sample": "Turned off. Agents cannot use it.",
+      "maxLength": 66,
+      "where": "attr:title",
+      "element": "div"
+    },
+    "text_ui_text_title_5": {
+      "type": "text",
+      "sample": "More actions",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "huf-knowledge-library.button-36"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-knowledge-library.section-37"
+    }
+  }
+}

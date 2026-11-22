@@ -1,0 +1,86 @@
+{
+  "id": "huf-batch-job-failed",
+  "name": "Batch job dialog, failed (provider error message)",
+  "group": "huf",
+  "source": "/batch-jobs",
+  "ancestors": [
+    {
+      "tag": "html",
+      "attrs": {
+        "lang": "en"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "static"
+    },
+    {
+      "tag": "body",
+      "attrs": {
+        "data-scroll-locked": "1"
+      },
+      "w": 1440,
+      "x": 0,
+      "y": 0,
+      "display": "block",
+      "position": "relative"
+    }
+  ],
+  "bg": "rgb(251, 251, 253)",
+  "size": {
+    "w": 520,
+    "h": 352.75
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "wRtl": null,
+  "rootWRtl": null,
+  "wDark": [
+    1440,
+    1440
+  ],
+  "originRtl": null,
+  "originDark": {
+    "x": 0,
+    "y": 0
+  },
+  "bgDark": "rgb(0, 0, 0)",
+  "cssBase": "../../tokens/css/",
+  "css": [
+    "huf/pre-develop/index-BZUhpcW-.css",
+    "huf/huf-fonts.css"
+  ],
+  "fonts": "\"Huf Sans\", sans-serif",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "describe": [
+    "Batch job dialog for a failed Product Description Refresh batch with the provider error in plain words.",
+    "Use for the \"what went wrong\" beat."
+  ],
+  "darkTheme": "midnight",
+  "app": {
+    "source": "pre-develop",
+    "route": "/batch-jobs",
+    "fixtures": [
+      "tools"
+    ],
+    "time": null
+  },
+  "sprite": true,
+  "inlineCss": "@keyframes swipe-out-left { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-right { \n  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }\n  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }\n}\n@keyframes swipe-out-up { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }\n}\n@keyframes swipe-out-down { \n  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }\n  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }\n}\n@keyframes sonner-fade-in { \n  0% { opacity: 0; transform: scale(0.8); }\n  100% { opacity: 1; transform: scale(1); }\n}\n@keyframes sonner-fade-out { \n  0% { opacity: 1; transform: scale(1); }\n  100% { opacity: 0; transform: scale(0.8); }\n}\n@keyframes sonner-spin { \n  0% { opacity: 1; }\n  100% { opacity: 0.15; }\n}\nbody[data-scroll-locked] { overscroll-behavior: contain; padding-left: 0px; padding-top: 0px; padding-right: 0px; margin-left: 0px; margin-top: 0px; overflow: hidden !important; position: relative !important; margin-right: 0px !important; }\nbody[data-scroll-locked] { --removed-body-scroll-bar-size: 0px; }\n",
+  "pad": {
+    "l": 32,
+    "t": 32,
+    "r": 32,
+    "b": 48
+  },
+  "clip": {
+    "w": 584,
+    "h": 433
+  }
+}

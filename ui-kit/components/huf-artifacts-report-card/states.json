@@ -1,0 +1,104 @@
+{
+  "component": "huf-artifacts-report-card",
+  "states": {
+    "default": {
+      "applicable": true,
+      "mechanism": "none",
+      "note": "markup as captured"
+    },
+    "hover": {
+      "applicable": false,
+      "reason": "target element not present in this state (re-rendered by the app)"
+    },
+    "focus": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":focus",
+      "target": "huf-artifacts-report-card.source",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 148,
+          "after": 37
+        }
+      ],
+      "computedStyleDelta": {
+        "color": {
+          "from": "rgb(110, 110, 115)",
+          "to": "rgb(29, 29, 31)"
+        },
+        "backgroundColor": {
+          "from": "rgba(0, 0, 0, 0)",
+          "to": "rgb(251, 251, 253)"
+        },
+        "boxShadow": {
+          "from": "none",
+          "to": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(122, 90, 240) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+        },
+        "outline": {
+          "from": "rgb(110, 110, 115) none 3px",
+          "to": "rgba(0, 0, 0, 0) solid 2px"
+        }
+      },
+      "screenshot": "states/focus.png"
+    },
+    "active": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "pseudo": ":active",
+      "target": "huf-artifacts-report-card.div-1",
+      "changes": [
+        {
+          "note": "DOM structure changed",
+          "before": 37,
+          "after": 148
+        }
+      ],
+      "computedStyleDelta": {},
+      "screenshot": "states/active.png",
+      "description": "auto: first interactive element"
+    },
+    "disabled": {
+      "applicable": true,
+      "mechanism": "class-attr",
+      "target": "huf-artifacts-report-card.button-2",
+      "changes": [
+        {
+          "element": "huf-artifacts-report-card.button-2",
+          "addClass": [
+            "disabled"
+          ],
+          "removeClass": [],
+          "attrs": {
+            "disabled": "",
+            "aria-disabled": "true"
+          }
+        }
+      ],
+      "computedStyleDelta": {
+        "opacity": {
+          "from": "1",
+          "to": "0.5"
+        },
+        "cursor": {
+          "from": "pointer",
+          "to": "default"
+        }
+      },
+      "screenshot": "states/disabled.png",
+      "description": "auto: Frappe/Tailwind disabled mechanism (disabled attribute + .disabled) applied to the first control"
+    },
+    "error": {
+      "applicable": false,
+      "reason": "n/a"
+    },
+    "loading": {
+      "applicable": false,
+      "reason": "mocked data renders without a visible skeleton"
+    },
+    "empty": {
+      "applicable": false,
+      "reason": "an empty report shows \"No records.\"; not captured"
+    }
+  }
+}

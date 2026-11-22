@@ -1,0 +1,929 @@
+{
+  "component": "huf-memory-overview",
+  "slots": {
+    "group_data_collapsible_icon_hidden": {
+      "type": "text",
+      "sample": "AI platform",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_2": {
+      "type": "text",
+      "sample": "Hub",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_3": {
+      "type": "text",
+      "sample": "Apps",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_4": {
+      "type": "text",
+      "sample": "Chat",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_5": {
+      "type": "text",
+      "sample": "Solutions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_6": {
+      "type": "text",
+      "sample": "Build",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_7": {
+      "type": "text",
+      "sample": "Agents",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_8": {
+      "type": "text",
+      "sample": "Flows",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_9": {
+      "type": "text",
+      "sample": "Procedures",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_10": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_11": {
+      "type": "text",
+      "sample": "Skills",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_12": {
+      "type": "text",
+      "sample": "Automations",
+      "maxLength": 22,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_13": {
+      "type": "text",
+      "sample": "Library",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_14": {
+      "type": "text",
+      "sample": "Prompts",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_15": {
+      "type": "text",
+      "sample": "Knowledge",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_16": {
+      "type": "text",
+      "sample": "Providers",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_17": {
+      "type": "text",
+      "sample": "Tables",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_18": {
+      "type": "text",
+      "sample": "Monitor",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "group_data_collapsible_icon_hidden_19": {
+      "type": "text",
+      "sample": "Dashboard",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_20": {
+      "type": "text",
+      "sample": "Executions",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_21": {
+      "type": "text",
+      "sample": "Playground",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_22": {
+      "type": "text",
+      "sample": "Settings",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "group_data_collapsible_icon_hidden_23": {
+      "type": "text",
+      "sample": "Keyboard shortcuts",
+      "maxLength": 36,
+      "where": "text",
+      "element": "span"
+    },
+    "group_focus_within_shortcut_hint_opacity_100": {
+      "type": "text",
+      "sample": "?",
+      "maxLength": 20,
+      "where": "text",
+      "element": "kbd"
+    },
+    "text_11px": {
+      "type": "text",
+      "sample": "MF",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "text_ink": {
+      "type": "text",
+      "sample": "Maya Fernandes",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "text_steel_2": {
+      "type": "text",
+      "sample": "maya@example.com",
+      "maxLength": 32,
+      "where": "text",
+      "element": "span"
+    },
+    "sr_only": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "text",
+      "element": "span"
+    },
+    "truncate": {
+      "type": "text",
+      "sample": "Intelligence",
+      "maxLength": 24,
+      "where": "text",
+      "element": "h1"
+    },
+    "text_10px": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "h_control_md": {
+      "type": "text",
+      "sample": "Memories",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-overview.button-25"
+    },
+    "h_control_md_2": {
+      "type": "text",
+      "sample": "Policies",
+      "maxLength": 20,
+      "where": "text",
+      "element": "huf-memory-overview.policies"
+    },
+    "text_signal_ink": {
+      "type": "text",
+      "sample": "Preference",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1": {
+      "type": "text",
+      "sample": "Prefers weekly summaries on Monday",
+      "maxLength": 68,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed": {
+      "type": "text",
+      "sample": "Maya wants the open-ticket summary every Monday at 8 am, grouped by region, with refunds over $500 called out first.",
+      "maxLength": 232,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5": {
+      "type": "number",
+      "sample": "9",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1": {
+      "type": "number",
+      "sample": "8",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_2": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_2": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_3": {
+      "type": "number",
+      "sample": "94",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_4": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_signal_ink_2": {
+      "type": "text",
+      "sample": "Fact",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_2": {
+      "type": "text",
+      "sample": "Handles the EMEA returns queue",
+      "maxLength": 60,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_2": {
+      "type": "text",
+      "sample": "Maya owns escalations for the EMEA returns queue and approves refunds up to $2,000 without a second sign-off.",
+      "maxLength": 218,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_2": {
+      "type": "text",
+      "sample": "Dec 30, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_3": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_6": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_4": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_7": {
+      "type": "number",
+      "sample": "91",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_8": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_2": {
+      "type": "text",
+      "sample": "Decision",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_3": {
+      "type": "text",
+      "sample": "Bluewater is the default carrier",
+      "maxLength": 64,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_3": {
+      "type": "text",
+      "sample": "Decided on 18 Dec: ship all EU replacement orders with Bluewater Logistics unless the customer pays for express.",
+      "maxLength": 224,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_3": {
+      "type": "text",
+      "sample": "Dec 29, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_5": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_9": {
+      "type": "number",
+      "sample": "7",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_10": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_6": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_11": {
+      "type": "number",
+      "sample": "88",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_12": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_signal_ink_3": {
+      "type": "text",
+      "sample": "Preference",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_4": {
+      "type": "text",
+      "sample": "Replies in a friendly, short tone",
+      "maxLength": 66,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_4": {
+      "type": "text",
+      "sample": "Drafted customer replies should be under 80 words, start with the customer's first name and avoid the word \"unfortunately\".",
+      "maxLength": 246,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_4": {
+      "type": "text",
+      "sample": "Dec 27, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_7": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_13": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_14": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_8": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_15": {
+      "type": "number",
+      "sample": "86",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_16": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_3": {
+      "type": "text",
+      "sample": "Insight",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_5": {
+      "type": "text",
+      "sample": "Holiday stock is tight on trail boots",
+      "maxLength": 74,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_5": {
+      "type": "text",
+      "sample": "Trail boot exchanges spiked 3x after 20 Dec; suggest store credit first when sizes 41-43 are out of stock.",
+      "maxLength": 212,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_5": {
+      "type": "text",
+      "sample": "Dec 24, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_9": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_17": {
+      "type": "number",
+      "sample": "7",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_18": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_10": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_19": {
+      "type": "number",
+      "sample": "79",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_20": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_signal_ink_4": {
+      "type": "text",
+      "sample": "Fact",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_6": {
+      "type": "text",
+      "sample": "Works from Lisbon, UTC+0",
+      "maxLength": 48,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_6": {
+      "type": "text",
+      "sample": "Maya is based in Lisbon and is online 8 am to 5 pm local time; schedule follow-ups inside those hours.",
+      "maxLength": 204,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_6": {
+      "type": "text",
+      "sample": "Dec 22, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_11": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_21": {
+      "type": "number",
+      "sample": "5",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_22": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_12": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_23": {
+      "type": "number",
+      "sample": "97",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_24": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_4": {
+      "type": "text",
+      "sample": "Observation",
+      "maxLength": 22,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_7": {
+      "type": "text",
+      "sample": "Invoices over $10k need a PO match",
+      "maxLength": 68,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_7": {
+      "type": "text",
+      "sample": "Every supplier invoice above $10,000 that Maya reviewed was held until a matching purchase order was attached.",
+      "maxLength": 220,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_7": {
+      "type": "text",
+      "sample": "Dec 19, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_13": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_25": {
+      "type": "number",
+      "sample": "8",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_26": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_14": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_27": {
+      "type": "number",
+      "sample": "82",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_28": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "text_ink_5": {
+      "type": "text",
+      "sample": "Summary",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "line_clamp_1_8": {
+      "type": "text",
+      "sample": "Q4 return reasons summary",
+      "maxLength": 50,
+      "where": "text",
+      "element": "h3"
+    },
+    "leading_relaxed_8": {
+      "type": "text",
+      "sample": "Top Q4 return reasons from Maya's chats: wrong size (41%), arrived late (22%), changed mind (18%), damaged in transit (9%).",
+      "maxLength": 246,
+      "where": "text",
+      "element": "p"
+    },
+    "gap_1_5_8": {
+      "type": "text",
+      "sample": "Dec 16, 2025",
+      "maxLength": 24,
+      "where": "text",
+      "element": "span"
+    },
+    "font_medium_15": {
+      "type": "text",
+      "sample": "Score:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_29": {
+      "type": "number",
+      "sample": "6",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_30": {
+      "type": "text",
+      "sample": "/10",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "font_medium_16": {
+      "type": "text",
+      "sample": "Conf:",
+      "maxLength": 20,
+      "where": "text",
+      "element": "span"
+    },
+    "gap_1_31": {
+      "type": "number",
+      "sample": "90",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "gap_1_32": {
+      "type": "text",
+      "sample": "%",
+      "maxLength": 20,
+      "where": "text",
+      "element": "div"
+    },
+    "transition_opacity_title": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_2": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_3": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_4": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_5": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_6": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "transition_opacity_title_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "transition_opacity_arialabel_7": {
+      "type": "text",
+      "sample": "Experimental",
+      "maxLength": 24,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "justify_center_arialabel": {
+      "type": "text",
+      "sample": "Connecting...",
+      "maxLength": 26,
+      "where": "attr:aria-label",
+      "element": "huf-memory-overview.span-20"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_title": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:title",
+      "element": "huf-memory-overview.button-22"
+    },
+    "data_side_right_data_collapsible_offcanvas_left_2_arialabel": {
+      "type": "text",
+      "sample": "Toggle sidebar",
+      "maxLength": 28,
+      "where": "attr:aria-label",
+      "element": "huf-memory-overview.button-22"
+    },
+    "text_10px_title": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:title",
+      "element": "span"
+    },
+    "text_10px_arialabel": {
+      "type": "text",
+      "sample": "Experimental feature",
+      "maxLength": 40,
+      "where": "attr:aria-label",
+      "element": "span"
+    },
+    "section_arialabel": {
+      "type": "text",
+      "sample": "Notifications alt+T",
+      "maxLength": 38,
+      "where": "attr:aria-label",
+      "element": "huf-memory-overview.section-52"
+    }
+  }
+}
