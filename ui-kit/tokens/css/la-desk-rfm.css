@@ -1,0 +1,35 @@
+/* loyal-arrow-desk page composition for rpt-rfm (RFM Segments): spacing and page-level sizing of components inside the shell body. Tokens only (--la-*), logical properties, no colours of its own. */
+.la-rfm-info{height:22px;display:flex;align-items:center;gap:8px;font-size:var(--la-text-sm);color:var(--la-text-muted)}
+.la-rfm-info .la-link{color:var(--la-primary);font-weight:500}
+.la-rfm-info .la-dot{color:var(--la-text-faint)}
+.la-rfm-stack{display:flex;flex-direction:column}
+.la-rfm-filters{margin-block-start:41px}
+.la-rfm-filters .la-fx-label{font-size:12px;color:var(--la-text-muted);line-height:14px}
+.la-rfm-filters .la-field{gap:6px}
+.la-rfm-filters .la-field-value{font-weight:600}
+.la-rfm-filters .la-filter-bar{padding-block-end:11px}
+.la-rfm-filters .la-filter-more{color:var(--la-text-muted);align-self:flex-end;margin-inline-start:8px}
+.la-rfm-filters .la-filter-more .la-ico{display:none}
+.la-rfm-select{position:relative;justify-content:space-between;gap:8px;overflow:visible}
+.la-rfm-select .la-ico{width:12px;height:12px;color:var(--la-text-muted)}
+.la-rfm-menu{position:absolute;inset-inline-start:0;inset-block-start:32px;min-width:100%;padding:4px;background:var(--la-bg);border:1px solid var(--la-border);border-radius:var(--la-radius-lg);box-shadow:0 6px 16px rgba(0,0,0,.12);z-index:5;display:none;flex-direction:column;gap:2px}
+.la-rfm-menu-item{height:28px;padding-inline:8px;display:flex;align-items:center;border-radius:var(--la-radius);font-size:var(--la-text-sm);font-weight:400;color:var(--la-text)}
+.la-rfm-menu-item.is-active{background:var(--la-subtle);font-weight:500}
+[data-menu="open"] .la-rfm-menu{display:flex}
+.la-rfm-kpis{display:grid;grid-template-columns:repeat(var(--la-kpi-cols,1),1fr);gap:var(--la-gap);margin-block-start:25px}
+.la-rfm-kpis .la-kpi{width:auto;height:95px;padding-block-start:14px}
+.la-rfm-kpis[data-cols="1"] .la-kpi-value{margin-block-start:14px}
+.la-rfm-section{margin-block-start:24px}
+.la-rfm-section .la-report-table,.la-rfm-section .la-heat-table{width:100%}
+.la-rfm-section .la-heat-table .la-heat-grid{width:100%}
+.la-rfm-section .la-rt{width:100%}
+.la-rfm-empty{margin-block-start:41px}
+.la-rfm-empty .la-es{min-height:247px;height:247px;background:transparent;border:1px solid var(--la-border);border-radius:var(--la-radius-lg)}
+.la-rfm-empty .la-es-inner{padding-block-end:0;max-width:420px}
+.la-rfm-empty .la-es-icon{width:48px;height:48px;border-radius:50%;background:var(--la-subtle);-webkit-mask:none;mask:none;position:relative;margin-block-end:16px}
+.la-rfm-empty .la-es-icon::after{content:"";position:absolute;inset:12px;background:var(--la-text);-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat}
+.la-rfm-empty .la-es-title{font-size:var(--la-text-base);font-weight:600;line-height:20px}
+.la-rfm-empty .la-es-body{margin-block-start:5px}
+.la-rfm-kpis .la-kpi-label{font-size:var(--la-text-sm);line-height:16px;font-weight:400}
+.la-rfm-kpis[data-cols="1"] .la-kpi{padding-inline:16px}
+.la-rfm-kpis[data-cols="1"] .la-kpi-value{color:var(--la-text-muted)}
