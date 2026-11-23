@@ -1,0 +1,83 @@
+// Generates preview.html + measurements.json from copy/whatsapp_templates.json. Run: node generate.mjs
+import fs from 'node:fs';
+const here = new URL('.', import.meta.url).pathname;
+const T = JSON.parse(fs.readFileSync(here + '../../copy/whatsapp_templates.json', 'utf8')).templates;
+const tpl = n => T.find(t => t.name === n);
+const biz = 'Al Noor Fresh Market', first = 'Omar', full = 'Omar Nair';
+const fill = (t, v) => t.body.replace(/\{\{(\d)\}\}/g, (_, i) => v[i]);
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const welcome = fill(tpl('loyal_arrow_enrolment_confirmation'), { 1: biz, 2: first, 3: '0' });
+const earned = fill(tpl('loyal_arrow_points_earned'), { 1: biz, 2: first, 3: '162', 4: 'AED 170.62 bill', 5: '321' });
+const winRaw = fill(tpl('loyal_arrow_winback'), { 1: biz, 2: first, 3: '@@321', 4: '15 Dec 2026', 5: '2' });
+const winHtml = esc(winRaw).replace('@@321 points', '<span data-ui="wa-points-balance" class="pts">321 points</span>');
+const btn = n => tpl(n).buttons.map(b => `<button class="qr">${esc(b)}</button>`).join('');
+const tick = '<svg class="tk" viewBox="0 0 18 11" width="18" height="11"><path class="t1" d="M1 5.8l3.2 3.2L10.5 1.5"/><path class="t2" d="M7.2 8.3l.8.7L14.5 1.5"/></svg>';
+const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Chat thread (Loyal Arrow messages)</title>
+<meta name="viewport" content="width=430,initial-scale=1">
+<link rel="stylesheet" href="../../../ui-kit/tokens/css/frappe-desk.css">
+<style>
+@font-face{font-family:Geist;font-weight:400;src:url(fonts/Geist-Regular.ttf)}
+@font-face{font-family:Geist;font-weight:500;src:url(fonts/Geist-Medium.ttf)}
+@font-face{font-family:Geist;font-weight:600;src:url(fonts/Geist-SemiBold.ttf)}
+@font-face{font-family:Geist;font-weight:700;src:url(fonts/Geist-Bold.ttf)}
+:root{--blue:#1450C8;--navy:#0B1B3A;--gold:#F5B83D;--bg:#EEF2FA}
+*{box-sizing:border-box}html,body{margin:0;width:430px;height:932px;overflow:hidden;background:var(--bg);font-family:Geist,system-ui,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased}
+.phone{position:relative;width:430px;height:932px;display:flex;flex-direction:column;background:linear-gradient(180deg,#EEF2FA 0%,#E6ECF7 100%)}
+.status{height:54px;padding:18px 30px 0;display:flex;justify-content:space-between;font-weight:600;font-size:16px;color:#fff;background:var(--navy);flex:none}
+.status i{display:inline-block;width:26px;height:12px;border:1.5px solid #fff;border-radius:4px;opacity:.9;position:relative;margin-left:6px}
+.status i:after{content:"";position:absolute;inset:2px 7px 2px 2px;background:#fff;border-radius:1px}
+.hdr{flex:none;display:flex;align-items:center;gap:12px;padding:8px 16px 14px 10px;background:linear-gradient(135deg,var(--navy),#10306e 70%,var(--blue));color:#fff;box-shadow:0 4px 18px rgba(11,27,58,.25);z-index:2}
+.back{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.av{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+.av svg{width:26px;height:26px}
+.who{flex:1;min-width:0}
+.nm{font-weight:600;font-size:17.5px;line-height:1.2;letter-spacing:-.01em}
+.sub{font-size:12.5px;opacity:.78;margin-top:2px;display:flex;align-items:center;gap:5px}
+.sub b{width:7px;height:7px;border-radius:50%;background:#5BE3A0;display:inline-block}
+.hi{display:flex;gap:18px}.hi svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.body{flex:1;padding:14px 14px 0;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.chip{align-self:center;font-size:12.5px;font-weight:500;color:#51608A;background:rgba(255,255,255,.85);padding:5px 12px;border-radius:999px;margin:10px 0 4px;box-shadow:0 1px 3px rgba(11,27,58,.08)}
+.msg{max-width:86%;align-self:flex-start;display:flex;flex-direction:column;gap:5px}
+.bub{background:#fff;border-radius:4px 18px 18px 18px;padding:10px 13px 8px;box-shadow:0 1px 2px rgba(11,27,58,.08),0 6px 18px rgba(11,27,58,.07);font-size:15px;line-height:1.36;letter-spacing:-.005em}
+.bub .bz{font-size:12.5px;font-weight:600;color:var(--blue);margin-bottom:3px}
+.meta{display:flex;justify-content:flex-end;align-items:center;gap:4px;font-size:11px;color:#8590AA;margin-top:3px}
+.qr{all:unset;box-sizing:border-box;text-align:center;background:#fff;color:var(--blue);font:600 14.5px Geist;padding:11px;border-radius:14px;box-shadow:0 1px 2px rgba(11,27,58,.08),0 4px 12px rgba(11,27,58,.06)}
+.pts{font-weight:600;background:linear-gradient(var(--gold),var(--gold)) 0 100%/var(--sweep,0%) 2px no-repeat;padding-bottom:1px}
+.tk{stroke:#9AA4BD;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tk .t2{opacity:0}
+.read .tk,.tk.read{stroke:#2E8BFF}.read .tk .t2,.tk.read .t2{opacity:1}
+[data-ui=wa-ticks-winback].read .tk{stroke:#2E8BFF}[data-ui=wa-ticks-winback].read .t2{opacity:1}
+.typing{align-self:flex-start;background:#fff;border-radius:4px 18px 18px 18px;padding:14px 16px;display:none;gap:5px;box-shadow:0 1px 2px rgba(11,27,58,.08),0 6px 18px rgba(11,27,58,.07)}
+.typing.show,.typing[style*="flex"]{display:flex}
+.typing span{width:8px;height:8px;border-radius:50%;background:#A3AEC8}
+.typing.show span{animation:d 1.1s infinite}.typing.show span:nth-child(2){animation-delay:.18s}.typing.show span:nth-child(3){animation-delay:.36s}
+@keyframes d{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.inp{flex:none;display:flex;align-items:center;gap:10px;padding:10px 12px 34px;background:rgba(255,255,255,.7);border-top:1px solid rgba(11,27,58,.06)}
+.inp .f{flex:1;height:44px;border-radius:22px;background:#fff;box-shadow:inset 0 0 0 1px #D8E0F0;display:flex;align-items:center;padding:0 16px;color:#8E99B3;font-size:15.5px}
+.inp svg{width:24px;height:24px;stroke:#51608A;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.send{width:44px;height:44px;border-radius:50%;background:var(--blue);display:grid;place-items:center;box-shadow:0 4px 12px rgba(20,80,200,.35)}.send svg{stroke:#fff;width:20px;height:20px}
+.home{position:absolute;bottom:8px;left:50%;margin-left:-67px;width:134px;height:5px;border-radius:3px;background:var(--navy);opacity:.85}
+</style></head><body>
+<div class="phone" data-ui="wa-phone">
+<div class="status"><span>9:41</span><span>5G<i></i></span></div>
+<div class="hdr" data-ui="wa-header">
+<svg class="back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+<div class="av" data-ui="wa-avatar"><svg viewBox="0 0 26 26"><path d="M4 18c6 0 9-4 11-11M15 7l4 .5M15 7l.5 4" fill="none" stroke="#1450C8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="who"><div class="nm" data-ui="wa-header-name">${full}</div><div class="sub"><b></b>${biz}</div></div>
+<div class="hi"><svg viewBox="0 0 24 24"><path d="M4 7h11v10H4zM15 11l5-3v8l-5-3"/></svg><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1 1C10 20 4 14 4 5a1 1 0 011-1z"/></svg></div>
+</div>
+<div class="body" data-ui="wa-thread">
+<div class="chip">26 Sep</div>
+<div class="msg" data-ui="wa-bubble-welcome"><div class="bub"><div class="bz">${biz}</div><div class="tx">${esc(welcome)}</div><div class="meta">6:48 pm</div></div>${btn('loyal_arrow_enrolment_confirmation')}</div>
+<div class="chip">9 Oct</div>
+<div class="msg" data-ui="wa-bubble-earned"><div class="bub"><div class="bz">${biz}</div><div class="tx">${esc(earned)}</div><div class="meta">7:05 pm</div></div>${btn('loyal_arrow_points_earned')}</div>
+<div class="chip">Today</div>
+<div class="typing" data-ui="wa-typing"><span></span><span></span><span></span></div>
+<div class="msg" data-ui="wa-bubble-winback"><div class="bub"><div class="bz">${biz}</div><div class="tx">${winHtml}</div><div class="meta">10:30 am <span data-ui="wa-ticks-winback" class="ticks">${tick}</span></div></div>${btn('loyal_arrow_winback')}</div>
+</div>
+<div class="inp"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><div class="f">Message</div><div class="send"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8z"/></svg></div></div>
+<div class="home"></div>
+</div></body></html>`;
+fs.writeFileSync(here + 'preview.html', html);
+fs.writeFileSync(here + 'texts.json', JSON.stringify({ welcome, earned, winback: winRaw.replace('@@321', '321') }, null, 2));

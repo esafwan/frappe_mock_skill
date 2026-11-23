@@ -63,11 +63,29 @@ def build(key, cfg):
         bills.append(dict(bill_no=f"B{20261100+b+1}", member_id=m["member_id"], lines=lines, net=net,
             tax_name=cfg["tax"]["name"], tax=tax, total=total, currency=cfg["currency"], points_earned=pts,
             day_offset=-(199 - b) // 3))
+    returns = []
+    if not multi:
+        # One win-back return bill for Omar Nair (2x points, per the win-back template: double points on next visit).
+        # Separate record, own RNG, dated after the report snapshot (day_offset 0), so bills.json, members.json and
+        # the lapsing report are untouched.
+        om = [m for m in members if m["names"]["en"] == "Omar Nair"]; assert len(om) == 1
+        om = om[0]; r2 = random.Random(2026)
+        lines = []
+        for _ in range(5):
+            s = r2.choice(skus); q = r2.randint(1, 3)
+            lines.append(dict(sku=s["sku"], qty=q, amount=round(s["price"] * q, 2)))
+        net = round(sum(x["amount"] for x in lines), 2); tax = round(net * cfg["tax"]["rate"], 2)
+        base = int(net // cfg["earn_per_unit"] * mult[om["tier"]])
+        returns.append(dict(kind="return", bill_no="B20261201", member_id=om["member_id"], lines=lines, net=net,
+            tax_name=cfg["tax"]["name"], tax=tax, total=round(net + tax, 2), currency=cfg["currency"],
+            base_points=base, earn_multiplier_promo=2, points_earned=base * 2, day_offset=1,
+            balance_before=om["balance_pts"], balance_after=om["balance_pts"] + base * 2,
+            note="Return visit after win-back message. Not part of bills.json; lapsing report snapshot is day_offset 0."))
     referrals = [dict(referrer=f"LA-M{i+1:03d}", referee=f"LA-M{i+31:03d}", status=("Rewarded" if i % 3 == 0 else "Qualified" if i % 3 == 1 else "Pending")) for i in range(10)]
     return dict(cfg=dict(store=cfg["store"], store_ar=cfg["store_ar"], city=cfg["city"], currency=cfg["currency"], locale=cfg["locale"],
         tax=cfg["tax"], earn_rule=("1 pt per %s net, tier multiplier" % cfg["unit_label"]) if not multi else "10 pts per Rs 100 net, tier multiplier",
         min_redeem_pts=cfg["min_redeem"], redeem_value_per_pt=cfg["redeem_value"], synthetic=True),
-        tiers=tiers, skus=skus, members=members, bills=bills, referrals=referrals)
+        tiers=tiers, skus=skus, members=members, bills=bills, referrals=referrals, returns=returns)
 
 def wa(key, d):
     cfg = d["cfg"]; biz = cfg["store"]; m = d["members"][4]; b = d["bills"][0]
@@ -82,5 +100,6 @@ for key, cfg in SETS.items():
     d = build(key, cfg); out = os.path.join(HERE, key); os.makedirs(out, exist_ok=True)
     for name in ("cfg","tiers","skus","members","bills","referrals"):
         json.dump(d[name], open(os.path.join(out, name + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    if d["returns"]: json.dump(d["returns"], open(os.path.join(out, "returns.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(wa(key, d), open(os.path.join(out, "whatsapp_previews.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(key, len(d["skus"]), len(d["members"]), len(d["bills"]))
