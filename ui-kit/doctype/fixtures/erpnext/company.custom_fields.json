@@ -1,0 +1,10 @@
+[
+ {"dt":"Company","fieldname":"hr_and_payroll_tab","fieldtype":"Tab Break","label":"HR & Payroll","insert_after":"expenses_added_to_stock_contra_account"},
+ {"dt":"Company","fieldname":"hr_settings_section","fieldtype":"Section Break","label":"HR & Payroll Settings","insert_after":"hr_and_payroll_tab"},
+ {"dt":"Company","fieldname":"default_expense_claim_payable_account","fieldtype":"Link","label":"Default Expense Claim Payable Account","options":"Account","insert_after":"hr_settings_section"},
+ {"dt":"Company","fieldname":"default_employee_advance_account","fieldtype":"Link","label":"Default Employee Advance Account","options":"Account","insert_after":"default_expense_claim_payable_account"},
+ {"dt":"Company","fieldname":"default_payroll_payable_account","fieldtype":"Link","label":"Default Payroll Payable Account","options":"Account","insert_after":"default_employee_advance_account"},
+ {"dt":"Company","fieldname":"hra_component","fieldtype":"Link","label":"HRA Component","options":"Salary Component","insert_after":"default_payroll_payable_account"},
+ {"dt":"Company","fieldname":"basic_component","fieldtype":"Link","label":"Basic Component","options":"Salary Component","insert_after":"hra_component"},
+ {"dt":"Company","fieldname":"arrear_component","fieldtype":"Link","label":"Arrear Component","options":"Salary Component","insert_after":"basic_component"}
+]

@@ -1,0 +1,7 @@
+[
+ {"dt":"Item","fieldname":"custom_opportunity_costs","fieldtype":"Table","label":"Opportunity Costs","options":"Item Opportunity Cost","insert_after":"allow_alternative_item"},
+ {"dt":"Item","fieldname":"disposable_items","fieldtype":"Table","label":"Disposable Items","options":"Item Disposable","insert_after":"custom_opportunity_costs"},
+ {"dt":"Item","fieldname":"is_disposable","fieldtype":"Check","label":"Is Disposable","insert_after":"disposable_items"},
+ {"dt":"Item","fieldname":"custom_yield_percent","fieldtype":"Percent","label":"Yield Percent","insert_after":"is_disposable"},
+ {"dt":"Item","fieldname":"custom_yield_tracked","fieldtype":"Check","label":"Yield Tracked","insert_after":"custom_yield_percent"}
+]

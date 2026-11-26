@@ -15,22 +15,30 @@ const stripScripts = (h) => String(h ?? '').replace(/<(script|style)\b[\s\S]*?<\
 function textarea(h) {
   return (df, ctx) => {
     const v = raw(effectiveValue(df, ctx));
-    return wrapFrappe(df, {
+    // Frappe display_status "Read": read_only, or submitted doc and field lacks allow_on_submit
+    // -> .control-input hidden, .control-value.like-disabled-input shown (no textarea visible).
+    const readMode = !!df.read_only || (Number(ctx.doc?.docstatus) === 1 && !df.allow_on_submit);
+    const out = wrapFrappe(df, {
       horizontal: false,
+      hideValue: !readMode,
+      inputAttrs: '',
       valueClass: 'for-description',
       valueAttrs: ` style="white-space-collapse: preserve;${df.max_height ? ` max-height: ${esc(df.max_height)}; overflow: auto;` : ''}"`,
-      inputHtml: `<textarea type="text" autocomplete="off" class="input-with-feedback form-control${df.bold ? ' bold' : ''}" style="height: ${h}px;${df.max_height ? ` max-height: ${esc(df.max_height)};` : ''}" ${attrs(df, ctx)} placeholder=""${ro(df)}>${esc(v)}</textarea>`,
+      // live v16 read mode: `<div class="control-input hide"></div>` (no textarea rendered)
+      inputHtml: readMode ? '' : `<textarea type="text" autocomplete="off" class="input-with-feedback form-control${df.bold ? ' bold' : ''}" style="height: ${h}px;${df.max_height ? ` max-height: ${esc(df.max_height)};` : ''}" ${attrs(df, ctx)} placeholder=""${ro(df)}>${esc(v)}</textarea>`,
       valueHtml: esc(v),
     });
+    return readMode ? out.replace('<div class="control-input">', '<div class="control-input hide">') : out;
   };
 }
 
 // ControlCode.make_ace_editor: .ace-editor-target.border.rounded (300px) + "Expand" button in input wrapper
 function aceTarget(df, ctx, mode, v) {
   const lines = v === '' ? [''] : v.split('\n');
-  const gutter = lines.map((_, i) => `<div class="ace_gutter-cell" style="height: 16px;">${i + 1}</div>`).join('');
-  const body = lines.map((l) => `<div class="ace_line" style="height: 16px;">${esc(l) || '&nbsp;'}</div>`).join('');
-  return `<div class="ace-editor-target border rounded ace_editor ace-tm" style="height: 300px; ${maxH(df)}font: 12px/16px 'SFMono-Regular', Menlo, Consolas, monospace;" data-mode="${mode}" ${attrs(df, ctx)}><div class="ace_gutter" style="display: block; width: 40px;"><div class="ace_layer ace_gutter-layer">${gutter}</div></div><div class="ace_scroller" style="left: 40px;"><div class="ace_content"><div class="ace_layer ace_text-layer">${body}</div></div></div></div>`;
+  const F = "font: 12px/16px 'SFMono-Regular', Menlo, Consolas, monospace;";
+  const gutter = lines.map((_, i) => `<div class="ace_gutter-cell${i === 0 ? ' ace_gutter-active-line' : ''}" style="height: 16px; top: ${i * 16}px; padding: 0 8px 0 19px; text-align: right; color: #333;">${i + 1}</div>`).join('');
+  const body = lines.map((l, i) => `<div class="ace_line" style="height: 16px; top: ${i * 16}px; white-space: pre; padding-left: 4px;">${esc(l) || '&nbsp;'}</div>`).join('');
+  return `<div class="ace-editor-target border rounded ace_editor ace_hidpi ace-tomorrow" style="height: 300px; ${maxH(df)}position: relative; overflow: hidden; ${F}" data-mode="${mode}" ${attrs(df, ctx)}><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; position: absolute;"></textarea><div class="ace_gutter" aria-hidden="true" style="display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 41px; background: #f0f0f0; color: #333; border-right: 1px solid #e0e0e0; overflow: hidden;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="width: 41px; position: relative;">${gutter}</div></div><div class="ace_scroller" style="position: absolute; top: 0; line-height: 16px; left: 41px; right: 0; bottom: 0;"><div class="ace_content" style="position: relative;"><div class="ace_layer ace_print-margin-layer" style="display: none;"></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="position: absolute; height: 16px; top: 0; left: 0; right: 0; background: #efefef;"></div></div><div class="ace_layer ace_text-layer" style="position: relative;">${body}</div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor" style="position: absolute; left: 4px; top: 0; height: 16px; border-left: 2px solid #000;"></div></div></div></div></div>`;
 }
 const expandBtn = (df) => (df.max_lines || df.min_lines || df.max_height ? '' : `<button class="btn btn-xs btn-default mt-2">Expand</button>`);
 const copyBtn = (df) => (df.read_only ? `<button class="btn icon-btn" style="position: absolute; top: 32px; right: 5px;" title="Copy to Clipboard">${icon('copy')}</button>` : '');
@@ -102,7 +110,7 @@ const comment = (df, ctx) => {
 };
 
 export default {
-  'Small Text': textarea(150),
+  'Small Text': textarea(80),
   Text: textarea(300),
   'Long Text': textarea(300),
   Code: ace('code', false),
