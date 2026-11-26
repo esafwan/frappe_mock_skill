@@ -1,0 +1,11 @@
+import header from './header.mjs';
+import paragraph from './paragraph.mjs';
+import spacer from './spacer.mjs';
+import shortcut from './shortcut.mjs';
+import card from './card.mjs';
+import number_card from './number_card.mjs';
+import chart from './chart.mjs';
+import quick_list from './quick_list.mjs';
+import onboarding from './onboarding.mjs';
+import custom_block from './custom_block.mjs';
+export const BLOCKS = { header, paragraph, spacer, shortcut, card, number_card, chart, quick_list, onboarding, custom_block };

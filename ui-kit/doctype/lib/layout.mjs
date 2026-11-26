@@ -1,5 +1,17 @@
 import { evalDepends } from './depends.mjs';
 
+// Column Break width: "30%" / 30 (percent) or "columns" 1-12 grid units; undefined = equal share.
+function parseWidth(df) {
+  if (!df) return undefined;
+  const w = df.width ?? df.columns;
+  if (w === undefined || w === null || w === '') return undefined;
+  const m = String(w).trim().match(/^(\d+(?:\.\d+)?)\s*(%?)$/);
+  if (!m) return undefined;
+  const n = parseFloat(m[1]);
+  if (m[2]) return n;
+  return df.width === undefined ? +(n / 12 * 100).toFixed(4) : n;
+}
+
 const hasValue = (v) => v !== undefined && v !== null && v !== '' && v !== 0 && v !== false;
 
 // opts.emitHidden: keep hidden / depends_on-false fields as {_hidden:true} so the renderer can emit them
@@ -10,23 +22,32 @@ export function buildLayout(meta, doc = {}, opts = {}) {
   const order = [];
   const seen = new Set();
   for (const n of meta.field_order || []) if (byName.has(n) && !seen.has(n)) { order.push(byName.get(n)); seen.add(n); }
-  for (const f of fields) if (!seen.has(f.fieldname)) { order.push(f); seen.add(f.fieldname); }
+  const loose = fields.filter((f) => !seen.has(f.fieldname));
+  // insert_after: place a field directly after its anchor (Custom Field semantics); unresolved ones append.
+  const rest = [];
+  for (const f of loose) {
+    const at = f.insert_after ? order.findIndex((o) => o.fieldname === f.insert_after) : -1;
+    if (at >= 0) { let i = at + 1; while (i < order.length && order[i]._ins === f.insert_after) i++; order.splice(i, 0, { ...f, _ins: f.insert_after }); seen.add(f.fieldname); }
+    else rest.push(f);
+  }
+  for (const f of rest) { order.push(f); seen.add(f.fieldname); }
 
   const tabs = [];
-  let tab = null, sec = null, col = null;
+  let tab = null, sec = null, col = null, folded = false;
   const newTab = (label, fieldname, hidden) => { tab = { label, fieldname, hidden: !!hidden, dep: undefined, sections: [] }; tabs.push(tab); sec = null; col = null; };
   const newSec = (df) => {
     if (!tab) newTab('Details', '__details');
-    sec = { dep: df?.depends_on, label: df?.label || '', fieldname: df?.fieldname || '', collapsible: !!df?.collapsible, collapsible_depends_on: df?.collapsible_depends_on, hidden: !!df?.hidden, columns: [] };
+    sec = { dep: df?.depends_on, label: df?.label || '', fieldname: df?.fieldname || '', collapsible: !!df?.collapsible, collapsible_depends_on: df?.collapsible_depends_on, hidden: !!df?.hidden, description: df?.description || '', hide_border: !!df?.hide_border, isFold: df?.fieldtype === 'Fold', folded, columns: [] };
     tab.sections.push(sec); col = null;
   };
-  const newCol = () => { if (!sec) newSec(null); col = { fields: [] }; sec.columns.push(col); };
+  const newCol = (df) => { if (!sec) newSec(null); col = { fields: [], width: parseWidth(df) }; sec.columns.push(col); };
 
   for (const df of order) {
     switch (df.fieldtype) {
       case 'Tab Break': newTab(df.label || df.fieldname, df.fieldname, df.hidden); tab.dep = df.depends_on; break;
-      case 'Section Break': case 'Fold': newSec(df); break;
-      case 'Column Break': newCol(); break;
+      case 'Fold': folded = true; newSec(df); break;
+      case 'Section Break': newSec(df); break;
+      case 'Column Break': newCol(df); break;
       default:
         if (!col) newCol();
         {
@@ -54,7 +75,12 @@ export function buildLayout(meta, doc = {}, opts = {}) {
       const anyVal = columns.some((c) => c.fields.some((f) => !f._hidden && hasValue(doc?.[f.fieldname])));
       const dep = s.collapsible_depends_on ? evalDepends(s.collapsible_depends_on, doc) : null;
       const collapsed = s.collapsible && !anyVal && dep !== true;
-      secs.push({ label: s.label, fieldname: s.fieldname, collapsible: s.collapsible, collapsed, columns });
+      // Normalise widths: explicit percents kept, unspecified columns share the remainder equally.
+      const set = columns.filter((c) => c.width !== undefined);
+      const left = Math.max(0, 100 - set.reduce((a, c) => a + c.width, 0));
+      const unset = columns.length - set.length;
+      for (const c of columns) c.pct = c.width !== undefined ? c.width : +(left / (unset || 1)).toFixed(4);
+      secs.push({ label: s.label, fieldname: s.fieldname, description: s.description, hide_border: s.hide_border, isFold: s.isFold, folded: s.folded, ncols: columns.length, collapsible: s.collapsible, collapsed, columns });
     }
     if (secs.length) out.push({ label: t.label, fieldname: t.fieldname, sections: secs });
   }

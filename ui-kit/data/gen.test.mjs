@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { FIELDTYPES, LAYOUT_TYPES, genValue, genDoc, genRows } from './gen.mjs';
+const ctx = { seed: 7, today: '2026-01-15', doctype: 'Test Doc' };
+const fields = FIELDTYPES.map((t) => ({ fieldname: 'f_' + t.toLowerCase().replace(/\W+/g, '_'), fieldtype: t, options: t === 'Select' ? 'A\nB\nC' : t === 'Link' ? 'Thing' : undefined }));
+const a = JSON.stringify(fields.map((f) => genValue(f, ctx, 0)));
+const b = JSON.stringify(fields.map((f) => genValue(f, ctx, 0)));
+assert.equal(a, b, 'same seed same output');
+assert.notEqual(a, JSON.stringify(fields.map((f) => genValue(f, { ...ctx, seed: 8 }, 0))), 'seed changes output');
+const v = (t) => genValue(fields.find((f) => f.fieldtype === t), ctx, 0);
+for (const f of fields) {
+  const x = genValue(f, ctx, 0);
+  if (LAYOUT_TYPES.has(f.fieldtype)) assert.equal(x, null, f.fieldtype);
+  else if (f.fieldtype === 'Table' || f.fieldtype === 'Table MultiSelect') assert.ok(Array.isArray(x));
+  else assert.ok(x !== undefined && x !== null && x !== '', `${f.fieldtype} yields value`);
+}
+assert.ok(['A', 'B', 'C'].includes(v('Select')));
+assert.match(v('Date'), /^\d{4}-\d{2}-\d{2}$/);
+assert.match(v('Datetime'), /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/);
+assert.match(v('Time'), /^\d{2}:\d{2}:\d{2}$/);
+assert.ok(Number.isInteger(v('Int')));
+assert.ok(v('Percent') >= 0 && v('Percent') <= 100);
+assert.ok(v('Rating') > 0 && v('Rating') <= 1);
+assert.match(v('Color'), /^#[0-9a-f]{6}$/);
+JSON.parse(v('JSON')); JSON.parse(v('Geolocation'));
+const meta = { name: 'Parent', fields: [{ fieldname: 'title', fieldtype: 'Data' }, { fieldname: 'status', fieldtype: 'Select', options: 'Open\nClosed' }, { fieldname: 'items', fieldtype: 'Table', options: 'Child' }] };
+const child = { name: 'Child', fields: [{ fieldname: 'qty', fieldtype: 'Float' }] };
+const d1 = JSON.stringify(genRows(meta, ctx, { count: 5 })), d2 = JSON.stringify(genRows(meta, ctx, { count: 5 }));
+assert.equal(d1, d2);
+const doc = genDoc(meta, ctx, 0, { childMetas: { Child: child }, childCount: 3 });
+assert.equal(doc.items.length, 3); assert.equal(doc.items[0].parent, doc.name); assert.equal(doc.items[2].idx, 3);
+assert.equal(FIELDTYPES.length, new Set(FIELDTYPES).size);
+console.log(`ok: ${FIELDTYPES.length} fieldtypes, deterministic`);
