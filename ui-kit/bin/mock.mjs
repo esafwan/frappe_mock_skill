@@ -29,11 +29,11 @@ const isPathLike = (s) => typeof s === 'string' && (s.includes('/') || s.include
 
 export const PAGES = ['blank', 'form', 'list', 'report', 'query_report', 'workspace', 'dashboard', 'kanban', 'calendar', 'gantt', 'tree', 'image', 'map', 'inbox', 'dialog'];
 
-export const OVERLAY_TYPES = ['button', 'intro', 'menu_open', 'dialog', 'list_select', 'filter_chips', 'state', 'toast'];
+export const OVERLAY_TYPES = ['button', 'intro', 'menu_open', 'dialog', 'list_select', 'filter_chips', 'state', 'toast', 'row_open', 'field_open'];
 
 /** Overlay draw layers, low to high. Renderers draw page-layer overlays in place; the shell draws modal and toast. */
 export const OVERLAY_LAYER = {
-  button: 'page', intro: 'page', list_select: 'page', filter_chips: 'page', state: 'page',
+  button: 'page', intro: 'page', list_select: 'page', filter_chips: 'page', state: 'page', row_open: 'page', field_open: 'page',
   menu_open: 'popover', dialog: 'modal', toast: 'toast',
 };
 
@@ -45,6 +45,7 @@ export const MENU_TARGETS = {
     'page.primary': 'Split primary button dropdown (e.g. Save / Submit variants).',
     'page.view_switcher': 'List/Report/Kanban/... view switcher.',
     'page.sort': 'Sort selector (field list and asc/desc).',
+    'page.views': 'Saved views dropdown (list); alias saved_views. Items from view.saved_views or the overlay.',
     'page.group_by': 'Group-by selector in the page head or report toolbar.',
     'page.filter': 'Filter popover (rows come from filter_chips overlay).',
     'page.settings': 'List settings / column picker gear.',
@@ -445,7 +446,6 @@ function semanticChecks(spec) {
       if (f) checkField(f[2], `${at}/target`);
     }
   });
-  if (spec.ctx?.chrome?.navbar === true) warnings.push({ path: '/ctx/chrome/navbar', message: 'chrome.navbar=true is not supported yet (navbar layout is broken and navbar.* popovers fall back to the top right); keep it off until slice 3' });
   if (primaries > 1) warnings.push({ path: '/overlays', message: `${primaries} primary buttons; Frappe shows one primary action` });
 
   if (spec.view?.sort?.field) checkField(spec.view.sort.field, '/view/sort/field');
@@ -567,6 +567,7 @@ export async function renderSpec(loaded, { outFile = null } = {}) {
   } else if (BUILTIN[spec.page]) renderer = BUILTIN[spec.page];
   else throw new Error(`no renderer for page "${spec.page}": expected ${rp} with \`export default (spec, ctx) => html\``);
   const ctx = buildCtx(loaded, { outFile });
+  if ((spec.overlays || []).some((o) => o.type === 'dialog')) ctx.dialogKit = await (await import('../renderers/dialog.mjs')).loadDialogKit();
   let res = await renderer(spec, ctx);
   if (typeof res === 'string') res = { main: res };
   if (!isObj(res) || (typeof res.main !== 'string' && typeof res.document !== 'string'))

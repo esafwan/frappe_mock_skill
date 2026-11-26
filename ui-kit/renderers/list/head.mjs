@@ -154,7 +154,8 @@ export function renderListHead(spec = {}, meta = {}, ctx = {}, st = {}) {
   let primaryLabel = '';
   if (selected > 0 || am) {
     const items = am ? am.items : bulk;
-    primary = `<div class="btn-group actions-btn-group${am ? ' show' : ''}">${button('Actions', { caret: true, ui: 'page.actions' })}${menuList(items, { open: !!am, highlight: am?.highlight, ui: 'list.actions-menu' })}</div>`;
+    const aOpen = !!am || !!st.actionsOpen;
+    primary = `<div class="btn-group actions-btn-group${aOpen ? ' show' : ''}">${button('Actions', { caret: true, ui: 'page.actions' })}${menuList(items, { open: aOpen, highlight: am?.highlight, ui: 'list.actions-menu' })}</div>`;
   } else if (primaryOverride) {
     primaryLabel = primaryOverride.label;
     primary = button(primaryOverride.label, { primary: true, icon: primaryOverride.icon, ui: 'list.primary-action' });

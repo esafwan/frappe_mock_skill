@@ -6,6 +6,10 @@ import { applyStates, locate, STATES } from './states.mjs';
 import { layerCss, wrapOverlays, toastHtml } from './layers.mjs';
 import { renderMenu } from '../shell/menus.mjs';
 import { loadSymbols } from '../shell/dock.mjs';
+import { NAVBAR_ANCHORS } from '../shell/navbar.mjs';
+import { renderFormDialog, isFormDialog } from '../renderers/dialogs/form-dialogs.mjs';
+import { renderDialog } from '../renderers/dialog.mjs';
+import { renderQuickEntry } from '../renderers/quick-entry.mjs';
 
 /** Where each menu_open target hangs: selectors tried in order. No match falls back to the top right under the page head. */
 const ANCHORS = {
@@ -21,14 +25,12 @@ const ANCHORS = {
   'page.filter': ['[data-ui="list.filter"]'],
   'page.group_by': ['[data-ui="list.standard-filters"]'],
   'page.settings': ['[data-ui="page.menu-button"]'],
+  'page.views': ['[data-ui="list.view-switcher"]'],
+  saved_views: ['[data-ui="list.view-switcher"]'],
   'page.page_length': ['[data-ui="list.paging"]'],
-  'navbar.search': ['[data-ui="navbar.search"]'],
-  'navbar.notifications': ['[data-ui="navbar.button-2"]'],
-  notifications: ['[data-ui="navbar.button-2"]'],
-  'navbar.help': ['[data-ui="navbar.button-2"]'],
-  help: ['[data-ui="navbar.button-2"]'],
-  'navbar.user': ['.desktop-avatar', '.dock-user', '.dock-utilities .avatar'],
-  user: ['.desktop-avatar', '.dock-user', '.dock-utilities .avatar'],
+  ...NAVBAR_ANCHORS,
+  help: ['[data-ui="navbar.help"]', '[data-ui="navbar.button-2"]'],
+  user: ['[data-ui="navbar.user"]', '.desktop-avatar', '.dock-user', '.dock-utilities .avatar'],
   'sidebar.user': ['.desktop-avatar', '.dock-user', '.dock-utilities .avatar'],
   'sidebar.header': ['[data-ui="sidebar.link-1"]'],
   'dock.more': ['[data-ui="dock"]'],
@@ -52,7 +54,7 @@ const anchorsFor = (target) => {
 /** Tiny static positioner: puts each [data-anchor] popover under its anchor element, else top right. Same text every build. */
 const POSITION_JS = `(function(){function p(){var L=document.querySelectorAll('[data-layer="popover"] [data-anchor]');for(var i=0;i<L.length;i++){var e=L[i],a=null,s;try{s=JSON.parse(e.getAttribute('data-anchor'))}catch(x){s=[]}for(var j=0;j<s.length&&!a;j++){try{a=document.querySelector(s[j])}catch(x){}}var w=e.offsetWidth,vw=document.documentElement.clientWidth;if(a){var r=a.getBoundingClientRect();var l=r.left;if(l+w>vw-8)l=Math.max(8,r.right-w);e.style.left=l+'px';e.style.top=(r.bottom+4)+'px';}else{e.style.left=Math.max(8,vw-w-16)+'px';e.style.top='56px';}e.style.visibility='visible';}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',p);else p();window.addEventListener('load',p);})();`;
 
-const POPOVER_CSS = `[data-layer="popover"]{position:fixed;inset:0;pointer-events:none}[data-layer="popover"] [data-anchor]{position:fixed;visibility:hidden;pointer-events:auto;min-width:180px;max-width:360px}[data-layer="popover"] .dropdown-menu{position:static;display:block;float:none;margin:0}[data-layer="popover"] .menu-popover{background:var(--surface-white,#fff);border:1px solid var(--outline-gray-2,#e2e2e2);border-radius:8px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.12));padding:4px}[data-layer="popover"] .dropdown-item,.workspace-page .dropdown-item{display:flex;align-items:center;gap:8px}[data-layer="popover"] .dropdown-item .icon{flex:none}[data-layer="popover"] .dropdown-item kbd{margin-left:auto}[data-layer="popover"] .notifications-list .panel-header{display:flex;gap:12px;padding:8px 10px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-layer="popover"] .notifications-category.active{font-weight:600}[data-layer="popover"] .notification-null-state{padding:12px 10px}[data-layer="popover"] .block-picker{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:8px}[data-layer="popover"] .block-picker-item{border:0;background:transparent;padding:6px 8px;text-align:left;border-radius:6px}.desk-alert{display:flex;align-items:center;gap:8px;background:var(--surface-white,#fff);border:1px solid var(--outline-gray-2,#e2e2e2);border-radius:8px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.12));padding:10px 14px;min-width:240px;font-size:var(--text-base,14px)}.desk-alert .indicator{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink-gray-5,#888)}.desk-alert .indicator.green{background:var(--ink-green-3,#30a66d)}.desk-alert .indicator.red{background:var(--ink-red-3,#e03636)}.desk-alert .indicator.orange{background:var(--ink-amber-3,#db7706)}.desk-alert .indicator.blue{background:var(--ink-blue-3,#318ad8)}.layer-modal .modal-dialog{margin:0;width:100%;max-width:var(--dlg-w,520px)}.layer-modal .modal-content{background:var(--surface-white,#fff);border-radius:12px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.2));border:0}.layer-modal .modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--outline-gray-1,#ededed)}.layer-modal .modal-title{font-size:var(--text-lg,16px);font-weight:600;margin:0}.layer-modal .modal-body{padding:16px 20px}.layer-modal .modal-footer{display:flex;justify-content:flex-end;gap:8px;padding:12px 20px;border-top:1px solid var(--outline-gray-1,#ededed)}`;
+const POPOVER_CSS = `[data-layer="popover"]{position:fixed;inset:0;pointer-events:none}[data-layer="popover"] [data-anchor]{position:fixed;visibility:hidden;pointer-events:auto;min-width:180px;max-width:360px}[data-layer="popover"] .dropdown-menu{position:static;display:block;float:none;margin:0}[data-layer="popover"] .menu-popover{background:var(--surface-white,#fff);border:1px solid var(--outline-gray-2,#e2e2e2);border-radius:8px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.12));padding:4px}[data-layer="popover"] .dropdown-item,.workspace-page .dropdown-item{display:flex;align-items:center;gap:8px}[data-layer="popover"] .dropdown-item .icon{flex:none}[data-layer="popover"] .dropdown-item .menu-item-label{flex:1 1 auto;margin:0;text-align:left}[data-layer="popover"] .dropdown-item kbd{margin-left:auto}[data-layer="popover"] .notifications-list .panel-header{display:flex;gap:12px;padding:8px 10px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-layer="popover"] .notifications-category.active{font-weight:600}[data-layer="popover"] .notification-null-state{padding:12px 10px}[data-layer="popover"] .block-picker{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:8px}[data-layer="popover"] .block-picker-item{border:0;background:transparent;padding:6px 8px;text-align:left;border-radius:6px}.desk-alert{display:flex;align-items:center;gap:8px;background:var(--surface-white,#fff);border:1px solid var(--outline-gray-2,#e2e2e2);border-radius:8px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.12));padding:10px 14px;min-width:240px;font-size:var(--text-base,14px)}.desk-alert .indicator{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink-gray-5,#888)}.desk-alert .indicator.green{background:var(--ink-green-3,#30a66d)}.desk-alert .indicator.red{background:var(--ink-red-3,#e03636)}.desk-alert .indicator.orange{background:var(--ink-amber-3,#db7706)}.desk-alert .indicator.blue{background:var(--ink-blue-3,#318ad8)}.layer-modal .modal-dialog{margin:0;width:100%;max-width:var(--dlg-w,520px)}.layer-modal .modal-content{background:var(--surface-white,#fff);border-radius:12px;box-shadow:var(--shadow-3,0 8px 24px rgba(0,0,0,.2));border:0}.layer-modal .modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--outline-gray-1,#ededed)}.layer-modal .modal-title{font-size:var(--text-lg,16px);font-weight:600;margin:0}.layer-modal .modal-body{padding:16px 20px}.layer-modal .modal-footer{display:flex;justify-content:flex-end;gap:8px;padding:12px 20px;border-top:1px solid var(--outline-gray-1,#ededed)}`;
 
 /** Visible styling for pinned states. Scoped to the markers this module and the list renderer add. */
 const STATE_CSS = `<style data-ui="states.css">[data-state="hover"],.is-hover{background-color:var(--surface-gray-2,#f3f3f3)!important}.list-row-container[data-state="hover"] .level-right,.list-row-container[data-state="hover"]>.list-row,.list-row-container.is-hover>.list-row{background-color:var(--surface-gray-2,#f3f3f3)}[data-state="focus"],.is-focused{outline:2px solid var(--outline-gray-4,#999);outline-offset:1px;border-radius:6px}[data-state="disabled"][aria-disabled="true"],.disabled[data-state="disabled"]{opacity:.5;pointer-events:none;cursor:not-allowed}[data-state="loading"]{position:relative;opacity:.7;pointer-events:none}[data-state="loading"] .es-spinner,[data-state="loading"].loading .es-spinner{display:inline-block;width:12px;height:12px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;margin-right:6px;vertical-align:middle}[data-state="active"][aria-pressed="true"]{background-color:var(--surface-gray-3,#ebebeb)!important;box-shadow:inset 0 0 0 1px var(--outline-gray-3,#ccc)}</style>`;
@@ -82,6 +84,19 @@ export function dialogHtml(o = {}, n = 0) {
   return `<div class="modal-dialog modal-${esc(o.size || 'default')}" style="--dlg-w:${DLG_W[o.size] || DLG_W.default}px" role="document" data-ui="dialog.${n}" data-dialog-kind="${esc(kind)}"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">${ind}${esc(title)}</h4></div><div class="modal-body">${msg}${fields}</div>${foot ? `<div class="modal-footer">${foot}</div>` : ''}</div></div>`;
 }
 
+/** One dialog overlay -> modal html: named form dialogs, quick entry, then the generic field-driven dialog. */
+function dialogFor(o, n, ctx) {
+  if (isFormDialog(o.kind)) return renderFormDialog(o.kind, o, n, ctx.dialogKit || {});
+  const kit = ctx.dialogKit;
+  if (!kit) return dialogHtml(o, n);
+  if (o.kind === 'quick_entry') {
+    const meta = o.doctype ? ctx.resolve?.(o.doctype, 'doctype') : null;
+    if (meta) return renderQuickEntry(meta, o, n, kit);
+    ctx.warn?.(`dialog quick_entry: doctype "${typeof o.doctype === 'string' ? o.doctype : ''}" did not resolve`);
+  }
+  return renderDialog(o, n, kit);
+}
+
 /** Add `show` / aria-expanded to the element a `ui:<id>` menu target names. Returns [html, found]. */
 function openUi(html, target) {
   const h = locate(html, target);
@@ -89,7 +104,9 @@ function openUi(html, target) {
   let t = h.tag.replace(/\saria-expanded="[^"]*"/, '');
   t = t.replace(/>$/, ' aria-expanded="true">');
   t = /\sclass="/.test(t) ? t.replace(/\sclass="([^"]*)"/, (_, c) => ` class="${c.split(/\s+/).includes('show') ? c : `${c} show`}"`) : t.replace(/^<([\w-]+)/, '<$1 class="show"');
-  return [html.slice(0, h.index) + t + html.slice(h.index + h.tag.length), true];
+  let rest = html.slice(h.index + h.tag.length);
+  if (/class="[^"]*\binner-group-button\b/.test(t)) rest = rest.replace('class="dropdown-menu ', 'class="dropdown-menu show '); // button group: open its menu too
+  return [html.slice(0, h.index) + t + rest, true];
 }
 
 /** Add sprite symbols for icons used by injected markup. */
@@ -121,6 +138,10 @@ export function drawOverlays(html, ctx, layerMap = {}) {
   }
 
   const items = []; // {type, html}
+  for (const pm of ctx.preMenus || []) {
+    items.push({ type: 'menu_open', html: `<div data-anchor='${JSON.stringify(anchorsFor(pm.overlay.target)).replace(/'/g, '&#39;')}' data-popover-target="${esc(pm.overlay.target)}">${pm.html}</div>` });
+    drawn.menus++;
+  }
   for (const o of unused().filter((x) => x.type === 'menu_open')) {
     if (String(o.target).startsWith('ui:')) {
       const [h, ok] = openUi(html, o.target);
@@ -134,9 +155,12 @@ export function drawOverlays(html, ctx, layerMap = {}) {
     drawn.menus++;
   }
   let n = 0;
-  for (const o of unused().filter((x) => x.type === 'dialog')) {
+  const pre = new Map((ctx.preDialogs || []).map((d) => [d.overlay, d.html]));
+  const open = new Set(unused());
+  for (const o of (ctx.overlays || []).filter((x) => x.type === 'dialog' && (pre.has(x) || open.has(x)))) {
     ctx.useOverlays('dialog', (x) => x === o);
-    items.push({ type: 'dialog', html: dialogHtml(o, n++) });
+    items.push({ type: 'dialog', html: pre.get(o) ?? dialogFor(o, n, ctx) });
+    n++;
     drawn.dialogs++;
   }
   for (const o of unused().filter((x) => x.type === 'toast')) {

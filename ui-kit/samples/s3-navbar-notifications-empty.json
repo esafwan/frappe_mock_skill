@@ -1,0 +1,48 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    },
+    "chrome": {
+      "navbar": true
+    },
+    "notifications": {
+      "count": 3
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 8,
+        "seed": 11
+      }
+    },
+    "total": 40
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "navbar.notifications"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "../doctype/fixtures/erpnext/sales_invoice.json",
+    "sidebar": "Selling",
+    "custom": "../doctype/fixtures/india_compliance/custom_fields.json"
+  },
+  "data": {
+    "doc": "../doctype/fixtures/samples/sales_invoice.doc.json"
+  },
+  "overlays": [
+    {
+      "type": "field_open",
+      "field": "customer",
+      "query": "ac",
+      "results": [
+        {
+          "value": "Acme Traders",
+          "description": "Customer Group: Commercial"
+        },
+        {
+          "value": "Acme Exports"
+        },
+        "Acorn Retail"
+      ],
+      "create": true,
+      "advanced": true,
+      "highlight": 1
+    }
+  ]
+}

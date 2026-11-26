@@ -1,0 +1,200 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "../doctype/fixtures/test/odd_a.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "doc": {
+      "name": "ODD-0001",
+      "title": "Quarterly order",
+      "status": "Draft",
+      "docstatus": 0,
+      "owner": "jane@example.com",
+      "creation": "2026-11-20 09:14:00",
+      "modified": "2026-11-26 17:40:00",
+      "modified_by": "jane@example.com",
+      "note": "Deliver to the second floor reception.",
+      "items": [
+        {
+          "item": "ITEM-001",
+          "qty": 10,
+          "rate": 1500,
+          "amount": 15000,
+          "sub": [
+            {
+              "g_name": "Setup",
+              "g_qty": 2
+            },
+            {
+              "g_name": "Training",
+              "g_qty": 3
+            }
+          ]
+        },
+        {
+          "item": "ITEM-002",
+          "qty": 4,
+          "rate": 250,
+          "amount": 1000,
+          "sub": [
+            {
+              "g_name": "Warranty",
+              "g_qty": 1
+            }
+          ]
+        },
+        {
+          "item": "ITEM-003",
+          "qty": 1,
+          "rate": 9800,
+          "amount": 9800,
+          "sub": []
+        }
+      ],
+      "_assign": "[\"Aisha Khan\",\"Liam Chen\"]",
+      "_user_tags": [
+        "Priority",
+        "Pilot"
+      ],
+      "attachments": [
+        {
+          "file_name": "purchase-order.pdf"
+        },
+        {
+          "file_name": "site-plan.png",
+          "is_private": 1
+        }
+      ],
+      "shared": [
+        "Maria Garcia"
+      ],
+      "_liked_by": [
+        "Liam Chen"
+      ],
+      "_comment_count": 3,
+      "timeline": [
+        {
+          "type": "comment",
+          "by": "Aisha Khan",
+          "creation": "2026-11-26 17:40:00",
+          "text": "Customer asked to ship in two batches.",
+          "when": "1 day ago"
+        },
+        {
+          "type": "communication",
+          "by": "Omar Haddad",
+          "creation": "2026-11-26 11:05:00",
+          "subject": "Re: Quarterly order",
+          "text": "Confirming the delivery window for next week.",
+          "to": [
+            "buyer@example.com"
+          ],
+          "sent_or_received": "Sent",
+          "reply": true,
+          "when": "1 day ago"
+        },
+        {
+          "type": "version",
+          "by": "Jane Doe",
+          "creation": "2026-11-25 15:20:00",
+          "changes": [
+            {
+              "field": "Status",
+              "from": "Draft",
+              "to": "Pending"
+            },
+            {
+              "field": "Note",
+              "from": "Leave at gate",
+              "to": "Deliver to the second floor reception."
+            }
+          ],
+          "when": "2 days ago"
+        },
+        {
+          "type": "assignment",
+          "by": "Jane Doe",
+          "creation": "2026-11-25 15:10:00",
+          "text": "assigned Aisha Khan",
+          "when": "2 days ago"
+        },
+        {
+          "type": "attachment",
+          "by": "Jane Doe",
+          "creation": "2026-11-24 10:00:00",
+          "file": "purchase-order.pdf",
+          "when": "3 days ago"
+        },
+        {
+          "type": "like",
+          "by": "Liam Chen",
+          "creation": "2026-11-24 09:30:00",
+          "when": "3 days ago"
+        },
+        {
+          "type": "share",
+          "by": "Jane Doe",
+          "creation": "2026-11-23 12:00:00",
+          "shared_with": "Maria Garcia",
+          "when": "4 days ago"
+        },
+        {
+          "type": "workflow",
+          "by": "Jane Doe",
+          "creation": "2026-11-22 09:00:00",
+          "state": "Pending",
+          "when": "5 days ago"
+        },
+        {
+          "type": "created",
+          "by": "Jane Doe",
+          "creation": "2026-11-20 09:14:00",
+          "when": "1 week ago"
+        }
+      ]
+    },
+    "connections": [
+      {
+        "group": "Reference",
+        "items": [
+          {
+            "doctype": "Delivery Note",
+            "count": 2,
+            "open_count": 1
+          },
+          {
+            "doctype": "Payment",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "group": "Related",
+        "doctype": "Return",
+        "label": "Returns",
+        "count": 0
+      }
+    ]
+  }
+}

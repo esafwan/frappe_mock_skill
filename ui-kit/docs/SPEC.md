@@ -220,6 +220,14 @@ A renderer that owns a target must render it in the open state when asked; addin
 ```
 `kind`: `dialog | confirm | msgprint | quick_entry`. `size`: `small | default | large | extra-large`. `message`: text for confirm/msgprint (lines split on `\n`). `indicator`: title colour (msgprint). `fields` are DocField-shaped and rendered with `doctype/fields/*.mjs` (Section Break and Column Break allowed). For `quick_entry`, `doctype` is a ref (name, path or inline) and the mandatory fields plus "Edit Full Form" are shown. Actions are a label or `{label, style}`.
 
+Named dialogs (slice 3): `kind` may also be `assign_to | share | attach | add_tag | rename | email | msgprint_list | missing_mandatory | modified_conflict | server_error` (form dialogs) or `list_settings | quick_filters | save_view` (list dialogs). They read their own keys from the overlay; see `docs/SLICE3.md`.
+
+### `row_open`
+Opens a child-table row in its row form (Frappe `grid-row-open`): `{"type": "row_open", "field": "items", "row": 0, "child": {"field": "sub", "row": 1}}`. `row` is 0-based; `child` opens a row of a grandchild Table inside the expanded form (nests). The page behind is dimmed. Form pages only.
+
+### `field_open`
+A form field open or in a special state: `{"type": "field_open", "field": "customer", "query": "ac", "results": [...], "create": true, "advanced": true}`. `state` is `open` (default; Link results, Date/Time/Color picker, Table MultiSelect chips), `error` (mandatory highlight) or `readonly` (permlevel). Form pages only.
+
 ### `list_select`
 `{"type": "list_select", "rows": [0, 2, 5], "bulk": ["Edit", "Delete"], "open": true}`. `rows` are 0-based indexes or `"all"`. Shows checked rows, "3 selected" and the Actions menu (`bulk` replaces its items; `open` shows it open).
 
@@ -289,3 +297,8 @@ The engine wraps slots with `shell/shell.mjs` (default export `(slots, spec, ctx
 - Throwing is fine for bugs (exit 2); use `ctx.warn` for missing optional data.
 
 **Programmatic use.** `bin/mock.mjs` also exports `loadSpec(file, ctxOverrides)`, `buildCtx(loaded, {outFile})`, `renderSpec(loaded, {outFile})`, `validateSchema(data)`, `normalizeCtx(specCtx)`, `mergeSpec(base, over)`, and the registries `PAGES`, `OVERLAY_TYPES`, `OVERLAY_LAYER`, `MENU_TARGETS`, `STATE_TARGETS`, `STATES`, `FILTER_OPERATORS`, `WORKSPACE_BLOCKS`, `STANDARD_FIELDS`. The CLI runs only when the file is executed directly.
+
+## Slice 3 review decisions
+- Named dialogs are built by `renderDialog` (`body`, `fields`, `custom_actions`, `attrs`); hooks are `dialog.N`, with `data-ui="dialog:<id>"` as an alias on `.modal-content`.
+- Form Connections render as their own tab (synthesised "Connections" tab when the layout has none and `data.connections` is non-empty); `view.tab` selects the active tab by label, fieldname or index.
+- Legacy samples are fixed or deleted in slice 4 (duplicates of `[st]N-*` deleted; sole cover renamed into the gated scheme), after which geometry and determinism run on `samples/*.json`.

@@ -2,6 +2,8 @@
 import { esc } from '../kit-lib/util.mjs';
 import { icon } from '../kit-lib/icons.mjs';
 import { resolveTarget, defaultItems } from '../kit-lib/menu-registry.mjs';
+import { renderAwesomebar } from './awesomebar.mjs';
+import { renderNotifications } from './notifications.mjs';
 
 const norm = (items = []) => items.map((i) => (i === '---' || i?.divider ? { divider: true } : typeof i === 'string' ? { label: i } : i));
 
@@ -27,9 +29,9 @@ export function renderMenu(overlay = {}) {
   const base = `data-ui="${esc(ui)}" data-menu-kind="${entry.kind}"`;
   switch (entry.kind) {
     case 'search':
-      return `<div class="awesomplete menu-popover" ${base}><div class="menu-search" style="display:flex;align-items:center;gap:8px;padding:6px 10px">${icon('search')}<input type="text" class="form-control" style="flex:1;border:0;background:transparent;box-shadow:none" value="${esc(overlay.query || '')}" aria-label="Search"></div><ul class="dropdown-menu show" role="listbox">${lis(items, overlay.highlight)}</ul></div>`;
+      return renderAwesomebar(overlay, items, ui);
     case 'panel':
-      return `<div class="notifications-list menu-popover show" ${base}><div class="panel-header">${(entry.tabs || []).map((t, i) => `<span class="notifications-category${i ? '' : ' active'}">${esc(t)}</span>`).join('')}</div><ul class="dropdown-menu show">${lis(items, overlay.highlight)}</ul><div class="notification-null-state"><span class="text-muted">No new notifications</span></div></div>`;
+      return renderNotifications(overlay, overlay.items ? items : [], entry, ui);
     case 'switcher':
       return `<div class="sidebar-header-menu menu-popover show" ${base}><ul class="dropdown-menu show" role="presentation">${lis(items, overlay.highlight)}</ul></div>`;
     case 'picker':

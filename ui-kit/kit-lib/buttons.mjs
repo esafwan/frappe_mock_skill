@@ -14,5 +14,5 @@ export function button(label, o = {}) {
 /** Custom button group (Actions/Create/View): label + dropdown of items [{label, ui}]. */
 export function buttonGroup(label, items = []) {
   const links = items.map((it) => `<a class="dropdown-item" href="#" data-label="${enc(it.label)}">${esc(it.label)}</a>`).join('');
-  return `<div class="inner-group-button" data-label="${esc(label)}">${button(label, { caret: true })}<div role="presentation" class="dropdown-menu ">${links}</div></div>`;
+  return `<div class="inner-group-button" data-label="${esc(label)}" data-ui="form.group.${esc(label)}">${button(label, { caret: true })}<div role="presentation" class="dropdown-menu ">${links}</div></div>`;
 }

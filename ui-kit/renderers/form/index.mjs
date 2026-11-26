@@ -14,6 +14,11 @@ import { adaptFlatSidebar } from '../../adapters/sidebar.mjs';
 import { renderFormHead } from './head.mjs';
 import { applyReadOnly, readOnlyBanners } from './readonly.mjs';
 import { formTitle } from './title.mjs';
+import { formSidebarHtml as sidebarPanel } from './sidebar.mjs';
+import { renderTimeline } from './timeline.mjs';
+import { renderConnections } from './connections.mjs';
+import { injectRowForms } from './rowform.mjs';
+import { applyFieldOpen } from '../../doctype/fields/open/index.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const KIT = path.resolve(HERE, '..', '..');
@@ -66,7 +71,7 @@ function fallbackField(df) {
 }
 
 // ---- layout -> HTML
-function layoutHtml(layout, { renderField, sn, active }) {
+function layoutHtml(layout, { renderField, sn, active, dash = '' }) {
   const tabId = (t) => `${sn}-${t.fieldname}`;
   const tabs = `<div class="form-tabs-list" data-ui="form.tabs"><ul class="nav form-tabs" id="form-tabs" role="tablist">${layout.tabs.map((t, i) => `<li class="nav-item show"><button class="nav-link${i === active ? ' active' : ''}" id="${tabId(t)}-tab" data-toggle="tab" data-fieldname="${esc(t.fieldname)}" type="button" role="tab" aria-controls="${tabId(t)}">${esc(t.label)}</button></li>`).join('')}</ul></div>`;
 
@@ -85,25 +90,13 @@ function layoutHtml(layout, { renderField, sn, active }) {
     const cls = ['form-section', 'card-section', 'visible-section', s.collapsed && 'collapsed', s.hide_border && 'hide-border', s.isFold && 'form-fold', s.folded && !s.isFold && 'folded-section'].filter(Boolean).join(' ');
     return `<div class="${cls}"${s.fieldname ? ` data-fieldname="${esc(s.fieldname)}"` : ''}${s.folded ? ' data-folded="1"' : ''}>${head}${desc}<div class="section-body"${s.collapsed ? ' style="display: none;"' : ''}>${cols}</div></div>`;
   };
-  const panes = layout.tabs.map((t, i) => `<div id="${tabId(t)}" class="tab-pane fade${i === active ? ' show active' : ''}">${t.sections.map(sec).join('')}</div>`).join('');
+  const dashTab = dash ? layout.tabs.findIndex((t) => t.fieldname === 'connections_tab' || t.fieldname === 'overview_tab') : -1;
+  const panes = layout.tabs.map((t, i) => `<div id="${tabId(t)}" class="tab-pane fade${i === active ? ' show active' : ''}">${i === dashTab ? dash : ''}${t.sections.map(sec).join('')}</div>`).join('');
   return `<div class="form-page" data-ui="form.page">${tabs}<div class="form-tab-content tab-content">${panes}</div></div>`;
 }
 
-// Form sidebar placeholder (right panel, saved docs only): image, title, assignments, attachments, share, tags, timeline counts.
-export function formSidebarHtml(meta = {}, doc = {}) {
-  const title = formTitle(meta, doc).title || doc.name || '';
-  const letter = esc([...String(title).trim()][0]?.toUpperCase() || 'D');
-  const ic = (n) => `<svg class="icon icon-sm" aria-hidden="true"><use href="#icon-${n}"></use></svg>`;
-  const sect = (n, label, add) => `<div class="sidebar-section ${n}"><span class="form-sidebar-items"><span class="form-sidebar-label">${ic(label[0])}<span class="ellipsis">${esc(label[1])}</span></span>${add ? `<button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="${esc(label[1])}">${ic('plus')}</button>` : ''}</span></div>`;
-  return `<div class="form-sidebar overlay-sidebar hidden-xs hidden-sm" data-ui="form-sidebar">`
-    + `<div class="flex justify-between sidebar-image-section sidebar-section"><div class="sidebar-image-wrapper"><div class="sidebar-standard-image"><div class="standard-image">${letter}</div></div></div></div>`
-    + `<div class="sidebar-section sidebar-meta-details border-bottom"><div class="form-details flex justify-between form-title-text"><span class="bold ellipsis mr-3 text-medium">${esc(title)}</span></div></div>`
-    + sect('form-assignments border-bottom', ['users', 'Assigned To'], true)
-    + sect('form-attachments border-bottom', ['paperclip', 'Attachments'], true)
-    + sect('form-shared border-bottom', ['share-2', 'Share'], true)
-    + sect('form-tags border-bottom', ['tag', 'Tags'], true)
-    + `</div>`;
-}
+/** Form sidebar (right panel, saved docs only), built from the doc by ./sidebar.mjs. */
+export function formSidebarHtml(meta = {}, doc = {}, opts = {}) { return sidebarPanel(meta, doc, opts); }
 
 /**
  * Build the slots of a form page.
@@ -128,10 +121,18 @@ export async function buildFormPage(opts = {}) {
   if (isNew) doc.__islocal = 1;
   const loadMeta = opts.loadMeta || makeMetaLoader();
 
+  const spec_overlays = opts.overlays || opts.ctx?.overlays || spec.overlays || [];
+  const fieldOpen = spec_overlays.filter((o) => o?.type === 'field_open');
+  const drawn = new Set();
   const renderField = (df, ctx0 = {}) => {
     const ctx = { value: doc[df.fieldname], doc, doctype, meta, locale, loadMeta, renderField, ...ctx0 };
     const fn = (df.fieldtype === 'Data' && df.options && renderers['Data:' + df.options]) || renderers[df.fieldtype];
-    return fn ? fn(df, ctx) : fallbackField(df);
+    let html = fn ? fn(df, ctx) : fallbackField(df);
+    for (const ov of fieldOpen.filter((o) => o.field === df.fieldname)) {
+      const next = applyFieldOpen(html, df, ctx, ov);
+      if (next !== html) { html = next; drawn.add(ov); }
+    }
+    return html;
   };
 
   const layout = buildLayout(meta, doc);
@@ -139,18 +140,30 @@ export async function buildFormPage(opts = {}) {
     const hideNew = new Set(['overview_tab', 'connections_tab']);
     layout.tabs = layout.tabs.filter((t) => !hideNew.has(t.fieldname));
   }
-  const want = opts.tab ?? spec.view?.tab ?? 0;
-  let active = typeof want === 'string' && Number.isNaN(Number(want)) ? layout.tabs.findIndex((t) => t.label === want || t.fieldname === want) : Number(want);
-  active = Math.min(Math.max(Number.isFinite(active) ? active : 0, 0), Math.max(layout.tabs.length - 1, 0));
   const sn = snake(doctype).replace(/_/g, '-');
 
-  const body = readOnlyBanners(meta, doc) + layoutHtml(layout, { renderField, sn, active });
+  // v16: Connections is its own tab, shown only when the DocType has links. Synthesised after the layout's tabs when it has none.
+  const connections = opts.connections ?? spec.data?.connections ?? spec.meta?.connections;
+  if (!isNew && Array.isArray(connections) && connections.length && !layout.tabs.some((t) => t.fieldname === 'connections_tab' || t.fieldname === 'overview_tab')) {
+    layout.tabs.push({ label: 'Connections', fieldname: 'connections_tab', sections: [] });
+  }
+  const want = opts.tab ?? spec.view?.tab ?? 0;
+  const norm = (x) => String(x).toLowerCase().replace(/_tab$/, '');
+  let active = typeof want === 'string' && Number.isNaN(Number(want)) ? layout.tabs.findIndex((t) => t.label === want || t.fieldname === want || norm(t.label) === norm(want) || norm(t.fieldname) === norm(want)) : Number(want);
+  active = Math.min(Math.max(Number.isFinite(active) ? active : 0, 0), Math.max(layout.tabs.length - 1, 0));
+  const dash = !isNew && Array.isArray(connections) && connections.length ? renderConnections(connections, { readOnly: Number(doc.docstatus) === 2 }) : '';
+  let form = layoutHtml(layout, { renderField, sn, active, dash });
+  form = injectRowForms(form, { overlays: spec_overlays, meta, doc, renderField, loadMeta, markDrawn: (o) => drawn.add(o) });
+  const showTimeline = !isNew && opts.timeline !== false && spec.view?.timeline !== false && spec.ctx?.desk_settings?.timeline !== false;
+  const timeline = showTimeline ? `<div class="form-footer" data-ui="form.footer"><div class="form-timeline">${renderTimeline(doc, { more: spec.view?.timeline_more, user: spec.ctx?.user?.full_name || spec.ctx?.user?.name })}</div></div>` : '';
+  const body = readOnlyBanners(meta, doc) + form + timeline;
   const geo = isNew
     ? '<style id="form-geometry">.layout-main{justify-content:center;position:relative}.layout-main-section-wrapper{flex:0 1 900px!important;max-width:900px;width:900px}</style>'
     : '';
   const head = renderFormHead(spec, meta, doc);
   const right = isNew || spec.ctx?.chrome?.form_sidebar === false ? '' : formSidebarHtml(meta, doc);
   const c = (re) => (body.match(re) || []).length;
+  drawn.forEach((o) => opts.ctx?.useOverlays?.(o.type, (x) => x === o));
   return {
     head, main: geo + body, right,
     title: `${doctype} ${isNew ? 'new' : doc.name}`,
@@ -219,7 +232,10 @@ export default async function render(spec, ctx) {
   if (!meta || typeof meta !== 'object') { ctx?.warn?.('form: meta.doctype did not resolve to a DocType'); return { main: '' }; }
   const loadMeta = (name) => (ctx?.resolve ? ctx.resolve(name, 'doctype') : null) || makeMetaLoader()(name);
   const sidebarMeta = typeof spec.meta?.sidebar === 'object' ? spec.meta.sidebar : null;
-  const page = await buildFormPage({ spec, meta, doc: spec.data?.doc || {}, custom: spec.meta?.custom || [], loadMeta, locale: ctx?.locale });
+  const wfSpec = spec.meta?.workflow;
+  const metaWf = wfSpec && typeof wfSpec === 'object' && !meta.workflow?.transitions
+    ? { ...meta, workflow: { state_field: wfSpec.workflow_state_field || wfSpec.state_field || 'workflow_state', states: wfSpec.states || [], transitions: wfSpec.transitions || [], styles: wfSpec.styles } } : meta;
+  const page = await buildFormPage({ spec, meta: metaWf, doc: spec.data?.doc || {}, custom: spec.meta?.custom || [], loadMeta, locale: ctx?.locale, ctx });
   ctx?.useOverlays?.('intro');
   ctx?.useOverlays?.('button');
   const workspace = ctx?.workspace || spec.ctx?.workspace || meta.module || '';

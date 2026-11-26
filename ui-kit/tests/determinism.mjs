@@ -7,7 +7,7 @@ const files = (args.length ? args : fs.readdirSync(path.join(KIT, 'samples')).fi
 let bad = 0;
 for (const f of files) {
   const abs = path.resolve(KIT, f);
-  const out = path.join(KIT, 'out', 'slice2', path.basename(f, '.json') + '.html');
+  const out = path.join(KIT, 'out', 'slice3', path.basename(f, '.json') + '.html');
   const a = await renderSpec(loadSpec(abs), { outFile: out }), b = await renderSpec(loadSpec(abs), { outFile: out });
   const same = a.html === b.html;
   if (!same || a.warnings.length) { bad++; console.log(`FAIL ${f}${same ? '' : ' (not byte-identical)'}${a.warnings.length ? ' warnings: ' + a.warnings.join(' | ') : ''}`); }
