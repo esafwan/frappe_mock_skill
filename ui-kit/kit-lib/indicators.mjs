@@ -59,3 +59,10 @@ export function indicatorPill(ind, { page = false } = {}) {
   const cls = ['es-badge', page ? 'page-indicator-pill' : 'indicator-pill'].join(' ');
   return `<span class="${cls}" data-theme="${esc(ind.colour)}"><span>${esc(ind.label)}</span></span>`;
 }
+
+/** Normalise meta.workflow once at load time: true or a name string becomes an object; objects keep their keys. */
+export function normalizeWorkflow(wf) {
+  if (wf === undefined || wf === null || wf === false || wf === 0 || wf === '') return undefined;
+  if (typeof wf === 'object' && !Array.isArray(wf)) return wf;
+  return { name: typeof wf === 'string' ? wf : undefined, state_field: 'workflow_state', states: [] };
+}

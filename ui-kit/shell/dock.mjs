@@ -1,35 +1,18 @@
 // Dock rail renderer. Generic: every label, icon and route comes from data (ctx.dock).
 // Markup reference: components/dock/component.html (class names and data-ui hooks).
-import fs from 'node:fs';
+import { esc } from '../kit-lib/util.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { esc } from '../kit-lib/util.mjs';
+import { loadSymbols, resolveIcon, misses } from './icons.mjs';
 
-const HERE = path.dirname(fileURLToPath(import.meta.url));
-const KIT = path.resolve(HERE, '..');
-let SYMS = null;
+export { loadSymbols };
+export const railIcon = (name) => resolveIcon(name).id;
 
-// id -> full <symbol> markup. Lucide sprite plus the "-soft" rail symbols captured in the reference page.
-export function loadSymbols() {
-  if (SYMS) return SYMS;
-  SYMS = new Map();
-  const grab = (txt) => { for (const m of txt.matchAll(/<symbol\b[^>]*\bid="([^"]+)"[\s\S]*?<\/symbol>/g)) if (!SYMS.has(m[1])) SYMS.set(m[1], m[0]); };
-  for (const f of ['tokens/icons/sprite.svg.html', 'pages/desk-form.html']) {
-    const p = path.join(KIT, f);
-    if (fs.existsSync(p)) grab(fs.readFileSync(p, 'utf8'));
-  }
-  return SYMS;
-}
-
-// Rail icon id for a dock item icon name: prefer the "-soft" variant, then the plain icon, then a neutral glyph.
-export function railIcon(name) {
-  const s = loadSymbols();
-  const n = String(name || '').replace(/^icon-/, '');
-  for (const id of [`icon-${n}`, `icon-${n.replace(/-soft$/, '')}-soft`, `icon-${n}-soft`]) if (n && s.has(id)) return id;
-  return s.has('icon-layout-grid') ? 'icon-layout-grid' : 'icon-circle';
-}
-
-const DEFAULT_LOGO = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="28" fill="#7B808A"/><rect x="30" y="30" width="40" height="40" rx="8" fill="#fff"/></svg>');
+// Logo: a URL/data URI renders as an image; a bare icon name (or nothing) renders a real lucide glyph, never a blank square.
+const isUrl = (s) => /^(data:|https?:|\/|\.{0,2}\/)|\.(svg|png|jpe?g|webp)(\?|$)/i.test(String(s || ''));
+const logoHtml = (logo, title) => (isUrl(logo)
+  ? `<img src="${esc(logo)}" alt="${esc(title)}">`
+  : `<span class="dock-logo-glyph" role="img" aria-label="${esc(title)}">${`<svg class="icon icon-rail" aria-hidden="true"><use href="#${resolveIcon(logo || 'layout-grid').id}"></use></svg>`}</span>`);
 const initial = (u) => esc((u?.full_name || u?.name || u?.email || '?').trim().charAt(0).toUpperCase());
 
 // dock: { logo, title, items:[{label, icon, route, unread, active, hidden}], utilities:[{label, icon}] }
@@ -48,8 +31,24 @@ export function renderDock({ dock = {}, app, user } = {}) {
     : '';
   const title = dock.title ?? '';
   return `<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
-<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><img src="${esc(dock.logo || DEFAULT_LOGO)}" alt="${esc(title)}"></div><div class="title-container"><div class="header-title">${esc(title)}</div></div></a></div>
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo">${logoHtml(dock.logo, title)}</div><div class="title-container"><div class="header-title">${esc(title)}</div></div></a></div>
 ${utils}<div class="dock-items">${items.map(btn).join('')}</div>
 <div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-${++n}"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">${initial(user)}</div></span></button></div>
 </div>`;
+}
+
+// Node self-test: node shell/dock.mjs --test
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url) && process.argv.includes('--test')) {
+  const s = loadSymbols();
+  const bad = [];
+  const ok = (c, m) => { if (!c) bad.push(m); };
+  ok(s.size > 1500, `full lucide set loaded (got ${s.size})`);
+  for (const n of ['shopping-cart', 'ShoppingCart', 'lucide:users', 'icon-wallet', 'file_text']) ok(resolveIcon(n, { warn: false }).hit, `resolves ${n}`);
+  ok(!resolveIcon('zz-not-an-icon', { warn: false }).hit, 'miss reported as miss');
+  const html = renderDock({ dock: { title: 'App', items: [{ label: 'A', icon: 'Wallet' }, { label: 'B', icon: 'zz-nope' }] } });
+  for (const m of html.matchAll(/<use href="#([^"]+)"/g)) ok(s.has(m[1]), `dock <use> #${m[1]} has a symbol`);
+  ok(!/<rect width="100" height="100" rx="28"/.test(decodeURIComponent(html)), 'default logo is not a blank square');
+  ok(/class="dock-logo-glyph"/.test(html), 'default logo is a real icon glyph');
+  if (bad.length) { console.error('FAIL\n' + bad.join('\n')); process.exit(1); }
+  console.log(`icons ok: ${s.size} symbols, ${misses.length} expected miss(es)`);
 }

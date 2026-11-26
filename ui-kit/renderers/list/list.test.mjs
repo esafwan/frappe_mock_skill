@@ -1,4 +1,5 @@
 // Acceptance tests for the list renderer (T-L2 + T-L3). Run: node renderers/list/list.test.mjs (from ui-kit/).
+import { fitColumns } from './fit.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -28,7 +29,8 @@ for (const [n, title] of [[1, false], [4, true], [8, false], [12, true], [12, fa
   const headerCols = count(html.split('list-row-head')[1].split('</header>')[0], /<div class="list-row-col /g);
   const cols = listColumns({ meta: {}, view: {} }, meta, {});
   assert.equal(cols.length, 1 + (n - (title ? 1 : 0)) + (title ? 1 : 0), `column model n=${n} title=${title}`);
-  assert.ok(headerCols >= cols.length, `header has ${headerCols} cols for ${cols.length}`);
+  const shown = fitColumns(cols, { available: 1440 - 48 - 230 - 64 - 230, gap: 15 }).cols.length; // wide lists drop trailing columns instead of overflowing
+  assert.ok(headerCols >= shown, `header has ${headerCols} cols for ${shown}`);
   assert.equal(count(html, /class="list-row-container" tabindex/g), 6, 'six rows');
   { const m = (html.split('data-ui="shell.head"')[1] || '').match(/.{30}(Customer|ERPNext|Selling)\b.{30}/); assert.ok(!m, `hard-wired name: ${m?.[0]}`); }
   assert.ok(warnings.every((w) => !/list/.test(w) || /overlay/.test(w) === false), `warnings: ${warnings}`);

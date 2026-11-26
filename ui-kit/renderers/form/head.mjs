@@ -1,7 +1,8 @@
 import { esc } from '../../kit-lib/util.mjs';
 import { icon } from '../../kit-lib/icons.mjs';
 import { button, buttonGroup } from '../../kit-lib/buttons.mjs';
-import { get_indicator, indicatorPill } from '../../kit-lib/indicators.mjs';
+import { indicatorPill } from '../../kit-lib/indicators.mjs';
+import { formTitle, formStatus } from './title.mjs';
 import { perm, renderFormMenu, renderCustomButtons } from './menu.mjs';
 
 const t = (v) => v === 1 || v === true || v === '1';
@@ -29,19 +30,11 @@ export function formActions(spec = {}, meta = {}, doc = {}) {
   return r;
 }
 
-export function formTitle(meta = {}, doc = {}) {
-  const dt = meta.name || meta.doctype || 'Document';
-  if (doc.__islocal || !doc.name) return { title: `New ${dt}`, sub: '' };
-  const tf = meta.title_field && doc[meta.title_field];
-  const title = tf || doc.name;
-  return { title, sub: tf && tf !== doc.name ? doc.name : '' };
-}
-
 /** Form page head + optional intro. spec overlays: button, intro. */
 export function renderFormHead(spec = {}, meta = {}, doc = {}) {
   const { title, sub } = formTitle(meta, doc);
   const dt = meta.name || meta.doctype || 'Document';
-  const ind = doc.__islocal && !doc.__unsaved ? { label: 'Not Saved', colour: 'orange' } : get_indicator(doc, meta);
+  const ind = formStatus(meta, doc);
   const pill = ind ? indicatorPill(ind, { page: true }) : '<span class="es-badge page-indicator-pill hide" data-testid="page-status"></span>';
   const crumbs = `<nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol>`
     + `<li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">${esc(dt)}</span></span></li>`
@@ -63,3 +56,5 @@ export function renderFormHead(spec = {}, meta = {}, doc = {}) {
     + `<div class="standard-actions flex">${nav}${renderFormMenu(spec, meta, doc)}${secondary}${rightCustom.join('')}${primary}</div>`
     + `</div></div></div></div></div>${intro}`;
 }
+
+export { formTitle };

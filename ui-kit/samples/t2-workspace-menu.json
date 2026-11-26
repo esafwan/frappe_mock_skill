@@ -1,0 +1,94 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "workspace",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "sidebar": "Selling",
+    "workspace": "workspaces/selling.json"
+  },
+  "data": {
+    "onboarding": {
+      "Selling Onboarding": {
+        "steps": [
+          {
+            "title": "Create a record",
+            "status": "Complete"
+          },
+          {
+            "title": "Review the setup",
+            "description": "Check the defaults",
+            "action_label": "Go"
+          },
+          {
+            "title": "Add details",
+            "action_label": "Go"
+          }
+        ]
+      }
+    },
+    "charts": {
+      "Sales Order Analysis": {
+        "type": "Bar",
+        "labels": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov"
+        ],
+        "datasets": [
+          {
+            "name": "Total",
+            "values": [
+              12,
+              18,
+              9,
+              22,
+              17,
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "number_cards": {
+      "Sales Orders to Deliver": {
+        "value": 14,
+        "delta": 5
+      },
+      "Sales Orders to Bill": {
+        "value": 9,
+        "delta": -12
+      },
+      "Annual Sales": {
+        "value": 482000,
+        "delta": 18
+      }
+    }
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "workspace.menu"
+    }
+  ]
+}

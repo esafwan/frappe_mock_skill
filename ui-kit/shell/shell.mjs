@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { esc } from '../kit-lib/util.mjs';
 import { renderDock, loadSymbols, railIcon } from './dock.mjs';
+import { activeFor } from '../renderers/workspace/layout.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const KIT = path.resolve(HERE, '..');
@@ -76,7 +77,7 @@ ${sidebar}
 <link rel="stylesheet" href="${esc(rel)}/css/frappe-desk.css">
 <link rel="stylesheet" href="${esc(rel)}/css/erpnext-erpnext.css">
 ${headStyles()}
-<style data-ui="shell.extra">.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}</style></head>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style></head>
 <body data-ajax-state="complete" class="${bodyCls}"${ctx.route ? ` data-route="${esc(ctx.route)}"` : ''} data-sidebar="${sbMode === 'hidden' ? 0 : 1}">
 ${full}
 </body></html>
@@ -94,7 +95,7 @@ export default async function shellForSlots(slots, spec, ctx) {
   const sj = sidebarMeta || loadWorkspaceSidebar(workspace);
   const chrome = { dock: true, sidebar: 'expanded', navbar: false, ...(ctx.chrome || {}) };
   const sidebarHtml = !sj || chrome.sidebar === 'hidden' ? ''
-    : sidebarContainer(sj, { active: { workspace }, collapsed: chrome.sidebar === 'collapsed', title: workspace });
+    : sidebarContainer(sj, { active: spec.page === 'workspace' && spec.meta?.workspace ? activeFor(spec) : { workspace }, collapsed: chrome.sidebar === 'collapsed', title: workspace });
   const sctx = spec.ctx || {};
   const vp = ctx.viewport && typeof ctx.viewport === 'object' ? `${ctx.viewport.width}x${ctx.viewport.height}` : (ctx.viewport || '1440x900');
   return renderShell({

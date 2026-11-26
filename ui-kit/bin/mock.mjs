@@ -12,7 +12,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { applyMobile } from '../shell/mobile.mjs';
+import { drawOverlays, addSymbols } from '../kit-lib/draw.mjs';
 
+import { normalizeWorkflow } from '../kit-lib/indicators.mjs';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const KIT = path.resolve(HERE, '..');
 export const SCHEMA_PATH = path.join(KIT, 'schemas', 'mock-spec.schema.json');
@@ -373,6 +376,7 @@ function resolveSpec(spec, specDir) {
     }
     if (typeof v === 'string' || isObj(v)) { const r = one(v, k, `/meta/${k}`); if (r !== undefined) meta[k] = r; else delete meta[k]; }
   }
+  for (const o of [meta, isObj(meta.doctype) ? meta.doctype : null]) if (o && o.workflow !== undefined) { const w = normalizeWorkflow(o.workflow); if (w === undefined) delete o.workflow; else o.workflow = w; }
   if (isObj(meta.workspace) && typeof meta.workspace.content === 'string') {
     try { meta.workspace.content = JSON.parse(meta.workspace.content); } catch { errors.push({ path: '/meta/workspace/content', message: 'content is a string but not valid JSON' }); }
   }
@@ -441,6 +445,7 @@ function semanticChecks(spec) {
       if (f) checkField(f[2], `${at}/target`);
     }
   });
+  if (spec.ctx?.chrome?.navbar === true) warnings.push({ path: '/ctx/chrome/navbar', message: 'chrome.navbar=true is not supported yet (navbar layout is broken and navbar.* popovers fall back to the top right); keep it off until slice 3' });
   if (primaries > 1) warnings.push({ path: '/overlays', message: `${primaries} primary buttons; Frappe shows one primary action` });
 
   if (spec.view?.sort?.field) checkField(spec.view.sort.field, '/view/sort/field');
@@ -578,6 +583,8 @@ export async function renderSpec(loaded, { outFile = null } = {}) {
       if (typeof html !== 'string') throw new Error('shell/shell.mjs must return an HTML string');
     } else html = fallbackDocument(res, spec, ctx, false);
   }
+  if (html.includes('class="body-sidebar-container') || html.includes('data-ui="shell.main"')) html = applyMobile(html, ctx);
+  html = addSymbols(drawOverlays(html, ctx, OVERLAY_LAYER).html);
   const rep = ctx._report();
   return {
     html,

@@ -1,0 +1,86 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "Sales Invoice",
+    "custom": "../doctype/fixtures/samples/sales_invoice.custom.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "doc": "data/submitted_doc.json"
+  },
+  "overlays": [
+    {
+      "type": "intro",
+      "text": "This invoice has been submitted.",
+      "color": "blue"
+    },
+    {
+      "type": "button",
+      "group": "Create",
+      "label": "Payment Entry"
+    },
+    {
+      "type": "button",
+      "group": "Create",
+      "label": "Delivery Note"
+    },
+    {
+      "type": "button",
+      "group": "View",
+      "label": "Accounting Ledger"
+    },
+    {
+      "type": "button",
+      "group": "View",
+      "label": "Stock Ledger"
+    },
+    {
+      "type": "state",
+      "target": "button:Cancel",
+      "state": "hover"
+    },
+    {
+      "type": "state",
+      "target": "field:customer",
+      "state": "focus"
+    },
+    {
+      "type": "state",
+      "target": "tab:Payments",
+      "state": "active"
+    },
+    {
+      "type": "state",
+      "target": "button:Create",
+      "state": "disabled"
+    },
+    {
+      "type": "state",
+      "target": "field:company",
+      "state": "loading"
+    }
+  ],
+  "view": {
+    "tab": "Details"
+  }
+}

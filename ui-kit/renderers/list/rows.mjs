@@ -129,10 +129,15 @@ function subjectText(doc, col) {
 
 function cellFor(col, doc, meta, ctx) {
   const df = col.df || {};
-  const cur = (df.fieldtype === 'Currency' && df.options && !String(df.options).includes(':') && doc[df.options]) || doc.currency || ctx.system?.currency || '';
+  const cur = (df.fieldtype === 'Currency' && df.options && !String(df.options).includes(':') && doc[df.options]) || (col.fieldname !== 'currency' && typeof doc.currency === 'string' && doc.currency) || ctx.system?.currency || '';
   return formatCell(df, doc[col.fieldname], { doc, currency: cur, dateFormat: sysFmt(ctx), filterable: true });
 }
 
+import { fitColumns } from './fit.mjs';
+const vpWidth = (ctx) => { const v = ctx.viewport; const w = v && typeof v === 'object' ? Number(v.width) : parseInt(String(v || '').split('x')[0], 10); return Number.isFinite(w) && w > 0 ? w : 1440; };
+// px for the field columns: viewport minus dock (48), expanded sidebar (230) when shown, list padding and the row meta block (230).
+const listAvailable = (ctx) => vpWidth(ctx) - (ctx.chrome?.dock === false ? 0 : 48) - (ctx.chrome?.sidebar === false || ctx.chrome?.sidebar === 'hidden' ? 0 : ctx.chrome?.sidebar === 'collapsed' ? 48 : 230) - 64 - 230;
+const COL_GAP = 15; // horizontal gap every list column adds
 const DASH = '-';
 function headerCols(cols, { selectAll, resize, rowAction, showCheck }) {
   const sub = cols[0];
@@ -183,7 +188,7 @@ function renderRow(doc, n, cols, o) {
       const tags = parseJson(doc._user_tags, []); const tg = Array.isArray(tags) ? tags : String(tags).split(',').filter(Boolean);
       return `<div class="list-row-col tag-col hidden-xs ellipsis" data-ui="list.cell.${n}._user_tags">${tg.length ? tg.slice(0, 2).map(tagPill).join('') : `<div class="tags-empty">${DASH}</div>`}</div>`;
     }
-    if (c.kind === 'status') return `<div class="list-row-col hidden-xs ellipsis" data-fieldname="status_field" data-ui="list.cell.${n}.status_field">${statusBadge(doc, meta, spec)}</div>`;
+    if (c.kind === 'status') return `<div class="list-row-col hidden-xs ellipsis"${c.width ? ` style="width:${Math.max(50, Math.min(400, Number(c.width)))}px;flex:none"` : ''} data-fieldname="status_field" data-ui="list.cell.${n}.status_field">${statusBadge(doc, meta, spec)}</div>`;
     const cell = cellFor(c, doc, meta, ctx);
     const w = c.width ? ` style="width:${Math.max(50, Math.min(400, Number(c.width)))}px;flex:none"` : '';
     return `<div class="list-row-col ellipsis hidden-xs${cell.align === 'right' ? ' text-right' : ''}"${w} data-fieldname="${esc(c.fieldname)}" data-ui="list.cell.${n}.${esc(c.fieldname)}"><span class="ellipsis" title="${esc(cell.title)}">${cell.html}</span></div>`;
@@ -222,7 +227,8 @@ export function countLabel(shown, total, { upper = 1001 } = {}) {
 export function renderListBody(spec = {}, meta = {}, ctx = {}, st = {}) {
   const view = spec.view || {};
   const doctype = dtName(meta);
-  const cols = listColumns(spec, meta, ctx);
+  const rawCols = listColumns(spec, meta, ctx);
+  const cols = fitColumns(rawCols, { available: listAvailable(ctx), gap: COL_GAP }).cols;
   const rows = resolveRows(spec, meta, ctx);
   const selected = st.selected || new Set();
   const total = Number.isFinite(Number(spec.data?.total)) && spec.data?.total != null ? Number(spec.data.total) : rows.length;
@@ -258,7 +264,9 @@ export function renderListBody(spec = {}, meta = {}, ctx = {}, st = {}) {
   }
   const maxAssign = Math.min(3, Math.max(0, ...rows.map((d) => { const a = parseJson(d._assign, []); return Array.isArray(a) ? a.filter(Boolean).length : 0; })));
   const assignCls = maxAssign ? `has-assign-to assign-to-length-${maxAssign}` : 'no-assign-to';
-  const result = `<div class="frappe-list"><div class="result-container"><div class="result ${assignCls}" data-ui="list.result"><div class="list-row-container">${header}</div>${inner}</div></div>`;
+  const subW = Math.max(180, Math.min(420, Math.round(listAvailable(ctx) - COL_GAP * cols.length - cols.slice(1).reduce((a, c) => a + (c.width ? Math.max(50, Math.min(400, Number(c.width))) : c.kind === 'tag' ? 110 : 110), 0))));
+  const layoutCss = `<style data-ui="list.layout">.frappe-list{--list-subject-w:${subW}px}.frappe-list .list-subject{flex:0 0 var(--list-subject-w);width:var(--list-subject-w);box-sizing:border-box;padding-right:0}.frappe-list .level.list-row{min-height:46px;align-items:center}.frappe-list .list-row-col{box-sizing:border-box}.frappe-list .list-row-col>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frappe-list .list-row-col .progress{margin:0}.frappe-list .list-row-col .es-badge{display:inline-flex;align-items:center}</style>`;
+  const result = `${layoutCss}<div class="frappe-list"><div class="result-container"><div class="result ${assignCls}" data-ui="list.result"><div class="list-row-container">${header}</div>${inner}</div></div>`;
 
   const hasRows = state === 'normal' && rows.length > 0;
   const lens = PAGE_LENGTHS.map((p) => `<button type="button" class="es-pill" role="radio" data-state="${p === pl ? 'active' : 'inactive'}" aria-checked="${p === pl}" tabindex="${p === pl ? 0 : -1}" data-ui="list.page-length.${p}">${p}</button>`).join('');
