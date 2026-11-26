@@ -16,6 +16,8 @@ export const MENU_ENTRIES = [
   { id: 'page.settings', kind: 'menu', items: () => [L('Pick Columns'), L('Reset Sorting'), L('Settings')] },
   { id: 'page.page_length', kind: 'menu', items: () => [L('20', { checked: true }), L('100'), L('500')] },
   { id: 'view-switcher', kind: 'menu', alias: 'page.view_switcher' },
+  { id: 'page.views', kind: 'menu', items: () => [L('Default View', { checked: true }), L('Save View as...', { icon: 'plus' })] },
+  { id: 'saved_views', kind: 'menu', alias: 'page.views' },
   { id: 'navbar.search', kind: 'search', items: (a, o) => [L(`Search for ${o.query || ''}`.trim(), { icon: 'search' }), L('Recent', { disabled: true }), L('Open')] },
   { id: 'navbar.notifications', kind: 'panel', items: () => [L('Notifications', { disabled: true }), L('Mark all as read', { icon: 'check-check' }), L('Settings', { icon: 'settings' })], tabs: ['Notifications', 'Events', 'Mentions'] },
   { id: 'notifications', kind: 'panel', alias: 'navbar.notifications' },

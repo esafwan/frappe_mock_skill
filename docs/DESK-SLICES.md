@@ -68,11 +68,13 @@ Ordering by Opus (low effort) after slice 1 (PR #9). It is based on `docs/DESK-C
 | T-W3 | `renderers/workspace/blocks/{onboarding,custom_block,quick_list}.mjs` | Onboarding, Custom HTML Block and quick list blocks. |
 | T-W4 | `renderers/workspace/head.mjs` | Public, private and role badges, header menu, empty state. |
 | T-V4 | `renderers/dashboard.mjs` | Chart and number-card grid, chart filter popover. |
+| T-LEG | `ui-kit/samples/*.json` (legacy, no `[st]N-` prefix), `ui-kit/tests/{geometry,determinism}.mjs` | Delete a legacy sample that duplicates an `[st]N-*` sample; rename the sole cover of a surface into the gated scheme (e.g. `s4-workspace-legacy.json`) and fix it. For `samples/workspace.json` find why `link.onboard` has zero area (empty onboarding link with no label, or a hidden container): drop it from the sample data or render its label. Then widen the geometry and determinism globs to `samples/*.json`. |
 
 **Gate:**
 - A stress report with child columns, totals, group-by and a chart passes.
 - The chart proportionality tests pass.
 - A workspace with every block type, `col` value and `doc_view` renders cleanly.
+- Every file in `samples/*.json` passes geometry and determinism (no legacy sample left ungated).
 
 ## Slice 5: other views, cross-cutting variants, integration
 

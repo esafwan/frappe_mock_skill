@@ -109,6 +109,23 @@
           "additionalProperties": false
         },
         "system": { "$ref": "#/$defs/system" },
+        "notifications": {
+          "description": "Navbar bell badge.",
+          "type": "object",
+          "properties": { "count": { "type": "integer", "minimum": 0 } },
+          "additionalProperties": false
+        },
+        "navbar": {
+          "description": "Navbar content when chrome.navbar is true.",
+          "type": "object",
+          "properties": {
+            "logo": { "type": "string" },
+            "title": { "type": "string" },
+            "search_label": { "type": "string" },
+            "search_shortcut": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
         "desk_settings": {
           "description": "User desk settings (User doctype checkboxes). All default true.",
           "type": "object",
@@ -299,7 +316,9 @@
         { "$ref": "#/$defs/ov_list_select" },
         { "$ref": "#/$defs/ov_filter_chips" },
         { "$ref": "#/$defs/ov_state" },
-        { "$ref": "#/$defs/ov_toast" }
+        { "$ref": "#/$defs/ov_toast" },
+        { "$ref": "#/$defs/ov_row_open" },
+        { "$ref": "#/$defs/ov_field_open" }
       ]
     },
 
@@ -362,14 +381,15 @@
         "items": { "description": "Replace the generated items.", "type": "array", "items": { "$ref": "#/$defs/menu_item" } },
         "extra_items": { "description": "Append to the generated items.", "type": "array", "items": { "$ref": "#/$defs/menu_item" } },
         "query": { "description": "Typed text, for search-like targets (navbar.search, field:<name>).", "type": "string" },
-        "highlight": { "description": "0-based index of the keyboard-highlighted item.", "type": "integer", "minimum": 0 }
+        "highlight": { "description": "0-based index of the keyboard-highlighted item.", "type": "integer", "minimum": 0 },
+        "current": { "description": "page.views: label of the active saved view (shown checked).", "type": "string" }
       },
       "additionalProperties": false
     },
 
     "menu_target": {
       "type": "string",
-      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length)|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|form\\.menu|bulk-actions|view-switcher|notifications|help|user|column-header(:.+)?|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
+      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length|views)|saved_views|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|form\\.menu|bulk-actions|view-switcher|notifications|help|user|column-header(:.+)?|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
     },
 
     "dialog_action": {
@@ -393,7 +413,7 @@
       "required": ["type"],
       "properties": {
         "type": { "const": "dialog" },
-        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry"], "default": "dialog" },
+        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry", "assign_to", "share", "attach", "add_tag", "rename", "email", "msgprint_list", "missing_mandatory", "modified_conflict", "server_error", "list_settings", "quick_filters", "save_view"], "default": "dialog", "description": "Generic kinds (dialog, confirm, msgprint, quick_entry) or a named dialog id. Named dialogs read their own keys (see docs/SLICE3.md): assign_to {assign_to, myself, description, date, priority}, share {users, everyone}, attach {tab: device|link|camera, files, private, url}, add_tag {tag, tags}, rename {name, new_name, merge}, email {to, cc, subject, message, attachments, template}, msgprint_list {messages, intro}, missing_mandatory {doctype, fields}, modified_conflict {message, modified}, server_error {message, traceback}; list_settings, quick_filters, save_view {fields, values}." },
         "title": { "type": "string" },
         "indicator": { "$ref": "#/$defs/indicator_color", "description": "Title indicator colour (msgprint)." },
         "size": { "type": "string", "enum": ["small", "default", "large", "extra-large"], "default": "default" },
@@ -403,13 +423,17 @@
           "description": "DocField-shaped objects (fieldname, fieldtype, label, options, reqd, default, description, ...), rendered with doctype/fields/*.mjs. Section Break / Column Break allowed.",
           "type": "array",
           "items": {
-            "type": "object",
-            "required": ["fieldtype"],
-            "properties": {
-              "fieldname": { "type": "string" },
-              "fieldtype": { "type": "string" },
-              "label": { "type": "string" }
-            }
+            "anyOf": [
+              { "type": "string", "description": "A field label or fieldname (named dialogs such as list_settings and missing_mandatory)." },
+              {
+                "type": "object",
+                "properties": {
+                  "fieldname": { "type": "string" },
+                  "fieldtype": { "type": "string" },
+                  "label": { "type": "string" }
+                }
+              }
+            ]
           }
         },
         "values": { "description": "{ fieldname: value } shown in the fields.", "type": "object" },
@@ -417,7 +441,7 @@
         "secondary_action": { "$ref": "#/$defs/dialog_action" },
         "minimizable": { "type": "boolean" }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
 
     "ov_list_select": {
@@ -470,6 +494,48 @@
         "state": { "type": "string", "enum": ["hover", "focus", "active", "disabled", "loading"] }
       },
       "additionalProperties": false
+    },
+
+    "ov_row_open": {
+      "description": "Open a child-table row in its row form (Frappe grid-row-open): heading with Insert Above/Below, Duplicate, Move, Delete, the child DocType's fields, and \"Edit in full page\". `child` nests to open a grandchild row inside the expanded form.",
+      "type": "object",
+      "required": ["type", "field", "row"],
+      "properties": {
+        "type": { "const": "row_open" },
+        "field": { "description": "Fieldname of the Table field on the form.", "type": "string", "minLength": 1 },
+        "row": { "description": "0-based row index.", "type": "integer", "minimum": 0 },
+        "child": {
+          "description": "A row of a Table field inside the expanded row form, same shape (nests).",
+          "type": "object",
+          "required": ["field", "row"],
+          "properties": {
+            "field": { "type": "string", "minLength": 1 },
+            "row": { "type": "integer", "minimum": 0 },
+            "child": { "type": "object" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_field_open": {
+      "description": "Show one form field open or in a special state. state `open` (default): Link/Dynamic Link/Autocomplete results dropdown (query, results, create, advanced), Date/Datetime/Time picker (value), Color picker (value), Table MultiSelect (chips, results). state `error`: mandatory highlight. state `readonly`: permlevel read-only.",
+      "type": "object",
+      "required": ["type", "field"],
+      "properties": {
+        "type": { "const": "field_open" },
+        "field": { "type": "string", "minLength": 1 },
+        "state": { "type": "string", "enum": ["open", "error", "readonly"], "default": "open" },
+        "query": { "type": "string" },
+        "results": { "type": "array" },
+        "create": { "description": "true, or the label of the create row.", "type": ["boolean", "string"] },
+        "advanced": { "type": "boolean" },
+        "highlight": { "type": "integer", "minimum": 0 },
+        "value": {},
+        "chips": { "type": "array" }
+      },
+      "additionalProperties": true
     },
 
     "ov_toast": {

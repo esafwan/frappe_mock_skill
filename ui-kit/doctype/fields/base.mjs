@@ -1,4 +1,5 @@
 import { esc, formatValue } from '../lib/control.mjs';
+import { renderTable } from './table.mjs';
 
 // Frappe renders df.description as HTML (base_input.set_description: help_box.html(description)).
 export const descHtml = (df) => (df.description ? String(df.description) : '');
@@ -131,5 +132,5 @@ export default {
 			<span class="tooltip-content">${esc(df.fieldname)}</span>
 		</div>`;
   },
-  Table: table,
+  Table: renderTable,
 };

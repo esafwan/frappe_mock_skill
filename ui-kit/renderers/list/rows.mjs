@@ -8,6 +8,9 @@ import { get_indicator } from '../../kit-lib/indicators.mjs';
 import { formatCell, formatDate } from '../../kit-lib/cells.mjs';
 import { expandGen, hash, mulberry32 } from '../../data/gen.mjs';
 import { menuList, takeMenu, dtName, listPerm, isSystemManager } from './head.mjs';
+import { renderEmpty, renderNoResults, renderSkeleton, renderMobileCards } from './states.mjs';
+import { renderMeta } from './meta.mjs';
+import { renderBulkBar, renderRowAction } from './bulk.mjs';
 
 const t = (v) => v === 1 || v === true || v === '1';
 const NO_VALUE = new Set(['Section Break', 'Column Break', 'Tab Break', 'Fold', 'HTML', 'Heading', 'Button', 'Table', 'Table MultiSelect', 'Image', 'Geolocation']);
@@ -164,11 +167,7 @@ function rowActions(ctx, n) {
     if (b.group) { if (!groups.has(b.group)) { const g = { label: b.group, items: [] }; groups.set(b.group, g); out.push({ g }); } groups.get(b.group).items.push({ label: b.label }); } else out.push({ b });
   }
   if (mo && !out.some((o) => o.g)) out.push({ g: { label: 'Actions', items: [] } });
-  const html = out.map((o) => {
-    if (o.b) return `<button class="btn btn-action btn-default btn-xs" data-ui="list.row.${n}.action.${esc(o.b.label)}">${esc(o.b.label)}</button>`;
-    const items = mo ? mo.items.map((i) => ({ label: i.label, divider: i.divider })) : o.g.items;
-    return `<div class="btn-group dropdown-button${mo ? ' show' : ''}"><button class="btn btn-action btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="${!!mo}" data-ui="list.row.${n}.actions">${esc(o.g.label)}</button>${menuList(items, { open: !!mo, ui: `list.row.${n}.actions-menu` })}</div>`;
-  }).join('');
+  const html = out.map((o) => (o.b ? renderRowAction(n, { b: o.b }) : renderRowAction(n, { g: { label: o.g.label, items: mo ? mo.items.map((i) => ({ label: i.label, divider: i.divider })) : o.g.items } }, { open: !!mo }))).join('');
   return html;
 }
 
@@ -195,24 +194,12 @@ function renderRow(doc, n, cols, o) {
   }).join('');
   const ra = anyRowAction ? `<div class="list-row-col ellipsis hidden-xs list-row-action-col" style="flex:0 0 auto">${rowActions(ctx, n)}</div>` : '';
 
-  const assign = parseJson(doc._assign, []);
-  const assignees = (Array.isArray(assign) ? assign : []).filter(Boolean);
-  const liked = parseJson(doc._liked_by, []);
-  const isLiked = Array.isArray(liked) && liked.length > 0;
-  const cc = Number(doc._comment_count ?? 0);
   const ago = doc.modified ? miniAgo(doc.modified, ctx.now) : '';
   const modTitle = doc.modified ? `${formatDate(doc.modified, sysFmt(ctx))} ${String(doc.modified).slice(11, 19)}` : '';
-  const meta2 = `<div class="level-item list-row-activity hidden-xs">`
-    + `<div class="list-assignments-container hidden-md hidden-xs d-flex">${assignees.length ? avatarGroup(assignees, { size: 'medium', max: 2 }) : ''}</div>`
-    + `<span class="modified"><span class="frappe-timestamp mini" data-timestamp="${esc(doc.modified || '')}" title="${esc(modTitle)}">${esc(ago)}</span></span>`
-    + (t(spec.meta?.list_view_settings?.disable_comment_count) ? '' : `<span class="comment-count d-flex align-items-center">${icon('message-circle')}<span class="count">${cc > 99 ? '99+' : cc}</span></span>`)
-    + `<span class="mx-2">&middot;</span>`
-    + `<span class="list-row-like hidden-xs" style="margin-bottom: 1px;"><span class="like-action ${isLiked ? 'liked' : 'not-liked'}" data-doctype="${esc(doctype)}" data-name="${esc(name)}" data-liked-by="${esc(JSON.stringify(isLiked ? liked : []))}" title="${isLiked ? 'Liked by you' : ''}">${icon('heart', 'sm', { class: 'like-icon' })}</span></span></div>`
-    + (cols.some((c) => c.kind === 'status') ? `<div class="level-item visible-xs text-right">${statusBadge(doc, meta, spec)}</div>` : '');
+  const meta2 = renderMeta(doc, ctx, { doctype, ago, modTitle, showComments: !t(spec.meta?.list_view_settings?.disable_comment_count), statusHtml: cols.some((c) => c.kind === 'status') ? statusBadge(doc, meta, spec) : '' });
   return `<div class="list-row-container" tabindex="1" data-ui="list.row.${n}" data-name="${esc(name)}"${checked ? ' data-selected="true"' : ''}><div class="level list-row"><div class="level-left ellipsis">${subject}${rest}${ra}</div><div class="level-right text-muted ellipsis border-0">${meta2}</div></div></div>`;
 }
 
-const skeletonRow = (i) => `<div class="list-row-container" data-ui="list.skeleton.${i}"><div class="level list-row"><div class="level-left ellipsis"><div class="list-row-col ellipsis list-subject level"><span class="level-item"><span class="skeleton-box" style="display:inline-block;width:120px;height:12px;border-radius:4px;background:var(--bg-gray, #ededed)"></span></span></div></div></div></div>`;
 
 /** Count label: "{0} of {1}", total capped at count_upper_bound (default 1001) and shown as "1000+". */
 export function countLabel(shown, total, { upper = 1001 } = {}) {
@@ -246,26 +233,28 @@ export function renderListBody(spec = {}, meta = {}, ctx = {}, st = {}) {
   const count = t(lvs.disable_count) ? '' : `<span class="list-count" style="white-space: nowrap;"><span>${esc(countLabel(rows.length, total, { upper: Number(view.count_upper_bound) || 1001 }))}</span></span>`;
   const header = `<header class="level list-row-head text-muted">`
     + `<div class="level-left list-header-subject"${n ? ' style="display:none"' : ''}>${hc.sub}${hc.other}</div>`
-    + `<div class="level-left checkbox-actions"${n ? ' style="display:flex"' : ''}><div class="level list-subject">${showCheck ? `<span class="level-item select-like"><input class="list-header-checkbox list-check-all" type="checkbox" title="Select All"${n ? ' checked' : ''}></span>` : ''}<span class="level-item list-header-meta">${n ? `${n} item${n === 1 ? '' : 's'} selected` : ''}</span></div></div>`
+    + renderBulkBar(n, { showCheck })
     + `<div class="level-right">${count}<span class="level-item list-liked-by-me hidden-xs"><span title="Liked by me">${icon('heart', 'sm', { class: 'like-icon' })}</span></span></div></header>`;
 
   const create = listPerm(ctx, meta, 'create') && !t(ctx.read_only);
   let inner;
   if (state === 'empty') {
-    inner = `<div class="no-result text-muted flex justify-center align-center" data-ui="list.empty"><div class="msg-box no-border"><p>You haven't created a ${esc(doctype)} yet</p>${create ? `<p>${button(`Create your first ${doctype}`, { primary: true, ui: 'list.empty.create' })}</p>` : ''}</div></div>`;
+    inner = renderEmpty({ doctype, canCreate: create });
   } else if (state === 'no_results') {
-    inner = `<div class="no-result text-muted flex justify-center align-center" data-ui="list.no-results"><div class="msg-box no-border"><p>Nothing to show</p></div></div>`;
+    inner = renderNoResults({ filterCount: st.filters?.length || 0 });
   } else if (state === 'error') {
     inner = `<div class="no-result text-muted flex justify-center align-center" data-ui="list.error"><div class="msg-box no-border"><p>Something went wrong while loading the list</p><p>${button('Reload', { ui: 'list.error.reload' })}</p></div></div>`;
   } else if (state === 'loading') {
-    inner = `<div class="freeze flex justify-center align-center text-muted" data-ui="list.loading">Loading...</div>${[0, 1, 2, 3, 4].map(skeletonRow).join('')}`;
+    inner = renderSkeleton({ cols });
+  } else if (mobile) {
+    inner = renderMobileCards(rows, { cols: rawCols, doctype, ctx, cell: (c, d) => cellFor(c, d, meta, ctx).html, status: (d) => statusBadge(d, meta, spec), subject: (d) => subjectText(d, cols[0]), ago: (d) => (d.modified ? miniAgo(d.modified, ctx.now) : '') });
   } else {
     inner = rows.map((d, i) => renderRow(d, i, cols, { meta, spec, ctx, selected, showCheck, anyRowAction, doctype })).join('');
   }
   const maxAssign = Math.min(3, Math.max(0, ...rows.map((d) => { const a = parseJson(d._assign, []); return Array.isArray(a) ? a.filter(Boolean).length : 0; })));
   const assignCls = maxAssign ? `has-assign-to assign-to-length-${maxAssign}` : 'no-assign-to';
   const subW = Math.max(180, Math.min(420, Math.round(listAvailable(ctx) - COL_GAP * cols.length - cols.slice(1).reduce((a, c) => a + (c.width ? Math.max(50, Math.min(400, Number(c.width))) : c.kind === 'tag' ? 110 : 110), 0))));
-  const layoutCss = `<style data-ui="list.layout">.frappe-list{--list-subject-w:${subW}px}.frappe-list .list-subject{flex:0 0 var(--list-subject-w);width:var(--list-subject-w);box-sizing:border-box;padding-right:0}.frappe-list .level.list-row{min-height:46px;align-items:center}.frappe-list .list-row-col{box-sizing:border-box}.frappe-list .list-row-col>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frappe-list .list-row-col .progress{margin:0}.frappe-list .list-row-col .es-badge{display:inline-flex;align-items:center}</style>`;
+  const layoutCss = `<style data-ui="list.layout">.frappe-list{--list-subject-w:${subW}px}.frappe-list .list-subject{flex:0 0 var(--list-subject-w);width:var(--list-subject-w);box-sizing:border-box;padding-right:0}.frappe-list .level.list-row{min-height:46px;align-items:center}.frappe-list .list-row-col{box-sizing:border-box}.frappe-list .list-row-col>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frappe-list .list-row-col .progress{margin:0}.frappe-list .list-row-col .es-badge{display:inline-flex;align-items:center}${mobile ? '.frappe-list,.frappe-list .result,.frappe-list .list-row-container,.frappe-list .list-row-head{max-width:100%;min-width:0;box-sizing:border-box}.frappe-list .list-row-head .level-left{min-width:0;flex:1 1 0}.frappe-list .list-row-head .list-subject{flex:1 1 auto;width:auto}.frappe-list .list-card .card-field{gap:12px;min-width:0}' : ''}</style>`;
   const result = `${layoutCss}<div class="frappe-list"><div class="result-container"><div class="result ${assignCls}" data-ui="list.result"><div class="list-row-container">${header}</div>${inner}</div></div>`;
 
   const hasRows = state === 'normal' && rows.length > 0;

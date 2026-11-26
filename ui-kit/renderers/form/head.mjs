@@ -4,6 +4,7 @@ import { button, buttonGroup } from '../../kit-lib/buttons.mjs';
 import { indicatorPill } from '../../kit-lib/indicators.mjs';
 import { formTitle, formStatus } from './title.mjs';
 import { perm, renderFormMenu, renderCustomButtons } from './menu.mjs';
+import { renderWorkflowActions, workflowStatePill } from './workflow.mjs';
 
 const t = (v) => v === 1 || v === true || v === '1';
 
@@ -20,7 +21,7 @@ export function formActions(spec = {}, meta = {}, doc = {}) {
   const canAmend = submittable && ds === 2 && perm(spec, 'amend') && !ro;
   const r = { primary: null, secondary: null };
   if (canSubmit) r.primary = { label: 'Submit' };
-  else if (canSave) r.primary = { label: 'Save' };
+  else if (canSave) r.primary = { label: t(meta.issingle) && !local ? 'Update' : 'Save' };
   else if (canUpdate) r.primary = { label: 'Update', icon: 'pencil' };
   if (canCancel) r.secondary = { label: 'Cancel' };
   if (canAmend) {
@@ -35,7 +36,8 @@ export function renderFormHead(spec = {}, meta = {}, doc = {}) {
   const { title, sub } = formTitle(meta, doc);
   const dt = meta.name || meta.doctype || 'Document';
   const ind = formStatus(meta, doc);
-  const pill = ind ? indicatorPill(ind, { page: true }) : '<span class="es-badge page-indicator-pill hide" data-testid="page-status"></span>';
+  const wfPill = !doc.__unsaved && !doc.__islocal ? workflowStatePill(meta, doc) : '';
+  const pill = wfPill || (ind ? indicatorPill(ind, { page: true }) : '<span class="es-badge page-indicator-pill hide" data-testid="page-status"></span>');
   const crumbs = `<nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol>`
     + `<li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">${esc(dt)}</span></span></li>`
     + `<li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">${esc(title)}</span></span></li></ol></nav>`;
@@ -53,7 +55,7 @@ export function renderFormHead(spec = {}, meta = {}, doc = {}) {
     + `<div class="flex title-area ellipsis">${crumbs}${sub ? `<span class="title-sub text-muted">${esc(sub)}</span>` : ''}${pill}</div></div>`
     + `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end">`
     + `<div class="custom-actions hidden-xs hidden-md">${custom.join('')}</div>`
-    + `<div class="standard-actions flex">${nav}${renderFormMenu(spec, meta, doc)}${secondary}${rightCustom.join('')}${primary}</div>`
+    + `<div class="standard-actions flex">${nav}${renderFormMenu(spec, meta, doc)}${renderWorkflowActions(spec, meta, doc)}${secondary}${rightCustom.join('')}${primary}</div>`
     + `</div></div></div></div></div>${intro}`;
 }
 

@@ -11,6 +11,8 @@ import { renderShell } from '../../shell/shell.mjs';
 import { sidebarContainer, loadWorkspaceSidebar, dockFromWorkspaces } from '../form/index.mjs';
 import { renderListHead, bulkItems, takeMenu, toMenuItems, dtName } from './head.mjs';
 import { renderListBody, resolveRows, listColumns } from './rows.mjs';
+import { bulkActionItems } from './bulk.mjs';
+import { renderListDialogs } from './dialogs.mjs';
 
 const STATE_RE = /^(row:\d+|cell:\d+:.+|column:.+|button:.+|ui:.+)$/;
 const STATE_CLASS = { disabled: 'disabled', loading: 'loading', active: 'active' };
@@ -62,14 +64,13 @@ export async function buildListPage({ spec, meta, ctx }) {
     else (o.rows || []).forEach((i) => selected.add(Number(i)));
   }
   const bulkOverlay = [...sel].reverse().find((o) => o.bulk);
-  const bulk = bulkOverlay ? toMenuItems(bulkOverlay.bulk) : bulkItems(spec, meta, ctx);
+  const bulk = bulkOverlay ? toMenuItems(bulkOverlay.bulk) : bulkActionItems(spec, meta, ctx);
   const actionsOpenByOverlay = sel.some((o) => o.open);
 
   // head
   const views = enabledViews(meta, view, ctx);
-  const headRes = renderListHead(spec, meta, ctx, { selected: selected.size || (actionsOpenByOverlay ? 1 : 0), bulk, views });
+  const headRes = renderListHead(spec, meta, ctx, { selected: selected.size || (actionsOpenByOverlay ? 1 : 0), bulk, views, actionsOpen: actionsOpenByOverlay });
   let head = headRes.html;
-  if (actionsOpenByOverlay && !/actions-btn-group show/.test(head)) head = head.replace('actions-btn-group', 'actions-btn-group show').replace('class="dropdown-menu dropdown-menu-right"', 'class="dropdown-menu dropdown-menu-right show"');
 
   // filter area
   const groupBy = view.group_by_fields || (view.group_by ? [view.group_by] : []);
@@ -84,6 +85,12 @@ export async function buildListPage({ spec, meta, ctx }) {
 
   const body = renderListBody(spec, meta, ctx, { selected, filters: normalizeFilters(filters, meta), pageLength: view.page_length, state: view.state });
   let main = `<div class="layout-main-list" data-ui="list-view">${form}${body.html}</div>`;
+
+  // list dialogs (settings, quick filters, save view) and the saved-views menu: built here, layered by kit-lib/draw.mjs
+  const viewsOv = ctx.overlays.find((o) => o.type === 'menu_open' && (o.target === 'page.views' || o.target === 'saved_views'));
+  const ld = renderListDialogs({ spec, meta, ctx });
+  ctx.preDialogs = [...(ctx.preDialogs || []), ...ld.dialogs];
+  if (ld.viewsMenu && viewsOv) ctx.preMenus = [...(ctx.preMenus || []), { overlay: viewsOv, html: ld.viewsMenu }];
 
   // pinned interaction states
   for (const o of ctx.overlays.filter((x) => x.type === 'state' && STATE_RE.test(x.target || ''))) {

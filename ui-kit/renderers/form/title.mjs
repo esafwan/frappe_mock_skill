@@ -18,6 +18,7 @@ export function formStatus(meta = {}, doc = {}) {
   if (doc.__unsaved && !doc.__islocal && !(t(meta.is_submittable) && Number(doc.docstatus) === 2)) {
     return { label: 'Not Saved', colour: 'orange' };
   }
+  if (t(meta.issingle)) return null; // Single DocTypes have no status pill
   return get_indicator(doc, meta) || null;
 }
 

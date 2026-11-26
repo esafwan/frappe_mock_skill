@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { esc } from '../kit-lib/util.mjs';
 import { renderDock, loadSymbols, railIcon } from './dock.mjs';
 import { activeFor } from '../renderers/workspace/layout.mjs';
+import { renderNavbar } from './navbar.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const KIT = path.resolve(HERE, '..');
@@ -21,18 +22,13 @@ function headStyles() {
   return HEAD_CSS;
 }
 
+let KIT_CSS = null;
+const kitCss = () => (KIT_CSS ??= fs.readFileSync(path.join(HERE, 'kit.css'), 'utf8').trim());
+
 const initial = (u) => esc((u?.full_name || u?.name || u?.email || '?').trim().charAt(0).toUpperCase());
 const avatar = (u) => `<span class="avatar avatar-medium" title="${esc(u?.full_name || u?.name || '')}"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">${initial(u)}</div></span>`;
 
-export function renderNavbar({ ctx = {} } = {}) {
-  const nc = ctx.notifications?.count;
-  const logo = ctx.navbar?.logo || ctx.dock?.logo;
-  return `<header class="desktop-navbar navbar-expand navbar-container" role="navigation" data-ui="navbar">
-<div class="navbar-home" data-ui="navbar.logo">${logo ? `<img id="brand-logo" src="${esc(logo)}" alt="${esc(ctx.navbar?.title || '')}">` : ''}</div>
-<div class="search-widget-wrapper input-group search-bar"><button id="search-widget-button" class="btn-reset search-widget-button" title="Search" data-ui="navbar.search"><span class="search-widget-icon"><svg class="icon icon-sm"><use href="#icon-search"></use></svg></span><span class="search-widget-shortcut">${esc(ctx.navbar?.search_shortcut ?? '')}</span></button></div>
-<div class="flex" style="gap:16px; align-items: center;"><div class="desktop-notifications"><button class="btn-reset nav-link text-muted desktop-notification-icon" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false" data-ui="navbar.button-2"><svg class="icon icon-md" aria-hidden="true"><use href="#icon-bell"></use></svg>${nc ? `<span class="notification-count" aria-live="polite" aria-label="${esc(nc)} unread notifications">${esc(nc)}</span>` : ''}</button></div><div class="desktop-avatar" aria-haspopup="menu" aria-expanded="false">${avatar(ctx.user)}</div></div>
-</header>`;
-}
+export { renderNavbar };
 
 // Minimal sidebar when the caller passes no sidebarHtml (the data-driven sidebar is shell/sidebar.mjs).
 function defaultSidebar(ctx, collapsed) {
@@ -77,6 +73,7 @@ ${sidebar}
 <link rel="stylesheet" href="${esc(rel)}/css/frappe-desk.css">
 <link rel="stylesheet" href="${esc(rel)}/css/erpnext-erpnext.css">
 ${headStyles()}
+<style data-ui="shell.kit-css">${kitCss()}</style>
 <style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style></head>
 <body data-ajax-state="complete" class="${bodyCls}"${ctx.route ? ` data-route="${esc(ctx.route)}"` : ''} data-sidebar="${sbMode === 'hidden' ? 0 : 1}">
 ${full}
