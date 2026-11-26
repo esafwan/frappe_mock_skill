@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 const H = new URL('.', import.meta.url).pathname;
 const readJ = (p) => JSON.parse(fs.readFileSync(H + p, 'utf8'));
+let _P; const P = () => (_P ??= { links: readJ('pools/links.json'), fields: readJ('pools/fields.json'), text: readJ('pools/text.json').phrases });
 let _U; const U = () => (_U ??= { locales: readJ('universals/locales.json'), currencies: readJ('universals/currencies.json') });
 
 export const FIELDTYPES = ['Attach', 'Attach Image', 'Autocomplete', 'Barcode', 'Button', 'Check', 'Code', 'Color', 'Column Break', 'Currency', 'Data', 'Date', 'Datetime', 'Duration', 'Dynamic Link', 'Float', 'Fold', 'Geolocation', 'HTML', 'HTML Editor', 'Heading', 'Icon', 'Image', 'Int', 'JSON', 'Link', 'Long Text', 'Markdown Editor', 'Password', 'Percent', 'Phone', 'Rating', 'Read Only', 'Section Break', 'Select', 'Signature', 'Small Text', 'Tab Break', 'Table', 'Table MultiSelect', 'Text', 'Text Editor', 'Time'];
@@ -41,9 +42,15 @@ export function selectOptions(f) { return String(f.options || '').split('\n').ma
 function linkPool(c, f) {
   const key = f.options || f.fieldname;
   if (c.linkPools[key]?.length) return c.linkPools[key];
+  const p = P();
+  if (p.links[f.options]) return p.links[f.options];
+  if (p.fields[f.fieldname]) return p.fields[f.fieldname];
+  if (/currency/.test(f.fieldname || '')) return p.links.Currency;
   const base = title(f.options || f.fieldname || 'Item');
   return [1, 2, 3, 4, 5].map((i) => `${base} ${String(i).padStart(3, '0')}`);
 }
+const oneLine = (s) => String(s).replace(/\s+/g, ' ').trim();
+const phrase = (r) => pick(r, P().text);
 
 // One value for one field. `row` is the row index (varies values across rows).
 export function genValue(field, ctx = {}, row = 0, doc = {}) {
@@ -76,17 +83,16 @@ export function genValue(field, ctx = {}, row = 0, doc = {}) {
     case 'Geolocation': return JSON.stringify({ type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: [Math.round((r() * 160 - 80) * 1e4) / 1e4, Math.round((r() * 120 - 60) * 1e4) / 1e4] } }] });
     case 'Attach': return `/files/${slug(fn)}-${int(r, 1, 99)}.pdf`;
     case 'Attach Image': case 'Image': case 'Signature': return `/files/${slug(fn)}-${int(r, 1, 99)}.png`;
-    case 'Small Text': return sentence(r, int(r, 4, 8));
-    case 'Text': return `${sentence(r, 6)} ${sentence(r, 5)}`;
-    case 'Long Text': return `${sentence(r, 8)} ${sentence(r, 7)} ${sentence(r, 6)}`;
+    case 'Small Text': case 'Text': case 'Long Text': return oneLine(P().fields[fn] ? pick(r, P().fields[fn]) : phrase(r));
     case 'Markdown Editor': return `## ${title(pick(r, WORDS))}\n\n- ${sentence(r, 4)}\n- ${sentence(r, 4)}`;
     case 'HTML Editor': case 'Text Editor': return `<p>${sentence(r, 8)}</p>`;
-    case 'Read Only': return sentence(r, 2).replace('.', '');
+    case 'Read Only': if (P().fields[fn]) return pick(r, P().fields[fn]); return sentence(r, 2).replace('.', '');
     case 'Data': {
       const o = f.options;
       if (o === 'Email' || /email/.test(fn)) return `${slug(pick(r, NAMES)).replace(/-/g, '.')}@example.com`;
       if (o === 'Phone' || /phone|mobile/.test(fn)) return genValue({ ...f, fieldtype: 'Phone' }, c, row, doc);
       if (o === 'URL' || /url|website/.test(fn)) return `https://example.com/${pick(r, WORDS)}`;
+      if (P().fields[fn]) return pick(r, P().fields[fn]);
       if (o === 'Name' || /(^|_)name$/.test(fn)) return pick(r, NAMES);
       return title(pick(r, WORDS)) + ' ' + int(r, 1, 99);
     }

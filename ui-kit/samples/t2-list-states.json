@@ -1,0 +1,65 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 12,
+        "seed": 11
+      }
+    },
+    "total": 1284
+  },
+  "overlays": [
+    {
+      "type": "state",
+      "target": "row:1",
+      "state": "hover"
+    },
+    {
+      "type": "state",
+      "target": "cell:2:customer_type",
+      "state": "focus"
+    },
+    {
+      "type": "state",
+      "target": "button:primary",
+      "state": "loading"
+    },
+    {
+      "type": "state",
+      "target": "column:customer_name",
+      "state": "active"
+    }
+  ],
+  "view": {
+    "max_columns": 6,
+    "sort": {
+      "field": "modified",
+      "order": "desc"
+    }
+  }
+}

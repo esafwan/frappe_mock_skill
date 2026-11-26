@@ -1,0 +1,13 @@
+// Workspace layout: 12-column grid, block col, chart sizing, onboarding layout, active sidebar target.
+export const clampCol = (c) => { const n = Math.round(Number(c)); return Number.isFinite(n) ? Math.min(12, Math.max(1, n)) : 12; };
+
+/** Sidebar item to highlight for a workspace page. Generic: matches by workspace name/label/title. */
+export function activeFor(spec) {
+  const ws = spec?.meta?.workspace || {};
+  const name = ws.label || ws.name || ws.title;
+  return { workspace: name, label: name, link_type: 'Workspace', link_to: ws.name || name };
+}
+
+const cols = Array.from({ length: 12 }, (_, i) => `.workspace-grid>.grid-col-${i + 1}{width:${((i + 1) / 12 * 100).toFixed(4)}%;flex:0 0 ${((i + 1) / 12 * 100).toFixed(4)}%;max-width:${((i + 1) / 12 * 100).toFixed(4)}%}`).join('');
+
+export const LAYOUT_CSS = `<style data-ui="workspace.layout">.workspace-grid{display:flex;flex-wrap:wrap;gap:0;margin:0 -8px;align-items:stretch}.workspace-grid>.ce-block{box-sizing:border-box;padding:0 8px 16px;min-width:0}${cols}@media(max-width:767px){.workspace-grid>.ce-block{width:100%;flex-basis:100%;max-width:100%}}.workspace-grid .ce-block__content{height:100%}.workspace-grid .widget{height:100%;box-sizing:border-box}.widget-group-title{margin:8px 0}.link-items .link-item{display:flex;align-items:center;gap:6px;padding:4px 0}.ce-spacer{width:100%}.chart-widget{display:flex;flex-direction:column;width:100%;min-height:300px}.chart-widget .widget-body{flex:1 1 auto;min-height:240px;width:100%}.chart-widget .widget-body svg{display:block;width:100%;height:auto;max-height:300px;margin:0 auto}.chart-widget .chart-empty{display:flex;align-items:center;justify-content:center;min-height:240px}.number-widget-box .stat,.number-widget-box [class*=-stat]{display:inline-flex;gap:4px;align-items:center}.onboarding-widget-box{display:flex;flex-direction:column;gap:8px}.onboarding-widget-box .onboarding-progress{height:4px;margin:0 0 4px;border-radius:2px;overflow:hidden}.onboarding-widget-box .onboarding-progress .progress-bar{height:100%}.onboarding-steps{display:flex;flex-direction:column}.onboarding-step{display:block!important;padding:8px 0;border-top:1px solid var(--border-color,#ededed)}.onboarding-step:first-child{border-top:0}.onboarding-step .step-title{display:flex;align-items:center;gap:8px}.onboarding-step .step-check{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;flex:none}.onboarding-step .step-body{padding:4px 0 0 28px;text-align:left;display:block}.onboarding-step .step-body .btn{margin-top:8px}</style>`;

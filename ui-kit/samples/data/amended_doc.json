@@ -1,0 +1,93 @@
+{
+  "doctype": "Sales Invoice",
+  "name": "SINV-2026-00001-1",
+  "naming_series": "SINV-.YYYY.-",
+  "customer": "Acme Traders",
+  "customer_name": "Acme Traders",
+  "company": "Placeholder Company Pvt Ltd",
+  "posting_date": "2026-11-27",
+  "due_date": "2026-12-27",
+  "currency": "INR",
+  "price_list_currency": "INR",
+  "status": "Paid",
+  "items": [
+    {
+      "item_code": "ITEM-001",
+      "item_name": "Consulting Hours",
+      "description": "Consulting services",
+      "hsn_code": "998313",
+      "qty": 10,
+      "uom": "Hour",
+      "rate": 1500,
+      "amount": 15000,
+      "gst_rate": 18
+    },
+    {
+      "item_code": "ITEM-002",
+      "item_name": "Software License",
+      "description": "Annual license",
+      "hsn_code": "997331",
+      "qty": 2,
+      "uom": "Nos",
+      "rate": 4500,
+      "amount": 9000,
+      "gst_rate": 18
+    },
+    {
+      "item_code": "ITEM-003",
+      "item_name": "Installation Kit",
+      "description": "Hardware kit",
+      "hsn_code": "8471",
+      "qty": 5,
+      "uom": "Nos",
+      "rate": 850,
+      "amount": 4250,
+      "gst_rate": 12
+    }
+  ],
+  "taxes": [
+    {
+      "charge_type": "On Net Total",
+      "account_head": "CGST - PH",
+      "description": "CGST",
+      "rate": 9,
+      "tax_amount": 1800
+    },
+    {
+      "charge_type": "On Net Total",
+      "account_head": "SGST - PH",
+      "description": "SGST",
+      "rate": 9,
+      "tax_amount": 1800
+    }
+  ],
+  "total": 28250,
+  "net_total": 28250,
+  "total_taxes_and_charges": 3600,
+  "grand_total": 31850,
+  "rounded_total": 31850,
+  "in_words": "INR Thirty One Thousand Eight Hundred Fifty Only",
+  "payments": [
+    {
+      "mode_of_payment": "Cash",
+      "amount": 5000,
+      "account": "Cash - PH"
+    },
+    {
+      "mode_of_payment": "Bank Draft",
+      "amount": 2000,
+      "account": "HDFC Bank - PH"
+    }
+  ],
+  "advances": [
+    {
+      "reference_type": "Payment Entry",
+      "reference_name": "ACC-PAY-2026-00001",
+      "remarks": "Advance received",
+      "advance_amount": 3000,
+      "allocated_amount": 3000
+    }
+  ],
+  "docstatus": 0,
+  "amended_from": "SINV-2026-00001"
+}

@@ -102,6 +102,7 @@
           "properties": {
             "shell": { "description": "false renders the page body without any desk chrome.", "type": "boolean", "default": true },
             "navbar": { "type": "boolean", "default": false },
+            "mobile_sidebar": { "type": "string", "enum": ["closed", "open"], "default": "closed", "description": "Mobile (<768px) only: off-canvas sidebar drawer state." },
             "dock": { "type": "boolean", "default": true },
             "sidebar": { "type": "string", "enum": ["expanded", "collapsed", "hidden"], "default": "expanded" }
           },
@@ -368,7 +369,7 @@
 
     "menu_target": {
       "type": "string",
-      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length)|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
+      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length)|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|form\\.menu|bulk-actions|view-switcher|notifications|help|user|column-header(:.+)?|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
     },
 
     "dialog_action": {

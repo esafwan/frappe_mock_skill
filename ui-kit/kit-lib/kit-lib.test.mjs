@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { get_indicator, guess_colour, indicatorPill } from './indicators.mjs';
+import { normalizeWorkflow, get_indicator, guess_colour, indicatorPill } from './indicators.mjs';
 import { button, buttonGroup } from './buttons.mjs';
 import { menuDropdown } from './menus.mjs';
 import { avatar } from './avatars.mjs';
@@ -11,6 +11,11 @@ const sub = { is_submittable: 1 };
 const t = (doc, meta, label, colour, step) => { const r = get_indicator(doc, meta); assert.deepEqual([r?.label, r?.colour, r?.step], [label, colour, step], JSON.stringify(doc)); };
 t({ __unsaved: 1, docstatus: 1 }, sub, 'Not Saved', 'orange', 1);
 t({ st: 'Review', docstatus: 1 }, { ...sub, workflow: { state_field: 'st', styles: { Review: 'Purple' } } }, 'Review', 'purple', 2);
+assert.equal(normalizeWorkflow(undefined), undefined);
+assert.deepEqual(normalizeWorkflow(true), { name: undefined, state_field: 'workflow_state', states: [] });
+assert.deepEqual(normalizeWorkflow('Approval'), { name: 'Approval', state_field: 'workflow_state', states: [] });
+{ const o = { state_field: 'st' }; assert.equal(normalizeWorkflow(o), o); }
+t({ docstatus: 0, workflow_state: 'Pending' }, { ...sub, workflow: normalizeWorkflow(true) }, 'Pending', 'orange', 2);
 t({ docstatus: 0 }, sub, 'Draft', 'red', 3);
 t({ docstatus: 2 }, sub, 'Cancelled', 'red', 3);
 t({ docstatus: 1, paid: 1 }, { ...sub, states: [{ field: 'paid', value: 1, title: 'Paid', color: 'green' }] }, 'Paid', 'green', 4);

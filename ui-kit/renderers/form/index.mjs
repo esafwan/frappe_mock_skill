@@ -12,6 +12,8 @@ import { renderShell } from '../../shell/shell.mjs';
 import { renderSidebar } from '../../shell/sidebar.mjs';
 import { adaptFlatSidebar } from '../../adapters/sidebar.mjs';
 import { renderFormHead } from './head.mjs';
+import { applyReadOnly, readOnlyBanners } from './readonly.mjs';
+import { formTitle } from './title.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const KIT = path.resolve(HERE, '..', '..');
@@ -89,7 +91,7 @@ function layoutHtml(layout, { renderField, sn, active }) {
 
 // Form sidebar placeholder (right panel, saved docs only): image, title, assignments, attachments, share, tags, timeline counts.
 export function formSidebarHtml(meta = {}, doc = {}) {
-  const title = doc.name || '';
+  const title = formTitle(meta, doc).title || doc.name || '';
   const letter = esc([...String(title).trim()][0]?.toUpperCase() || 'D');
   const ic = (n) => `<svg class="icon icon-sm" aria-hidden="true"><use href="#icon-${n}"></use></svg>`;
   const sect = (n, label, add) => `<div class="sidebar-section ${n}"><span class="form-sidebar-items"><span class="form-sidebar-label">${ic(label[0])}<span class="ellipsis">${esc(label[1])}</span></span>${add ? `<button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="${esc(label[1])}">${ic('plus')}</button>` : ''}</span></div>`;
@@ -120,6 +122,7 @@ export async function buildFormPage(opts = {}) {
   }
   meta = applyCustomizations(meta, custom, []);
   const doc = { ...(opts.doc || {}) };
+  meta = applyReadOnly(meta, doc);
   const doctype = meta.name;
   const isNew = doc.__islocal !== undefined ? !!doc.__islocal : !doc.name;
   if (isNew) doc.__islocal = 1;
@@ -141,7 +144,7 @@ export async function buildFormPage(opts = {}) {
   active = Math.min(Math.max(Number.isFinite(active) ? active : 0, 0), Math.max(layout.tabs.length - 1, 0));
   const sn = snake(doctype).replace(/_/g, '-');
 
-  const body = layoutHtml(layout, { renderField, sn, active });
+  const body = readOnlyBanners(meta, doc) + layoutHtml(layout, { renderField, sn, active });
   const geo = isNew
     ? '<style id="form-geometry">.layout-main{justify-content:center;position:relative}.layout-main-section-wrapper{flex:0 1 900px!important;max-width:900px;width:900px}</style>'
     : '';
