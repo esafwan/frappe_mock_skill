@@ -1,0 +1,12 @@
+{
+  "$schema": "mock-spec/1",
+  "extends": "s5-tree.json",
+  "overlays": [
+    {
+      "type": "dialog",
+      "kind": "view_sort",
+      "sort_by": "customer_name",
+      "sort_order": "asc"
+    }
+  ]
+}

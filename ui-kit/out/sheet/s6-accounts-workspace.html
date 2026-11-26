@@ -1,0 +1,1002 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en-IN" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Accounting</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+<link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
+<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style data-ui="shell.kit-css">/* Kit-only rules for markup the captured desk CSS does not style. Inlined into every page by shell.mjs (data-ui="shell.kit-css").
+   Source: not in captured CSS (tokens/css/frappe-desk.css has no static air-datepicker popup layout; the real one is positioned by JS). */
+.datepicker.active{position:absolute;left:0;top:100%;display:block;opacity:1;z-index:1060;background:var(--fg-color,#fff);border:1px solid var(--border-color,#e5e7eb);border-radius:8px;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.12));margin-top:2px;width:260px;padding:8px}
+.datepicker.active.-only-timepicker-{width:auto;display:flex}
+.datepicker--nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.datepicker--days-names,.datepicker--cells-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.datepicker--cell-day{width:auto}
+.datepicker--cell.-selected-{background:var(--ink-gray-9,#171717);color:var(--surface-white,#fff)}
+.timepicker-col{max-height:160px;overflow:auto;padding:0 6px;text-align:center}
+/* Nested row form: each level stacks lower and narrower than its parent (data-depth is 1, 2, ...). */
+.form-in-grid[data-depth]:not([data-depth="0"]){background:var(--modal-bg,var(--surface-white,#fff));box-shadow:var(--shadow-xl,0 12px 32px rgba(0,0,0,.25));border:1px solid var(--border-color,#ededed)}
+.form-in-grid[data-depth="1"]{top:64px;width:calc(100% - 56px);z-index:1040}
+.form-in-grid[data-depth="2"]{top:128px;width:calc(100% - 112px);z-index:1041}
+.form-in-grid[data-depth="3"]{top:192px;width:calc(100% - 168px);z-index:1042}</style>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="workspace" data-sidebar="1">
+<div id="ui-kit-stage" class="ui-kit-page">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-arrow-down-right">
+      <path d="m7 7 10 10"></path>
+      <path d="M17 7v10H7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-right">
+      <path d="M5 12h14"></path>
+      <path d="m12 5 7 7-7 7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-up-right">
+      <path d="M7 7h10v10"></path>
+      <path d="M7 17 17 7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-calculator-duotone" stroke="none">
+		<path fill-rule="evenodd" d="M7 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H7A2 2 0 0 1 5 20V4A2 2 0 0 1 7 2Z M7.8 4H16.2A0.8 0.8 0 0 1 17 4.8V8.2A0.8 0.8 0 0 1 16.2 9H7.8A0.8 0.8 0 0 1 7 8.2V4.8A0.8 0.8 0 0 1 7.8 4Z M8 11H9.4A0.5 0.5 0 0 1 9.9 11.5V12.9A0.5 0.5 0 0 1 9.4 13.4H8A0.5 0.5 0 0 1 7.5 12.9V11.5A0.5 0.5 0 0 1 8 11Z M11.3 11H12.7A0.5 0.5 0 0 1 13.2 11.5V12.9A0.5 0.5 0 0 1 12.7 13.4H11.3A0.5 0.5 0 0 1 10.8 12.9V11.5A0.5 0.5 0 0 1 11.3 11Z M14.6 11H16A0.5 0.5 0 0 1 16.5 11.5V12.9A0.5 0.5 0 0 1 16 13.4H14.6A0.5 0.5 0 0 1 14.1 12.9V11.5A0.5 0.5 0 0 1 14.6 11Z M8 14.3H9.4A0.5 0.5 0 0 1 9.9 14.8V16.2A0.5 0.5 0 0 1 9.4 16.7H8A0.5 0.5 0 0 1 7.5 16.2V14.8A0.5 0.5 0 0 1 8 14.3Z M11.3 14.3H12.7A0.5 0.5 0 0 1 13.2 14.8V16.2A0.5 0.5 0 0 1 12.7 16.7H11.3A0.5 0.5 0 0 1 10.8 16.2V14.8A0.5 0.5 0 0 1 11.3 14.3Z M14.6 14.3H16A0.5 0.5 0 0 1 16.5 14.8V16.2A0.5 0.5 0 0 1 16 16.7H14.6A0.5 0.5 0 0 1 14.1 16.2V14.8A0.5 0.5 0 0 1 14.6 14.3Z M8 17.6H9.4A0.5 0.5 0 0 1 9.9 18.1V19.5A0.5 0.5 0 0 1 9.4 20H8A0.5 0.5 0 0 1 7.5 19.5V18.1A0.5 0.5 0 0 1 8 17.6Z M11.3 17.6H12.7A0.5 0.5 0 0 1 13.2 18.1V19.5A0.5 0.5 0 0 1 12.7 20H11.3A0.5 0.5 0 0 1 10.8 19.5V18.1A0.5 0.5 0 0 1 11.3 17.6Z" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></path>
+		<rect x="7.6" y="4.6" width="8.8" height="3.8" rx="0.4" style="fill: light-dark(var(--duotone-light, var(--ink-gray-3)), transparent)"></rect>
+		<g class="calculator-digits">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+		</g>
+		<g class="calculator-typing">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0s"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.25s"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.5s"></rect>
+		</g>
+		<rect x="14.1" y="17.6" width="2.4" height="2.4" rx="0.5" style="fill: var(--duotone-light, var(--ink-gray-3))"></rect>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
+      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+      <path d="M18 17V9"></path>
+      <path d="M13 17V5"></path>
+      <path d="M8 17v-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-no-axes-column">
+      <path d="M5 21v-6"></path>
+      <path d="M12 21V3"></path>
+      <path d="M19 21V9"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-circle">
+      <circle cx="12" cy="12" r="10"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-circle-check">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="m16 9-5.5 5.5L8 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-computer">
+      <path d="M12 18h6"></path>
+      <path d="M6 18h.01"></path>
+      <path d="M8 6h1"></path>
+      <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+      <rect x="4" y="2" width="16" height="12" rx="2"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-expenses">
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-house">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-landmark">
+      <path d="M10 18v-7"></path>
+      <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"></path>
+      <path d="M14 18v-7"></path>
+      <path d="M18 18v-7"></path>
+      <path d="M3 22h18"></path>
+      <path d="M6 18v-7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-grid">
+      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-minus">
+      <path d="M5 12h14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-package">
+      <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
+      <path d="M12 22V12"></path>
+      <polyline points="3.29 7 12 12 20.71 7"></polyline>
+      <path d="m7.5 4.27 9 5.15"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt">
+      <path d="M12 17V7"></path>
+      <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-sell">
+		<path d="M3 8h18M3 6v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke-miterlimit="10" stroke-linecap="square"></path>
+		<path d="M6.273 15.136h4.09" stroke-miterlimit="10" stroke-linecap="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-settings">
+      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-stock">
+		<path d="M7.5 4.84l9.818 4.91M21 7.91L12.818 12 3 7.09M12.818 12v9" stroke-miterlimit="10"></path>
+		<path d="M19.894 7.356A2 2 0 0 1 21 9.146v5.813a2 2 0 0 1-.971 1.715l-6.27 3.761a2 2 0 0 1-1.923.074l-7.73-3.865A2 2 0 0 1 3 14.854V8.328a2 2 0 0 1 1.106-1.789l6.181-3.09a2 2 0 0 1 1.79 0l7.817 3.908z" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-store">
+      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
+      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+      <path d="M15 18H9"></path>
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+      <circle cx="17" cy="18" r="2"></circle>
+      <circle cx="7" cy="18" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol></svg>
+<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><span class="dock-logo-glyph" role="img" aria-label=""><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span></div><div class="title-container"><div class="header-title"></div></div></a></div>
+<div class="dock-items"><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-2"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-calculator-duotone"></use></svg></span><span class="dock-item-label">Accounts</span></button><button class="dock-item  " aria-label="GST India" data-ui="dock.button-3"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-expenses"></use></svg></span><span class="dock-item-label">GST India</span></button><button class="dock-item  " aria-label="Selling" data-ui="dock.button-4"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-sell"></use></svg></span><span class="dock-item-label">Selling</span></button><button class="dock-item  " aria-label="Setup" data-ui="dock.button-5"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span><span class="dock-item-label">Setup</span></button><button class="dock-item  " aria-label="Stock" data-ui="dock.button-6"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-stock"></use></svg></span><span class="dock-item-label">Stock</span></button></div>
+<div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-7"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">J</div></span></button></div>
+</div>
+<div class="body-sidebar-container expanded" data-ui="sidebar"><div class="body-sidebar" data-title="Accounting"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="header-logo"><svg class="icon icon-md"><use href="#icon-sell"></use></svg></div><div class="title-container"><div class="sidebar-item-label header-title">Accounting</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"><div class="sidebar-item-container" item-name="Home" data-id="Home"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-0"><span class="sidebar-item-icon" item-icon="house"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-1"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Customer" data-id="Customer"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-2"><span class="sidebar-item-icon" item-icon="users"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-3"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-4"><span class="sidebar-item-icon" item-icon="store"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-5"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-6"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Reports" data-id="Reports"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-7"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Items" data-id="Items"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-8"><span class="sidebar-item-icon" item-icon="package"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="POS" data-id="POS"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-9"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Setup" data-id="Setup"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-10"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div></div></div>
+<div class="main-section"><div id="body"><div id="page-workspace" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between"><div class="page-title"><div class="flex title-area ellipsis"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item" aria-current="page"><span class="title-icon" data-ui="workspace.icon"><svg class="icon icon-md" stroke="currentColor" aria-hidden="true"><use href="#icon-landmark"></use></svg></span><span class="es-breadcrumbs__label">Accounting</span></span></li></ol></nav><span class="indicator-pill green no-indicator-dot" data-ui="workspace.badge" data-visibility="public">Public</span></div></div><div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><div class="menu-btn-group" data-ui="workspace.menu"><button class="btn btn-default icon-btn" data-ui="page.menu-button" aria-label="Menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button></div></div></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><style data-ui="workspace.layout">.workspace-page{padding:0 16px;box-sizing:border-box}.workspace-grid{display:flex;flex-wrap:wrap;gap:0;margin:0 -8px;align-items:stretch}.workspace-grid>.ce-block{box-sizing:border-box;padding:0 8px 16px;min-width:0}.workspace-grid>.grid-col-1{width:8.3333%;flex:0 0 8.3333%;max-width:8.3333%}.workspace-grid>.grid-col-2{width:16.6667%;flex:0 0 16.6667%;max-width:16.6667%}.workspace-grid>.grid-col-3{width:25.0000%;flex:0 0 25.0000%;max-width:25.0000%}.workspace-grid>.grid-col-4{width:33.3333%;flex:0 0 33.3333%;max-width:33.3333%}.workspace-grid>.grid-col-5{width:41.6667%;flex:0 0 41.6667%;max-width:41.6667%}.workspace-grid>.grid-col-6{width:50.0000%;flex:0 0 50.0000%;max-width:50.0000%}.workspace-grid>.grid-col-7{width:58.3333%;flex:0 0 58.3333%;max-width:58.3333%}.workspace-grid>.grid-col-8{width:66.6667%;flex:0 0 66.6667%;max-width:66.6667%}.workspace-grid>.grid-col-9{width:75.0000%;flex:0 0 75.0000%;max-width:75.0000%}.workspace-grid>.grid-col-10{width:83.3333%;flex:0 0 83.3333%;max-width:83.3333%}.workspace-grid>.grid-col-11{width:91.6667%;flex:0 0 91.6667%;max-width:91.6667%}.workspace-grid>.grid-col-12{width:100.0000%;flex:0 0 100.0000%;max-width:100.0000%}@media(max-width:767px){.workspace-grid>.ce-block{width:100%;flex-basis:100%;max-width:100%}}.workspace-grid .ce-block__content{height:100%}.workspace-grid .widget{height:100%;box-sizing:border-box}.widget-group-title{margin:8px 0}.link-items .link-item{display:flex;align-items:center;gap:6px;padding:4px 0}.ce-spacer{width:100%}.chart-widget{display:flex;flex-direction:column;width:100%;min-height:300px}.chart-widget .widget-body{flex:1 1 auto;min-height:240px;width:100%}.chart-widget .widget-body svg{display:block;width:100%;height:auto;max-height:300px;margin:0 auto}.chart-widget .chart-empty{display:flex;align-items:center;justify-content:center;min-height:240px}.number-widget-box .stat,.number-widget-box [class*=-stat]{display:inline-flex;gap:4px;align-items:center}.onboarding-widget-box{display:flex;flex-direction:column;gap:8px}.onboarding-widget-box .onboarding-progress{height:4px;margin:0 0 4px;border-radius:2px;overflow:hidden}.onboarding-widget-box .onboarding-progress .progress-bar{height:100%}.onboarding-steps{display:flex;flex-direction:column}.onboarding-step{display:block!important;padding:8px 0;border-top:1px solid var(--border-color,#ededed)}.onboarding-step:first-child{border-top:0}.onboarding-step .step-title{display:flex;align-items:center;gap:8px}.onboarding-step .step-check{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;flex:none}.onboarding-step .step-body{padding:4px 0 0 28px;text-align:left;display:block}.onboarding-step .step-body .btn{margin-top:8px}</style><div class="desk-page workspace-page" data-ui="workspace.page"><div class="workspace-grid editor-js-container" data-ui="workspace.grid"><div class="ce-block grid-col-12" data-ui="block:onboarding" data-block-id="0dd9453224" data-col="12"><div class="ce-block__content"><div class="widget onboarding-widget-box" data-ui="card:Accounting Onboarding" data-widget-name="Accounting Onboarding"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">Accounting Onboarding</span></div><div class="widget-subtitle" data-ui="onboarding.progress">1 of 3 steps done</div></div></div><div class="widget-body"><div class="progress onboarding-progress" data-ui="onboarding.bar" role="progressbar" aria-valuenow="33" style="display:flex;gap:2px;height:6px;margin-bottom:8px"><span class="progress-interval filled" style="flex:1;height:100%;border-radius:2px;background:var(--ink-green-7, #28a745)"></span><span class="progress-interval " style="flex:1;height:100%;border-radius:2px;background:var(--bg-gray, #ededed)"></span><span class="progress-interval " style="flex:1;height:100%;border-radius:2px;background:var(--bg-gray, #ededed)"></span></div><div class="onboarding-steps flex flex-col gap-0.5"><div class="onboarding-step rounded-md px-2 complete" data-ui="onboarding.step" data-status="Complete"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="false"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle-check"></use></svg></span><span class="step-title text-base truncate">Create a record</span></button></div><div class="onboarding-step rounded-md px-2 is-open" data-ui="onboarding.step" data-status="Pending"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="true"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle"></use></svg></span><span class="step-title text-base truncate">Review the setup</span></button><div class="onboarding-step-collapse"><div class="onboarding-step-body"><div class="onboarding-step-content flex flex-col gap-3"><div class="onboarding-step-description text-p-sm text-ink-gray-6">Check the defaults</div><div class="flex items-center gap-2" data-ui="onboarding.actions"><button class="es-button" type="button" data-variant="solid" data-ui="onboarding.action"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Go</span></button><button class="es-button" type="button" data-variant="subtle"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Skip</span></button></div></div></div></div></div><div class="onboarding-step rounded-md px-2" data-ui="onboarding.step" data-status="Pending"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="false"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle"></use></svg></span><span class="step-title text-base truncate">Add details</span></button></div></div></div></div></div></div><div class="ce-block grid-col-12" data-ui="block:chart" data-block-id="a17de17773" data-col="12"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Profit and Loss" data-widget-name="Profit and Loss"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Profit and Loss">Profit and Loss</span></div><div class="widget-subtitle"></div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="bar" data-ui="chart.bar" aria-label="Profit and Loss"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 1056 240" width="1056" height="240" role="img"><g class="y-axis"><g class="tick"><line class="zero-line" x1="44" x2="1044" y1="208" y2="208" stroke="#ebeef0" stroke-dasharray=""/><text x="38" y="211" text-anchor="end" font-size="10" fill="#6c7680">0</text></g><g class="tick"><line class="grid-line" x1="44" x2="1044" y1="168.8" y2="168.8" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="171.8" text-anchor="end" font-size="10" fill="#6c7680">5</text></g><g class="tick"><line class="grid-line" x1="44" x2="1044" y1="129.6" y2="129.6" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="132.6" text-anchor="end" font-size="10" fill="#6c7680">10</text></g><g class="tick"><line class="grid-line" x1="44" x2="1044" y1="90.4" y2="90.4" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="93.4" text-anchor="end" font-size="10" fill="#6c7680">15</text></g><g class="tick"><line class="grid-line" x1="44" x2="1044" y1="51.2" y2="51.2" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="54.2" text-anchor="end" font-size="10" fill="#6c7680">20</text></g><g class="tick"><line class="grid-line" x1="44" x2="1044" y1="12" y2="12" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="15" text-anchor="end" font-size="10" fill="#6c7680">25</text></g></g><g class="x-axis"><text x="127.33" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Jun</text><text x="294" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Jul</text><text x="460.67" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Aug</text><text x="627.33" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Sep</text><text x="794" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Oct</text><text x="960.67" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Nov</text></g><g class="dataset bar-dataset" data-series="Total"><rect class="bar" data-value="12" data-label="Jun" x="113.33" y="113.92" width="28" height="94.08" rx="1" fill="#7cd6fd"><title>Jun · Total: 12</title></rect><rect class="bar" data-value="18" data-label="Jul" x="280" y="66.88" width="28" height="141.12" rx="1" fill="#7cd6fd"><title>Jul · Total: 18</title></rect><rect class="bar" data-value="9" data-label="Aug" x="446.67" y="137.44" width="28" height="70.56" rx="1" fill="#7cd6fd"><title>Aug · Total: 9</title></rect><rect class="bar" data-value="22" data-label="Sep" x="613.33" y="35.52" width="28" height="172.48" rx="1" fill="#7cd6fd"><title>Sep · Total: 22</title></rect><rect class="bar" data-value="17" data-label="Oct" x="780" y="74.72" width="28" height="133.28" rx="1" fill="#7cd6fd"><title>Oct · Total: 17</title></rect><rect class="bar" data-value="25" data-label="Nov" x="946.67" y="12" width="28" height="196" rx="1" fill="#7cd6fd"><title>Nov · Total: 25</title></rect></g></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Total</span></span></div></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:number_card" data-block-id="9a0e234f25" data-col="4"><div class="ce-block__content"><div data-ui="card:Total Outgoing Bills" class="widget number-widget-box" data-ui="number-card" data-widget-name="Total Outgoing Bills"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Total Outgoing Bills">Total Outgoing Bills</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="31000">31,000</div><div class="card-stats red-stat" data-delta="down" data-percent="3"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-down-right"></use></svg> 3 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:number_card" data-block-id="58b384d2dd" data-col="4"><div class="ce-block__content"><div data-ui="card:Total Incoming Bills" class="widget number-widget-box" data-ui="number-card" data-widget-name="Total Incoming Bills"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Total Incoming Bills">Total Incoming Bills</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="64000">64,000</div><div class="card-stats green-stat" data-delta="up" data-percent="7"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-up-right"></use></svg> 7 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:number_card" data-block-id="575d11919a" data-col="4"><div class="ce-block__content"><div data-ui="card:Total Incoming Payment" class="widget number-widget-box" data-ui="number-card" data-widget-name="Total Incoming Payment"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Total Incoming Payment">Total Incoming Payment</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="58000">58,000</div><div class="card-stats grey-stat" data-delta="flat" data-percent="0"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-minus"></use></svg> 0 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard000" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Financial Statements" data-widget-name="Financial Statements"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Financial Statements">Financial Statements</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/query-report/Profit%20and%20Loss%20Statement" data-ui="link:Profit and Loss" data-link-type="Report"><span class="link-text ellipsis" title="Profit and Loss">Profit and Loss</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Balance%20Sheet" data-ui="link:Balance Sheet" data-link-type="Report"><span class="link-text ellipsis" title="Balance Sheet">Balance Sheet</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Cash%20Flow" data-ui="link:Cash Flow" data-link-type="Report"><span class="link-text ellipsis" title="Cash Flow">Cash Flow</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Trial%20Balance" data-ui="link:Trial Balance" data-link-type="Report"><span class="link-text ellipsis" title="Trial Balance">Trial Balance</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/General%20Ledger" data-ui="link:General Ledger" data-link-type="Report"><span class="link-text ellipsis" title="General Ledger">General Ledger</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Consolidated%20Financial%20Statement" data-ui="link:Consolidated Report" data-link-type="Report"><span class="link-text ellipsis" title="Consolidated Report">Consolidated Report</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Custom%20Financial%20Statement" data-ui="link:Custom Financial Statement" data-link-type="Report"><span class="link-text ellipsis" title="Custom Financial Statement">Custom Financial Statement</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Consolidated%20Trial%20Balance" data-ui="link:Consolidated Trial Balance" data-link-type="Report"><span class="link-text ellipsis" title="Consolidated Trial Balance">Consolidated Trial Balance</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Financial%20Ratios" data-ui="link:Financial Ratios" data-link-type="Report"><span class="link-text ellipsis" title="Financial Ratios">Financial Ratios</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard001" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Receivables &amp; Payables" data-widget-name="Receivables &amp; Payables"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Receivables &amp; Payables">Receivables &amp; Payables</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/query-report/Accounts%20Receivable" data-ui="link:Accounts Receivable" data-link-type="Report"><span class="link-text ellipsis" title="Accounts Receivable">Accounts Receivable</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Accounts%20Receivable%20Summary" data-ui="link:Accounts Receivable Summary" data-link-type="Report"><span class="link-text ellipsis" title="Accounts Receivable Summary">Accounts Receivable Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Accounts%20Payable" data-ui="link:Accounts Payable" data-link-type="Report"><span class="link-text ellipsis" title="Accounts Payable">Accounts Payable</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Accounts%20Payable%20Summary" data-ui="link:Accounts Payable Summary" data-link-type="Report"><span class="link-text ellipsis" title="Accounts Payable Summary">Accounts Payable Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Customer%20Ledger%20Summary" data-ui="link:Customer Ledger Summary" data-link-type="Report"><span class="link-text ellipsis" title="Customer Ledger Summary">Customer Ledger Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Supplier%20Ledger%20Summary" data-ui="link:Supplier Ledger Summary" data-link-type="Report"><span class="link-text ellipsis" title="Supplier Ledger Summary">Supplier Ledger Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Trial%20Balance%20for%20Party" data-ui="link:Trial Balance for Party" data-link-type="Report"><span class="link-text ellipsis" title="Trial Balance for Party">Trial Balance for Party</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Customer%20Credit%20Balance" data-ui="link:Customer Credit Balance" data-link-type="Report"><span class="link-text ellipsis" title="Customer Credit Balance">Customer Credit Balance</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Payment%20Period%20Based%20On%20Invoice%20Date" data-ui="link:Payment Period Based On Invoice Date" data-link-type="Report"><span class="link-text ellipsis" title="Payment Period Based On Invoice Date">Payment Period Based On Invoice Date</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard002" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Registers &amp; Profitability" data-widget-name="Registers &amp; Profitability"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Registers &amp; Profitability">Registers &amp; Profitability</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/query-report/Sales%20Register" data-ui="link:Sales Register" data-link-type="Report"><span class="link-text ellipsis" title="Sales Register">Sales Register</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Purchase%20Register" data-ui="link:Purchase Register" data-link-type="Report"><span class="link-text ellipsis" title="Purchase Register">Purchase Register</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Item-wise%20Sales%20Register" data-ui="link:Item-wise Sales Register" data-link-type="Report"><span class="link-text ellipsis" title="Item-wise Sales Register">Item-wise Sales Register</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Item-wise%20Purchase%20Register" data-ui="link:Item-wise Purchase Register" data-link-type="Report"><span class="link-text ellipsis" title="Item-wise Purchase Register">Item-wise Purchase Register</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Gross%20Profit" data-ui="link:Gross Profit" data-link-type="Report"><span class="link-text ellipsis" title="Gross Profit">Gross Profit</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Profitability%20Analysis" data-ui="link:Profitability Analysis" data-link-type="Report"><span class="link-text ellipsis" title="Profitability Analysis">Profitability Analysis</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Gross%20and%20Net%20Profit%20Report" data-ui="link:Gross and Net Profit Report" data-link-type="Report"><span class="link-text ellipsis" title="Gross and Net Profit Report">Gross and Net Profit Report</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Deferred%20Revenue%20and%20Expense" data-ui="link:Deferred Revenue and Expense" data-link-type="Report"><span class="link-text ellipsis" title="Deferred Revenue and Expense">Deferred Revenue and Expense</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Sales%20Invoice%20Trends" data-ui="link:Sales Invoice Trends" data-link-type="Report"><span class="link-text ellipsis" title="Sales Invoice Trends">Sales Invoice Trends</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Purchase%20Invoice%20Trends" data-ui="link:Purchase Invoice Trends" data-link-type="Report"><span class="link-text ellipsis" title="Purchase Invoice Trends">Purchase Invoice Trends</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Sales%20Payment%20Summary" data-ui="link:Sales Payment Summary" data-link-type="Report"><span class="link-text ellipsis" title="Sales Payment Summary">Sales Payment Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard003" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Tax &amp; Compliance" data-widget-name="Tax &amp; Compliance"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Tax &amp; Compliance">Tax &amp; Compliance</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/query-report/TDS%20Computation%20Summary" data-ui="link:TDS Computation Summary" data-link-type="Report"><span class="link-text ellipsis" title="TDS Computation Summary">TDS Computation Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Tax%20Withholding%20Details" data-ui="link:Tax Withholding Details" data-link-type="Report"><span class="link-text ellipsis" title="Tax Withholding Details">Tax Withholding Details</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/UAE%20VAT%20201" data-ui="link:UAE VAT 201" data-link-type="Report"><span class="link-text ellipsis" title="UAE VAT 201">UAE VAT 201</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/VAT%20Audit%20Report" data-ui="link:VAT Audit Report" data-link-type="Report"><span class="link-text ellipsis" title="VAT Audit Report">VAT Audit Report</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/south-africa-vat-settings" data-ui="link:South Africa VAT Settings" data-link-type="DocType"><span class="link-text ellipsis" title="South Africa VAT Settings">South Africa VAT Settings</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/IRS%201099" data-ui="link:IRS 1099" data-link-type="Report"><span class="link-text ellipsis" title="IRS 1099">IRS 1099</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Electronic%20Invoice%20Register" data-ui="link:Electronic Invoice Register" data-link-type="Report"><span class="link-text ellipsis" title="Electronic Invoice Register">Electronic Invoice Register</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard004" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Invoicing &amp; Payments" data-widget-name="Invoicing &amp; Payments"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Invoicing &amp; Payments">Invoicing &amp; Payments</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/payment-request" data-ui="link:Payment Request" data-link-type="DocType"><span class="link-text ellipsis" title="Payment Request">Payment Request</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/payment-order" data-ui="link:Payment Order" data-link-type="DocType"><span class="link-text ellipsis" title="Payment Order">Payment Order</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/dunning" data-ui="link:Dunning" data-link-type="DocType"><span class="link-text ellipsis" title="Dunning">Dunning</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/invoice-discounting" data-ui="link:Invoice Discounting" data-link-type="DocType"><span class="link-text ellipsis" title="Invoice Discounting">Invoice Discounting</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/subscription" data-ui="link:Subscription" data-link-type="DocType"><span class="link-text ellipsis" title="Subscription">Subscription</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/subscription-plan" data-ui="link:Subscription Plan" data-link-type="DocType"><span class="link-text ellipsis" title="Subscription Plan">Subscription Plan</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard005" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Banking" data-widget-name="Banking"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Banking">Banking</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/bank-reconciliation-tool" data-ui="link:Bank Reconciliation (old)" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Reconciliation (old)">Bank Reconciliation (old)</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank-transaction" data-ui="link:Bank Transaction" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Transaction">Bank Transaction</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank-statement-import" data-ui="link:Bank Statement Import" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Statement Import">Bank Statement Import</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank" data-ui="link:Bank" data-link-type="DocType"><span class="link-text ellipsis" title="Bank">Bank</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank-account-type" data-ui="link:Bank Account Type" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Account Type">Bank Account Type</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank-account-subtype" data-ui="link:Bank Account Subtype" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Account Subtype">Bank Account Subtype</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/bank-guarantee" data-ui="link:Bank Guarantee" data-link-type="DocType"><span class="link-text ellipsis" title="Bank Guarantee">Bank Guarantee</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/plaid-settings" data-ui="link:Plaid Settings" data-link-type="DocType"><span class="link-text ellipsis" title="Plaid Settings">Plaid Settings</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Bank%20Reconciliation%20Statement" data-ui="link:Bank Reconciliation Statement" data-link-type="Report"><span class="link-text ellipsis" title="Bank Reconciliation Statement">Bank Reconciliation Statement</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Bank%20Clearance%20Summary" data-ui="link:Bank Clearance Summary" data-link-type="Report"><span class="link-text ellipsis" title="Bank Clearance Summary">Bank Clearance Summary</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard006" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Reconciliation" data-widget-name="Reconciliation"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Reconciliation">Reconciliation</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/payment-reconciliation" data-ui="link:Payment Reconciliation" data-link-type="DocType"><span class="link-text ellipsis" title="Payment Reconciliation">Payment Reconciliation</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/process-payment-reconciliation" data-ui="link:Process Payment Reconciliation" data-link-type="DocType"><span class="link-text ellipsis" title="Process Payment Reconciliation">Process Payment Reconciliation</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/unreconcile-payment" data-ui="link:Unreconcile Payment" data-link-type="DocType"><span class="link-text ellipsis" title="Unreconcile Payment">Unreconcile Payment</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard007" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Opening &amp; Closing" data-widget-name="Opening &amp; Closing"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Opening &amp; Closing">Opening &amp; Closing</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/chart-of-accounts-importer" data-ui="link:COA Importer" data-link-type="DocType"><span class="link-text ellipsis" title="COA Importer">COA Importer</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/opening-invoice-creation-tool" data-ui="link:Opening Invoice Tool" data-link-type="DocType"><span class="link-text ellipsis" title="Opening Invoice Tool">Opening Invoice Tool</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/accounting-period" data-ui="link:Accounting Period" data-link-type="DocType"><span class="link-text ellipsis" title="Accounting Period">Accounting Period</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/exchange-rate-revaluation" data-ui="link:FX Revaluation" data-link-type="DocType"><span class="link-text ellipsis" title="FX Revaluation">FX Revaluation</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/period-closing-voucher" data-ui="link:Period Closing Voucher" data-link-type="DocType"><span class="link-text ellipsis" title="Period Closing Voucher">Period Closing Voucher</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/process-deferred-accounting" data-ui="link:Process Deferred Accounting" data-link-type="DocType"><span class="link-text ellipsis" title="Process Deferred Accounting">Process Deferred Accounting</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard008" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Ledger Tools" data-widget-name="Ledger Tools"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Ledger Tools">Ledger Tools</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/repost-accounting-ledger" data-ui="link:Repost Accounting Ledger" data-link-type="DocType"><span class="link-text ellipsis" title="Repost Accounting Ledger">Repost Accounting Ledger</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/repost-payment-ledger" data-ui="link:Repost Payment Ledger" data-link-type="DocType"><span class="link-text ellipsis" title="Repost Payment Ledger">Repost Payment Ledger</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/ledger-merge" data-ui="link:Ledger Merge" data-link-type="DocType"><span class="link-text ellipsis" title="Ledger Merge">Ledger Merge</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/ledger-health-monitor" data-ui="link:Ledger Health Monitor" data-link-type="DocType"><span class="link-text ellipsis" title="Ledger Health Monitor">Ledger Health Monitor</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/process-statement-of-accounts" data-ui="link:Process Statement Of Accounts" data-link-type="DocType"><span class="link-text ellipsis" title="Process Statement Of Accounts">Process Statement Of Accounts</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard009" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Share Management" data-widget-name="Share Management"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Share Management">Share Management</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/shareholder" data-ui="link:Shareholder" data-link-type="DocType"><span class="link-text ellipsis" title="Shareholder">Shareholder</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/share-transfer" data-ui="link:Share Transfer" data-link-type="DocType"><span class="link-text ellipsis" title="Share Transfer">Share Transfer</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/share-type" data-ui="link:Share Type" data-link-type="DocType"><span class="link-text ellipsis" title="Share Type">Share Type</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Share%20Ledger" data-ui="link:Share Ledger" data-link-type="Report"><span class="link-text ellipsis" title="Share Ledger">Share Ledger</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/query-report/Share%20Balance" data-ui="link:Share Balance" data-link-type="Report"><span class="link-text ellipsis" title="Share Balance">Share Balance</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="acccard010" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Setup" data-widget-name="Setup"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Setup">Setup</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/currency" data-ui="link:Currency" data-link-type="DocType"><span class="link-text ellipsis" title="Currency">Currency</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/finance-book" data-ui="link:Finance Book" data-link-type="DocType"><span class="link-text ellipsis" title="Finance Book">Finance Book</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/journal-entry-template" data-ui="link:Journal Entry Template" data-link-type="DocType"><span class="link-text ellipsis" title="Journal Entry Template">Journal Entry Template</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/tax-category" data-ui="link:Tax Category" data-link-type="DocType"><span class="link-text ellipsis" title="Tax Category">Tax Category</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/tax-withholding-group" data-ui="link:Tax Withholding Group" data-link-type="DocType"><span class="link-text ellipsis" title="Tax Withholding Group">Tax Withholding Group</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/lower-deduction-certificate" data-ui="link:Deduction Certificate" data-link-type="DocType"><span class="link-text ellipsis" title="Deduction Certificate">Deduction Certificate</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/dunning-type" data-ui="link:Dunning Type" data-link-type="DocType"><span class="link-text ellipsis" title="Dunning Type">Dunning Type</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/cheque-print-template" data-ui="link:Cheque Print Template" data-link-type="DocType"><span class="link-text ellipsis" title="Cheque Print Template">Cheque Print Template</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/currency-exchange-settings" data-ui="link:Currency Exchange Settings" data-link-type="DocType"><span class="link-text ellipsis" title="Currency Exchange Settings">Currency Exchange Settings</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/subscription-settings" data-ui="link:Subscription Settings" data-link-type="DocType"><span class="link-text ellipsis" title="Subscription Settings">Subscription Settings</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</div></div></div>
+</div>
+</body></html>

@@ -1,0 +1,13 @@
+{
+  "$schema": "mock-spec/1",
+  "extends": "s5-kanban.json",
+  "overlays": [
+    {
+      "type": "dialog",
+      "kind": "quick_entry",
+      "values": {
+        "customer_name": "Northwind Traders"
+      }
+    }
+  ]
+}

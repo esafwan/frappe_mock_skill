@@ -1,0 +1,128 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "workspace",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "workspace": {
+      "name": "Demo",
+      "title": "Demo",
+      "label": "Demo",
+      "public": 1,
+      "module": "Selling",
+      "content": [
+        {
+          "id": "h",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h4\"><b>Selling</b></span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "s1",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Customers",
+            "col": 4
+          }
+        },
+        {
+          "id": "s2",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Orders",
+            "col": 4
+          }
+        },
+        {
+          "id": "s3",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Quotes",
+            "col": 4
+          }
+        },
+        {
+          "id": "n1",
+          "type": "number_card",
+          "data": {
+            "number_card_name": "Open Orders",
+            "col": 4
+          }
+        },
+        {
+          "id": "c1",
+          "type": "chart",
+          "data": {
+            "chart_name": "Revenue Trend",
+            "col": 8
+          }
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "Customers",
+          "type": "DocType",
+          "link_to": "Customer",
+          "doc_view": "List"
+        },
+        {
+          "label": "Orders",
+          "type": "DocType",
+          "link_to": "Sales Order",
+          "doc_view": "List"
+        },
+        {
+          "label": "Quotes",
+          "type": "DocType",
+          "link_to": "Quotation",
+          "doc_view": "List"
+        }
+      ]
+    }
+  },
+  "data": {
+    "number_cards": {
+      "Open Orders": {
+        "value": 42,
+        "label": "Open Orders"
+      }
+    },
+    "charts": {
+      "Revenue Trend": {
+        "type": "Line",
+        "labels": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep"
+        ],
+        "datasets": [
+          {
+            "name": "Revenue",
+            "values": [
+              12,
+              18,
+              9,
+              22
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "x-recipe": "workspace-blocks",
+  "x-what-you-see": "A workspace page with a header, three shortcut tiles, a number card and a line chart in the grid."
+}

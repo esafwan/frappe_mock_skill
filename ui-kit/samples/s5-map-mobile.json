@@ -1,0 +1,75 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "map",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "viewport": "mobile"
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "L1",
+        "title": "Dubai Warehouse",
+        "latitude": 25.2048,
+        "longitude": 55.2708
+      },
+      {
+        "name": "L2",
+        "title": "Doha Office",
+        "latitude": 25.2854,
+        "longitude": 51.531
+      },
+      {
+        "name": "L3",
+        "title": "Muscat Depot",
+        "latitude": 23.588,
+        "longitude": 58.3829
+      },
+      {
+        "name": "L4",
+        "title": "Riyadh Branch",
+        "latitude": 24.7136,
+        "longitude": 46.6753
+      },
+      {
+        "name": "L5",
+        "title": "Kuwait Store",
+        "location": {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {},
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  47.9774,
+                  29.3759
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "view": {
+    "map": {
+      "popup": 0
+    }
+  }
+}

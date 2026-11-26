@@ -3,13 +3,16 @@
 import { esc, enc } from '../../kit-lib/util.mjs';
 import { icon } from '../../kit-lib/icons.mjs';
 import { button } from '../../kit-lib/buttons.mjs';
+import { permsOn, can } from '../../kit-lib/perms.mjs';
 import { enabledViews, switcherVisible, renderViewSwitcher } from '../../kit-lib/viewswitch.mjs';
 
 const t = (v) => v === 1 || v === true || v === '1';
 export const dtName = (meta = {}) => meta.name || meta.doctype || 'Document';
 
+const PERM_PTYPES = new Set(['read', 'write', 'create', 'delete', 'submit', 'cancel', 'amend', 'print', 'export', 'email', 'share', 'report', 'import']);
 /** Permission lookup. ctx.perms = { "<DocType>": {ptype: bool} } or flat { ptype: bool }; default allowed. */
 export function listPerm(ctx = {}, meta = {}, ptype) {
+  if (permsOn(ctx) && PERM_PTYPES.has(ptype)) return can(ctx, meta, ptype, dtName(meta));
   const p = ctx.perms || {};
   const dt = p[dtName(meta)];
   if (dt && dt[ptype] !== undefined) return !!dt[ptype];

@@ -1,13 +1,17 @@
 import { menuDropdown } from '../../kit-lib/menus.mjs';
 import { button } from '../../kit-lib/buttons.mjs';
+import { permsOn, can } from '../../kit-lib/perms.mjs';
 
 const truthy = (v) => v === 1 || v === true || v === '1';
 
 /** Permission lookup: ctx.perms (object of booleans) wins; default is allowed. */
-export function perm(spec, key) {
-  const p = spec?.ctx?.perms;
+export function perm(spec, key, meta) {
+  const c = spec?.ctx;
+  if (permsOn(c) && PTYPES.has(key)) return can(c, meta || {}, key, meta?.name || meta?.doctype);
+  const p = c?.perms;
   return !p || p[key] === undefined ? true : !!p[key];
 }
+const PTYPES = new Set(['read', 'write', 'create', 'delete', 'submit', 'cancel', 'amend', 'print', 'export', 'email', 'share', 'report', 'import']);
 
 /** Form "..." items in toolbar order (make_menu_items). Returns [{label, shortcut?, divider?}]. */
 export function buildFormMenuItems(spec = {}, meta = {}, doc = {}) {
@@ -23,16 +27,16 @@ export function buildFormMenuItems(spec = {}, meta = {}, doc = {}) {
   const add = (label, shortcut) => items.push(shortcut ? { label, shortcut } : { label });
   if (local || truthy(meta.hide_toolbar)) return items;
 
-  if (perm(spec, 'print') && !truthy(meta.hide_print)) add('Print');
+  if (perm(spec, 'print', meta) && !truthy(meta.hide_print)) add('Print');
   if (submittable && ds === 0 && !workflow) add('Discard');
   if (ctx.chrome?.form_sidebar !== false) add('Toggle Sidebar');
-  if (perm(spec, 'email') && ds < 2) add('Email', 'Ctrl+E');
-  if (perm(spec, 'write') && truthy(meta.allow_rename)) add('Rename');
+  if (perm(spec, 'email', meta) && ds < 2) add('Email', 'Ctrl+E');
+  if (perm(spec, 'write', meta) && truthy(meta.allow_rename)) add('Rename');
   add('Reload');
-  if (ds !== 1 && !single && perm(spec, 'delete')) add('Delete', 'Shift+Ctrl+D');
-  if (perm(spec, 'create') && !truthy(meta.allow_copy)) add('Duplicate', 'Shift+D');
-  if (perm(spec, 'create') && !single && !truthy(meta.in_create)) add(`New ${meta.name || meta.doctype || 'Document'}`, 'Ctrl+B');
-  if (ctx.web_form_request && perm(spec, 'write')) add('Request via Web Form');
+  if (ds !== 1 && !single && perm(spec, 'delete', meta)) add('Delete', 'Shift+Ctrl+D');
+  if (perm(spec, 'create', meta) && !truthy(meta.allow_copy)) add('Duplicate', 'Shift+D');
+  if (perm(spec, 'create', meta) && !single && !truthy(meta.in_create)) add(`New ${meta.name || meta.doctype || 'Document'}`, 'Ctrl+B');
+  if (ctx.web_form_request && perm(spec, 'write', meta)) add('Request via Web Form');
   items.push({ divider: true });
   if (doc.amended_from && truthy(meta.track_changes)) add('View Audit Trail');
   add('Jump to field', 'Ctrl+J');
@@ -44,8 +48,8 @@ export function buildFormMenuItems(spec = {}, meta = {}, doc = {}) {
   add('Redo', 'Ctrl+Y');
   if (truthy(meta.allow_auto_repeat) && !doc.auto_repeat) add('Repeat');
   items.push({ divider: true });
-  if (perm(spec, 'customize') && !isCore && !single) { add(`Settings - ${meta.name || meta.doctype || ''}`.replace(/ - $/, '')); add('Customize'); }
-  if (dev && perm(spec, 'create_doctype')) add('Edit DocType');
+  if (perm(spec, 'customize', meta) && !isCore && !single) { add(`Settings - ${meta.name || meta.doctype || ''}`.replace(/ - $/, '')); add('Customize'); }
+  if (dev && perm(spec, 'create_doctype', meta)) add('Edit DocType');
   if (meta.documentation) add('Documentation');
   // collapse leading/trailing/duplicate dividers
   return items.filter((it, i, a) => !it.divider || (i > 0 && i < a.length - 1 && !a[i - 1].divider));

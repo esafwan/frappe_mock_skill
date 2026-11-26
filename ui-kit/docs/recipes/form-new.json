@@ -1,0 +1,26 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "doctype/fixtures/test/odd_a.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "doc": null
+  },
+  "x-recipe": "form-new",
+  "x-what-you-see": "Same layout with a \"Not Saved\" indicator, empty fields and no timeline."
+}

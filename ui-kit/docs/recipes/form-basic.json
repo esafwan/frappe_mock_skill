@@ -1,0 +1,50 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "doctype/fixtures/test/odd_a.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "doc": {
+      "name": "ODD-0001",
+      "title": "Quarterly order",
+      "status": "Draft",
+      "docstatus": 0,
+      "owner": "jane@example.com",
+      "creation": "2026-11-20 09:14:00",
+      "modified": "2026-11-26 17:40:00",
+      "modified_by": "jane@example.com",
+      "note": "Deliver to reception.",
+      "items": [
+        {
+          "item": "ITEM-001",
+          "qty": 10,
+          "rate": 1500,
+          "amount": 15000
+        },
+        {
+          "item": "ITEM-002",
+          "qty": 4,
+          "rate": 250,
+          "amount": 1000
+        }
+      ]
+    }
+  },
+  "x-recipe": "form-basic",
+  "x-what-you-see": "A saved form titled ODD-0001 with a Draft pill, Save primary button, two columns (Title, Status), an Items grid with two rows and the Note field."
+}

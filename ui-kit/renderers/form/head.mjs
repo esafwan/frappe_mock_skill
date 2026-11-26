@@ -14,11 +14,11 @@ export function formActions(spec = {}, meta = {}, doc = {}) {
   const submittable = t(meta.is_submittable), wf = !!meta.workflow, local = !!doc.__islocal, dirty = !!doc.__unsaved;
   const ro = t(spec.ctx?.read_only);
   const saveDisabled = t(meta.save_disabled) || t(spec.ctx?.save_disabled);
-  const canSubmit = submittable && ds === 0 && !local && !dirty && perm(spec, 'submit') && !wf;
-  const canSave = ds === 0 && !saveDisabled && perm(spec, 'write') && (!wf || dirty);
-  const canUpdate = submittable && ds === 1 && !local && dirty && perm(spec, 'submit');
-  const canCancel = submittable && ds === 1 && perm(spec, 'cancel') && !ro && (!wf || spec.ctx?.can_cancel_document !== false);
-  const canAmend = submittable && ds === 2 && perm(spec, 'amend') && !ro;
+  const canSubmit = submittable && ds === 0 && !local && !dirty && perm(spec, 'submit', meta) && !wf;
+  const canSave = ds === 0 && !saveDisabled && perm(spec, 'write', meta) && (!wf || dirty);
+  const canUpdate = submittable && ds === 1 && !local && dirty && perm(spec, 'submit', meta);
+  const canCancel = submittable && ds === 1 && perm(spec, 'cancel', meta) && !ro && (!wf || spec.ctx?.can_cancel_document !== false);
+  const canAmend = submittable && ds === 2 && perm(spec, 'amend', meta) && !ro;
   const r = { primary: null, secondary: null };
   if (canSubmit) r.primary = { label: 'Submit' };
   else if (canSave) r.primary = { label: t(meta.issingle) && !local ? 'Update' : 'Save' };

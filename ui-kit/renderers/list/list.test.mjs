@@ -61,7 +61,7 @@ for (const [n, title] of [[1, false], [4, true], [8, false], [12, true], [12, fa
     { type: 'button', label: 'Sync', style: 'default' },
   ] });
   assert.ok(html.includes('3 items selected'));
-  assert.ok(html.includes('2 filters'));
+  assert.ok(html.includes('<bdi>2</bdi> <span>filters</span>'));
   assert.ok(html.includes('filter-popover'));
   assert.ok(/data-ui="list\.row\.1"[^>]*data-state="hover"|data-state="hover"[^>]*data-ui="list\.row\.1"/.test(html));
   assert.ok(html.includes('data-ui="list.button.Sync"'));

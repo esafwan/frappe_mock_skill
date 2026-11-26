@@ -1,0 +1,951 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stock Movement report</title>
+<link rel="stylesheet" href="../../../tokens/css/frappe-desk.css">
+
+<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style data-ui="shell.kit-css">/* Kit-only rules for markup the captured desk CSS does not style. Inlined into every page by shell.mjs (data-ui="shell.kit-css").
+   Source: not in captured CSS (tokens/css/frappe-desk.css has no static air-datepicker popup layout; the real one is positioned by JS). */
+.datepicker.active{position:absolute;left:0;top:100%;display:block;opacity:1;z-index:1060;background:var(--fg-color,#fff);border:1px solid var(--border-color,#e5e7eb);border-radius:8px;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.12));margin-top:2px;width:260px;padding:8px}
+.datepicker.active.-only-timepicker-{width:auto;display:flex}
+.datepicker--nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.datepicker--days-names,.datepicker--cells-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.datepicker--cell-day{width:auto}
+.datepicker--cell.-selected-{background:var(--ink-gray-9,#171717);color:var(--surface-white,#fff)}
+.timepicker-col{max-height:160px;overflow:auto;padding:0 6px;text-align:center}
+/* Nested row form: each level stacks lower and narrower than its parent (data-depth is 1, 2, ...). */
+.form-in-grid[data-depth]:not([data-depth="0"]){background:var(--modal-bg,var(--surface-white,#fff));box-shadow:var(--shadow-xl,0 12px 32px rgba(0,0,0,.25));border:1px solid var(--border-color,#ededed)}
+.form-in-grid[data-depth="1"]{top:64px;width:calc(100% - 56px);z-index:1040}
+.form-in-grid[data-depth="2"]{top:128px;width:calc(100% - 112px);z-index:1041}
+.form-in-grid[data-depth="3"]{top:192px;width:calc(100% - 168px);z-index:1042}</style>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="query-report/Stock Movement" data-sidebar="1">
+<div id="ui-kit-stage" class="ui-kit-page">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-chevron-up">
+      <path d="m18 15-6-6-6 6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-grid">
+      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+    </symbol></svg>
+<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><span class="dock-logo-glyph" role="img" aria-label=""><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span></div><div class="title-container"><div class="header-title"></div></div></a></div>
+<div class="dock-items"></div>
+<div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-2"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">J</div></span></button></div>
+</div>
+<div class="body-sidebar-container expanded" data-ui="sidebar"><div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="title-container"><div class="sidebar-item-label header-title">Selling</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"></div></div></div></div>
+<div class="main-section"><div id="body"><div id="page-stock-movement" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between" style="display:flex;align-items:center;justify-content:space-between;width:100%;margin:0"><div class="page-title" style="flex:1 1 auto;min-width:0;white-space:nowrap" data-ui="page.title"><div class="title-area flex"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Selling</span></span></li><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Odd A</span></span></li><li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">Stock Movement</span></span></li></ol></nav></div></div><div class="col page-actions justify-content-end" style="margin-left:auto;flex:0 0 auto;width:auto" data-ui="page.actions"><div class="standard-actions flex"><div class="menu-btn-group" data-ui="page.menu-group"><button type="button" class="btn btn-default icon-btn" data-ui="page.menu-button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button><ul class="dropdown-menu dropdown-menu-right" role="presentation" data-ui="page.menu"><li><a class="grey-link dropdown-item" href="#" data-label="Edit"><span class="menu-item-label" data-label="Edit">Edit</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Export"><span class="menu-item-label" data-label="Export">Export</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Print"><span class="menu-item-label" data-label="Print">Print</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="PDF"><span class="menu-item-label" data-label="PDF">PDF</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Setup Auto Email"><span class="menu-item-label" data-label="Setup Auto Email">Setup Auto Email</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Pick Columns"><span class="menu-item-label" data-label="Pick Columns">Pick Columns</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Toggle Chart"><span class="menu-item-label" data-label="Toggle Chart">Toggle Chart</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Toggle Sidebar"><span class="menu-item-label" data-label="Toggle Sidebar">Toggle Sidebar</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Save"><span class="menu-item-label" data-label="Save">Save</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Show Totals"><span class="menu-item-label" data-label="Show Totals">Show Totals</span></a></li></ul></div><button type="button" class="btn btn-sm btn-primary primary-action" data-ui="report.primary-action" data-label="Refresh">Refresh</button></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><style data-ui="report.table-fill">.report-body .datatable .dt-header,.report-body .datatable .dt-body,.report-body .datatable .dt-footer{min-width:100%;width:max-content;box-sizing:border-box}.report-body .datatable .dt-header .dt-cell,.report-body .datatable .dt-header .dt-cell__content{background:transparent}</style><div class="layout-main-section report-wrapper" data-ui="report" data-report-type="Script Report"><div class="page-form form-inline flex report-filters" data-ui="report.filters"><div class="standard-filter-section flex row" style="display:flex;flex-wrap:wrap;gap:var(--margin-md,8px)" data-ui="report.filter-fields"><div class="form-group col-md-2 col-sm-4 report-filter" data-fieldname="company" data-ui="report.filter.company" data-has-value="1"><div class="frappe-control input-max-width" data-fieldtype="Data" data-fieldname="company">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label reqd" style="padding-right: 5px;">Company</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="company" data-doctype="Odd A" placeholder="" value="Example Co"></div>
+						<div class="control-value like-disabled-input hide">Example Co</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+				<span class="tooltip-content">company</span>
+			</div></div><div class="form-group col-md-2 col-sm-4 report-filter" data-fieldname="from_date" data-ui="report.filter.from_date" data-has-value="1"><div class="frappe-control input-max-width" data-fieldtype="Date" data-fieldname="from_date">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label reqd" style="padding-right: 5px;">From Date</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input"><input type="text" autocomplete="off" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Date" data-fieldname="from_date" data-doctype="Odd A" placeholder="" value="27-11-2026"></div>
+						<div class="control-value like-disabled-input hide">27-11-2026</div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+				<span class="tooltip-content">from_date</span>
+			</div></div><div class="form-group col-md-2 col-sm-4 report-filter" data-fieldname="status" data-ui="report.filter.status"><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="status">
+				<div class="form-group horizontal">
+					<div class="clearfix">
+						<label class="control-label" style="padding-right: 5px;">Status</label>
+						<span class="help"></span>
+					</div>
+					<div class="control-input-wrapper">
+						<div class="control-input flex align-center"><select autocomplete="off" class="input-with-feedback form-control ellipsis" maxlength="140" data-fieldtype="Select" data-fieldname="status" data-doctype="Odd A" placeholder=""><option value="" selected=""></option><option value="Draft">Draft</option><option value="Submitted">Submitted</option></select><div class="select-icon "><svg class="icon  icon-sm" style="" aria-hidden="true"><use class="" href="#icon-chevrons-up-down"></use></svg></div></div>
+						<div class="control-value like-disabled-input hide"></div>
+						<div class="help-box small text-extra-muted hide"></div>
+					</div>
+				</div>
+				<span class="tooltip-content">status</span>
+			</div></div></div><div class="filters-toggle flex align-center" data-ui="report.filters-toggle"><button type="button" class="btn btn-xs btn-default toggle-filters" aria-expanded="true"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-chevron-up"></use></svg><span>Hide Filters</span></button></div></div><div class="report-body" data-ui="report.body"><style data-ui="datatable.css">.datatable{position:relative;font-size:var(--text-sm,12px)}.datatable .dt-scrollable{overflow-x:auto;overflow-y:hidden;max-width:100%}.datatable .dt-header,.datatable .dt-body,.datatable .dt-footer{min-width:max-content}.datatable .dt-row{display:flex;align-items:stretch;box-sizing:border-box;border-bottom:1px solid var(--dt-border-color,#d1d8dd)}.datatable .dt-cell{position:relative;box-sizing:border-box;display:flex;align-items:center;min-height:32px;overflow:hidden}.datatable .dt-cell__content{box-sizing:border-box;display:flex;align-items:center;min-width:1px;padding:0 8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.datatable .dt-body .dt-cell__content,.datatable .dt-footer .dt-cell__content{flex:1 1 auto}.datatable .dt-header .dt-row{background:var(--dt-header-bg,#f7fafc);font-weight:500}.datatable .dt-header .dt-cell--sticky{position:sticky;z-index:1;background:inherit}.datatable .dt-cell__resize-handle{position:absolute;right:0;top:0;bottom:0;width:4px}.datatable .dt-cell__resize-handle.active{background:var(--primary,#5e64ff)}.datatable .sort-indicator{display:inline-block;min-width:10px;min-height:12px;margin-inline-start:4px;font-size:9px}.datatable .dt-header{position:relative}.datatable .dt-dropdown{position:absolute;right:4px;top:50%;transform:translateY(-50%);min-width:12px;min-height:12px}.datatable .dt-dropdown__toggle{min-width:12px;min-height:12px}.datatable .dt-dropdown__toggle{opacity:0}.datatable .dt-cell--header:hover .dt-dropdown__toggle{opacity:1}.datatable .dt-dropdown-container{position:absolute;inset:0;z-index:5;pointer-events:none}.datatable .dt-dropdown__list{pointer-events:auto}.datatable .dt-dropdown__list{position:absolute;min-width:140px;padding:4px 0;border:1px solid var(--dt-border-color,#d1d8dd);border-radius:6px;background:var(--surface-white,#fff);box-shadow:0 4px 12px rgba(0,0,0,.1)}.datatable .dt-dropdown__list-item{padding:6px 12px;white-space:nowrap}.datatable .dt-dropdown__list-item.highlighted{background:var(--surface-gray-2,#f3f3f3)}.datatable .dt-row-totals{font-weight:600;background:var(--dt-header-bg,#f7fafc)}.datatable .dt-cell--editing{outline:2px solid var(--primary,#5e64ff);outline-offset:-2px}.datatable .dt-cell__edit input{width:100%;border:0;background:transparent}.datatable .dt-tree-node{display:inline-flex;align-items:center;gap:2px}.datatable .dt-row--selected{background:var(--surface-gray-1,#f8f8f8)}.datatable .datatable-empty{padding:40px;text-align:center}</style><div class="datatable" data-ui="datatable" data-rows="2" data-cols="3"><div class="dt-scrollable"><div class="dt-header" data-ui="datatable.head"><div><div class="dt-row dt-row-header" data-is-header="1"><div class="dt-cell dt-cell--col-0 dt-cell--header dt-cell--header-0 dt-cell--sticky dt-cell--sticky-top" data-col-index="0" data-is-header="1" tabindex="0" style="left:0px;" data-ui="datatable.head.index"><div class="dt-cell__content dt-cell__content--header-0" style="width:40px;"><span class="sort-indicator"></span><span class="dt-cell__resize-handle"></span></div></div><div data-fieldname="item" class="dt-cell dt-cell--col-1 dt-cell--header dt-cell--header-1 dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last" data-col-index="1" data-is-header="1" tabindex="0" style="left:40px;" data-ui="datatable.head.col.item"><div class="dt-cell__content dt-cell__content--header-1" title="Item" style="width:200px;text-align:left;">Item<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.item"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.item"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="qty" class="dt-cell dt-cell--col-2 dt-cell--header dt-cell--header-2" data-col-index="2" data-is-header="1" tabindex="0" data-ui="datatable.head.col.qty"><div class="dt-cell__content dt-cell__content--header-2" title="Qty" style="width:100px;text-align:right;justify-content:flex-end;">Qty<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.qty"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.qty"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.qty"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="amount" class="dt-cell dt-cell--col-3 dt-cell--header dt-cell--header-3" data-col-index="3" data-is-header="1" tabindex="0" data-ui="datatable.head.col.amount"><div class="dt-cell__content dt-cell__content--header-3" title="Amount" style="width:140px;text-align:right;justify-content:flex-end;">Amount<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.amount"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.amount"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.amount"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div></div></div></div><div class="dt-body"><div class="dt-row dt-row-0" data-row-index="0" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--index" data-row-index="0" data-col-index="0" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-1" data-row-index="0" data-col-index="1" style="width:200px;flex:0 0 200px;text-align:left" title="ITEM-001"><div class="dt-cell__content" style="justify-content:flex-start">ITEM-001</div></div><div class="dt-cell dt-cell--col-2" data-row-index="0" data-col-index="2" style="width:100px;flex:0 0 100px;text-align:right" title="10"><div class="dt-cell__content" style="justify-content:flex-end">10</div></div><div class="dt-cell dt-cell--col-3" data-row-index="0" data-col-index="3" style="width:140px;flex:0 0 140px;text-align:right" title="15000"><div class="dt-cell__content" style="justify-content:flex-end">USD 15,000.00</div></div></div><div class="dt-row dt-row-1" data-row-index="1" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--index" data-row-index="1" data-col-index="0" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-1" data-row-index="1" data-col-index="1" style="width:200px;flex:0 0 200px;text-align:left" title="ITEM-002"><div class="dt-cell__content" style="justify-content:flex-start">ITEM-002</div></div><div class="dt-cell dt-cell--col-2" data-row-index="1" data-col-index="2" style="width:100px;flex:0 0 100px;text-align:right" title="4"><div class="dt-cell__content" style="justify-content:flex-end">4</div></div><div class="dt-cell dt-cell--col-3" data-row-index="1" data-col-index="3" style="width:140px;flex:0 0 140px;text-align:right" title="1000"><div class="dt-cell__content" style="justify-content:flex-end">USD 1,000.00</div></div></div></div><div class="dt-footer dt-row dt-row-totals" data-ui="datatable.totals" data-rows="2"><div class="dt-cell dt-cell--lead" style="width:40px;flex:0 0 40px"><div class="dt-cell__content"></div></div><div class="dt-cell dt-cell--col-0" style="width:200px;flex:0 0 200px" data-ui="datatable.totals.cell" data-col-index="0" data-fieldname="item"><div class="dt-cell__content dt-cell__content--col-0" style="justify-content:flex-start;"><b>Total</b></div></div><div class="dt-cell dt-cell--col-1" style="width:100px;flex:0 0 100px" data-ui="datatable.totals.cell" data-col-index="1" data-fieldname="qty"><div class="dt-cell__content dt-cell__content--col-1" style="text-align:right;justify-content:flex-end;"><b>14.00</b></div></div><div class="dt-cell dt-cell--col-2" style="width:140px;flex:0 0 140px" data-ui="datatable.totals.cell" data-col-index="2" data-fieldname="amount"><div class="dt-cell__content dt-cell__content--col-2" style="text-align:right;justify-content:flex-end;"><b>16,000.00</b></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</div></div></div>
+</div>
+</body></html>

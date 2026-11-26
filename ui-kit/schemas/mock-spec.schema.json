@@ -142,11 +142,17 @@
           "additionalProperties": false
         },
         "perms": {
-          "description": "Optional permission overrides per doctype: { \"<DocType>\": { \"create\": false, \"delete\": false, ... } }. Absent means all allowed.",
+          "description": "Role permission overrides, resolved once by bin/mock.mjs (kit-lib/perms.mjs). { \"<DocType>\" | \"*\": { \"read|write|create|delete|submit|cancel|amend|print|export|email|share|report|import\": bool, \"levels\": { \"<permlevel>\": { ptype: bool } } } }; a top-level ptype boolean applies to every DocType. Absent (or empty) means everything is allowed and the output is unchanged.",
           "type": "object",
           "additionalProperties": {
-            "type": "object",
-            "additionalProperties": { "type": "boolean" }
+            "anyOf": [
+              { "type": "boolean" },
+              {
+                "type": "object",
+                "properties": { "levels": { "type": "object", "additionalProperties": { "type": "object", "additionalProperties": { "type": "boolean" } } } },
+                "additionalProperties": { "type": "boolean" }
+              }
+            ]
           }
         }
       },
@@ -413,7 +419,7 @@
       "required": ["type"],
       "properties": {
         "type": { "const": "dialog" },
-        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry", "assign_to", "share", "attach", "add_tag", "rename", "email", "msgprint_list", "missing_mandatory", "modified_conflict", "server_error", "list_settings", "quick_filters", "save_view", "pick_columns", "add_column", "report_export", "export", "report_save_as", "save_as", "report_create_chart", "create_chart"], "default": "dialog", "description": "Generic kinds (dialog, confirm, msgprint, quick_entry) or a named dialog id. Named dialogs read their own keys (see docs/SLICE3.md): assign_to {assign_to, myself, description, date, priority}, share {users, everyone}, attach {tab: device|link|camera, files, private, url}, add_tag {tag, tags}, rename {name, new_name, merge}, email {to, cc, subject, message, attachments, template}, msgprint_list {messages, intro}, missing_mandatory {doctype, fields}, modified_conflict {message, modified}, server_error {message, traceback}; list_settings, quick_filters, save_view {fields, values}; report dialogs pick_columns, add_column, report_export (export), report_save_as (save_as), report_create_chart (create_chart) read available/selected/doctypes/formats/chart_types/values (see docs/SLICE4.md)." },
+        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry", "assign_to", "share", "attach", "add_tag", "rename", "email", "msgprint_list", "missing_mandatory", "modified_conflict", "server_error", "list_settings", "quick_filters", "save_view", "pick_columns", "add_column", "report_export", "export", "report_save_as", "save_as", "report_create_chart", "create_chart", "view_filter", "view_sort"], "default": "dialog", "description": "Generic kinds (dialog, confirm, msgprint, quick_entry) or a named dialog id. Named dialogs read their own keys (see docs/SLICE3.md): assign_to {assign_to, myself, description, date, priority}, share {users, everyone}, attach {tab: device|link|camera, files, private, url}, add_tag {tag, tags}, rename {name, new_name, merge}, email {to, cc, subject, message, attachments, template}, msgprint_list {messages, intro}, missing_mandatory {doctype, fields}, modified_conflict {message, modified}, server_error {message, traceback}; list_settings, quick_filters, save_view {fields, values}; report dialogs pick_columns, add_column, report_export (export), report_save_as (save_as), report_create_chart (create_chart) read available/selected/doctypes/formats/chart_types/values (see docs/SLICE4.md); view pages (kanban, calendar, gantt, tree, image, map, inbox) accept quick_entry (the page's own DocType unless `doctype` is set), view_filter {filters: [[field, op, value]]}, view_sort {sort_by, sort_order} and pick_columns (see docs/SLICE5.md)." },
         "title": { "type": "string" },
         "indicator": { "$ref": "#/$defs/indicator_color", "description": "Title indicator colour (msgprint)." },
         "size": { "type": "string", "enum": ["small", "default", "large", "extra-large"], "default": "default" },

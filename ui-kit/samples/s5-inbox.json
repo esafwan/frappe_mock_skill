@@ -1,0 +1,69 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "inbox",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "M1",
+        "sender_full_name": "Priya Nair",
+        "subject": "Re: Quotation for Harbor Foods",
+        "snippet": "Thanks for the quick turnaround. Can we revisit the delivery terms before Friday?",
+        "communication_date": "2026-11-27 09:12:00",
+        "seen": 0,
+        "attachments": [
+          "q.pdf"
+        ]
+      },
+      {
+        "name": "M2",
+        "sender_full_name": "Omar Haddad",
+        "subject": "Invoice question",
+        "snippet": "Could you confirm whether the November invoice includes the freight charge?",
+        "communication_date": "2026-11-26 17:40:00",
+        "seen": 1
+      },
+      {
+        "name": "M3",
+        "sender_full_name": "Lena Fischer",
+        "subject": "Meeting notes",
+        "snippet": "Attached are the notes from yesterday. Action items are marked in bold.",
+        "communication_date": "2026-11-20 11:05:00",
+        "seen": 1,
+        "attachments": [
+          "notes.docx",
+          "plan.xlsx"
+        ]
+      },
+      {
+        "name": "M4",
+        "sender_full_name": "Ravi Menon",
+        "subject": "Welcome aboard",
+        "snippet": "We are glad to have you with us. Your account manager will be in touch shortly.",
+        "communication_date": "2025-12-02 08:00:00",
+        "seen": 0
+      }
+    ]
+  },
+  "view": {
+    "inbox": {
+      "selected": 0
+    }
+  }
+}

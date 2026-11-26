@@ -1,0 +1,22 @@
+{
+  "$schema": "mock-spec/1",
+  "extends": "s5-gantt-week.json",
+  "overlays": [
+    {
+      "type": "dialog",
+      "kind": "view_filter",
+      "filters": [
+        [
+          "customer_type",
+          "=",
+          "Company"
+        ],
+        [
+          "territory",
+          "like",
+          "India"
+        ]
+      ]
+    }
+  ]
+}

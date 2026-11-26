@@ -1,0 +1,38 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 10,
+        "seed": 11
+      }
+    },
+    "total": 1284
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "group_by:owner"
+    }
+  ],
+  "x-recipe": "list-groupby",
+  "x-what-you-see": "The Group By dropdown open with counts per value."
+}

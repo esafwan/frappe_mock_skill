@@ -1,0 +1,38 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 12,
+        "seed": 5
+      }
+    },
+    "total": 48
+  },
+  "view": {
+    "sort": {
+      "field": "modified",
+      "order": "desc"
+    }
+  },
+  "x-recipe": "list-12-cols",
+  "x-what-you-see": "A 12-column list that fits the width with no horizontal overflow; the ID column stays first."
+}

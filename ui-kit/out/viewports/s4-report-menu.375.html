@@ -1,0 +1,993 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en-IN" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Order lines</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+
+<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style data-ui="shell.kit-css">/* Kit-only rules for markup the captured desk CSS does not style. Inlined into every page by shell.mjs (data-ui="shell.kit-css").
+   Source: not in captured CSS (tokens/css/frappe-desk.css has no static air-datepicker popup layout; the real one is positioned by JS). */
+.datepicker.active{position:absolute;left:0;top:100%;display:block;opacity:1;z-index:1060;background:var(--fg-color,#fff);border:1px solid var(--border-color,#e5e7eb);border-radius:8px;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.12));margin-top:2px;width:260px;padding:8px}
+.datepicker.active.-only-timepicker-{width:auto;display:flex}
+.datepicker--nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.datepicker--days-names,.datepicker--cells-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.datepicker--cell-day{width:auto}
+.datepicker--cell.-selected-{background:var(--ink-gray-9,#171717);color:var(--surface-white,#fff)}
+.timepicker-col{max-height:160px;overflow:auto;padding:0 6px;text-align:center}
+/* Nested row form: each level stacks lower and narrower than its parent (data-depth is 1, 2, ...). */
+.form-in-grid[data-depth]:not([data-depth="0"]){background:var(--modal-bg,var(--surface-white,#fff));box-shadow:var(--shadow-xl,0 12px 32px rgba(0,0,0,.25));border:1px solid var(--border-color,#ededed)}
+.form-in-grid[data-depth="1"]{top:64px;width:calc(100% - 56px);z-index:1040}
+.form-in-grid[data-depth="2"]{top:128px;width:calc(100% - 112px);z-index:1041}
+.form-in-grid[data-depth="3"]{top:192px;width:calc(100% - 168px);z-index:1042}</style>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style><style data-ui="shell.mobile">@media (max-width:767.98px){body.mobile-view{overflow-x:hidden}body.mobile-view .main-section{min-width:0;width:100%}body.mobile-view .mobile-bar{display:flex}body.mobile-view .layout-side-section{display:none}body.mobile-view .body-sidebar-container{position:fixed;top:44px;left:0;bottom:0;height:calc(100vh - 44px);width:0;z-index:1020;overflow:visible}body.mobile-view .body-sidebar-container.expanded{width:100%}body.mobile-view .body-sidebar-container .body-sidebar{height:100%;top:0;bottom:0}body.mobile-view .body-sidebar-container:not(.expanded) .body-sidebar{display:none}body.mobile-view .body-sidebar-container .overlay{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;background:rgba(0,0,0,.4);z-index:1021}body.mobile-view .body-sidebar-container.expanded .body-sidebar{z-index:1022;background:var(--surface-gray-1,#f8f8f8)}}
+.mobile-bar{display:none;align-items:center;gap:8px;height:44px;padding:0 12px;border-bottom:1px solid var(--outline-gray-1);background:var(--surface-white,#fff)}
+.mobile-bar .sidebar-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:6px;color:var(--ink-gray-7)}
+.mobile-bar .sidebar-toggle .icon{width:16px;height:16px}
+.mobile-bar .mobile-title{font-size:var(--text-base,14px);font-weight:600;color:var(--ink-gray-8);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}</style></head>
+<body data-ajax-state="complete" class="desktop-page mobile-view sidebar-closed" data-sidebar-state="closed" data-route="report/Odd A" data-sidebar="1">
+<div id="ui-kit-stage" class="ui-kit-page">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-menu">
+      <path d="M4 5h16"></path>
+      <path d="M4 12h16"></path>
+      <path d="M4 19h16"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
+      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+      <path d="M18 17V9"></path>
+      <path d="M13 17V5"></path>
+      <path d="M8 17v-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-no-axes-column">
+      <path d="M5 21v-6"></path>
+      <path d="M12 21V3"></path>
+      <path d="M19 21V9"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-check">
+      <path d="M20 6 9 17l-5-5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-right">
+      <path d="m9 18 6-6-6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-computer">
+      <path d="M12 18h6"></path>
+      <path d="M6 18h.01"></path>
+      <path d="M8 6h1"></path>
+      <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+      <rect x="4" y="2" width="16" height="12" rx="2"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-equal-approximately">
+      <path d="M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+      <path d="M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-funnel">
+      <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-house">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list">
+      <path d="M3 5h.01"></path>
+      <path d="M3 12h.01"></path>
+      <path d="M3 19h.01"></path>
+      <path d="M8 5h13"></path>
+      <path d="M8 12h13"></path>
+      <path d="M8 19h13"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-package">
+      <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
+      <path d="M12 22V12"></path>
+      <polyline points="3.29 7 12 12 20.71 7"></polyline>
+      <path d="m7.5 4.27 9 5.15"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-panel-left-close">
+      <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+      <path d="M9 3v18"></path>
+      <path d="m16 15-3-3 3-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt">
+      <path d="M12 17V7"></path>
+      <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-refresh-cw">
+      <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+      <path d="M21 3v5h-5"></path>
+      <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+      <path d="M8 16H3v5"></path>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-sell">
+		<path d="M3 8h18M3 6v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke-miterlimit="10" stroke-linecap="square"></path>
+		<path d="M6.273 15.136h4.09" stroke-miterlimit="10" stroke-linecap="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-settings">
+      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-sheet">
+      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+      <line x1="3" x2="21" y1="9" y2="9"></line>
+      <line x1="3" x2="21" y1="15" y2="15"></line>
+      <line x1="9" x2="9" y1="9" y2="21"></line>
+      <line x1="15" x2="15" y1="9" y2="21"></line>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-store">
+      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
+      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+      <path d="M15 18H9"></path>
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+      <circle cx="17" cy="18" r="2"></circle>
+      <circle cx="7" cy="18" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol></svg>
+
+<div class="body-sidebar-container" data-ui="sidebar" data-state="closed"><div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="header-logo"><svg class="icon icon-md"><use href="#icon-sell"></use></svg></div><div class="title-container"><div class="sidebar-item-label header-title">Selling</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"><div class="sidebar-item-container" item-name="Home" data-id="Home"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-0"><span class="sidebar-item-icon" item-icon="house"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-1"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Customer" data-id="Customer"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-2"><span class="sidebar-item-icon" item-icon="users"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-3"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-4"><span class="sidebar-item-icon" item-icon="store"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-5"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-6"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Reports" data-id="Reports"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-7"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Items" data-id="Items"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-8"><span class="sidebar-item-icon" item-icon="package"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="POS" data-id="POS"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-9"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Setup" data-id="Setup"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-10"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div></div></div>
+<div class="main-section"><div class="mobile-bar" data-ui="shell.mobile"><button class="btn-reset sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="false" data-ui="shell.menu-toggle"><svg class="icon icon-md" aria-hidden="true"><use href="#icon-menu"></use></svg></button><span class="mobile-title" data-ui="shell.mobile-title">Selling</span></div><div id="body"><div id="page-odd-a" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between"><div class="page-title"><button class="btn-reset sidebar-toggle-btn navbar-brand" type="button" data-ui="page-head.sidebar-toggle"><svg class="icon icon-md" stroke="currentColor" aria-hidden="true"><use href="#icon-panel-left-close"></use></svg></button><div class="flex title-area ellipsis"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Selling</span></span></li><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Odd A</span></span></li><li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">Order lines</span></span></li></ol></nav><span class="es-badge page-indicator-pill hide" data-testid="page-status"></span></div></div><div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="filters flex"></div><div class="custom-actions hidden-xs hidden-md"><div class="custom-btn-group view-switcher" data-ui="list.view-switcher"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="page.view_switcher"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-sheet"></use></svg><span class="es-button__label hidden-xs custom-btn-group-label">Report View</span><svg class="icon icon-sm hidden-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-chevrons-up-down"></use></svg></button><div class="dropdown-menu" role="menu" data-ui="list.view-switcher.menu"><a class="dropdown-item" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:start" href="#" role="menuitem" data-view="list" aria-checked="false" data-ui="list.view.list"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-list"></use></svg><span class="menu-item-label">List View</span></a><a class="dropdown-item selected" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:start" href="#" role="menuitem" data-view="report" aria-checked="true" data-ui="list.view.report"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-sheet"></use></svg><span class="menu-item-label">Report View</span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-check"></use></svg><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-chevron-right"></use></svg></a><div class="dropdown-divider"></div><a class="dropdown-item variant" href="#" data-variant="Order lines" data-ui="list.view.variant.Order lines"><span class="menu-item-label">Order lines</span></a></div></div></div><div class="custom-mobile-actions"></div><div class="standard-actions flex"><span class="page-icon-group hidden-xs hidden-sm"><button class="es-button icon-btn text-muted" type="button" data-icon-button="true" title="Refresh" aria-label="Refresh" data-ui="report.reload"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-refresh-cw"></use></svg></button></span><div class="menu-btn-group show"><button class="es-button icon-btn menu-more-button" type="button" aria-haspopup="menu" data-icon-button="true" title="Menu" aria-label="Menu" data-ui="page.menu"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button><ul class="dropdown-menu dropdown-menu-right show" role="presentation" data-ui="report.menu"><li><a class="grey-link dropdown-item" href="#" data-label="Pick Columns"><span class="menu-item-label" data-label="Pick Columns">Pick Columns</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Toggle Sidebar"><span class="menu-item-label" data-label="Toggle Sidebar">Toggle Sidebar</span><kbd class="pull-right">Ctrl+K</kbd></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Hide Totals"><span class="menu-item-label" data-label="Hide Totals">Hide Totals</span></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#" data-label="Export"><span class="menu-item-label" data-label="Export">Export</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Setup Auto Email"><span class="menu-item-label" data-label="Setup Auto Email">Setup Auto Email</span></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#" data-label="Save"><span class="menu-item-label" data-label="Save">Save</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Save As"><span class="menu-item-label" data-label="Save As">Save As</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Delete"><span class="menu-item-label" data-label="Delete">Delete</span></a></li></ul></div></div></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><style data-ui="report.toolbar-fix">.report-page-form .filter-section{align-items:center;gap:var(--margin-sm,6px)}.report-page-form .filter-section .btn,.report-page-form .filter-section .btn-group>.btn{height:28px;min-height:28px;box-sizing:border-box;display:inline-flex;align-items:center}.report-wrapper .datatable .dt-scrollable{overflow-x:auto}</style><div class="layout-main-report report-view" style="width:100%;max-width:none;box-sizing:border-box" data-ui="report-view" data-saved-report="Order lines"><div class="page-form flex report-page-form" data-ui="report.page-form"><div class="standard-filter-section flex" data-ui="list.standard-filters"><div class="form-group frappe-control input-max-width col-md-2" data-fieldtype="Data" data-fieldname="name" data-ui="list.standard-filter.name" data-idx="0"><div class="input-group"><input type="text" autocomplete="off" class="input-with-feedback form-control input-xs" maxlength="140" data-fieldtype="Data" data-fieldname="name" placeholder="ID" value="" data-ui="list.standard-filter.name.input"><div class="input-group-btn mr-0"><button type="button" class="btn btn-default match-type-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-ui="list.standard-filter.name.match"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-equal-approximately"></use></svg></button><ul class="dropdown-menu match-type-dropdown-menu dropdown-menu-right"><li class="dropdown-item" data-match-type="=">Equals</li><li class="dropdown-item" data-match-type="like">Like</li></ul></div></div><span class="tooltip-content">name</span></div></div><div class="filter-section flex"><div class="filter-selector" data-ui="list.filter"><div class="btn-group"><button class="btn btn-default btn-sm filter-button" aria-expanded="false" data-ui="page.filter"><span class="filter-icon button-icon"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-funnel"></use></svg></span><span class="button-label hidden-xs">Filter</span></button></div></div><div class="group-by-selector btn-group" data-ui="report.group-by"><button class="btn btn-default btn-sm" type="button" aria-haspopup="menu" aria-expanded="false"><span class="button-label">Group By</span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-chevrons-up-down"></use></svg></button><div class="dropdown-menu" data-ui="report.group-by.menu"><a class="dropdown-item selected" href="#" data-ui="report.group-by.none">None</a><a class="dropdown-item" href="#" data-fieldname="title">Title</a><a class="dropdown-item" href="#" data-fieldname="status">Status</a></div></div><button class="es-button toggle-chart-btn btn-sm" type="button" data-ui="report.chart-toggle"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Hide Chart</span></button></div></div><div class="chart-wrapper" data-ui="report.chart"><div class="chart-container frappe-chart" data-chart-type="bar" data-ui="chart.bar" aria-label="Amount by order"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 1080 260" width="1080" height="260" role="img"><g class="y-axis"><g class="tick"><line class="zero-line" x1="44" x2="1068" y1="228" y2="228" stroke="#ebeef0" stroke-dasharray=""/><text x="38" y="231" text-anchor="end" font-size="10" fill="#6c7680">0</text></g><g class="tick"><line class="grid-line" x1="44" x2="1068" y1="184.8" y2="184.8" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="187.8" text-anchor="end" font-size="10" fill="#6c7680">500</text></g><g class="tick"><line class="grid-line" x1="44" x2="1068" y1="141.6" y2="141.6" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="144.6" text-anchor="end" font-size="10" fill="#6c7680">1000</text></g><g class="tick"><line class="grid-line" x1="44" x2="1068" y1="98.4" y2="98.4" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="101.4" text-anchor="end" font-size="10" fill="#6c7680">1500</text></g><g class="tick"><line class="grid-line" x1="44" x2="1068" y1="55.2" y2="55.2" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="58.2" text-anchor="end" font-size="10" fill="#6c7680">2000</text></g><g class="tick"><line class="grid-line" x1="44" x2="1068" y1="12" y2="12" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="15" text-anchor="end" font-size="10" fill="#6c7680">2500</text></g></g><g class="x-axis"><text x="86.67" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 1</text><text x="172" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 2</text><text x="257.33" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 3</text><text x="342.67" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 4</text><text x="428" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 5</text><text x="513.33" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 6</text><text x="598.67" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 7</text><text x="684" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 8</text><text x="769.33" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 9</text><text x="854.67" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 10</text><text x="940" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 11</text><text x="1025.33" y="248" text-anchor="middle" font-size="10" fill="#6c7680">Order 12</text></g><g class="dataset bar-dataset" data-series="Amount"><rect class="bar" data-value="300" data-label="Order 1" x="72.67" y="202.08" width="28" height="25.92" rx="1" fill="#7cd6fd"><title>Order 1 · Amount: 300</title></rect><rect class="bar" data-value="525" data-label="Order 2" x="158" y="182.64" width="28" height="45.36" rx="1" fill="#7cd6fd"><title>Order 2 · Amount: 525</title></rect><rect class="bar" data-value="800" data-label="Order 3" x="243.33" y="158.88" width="28" height="69.12" rx="1" fill="#7cd6fd"><title>Order 3 · Amount: 800</title></rect><rect class="bar" data-value="1125" data-label="Order 4" x="328.67" y="130.8" width="28" height="97.2" rx="1" fill="#7cd6fd"><title>Order 4 · Amount: 1125</title></rect><rect class="bar" data-value="1500" data-label="Order 5" x="414" y="98.4" width="28" height="129.6" rx="1" fill="#7cd6fd"><title>Order 5 · Amount: 1500</title></rect><rect class="bar" data-value="550" data-label="Order 6" x="499.33" y="180.48" width="28" height="47.52" rx="1" fill="#7cd6fd"><title>Order 6 · Amount: 550</title></rect><rect class="bar" data-value="900" data-label="Order 7" x="584.67" y="150.24" width="28" height="77.76" rx="1" fill="#7cd6fd"><title>Order 7 · Amount: 900</title></rect><rect class="bar" data-value="1300" data-label="Order 8" x="670" y="115.68" width="28" height="112.32" rx="1" fill="#7cd6fd"><title>Order 8 · Amount: 1300</title></rect><rect class="bar" data-value="1750" data-label="Order 9" x="755.33" y="76.8" width="28" height="151.2" rx="1" fill="#7cd6fd"><title>Order 9 · Amount: 1750</title></rect><rect class="bar" data-value="2250" data-label="Order 10" x="840.67" y="33.6" width="28" height="194.4" rx="1" fill="#7cd6fd"><title>Order 10 · Amount: 2250</title></rect><rect class="bar" data-value="800" data-label="Order 11" x="926" y="158.88" width="28" height="69.12" rx="1" fill="#7cd6fd"><title>Order 11 · Amount: 800</title></rect><rect class="bar" data-value="1275" data-label="Order 12" x="1011.33" y="117.84" width="28" height="110.16" rx="1" fill="#7cd6fd"><title>Order 12 · Amount: 1275</title></rect></g></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Amount</span></span></div></div></div><div class="report-wrapper"><style data-ui="datatable.css">.datatable{position:relative;font-size:var(--text-sm,12px)}.datatable .dt-scrollable{overflow-x:auto;overflow-y:hidden;max-width:100%}.datatable .dt-header,.datatable .dt-body,.datatable .dt-footer{min-width:max-content}.datatable .dt-row{display:flex;align-items:stretch;box-sizing:border-box;border-bottom:1px solid var(--dt-border-color,#d1d8dd)}.datatable .dt-cell{position:relative;box-sizing:border-box;display:flex;align-items:center;min-height:32px;overflow:hidden}.datatable .dt-cell__content{box-sizing:border-box;display:flex;align-items:center;min-width:1px;padding:0 8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.datatable .dt-body .dt-cell__content,.datatable .dt-footer .dt-cell__content{flex:1 1 auto}.datatable .dt-header .dt-row{background:var(--dt-header-bg,#f7fafc);font-weight:500}.datatable .dt-header .dt-cell--sticky{position:sticky;z-index:1;background:inherit}.datatable .dt-cell__resize-handle{position:absolute;right:0;top:0;bottom:0;width:4px}.datatable .dt-cell__resize-handle.active{background:var(--primary,#5e64ff)}.datatable .sort-indicator{display:inline-block;min-width:10px;min-height:12px;margin-inline-start:4px;font-size:9px}.datatable .dt-header{position:relative}.datatable .dt-dropdown{position:absolute;right:4px;top:50%;transform:translateY(-50%);min-width:12px;min-height:12px}.datatable .dt-dropdown__toggle{min-width:12px;min-height:12px}.datatable .dt-dropdown__toggle{opacity:0}.datatable .dt-cell--header:hover .dt-dropdown__toggle{opacity:1}.datatable .dt-dropdown-container{position:absolute;inset:0;z-index:5;pointer-events:none}.datatable .dt-dropdown__list{pointer-events:auto}.datatable .dt-dropdown__list{position:absolute;min-width:140px;padding:4px 0;border:1px solid var(--dt-border-color,#d1d8dd);border-radius:6px;background:var(--surface-white,#fff);box-shadow:0 4px 12px rgba(0,0,0,.1)}.datatable .dt-dropdown__list-item{padding:6px 12px;white-space:nowrap}.datatable .dt-dropdown__list-item.highlighted{background:var(--surface-gray-2,#f3f3f3)}.datatable .dt-row-totals{font-weight:600;background:var(--dt-header-bg,#f7fafc)}.datatable .dt-cell--editing{outline:2px solid var(--primary,#5e64ff);outline-offset:-2px}.datatable .dt-cell__edit input{width:100%;border:0;background:transparent}.datatable .dt-tree-node{display:inline-flex;align-items:center;gap:2px}.datatable .dt-row--selected{background:var(--surface-gray-1,#f8f8f8)}.datatable .datatable-empty{padding:40px;text-align:center}</style><div class="datatable" data-ui="report.table" data-rows="12" data-cols="8"><div class="dt-scrollable"><div class="dt-header" data-ui="datatable.head"><div><div class="dt-row dt-row-header" data-is-header="1"><div class="dt-cell dt-cell--col-0 dt-cell--header dt-cell--header-0 dt-cell--sticky dt-cell--sticky-top" data-col-index="0" data-is-header="1" tabindex="0" style="left:0px;" data-ui="datatable.head.select"><div class="dt-cell__content dt-cell__content--header-0" style="width:32px;"><input type="checkbox" data-ui="datatable.head.select.input"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--header dt-cell--header-1 dt-cell--sticky dt-cell--sticky-top" data-col-index="1" data-is-header="1" tabindex="0" style="left:32px;" data-ui="datatable.head.index"><div class="dt-cell__content dt-cell__content--header-1" style="width:40px;"><span class="sort-indicator"></span><span class="dt-cell__resize-handle"></span></div></div><div data-fieldname="name" class="dt-cell dt-cell--col-2 dt-cell--header dt-cell--header-2 dt-cell--sticky dt-cell--sticky-top dt-cell--sticky-last" data-col-index="2" data-is-header="1" tabindex="0" style="left:72px;" data-ui="datatable.head.col.name"><div class="dt-cell__content dt-cell__content--header-2" title="ID" style="width:120px;text-align:left;">ID<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.name"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.name"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="title" class="dt-cell dt-cell--col-3 dt-cell--header dt-cell--header-3" data-col-index="3" data-is-header="1" tabindex="0" data-ui="datatable.head.col.title"><div class="dt-cell__content dt-cell__content--header-3" title="Title" style="width:160px;text-align:left;">Title<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.title"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.title"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="status" class="dt-cell dt-cell--col-4 dt-cell--header dt-cell--header-4" data-col-index="4" data-is-header="1" tabindex="0" data-ui="datatable.head.col.status"><div class="dt-cell__content dt-cell__content--header-4" title="Status" style="width:120px;text-align:left;">Status<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.status"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.status"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.status"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="Odd Child:idx" class="dt-cell dt-cell--col-5 dt-cell--header dt-cell--header-5" data-col-index="5" data-is-header="1" tabindex="0" data-ui="datatable.head.col.Odd Child:idx"><div class="dt-cell__content dt-cell__content--header-5" title="Index (Odd Child)" style="width:192px;text-align:right;justify-content:flex-end;">Index (Odd Child)<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.Odd Child:idx"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.Odd Child:idx"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.Odd Child:idx"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="Odd Child:item" class="dt-cell dt-cell--col-6 dt-cell--header dt-cell--header-6" data-col-index="6" data-is-header="1" tabindex="0" data-ui="datatable.head.col.Odd Child:item"><div class="dt-cell__content dt-cell__content--header-6" title="Item (Odd Child)" style="width:184px;text-align:left;">Item (Odd Child)<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.Odd Child:item"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.Odd Child:item"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.Odd Child:item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="Odd Child:qty" class="dt-cell dt-cell--col-7 dt-cell--header dt-cell--header-7" data-col-index="7" data-is-header="1" tabindex="0" data-ui="datatable.head.col.Odd Child:qty"><div class="dt-cell__content dt-cell__content--header-7" title="Qty (Odd Child)" style="width:176px;text-align:right;justify-content:flex-end;">Qty (Odd Child)<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.Odd Child:qty"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.Odd Child:qty"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.Odd Child:qty"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="Odd Child:rate" class="dt-cell dt-cell--col-8 dt-cell--header dt-cell--header-8" data-col-index="8" data-is-header="1" tabindex="0" data-ui="datatable.head.col.Odd Child:rate"><div class="dt-cell__content dt-cell__content--header-8" title="Rate (Odd Child)" style="width:184px;text-align:right;justify-content:flex-end;">Rate (Odd Child)<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.Odd Child:rate"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.Odd Child:rate"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.Odd Child:rate"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div><div data-fieldname="Odd Child:amount" class="dt-cell dt-cell--col-9 dt-cell--header dt-cell--header-9" data-col-index="9" data-is-header="1" tabindex="0" data-ui="datatable.head.col.Odd Child:amount"><div class="dt-cell__content dt-cell__content--header-9" title="Amount (Odd Child)" style="width:200px;text-align:right;justify-content:flex-end;">Amount (Odd Child)<span class="sort-indicator" data-sort="none" data-ui="datatable.head.sort.Odd Child:amount"></span><span class="dt-cell__resize-handle" data-ui="datatable.head.resize.Odd Child:amount"></span><div class="dt-dropdown"><div class="dt-dropdown__toggle" data-ui="datatable.head.toggle.Odd Child:amount"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div></div></div></div></div></div><div class="dt-body"><div class="dt-row dt-row-0" data-row-index="0" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="0" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="0"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="0" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-2" data-row-index="0" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0001"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0001</div></div><div class="dt-cell dt-cell--col-3" data-row-index="0" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 1"><div class="dt-cell__content" style="justify-content:flex-start">Order 1</div></div><div class="dt-cell dt-cell--col-4" data-row-index="0" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="0" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="1"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-6" data-row-index="0" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-001"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-001">ITEM-001</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="0" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-8" data-row-index="0" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="150"><div class="dt-cell__content" style="justify-content:flex-end">INR 150.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="0" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="300"><div class="dt-cell__content" style="justify-content:flex-end">INR 300.00</div></div></div><div class="dt-row dt-row-1" data-row-index="1" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="1" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="1"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="1" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-2" data-row-index="1" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0002"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0002</div></div><div class="dt-cell dt-cell--col-3" data-row-index="1" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 2"><div class="dt-cell__content" style="justify-content:flex-start">Order 2</div></div><div class="dt-cell dt-cell--col-4" data-row-index="1" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="1" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-6" data-row-index="1" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-002"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-002">ITEM-002</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="1" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-8" data-row-index="1" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="175"><div class="dt-cell__content" style="justify-content:flex-end">INR 175.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="1" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="525"><div class="dt-cell__content" style="justify-content:flex-end">INR 525.00</div></div></div><div class="dt-row dt-row-2" data-row-index="2" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="2" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="2"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="2" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-2" data-row-index="2" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0003"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0003</div></div><div class="dt-cell dt-cell--col-3" data-row-index="2" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 3"><div class="dt-cell__content" style="justify-content:flex-start">Order 3</div></div><div class="dt-cell dt-cell--col-4" data-row-index="2" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="2" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-6" data-row-index="2" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-003"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-003">ITEM-003</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="2" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="4"><div class="dt-cell__content" style="justify-content:flex-end">4</div></div><div class="dt-cell dt-cell--col-8" data-row-index="2" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="200"><div class="dt-cell__content" style="justify-content:flex-end">INR 200.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="2" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="800"><div class="dt-cell__content" style="justify-content:flex-end">INR 800.00</div></div></div><div class="dt-row dt-row-3" data-row-index="3" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="3" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="3"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="3" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">4</div></div><div class="dt-cell dt-cell--col-2" data-row-index="3" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0004"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0004</div></div><div class="dt-cell dt-cell--col-3" data-row-index="3" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 4"><div class="dt-cell__content" style="justify-content:flex-start">Order 4</div></div><div class="dt-cell dt-cell--col-4" data-row-index="3" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="3" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="1"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-6" data-row-index="3" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-004"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-004">ITEM-004</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="3" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="5"><div class="dt-cell__content" style="justify-content:flex-end">5</div></div><div class="dt-cell dt-cell--col-8" data-row-index="3" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="225"><div class="dt-cell__content" style="justify-content:flex-end">INR 225.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="3" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="1125"><div class="dt-cell__content" style="justify-content:flex-end">INR 1,125.00</div></div></div><div class="dt-row dt-row-4" data-row-index="4" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="4" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="4"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="4" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">5</div></div><div class="dt-cell dt-cell--col-2" data-row-index="4" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0005"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0005</div></div><div class="dt-cell dt-cell--col-3" data-row-index="4" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 5"><div class="dt-cell__content" style="justify-content:flex-start">Order 5</div></div><div class="dt-cell dt-cell--col-4" data-row-index="4" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="4" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-6" data-row-index="4" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-001"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-001">ITEM-001</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="4" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="6"><div class="dt-cell__content" style="justify-content:flex-end">6</div></div><div class="dt-cell dt-cell--col-8" data-row-index="4" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="250"><div class="dt-cell__content" style="justify-content:flex-end">INR 250.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="4" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="1500"><div class="dt-cell__content" style="justify-content:flex-end">INR 1,500.00</div></div></div><div class="dt-row dt-row-5" data-row-index="5" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="5" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="5"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="5" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">6</div></div><div class="dt-cell dt-cell--col-2" data-row-index="5" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0006"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0006</div></div><div class="dt-cell dt-cell--col-3" data-row-index="5" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 6"><div class="dt-cell__content" style="justify-content:flex-start">Order 6</div></div><div class="dt-cell dt-cell--col-4" data-row-index="5" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="5" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-6" data-row-index="5" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-002"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-002">ITEM-002</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="5" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-8" data-row-index="5" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="275"><div class="dt-cell__content" style="justify-content:flex-end">INR 275.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="5" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="550"><div class="dt-cell__content" style="justify-content:flex-end">INR 550.00</div></div></div><div class="dt-row dt-row-6" data-row-index="6" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="6" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="6"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="6" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">7</div></div><div class="dt-cell dt-cell--col-2" data-row-index="6" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0007"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0007</div></div><div class="dt-cell dt-cell--col-3" data-row-index="6" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 7"><div class="dt-cell__content" style="justify-content:flex-start">Order 7</div></div><div class="dt-cell dt-cell--col-4" data-row-index="6" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="6" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="1"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-6" data-row-index="6" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-003"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-003">ITEM-003</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="6" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-8" data-row-index="6" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="300"><div class="dt-cell__content" style="justify-content:flex-end">INR 300.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="6" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="900"><div class="dt-cell__content" style="justify-content:flex-end">INR 900.00</div></div></div><div class="dt-row dt-row-7" data-row-index="7" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="7" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="7"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="7" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">8</div></div><div class="dt-cell dt-cell--col-2" data-row-index="7" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0008"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0008</div></div><div class="dt-cell dt-cell--col-3" data-row-index="7" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 8"><div class="dt-cell__content" style="justify-content:flex-start">Order 8</div></div><div class="dt-cell dt-cell--col-4" data-row-index="7" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="7" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-6" data-row-index="7" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-004"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-004">ITEM-004</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="7" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="4"><div class="dt-cell__content" style="justify-content:flex-end">4</div></div><div class="dt-cell dt-cell--col-8" data-row-index="7" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="325"><div class="dt-cell__content" style="justify-content:flex-end">INR 325.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="7" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="1300"><div class="dt-cell__content" style="justify-content:flex-end">INR 1,300.00</div></div></div><div class="dt-row dt-row-8" data-row-index="8" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="8" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="8"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="8" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">9</div></div><div class="dt-cell dt-cell--col-2" data-row-index="8" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0009"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0009</div></div><div class="dt-cell dt-cell--col-3" data-row-index="8" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 9"><div class="dt-cell__content" style="justify-content:flex-start">Order 9</div></div><div class="dt-cell dt-cell--col-4" data-row-index="8" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="8" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-6" data-row-index="8" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-001"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-001">ITEM-001</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="8" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="5"><div class="dt-cell__content" style="justify-content:flex-end">5</div></div><div class="dt-cell dt-cell--col-8" data-row-index="8" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="350"><div class="dt-cell__content" style="justify-content:flex-end">INR 350.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="8" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="1750"><div class="dt-cell__content" style="justify-content:flex-end">INR 1,750.00</div></div></div><div class="dt-row dt-row-9" data-row-index="9" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="9" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="9"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="9" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">10</div></div><div class="dt-cell dt-cell--col-2" data-row-index="9" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0010"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0010</div></div><div class="dt-cell dt-cell--col-3" data-row-index="9" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 10"><div class="dt-cell__content" style="justify-content:flex-start">Order 10</div></div><div class="dt-cell dt-cell--col-4" data-row-index="9" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="9" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="1"><div class="dt-cell__content" style="justify-content:flex-end">1</div></div><div class="dt-cell dt-cell--col-6" data-row-index="9" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-002"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-002">ITEM-002</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="9" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="6"><div class="dt-cell__content" style="justify-content:flex-end">6</div></div><div class="dt-cell dt-cell--col-8" data-row-index="9" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="375"><div class="dt-cell__content" style="justify-content:flex-end">INR 375.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="9" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="2250"><div class="dt-cell__content" style="justify-content:flex-end">INR 2,250.00</div></div></div><div class="dt-row dt-row-10" data-row-index="10" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="10" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="10"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="10" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">11</div></div><div class="dt-cell dt-cell--col-2" data-row-index="10" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0011"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0011</div></div><div class="dt-cell dt-cell--col-3" data-row-index="10" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 11"><div class="dt-cell__content" style="justify-content:flex-start">Order 11</div></div><div class="dt-cell dt-cell--col-4" data-row-index="10" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Draft"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Draft"><span class="es-badge" data-theme="red"><span>Draft</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="10" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-6" data-row-index="10" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-003"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-003">ITEM-003</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="10" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="2"><div class="dt-cell__content" style="justify-content:flex-end">2</div></div><div class="dt-cell dt-cell--col-8" data-row-index="10" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="400"><div class="dt-cell__content" style="justify-content:flex-end">INR 400.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="10" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="800"><div class="dt-cell__content" style="justify-content:flex-end">INR 800.00</div></div></div><div class="dt-row dt-row-11" data-row-index="11" style="height:33px;display:flex"><div class="dt-cell dt-cell--col-0 dt-cell--no-filter" data-row-index="11" data-col-index="0" style="width:32px;flex:0 0 32px"><div class="dt-cell__content dt-cell__content--col-0"><input type="checkbox" class="dt-checkbox" data-row-index="11"></div></div><div class="dt-cell dt-cell--col-1 dt-cell--index" data-row-index="11" data-col-index="1" style="width:40px;flex:0 0 40px;text-align:right"><div class="dt-cell__content" style="justify-content:flex-end">12</div></div><div class="dt-cell dt-cell--col-2" data-row-index="11" data-col-index="2" style="width:120px;flex:0 0 120px;text-align:left" title="ODD-0012"><div class="dt-cell__content" style="justify-content:flex-start">ODD-0012</div></div><div class="dt-cell dt-cell--col-3" data-row-index="11" data-col-index="3" style="width:160px;flex:0 0 160px;text-align:left" title="Order 12"><div class="dt-cell__content" style="justify-content:flex-start">Order 12</div></div><div class="dt-cell dt-cell--col-4" data-row-index="11" data-col-index="4" style="width:120px;flex:0 0 120px;text-align:left" title="Submitted"><div class="dt-cell__content" style="justify-content:flex-start"><span class=" ellipsis" data-filter="status,=,Submitted"><span class="es-badge" data-theme="blue"><span>Submitted</span></span></span></div></div><div class="dt-cell dt-cell--col-5" data-row-index="11" data-col-index="5" style="width:192px;flex:0 0 192px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-6" data-row-index="11" data-col-index="6" style="width:184px;flex:0 0 184px;text-align:left" title="ITEM-004"><div class="dt-cell__content" style="justify-content:flex-start"><a class=" ellipsis" data-filter="Odd Child:item,=,ITEM-004">ITEM-004</a></div></div><div class="dt-cell dt-cell--col-7" data-row-index="11" data-col-index="7" style="width:176px;flex:0 0 176px;text-align:right" title="3"><div class="dt-cell__content" style="justify-content:flex-end">3</div></div><div class="dt-cell dt-cell--col-8" data-row-index="11" data-col-index="8" style="width:184px;flex:0 0 184px;text-align:right" title="425"><div class="dt-cell__content" style="justify-content:flex-end">INR 425.00</div></div><div class="dt-cell dt-cell--col-9" data-row-index="11" data-col-index="9" style="width:200px;flex:0 0 200px;text-align:right" title="1275"><div class="dt-cell__content" style="justify-content:flex-end">INR 1,275.00</div></div></div></div><div class="dt-footer dt-row dt-row-totals" data-ui="datatable.totals" data-rows="12"><div class="dt-cell dt-cell--lead" style="width:72px;flex:0 0 72px"><div class="dt-cell__content"></div></div><div class="dt-cell dt-cell--col-0" style="width:120px;flex:0 0 120px" data-ui="datatable.totals.cell" data-col-index="0" data-fieldname="name"><div class="dt-cell__content dt-cell__content--col-0" style="justify-content:flex-start;"><b>Total</b></div></div><div class="dt-cell dt-cell--col-1" style="width:160px;flex:0 0 160px" data-ui="datatable.totals.cell" data-col-index="1" data-fieldname="title"><div class="dt-cell__content dt-cell__content--col-1" style="justify-content:flex-start;"><b></b></div></div><div class="dt-cell dt-cell--col-2" style="width:120px;flex:0 0 120px" data-ui="datatable.totals.cell" data-col-index="2" data-fieldname="status"><div class="dt-cell__content dt-cell__content--col-2" style="justify-content:flex-start;"><b></b></div></div><div class="dt-cell dt-cell--col-3" style="width:192px;flex:0 0 192px" data-ui="datatable.totals.cell" data-col-index="3" data-fieldname="Odd Child:idx"><div class="dt-cell__content dt-cell__content--col-3" style="text-align:right;justify-content:flex-end;"><b>24</b></div></div><div class="dt-cell dt-cell--col-4" style="width:184px;flex:0 0 184px" data-ui="datatable.totals.cell" data-col-index="4" data-fieldname="Odd Child:item"><div class="dt-cell__content dt-cell__content--col-4" style="justify-content:flex-start;"><b></b></div></div><div class="dt-cell dt-cell--col-5" style="width:176px;flex:0 0 176px" data-ui="datatable.totals.cell" data-col-index="5" data-fieldname="Odd Child:qty"><div class="dt-cell__content dt-cell__content--col-5" style="text-align:right;justify-content:flex-end;"><b>45.00</b></div></div><div class="dt-cell dt-cell--col-6" style="width:184px;flex:0 0 184px" data-ui="datatable.totals.cell" data-col-index="6" data-fieldname="Odd Child:rate"><div class="dt-cell__content dt-cell__content--col-6" style="text-align:right;justify-content:flex-end;"><b>3,450.00</b></div></div><div class="dt-cell dt-cell--col-7" style="width:200px;flex:0 0 200px" data-ui="datatable.totals.cell" data-col-index="7" data-fieldname="Odd Child:amount"><div class="dt-cell__content dt-cell__content--col-7" style="text-align:right;justify-content:flex-end;"><b>13,075.00</b></div></div></div></div></div></div><div class="list-paging-area level" data-ui="report.paging"><div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page length"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" data-ui="report.page-length.20">20</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" data-ui="report.page-length.100">100</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" data-ui="report.page-length.500">500</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" data-ui="report.page-length.2500">2500</button></div></div><div class="level-right"><span class="list-count" dir="auto" data-ui="report.count">12 of 12</span></div></div></div></div></div></div></div></div></div>
+</div></div></div>
+</div>
+</body></html>

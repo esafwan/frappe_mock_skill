@@ -11,7 +11,7 @@ const w = [];
 const out = render(mk(ids.map((t, i) => ({ id: 'i' + i, type: t, data: { ...d[t], col: 4 } }))), ctx(w));
 assert.deepEqual(Object.keys(BLOCKS).sort(), [...ids].sort());
 for (const t of ids) assert(out.main.includes(`data-ui="block:${t}"`), t);
-assert(out.main.includes('2 of 2') === false && out.main.includes('1 of 2 steps'), 'onboarding progress');
+assert(out.main.includes('2 of 2') === false && out.main.includes('<bdi>1</bdi> of <bdi>2</bdi> steps'), 'onboarding progress');
 assert(out.main.includes('5 open'), 'count format');
 assert(!out.main.includes('<script') && !out.main.includes('onclick'), 'sanitised');
 assert(out.main.includes('[data-block-id="i9"] p'), 'scoped css');

@@ -11,7 +11,7 @@ export function renderEmpty({ doctype, canCreate = true } = {}) {
 
 /** Filters matched nothing. */
 export function renderNoResults({ filterCount = 0 } = {}) {
-  return `<div class="no-result text-muted flex justify-center align-center" data-ui="list.no-results"><div class="msg-box no-border"><p>Nothing to show</p>${filterCount ? `<p class="text-muted">${filterCount} filter${filterCount === 1 ? '' : 's'} applied</p><p>${button('Clear Filters', { ui: 'list.no-results.clear' })}</p>` : ''}</div></div>`;
+  return `<div class="no-result text-muted flex justify-center align-center" data-ui="list.no-results"><div class="msg-box no-border"><p>Nothing to show</p>${filterCount ? `<p class="text-muted" dir="auto">${filterCount} filter${filterCount === 1 ? '' : 's'} applied</p><p>${button('Clear Filters', { ui: 'list.no-results.clear' })}</p>` : ''}</div></div>`;
 }
 
 const bar = (w, i) => `<span class="skeleton-box" style="display:inline-block;width:${w}px;max-width:100%;height:12px;border-radius:4px;background:var(--bg-gray, var(--gray-200, #ededed))" data-ui="list.skeleton.bar.${i}"></span>`;

@@ -1,0 +1,83 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "image",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "ITM-001",
+        "title": "Walnut desk",
+        "indicator": {
+          "label": "Low stock",
+          "color": "orange"
+        }
+      },
+      {
+        "name": "ITM-002",
+        "title": "Oak shelf",
+        "indicator": {
+          "label": "In stock",
+          "color": "green"
+        }
+      },
+      {
+        "name": "ITM-003",
+        "title": "Linen sofa"
+      },
+      {
+        "name": "ITM-004",
+        "title": "Steel lamp",
+        "indicator": {
+          "label": "Low stock",
+          "color": "orange"
+        }
+      },
+      {
+        "name": "ITM-005",
+        "title": "Glass table",
+        "indicator": {
+          "label": "In stock",
+          "color": "green"
+        }
+      },
+      {
+        "name": "ITM-006",
+        "title": "Wool rug"
+      },
+      {
+        "name": "ITM-007",
+        "title": "Cedar chair",
+        "indicator": {
+          "label": "Low stock",
+          "color": "orange"
+        }
+      },
+      {
+        "name": "ITM-008",
+        "title": "Brass clock",
+        "indicator": {
+          "label": "In stock",
+          "color": "green"
+        }
+      }
+    ],
+    "title": "Items"
+  },
+  "view": {}
+}

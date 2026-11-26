@@ -3,6 +3,7 @@
 // Markup follows frappe sidebar_item.html (V16-FACTS section 9). No brand/doctype names here.
 import { esc } from '../kit-lib/util.mjs';
 import { icon } from '../kit-lib/icons.mjs';
+import { permsOn, applySidebar } from '../kit-lib/perms.mjs';
 
 const svg = (name, extra = '') => icon(name, 'sm', { class: extra });
 
@@ -40,8 +41,9 @@ export function matchesActive(it, active) {
 
 const hasActive = (it, active) => matchesActive(it, active) || (it.children || []).some((k) => hasActive(k, active));
 
-export function renderSidebar(sidebarJson, { active = null, collapsed = false } = {}) {
-  const items = normalize({ children: nestItems(sidebarJson?.items || []) }).children;
+export function renderSidebar(sidebarJson, { active = null, collapsed = false, ctx = null } = {}) {
+  let items = normalize({ children: nestItems(sidebarJson?.items || []) }).children;
+  if (permsOn(ctx)) items = applySidebar(ctx, items); // role perms: hide items whose DocType the role cannot read (also item.roles)
   let n = 0;
   const drop = (state) => `<button class="btn-reset drop-icon" data-state="${state}" data-ui="sidebar.button-${n++}">${svg('chevron-right', 'chevron')}</button>`;
 

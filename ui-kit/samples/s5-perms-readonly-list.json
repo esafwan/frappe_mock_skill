@@ -1,0 +1,61 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Sales Manager"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    },
+    "perms": {
+      "Customer": {
+        "read": true,
+        "write": false,
+        "create": false,
+        "delete": false,
+        "export": false,
+        "levels": {
+          "1": {
+            "read": false
+          }
+        }
+      },
+      "Quotation": {
+        "read": false
+      }
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 8,
+        "seed": 11
+      }
+    },
+    "total": 8
+  },
+  "overlays": [
+    {
+      "type": "list_select",
+      "rows": [
+        0,
+        2
+      ]
+    }
+  ]
+}

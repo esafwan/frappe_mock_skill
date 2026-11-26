@@ -1,3 +1,4 @@
+import * as FMT from '../../kit-lib/format.mjs';
 export function esc(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -31,8 +32,26 @@ function parseLocale(l) {
   return { locale, currency: CURRENCY[locale] || 'INR' };
 }
 
+// ctx.system (System Settings, kit-lib/format.mjs) overrides the Intl locale path for numbers and dates.
 export function formatValue(df, value, ctx = {}) {
   if (value === undefined || value === null || value === '') return '';
+  const S = ctx.system;
+  if (S) {
+    switch (df.fieldtype) {
+      case 'Currency': {
+        if (Number.isNaN(Number(value))) return String(value);
+        const { locale, currency } = parseLocale(ctx.locale);
+        const cur = df.options && /^[A-Z]{3}$/.test(df.options) ? df.options : currency;
+        return FMT.currencyAround(value, S, locale, cur);
+      }
+      case 'Float': case 'Percent': return Number.isNaN(Number(value)) ? String(value) : FMT.formatNumber(value, S, df.precision != null && df.precision !== '' ? Number(df.precision) : S.float_precision, { trim: true });
+      case 'Int': return Number.isNaN(Number(value)) ? String(value) : FMT.formatInt(value, S);
+      case 'Date': return FMT.formatDate(value, S);
+      case 'Datetime': return FMT.formatDatetime(value, S);
+      case 'Time': return FMT.formatTime(value, S);
+      default: break;
+    }
+  }
   const { locale, currency } = parseLocale(ctx.locale);
   switch (df.fieldtype) {
     case 'Currency': {

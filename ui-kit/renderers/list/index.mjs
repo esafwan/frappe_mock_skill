@@ -128,7 +128,7 @@ export default async function render(spec, ctx) {
   const sj = sidebarMeta || loadWorkspaceSidebar(workspace);
   const chrome = { dock: true, sidebar: 'expanded', navbar: false, ...(ctx.chrome || {}) };
   const sidebarHtml = !sj || chrome.sidebar === 'hidden' ? ''
-    : sidebarContainer(sj, { active: { doctype: page.doctype }, collapsed: chrome.sidebar === 'collapsed', title: workspace });
+    : sidebarContainer(sj, { active: { doctype: page.doctype }, collapsed: chrome.sidebar === 'collapsed', title: workspace, ctx });
   const sctx = spec.ctx || {};
   const vp = ctx.viewport && typeof ctx.viewport === 'object' ? `${ctx.viewport.width}x${ctx.viewport.height}` : (ctx.viewport || '1440x900');
   const document = renderShell({ ctx: {

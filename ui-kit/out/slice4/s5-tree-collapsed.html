@@ -1,0 +1,1015 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Customer Group</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+
+<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style data-ui="shell.kit-css">/* Kit-only rules for markup the captured desk CSS does not style. Inlined into every page by shell.mjs (data-ui="shell.kit-css").
+   Source: not in captured CSS (tokens/css/frappe-desk.css has no static air-datepicker popup layout; the real one is positioned by JS). */
+.datepicker.active{position:absolute;left:0;top:100%;display:block;opacity:1;z-index:1060;background:var(--fg-color,#fff);border:1px solid var(--border-color,#e5e7eb);border-radius:8px;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.12));margin-top:2px;width:260px;padding:8px}
+.datepicker.active.-only-timepicker-{width:auto;display:flex}
+.datepicker--nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.datepicker--days-names,.datepicker--cells-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.datepicker--cell-day{width:auto}
+.datepicker--cell.-selected-{background:var(--ink-gray-9,#171717);color:var(--surface-white,#fff)}
+.timepicker-col{max-height:160px;overflow:auto;padding:0 6px;text-align:center}
+/* Nested row form: each level stacks lower and narrower than its parent (data-depth is 1, 2, ...). */
+.form-in-grid[data-depth]:not([data-depth="0"]){background:var(--modal-bg,var(--surface-white,#fff));box-shadow:var(--shadow-xl,0 12px 32px rgba(0,0,0,.25));border:1px solid var(--border-color,#ededed)}
+.form-in-grid[data-depth="1"]{top:64px;width:calc(100% - 56px);z-index:1040}
+.form-in-grid[data-depth="2"]{top:128px;width:calc(100% - 112px);z-index:1041}
+.form-in-grid[data-depth="3"]{top:192px;width:calc(100% - 168px);z-index:1042}</style>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="tree" data-sidebar="1">
+<div id="ui-kit-stage" class="ui-kit-page">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-calculator-duotone" stroke="none">
+		<path fill-rule="evenodd" d="M7 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H7A2 2 0 0 1 5 20V4A2 2 0 0 1 7 2Z M7.8 4H16.2A0.8 0.8 0 0 1 17 4.8V8.2A0.8 0.8 0 0 1 16.2 9H7.8A0.8 0.8 0 0 1 7 8.2V4.8A0.8 0.8 0 0 1 7.8 4Z M8 11H9.4A0.5 0.5 0 0 1 9.9 11.5V12.9A0.5 0.5 0 0 1 9.4 13.4H8A0.5 0.5 0 0 1 7.5 12.9V11.5A0.5 0.5 0 0 1 8 11Z M11.3 11H12.7A0.5 0.5 0 0 1 13.2 11.5V12.9A0.5 0.5 0 0 1 12.7 13.4H11.3A0.5 0.5 0 0 1 10.8 12.9V11.5A0.5 0.5 0 0 1 11.3 11Z M14.6 11H16A0.5 0.5 0 0 1 16.5 11.5V12.9A0.5 0.5 0 0 1 16 13.4H14.6A0.5 0.5 0 0 1 14.1 12.9V11.5A0.5 0.5 0 0 1 14.6 11Z M8 14.3H9.4A0.5 0.5 0 0 1 9.9 14.8V16.2A0.5 0.5 0 0 1 9.4 16.7H8A0.5 0.5 0 0 1 7.5 16.2V14.8A0.5 0.5 0 0 1 8 14.3Z M11.3 14.3H12.7A0.5 0.5 0 0 1 13.2 14.8V16.2A0.5 0.5 0 0 1 12.7 16.7H11.3A0.5 0.5 0 0 1 10.8 16.2V14.8A0.5 0.5 0 0 1 11.3 14.3Z M14.6 14.3H16A0.5 0.5 0 0 1 16.5 14.8V16.2A0.5 0.5 0 0 1 16 16.7H14.6A0.5 0.5 0 0 1 14.1 16.2V14.8A0.5 0.5 0 0 1 14.6 14.3Z M8 17.6H9.4A0.5 0.5 0 0 1 9.9 18.1V19.5A0.5 0.5 0 0 1 9.4 20H8A0.5 0.5 0 0 1 7.5 19.5V18.1A0.5 0.5 0 0 1 8 17.6Z M11.3 17.6H12.7A0.5 0.5 0 0 1 13.2 18.1V19.5A0.5 0.5 0 0 1 12.7 20H11.3A0.5 0.5 0 0 1 10.8 19.5V18.1A0.5 0.5 0 0 1 11.3 17.6Z" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></path>
+		<rect x="7.6" y="4.6" width="8.8" height="3.8" rx="0.4" style="fill: light-dark(var(--duotone-light, var(--ink-gray-3)), transparent)"></rect>
+		<g class="calculator-digits">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+		</g>
+		<g class="calculator-typing">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0s"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.25s"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.5s"></rect>
+		</g>
+		<rect x="14.1" y="17.6" width="2.4" height="2.4" rx="0.5" style="fill: var(--duotone-light, var(--ink-gray-3))"></rect>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
+      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+      <path d="M18 17V9"></path>
+      <path d="M13 17V5"></path>
+      <path d="M8 17v-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-no-axes-column">
+      <path d="M5 21v-6"></path>
+      <path d="M12 21V3"></path>
+      <path d="M19 21V9"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-check">
+      <path d="M20 6 9 17l-5-5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-right">
+      <path d="m9 18 6-6-6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-computer">
+      <path d="M12 18h6"></path>
+      <path d="M6 18h.01"></path>
+      <path d="M8 6h1"></path>
+      <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+      <rect x="4" y="2" width="16" height="12" rx="2"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-expenses">
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-folder">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-house">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-grid">
+      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list">
+      <path d="M3 5h.01"></path>
+      <path d="M3 12h.01"></path>
+      <path d="M3 19h.01"></path>
+      <path d="M8 5h13"></path>
+      <path d="M8 12h13"></path>
+      <path d="M8 19h13"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-list-tree">
+      <path d="M8 5h13"></path>
+      <path d="M13 12h8"></path>
+      <path d="M13 19h8"></path>
+      <path d="M3 10a2 2 0 0 0 2 2h3"></path>
+      <path d="M3 5v12a2 2 0 0 0 2 2h3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-package">
+      <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
+      <path d="M12 22V12"></path>
+      <polyline points="3.29 7 12 12 20.71 7"></polyline>
+      <path d="m7.5 4.27 9 5.15"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-panel-left-close">
+      <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+      <path d="M9 3v18"></path>
+      <path d="m16 15-3-3 3-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt">
+      <path d="M12 17V7"></path>
+      <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-refresh-cw">
+      <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+      <path d="M21 3v5h-5"></path>
+      <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+      <path d="M8 16H3v5"></path>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-sell">
+		<path d="M3 8h18M3 6v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke-miterlimit="10" stroke-linecap="square"></path>
+		<path d="M6.273 15.136h4.09" stroke-miterlimit="10" stroke-linecap="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-settings">
+      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-stock">
+		<path d="M7.5 4.84l9.818 4.91M21 7.91L12.818 12 3 7.09M12.818 12v9" stroke-miterlimit="10"></path>
+		<path d="M19.894 7.356A2 2 0 0 1 21 9.146v5.813a2 2 0 0 1-.971 1.715l-6.27 3.761a2 2 0 0 1-1.923.074l-7.73-3.865A2 2 0 0 1 3 14.854V8.328a2 2 0 0 1 1.106-1.789l6.181-3.09a2 2 0 0 1 1.79 0l7.817 3.908z" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-store">
+      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
+      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+      <path d="M15 18H9"></path>
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+      <circle cx="17" cy="18" r="2"></circle>
+      <circle cx="7" cy="18" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol></svg>
+<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><span class="dock-logo-glyph" role="img" aria-label=""><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span></div><div class="title-container"><div class="header-title"></div></div></a></div>
+<div class="dock-items"><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-2"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-calculator-duotone"></use></svg></span><span class="dock-item-label">Accounts</span></button><button class="dock-item  " aria-label="GST India" data-ui="dock.button-3"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-expenses"></use></svg></span><span class="dock-item-label">GST India</span></button><button class="dock-item active " aria-label="Selling" aria-current="page" data-ui="dock.button-4"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-sell"></use></svg></span><span class="dock-item-label">Selling</span></button><button class="dock-item  " aria-label="Setup" data-ui="dock.button-5"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span><span class="dock-item-label">Setup</span></button><button class="dock-item  " aria-label="Stock" data-ui="dock.button-6"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-stock"></use></svg></span><span class="dock-item-label">Stock</span></button></div>
+<div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-7"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">J</div></span></button></div>
+</div>
+<div class="body-sidebar-container expanded" data-ui="sidebar"><div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="header-logo"><svg class="icon icon-md"><use href="#icon-sell"></use></svg></div><div class="title-container"><div class="sidebar-item-label header-title">Selling</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"><div class="sidebar-item-container" item-name="Home" data-id="Home"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-0"><span class="sidebar-item-icon" item-icon="house"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-1"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Customer" data-id="Customer"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-2"><span class="sidebar-item-icon" item-icon="users"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-3"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-4"><span class="sidebar-item-icon" item-icon="store"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-5"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-6"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Reports" data-id="Reports"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-7"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Items" data-id="Items"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-8"><span class="sidebar-item-icon" item-icon="package"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="POS" data-id="POS"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-9"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Setup" data-id="Setup"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-10"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div></div></div>
+<div class="main-section"><div id="body"><div id="page-tree" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between"><div class="page-title"><button class="btn-reset sidebar-toggle-btn navbar-brand" type="button" data-ui="page-head.sidebar-toggle"><svg class="icon icon-md" stroke="currentColor" aria-hidden="true"><use href="#icon-panel-left-close"></use></svg></button><div class="flex title-area ellipsis"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Selling</span></span></li><li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">Customer Group</span></span></li></ol></nav><span class="es-badge page-indicator-pill hide" data-testid="page-status"></span></div></div><div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="filters flex"></div><div class="custom-actions hidden-xs hidden-md"><div class="custom-btn-group view-switcher" data-ui="list.view-switcher"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="page.view_switcher"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-list-tree"></use></svg><span class="es-button__label hidden-xs custom-btn-group-label">Tree View</span><svg class="icon icon-sm hidden-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-chevrons-up-down"></use></svg></button><div class="dropdown-menu" role="menu" data-ui="list.view-switcher.menu"><a class="dropdown-item" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:start" href="#" role="menuitem" data-view="list" aria-checked="false" data-ui="list.view.list"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-list"></use></svg><span class="menu-item-label">List View</span></a><a class="dropdown-item selected" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:start" href="#" role="menuitem" data-view="tree" aria-checked="true" data-ui="list.view.tree"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-list-tree"></use></svg><span class="menu-item-label">Tree View</span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-check"></use></svg></a></div></div></div><div class="custom-mobile-actions"></div><div class="standard-actions flex"><span class="page-icon-group hidden-xs hidden-sm"><button class="es-button icon-btn text-muted" type="button" data-icon-button="true" title="Reload List" aria-label="Reload List" data-ui="list.reload"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-refresh-cw"></use></svg></button></span><div class="menu-btn-group"><button class="es-button icon-btn menu-more-button" type="button" aria-haspopup="menu" data-icon-button="true" title="Menu" aria-label="Menu" data-ui="page.menu"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button><ul class="dropdown-menu dropdown-menu-right" role="presentation" data-ui="list.menu"><li><a class="grey-link dropdown-item" href="#" data-label="Customize Quick Filters"><span class="menu-item-label" data-label="Customize Quick Filters">Customize Quick Filters</span></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#" data-label="Settings - Customer"><span class="menu-item-label" data-label="Settings - Customer">Settings - Customer</span></a></li><li><a class="grey-link dropdown-item" href="#" data-label="Customize"><span class="menu-item-label" data-label="Customize">Customize</span><kbd class="pull-right">Ctrl+Y</kbd></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#" data-label="Documentation"><span class="menu-item-label" data-label="Documentation">Documentation</span></a></li></ul></div><div class="btn-group primary-action-group"><button class="es-button primary-action" type="button" data-variant="solid" data-label="Add Customer" data-ui="list.primary-action"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="es-button__label">Add Customer</span></button><button class="es-button icon-btn primary-chevron" type="button" data-icon-button="true" title="More options" aria-label="More options" data-ui="list.primary-chevron"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></button><ul class="dropdown-menu dropdown-menu-right" role="presentation" data-ui="list.primary-menu"><li><a class="grey-link dropdown-item" href="#" data-label="Add manually"><span class="menu-item-label" data-label="Add manually">Add manually</span></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#" data-label="Import"><span class="menu-item-label" data-label="Import">Import</span></a></li></ul></div></div></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><style data-ui="tree.layout">.tree-page{padding:16px 0}.tree-toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.tree-root{list-style:none;margin:0;padding:0}.tree-root ul{list-style:none;margin:0;padding:0;padding-inline-start:20px;border-inline-start:1px solid var(--outline-gray-1,#ededed);margin-inline-start:9px}.tree-node{margin:0}.tree-link{flex-wrap:wrap;display:flex;align-items:center;gap:6px;min-height:28px;padding:2px 6px;border-radius:6px;white-space:nowrap}.tree-link.selected{background:var(--surface-gray-2,#f3f3f3);font-weight:500}.tree-link .tree-toggle{display:inline-flex;width:14px;justify-content:center}.tree-link .node-actions{display:inline-flex;gap:6px;margin-inline-start:12px}.tree-empty{display:flex;align-items:center;justify-content:center;min-height:200px}</style><div class="desk-page tree-page" data-ui="tree.page"><div class="tree-toolbar" data-ui="tree.toolbar"><button type="button" class="btn btn-default btn-sm" data-ui="tree.collapse-all">Collapse All</button><button type="button" class="btn btn-default btn-sm" data-ui="tree.expand-all">Expand All</button></div><ul class="tree-root" data-ui="tree.root"><li class="tree-node is-group" data-ui="tree.node:All Customer Groups" data-group="1"><div class="tree-link"><span class="tree-toggle" data-ui="tree.toggle"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-chevron-right"></use></svg></span><span class="tree-icon"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-folder"></use></svg></span><span class="tree-label ellipsis">All Customer Groups</span></div></li></ul></div></div></div></div></div></div></div>
+</div></div></div>
+</div>
+</body></html>

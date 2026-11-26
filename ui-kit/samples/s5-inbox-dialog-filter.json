@@ -1,0 +1,17 @@
+{
+  "$schema": "mock-spec/1",
+  "extends": "s5-inbox.json",
+  "overlays": [
+    {
+      "type": "dialog",
+      "kind": "view_filter",
+      "filters": [
+        [
+          "customer_type",
+          "=",
+          "Individual"
+        ]
+      ]
+    }
+  ]
+}

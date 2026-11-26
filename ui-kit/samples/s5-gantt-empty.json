@@ -1,0 +1,74 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "gantt",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "T1",
+        "title": "Discovery",
+        "start": "2026-11-16",
+        "end": "2026-11-22",
+        "progress": 100
+      },
+      {
+        "name": "T2",
+        "title": "Design",
+        "start": "2026-11-20",
+        "end": "2026-11-27",
+        "progress": 70,
+        "depends_on": "T1"
+      },
+      {
+        "name": "T3",
+        "title": "Build",
+        "start": "2026-11-26",
+        "end": "2026-12-10",
+        "progress": 25,
+        "depends_on": "T2"
+      },
+      {
+        "name": "T4",
+        "title": "Test",
+        "start": "2026-12-08",
+        "end": "2026-12-16",
+        "progress": 0,
+        "depends_on": "T3"
+      },
+      {
+        "name": "T5",
+        "title": "Launch",
+        "start": "2026-12-17",
+        "end": "2026-12-17",
+        "depends_on": "T4"
+      }
+    ]
+  },
+  "view": {
+    "field_map": {
+      "start": "start",
+      "end": "end",
+      "progress": "progress",
+      "id": "name",
+      "title": "title",
+      "depends_on": "depends_on"
+    },
+    "state": "empty"
+  }
+}

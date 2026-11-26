@@ -1,0 +1,35 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "report",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 15,
+        "seed": 3
+      }
+    },
+    "total": 15
+  },
+  "view": {
+    "group_by": "customer_group"
+  },
+  "x-recipe": "report-view",
+  "x-what-you-see": "A report-view datatable of generated rows grouped by status with group headers."
+}

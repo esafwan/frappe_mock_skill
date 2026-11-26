@@ -34,7 +34,7 @@ export function bulkActionItems(spec = {}, meta = {}, ctx = {}) {
 /** The selection bar shown in place of the column header: checkbox + "N items selected". */
 export function renderBulkBar(n, { showCheck = true } = {}) {
   const cb = showCheck ? `<span class="level-item select-like"><input class="list-header-checkbox list-check-all" type="checkbox" title="Select All"${n ? ' checked' : ''}></span>` : '';
-  return `<div class="level-left checkbox-actions"${n ? ' style="display:flex"' : ''} data-ui="list.bulk-bar"><div class="level list-subject">${cb}<span class="level-item list-header-meta" data-ui="list.bulk-count">${esc(selectedLabel(n))}</span></div></div>`;
+  return `<div class="level-left checkbox-actions"${n ? ' style="display:flex"' : ''} data-ui="list.bulk-bar"><div class="level list-subject">${cb}<span class="level-item list-header-meta" dir="auto" data-ui="list.bulk-count">${esc(selectedLabel(n))}</span></div></div>`;
 }
 
 /** The page-head "Actions" dropdown group. */

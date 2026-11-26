@@ -14,6 +14,11 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { applyMobile } from '../shell/mobile.mjs';
 import { drawOverlays, addSymbols } from '../kit-lib/draw.mjs';
+import { translateHtmlReport } from '../kit-lib/i18n.mjs';
+import { emptyState } from '../kit-lib/empty.mjs';
+import { expandGen } from '../data/gen.mjs';
+import { applyFormMobile } from '../renderers/form/mobile.mjs';
+import { renderViewDialogs } from '../renderers/dialogs/view-dialogs.mjs';
 
 import { normalizeWorkflow } from '../kit-lib/indicators.mjs';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -264,18 +269,23 @@ function applyDefaults(value, node, root) {
 }
 
 /** Normalised runtime context (without helpers). Exported so other tools build the same ctx. */
+const RTL_LANGS = new Set(['ar', 'he', 'fa', 'ur', 'ps', 'sd', 'ug', 'yi', 'dv']);
+
 export function normalizeCtx(specCtx = {}) {
   const root = loadSchema();
   const c = applyDefaults(specCtx, root.$defs.ctx, root);
   c.desk_settings = Object.fromEntries(Object.keys(root.$defs.ctx.properties.desk_settings.properties).map((k) => [k, c.desk_settings?.[k] ?? true]));
   c.user = { name: 'Administrator', full_name: 'Administrator', email: 'admin@example.com', roles: ['System Manager'], ...(specCtx.user || {}) };
   c.perms = specCtx.perms || {};
+  // Locale formatter input: the spec's own ctx.system (System Settings), or null = legacy per-locale formats. See kit-lib/format.mjs.
+  c.formatSystem = specCtx.system ? c.system : null;
   c.breadcrumbs = specCtx.breadcrumbs || null;
   c.now = specCtx.now ? specCtx.now.replace('T', ' ') : `${c.today} 12:00:00`;
   if (/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/.test(c.now)) c.now += ':00';
   const vp = VIEWPORTS[c.viewport] || c.viewport.split('x').map(Number);
   const device = c.viewport in VIEWPORTS ? c.viewport : vp[0] < 768 ? 'mobile' : vp[0] < 1024 ? 'tablet' : 'desktop';
   c.viewport = { width: vp[0], height: vp[1], device };
+  if (specCtx.rtl === undefined && RTL_LANGS.has(String(c.locale || '').toLowerCase().split(/[-_]/)[0])) c.rtl = true;
   c.dir = c.rtl ? 'rtl' : 'ltr';
   return c;
 }
@@ -454,6 +464,13 @@ function semanticChecks(spec) {
     const tabs = ['Details', ...dt.fields.filter((f) => f.fieldtype === 'Tab Break').map((f) => f.label)];
     if (!tabs.includes(spec.view.tab)) warnings.push({ path: '/view/tab', message: `no tab "${spec.view.tab}" (tabs: ${tabs.join(', ')})` });
   }
+  if (spec.page === 'kanban') { // cards whose column is not a board column are dropped at render; flag them at validate time
+    const board = meta.kanban || {};
+    const names = new Set((board.columns || []).map((c) => (typeof c === 'string' ? c : c.column_name ?? c.name)));
+    const cf = board.column_field || board.field_name || 'status';
+    const items = Array.isArray(spec.data?.cards) ? spec.data.cards.map((c) => c.column) : Array.isArray(spec.data?.rows) ? spec.data.rows.map((r) => r[cf]) : [];
+    items.forEach((c, i) => { if (c !== undefined && c !== null && c !== '' && names.size && !names.has(c) && board.fallback_column === undefined) warnings.push({ path: `/data/${Array.isArray(spec.data?.cards) ? 'cards' : 'rows'}/${i}`, message: `unknown kanban column "${c}" (columns: ${[...names].join(', ')}); the card will be dropped unless board.fallback_column is set` }); });
+  }
   if (isObj(meta.workspace) && Array.isArray(meta.workspace.content)) meta.workspace.content.forEach((b, i) => {
     if (!isObj(b) || !WORKSPACE_BLOCKS.includes(b.type)) warnings.push({ path: `/meta/workspace/content/${i}`, message: `unknown block type ${JSON.stringify(b?.type)}` });
     else if (b.data?.col !== undefined && ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].includes(b.data.col)) errors.push({ path: `/meta/workspace/content/${i}/data/col`, message: 'col must be an integer 1..12' });
@@ -555,10 +572,21 @@ ${body}
 `;
 }
 
+const VIEW_STATE_PAGES = new Set(['kanban', 'calendar', 'tree', 'image']);
+const EMPTY_KINDS = ['empty', 'loading', 'error', 'no-results'];
+const VIEW_PAGES = new Set(['kanban', 'calendar', 'gantt', 'tree', 'image', 'map', 'inbox']);
+let BASE_CSS;
+/** Inline kit-lib/base.css (theme tokens, dark and RTL fixes) once per document. */
+function injectBaseCss(html) {
+  if (html.includes('data-ui="kit.base"') || !html.includes('</head>')) return html;
+  BASE_CSS ??= fs.readFileSync(path.join(KIT, 'kit-lib', 'base.css'), 'utf8').trim();
+  return html.replace('</head>', `<style data-ui="kit.base">${BASE_CSS}</style></head>`);
+}
+
 /** Render a loaded spec to a full HTML document. Throws Error with a clear message on renderer problems. */
 export async function renderSpec(loaded, { outFile = null } = {}) {
   if (!loaded.ok) throw new SpecError(loaded.errors);
-  const spec = loaded.spec;
+  let spec = loaded.spec;
   const rp = rendererPath(spec.page);
   let renderer;
   if (fs.existsSync(rp)) {
@@ -568,7 +596,25 @@ export async function renderSpec(loaded, { outFile = null } = {}) {
   else throw new Error(`no renderer for page "${spec.page}": expected ${rp} with \`export default (spec, ctx) => html\``);
   const ctx = buildCtx(loaded, { outFile });
   if ((spec.overlays || []).some((o) => o.type === 'dialog')) ctx.dialogKit = await (await import('../renderers/dialog.mjs')).loadDialogKit();
+  if (VIEW_PAGES.has(spec.page) && isObj(spec.data) && isObj(spec.data.rows) && spec.data.rows.$gen) {
+    // meta.doctype may be inline JSON or a string reference; expand into a copy so repeated renders stay pure
+    const gmeta = isObj(spec.meta?.doctype) ? spec.meta.doctype : ctx.resolve(spec.meta?.doctype, 'doctype');
+    if (!isObj(gmeta)) throw new Error(`data.rows.$gen on page "${spec.page}" needs a resolvable meta.doctype`);
+    const g = spec.data.rows.$gen;
+    const rows = expandGen(spec.data.rows, gmeta, { today: ctx.today, locale: g.locale || ctx.locale, doctype: gmeta.name, seed: g.seed });
+    if (!Array.isArray(rows)) throw new Error(`data.rows.$gen on page "${spec.page}" did not produce an array`);
+    spec = { ...spec, data: { ...spec.data, rows } };
+  }
+  if (VIEW_PAGES.has(spec.page) && isObj(spec.meta) && spec.meta.doctype) {
+    // dialogs opened from a view page (quick entry, filter, sort, pick columns): same overlay and dialog path as list and report
+    const vmeta = ctx.resolve(spec.meta.doctype, 'doctype');
+    if (vmeta && ctx.dialogKit) ctx.preDialogs = [...(ctx.preDialogs || []), ...renderViewDialogs({ meta: vmeta, ctx })];
+  }
   let res = await renderer(spec, ctx);
+  if (VIEW_STATE_PAGES.has(spec.page) && isObj(res) && typeof res.main === 'string' && EMPTY_KINDS.includes(spec.view?.state)) {
+    const st = spec.view.state;
+    res = { ...res, main: emptyState({ kind: st, view: spec.page, title: spec.view.state_title, message: spec.view.state_message }) };
+  }
   if (typeof res === 'string') res = { main: res };
   if (!isObj(res) || (typeof res.main !== 'string' && typeof res.document !== 'string'))
     throw new Error(`renderer for page "${spec.page}" must return a string or { main, head?, aside?, title? } or { document }`);
@@ -585,10 +631,14 @@ export async function renderSpec(loaded, { outFile = null } = {}) {
     } else html = fallbackDocument(res, spec, ctx, false);
   }
   if (html.includes('class="body-sidebar-container') || html.includes('data-ui="shell.main"')) html = applyMobile(html, ctx);
+  if (spec.page === 'form') html = applyFormMobile(html, ctx);
   html = addSymbols(drawOverlays(html, ctx, OVERLAY_LAYER).html);
+  const tl = translateHtmlReport(html, ctx.locale);
+  html = injectBaseCss(tl.html);
   const rep = ctx._report();
   return {
     html,
+    untranslated: tl.untranslated, // text left in English for a non-en locale; reported by the CLI on stderr, never part of warnings (determinism stays clean)
     warnings: [...rep.warnings, ...rep.unused.map((o) => `overlay ${loaded.spec.overlays.indexOf(o)} (${o.type}${o.target ? ` ${o.target}` : o.label ? ` "${o.label}"` : ''}) was not drawn by page "${spec.page}"`)],
   };
 }
@@ -598,6 +648,8 @@ export async function renderSpec(loaded, { outFile = null } = {}) {
 const USAGE = `usage:
   node bin/mock.mjs validate <spec.json>... [--json]
   node bin/mock.mjs render <spec.json> [--out file.html] [--theme light|dark] [--rtl] [--viewport WxH|desktop|tablet|mobile] [--today YYYY-MM-DD] [--locale xx]
+  node bin/mock.mjs coverage [--samples dir] [--out file.html] [--json] [--strict]
+  node bin/mock.mjs sheet [args]   (contact sheet of rendered samples)
 exit codes: 0 ok, 1 invalid spec, 2 renderer missing or failed, 64 usage`;
 
 function parseArgs(argv) {
@@ -623,6 +675,8 @@ const fmt = (file, e) => `${file}: ${e.path}: ${e.message}`;
 
 async function main(argv) {
   const [cmd, ...rest] = argv;
+  if (cmd === 'coverage') return (await import('./coverage.mjs')).main(rest);
+  if (cmd === 'sheet') return (await import('./sheet.mjs')).main(rest);
   let o;
   try { o = parseArgs(rest); } catch (e) { console.error(`mock: ${e.message}\n${USAGE}`); return 64; }
   if (!cmd || o.help || cmd === 'help') { console.log(USAGE); return cmd ? 0 : 64; }
@@ -652,6 +706,7 @@ async function main(argv) {
     let res;
     try { res = await renderSpec(r, { outFile: o.out }); } catch (e) { console.error(`mock render: ${f}: ${e.message}`); return 2; }
     for (const w of res.warnings) console.error(`warn  ${f}: ${w}`);
+    if (res.untranslated?.length) console.error(`i18n  ${f}: ${res.untranslated.length} text node(s) not in the locale vocabulary: ${res.untranslated.slice(0, 12).map((x) => JSON.stringify(x)).join(', ')}${res.untranslated.length > 12 ? ', ...' : ''}`);
     if (o.out) { fs.mkdirSync(path.dirname(path.resolve(o.out)), { recursive: true }); fs.writeFileSync(o.out, res.html); console.error(`wrote ${o.out}`); }
     else process.stdout.write(res.html);
     return 0;

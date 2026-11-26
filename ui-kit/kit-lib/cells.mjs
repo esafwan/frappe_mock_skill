@@ -3,6 +3,7 @@
 import { esc } from './util.mjs';
 import { guess_colour } from './indicators.mjs';
 import { badge } from './badges.mjs';
+import * as L from './format.mjs';
 
 const NUMERIC = new Set(['Int', 'Float', 'Currency', 'Percent']);
 const isEmpty = (v) => v === undefined || v === null || v === '';
@@ -34,13 +35,15 @@ const starSvg = (on) => `<svg class="icon icon-sm star${on ? ' filled' : ''}" vi
 /**
  * formatCell(df, value, ctx) -> { html, align:'left'|'right', title }
  * df: { fieldtype, fieldname, label, options, precision }
- * ctx: { doc, currency, dateFormat, timeFormat, filterable }
+ * ctx: { doc, currency, dateFormat, timeFormat, filterable, system }
+ * ctx.system (System Settings, see kit-lib/format.mjs) formats Currency, Float, Int, Date, Datetime and Time; without it the legacy en formats apply.
  */
 export function formatCell(df = {}, value, ctx = {}) {
   const ft = df.fieldtype || 'Data';
   const align = NUMERIC.has(ft) ? 'right' : 'left';
   const empty = isEmpty(value);
   const wrap = (html, title) => ({ html, align, title: title ?? (empty ? '' : stripHtml(String(value))) });
+  const S = ctx.system || null;
   const flt = ctx.filterable === false ? '' : ' filterable';
   switch (ft) {
     case 'Select': {
@@ -57,10 +60,13 @@ export function formatCell(df = {}, value, ctx = {}) {
       return wrap(`<div class="progress"><div class="progress-bar progress-bar-success" style="width:${v}%"></div></div>`, `${df.label || df.fieldname}: ${Number(value) || 0}`);
     }
     case 'Currency':
+      if (S && !empty) return wrap(esc((ctx.currency ? ctx.currency + ' ' : '') + L.formatNumber(value, S, df.precision ?? S.currency_precision)));
       return wrap(empty ? '' : esc((ctx.currency ? ctx.currency + ' ' : '') + formatNumber(value, df.precision ?? 2)));
     case 'Float':
+      if (S && !empty) return wrap(esc(L.formatNumber(value, S, df.precision ?? S.float_precision, { trim: true })));
       return wrap(empty ? '' : esc(formatNumber(value, df.precision ?? 3).replace(/\.?0+$/, '')));
     case 'Int':
+      if (S && !empty && df.options !== 'File Size') return wrap(esc(L.formatInt(Math.round(Number(value)), S)));
       return wrap(empty ? '' : esc(df.options === 'File Size' ? fileSize(value) : formatNumber(Math.round(Number(value)), 0)));
     case 'Rating': {
       const n = Number(df.options) || 5;
@@ -74,14 +80,15 @@ export function formatCell(df = {}, value, ctx = {}) {
       if (!df.options && !src) return wrap('<div class="missing-image small"><svg class="icon icon-md"><use href="#icon-ban"></use></svg></div>', '');
       return wrap(src ? `<img src="${esc(src)}" style="max-height:30px;max-width:100%">` : '', '');
     }
-    case 'Date': return wrap(esc(formatDate(value, ctx.dateFormat)));
+    case 'Date': return wrap(esc(S && !empty ? L.formatDate(value, S) : formatDate(value, ctx.dateFormat)));
     case 'Datetime': {
       const m = /^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}(?::\d{2})?)/.exec(String(value ?? ''));
       if (!m) return wrap('');
+      if (S) return wrap(esc(L.formatDatetime(String(value).replace('T', ' '), S)));
       const t = m[2].length === 5 ? m[2] + ':00' : m[2];
       return wrap(esc(`${formatDate(m[1], ctx.dateFormat)} ${t}`));
     }
-    case 'Time': return wrap(esc(empty ? '' : String(value).slice(0, 8)));
+    case 'Time': return wrap(esc(empty ? '' : S ? L.formatTime(String(value).slice(0, 8), S) : String(value).slice(0, 8)));
     case 'Check':
       return wrap(`<input type="checkbox" disabled class="${Number(value) ? 'disabled-selected' : 'disabled-deselected'}"${Number(value) ? ' checked' : ''}>`, Number(value) ? 'Yes' : 'No');
     case 'Color':

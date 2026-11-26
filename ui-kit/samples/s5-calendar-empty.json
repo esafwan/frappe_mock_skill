@@ -1,0 +1,39 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "calendar",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling",
+    "calendar_view": {
+      "name": "Visits",
+      "start_date_field": "start",
+      "end_date_field": "end",
+      "title_field": "title",
+      "color_field": "kind",
+      "colors": {
+        "Visit": "blue",
+        "Call": "green",
+        "Review": "orange"
+      }
+    }
+  },
+  "data": {
+    "rows": []
+  },
+  "view": {
+    "state": "empty"
+  }
+}
