@@ -1,0 +1,29 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "system": { "date_format": "dd-mm-yyyy" }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": { "$gen": { "count": 20, "seed": 7 } },
+    "total": 1284,
+    "linkPools": {
+      "Customer Group": ["Commercial", "Government", "Individual", "Non Profit"],
+      "Territory": ["North", "South", "East", "West"]
+    }
+  },
+  "overlays": [
+    { "type": "filter_chips", "items": [["customer_type", "=", "Company"], ["disabled", "=", 0]] },
+    { "type": "list_select", "rows": [0, 2, 5] },
+    { "type": "state", "target": "row:3", "state": "hover" },
+    { "type": "menu_open", "target": "page.sort" }
+  ],
+  "view": { "sort": { "field": "modified", "order": "desc" }, "page_length": 20 }
+}

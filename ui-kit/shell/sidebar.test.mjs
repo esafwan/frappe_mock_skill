@@ -1,0 +1,15 @@
+import fs from 'node:fs'; import assert from 'node:assert/strict';
+import { renderSidebar } from './sidebar.mjs'; import { adaptFlatSidebar } from '../adapters/sidebar.mjs';
+const rd = (p) => JSON.parse(fs.readFileSync(new URL(p, import.meta.url), 'utf8'));
+const flat = adaptFlatSidebar(rd('../../loyal-arrow/structure/sidebar.json'));
+const h = renderSidebar(flat, { active: { link_type: 'DocType', link_to: 'Loyalty Member' } });
+assert(h.includes('section-item') && h.includes('active-sidebar') && h.includes('sidebar-child-item'));
+const acc = rd('../doctype/workspaces/accounts.json');
+const h2 = renderSidebar(acc, { active: { link_type: 'Report', link_to: acc.items.flatMap((i) => i.children || []).find((c) => c.link_type === 'Report')?.link_to } });
+assert(h2.includes('active-sidebar'));
+const three = { items: [{ type: 'Section Break', label: 'A', collapsible: 1, children: [{ type: 'Section Break', label: 'B', indent: 1, children: [{ type: 'Link', label: 'C', link_type: 'Page', link_to: 'p', badge: 3, keyboard_shortcut: 'G C', child: 1 }] }, { type: 'Spacer' }, { type: 'Link', label: 'K', keep_closed: 1 }] }] };
+const h3 = renderSidebar(three, { active: { link_type: 'Page', link_to: 'p' } });
+assert(h3.includes('keyboard-shortcut') && h3.includes('es-badge') && h3.includes('data-state="open"') && /standard-sidebar-item indent/.test(h3));
+const hc = renderSidebar(acc, { collapsed: true });
+assert(hc.includes('sidebar-collapsed') && !hc.includes('sidebar-item-label'));
+console.log('sidebar tests ok');

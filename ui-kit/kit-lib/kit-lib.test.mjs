@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import { get_indicator, guess_colour, indicatorPill } from './indicators.mjs';
+import { button, buttonGroup } from './buttons.mjs';
+import { menuDropdown } from './menus.mjs';
+import { avatar } from './avatars.mjs';
+import { tag } from './tags.mjs';
+import { badge } from './badges.mjs';
+import { icon } from './icons.mjs';
+
+const sub = { is_submittable: 1 };
+const t = (doc, meta, label, colour, step) => { const r = get_indicator(doc, meta); assert.deepEqual([r?.label, r?.colour, r?.step], [label, colour, step], JSON.stringify(doc)); };
+t({ __unsaved: 1, docstatus: 1 }, sub, 'Not Saved', 'orange', 1);
+t({ st: 'Review', docstatus: 1 }, { ...sub, workflow: { state_field: 'st', styles: { Review: 'Purple' } } }, 'Review', 'purple', 2);
+t({ docstatus: 0 }, sub, 'Draft', 'red', 3);
+t({ docstatus: 2 }, sub, 'Cancelled', 'red', 3);
+t({ docstatus: 1, paid: 1 }, { ...sub, states: [{ field: 'paid', value: 1, title: 'Paid', color: 'green' }] }, 'Paid', 'green', 4);
+t({ docstatus: 1 }, sub, 'Submitted', 'blue', 5);
+t({ status: 'Pending' }, {}, 'Pending', 'orange', 6);
+assert.equal(get_indicator({}, {}), null);
+assert.equal(guess_colour('Zebra'), guess_colour('Zebra'));
+assert.equal(guess_colour('Cancelled'), 'red');
+assert(indicatorPill({ label: 'X<', colour: 'blue' }).includes('data-theme="blue"'));
+assert(button('Save', { primary: true }).includes('primary-action'));
+assert(buttonGroup('Create', [{ label: 'A' }, { label: 'B' }]).includes('inner-group-button'));
+assert(menuDropdown([{ label: 'Print' }, { divider: true }]).includes('dropdown-divider'));
+assert(avatar('Jane Doe').includes('>JD<'));
+assert(tag('x').includes('tag-pill') && badge('Open').includes('es-badge') && icon('plus').includes('#icon-plus'));
+console.log('kit-lib T4: all tests passed');

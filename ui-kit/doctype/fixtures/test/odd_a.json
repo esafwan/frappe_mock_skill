@@ -1,0 +1,48 @@
+{
+ "name": "Odd A",
+ "doctype": "DocType",
+ "module": "Test",
+ "is_submittable": 1,
+ "field_order": [
+  "title",
+  "col",
+  "status",
+  "sb",
+  "items",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted"
+  },
+  {
+   "fieldname": "sb",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Odd Child"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  }
+ ]
+}

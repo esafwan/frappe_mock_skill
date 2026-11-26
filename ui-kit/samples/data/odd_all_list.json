@@ -1,0 +1,263 @@
+{
+  "name": "Odd All",
+  "doctype": "DocType",
+  "module": "Test",
+  "field_order": [
+    "data",
+    "int",
+    "float",
+    "currency",
+    "percent",
+    "check",
+    "select",
+    "link",
+    "dynamic_link",
+    "date",
+    "datetime",
+    "time",
+    "duration",
+    "text",
+    "small_text",
+    "long_text",
+    "text_editor",
+    "markdown_editor",
+    "html_editor",
+    "code",
+    "json",
+    "password",
+    "read_only",
+    "attach",
+    "attach_image",
+    "image",
+    "color",
+    "rating",
+    "geolocation",
+    "signature",
+    "barcode",
+    "icon",
+    "phone",
+    "autocomplete",
+    "table",
+    "table_multiselect",
+    "button",
+    "heading",
+    "html"
+  ],
+  "fields": [
+    {
+      "fieldname": "data",
+      "fieldtype": "Data",
+      "label": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "int",
+      "fieldtype": "Int",
+      "label": "Int",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "float",
+      "fieldtype": "Float",
+      "label": "Float",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Currency",
+      "label": "Currency",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "percent",
+      "fieldtype": "Percent",
+      "label": "Percent",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "check",
+      "fieldtype": "Check",
+      "label": "Check",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "select",
+      "fieldtype": "Select",
+      "label": "Select",
+      "options": "A\nB",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "link",
+      "fieldtype": "Link",
+      "label": "Link",
+      "options": "Odd Child",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "dynamic_link",
+      "fieldtype": "Dynamic Link",
+      "label": "Dynamic Link",
+      "options": "link",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "datetime",
+      "fieldtype": "Datetime",
+      "label": "Datetime",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "time",
+      "fieldtype": "Time",
+      "label": "Time",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "duration",
+      "fieldtype": "Duration",
+      "label": "Duration"
+    },
+    {
+      "fieldname": "text",
+      "fieldtype": "Text",
+      "label": "Text"
+    },
+    {
+      "fieldname": "small_text",
+      "fieldtype": "Small Text",
+      "label": "Small Text"
+    },
+    {
+      "fieldname": "long_text",
+      "fieldtype": "Long Text",
+      "label": "Long Text"
+    },
+    {
+      "fieldname": "text_editor",
+      "fieldtype": "Text Editor",
+      "label": "Text Editor"
+    },
+    {
+      "fieldname": "markdown_editor",
+      "fieldtype": "Markdown Editor",
+      "label": "Markdown Editor"
+    },
+    {
+      "fieldname": "html_editor",
+      "fieldtype": "HTML Editor",
+      "label": "HTML Editor"
+    },
+    {
+      "fieldname": "code",
+      "fieldtype": "Code",
+      "label": "Code",
+      "options": "JS"
+    },
+    {
+      "fieldname": "json",
+      "fieldtype": "JSON",
+      "label": "JSON"
+    },
+    {
+      "fieldname": "password",
+      "fieldtype": "Password",
+      "label": "Password"
+    },
+    {
+      "fieldname": "read_only",
+      "fieldtype": "Read Only",
+      "label": "Read Only"
+    },
+    {
+      "fieldname": "attach",
+      "fieldtype": "Attach",
+      "label": "Attach"
+    },
+    {
+      "fieldname": "attach_image",
+      "fieldtype": "Attach Image",
+      "label": "Attach Image"
+    },
+    {
+      "fieldname": "image",
+      "fieldtype": "Image",
+      "label": "Image"
+    },
+    {
+      "fieldname": "color",
+      "fieldtype": "Color",
+      "label": "Color"
+    },
+    {
+      "fieldname": "rating",
+      "fieldtype": "Rating",
+      "label": "Rating"
+    },
+    {
+      "fieldname": "geolocation",
+      "fieldtype": "Geolocation",
+      "label": "Geolocation"
+    },
+    {
+      "fieldname": "signature",
+      "fieldtype": "Signature",
+      "label": "Signature"
+    },
+    {
+      "fieldname": "barcode",
+      "fieldtype": "Barcode",
+      "label": "Barcode"
+    },
+    {
+      "fieldname": "icon",
+      "fieldtype": "Icon",
+      "label": "Icon"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Phone",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "autocomplete",
+      "fieldtype": "Autocomplete",
+      "label": "Autocomplete",
+      "options": "A\nB"
+    },
+    {
+      "fieldname": "table",
+      "fieldtype": "Table",
+      "label": "Table",
+      "options": "Odd Child"
+    },
+    {
+      "fieldname": "table_multiselect",
+      "fieldtype": "Table MultiSelect",
+      "label": "Table MultiSelect",
+      "options": "Odd Child"
+    },
+    {
+      "fieldname": "button",
+      "fieldtype": "Button",
+      "label": "Button"
+    },
+    {
+      "fieldname": "heading",
+      "fieldtype": "Heading",
+      "label": "Heading"
+    },
+    {
+      "fieldname": "html",
+      "fieldtype": "HTML",
+      "label": "HTML",
+      "options": "<p>html</p>"
+    }
+  ]
+}

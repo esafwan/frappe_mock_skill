@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mock-spec/1",
+  "title": "Frappe desk mock spec, version 1",
+  "description": "One page of a static Frappe v16 desk mockup: { page, ctx, meta, data, overlays, view }. Reference: docs/SPEC.md. Validated by `node bin/mock.mjs validate`, which implements the JSON Schema subset used here (type, enum, const, required, properties, patternProperties, additionalProperties, items, minItems, maxItems, minimum, maximum, minLength, pattern, oneOf, anyOf, $ref to #/$defs).",
+  "type": "object",
+  "required": ["page"],
+  "properties": {
+    "$schema": {
+      "description": "Spec format id. Use \"mock-spec/1\"; a relative path ending in mock-spec.schema.json is also accepted for editor support.",
+      "type": "string",
+      "pattern": "^(mock-spec/1|.*mock-spec\\.schema\\.json)$"
+    },
+    "extends": {
+      "description": "Path (relative to this spec file) of a base spec. Objects merge deeply, arrays and scalars replace, null removes a key.",
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "description": "Document <title> of the rendered page. Optional; renderers may supply one.",
+      "type": "string"
+    },
+    "page": { "$ref": "#/$defs/page" },
+    "ctx": { "$ref": "#/$defs/ctx" },
+    "meta": { "$ref": "#/$defs/meta" },
+    "data": { "$ref": "#/$defs/data" },
+    "overlays": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/overlay" }
+    },
+    "view": { "$ref": "#/$defs/view" }
+  },
+  "patternProperties": {
+    "^(x-|_)": { "description": "Free-form notes and extensions; ignored by the engine." }
+  },
+  "additionalProperties": false,
+
+  "$defs": {
+    "page": {
+      "description": "Page type. Dispatches to renderers/<page>/index.mjs. `blank` is the shell with an empty main slot.",
+      "type": "string",
+      "enum": ["blank", "form", "list", "report", "query_report", "workspace", "dashboard", "kanban", "calendar", "gantt", "tree", "image", "map", "inbox", "dialog"]
+    },
+
+    "ref": {
+      "description": "Metadata reference: a path to a JSON file (contains '/' or ends in .json; relative to the spec file, then the kit root), a Frappe name looked up in the kind's search dirs, or the inline Frappe JSON object itself.",
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "object" }
+      ]
+    },
+
+    "indicator_color": {
+      "type": "string",
+      "enum": ["blue", "green", "red", "orange", "yellow", "gray", "grey", "darkgrey", "purple", "pink", "cyan", "light-blue"]
+    },
+
+    "ctx": {
+      "description": "Rendering context. Everything environment-like is data here; the engine reads no clock, locale or env.",
+      "type": "object",
+      "properties": {
+        "theme": { "type": "string", "enum": ["light", "dark"], "default": "light" },
+        "locale": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$", "default": "en" },
+        "rtl": { "type": "boolean", "default": false },
+        "viewport": {
+          "description": "WIDTHxHEIGHT or a preset (desktop = 1440x900, tablet = 768x1024, mobile = 375x812).",
+          "type": "string",
+          "pattern": "^([0-9]{3,4}x[0-9]{3,5}|desktop|tablet|mobile)$",
+          "default": "1440x900"
+        },
+        "today": {
+          "description": "The date the mock pretends it is (YYYY-MM-DD). Used for relative dates, overdue colours, calendar focus, gantt today marker.",
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "default": "2026-01-01"
+        },
+        "now": {
+          "description": "Time of day for 'x minutes ago' (YYYY-MM-DD HH:mm:ss). Defaults to `${today} 12:00:00`.",
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[ T][0-9]{2}:[0-9]{2}(:[0-9]{2})?$"
+        },
+        "app": { "description": "Selected app in the dock.", "type": "string" },
+        "workspace": { "description": "Selected workspace sidebar (name of a Workspace Sidebar).", "type": "string" },
+        "breadcrumbs": {
+          "description": "Navbar breadcrumbs, left to right. Omit to let the renderer derive them.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "full_name": { "type": "string" },
+            "email": { "type": "string" },
+            "image": { "type": "string" },
+            "roles": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "chrome": {
+          "type": "object",
+          "properties": {
+            "shell": { "description": "false renders the page body without any desk chrome.", "type": "boolean", "default": true },
+            "navbar": { "type": "boolean", "default": false },
+            "dock": { "type": "boolean", "default": true },
+            "sidebar": { "type": "string", "enum": ["expanded", "collapsed", "hidden"], "default": "expanded" }
+          },
+          "additionalProperties": false
+        },
+        "system": { "$ref": "#/$defs/system" },
+        "desk_settings": {
+          "description": "User desk settings (User doctype checkboxes). All default true.",
+          "type": "object",
+          "properties": {
+            "search_bar": { "type": "boolean" },
+            "notifications": { "type": "boolean" },
+            "list_sidebar": { "type": "boolean" },
+            "bulk_actions": { "type": "boolean" },
+            "view_switcher": { "type": "boolean" },
+            "form_sidebar": { "type": "boolean" },
+            "timeline": { "type": "boolean" },
+            "dashboard": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        },
+        "perms": {
+          "description": "Optional permission overrides per doctype: { \"<DocType>\": { \"create\": false, \"delete\": false, ... } }. Absent means all allowed.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": { "type": "boolean" }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "system": {
+      "description": "System Settings values that change how numbers, dates and money look.",
+      "type": "object",
+      "properties": {
+        "number_format": {
+          "type": "string",
+          "enum": ["#,###.##", "#.###,##", "# ###.##", "# ###,##", "#'###.##", "#, ###.##", "#,##,###.##", "#,###.###", "#.###", "#,###"],
+          "default": "#,###.##"
+        },
+        "date_format": {
+          "type": "string",
+          "enum": ["dd-mm-yyyy", "dd.mm.yyyy", "dd/mm/yyyy", "mm/dd/yyyy", "mm-dd-yyyy", "yyyy-mm-dd"],
+          "default": "dd-mm-yyyy"
+        },
+        "time_format": { "type": "string", "enum": ["HH:mm:ss", "HH:mm"], "default": "HH:mm:ss" },
+        "currency_precision": {
+          "description": "Decimals for Currency fields. null means: take it from number_format.",
+          "type": ["integer", "null"], "minimum": 0, "maximum": 9, "default": null
+        },
+        "float_precision": { "type": "integer", "minimum": 0, "maximum": 9, "default": 3 },
+        "currency": { "description": "Default currency code when a doc has none.", "type": "string", "pattern": "^[A-Z]{3}$", "default": "USD" },
+        "first_day_of_the_week": {
+          "type": "string",
+          "enum": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "default": "Sunday"
+        },
+        "time_zone": { "description": "Display only; never used to compute anything.", "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "meta": {
+      "description": "Frappe-native metadata, each value a ref. Known keys are listed; page renderers may read others (additional keys must still be refs).",
+      "type": "object",
+      "properties": {
+        "doctype": { "$ref": "#/$defs/ref", "description": "DocType JSON (name looked up in doctype/fixtures/*/<snake>.json)." },
+        "children": {
+          "description": "Extra child or linked DocTypes not found by name: { \"<DocType>\": ref }.",
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/ref" }
+        },
+        "custom": {
+          "description": "Custom fields / property setters, applied by doctype/lib/customize.mjs. One ref or a list.",
+          "oneOf": [
+            { "$ref": "#/$defs/ref" },
+            { "type": "array", "items": { "$ref": "#/$defs/ref" } }
+          ]
+        },
+        "workspace": { "$ref": "#/$defs/ref", "description": "Workspace JSON (content blocks, shortcuts, links, charts, number_cards, quick_lists, custom_blocks)." },
+        "sidebar": { "$ref": "#/$defs/ref", "description": "Workspace Sidebar JSON (name looked up in doctype/workspaces/<snake>.json)." },
+        "report": { "$ref": "#/$defs/ref", "description": "Report JSON." },
+        "workflow": { "$ref": "#/$defs/ref", "description": "Workflow JSON." },
+        "list_view_settings": { "$ref": "#/$defs/ref" },
+        "kanban_board": { "$ref": "#/$defs/ref" },
+        "calendar_view": { "$ref": "#/$defs/ref" },
+        "dashboard": { "$ref": "#/$defs/ref" },
+        "states": {
+          "description": "DocType State rows: [{ title, color }].",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "color"],
+            "properties": {
+              "title": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          }
+        }
+      },
+      "additionalProperties": {
+        "anyOf": [
+          { "$ref": "#/$defs/ref" },
+          { "type": "array" }
+        ]
+      }
+    },
+
+    "gen": {
+      "description": "Ask the sample-data generator (data/gen.mjs) to fill this slot deterministically.",
+      "type": "object",
+      "required": ["$gen"],
+      "properties": {
+        "$gen": {
+          "type": "object",
+          "properties": {
+            "count": { "type": "integer", "minimum": 0, "maximum": 5000 },
+            "seed": { "type": "integer" },
+            "locale": { "type": "string" },
+            "child_rows": { "description": "Rows per child table.", "type": "integer", "minimum": 0, "maximum": 200 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "data": {
+      "description": "Sample data. Page renderers may read further keys (events, chart data, columns, ...).",
+      "type": "object",
+      "properties": {
+        "doc": {
+          "description": "The document shown by a form (null = new unsaved form), as an object, a path to a .doc.json, or $gen.",
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "minLength": 1 },
+            { "$ref": "#/$defs/gen" },
+            { "type": "object" }
+          ]
+        },
+        "rows": {
+          "description": "Rows for list, report and other collection views.",
+          "oneOf": [
+            { "type": "array", "items": { "type": "object" } },
+            { "type": "string", "minLength": 1 },
+            { "$ref": "#/$defs/gen" }
+          ]
+        },
+        "total": { "description": "Total count shown in paging ('20 of 1,234'). Defaults to rows.length.", "type": "integer", "minimum": 0 },
+        "linkPools": {
+          "description": "{ \"<Link target DocType>\": [names...] } used by the generator for Link values.",
+          "type": "object",
+          "additionalProperties": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "view": {
+      "description": "Which part of the page is showing. Page renderers may read further keys.",
+      "type": "object",
+      "properties": {
+        "tab": { "description": "Form tab, by label or 0-based index.", "type": ["string", "integer"] },
+        "sidebarSection": { "type": "string" },
+        "collapsed": { "description": "Collapsible section labels shown collapsed (or expanded when collapsible by default).", "type": "array", "items": { "type": "string" } },
+        "sort": {
+          "type": "object",
+          "properties": {
+            "field": { "type": "string" },
+            "order": { "type": "string", "enum": ["asc", "desc"] }
+          },
+          "additionalProperties": false
+        },
+        "group_by": { "type": "string" },
+        "page_length": { "type": "integer", "enum": [20, 100, 500] },
+        "state": {
+          "description": "Whole-page state.",
+          "type": "string",
+          "enum": ["normal", "empty", "no_results", "loading", "error"]
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "overlay": {
+      "description": "Declarative runtime layer, discriminated by `type`.",
+      "oneOf": [
+        { "$ref": "#/$defs/ov_button" },
+        { "$ref": "#/$defs/ov_intro" },
+        { "$ref": "#/$defs/ov_menu_open" },
+        { "$ref": "#/$defs/ov_dialog" },
+        { "$ref": "#/$defs/ov_list_select" },
+        { "$ref": "#/$defs/ov_filter_chips" },
+        { "$ref": "#/$defs/ov_state" },
+        { "$ref": "#/$defs/ov_toast" }
+      ]
+    },
+
+    "menu_item": {
+      "oneOf": [
+        { "type": "string", "description": "Label. \"---\" draws a divider." },
+        {
+          "type": "object",
+          "required": ["label"],
+          "properties": {
+            "label": { "type": "string" },
+            "icon": { "type": "string" },
+            "shortcut": { "type": "string", "description": "Keyboard hint, e.g. \"Ctrl+P\"." },
+            "danger": { "type": "boolean" },
+            "disabled": { "type": "boolean" },
+            "checked": { "type": "boolean" },
+            "group": { "type": "string", "description": "Section heading inside the menu." }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+
+    "ov_button": {
+      "description": "A button the app adds at runtime (frm.add_custom_button, page.add_inner_button, page.set_primary_action). Buttons with the same `group` collapse into one dropdown.",
+      "type": "object",
+      "required": ["type", "label"],
+      "properties": {
+        "type": { "const": "button" },
+        "label": { "type": "string", "minLength": 1 },
+        "group": { "type": "string" },
+        "style": { "type": "string", "enum": ["default", "primary", "secondary", "danger"], "default": "default" },
+        "align": { "type": "string", "enum": ["left", "right"], "default": "right" },
+        "icon": { "type": "string" },
+        "primary_action": { "description": "true replaces the page's primary action (Save/Submit) with this button.", "type": "boolean" },
+        "target": { "description": "Where it goes. Default `page.actions` (page head). Also `row_actions:<n>`, `field:<fieldname>` (grid/field buttons).", "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_intro": {
+      "description": "frm.set_intro / page intro banner.",
+      "type": "object",
+      "required": ["type", "text"],
+      "properties": {
+        "type": { "const": "intro" },
+        "text": { "type": "string" },
+        "color": { "$ref": "#/$defs/indicator_color" }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_menu_open": {
+      "description": "Render one dropdown/popover in its open state. `target` comes from the menu target registry (docs/SPEC.md).",
+      "type": "object",
+      "required": ["type", "target"],
+      "properties": {
+        "type": { "const": "menu_open" },
+        "target": { "$ref": "#/$defs/menu_target" },
+        "items": { "description": "Replace the generated items.", "type": "array", "items": { "$ref": "#/$defs/menu_item" } },
+        "extra_items": { "description": "Append to the generated items.", "type": "array", "items": { "$ref": "#/$defs/menu_item" } },
+        "query": { "description": "Typed text, for search-like targets (navbar.search, field:<name>).", "type": "string" },
+        "highlight": { "description": "0-based index of the keyboard-highlighted item.", "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+
+    "menu_target": {
+      "type": "string",
+      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length)|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
+    },
+
+    "dialog_action": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["label"],
+          "properties": {
+            "label": { "type": "string" },
+            "style": { "type": "string", "enum": ["default", "primary", "secondary", "danger"] }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+
+    "ov_dialog": {
+      "description": "A modal (frappe.ui.Dialog, frappe.confirm, frappe.msgprint, Quick Entry). Several dialogs stack in array order; the last is on top.",
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "const": "dialog" },
+        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry"], "default": "dialog" },
+        "title": { "type": "string" },
+        "indicator": { "$ref": "#/$defs/indicator_color", "description": "Title indicator colour (msgprint)." },
+        "size": { "type": "string", "enum": ["small", "default", "large", "extra-large"], "default": "default" },
+        "message": { "description": "HTML-free text for confirm/msgprint. Lines split on \\n.", "type": "string" },
+        "doctype": { "description": "quick_entry: the DocType whose mandatory fields are shown (a ref resolved like meta.doctype).", "$ref": "#/$defs/ref" },
+        "fields": {
+          "description": "DocField-shaped objects (fieldname, fieldtype, label, options, reqd, default, description, ...), rendered with doctype/fields/*.mjs. Section Break / Column Break allowed.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fieldtype"],
+            "properties": {
+              "fieldname": { "type": "string" },
+              "fieldtype": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        },
+        "values": { "description": "{ fieldname: value } shown in the fields.", "type": "object" },
+        "primary_action": { "$ref": "#/$defs/dialog_action" },
+        "secondary_action": { "$ref": "#/$defs/dialog_action" },
+        "minimizable": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_list_select": {
+      "description": "Checked rows in a list/report and the bulk-action bar. `rows` are 0-based indexes or \"all\".",
+      "type": "object",
+      "required": ["type", "rows"],
+      "properties": {
+        "type": { "const": "list_select" },
+        "rows": {
+          "oneOf": [
+            { "type": "string", "enum": ["all"] },
+            { "type": "array", "items": { "type": "integer", "minimum": 0 } }
+          ]
+        },
+        "bulk": { "description": "Actions menu items; omit for the generated set.", "type": "array", "items": { "$ref": "#/$defs/menu_item" } },
+        "open": { "description": "Show the Actions dropdown open.", "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+
+    "filter": {
+      "description": "Frappe filter tuple: [fieldname, operator, value] or [doctype, fieldname, operator, value].",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4
+    },
+
+    "ov_filter_chips": {
+      "description": "Applied filters shown as chips in the filter bar (and as the filter count).",
+      "type": "object",
+      "required": ["type", "items"],
+      "properties": {
+        "type": { "const": "filter_chips" },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/filter" } },
+        "open": { "description": "Show the filter popover open with these rows.", "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_state": {
+      "description": "Pin one element in an interaction state. Target syntax is in docs/SPEC.md (row:N, cell:N:field, field:name, button:label, tab:label, link:label, card:label, ui:<data-ui id>).",
+      "type": "object",
+      "required": ["type", "target", "state"],
+      "properties": {
+        "type": { "const": "state" },
+        "target": {
+          "type": "string",
+          "pattern": "^(row:[0-9]+|cell:[0-9]+:.+|field:.+|button:.+|tab:.+|link:.+|card:.+|column:.+|ui:.+)$"
+        },
+        "state": { "type": "string", "enum": ["hover", "focus", "active", "disabled", "loading"] }
+      },
+      "additionalProperties": false
+    },
+
+    "ov_toast": {
+      "description": "frappe.show_alert toast. Several stack bottom-up in array order.",
+      "type": "object",
+      "required": ["type", "message"],
+      "properties": {
+        "type": { "const": "toast" },
+        "message": { "type": "string" },
+        "indicator": { "$ref": "#/$defs/indicator_color" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <!doctype html>
-<html data-theme-mode="light" lang="en" class="chrome" data-theme="light">
-<head><meta charset="utf-8"><title>Customer form</title>
+<html data-theme-mode="light" lang="en-IN" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Customer form</title>
 <link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
 <link rel="stylesheet" href="../../tokens/css/erpnext-erpnext.css">
 <style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
@@ -120,7 +120,8 @@
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
 }
-</style><style>@keyframes bounceIn { 
+</style>
+<style>@keyframes bounceIn { 
   0% { opacity: 0; transform: scale(0.3); }
   50% { opacity: 1; transform: scale(1.05); }
   70% { transform: scale(0.9); }
@@ -821,802 +822,126 @@
   0%, 100% { transform: translateX(0px); }
   50% { transform: translateX(-1.8px); }
 }
-</style><style id="doctype-geometry"></style></head>
-<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Acme Traders" data-sidebar="1"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol viewBox="0 0 24 24" id="icon-store" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
-  <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-  <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
-  <path d="M2 7h20" />
-  <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol><symbol viewBox="0 0 24 24" id="icon-receipt" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" />
-  <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-  <path d="M12 17.5v-11" /></symbol><symbol viewBox="0 0 24 24" id="icon-computer" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="8" x="5" y="2" rx="2" />
-  <rect width="20" height="8" x="2" y="14" rx="2" />
-  <path d="M6 18h2" />
-  <path d="M12 18h6" /></symbol></defs></svg>
+</style>
+<style data-ui="shell.extra">.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="Form/Customer/Acme Traders" data-sidebar="1">
 <div id="ui-kit-stage" class="ui-kit-page">
-<svg class="icon-sprite" aria-hidden="true" style="display:none"><symbol id="icon-sliders-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M4 7h3m4 0h9M4 12h9m4 0h3M4 17h1.5m4 0h10.5"></path>
-		<circle cx="9" cy="7" r="2" class="soft-body"></circle>
-		<circle cx="15" cy="12" r="2" class="soft-accent"></circle>
-		<path d="M17 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path>
-		<circle cx="7.5" cy="17" r="2" class="soft-body"></circle>
-	</symbol><symbol id="icon-calculator-soft" viewBox="0 0 24 24" class="soft-icon">
-		<rect x="5" y="2.5" width="14" height="19" rx="2.5" class="soft-body"></rect>
-		<rect x="8" y="5.5" width="8" height="3.5" rx="1" class="soft-accent"></rect>
-		<path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16h.01M12 16h.01M8.5 19h.01M12 19h.01M15.5 16v3"></path>
-	</symbol><symbol id="icon-storefront-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M4.5 11v7.5a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V11" class="soft-body"></path>
-		<path d="M5 3.5h14l2 5v.25a2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5 0V8.5Z" class="soft-body"></path>
-		<rect x="10" y="15" width="4" height="5.5" rx="1" class="soft-accent"></rect>
-	</symbol><symbol id="icon-shopping-cart-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M2.5 3.5h1.6a1 1 0 0 1 .98.8L5.5 7"></path>
-		<path d="M5.5 7H21l-1.85 8.15A2 2 0 0 1 17.2 16.7H8.6a2 2 0 0 1-1.96-1.6Z" class="soft-body"></path>
-		<path d="M9.38 7L9.85 16.7M13.25 7L12.83 16.7M17.12 7L15.81 16.7M6.18 11.85H19.9" class="soft-accent-line"></path>
-		<circle cx="9" cy="20" r="1.5" class="soft-body"></circle>
-		<circle cx="17" cy="20" r="1.5" class="soft-body"></circle>
-	</symbol><symbol id="icon-shelf-rack-soft" viewBox="0 0 24 24" class="soft-icon">
-		<rect x="6.5" y="5.5" width="4" height="5" rx="1" class="soft-body"></rect>
-		<rect x="13" y="7" width="4.5" height="3.5" rx="1" class="soft-body"></rect>
-		<rect x="6.5" y="14" width="4" height="4" rx="1" class="soft-body"></rect>
-		<rect x="12.5" y="13" width="5.5" height="5" rx="1" class="soft-accent"></rect>
-		<path d="M4 3v18M20 3v18M4 10.5h16M4 18h16"></path>
-	</symbol><symbol id="icon-factory-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M21 19.5v-12l-5 3v-3l-5 3v-3l-5.5 3.3V4a1 1 0 0 0-1-1h-.5a1 1 0 0 0-1 1v15.5Z" class="soft-body"></path>
-		<path d="M9.5 15.5h1.5m3 0h1.5" class="soft-accent-line"></path>
-	</symbol><symbol id="icon-gantt-chart-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M3.5 3.5v14a2 2 0 0 0 2 2h15"></path>
-		<rect x="8.5" y="3" width="10.5" height="4" rx="1.5" class="soft-accent"></rect>
-		<rect x="12.5" y="8.5" width="8.5" height="4" rx="1.5" class="soft-accent"></rect>
-		<rect x="10" y="14" width="8" height="3.5" rx="1.5" class="soft-accent"></rect>
-	</symbol><symbol id="icon-asset-hand-soft" viewBox="0 0 24 24" class="soft-icon">
-		<rect x="11" y="3" width="8.5" height="7.5" rx="1.5" class="soft-body"></rect>
-		<path d="M13.75 3v3h3V3" class="soft-accent-line"></path>
-		<rect x="2.5" y="12.5" width="3" height="8" rx="1" class="soft-body"></rect>
-		<path d="M5.5 14h4a2 2 0 0 1 2 2l4.7-2.2a1.75 1.75 0 0 1 1.8 3l-5.3 3.4a3 3 0 0 1-1.6.3H5.5"></path>
-	</symbol><symbol id="icon-quality-seal-soft" viewBox="0 0 24 24" class="soft-icon">
-		<path d="M8.5 14.5 7 21l5-2.5 5 2.5-1.5-6.5"></path>
-		<circle cx="12" cy="9.5" r="6.5" class="soft-body"></circle>
-		<path d="m9.5 9.5 1.75 1.75 3.25-3.5" class="soft-accent-line"></path>
-	</symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
-      <path d="m6 9 6 6 6-6"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-search">
-      <path d="m21 21-4.34-4.34"></path>
-      <circle cx="11" cy="11" r="8"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-bell">
-      <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
-      <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-house">
-      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-calculator-duotone" stroke="none">
+		<path fill-rule="evenodd" d="M7 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H7A2 2 0 0 1 5 20V4A2 2 0 0 1 7 2Z M7.8 4H16.2A0.8 0.8 0 0 1 17 4.8V8.2A0.8 0.8 0 0 1 16.2 9H7.8A0.8 0.8 0 0 1 7 8.2V4.8A0.8 0.8 0 0 1 7.8 4Z M8 11H9.4A0.5 0.5 0 0 1 9.9 11.5V12.9A0.5 0.5 0 0 1 9.4 13.4H8A0.5 0.5 0 0 1 7.5 12.9V11.5A0.5 0.5 0 0 1 8 11Z M11.3 11H12.7A0.5 0.5 0 0 1 13.2 11.5V12.9A0.5 0.5 0 0 1 12.7 13.4H11.3A0.5 0.5 0 0 1 10.8 12.9V11.5A0.5 0.5 0 0 1 11.3 11Z M14.6 11H16A0.5 0.5 0 0 1 16.5 11.5V12.9A0.5 0.5 0 0 1 16 13.4H14.6A0.5 0.5 0 0 1 14.1 12.9V11.5A0.5 0.5 0 0 1 14.6 11Z M8 14.3H9.4A0.5 0.5 0 0 1 9.9 14.8V16.2A0.5 0.5 0 0 1 9.4 16.7H8A0.5 0.5 0 0 1 7.5 16.2V14.8A0.5 0.5 0 0 1 8 14.3Z M11.3 14.3H12.7A0.5 0.5 0 0 1 13.2 14.8V16.2A0.5 0.5 0 0 1 12.7 16.7H11.3A0.5 0.5 0 0 1 10.8 16.2V14.8A0.5 0.5 0 0 1 11.3 14.3Z M14.6 14.3H16A0.5 0.5 0 0 1 16.5 14.8V16.2A0.5 0.5 0 0 1 16 16.7H14.6A0.5 0.5 0 0 1 14.1 16.2V14.8A0.5 0.5 0 0 1 14.6 14.3Z M8 17.6H9.4A0.5 0.5 0 0 1 9.9 18.1V19.5A0.5 0.5 0 0 1 9.4 20H8A0.5 0.5 0 0 1 7.5 19.5V18.1A0.5 0.5 0 0 1 8 17.6Z M11.3 17.6H12.7A0.5 0.5 0 0 1 13.2 18.1V19.5A0.5 0.5 0 0 1 12.7 20H11.3A0.5 0.5 0 0 1 10.8 19.5V18.1A0.5 0.5 0 0 1 11.3 17.6Z" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></path>
+		<rect x="7.6" y="4.6" width="8.8" height="3.8" rx="0.4" style="fill: light-dark(var(--duotone-light, var(--ink-gray-3)), transparent)"></rect>
+		<g class="calculator-digits">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+		</g>
+		<g class="calculator-typing">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0s"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.25s"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.5s"></rect>
+		</g>
+		<rect x="14.1" y="17.6" width="2.4" height="2.4" rx="0.5" style="fill: var(--duotone-light, var(--ink-gray-3))"></rect>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
       <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
       <path d="M18 17V9"></path>
       <path d="M13 17V5"></path>
       <path d="M8 17v-3"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-user-round">
-      <circle cx="12" cy="8" r="5"></circle>
-      <path d="M20 21a8 8 0 0 0-16 0"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-file-text">
-      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
-      <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
-      <path d="M10 9H8"></path>
-      <path d="M16 13H8"></path>
-      <path d="M16 17H8"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-shopping-cart">
-      <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"></path>
-      <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"></path>
-      <circle cx="18" cy="20" r="2"></circle>
-      <circle cx="8" cy="20" r="2"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
-      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
-      <path d="M15 18H9"></path>
-      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
-      <circle cx="17" cy="18" r="2"></circle>
-      <circle cx="7" cy="18" r="2"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
-      <path d="M13 16H8"></path>
-      <path d="M14 8H8"></path>
-      <path d="M16 12H8"></path>
-      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-sheet">
-      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-      <line x1="3" x2="21" y1="9" y2="9"></line>
-      <line x1="3" x2="21" y1="15" y2="15"></line>
-      <line x1="9" x2="9" y1="9" y2="21"></line>
-      <line x1="15" x2="15" y1="9" y2="21"></line>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-right">
-      <path d="m9 18 6-6-6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-no-axes-column">
+      <path d="M5 21v-6"></path>
+      <path d="M12 21V3"></path>
+      <path d="M19 21V9"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-down">
+      <path d="m6 9 6 6 6-6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-up">
+      <path d="m18 15-6-6-6 6"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
+      <path d="m7 15 5 5 5-5"></path>
+      <path d="m7 9 5-5 5 5"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-computer">
+      <path d="M12 18h6"></path>
+      <path d="M6 18h.01"></path>
+      <path d="M8 6h1"></path>
+      <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+      <rect x="4" y="2" width="16" height="12" rx="2"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-expenses">
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-house">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-grid">
+      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
     </symbol><symbol viewBox="0 0 24 24" id="icon-package">
       <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
       <path d="M12 22V12"></path>
       <polyline points="3.29 7 12 12 20.71 7"></polyline>
       <path d="m7.5 4.27 9 5.15"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-monitor">
-      <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-      <line x1="8" x2="16" y1="21" y2="21"></line>
-      <line x1="12" x2="12" y1="17" y2="21"></line>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-database">
-      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-      <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
-      <path d="M3 12A9 3 0 0 0 21 12"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-chevron-left">
-      <path d="m15 18-6-6 6-6"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-settings">
-      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
-      <circle cx="12" cy="12" r="3"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-check-check">
-      <path d="M18 6 7 17l-5-5"></path>
-      <path d="m22 10-7.5 7.5L13 16"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-x">
-      <path d="M18 6 6 18"></path>
-      <path d="m6 6 12 12"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-menu">
-      <path d="M4 5h16"></path>
-      <path d="M4 12h16"></path>
-      <path d="M4 19h16"></path>
     </symbol><symbol viewBox="0 0 24 24" id="icon-panel-left-close">
       <rect width="18" height="18" x="3" y="3" rx="2"></rect>
       <path d="M9 3v18"></path>
       <path d="m16 15-3-3 3-3"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
-      <circle cx="12" cy="12" r="1"></circle>
-      <circle cx="19" cy="12" r="1"></circle>
-      <circle cx="5" cy="12" r="1"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-chevrons-up-down">
-      <path d="m7 15 5 5 5-5"></path>
-      <path d="m7 9 5-5 5 5"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-right">
-      <path d="M5 12h14"></path>
-      <path d="m12 5 7 7-7 7"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-camera">
-      <path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"></path>
-      <circle cx="12" cy="13" r="3"></circle>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-square-pen">
-      <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-      <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-printer">
-      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-      <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"></path>
-      <rect x="6" y="14" width="12" height="8" rx="1"></rect>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-heart">
-      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-link-2">
-      <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
-      <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
-      <line x1="8" x2="16" y1="12" y2="12"></line>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-      <circle cx="9" cy="7" r="4"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-paperclip">
+      <path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"></path>
     </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
       <path d="M5 12h14"></path>
       <path d="M12 5v14"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-paperclip">
-      <path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"></path>
-    </symbol><symbol viewBox="0 0 24 24" id="icon-tag">
-      <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path>
-      <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt">
+      <path d="M12 17V7"></path>
+      <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-sell">
+		<path d="M3 8h18M3 6v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke-miterlimit="10" stroke-linecap="square"></path>
+		<path d="M6.273 15.136h4.09" stroke-miterlimit="10" stroke-linecap="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-settings">
+      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+      <circle cx="12" cy="12" r="3"></circle>
     </symbol><symbol viewBox="0 0 24 24" id="icon-share-2">
       <circle cx="18" cy="5" r="3"></circle>
       <circle cx="6" cy="12" r="3"></circle>
       <circle cx="18" cy="19" r="3"></circle>
       <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
       <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
-    </symbol></svg><div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
-			<div class="dock-logo">
-				<a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1">
-					<div class="header-logo"><img src="data:image/svg+xml; charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMC42MjIwNyAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03Mi4wNTA2IDBIMjkuMTkzNUMxMy40MTM5IDAgMC42MjIwNyAxMi43OTE5IDAuNjIyMDcgMjguNTcxNFY3MS40Mjg2QzAuNjIyMDcgODcuMjA4MSAxMy40MTM5IDEwMCAyOS4xOTM1IDEwMEg3Mi4wNTA2Qzg3LjgzMDIgMTAwIDEwMC42MjIgODcuMjA4MSAxMDAuNjIyIDcxLjQyODZWMjguNTcxNEMxMDAuNjIyIDEyLjc5MTkgODcuODMwMiAwIDcyLjA1MDYgMFoiIGZpbGw9IiMwMDg5RkYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02OC4wMDY3IDMyLjk0NUg2Ni4zMjkzSDQ0LjUyMzVIMzMuNjIwNVYyMy45OTlINjguMDA2N1YzMi45NDVaTTQ0LjUyMzMgNTMuOTEyMlY2Ni4yMTI5SDY4LjI4NjFWNzUuMTU4OUgzMy42MjA0VjQ0Ljk2NjJINDQuNTIzM0g2Ni4zMjkxVjUzLjkxMjJINDQuNTIzM1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="ERPNext"></div>
-					<div class="title-container">
-						<div class="header-title">ERPNext</div>
-					</div>
-				</a>
-			</div>
-			<div class="dock-utils"><button class="dock-item" aria-label="Search"><span class="dock-item-icon"><svg class="icon icon-rail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></span></button><button class="dock-item" aria-label="Notifications"><span class="dock-item-icon"><svg class="icon icon-rail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"></path></svg></span></button><button class="dock-item" aria-label="Chat"><span class="dock-item-icon"><svg class="icon icon-rail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><path d="M9 9.5h.01M15 9.5h.01"></path></svg></span></button></div><div class="dock-sep" style="height:1px;background:var(--border-color,#e5e5e5);margin:6px 8px"></div><div class="dock-items"><button class="dock-item  " aria-label="Setup" data-ui="dock.button-2">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-sliders-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Setup</span>
-		</button><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-3">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-calculator-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Accounts</span>
-		</button><button class="dock-item active " aria-label="Selling" aria-current="page" data-ui="dock.button-4">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-storefront-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Selling</span>
-		</button><button class="dock-item  " aria-label="Buying" data-ui="dock.button-5">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-shopping-cart-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Buying</span>
-		</button><button class="dock-item  " aria-label="Stock" data-ui="dock.button-6">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-shelf-rack-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Stock</span>
-		</button><button class="dock-item  " aria-label="Manufacturing" data-ui="dock.button-7">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-factory-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Manufacturing</span>
-		</button><button class="dock-item  " aria-label="Projects" data-ui="dock.button-8">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-gantt-chart-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Projects</span>
-		</button><button class="dock-item  " aria-label="Assets" data-ui="dock.button-9">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-asset-hand-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Assets</span>
-		</button><button class="dock-item  " aria-label="Quality" data-ui="dock.button-10">
-			<span class="dock-item-icon"><svg class="icon  icon-rail" style="" aria-hidden="true">
-			<use class="" href="#icon-quality-seal-soft">
-			</use>
-		</svg></span>
-			<span class="dock-item-label">Quality</span>
-		</button></div>
-			<div class="dock-user" aria-haspopup="menu" aria-expanded="false">
-				<button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-11">
-					<span class="avatar avatar-medium">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">
-					A
-			</div>
-		</span>
-				</button>
-			</div>
-		</div>
-<div class="body-sidebar-container expanded" style="" data-ui="sidebar">   <div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"> <div class="header-logo"><svg class="icon  icon-md" style="" aria-hidden="true">
-			<use class="" href="#icon-storefront-soft">
-			</use>
-		</svg></div> <div class="title-container">     <div class="sidebar-item-label header-title" data-name-style="">Selling</div> </div> <button class="btn-reset drop-icon" aria-label="Sidebar Menu" data-ui="sidebar.button-2">     <svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevron-down">
-			</use>
-		</svg> </button> </a>        <div class="standard-items-band"><div class="navbar-modal-search-mobile" item-name="Search" data-id="Search">     <div class="standard-sidebar-item ">                       <a class="item-anchor" data-link-type="" data-ui="sidebar.link-3">                                      <span class="sidebar-item-icon" item-icon="search">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-search">
-			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Search</span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div><div class="sidebar-notification" item-name="Notification" data-id="Notification">     <div class="standard-sidebar-item ">                       <a class="item-anchor" data-link-type="" data-ui="sidebar.link-4">                                      <span class="sidebar-item-icon" item-icon="bell">                         <svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-bell">
-			</use>
-		</svg>                     </span>                                  <span class="sidebar-item-label">Notification</span>                                       <span class="sidebar-item-suffix"><span class="notification-count" aria-live="polite" aria-label="6 unread notifications">6</span></span>                                                   <div class="sidebar-item-control"></div>                              </a>              </div>     <div class="sidebar-child-item nested-container"></div> </div></div>    <div class="body-sidebar-top">     <div class="sidebar-items"><div class="sidebar-item-container  " item-name="Home" data-id="Home"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-100"><span class="sidebar-item-icon" item-icon="house"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-101"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Customer" data-id="Customer"><div class="standard-sidebar-item  active-sidebar"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-102"><span class="sidebar-item-icon" item-icon="users"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-103"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-104"><span class="sidebar-item-icon" item-icon="store"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-105"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-106"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Reports" data-id="Reports"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-107"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Items" data-id="Items"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-108"><span class="sidebar-item-icon" item-icon="package"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="POS" data-id="POS"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-109"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container  " item-name="Setup" data-id="Setup"><div class="standard-sidebar-item "><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-110"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true"><use class="" href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div>    <div class="body-sidebar-cards"></div>    <div class="body-sidebar-bottom">     <div class="promotional-banners" style="display: none;"></div>     <div class="nav-item dropdown-navbar-user dropdown-mobile mt-3" aria-haspopup="menu" aria-expanded="false">      <a class="align-center btn-reset flex nav-link sidebar-user-button" style="width: 100%; min-height: 40px;" aria-label="User Menu" data-ui="sidebar.link-35">       <div> <span class="avatar avatar-medium" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span> </div>              <div class="avatar-name-email overflow-hidden" style="margin-left: 8px;">        <span class="d-block text-truncate">         Administrator        </span>        <span class="d-block text-truncate">         admin@example.com        </span>       </div>      </a>     </div>    </div>   </div>      <div class="sidebar-edge" aria-hidden="true"></div>   <button class="btn-reset sidebar-collapse-arrow" type="button" title="Collapse sidebar" aria-label="Collapse sidebar" data-ui="sidebar.button-36">    <svg class="icon current-color icon-xs" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevron-left">
-			</use>
-		</svg>   </button>   <div class="overlay" style="z-index: 1021;"></div>  <div class="sidebar-panel hidden sidebar-panel-notifications"><div class="panel-header">
-			<div class="panel-header-top">
-				<div class="panel-title">Notifications</div>
-				<div class="panel-header-actions">
-					<div class="panel-actions"><span class="notification-settings" title="" data-original-title="Notification Settings"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-settings">
-			</use>
-		</svg></span><span class="mark-all-read" title="" data-original-title="Mark all as read"><svg class="icon current-color icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-check-check">
-			</use>
-		</svg></span></div>
-				<span class="panel-close" role="button" tabindex="0" aria-label="Close" data-ui="sidebar.span-37">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-x">
-			</use>
-		</svg>
-			</span></div>
-			</div>
-			<div class="panel-items"><div class="es-tab-buttons" role="radiogroup" aria-label="Notification categories"><button type="button" class="es-pill" role="radio" data-state="active" aria-checked="true" tabindex="0" data-ui="sidebar.button-38">All</button><button type="button" class="es-pill" role="radio" data-state="inactive" aria-checked="false" tabindex="-1" data-ui="sidebar.button-39">Events</button></div></div>
-		</div><div class="sidebar-panel-body"><div class="notification-list-body">
-				<div class="panel-notifications"><div style=""><a class="recent-item notification-item unread" href="#" data-name="r67s8bvbc9" data-ui="sidebar.link-40">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>A guest has asked for the bill</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 12:04:31.194687" title="22-10-2026 12:04:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="r67693qt4c" data-ui="sidebar.link-41">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Draft sales plan for 2026-10-23 is ready for review</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 11:51:31.193245" title="22-10-2026 11:51:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="r67a944guk" data-ui="sidebar.link-42">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Yield below standard on a prepared item</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 11:31:31.196098" title="22-10-2026 11:31:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item " href="#" data-name="r67o4e09op" data-ui="sidebar.link-43">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Today's sales plan is locked for production</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 08:16:31.190172" title="22-10-2026 08:16:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="r67v4h940m" data-ui="sidebar.link-44">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Stock count correction posted (short/excess)</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 07:16:31.197393" title="22-10-2026 07:16:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item " href="#" data-name="r676ah921a" data-ui="sidebar.link-45">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Daily P&amp;L for 2026-10-21 has been submitted</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-22 02:16:31.188562" title="22-10-2026 02:16:31"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9hjst3vl1" data-ui="sidebar.link-46">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.128996" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9hg4f4mis" data-ui="sidebar.link-47">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.123360" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9hgt2v49a" data-ui="sidebar.link-48">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.113273" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9hma3sbbm" data-ui="sidebar.link-49">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.102768" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9hdoipgi4" data-ui="sidebar.link-50">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.102569" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="p9h9ec9buj" data-ui="sidebar.link-51">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 02751 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 17:06:24.102184" title="21-10-2026 17:06:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="la12abth8m" data-ui="sidebar.link-52">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Table T8 seated over 60 min</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 16:54:36.129282" title="21-10-2026 16:54:36"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="la15ege731" data-ui="sidebar.link-53">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>KOT T10 waiting 34 min</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-21 13:59:36.131211" title="21-10-2026 13:59:36"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item " href="#" data-name="la14pdelus" data-ui="sidebar.link-54">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Day close completed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-10-20 10:59:36.135047" title="20-10-2026 10:59:36"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="mlh0skcofd" data-ui="sidebar.link-55">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 00034 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-02-25 14:39:24.929243" title="25-02-2026 14:39:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="mlgfnpjghm" data-ui="sidebar.link-56">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 00034 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-02-25 14:39:24.896056" title="25-02-2026 14:39:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="mledoho20q" data-ui="sidebar.link-57">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 00034 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-02-25 14:39:24.597153" title="25-02-2026 14:39:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="mle5podks5" data-ui="sidebar.link-58">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 00034 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2026-02-25 14:39:24.589936" title="25-02-2026 14:39:24"></span>
-			</div>
-		</div>
-				</div>
-			</a><a class="recent-item notification-item unread" href="#" data-name="14fhkvcuhs" data-ui="sidebar.link-59">
-				<div class="notification-body">
-					<span class="avatar avatar-medium user-avatar" title="Administrator">
-			<div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)" title="Administrator">
-					A
-			</div>
-		</span>
-					<div class="message">
-			<div>Order # 00024 Delayed</div>
-			<div class="notification-timestamp text-muted">
-				<span class="frappe-timestamp " data-timestamp="2025-09-26 12:03:11.918366" title="26-09-2025 12:03:11">3 months ago</span>
-			</div>
-		</div>
-				</div>
-			</a><a class="list-footer" href="#" data-ui="sidebar.link-60">
-						<div class="full-log-btn">See all Activity</div>
-					</a></div></div>
-				<div class="panel-events"><div style="display: none;"></div></div>
-			</div></div></div></div>
-<div class="main-section"><div id="body"><div id="page-Customer" class="content page-container editable-form"><div class="page-head flex" data-ui="form-title">  <div class="container">   <div class="row flex-nowrap align-center page-head-content justify-between">    <div class="page-title">     <button class="btn-reset sidebar-toggle-btn navbar-brand" data-ui="form-title.button-1">      <svg class="icon icon-md sidebar-toggle-placeholder">       <use href="#icon-menu"></use>      </svg>      <span class="sidebar-toggle-icon">       <svg class="icon icon-md">        <use href="#icon-panel-left-close">        </use>       </svg>      </span>     </button>     <div class="flex title-area ellipsis editable-title" data-ui="form-title.title">      <nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumb"><ol><li><a class="es-breadcrumbs__item" href="#" data-ui="form-title.link-2"><span class="es-breadcrumbs__label">Customer</span></a></li><li><span class="es-breadcrumbs__item" title="Acme Traders" aria-current="page"><span class="es-breadcrumbs__label">Acme Traders</span></span></li></ol></nav>      <button class="btn btn-default more-button hide" data-ui="form-title.button-3">       <svg class="icon icon-sm">        <use href="#icon-ellipsis">        </use>       </svg>      </button>      <span class="es-badge page-indicator-pill" data-testid="page-status" data-theme="orange" data-ui="form-title.status"><span>Not Saved</span></span>     </div>    </div>    <div class="align-center flex standard-items-section">     <button id="small-search-button" class="btn-reset search-bar navbar-modal-search-mobile hidden" aria-label="Search" data-ui="form-title.button-4">      <span class="search-icon">       <svg class="icon icon-sm"><use href="#icon-search"></use></svg>      </span>     </button>     <div class="flex col page-actions justify-content-end "><div class="form-viewers d-flex" data-original-title="" title=""></div>            <div class="filters flex"></div>      <div class="custom-actions hidden-xs hidden-md"><div class="inner-group-button" data-label="View"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-5"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">View</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevrons-up-down">
-			</use>
-		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Accounts%20Receivable" data-ui="form-title.link-6">Accounts Receivable</a><a class="dropdown-item" href="#" data-label="Accounting%20Ledger" data-ui="form-title.link-7">Accounting Ledger</a></div>
-				</div><div class="inner-group-button" data-label="Create"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-8"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Create</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevrons-up-down">
-			</use>
-		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Quotation" data-ui="form-title.link-9">Quotation</a><a class="dropdown-item" href="#" data-label="Sales%20Order" data-ui="form-title.link-10">Sales Order</a><a class="dropdown-item" href="#" data-label="Opportunity" data-ui="form-title.link-11">Opportunity</a><a class="dropdown-item" href="#" data-label="Payment%20Entry" data-ui="form-title.link-12">Payment Entry</a><a class="dropdown-item" href="#" data-label="Pricing%20Rule" data-ui="form-title.link-13">Pricing Rule</a><a class="dropdown-item" href="#" data-label="Bank%20Account" data-ui="form-title.link-14">Bank Account</a></div>
-				</div><div class="inner-group-button" data-label="Actions"><button class="es-button ellipsis" type="button" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-15"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Actions</span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevrons-up-down">
-			</use>
-		</svg></button>
-					<div role="presentation" class="dropdown-menu "><a class="dropdown-item" href="#" data-label="Get%20Customer%20Group%20Details" data-ui="form-title.link-16">Get Customer Group Details</a></div>
-				</div></div>      <div class="custom-mobile-actions"></div>      <div class="standard-actions flex">       <span class="page-icon-group hidden-xs hidden-sm"><button class="text-muted btn btn-default prev-doc icon-btn" title="" data-original-title="Previous Document" data-ui="form-title.button-17">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-chevron-left">
-			</use>
-		</svg>
-			</button><button class="text-muted btn btn-default next-doc icon-btn" title="" data-original-title="Next Document" data-ui="form-title.button-18">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-chevron-right">
-			</use>
-		</svg>
-			</button></span>       <div class="menu-btn-group">        <button class="es-button icon-btn menu-more-button" type="button" data-icon-button="true" title="" aria-label="Menu" data-original-title="Menu" data-label="" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.menu"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-ellipsis">
-			</use>
-		</svg></button>                <ul class="dropdown-menu dropdown-menu-right" role="presentation"><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-19">
-						
-						<span class="menu-item-label" data-label="View%20%3E%20Accounts%20Receivable">View > Accounts Receivable</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-20">
-						
-						<span class="menu-item-label" data-label="View%20%3E%20Accounting%20Ledger">View > Accounting Ledger</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-21">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Quotation">Create > Quotation</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-22">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Sales%20Order">Create > Sales Order</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-23">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Opportunity">Create > Opportunity</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-24">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Payment%20Entry">Create > Payment Entry</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-25">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Pricing%20Rule">Create > Pricing Rule</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-26">
-						
-						<span class="menu-item-label" data-label="Create%20%3E%20Bank%20Account">Create > Bank Account</span>
-					</a>
-				</li><li class="user-action hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-27">
-						
-						<span class="menu-item-label" data-label="Actions%20%3E%20Get%20Customer%20Group%20Details">Actions > Get Customer Group Details</span>
-					</a>
-				</li><li class="dropdown-divider user-action visible-xs"></li><li class="hidden-xl">
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-28">
-						
-						<span class="menu-item-label" data-label="Print">Print</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-29">
-						
-						<span class="menu-item-label" data-label="Toggle%20Sidebar">Toggle Sidebar</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-30">
-						
-						<span class="menu-item-label" data-label="Email">Email</span>
-						<span class="menu-item-shortcut">⌘E</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-31">
-						
-						<span class="menu-item-label" data-label="Rename">Rename</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-32">
-						
-						<span class="menu-item-label" data-label="Reload">Reload</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-33">
-						
-						<span class="menu-item-label" data-label="Delete">Delete</span>
-						<span class="menu-item-shortcut">⇧⌘D</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-34">
-						
-						<span class="menu-item-label" data-label="Duplicate">Duplicate</span>
-						<span class="menu-item-shortcut">⇧D</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-35">
-						
-						<span class="menu-item-label" data-label="New%20Customer">New Customer</span>
-						<span class="menu-item-shortcut">⌘B</span>
-					</a>
-				</li><li class="dropdown-divider"></li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-36">
-						
-						<span class="menu-item-label" data-label="Jump%20to%20field">Jump to field</span>
-						<span class="menu-item-shortcut">⌘J</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-37">
-						
-						<span class="menu-item-label" data-label="Show%20Links">Show Links</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-38">
-						
-						<span class="menu-item-label" data-label="Copy%20to%20Clipboard">Copy to Clipboard</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-39">
-						
-						<span class="menu-item-label" data-label="Remind%20Me">Remind Me</span>
-						<span class="menu-item-shortcut">⇧R</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-40">
-						
-						<span class="menu-item-label" data-label="Undo">Undo</span>
-						<span class="menu-item-shortcut">⌘Z</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-41">
-						
-						<span class="menu-item-label" data-label="Redo">Redo</span>
-						<span class="menu-item-shortcut">⌘Y</span>
-					</a>
-				</li><li class="dropdown-divider"></li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-42">
-						
-						<span class="menu-item-label" data-label="Settings">Settings</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-43">
-						
-						<span class="menu-item-label" data-label="Customize">Customize</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-44">
-						
-						<span class="menu-item-label" data-label="Edit%20DocType">Edit DocType</span>
-					</a>
-				</li><li>
-					<a class="grey-link dropdown-item" href="#" data-ui="form-title.link-45">
-						
-						<span class="menu-item-label" data-label="Documentation">Documentation</span>
-					</a>
-				</li></ul>       </div>       <button class="es-button secondary-action hide" type="button" data-ui="form-title.button-46"><span class="es-spinner" aria-hidden="true"></span></button>       <div class="actions-btn-group hide">        <button class="es-button" type="button" data-variant="solid" aria-haspopup="menu" aria-expanded="false" data-ui="form-title.button-47"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label hidden-xs actions-btn-group-label" data-label="Actions"><span><span class="alt-underline">A</span>ctions</span></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-chevrons-up-down">
-			</use>
-		</svg></button>        <ul class="dropdown-menu dropdown-menu-right" role="presentation">        </ul>       </div>       <button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form-title.save"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__loading-label" aria-live="polite">Saving...</span><span class="es-button__label" data-label="Save"><span><span class="alt-underline">S</span>ave</span></span></button>      </div>     </div>    </div>   </div>  </div> </div>
-<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main layout-two-column"><div class="layout-main-section-wrapper"><div class="layout-main-section"><div><div class="std-form-layout"><div class="form-layout"><div class="form-page"><div class="form-tabs-list"><ul class="nav form-tabs" id="form-tabs" role="tablist"><li class="nav-item show">
-				<button class="nav-link active" id="customer-overview_tab-tab" data-toggle="tab" data-fieldname="overview_tab" type="button" role="tab" aria-controls="customer-overview_tab">
-						Overview
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-details_tab-tab" data-toggle="tab" data-fieldname="details_tab" type="button" role="tab" aria-controls="customer-details_tab">
-						Details
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-contact_and_address_tab-tab" data-toggle="tab" data-fieldname="contact_and_address_tab" type="button" role="tab" aria-controls="customer-contact_and_address_tab">
-						Address &amp; Contact
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-accounting_tab-tab" data-toggle="tab" data-fieldname="accounting_tab" type="button" role="tab" aria-controls="customer-accounting_tab">
-						Accounting
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-tax_tab-tab" data-toggle="tab" data-fieldname="tax_tab" type="button" role="tab" aria-controls="customer-tax_tab">
-						Tax
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-items_tab-tab" data-toggle="tab" data-fieldname="items_tab" type="button" role="tab" aria-controls="customer-items_tab">
-						Items
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-settings_tab-tab" data-toggle="tab" data-fieldname="settings_tab" type="button" role="tab" aria-controls="customer-settings_tab">
-						Settings
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-sales_team_tab-tab" data-toggle="tab" data-fieldname="sales_team_tab" type="button" role="tab" aria-controls="customer-sales_team_tab">
-						Sales Team
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-portal_users_tab-tab" data-toggle="tab" data-fieldname="portal_users_tab" type="button" role="tab" aria-controls="customer-portal_users_tab">
-						Portal Users
-				</button>
-			</li><li class="nav-item show">
-				<button class="nav-link" id="customer-more_info_tab-tab" data-toggle="tab" data-fieldname="more_info_tab" type="button" role="tab" aria-controls="customer-more_info_tab">
-						More Info
-				</button>
-			</li></ul>
-			</div><div class="form-tab-content tab-content"><div id="customer-overview_tab" class="tab-pane fade show active"><div class="form-section card-section visible-section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="overview_html"></div></form></div></div></div></div><div id="customer-details_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="basic_info"><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="naming_series">
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-stock">
+		<path d="M7.5 4.84l9.818 4.91M21 7.91L12.818 12 3 7.09M12.818 12v9" stroke-miterlimit="10"></path>
+		<path d="M19.894 7.356A2 2 0 0 1 21 9.146v5.813a2 2 0 0 1-.971 1.715l-6.27 3.761a2 2 0 0 1-1.923.074l-7.73-3.865A2 2 0 0 1 3 14.854V8.328a2 2 0 0 1 1.106-1.789l6.181-3.09a2 2 0 0 1 1.79 0l7.817 3.908z" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-store">
+      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
+      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-tag">
+      <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path>
+      <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+      <path d="M15 18H9"></path>
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+      <circle cx="17" cy="18" r="2"></circle>
+      <circle cx="7" cy="18" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol></svg>
+<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20fill%3D%22none%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2228%22%20fill%3D%22%237B808A%22%2F%3E%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%228%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E" alt=""></div><div class="title-container"><div class="header-title"></div></div></a></div>
+<div class="dock-items"><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-2"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-calculator-duotone"></use></svg></span><span class="dock-item-label">Accounts</span></button><button class="dock-item  " aria-label="GST India" data-ui="dock.button-3"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-expenses"></use></svg></span><span class="dock-item-label">GST India</span></button><button class="dock-item active " aria-label="Selling" aria-current="page" data-ui="dock.button-4"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-sell"></use></svg></span><span class="dock-item-label">Selling</span></button><button class="dock-item  " aria-label="Setup" data-ui="dock.button-5"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span><span class="dock-item-label">Setup</span></button><button class="dock-item  " aria-label="Stock" data-ui="dock.button-6"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-stock"></use></svg></span><span class="dock-item-label">Stock</span></button></div>
+<div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-7"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">A</div></span></button></div>
+</div>
+<div class="body-sidebar-container expanded" data-ui="sidebar"><div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="header-logo"><svg class="icon icon-md"><use href="#icon-sell"></use></svg></div><div class="title-container"><div class="sidebar-item-label header-title">Selling</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"><div class="sidebar-item-container" item-name="Home" data-id="Home"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-0"><span class="sidebar-item-icon" item-icon="house"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-1"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Customer" data-id="Customer"><div class="standard-sidebar-item active-sidebar"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-2"><span class="sidebar-item-icon" item-icon="users"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-3"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-4"><span class="sidebar-item-icon" item-icon="store"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-5"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-6"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Reports" data-id="Reports"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-7"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Items" data-id="Items"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-8"><span class="sidebar-item-icon" item-icon="package"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="POS" data-id="POS"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-9"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Setup" data-id="Setup"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-10"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div></div></div>
+<div class="main-section"><div id="body"><div id="page-customer" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between"><div class="page-title"><button class="btn-reset sidebar-toggle-btn navbar-brand" type="button"><svg class="icon icon-md" stroke="currentColor" aria-hidden="true"><use href="#icon-panel-left-close"></use></svg></button><div class="flex title-area ellipsis"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item"><span class="es-breadcrumbs__label">Customer</span></span></li><li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">Acme Traders</span></span></li></ol></nav><span class="es-badge page-indicator-pill hide" data-testid="page-status"></span></div></div><div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="custom-actions hidden-xs hidden-md"></div><div class="standard-actions flex"><div class="menu-btn-group"><button class="es-button icon-btn menu-more-button" type="button" aria-haspopup="menu" data-icon-button="true" title="Menu" aria-label="Menu"><span class="es-spinner" aria-hidden="true"></span><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button><ul class="dropdown-menu dropdown-menu-right" role="presentation"><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Print">Print</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Toggle Sidebar">Toggle Sidebar</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Email">Email</span><kbd class="pull-right">Ctrl+E</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Rename">Rename</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Reload">Reload</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Delete">Delete</span><kbd class="pull-right">Shift+Ctrl+D</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Duplicate">Duplicate</span><kbd class="pull-right">Shift+D</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="New Customer">New Customer</span><kbd class="pull-right">Ctrl+B</kbd></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Jump to field">Jump to field</span><kbd class="pull-right">Ctrl+J</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Show Links">Show Links</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Copy to Clipboard">Copy to Clipboard</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Remind Me">Remind Me</span><kbd class="pull-right">Shift+R</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Undo">Undo</span><kbd class="pull-right">Ctrl+Z</kbd></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Redo">Redo</span><kbd class="pull-right">Ctrl+Y</kbd></a></li><li class="dropdown-divider"></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Settings - Customer">Settings - Customer</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Customize">Customize</span></a></li><li><a class="grey-link dropdown-item" href="#"><span class="menu-item-label" data-label="Documentation">Documentation</span></a></li></ul></div><button class="es-button primary-action" type="button" data-variant="solid" data-label="Save" data-ui="form.primary-action"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Save</span></button></div></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main layout-two-column"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><div class="form-page" data-ui="form.page"><div class="form-tabs-list" data-ui="form.tabs"><ul class="nav form-tabs" id="form-tabs" role="tablist"><li class="nav-item show"><button class="nav-link active" id="customer-overview_tab-tab" data-toggle="tab" data-fieldname="overview_tab" type="button" role="tab" aria-controls="customer-overview_tab">Overview</button></li><li class="nav-item show"><button class="nav-link" id="customer-details_tab-tab" data-toggle="tab" data-fieldname="details_tab" type="button" role="tab" aria-controls="customer-details_tab">Details</button></li><li class="nav-item show"><button class="nav-link" id="customer-contact_and_address_tab-tab" data-toggle="tab" data-fieldname="contact_and_address_tab" type="button" role="tab" aria-controls="customer-contact_and_address_tab">Address &amp; Contact</button></li><li class="nav-item show"><button class="nav-link" id="customer-accounting_tab-tab" data-toggle="tab" data-fieldname="accounting_tab" type="button" role="tab" aria-controls="customer-accounting_tab">Accounting</button></li><li class="nav-item show"><button class="nav-link" id="customer-tax_tab-tab" data-toggle="tab" data-fieldname="tax_tab" type="button" role="tab" aria-controls="customer-tax_tab">Tax</button></li><li class="nav-item show"><button class="nav-link" id="customer-items_tab-tab" data-toggle="tab" data-fieldname="items_tab" type="button" role="tab" aria-controls="customer-items_tab">Items</button></li><li class="nav-item show"><button class="nav-link" id="customer-settings_tab-tab" data-toggle="tab" data-fieldname="settings_tab" type="button" role="tab" aria-controls="customer-settings_tab">Settings</button></li><li class="nav-item show"><button class="nav-link" id="customer-sales_team_tab-tab" data-toggle="tab" data-fieldname="sales_team_tab" type="button" role="tab" aria-controls="customer-sales_team_tab">Sales Team</button></li><li class="nav-item show"><button class="nav-link" id="customer-portal_users_tab-tab" data-toggle="tab" data-fieldname="portal_users_tab" type="button" role="tab" aria-controls="customer-portal_users_tab">Portal Users</button></li><li class="nav-item show"><button class="nav-link" id="customer-more_info_tab-tab" data-toggle="tab" data-fieldname="more_info_tab" type="button" role="tab" aria-controls="customer-more_info_tab">More Info</button></li></ul></div><div class="form-tab-content tab-content"><div id="customer-overview_tab" class="tab-pane fade show active"><div class="form-section card-section visible-section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="overview_html"></div></form></div></div></div></div><div id="customer-details_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="basic_info"><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Select" data-fieldname="naming_series">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">Series</label>
@@ -1694,7 +1019,7 @@
 					</div>
 				</div>
 				<span class="tooltip-content">territory</span>
-			</div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_hwkr"><div class="section-head">Defaults<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="default_currency">
+			</div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="section_break_hwkr"><div class="section-head">Defaults<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="default_currency">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">Billing Currency</label>
@@ -1746,7 +1071,7 @@
 					</div>
 				</div>
 				<span class="tooltip-content">payment_terms</span>
-			</div></form></div></div></div><div class="form-section card-section visible-section collapsed" data-fieldname="loyalty_points_tab"><div class="section-head collapsible collapsed">Loyalty Points<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></span></div><div class="section-body" style="display: none;"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="loyalty_program">
+			</div></form></div></div></div><div class="form-section card-section visible-section collapsed" data-fieldname="loyalty_points_tab"><div class="section-head collapsible collapsed">Loyalty Points<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></span></div><div class="section-body" style="display: none;"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="loyalty_program">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">Loyalty Program</label>
@@ -1806,7 +1131,7 @@
 					</div>
 				</div>
 				<div class="small form-clickable-section grid-footer"><div class="flex justify-between"><div class="grid-buttons"><button type="button" class="btn btn-xs btn-secondary grid-add-row">Add row</button></div></div></div>
-			</div></div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="internal_customer_section"><div class="section-head">Internal Customer Accounting<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="is_internal_customer">
+			</div></div></form></div></div></div><div class="form-section card-section visible-section hide-border" data-fieldname="internal_customer_section"><div class="section-head">Internal Customer Accounting<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="is_internal_customer">
 			<div class="checkbox">
 				<label>
 					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_internal_customer" data-doctype="Customer" placeholder=""></span>
@@ -1869,7 +1194,7 @@
 					</div>
 				</div>
 				<span class="tooltip-content">tax_withholding_category</span>
-			</div></form></div></div></div></div><div id="customer-items_tab" class="tab-pane fade"><div class="form-section card-section visible-section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="frequently_bought_html"></div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="party_specific_items_section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="party_specific_items_html"></div></form></div></div></div></div><div id="customer-settings_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="company_restrictions_section"><div class="section-head">Company Restrictions<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="restrict_to_companies">
+			</div></form></div></div></div></div><div id="customer-items_tab" class="tab-pane fade"><div class="form-section card-section visible-section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="frequently_bought_html"></div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="party_specific_items_section"><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="frappe-control" data-fieldtype="HTML" data-fieldname="party_specific_items_html"></div></form></div></div></div></div><div id="customer-settings_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="company_restrictions_section"><div class="section-head">Company Restrictions<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="restrict_to_companies">
 			<div class="checkbox">
 				<label>
 					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="restrict_to_companies" data-doctype="Customer" placeholder=""></span>
@@ -1924,7 +1249,7 @@
 				<p class="help-box small text-extra-muted">Blocks new transactions and further accounting entries on this customer's account. Only users with the role set in Company's "Roles Allowed to Set and Edit Frozen Account Entries" can transact.</p>
 			</div>
 			<span class="tooltip-content">is_frozen</span>
-		</div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="block_customer_section"><div class="section-head">Block Customer<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="on_hold">
+		</div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="block_customer_section"><div class="section-head">Block Customer<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-12" data-fieldname="__column_0"><form><div class="form-group frappe-control input-max-width" data-fieldtype="Check" data-fieldname="on_hold">
 			<div class="checkbox">
 				<label>
 					<span class="input-area"><input type="checkbox" autocomplete="off" class="input-with-feedback" data-fieldtype="Check" data-fieldname="on_hold" data-doctype="Customer" placeholder=""></span>
@@ -1965,7 +1290,7 @@
 					</div>
 				</div>
 				<div class="small form-clickable-section grid-footer"><div class="flex justify-between"><div class="grid-buttons"><button type="button" class="btn btn-xs btn-secondary grid-add-row">Add row</button></div></div></div>
-			</div></div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="sales_team_section"><div class="section-head">Sales Partner<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="default_sales_partner">
+			</div></div></form></div></div></div><div class="form-section card-section visible-section" data-fieldname="sales_team_section"><div class="section-head">Sales Partner<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-description text-muted small">Commission paid to the Sales Partner on transactions with this customer.</div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="default_sales_partner">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">Sales Partner</label>
@@ -2007,7 +1332,7 @@
 					</div>
 				</div>
 				<div class="small form-clickable-section grid-footer"><div class="flex justify-between"><div class="grid-buttons"><button type="button" class="btn btn-xs btn-secondary grid-add-row">Add row</button></div></div></div>
-			</div></div></form></div></div></div></div><div id="customer-more_info_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="references_section"><div class="section-head">References<span class="ml-2 collapse-indicator mb-1"><svg class="icon  icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="lead_name">
+			</div></div></form></div></div></div></div><div id="customer-more_info_tab" class="tab-pane fade"><div class="form-section card-section visible-section" data-fieldname="references_section"><div class="section-head">References<span class="ml-2 collapse-indicator mb-1"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-chevron-up"></use></svg></span></div><div class="section-body"><div class="form-column col-sm-6" data-fieldname="__column_0"><form><div class="frappe-control input-max-width" data-fieldtype="Link" data-fieldname="lead_name">
 				<div class="form-group horizontal">
 					<div class="clearfix">
 						<label class="control-label" style="padding-right: 5px;">Lead</label>
@@ -2141,46 +1466,7 @@
 					</div>
 				</div>
 				<div class="small form-clickable-section grid-footer"><div class="flex justify-between"><div class="grid-buttons"><button type="button" class="btn btn-xs btn-secondary grid-add-row">Add row</button></div></div></div>
-			</div></div></form></div></div></div></div></div></div></div></div></div></div></div><div class="layout-side-section right" data-ui="form-sidebar"><div class="form-sidebar overlay-sidebar hidden-xs hidden-sm"><div class="flex justify-between sidebar-image-section sidebar-section">  <div class="sidebar-image-wrapper">   <img class="sidebar-image hide">   <div class="sidebar-standard-image">    <div class="standard-image">A</div>   </div>      <div class="sidebar-image-actions">    <div class="sidebar-image-upload-hint">     <svg class="icon icon-sm"><use href="#icon-camera"></use></svg>    </div>    <a class="sidebar-image-remove" data-ui="form-sidebar.link-1" style="display: none;">     <svg class="icon icon-sm"><use href="#icon-x"></use></svg>    </a>   </div>     </div>    <div class="align-items-baseline flex form-stats-likes">   <div class="form-title-edit"><button class="text-muted btn btn-default icon-btn p-0" title="" data-original-title="Edit" style="background-color: transparent;" data-ui="form-sidebar.button-2">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-square-pen">
-			</use>
-		</svg>
-			</button></div>   <div class="form-print"><button class="text-muted btn btn-default icon-btn p-0" title="" data-original-title="Print" style="background-color: transparent;" data-ui="form-sidebar.button-3">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-printer">
-			</use>
-		</svg>
-			</button></div>   <span class="liked-by like-action d-flex align-items-center not-liked" data-doctype="Customer" data-name="Direct">    <svg class="icon icon-sm like-icon pointer">     <use href="#icon-heart"></use>    </svg>   </span>  </div>   </div> <div class="sidebar-section sidebar-meta-details border-bottom">  <div class="flex justify-between overflow-hidden">   <div class="ellipsis">        <div class="form-details flex justify-between form-title-text" data-copy="Direct" data-original-title="" title="">     <span class="bold ellipsis mr-3 text-medium">Acme Traders</span>    </div>               </div>     </div> </div> <div class="sidebar-section sidebar-rating hide border-bottom">  <div style="position: relative;">   <a class="strong badge-hover" data-ui="form-sidebar.link-4">    <span>Feedback</span>   </a>  </div>  <div class="rating-icons"></div> </div> <div class="sidebar-section hidden border-bottom">   </div> <div class="sidebar-section user-actions hidden border-bottom">  <div class="form-sidebar-items user-actions-header">   <div class="form-sidebar-label">    <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-link-2">
-			</use>
-		</svg>    <span class="ellipsis">Links</span>   </div>  </div>  <div class="user-actions-list"></div> </div> <div class="sidebar-section form-assignments">  <div>   <span class="form-sidebar-items">    <span class="add-assignment-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-users">
-			</use>
-		</svg>     <span class="ellipsis">Assign</span>    </span>    <button class="es-button add-assignment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Assign" aria-label="Assign" data-ui="form-sidebar.button-5"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-plus">
-			</use>
-		</svg></button>   </span>   <div class="assignments" style="display: none;"></div>  </div> </div> <div class="sidebar-section form-attachments">  <div class="attachments-actions">   <span class="form-sidebar-items">    <span>     <a class="pill-label ellipsis form-sidebar-label explore-link" data-ui="form-sidebar.link-6">      <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-paperclip">
-			</use>
-		</svg>      Attachments     </a>    </span>    <button class="es-button add-attachment-btn" type="button" data-variant="ghost" data-icon-button="true" title="Add attachment" aria-label="Add attachment" data-ui="form-sidebar.button-7"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-plus">
-			</use>
-		</svg></button>   </span>  </div>  <a class="show-all-btn hidden" href="" data-ui="form-sidebar.link-8">   <span class="pill-label ellipsis">    Show All   </span>  </a> </div> <div class="sidebar-section form-tags">  <div>   <span class="form-sidebar-items">    <div class="form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-tag">
-			</use>
-		</svg>     <span class="tags-label ellipsis">Tags</span>    </div>   <button type="button" class="es-button add-tags-btn" data-variant="ghost" data-icon-button="true" title="Add Tags" aria-label="Add Tags" data-ui="form-sidebar.button-9">
-				<svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-plus">
-			</use>
-		</svg>
-			</button></span>  </div> <div class="" style="display: none;"><div class="awesomplete"><input class="tags-input form-control mt-2" autocomplete="off" aria-expanded="false" role="combobox" data-ui="form-sidebar.input-10"><ul hidden="" role="listbox"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div></div></div> <div class="sidebar-section form-shared border-bottom">  <div>   <span class="form-sidebar-items">    <span class="share-label form-sidebar-label">     <svg class="icon  icon-sm" style="" aria-hidden="true">
-			<use class="" href="#icon-share-2">
-			</use>
-		</svg>     <span class="ellipsis">Share</span>    </span>    <button class="es-button share-doc-btn" type="button" data-variant="ghost" data-icon-button="true" title="Share" aria-label="Share" data-ui="form-sidebar.button-11"><span class="es-spinner" aria-hidden="true"></span><svg class="icon  icon-sm" stroke="currentColor" style="" aria-hidden="true">
-			<use class="" href="#icon-plus">
-			</use>
-		</svg></button>   </span>   <div class="shares" style="display: none;"></div>  </div> </div> <div class="sidebar-section hidden">  <a data-ui="form-sidebar.link-12"><li class="indicator blue auto-repeat-status" style="display: none;"></li></a> </div> <div class="sidebar-section text-muted pt-3">  <ul class="list-unstyled sidebar-menu text-muted">   <li class="modified-by">Last Edited By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="created-by">Created By You <br> <span class="frappe-timestamp " data-timestamp="2026-10-21 13:05:43.475028" title="21-10-2026 13:05:43"></span></li>   <li class="pageview-count"></li>  </ul> </div>   </div><div class="attachment-preview hidden"></div></div>
-</div></div></div></div></div></div>
+			</div></div></form></div></div></div></div></div></div></div></div><div class="layout-side-section right" data-ui="shell.right"><div class="form-sidebar overlay-sidebar hidden-xs hidden-sm" data-ui="form-sidebar"><div class="flex justify-between sidebar-image-section sidebar-section"><div class="sidebar-image-wrapper"><div class="sidebar-standard-image"><div class="standard-image">A</div></div></div></div><div class="sidebar-section sidebar-meta-details border-bottom"><div class="form-details flex justify-between form-title-text"><span class="bold ellipsis mr-3 text-medium">Acme Traders</span></div></div><div class="sidebar-section form-assignments border-bottom"><span class="form-sidebar-items"><span class="form-sidebar-label"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-users"></use></svg><span class="ellipsis">Assigned To</span></span><button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="Assigned To"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button></span></div><div class="sidebar-section form-attachments border-bottom"><span class="form-sidebar-items"><span class="form-sidebar-label"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-paperclip"></use></svg><span class="ellipsis">Attachments</span></span><button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="Attachments"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button></span></div><div class="sidebar-section form-shared border-bottom"><span class="form-sidebar-items"><span class="form-sidebar-label"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-share-2"></use></svg><span class="ellipsis">Share</span></span><button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="Share"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button></span></div><div class="sidebar-section form-tags border-bottom"><span class="form-sidebar-items"><span class="form-sidebar-label"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-tag"></use></svg><span class="ellipsis">Tags</span></span><button class="es-button" type="button" data-variant="ghost" data-icon-button="true" aria-label="Tags"><svg class="icon icon-sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button></span></div></div></div></div></div></div></div>
+</div></div></div>
 </div>
 </body></html>
