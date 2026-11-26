@@ -1,0 +1,401 @@
+{
+ "title": "Stock",
+ "app": "erpnext",
+ "header_icon": "stock",
+ "source": "https://raw.githubusercontent.com/frappe/erpnext/version-16/erpnext/workspace_sidebar/stock.json",
+ "items": [
+  {
+   "label": "Home",
+   "icon": "house",
+   "link_to": "Stock",
+   "link_type": "Workspace",
+   "type": "Link"
+  },
+  {
+   "label": "Dashboard",
+   "icon": "chart-column",
+   "link_to": "Stock",
+   "link_type": "Dashboard",
+   "type": "Link"
+  },
+  {
+   "label": "Stock Entry",
+   "icon": "package",
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Purchase Receipt",
+   "icon": "receipt-text",
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Delivery Note",
+   "icon": "truck",
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Material Request",
+   "icon": "arrow-left-to-line",
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Pick List",
+   "icon": "caravan",
+   "link_to": "Pick List",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Tools",
+   "icon": "wrench",
+   "link_to": "",
+   "link_type": "DocType",
+   "type": "Section Break",
+   "children": [
+    {
+     "label": "Stock Reconciliation",
+     "icon": "",
+     "link_to": "Stock Reconciliation",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Landed Cost Voucher",
+     "icon": "",
+     "link_to": "Landed Cost Voucher",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Repost Item Valuation",
+     "icon": "",
+     "link_to": "Repost Item Valuation",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Packing Slip",
+     "icon": "",
+     "link_to": "Packing Slip",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Quality Inspection",
+     "icon": "",
+     "link_to": "Quality Inspection",
+     "link_type": "DocType",
+     "type": "Link"
+    }
+   ]
+  },
+  {
+   "label": "Setup",
+   "icon": "database",
+   "link_to": "",
+   "link_type": "DocType",
+   "type": "Section Break",
+   "children": [
+    {
+     "label": "Item",
+     "icon": "",
+     "link_to": "Item",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Item Group",
+     "icon": "",
+     "link_to": "Item Group",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Item Attribute",
+     "icon": "",
+     "link_to": "Item Attribute",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Brand",
+     "icon": "",
+     "link_to": "Brand",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Warehouse",
+     "icon": "",
+     "link_to": "Warehouse",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Unit of Measure (UOM)",
+     "icon": "",
+     "link_to": "UOM",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "UOM Conversion Factor",
+     "icon": "",
+     "link_to": "UOM Conversion Factor",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Serial No",
+     "icon": "",
+     "link_to": "Serial No",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Batch No",
+     "icon": "",
+     "link_to": "Batch",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Serial and Batch Bundle",
+     "icon": "",
+     "link_to": "Serial and Batch Bundle",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Inventory Dimension",
+     "icon": "",
+     "link_to": "Inventory Dimension",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Shipping Rule",
+     "icon": "",
+     "link_to": "Shipping Rule",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Item Alternative",
+     "icon": "",
+     "link_to": "Item Alternative",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Quality Inspection Template",
+     "icon": "",
+     "link_to": "Quality Inspection Template",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Delivery Trip",
+     "icon": "",
+     "link_to": "Delivery Trip",
+     "link_type": "DocType",
+     "type": "Link"
+    }
+   ]
+  },
+  {
+   "label": "Reports",
+   "icon": "sheet",
+   "link_to": "",
+   "link_type": "DocType",
+   "type": "Section Break",
+   "children": [
+    {
+     "label": "Stock Ledger",
+     "icon": "",
+     "link_to": "Stock Ledger",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Stock Balance",
+     "icon": "",
+     "link_to": "Stock Balance",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Quick Stock Balance",
+     "icon": "",
+     "link_to": "Quick Stock Balance",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Stock Projected Qty",
+     "icon": "",
+     "link_to": "Stock Projected Qty",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Stock Analytics",
+     "icon": "",
+     "link_to": "Stock Analytics",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Stock Ageing",
+     "icon": "",
+     "link_to": "Stock Ageing",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Purchase Receipt Trends",
+     "icon": "",
+     "link_to": "Purchase Receipt Trends",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Delivery Note Trends",
+     "icon": "",
+     "link_to": "Delivery Note Trends",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Item Price Stock",
+     "icon": "",
+     "link_to": "Item Price Stock",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Warehouse Wise Stock Balance",
+     "icon": "",
+     "link_to": "Warehouse Wise Stock Balance",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Item Shortage Report",
+     "icon": "",
+     "link_to": "Item Shortage Report",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Serial No and Batch Traceability",
+     "icon": "",
+     "link_to": "Serial No and Batch Traceability",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Serial No Status",
+     "icon": "",
+     "link_to": "Serial No Status",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Serial No Ledger",
+     "icon": "",
+     "link_to": "Serial No Ledger",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Serial No Warranty Expiry",
+     "icon": "",
+     "link_to": "Serial No Warranty Expiry",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Batch-Wise Balance History",
+     "icon": "",
+     "link_to": "Batch-Wise Balance History",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Batch Item Expiry Status",
+     "icon": "",
+     "link_to": "Batch Item Expiry Status",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Requested Items To Be Transferred",
+     "icon": "",
+     "link_to": "Requested Items To Be Transferred",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Itemwise Recommended Reorder Level",
+     "icon": "",
+     "link_to": "Itemwise Recommended Reorder Level",
+     "link_type": "Report",
+     "type": "Link"
+    },
+    {
+     "label": "Item Variant Details",
+     "icon": "",
+     "link_to": "Item Variant Details",
+     "link_type": "Report",
+     "type": "Link"
+    }
+   ]
+  },
+  {
+   "label": "Settings",
+   "icon": "settings",
+   "link_to": "",
+   "link_type": "DocType",
+   "type": "Section Break",
+   "children": [
+    {
+     "label": "Stock Settings",
+     "icon": "",
+     "link_to": "Stock Settings",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Item Variant Settings",
+     "icon": "",
+     "link_to": "Item Variant Settings",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Stock Reposting Settings",
+     "icon": "",
+     "link_to": "Stock Reposting Settings",
+     "link_type": "DocType",
+     "type": "Link"
+    },
+    {
+     "label": "Delivery Settings",
+     "icon": "",
+     "link_to": "Delivery Settings",
+     "link_type": "DocType",
+     "type": "Link"
+    }
+   ]
+  }
+ ]
+}

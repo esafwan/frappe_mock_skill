@@ -2,7 +2,9 @@ import { evalDepends } from './depends.mjs';
 
 const hasValue = (v) => v !== undefined && v !== null && v !== '' && v !== 0 && v !== false;
 
-export function buildLayout(meta, doc = {}) {
+// opts.emitHidden: keep hidden / depends_on-false fields as {_hidden:true} so the renderer can emit them
+// display:none (live parity). Off by default until wrapControl honors f._hidden (else they would show).
+export function buildLayout(meta, doc = {}, opts = {}) {
   const fields = meta.fields || [];
   const byName = new Map(fields.map((f) => [f.fieldname, f]));
   const order = [];
@@ -27,11 +29,13 @@ export function buildLayout(meta, doc = {}) {
       case 'Column Break': newCol(); break;
       default:
         if (!col) newCol();
-        if (!df.hidden) {
-          const d = df.depends_on ? evalDepends(df.depends_on, doc) : true;
-          if (d === false) break;
+        {
+          // Live Frappe emits every field as a .frappe-control, even hidden ones (display:none, 0x0).
+          // Flag them with _hidden so renderers keep them in the DOM but invisible.
           const f = { ...df };
-          if (d === null) f._dep_unknown = true;
+          const d = df.depends_on ? evalDepends(df.depends_on, doc) : true;
+          if (df.hidden || d === false) { if (!opts.emitHidden) break; f._hidden = true; }
+          else if (d === null) f._dep_unknown = true;
           if (df.mandatory_depends_on) { const m = evalDepends(df.mandatory_depends_on, doc); if (m === true) f.reqd = 1; else if (m === null) f._dep_unknown = true; }
           if (df.read_only_depends_on) { const r = evalDepends(df.read_only_depends_on, doc); if (r === true) f.read_only = 1; else if (r === null) f._dep_unknown = true; }
           col.fields.push(f);
@@ -45,14 +49,16 @@ export function buildLayout(meta, doc = {}) {
     const secs = [];
     for (const s of t.sections) {
       if (s.hidden || (s.dep && evalDepends(s.dep, doc) === false)) continue;
-      const columns = s.columns.filter((c) => c.fields.length);
+      const columns = s.columns.filter((c) => c.fields.some((f) => !f._hidden));
       if (!columns.length) continue;
-      const anyVal = columns.some((c) => c.fields.some((f) => hasValue(doc?.[f.fieldname])));
+      const anyVal = columns.some((c) => c.fields.some((f) => !f._hidden && hasValue(doc?.[f.fieldname])));
       const dep = s.collapsible_depends_on ? evalDepends(s.collapsible_depends_on, doc) : null;
       const collapsed = s.collapsible && !anyVal && dep !== true;
       secs.push({ label: s.label, fieldname: s.fieldname, collapsible: s.collapsible, collapsed, columns });
     }
     if (secs.length) out.push({ label: t.label, fieldname: t.fieldname, sections: secs });
   }
-  return { tabs: out };
+  // New unsaved doc: live form has no right sidebar / View-Create-Actions buttons and a narrow centered form.
+  const isNew = !doc?.name;
+  return { tabs: out, isNew, narrow: isNew, noRightSidebar: isNew, noToolbarMenus: isNew };
 }

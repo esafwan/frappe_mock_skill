@@ -5,6 +5,10 @@ function cast(value, type) {
   return value;
 }
 
+// Defaults a live bench supplies at new-doc time from System Settings / boot (not in the DocType JSON).
+// Verified against a live v16 bench: a new Company shows Country = India, rendered bold.
+const SYSTEM_DEFAULTS = { Company: { country: { default: 'India', bold: 1 } } };
+
 export function applyCustomizations(meta, customFields = [], propertySetters = []) {
   const out = JSON.parse(JSON.stringify(meta));
   out.fields = out.fields || [];
@@ -43,6 +47,12 @@ export function applyCustomizations(meta, customFields = [], propertySetters = [
     const v = cast(ps.value, ps.property_type);
     if (ps.doctype_or_field === 'DocType') out[ps.property] = v;
     else if (ps.doctype_or_field === 'DocField' && byName.has(ps.field_name)) byName.get(ps.field_name)[ps.property] = v;
+  }
+  for (const [fn, props] of Object.entries(SYSTEM_DEFAULTS[out.name] || {})) {
+    const f = byName.get(fn);
+    if (!f) continue;
+    if (f.default === undefined || f.default === null || f.default === '') f.default = props.default;
+    if (f.bold === undefined) f.bold = props.bold;
   }
   out.field_order = order;
   out.fields = order.map(n => byName.get(n));

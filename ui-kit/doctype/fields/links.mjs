@@ -1,13 +1,15 @@
 import { esc, wrapControl, formatValue } from '../lib/control.mjs';
 
 const attrs = (df, ctx) => `data-fieldtype="${esc(df.fieldtype)}" data-fieldname="${esc(df.fieldname)}" data-doctype="${esc(ctx.doctype || '')}"`;
+const hidden = (n) => `<ul hidden="" role="listbox" id="awesomplete_list_${n}"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span>`;
+const linkBtn = `<span class="link-btn"><a class="btn-clear" style="display: inline-flex;" title="Clear Link"><svg class="icon  icon-xs" style="" aria-hidden="true"><use class="" href="#icon-x"></use></svg></a><a class="btn-open" style="display: inline-flex;" title="Open Link"><svg class="icon  icon-xs" style="" aria-hidden="true"><use class="" href="#icon-arrow-right"></use></svg></a></span>`;
 const ro = (df) => (df.read_only ? ' disabled' : '');
 
 const dynamicLink = (df, ctx) => {
   const v = formatValue(df, ctx.value, ctx);
   const target = (ctx.doc && ctx.doc[df.options]) || '';
   return wrapControl(df, {
-    inputHtml: `<div class="link-field ui-front" style="position: relative;"><div class="awesomplete"><input type="text" class="input-with-feedback form-control" ${attrs(df, ctx)} data-target="${esc(target)}" data-options-field="${esc(df.options || '')}" placeholder="" autocomplete="off" role="combobox" aria-expanded="false"${ro(df)} value="${esc(v)}"></div></div>`,
+    inputHtml: `<div class="link-field ui-front" style="position: relative;"><div class="awesomplete"><input type="text" class="input-with-feedback form-control" ${attrs(df, ctx)} data-target="${esc(target)}" data-options-field="${esc(df.options || '')}" placeholder="" autocomplete="off" role="combobox" aria-expanded="false"${ro(df)} value="${esc(v)}">${hidden(ctx.doctype ? df.fieldname : '0')}</div>${linkBtn}</div>`,
     valueHtml: v ? `<a href="#" data-doctype="${esc(target)}" data-name="${esc(v)}">${esc(v)}</a>` : '',
   });
 };
@@ -24,7 +26,7 @@ const tableMultiselect = (df, ctx) => {
   }).join('');
   const valuePills = rows.map((r) => esc(linkField ? r?.[linkField.fieldname] : '')).filter(Boolean).join(', ');
   return wrapControl(df, {
-    inputHtml: `<div class="link-field ui-front form-control table-multiselect" style="position: relative;" data-child-doctype="${esc(df.options || '')}" data-link-field="${esc(linkField?.fieldname || '')}">${pills}<div class="awesomplete"><input type="text" class="input-with-feedback" ${attrs(df, ctx)} data-target="${esc(target)}" placeholder="" autocomplete="off" role="combobox" aria-expanded="false"${ro(df)}></div></div>`,
+    inputHtml: `<div class="link-field ui-front form-control table-multiselect" style="position: relative;" data-child-doctype="${esc(df.options || '')}" data-link-field="${esc(linkField?.fieldname || '')}">${pills}<div class="awesomplete"><input type="text" class="input-with-feedback" ${attrs(df, ctx)} data-target="${esc(target)}" placeholder="" autocomplete="off" role="combobox" aria-expanded="false"${ro(df)}>${hidden(df.fieldname)}</div></div>`,
     valueHtml: valuePills,
   });
 };
@@ -34,7 +36,7 @@ const autocomplete = (df, ctx) => {
   const list = String(df.options || '').split('\n').filter(Boolean);
   const ul = list.map((o) => `<li role="option" aria-selected="false">${esc(o)}</li>`).join('');
   return wrapControl(df, {
-    inputHtml: `<div class="awesomplete"><input type="text" class="input-with-feedback form-control" ${attrs(df, ctx)} placeholder="" autocomplete="off" role="combobox" aria-expanded="false" data-list="${esc(list.join(','))}"${ro(df)} value="${esc(v)}"><ul hidden role="listbox">${ul}</ul></div>`,
+    inputHtml: `<div class="awesomplete"><input type="text" class="input-with-feedback form-control" ${attrs(df, ctx)} placeholder="" autocomplete="off" role="combobox" aria-expanded="false" data-list="${esc(list.join(','))}"${ro(df)} value="${esc(v)}"><ul hidden="" role="listbox">${ul}</ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Begin typing for results.</span></div>`,
     valueHtml: esc(v),
   });
 };

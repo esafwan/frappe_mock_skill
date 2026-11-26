@@ -25,3 +25,9 @@ Renders a Frappe v16 DocType JSON into a standalone desk form page (desk-form.ht
 - `shot-doctype.mjs --full` captures the whole form (cap 16000px).
 - Markup follows v16 controls (read from frappe version-16 JS, not scss; not compared against a live bench). Barcode is a display pattern, not scannable.
 - Sidebar, navbar and breadcrumbs come from `pages/desk-form.html`.
+- `live/` holds captures of blank new forms from a local bench (screenshots, field boxes, control markup). They show bench-specific custom fields, app names and workspace sidebars, so the folder is gitignored. Recapture with `live/_cap.mjs` (needs a bench).
+- Pixel parity: `python3 tools/pixdiff.py` compares `out/<dt>.png` with `live/<dt>.live.png` (live downscaled 2x; a pixel counts as different when its grey difference is above 24/255). Current, first viewport: sales_invoice 4.3%, customer 1.9%, item 3.9%, company 1.4%. Sales Invoice is rendered from a sample document, the live capture is a new form, so that figure includes data differences. Zero is not reachable: fonts, dock icons and bench-specific custom fields differ.
+- GST Settings has no live capture (India Compliance is not installed on the bench), so its markup is unverified.
+- Saved-document forms (`--doc` with a name) keep the shell's main + form-sidebar layout (main column 881px); new forms use the live 900px centred column with no form sidebar. `out/customer_saved.html` is the saved variant.
+- The dock rail highlights the Selling icon for workspaces that have no rail icon (GST India).
+- Small Text height (80px) is unconfirmed against Frappe scss.
