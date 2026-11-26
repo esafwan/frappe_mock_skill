@@ -1,0 +1,7 @@
+{"custom_fields":[
+{"dt":"Sales Invoice","fieldname":"gst_section","label":"GST Details","fieldtype":"Section Break","insert_after":"taxes_and_charges"},
+{"dt":"Sales Invoice","fieldname":"gst_category","label":"GST Category","fieldtype":"Select","options":"Registered Regular\nUnregistered","insert_after":"gst_section"},
+{"dt":"Sales Invoice","fieldname":"gst_col","fieldtype":"Column Break","insert_after":"gst_category"},
+{"dt":"Sales Invoice","fieldname":"place_of_supply","label":"Place of Supply","fieldtype":"Data","insert_after":"gst_col"},
+{"dt":"Sales Invoice","fieldname":"orphan_gst","label":"Orphan","fieldtype":"Data","insert_after":"nonexistent"}
+]}

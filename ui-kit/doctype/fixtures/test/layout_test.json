@@ -1,0 +1,31 @@
+{
+ "name": "Layout Test", "doctype": "DocType", "module": "Test",
+ "field_order": ["title","code","col_a","status","sec_plain","amount","c2","c3","note_hidden","tab_two","sb_labelled","customer","cb1","due_date","sb_collapse","remarks","tab_three","sb_three","f1","cb2","f2","cb3","f3","items_sb","items"],
+ "fields": [
+  {"fieldname":"title","fieldtype":"Data","label":"Title","reqd":1,"description":"Shown in lists"},
+  {"fieldname":"code","fieldtype":"Data","label":"Code"},
+  {"fieldname":"col_a","fieldtype":"Column Break"},
+  {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Draft\nOpen\nClosed","default":"Draft"},
+  {"fieldname":"sec_plain","fieldtype":"Section Break"},
+  {"fieldname":"amount","fieldtype":"Currency","label":"Amount"},
+  {"fieldname":"c2","fieldtype":"Column Break"},
+  {"fieldname":"c3","fieldtype":"Check","label":"Is Active"},
+  {"fieldname":"note_hidden","fieldtype":"Data","label":"Hidden Note","hidden":1},
+  {"fieldname":"tab_two","fieldtype":"Tab Break","label":"Second Tab"},
+  {"fieldname":"sb_labelled","fieldtype":"Section Break","label":"Labelled Section"},
+  {"fieldname":"customer","fieldtype":"Link","label":"Customer","options":"Customer"},
+  {"fieldname":"cb1","fieldtype":"Column Break"},
+  {"fieldname":"due_date","fieldtype":"Date","label":"Due Date"},
+  {"fieldname":"sb_collapse","fieldtype":"Section Break","label":"More Info","collapsible":1},
+  {"fieldname":"remarks","fieldtype":"Text Editor","label":"Remarks"},
+  {"fieldname":"tab_three","fieldtype":"Tab Break","label":"Third Tab"},
+  {"fieldname":"sb_three","fieldtype":"Section Break","label":"Three Columns"},
+  {"fieldname":"f1","fieldtype":"Data","label":"One"},
+  {"fieldname":"cb2","fieldtype":"Column Break"},
+  {"fieldname":"f2","fieldtype":"Data","label":"Two"},
+  {"fieldname":"cb3","fieldtype":"Column Break"},
+  {"fieldname":"f3","fieldtype":"Data","label":"Three"},
+  {"fieldname":"items_sb","fieldtype":"Section Break","label":"Items"},
+  {"fieldname":"items","fieldtype":"Table","label":"Items","options":"Layout Test Item"}
+ ]
+}
