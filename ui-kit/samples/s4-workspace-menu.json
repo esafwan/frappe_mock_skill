@@ -1,0 +1,337 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "workspace",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "workspace": {
+      "name": "Everything",
+      "title": "Everything",
+      "label": "Everything",
+      "public": 0,
+      "module": "Selling",
+      "content": [
+        {
+          "id": "b0",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h4\"><b>Workspace overview</b></span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "b1",
+          "type": "paragraph",
+          "data": {
+            "text": "Every block type, column width and shortcut view in one place.",
+            "col": 12
+          }
+        },
+        {
+          "id": "b2",
+          "type": "onboarding",
+          "data": {
+            "onboarding_name": "Setup",
+            "col": 12
+          }
+        },
+        {
+          "id": "b3",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "List view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b4",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Report Builder view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b5",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Dashboard view",
+            "col": 3
+          }
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "List view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "List",
+          "color": "Grey",
+          "format": "{} Open"
+        },
+        {
+          "label": "Report Builder view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Report Builder",
+          "color": "Green",
+          "format": "{} Open"
+        },
+        {
+          "label": "Dashboard view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Dashboard",
+          "color": "Blue",
+          "format": "{} Open"
+        },
+        {
+          "label": "Tree view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Tree",
+          "color": "Red",
+          "format": "{} Open"
+        },
+        {
+          "label": "New view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "New",
+          "color": "Orange",
+          "format": "{} Open"
+        },
+        {
+          "label": "Calendar view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Calendar",
+          "color": "Cyan",
+          "format": "{} Open"
+        },
+        {
+          "label": "Kanban view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Kanban",
+          "color": "Grey",
+          "format": "{} Open",
+          "kanban_board": "Order Board"
+        },
+        {
+          "label": "Image view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Image",
+          "color": "Green",
+          "format": "{} Open"
+        },
+        {
+          "label": "Gantt view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Gantt",
+          "color": "Blue",
+          "format": "{} Open"
+        },
+        {
+          "label": "Map view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Map",
+          "color": "Red",
+          "format": "{} Open"
+        },
+        {
+          "label": "Inbox view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Inbox",
+          "color": "Orange",
+          "format": "{} Open"
+        },
+        {
+          "label": "A Report",
+          "type": "Report",
+          "link_to": "Stock Movement",
+          "is_query_report": 1
+        },
+        {
+          "label": "A Page",
+          "type": "Page",
+          "link_to": "setup-wizard"
+        },
+        {
+          "label": "A Dashboard",
+          "type": "Dashboard",
+          "link_to": "Overview"
+        },
+        {
+          "label": "A Workspace",
+          "type": "Workspace",
+          "link_to": "Home"
+        },
+        {
+          "label": "External",
+          "type": "URL",
+          "url": "https://example.com/docs"
+        }
+      ],
+      "links": [
+        {
+          "type": "Card Break",
+          "label": "Transactions"
+        },
+        {
+          "type": "Link",
+          "label": "Order",
+          "link_type": "DocType",
+          "link_to": "Odd A",
+          "onboard": 1,
+          "description": "Create and track orders"
+        },
+        {
+          "type": "Link",
+          "label": "Needs Setup First",
+          "link_type": "DocType",
+          "link_to": "Odd Child",
+          "dependencies": "Odd A",
+          "description": "Depends on orders"
+        },
+        {
+          "type": "Link",
+          "label": "Docs",
+          "link_type": "URL",
+          "url": "https://example.com/docs"
+        },
+        {
+          "type": "Card Break",
+          "label": "Reports"
+        },
+        {
+          "type": "Link",
+          "label": "Movement",
+          "link_type": "Report",
+          "link_to": "Stock Movement",
+          "is_query_report": 1
+        },
+        {
+          "type": "Link",
+          "label": "Order Report",
+          "link_type": "Report",
+          "link_to": "Odd A"
+        },
+        {
+          "type": "Card Break",
+          "label": "Setup"
+        },
+        {
+          "type": "Link",
+          "label": "Child Setup",
+          "link_type": "DocType",
+          "link_to": "Odd Child"
+        }
+      ],
+      "number_cards": [
+        {
+          "label": "Open Orders",
+          "number_card_name": "Open Orders"
+        }
+      ],
+      "charts": [
+        {
+          "chart_name": "Revenue Trend",
+          "label": "Revenue Trend"
+        },
+        {
+          "chart_name": "Orders by Status",
+          "label": "Orders by Status"
+        },
+        {
+          "chart_name": "Pipeline",
+          "label": "Pipeline"
+        },
+        {
+          "chart_name": "Mix",
+          "label": "Mix"
+        },
+        {
+          "chart_name": "Share",
+          "label": "Share"
+        }
+      ],
+      "quick_lists": [
+        {
+          "label": "Recent Orders",
+          "document_type": "Odd A"
+        },
+        {
+          "label": "Empty List",
+          "document_type": "Odd Child"
+        }
+      ],
+      "custom_blocks": [
+        {
+          "custom_block_name": "Notice",
+          "html": "<style>.n{padding:12px;border-radius:8px;background:#eef}</style><div class=\"n\"><b>Heads up</b><p onclick=\"x()\">Scheduled maintenance tonight.</p></div><script>1</script>",
+          "style": ".n b{color:#334}"
+        }
+      ]
+    },
+    "sidebar": "Selling"
+  },
+  "data": {
+    "counts": {
+      "List view": 3,
+      "Report Builder view": 10,
+      "Dashboard view": 17,
+      "Tree view": 24,
+      "New view": 31,
+      "Calendar view": 38,
+      "Kanban view": 45,
+      "Image view": 52,
+      "Gantt view": 59,
+      "Map view": 66,
+      "Inbox view": 73,
+      "A Report": 80,
+      "A Page": 87,
+      "A Dashboard": 94,
+      "A Workspace": 101,
+      "External": 108
+    },
+    "onboarding": {
+      "Setup": {
+        "steps": [
+          {
+            "title": "Create a record",
+            "status": "Complete"
+          }
+        ]
+      }
+    }
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "workspace.menu"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "../doctype/fixtures/test/odd_a.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "ODD-0001",
+        "title": "Order 1",
+        "status": "Draft",
+        "owner": "omar@example.com",
+        "_assign": null,
+        "_user_tags": null,
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0002",
+        "title": "Order 2",
+        "status": "Submitted",
+        "owner": "jane@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0003",
+        "title": "Order 3",
+        "status": "Draft",
+        "owner": "jane@example.com",
+        "_assign": null,
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0004",
+        "title": "Order 4",
+        "status": "Submitted",
+        "owner": "omar@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0005",
+        "title": "Order 5",
+        "status": "Draft",
+        "owner": "jane@example.com",
+        "_assign": null,
+        "_user_tags": null,
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0006",
+        "title": "Order 6",
+        "status": "Submitted",
+        "owner": "jane@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0007",
+        "title": "Order 7",
+        "status": "Draft",
+        "owner": "omar@example.com",
+        "_assign": null,
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0008",
+        "title": "Order 8",
+        "status": "Submitted",
+        "owner": "jane@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0009",
+        "title": "Order 9",
+        "status": "Draft",
+        "owner": "jane@example.com",
+        "_assign": null,
+        "_user_tags": null,
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0010",
+        "title": "Order 10",
+        "status": "Submitted",
+        "owner": "omar@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0011",
+        "title": "Order 11",
+        "status": "Draft",
+        "owner": "jane@example.com",
+        "_assign": null,
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      },
+      {
+        "name": "ODD-0012",
+        "title": "Order 12",
+        "status": "Submitted",
+        "owner": "jane@example.com",
+        "_assign": "[\"jane@example.com\"]",
+        "_user_tags": ",Priority,Review",
+        "docstatus": 0
+      }
+    ]
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "group_by:assigned_to"
+    }
+  ]
+}

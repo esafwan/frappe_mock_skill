@@ -1,0 +1,250 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "query_report",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "report": {
+      "report_name": "Stock Movement",
+      "name": "Stock Movement",
+      "ref_doctype": "Odd A",
+      "report_type": "Script Report",
+      "add_total_row": 1,
+      "filters": [
+        {
+          "fieldname": "company",
+          "label": "Company",
+          "fieldtype": "Data",
+          "default": "Example Co",
+          "reqd": 1
+        },
+        {
+          "fieldname": "from_date",
+          "label": "From Date",
+          "fieldtype": "Date",
+          "default": "Today",
+          "reqd": 1
+        },
+        {
+          "fieldname": "to_date",
+          "label": "To Date",
+          "fieldtype": "Date",
+          "default": "Today"
+        },
+        {
+          "fieldname": "status",
+          "label": "Status",
+          "fieldtype": "Select",
+          "options": "\nDraft\nSubmitted"
+        },
+        {
+          "fieldname": "party",
+          "label": "Party",
+          "fieldtype": "Link",
+          "options": "Odd A"
+        },
+        {
+          "fieldname": "include_all",
+          "label": "Include All",
+          "fieldtype": "Check"
+        },
+        {
+          "fieldname": "min_qty",
+          "label": "Min Qty",
+          "fieldtype": "Int"
+        },
+        {
+          "fieldname": "range",
+          "label": "Range",
+          "fieldtype": "DateRange"
+        }
+      ],
+      "columns": [
+        {
+          "fieldname": "item",
+          "label": "Item",
+          "fieldtype": "Data",
+          "width": 160
+        },
+        {
+          "fieldname": "status",
+          "label": "Status",
+          "fieldtype": "Data",
+          "width": 110
+        },
+        {
+          "fieldname": "qty",
+          "label": "Quantity",
+          "fieldtype": "Float",
+          "width": 110
+        },
+        {
+          "fieldname": "rate",
+          "label": "Rate",
+          "fieldtype": "Currency",
+          "width": 120
+        },
+        {
+          "fieldname": "amount",
+          "label": "Amount",
+          "fieldtype": "Currency",
+          "width": 140
+        }
+      ]
+    },
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "item": "ITEM-001",
+        "status": "Draft",
+        "qty": 3,
+        "rate": 120,
+        "amount": 360
+      },
+      {
+        "item": "ITEM-002",
+        "status": "Submitted",
+        "qty": 4,
+        "rate": 135,
+        "amount": 540
+      },
+      {
+        "item": "ITEM-003",
+        "status": "Draft",
+        "qty": 5,
+        "rate": 150,
+        "amount": 750
+      },
+      {
+        "item": "ITEM-004",
+        "status": "Submitted",
+        "qty": 6,
+        "rate": 165,
+        "amount": 990
+      },
+      {
+        "item": "ITEM-005",
+        "status": "Draft",
+        "qty": 7,
+        "rate": 180,
+        "amount": 1260
+      },
+      {
+        "item": "ITEM-006",
+        "status": "Submitted",
+        "qty": 8,
+        "rate": 195,
+        "amount": 1560
+      },
+      {
+        "item": "ITEM-007",
+        "status": "Draft",
+        "qty": 9,
+        "rate": 210,
+        "amount": 1890
+      },
+      {
+        "item": "ITEM-008",
+        "status": "Submitted",
+        "qty": 10,
+        "rate": 225,
+        "amount": 2250
+      },
+      {
+        "item": "ITEM-009",
+        "status": "Draft",
+        "qty": 11,
+        "rate": 240,
+        "amount": 2640
+      },
+      {
+        "item": "ITEM-010",
+        "status": "Submitted",
+        "qty": 12,
+        "rate": 255,
+        "amount": 3060
+      }
+    ],
+    "report_summary": [
+      {
+        "label": "Total Quantity",
+        "value": 75,
+        "indicator": "blue",
+        "datatype": "Float"
+      },
+      {
+        "separator": "-"
+      },
+      {
+        "label": "Total Amount",
+        "value": 25850,
+        "indicator": "green",
+        "datatype": "Currency"
+      },
+      {
+        "label": "Open Items",
+        "value": 4,
+        "indicator": "red",
+        "datatype": "Int"
+      }
+    ],
+    "chart": {
+      "type": "bar",
+      "labels": [
+        "ITEM-001",
+        "ITEM-002",
+        "ITEM-003",
+        "ITEM-004",
+        "ITEM-005",
+        "ITEM-006",
+        "ITEM-007",
+        "ITEM-008",
+        "ITEM-009",
+        "ITEM-010"
+      ],
+      "datasets": [
+        {
+          "name": "Amount",
+          "values": [
+            360,
+            540,
+            750,
+            990,
+            1260,
+            1560,
+            1890,
+            2250,
+            2640,
+            3060
+          ]
+        }
+      ]
+    },
+    "prepared": {
+      "status": "generating",
+      "progress": 40
+    }
+  },
+  "view": {},
+  "overlays": []
+}

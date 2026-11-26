@@ -389,7 +389,7 @@
 
     "menu_target": {
       "type": "string",
-      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length|views)|saved_views|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|form\\.menu|bulk-actions|view-switcher|notifications|help|user|column-header(:.+)?|dock\\.more|workspace\\.(menu|block_picker)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
+      "pattern": "^(page\\.(menu|actions|primary|view_switcher|sort|group_by|filter|settings|page_length|views)|saved_views|navbar\\.(search|notifications|help|user)|sidebar\\.(header|user)|form\\.menu|bulk-actions|view-switcher|notifications|help|user|column-header(:.+)?|dock\\.more|workspace\\.(menu|block_picker)|dashboard\\.(menu|chart-filter:.+)|button_group:.+|row_actions:[0-9]+|column:.+|field:.+|chart:.+|group_by:.+|ui:.+)$"
     },
 
     "dialog_action": {
@@ -413,7 +413,7 @@
       "required": ["type"],
       "properties": {
         "type": { "const": "dialog" },
-        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry", "assign_to", "share", "attach", "add_tag", "rename", "email", "msgprint_list", "missing_mandatory", "modified_conflict", "server_error", "list_settings", "quick_filters", "save_view"], "default": "dialog", "description": "Generic kinds (dialog, confirm, msgprint, quick_entry) or a named dialog id. Named dialogs read their own keys (see docs/SLICE3.md): assign_to {assign_to, myself, description, date, priority}, share {users, everyone}, attach {tab: device|link|camera, files, private, url}, add_tag {tag, tags}, rename {name, new_name, merge}, email {to, cc, subject, message, attachments, template}, msgprint_list {messages, intro}, missing_mandatory {doctype, fields}, modified_conflict {message, modified}, server_error {message, traceback}; list_settings, quick_filters, save_view {fields, values}." },
+        "kind": { "type": "string", "enum": ["dialog", "confirm", "msgprint", "quick_entry", "assign_to", "share", "attach", "add_tag", "rename", "email", "msgprint_list", "missing_mandatory", "modified_conflict", "server_error", "list_settings", "quick_filters", "save_view", "pick_columns", "add_column", "report_export", "export", "report_save_as", "save_as", "report_create_chart", "create_chart"], "default": "dialog", "description": "Generic kinds (dialog, confirm, msgprint, quick_entry) or a named dialog id. Named dialogs read their own keys (see docs/SLICE3.md): assign_to {assign_to, myself, description, date, priority}, share {users, everyone}, attach {tab: device|link|camera, files, private, url}, add_tag {tag, tags}, rename {name, new_name, merge}, email {to, cc, subject, message, attachments, template}, msgprint_list {messages, intro}, missing_mandatory {doctype, fields}, modified_conflict {message, modified}, server_error {message, traceback}; list_settings, quick_filters, save_view {fields, values}; report dialogs pick_columns, add_column, report_export (export), report_save_as (save_as), report_create_chart (create_chart) read available/selected/doctypes/formats/chart_types/values (see docs/SLICE4.md)." },
         "title": { "type": "string" },
         "indicator": { "$ref": "#/$defs/indicator_color", "description": "Title indicator colour (msgprint)." },
         "size": { "type": "string", "enum": ["small", "default", "large", "extra-large"], "default": "default" },

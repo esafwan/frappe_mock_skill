@@ -1,0 +1,36 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "report",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "../doctype/fixtures/test/odd_a.json",
+    "children": {
+      "Odd Child": "../doctype/fixtures/test/odd_child.json"
+    },
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": []
+  },
+  "view": {},
+  "overlays": []
+}
