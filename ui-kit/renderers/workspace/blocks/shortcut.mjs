@@ -25,7 +25,7 @@ export default function shortcut(data, ctx, spec) {
   const showCount = n !== undefined && Number.isFinite(Number(n)) && (s.type === 'DocType' || s.type === 'Report' || !s.type);
   const colour = colourOf(s.color);
   const vi = (VIEWS[String(s.doc_view || '').toLowerCase()] || [])[1];
-  const badge = showCount ? `<div class="indicator-pill ellipsis ${s.color ? 'shortcut-count' : 'grey'}" data-ui="shortcut.count" data-count="${n}"${colour ? ` style="color:${colour}"` : ''}>${esc(formatCount(s.format, n))}</div>` : '';
+  const badge = showCount ? `<div dir="auto" class="indicator-pill ellipsis ${s.color ? 'shortcut-count' : 'grey'}" data-ui="shortcut.count" data-count="${n}"${colour ? ` style="color:${colour}"` : ''}>${esc(formatCount(s.format, n))}</div>` : '';
   const href = /^url$/i.test(s.type || '') ? (s.url || s.link_to) : viewRoute(s.type, s.link_to, s.doc_view, s.kanban_board);
   const view = s.doc_view && !/^(doctype)?$/i.test(s.type || '') === false ? ` data-doc-view="${esc(s.doc_view)}"` : '';
   return `<a class="widget shortcut-widget-box" href="${esc(href)}" data-ui="card:${esc(s.label)}" data-widget-name="${esc(s.label)}" data-shortcut-type="${esc(s.type || 'DocType')}"${view}><div class="widget-head"><div class="widget-title ellipsis">${s.icon ? icon(s.icon, 'sm') + ' ' : ''}${!s.icon && vi && vi !== 'list' && /^(doctype)?$/i.test(s.type || '') ? icon(vi, 'sm') + ' ' : ''}<span class="ellipsis" title="${esc(s.label)}">${esc(s.label)}</span></div><div class="widget-control">${badge}${icon('move-up-right', 'xs')}</div></div></a>`;

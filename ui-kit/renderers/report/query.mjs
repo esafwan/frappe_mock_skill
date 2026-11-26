@@ -17,6 +17,7 @@ import { esc } from '../../kit-lib/util.mjs';
 import { icon } from '../../kit-lib/icons.mjs';
 import { chart as drawChart } from '../../kit-lib/chart.mjs';
 import { formatCell } from '../../kit-lib/cells.mjs';
+import { renderReportDialogs } from './dialogs.mjs';
 import { wrapFrappe } from '../../doctype/fields/base.mjs';
 import { adaptReport } from '../../adapters/report.mjs';
 import { loadFieldRenderers } from '../form/index.mjs';
@@ -139,13 +140,13 @@ function head(rep, view, ctx, st) {
 // ------------------------------------------------------------------ chart, summary, message
 
 /** Frappe chart config {type, data:{labels,datasets}} or the flat {type, labels, datasets}. */
-export function renderReportChart(c = {}, view = {}) {
+export function renderReportChart(c = {}, view = {}, ctx = {}) {
   const data = c.data && (c.data.labels || c.data.datasets) ? c.data : { labels: c.labels || [], datasets: c.datasets || [] };
   const type = String(c.type || 'bar').toLowerCase();
   const map = { axismixed: 'axis-mixed', 'axis-mixed': 'axis-mixed', line: 'line', bar: 'bar', pie: 'pie', donut: 'donut', percentage: 'percentage', heatmap: 'heatmap' };
   const kind = map[type] || 'bar';
   const empty = kind !== 'heatmap' && !(data.datasets || []).some((d) => (d.values || []).length);
-  const svg = empty ? '<div class="chart-empty text-muted text-center">No data</div>' : drawChart(kind, data, { width: 1080, height: c.height || 240, colors: c.colors });
+  const svg = empty ? '<div class="chart-empty text-muted text-center">No data</div>' : drawChart(kind, data, { width: 1080, height: c.height || 240, colors: c.colors, system: ctx.formatSystem, rtl: ctx.rtl });
   return `<div class="chart-wrapper" data-ui="report.chart" data-chart-type="${esc(kind)}"><div class="chart-container">${svg}</div></div>`;
 }
 
@@ -154,7 +155,7 @@ function summaryValue(item, ctx) {
   const v = item.value;
   if (v === undefined || v === null || v === '') return '';
   const dt = item.datatype || (typeof v === 'number' ? (item.currency ? 'Currency' : Number.isInteger(v) ? 'Int' : 'Float') : 'Data');
-  return formatCell({ fieldtype: dt, fieldname: 'v', precision: item.precision }, v, { currency: item.currency || ctx.currency, filterable: false }).html;
+  return formatCell({ fieldtype: dt, fieldname: 'v', precision: item.precision }, v, { currency: item.currency || ctx.currency, system: ctx.formatSystem, filterable: false }).html;
 }
 export function renderSummary(items = [], ctx = {}) {
   const arr = Array.isArray(items) ? items : [];
@@ -187,7 +188,7 @@ export function renderPrepared(p = {}, rep = {}) {
   if (status === 'queued') msg = `<span class="indicator-pill orange">Queued</span> <span>Report generation is queued. It will start shortly.</span>`;
   else if (status === 'generating') {
     const pr = Math.max(0, Math.min(100, Math.round(Number(p.progress) || 0)));
-    msg = `<span class="indicator-pill blue">In Progress</span> <span>Report generation in progress${p.progress !== undefined ? ` (${pr}%)` : ''}.</span><div class="progress" style="max-width:240px;display:inline-block;width:240px;vertical-align:middle;margin-inline-start:8px"><div class="progress-bar progress-bar-success" style="width:${pr}%"></div></div>`;
+    msg = `<span class="indicator-pill blue">In Progress</span> <span>Report generation in progress${p.progress !== undefined ? ` (${pr}%)` : ''}.</span><div class="progress" style="max-width:240px;display:inline-block;width:240px;height:6px;border-radius:3px;overflow:hidden;background:var(--gray-200,#ededed);vertical-align:middle;margin-inline-start:8px"><div class="progress-bar progress-bar-success" style="width:${pr}%;height:100%;background:var(--primary,#171717);border-radius:3px"></div></div>`;
   } else if (status === 'stale') msg = `<span class="indicator-pill orange">Outdated</span> <span>This report was generated${when ? ` on ${when}` : ''}. To get the updated report, click on <a href="#" class="rebuild-link">Rebuild</a>.</span>`;
   else msg = `<span class="indicator-pill green">Completed</span> <span>This report was generated${when ? ` on ${when}` : ''}. To get the updated report, click on <a href="#" class="rebuild-link">Rebuild</a>.</span>`;
   const banner = `<div class="prepared-report-banner flex align-center" data-ui="report.prepared" data-status="${status}">${select}<div class="prepared-report-message">${msg}</div></div>`;
@@ -222,7 +223,7 @@ export function treeRows(rows, tree = {}, rep = {}) {
 function fallbackTable(columns, rows, o) {
   const th = columns.map((c) => `<th class="dt-cell dt-cell--header" style="text-align:${c.align || (/^(Int|Float|Currency|Percent)$/.test(c.fieldtype) ? 'right' : 'left')}"><div class="dt-cell__content">${esc(c.label || c.fieldname)}</div></th>`).join('');
   const tr = rows.map((r, i) => `<tr class="dt-row" data-row-index="${i}">${columns.map((c, ci) => {
-    const f = formatCell(c, r[c.fieldname], { doc: r, currency: r.currency ?? o.currency, filterable: false });
+    const f = formatCell(c, r[c.fieldname], { doc: r, currency: r.currency ?? o.currency, system: o.system, filterable: false });
     const ind = o.tree && ci === 0 ? `<span class="dt-tree-indent" style="padding-inline-start:${(r.indent || 0) * 20}px">${r.has_children ? icon(r.expanded ? 'chevron-down' : 'chevron-right') : ''}</span>` : '';
     return `<td class="dt-cell" style="text-align:${f.align}"><div class="dt-cell__content">${ind}${f.html}</div></td>`;
   }).join('')}</tr>`).join('');
@@ -260,7 +261,7 @@ export async function buildQueryReportPage({ spec, ctx }) {
   const collapsed = t(view.filters_collapsed) || t(view.collapsible_filters_collapsed);
   const filtersHtml = filters.length ? renderFilters(filters, { values: view.filters || {}, collapsed, collapsible: view.collapsible_filters !== false, kit, ctx: { ...ctx, ref_doctype: rep.ref_doctype } }) : '';
 
-  const chartHtml = data.chart && !t(view.hide_chart) && !pr.body ? renderReportChart(data.chart, view) : '';
+  const chartHtml = data.chart && !t(view.hide_chart) && !pr.body ? renderReportChart(data.chart, view, ctx) : '';
   const summaryHtml = !t(view.hide_summary) && !pr.body ? renderSummary(data.report_summary, ctx) : '';
   const messageHtml = renderMessage(data.message);
 
@@ -269,14 +270,17 @@ export async function buildQueryReportPage({ spec, ctx }) {
   else if (!rows.length) body = `<div class="report-empty flex justify-center align-center text-muted" data-ui="report.empty" style="min-height:240px"><div class="msg-box no-border"><p>Nothing to show</p></div></div>`;
   else {
     const totals = t(rep.add_total_row) || view.show_totals ? { addRow: true } : null;
-    body = table(columns, rows, { tree: !!treeCfg, sort: view.sort, currency: ctx.system?.currency, rtl: ctx.rtl, totals, warn: ctx.warn });
+    body = table(columns, rows, { tree: !!treeCfg, sort: view.sort, currency: ctx.system?.currency, system: ctx.formatSystem, rtl: ctx.rtl, totals, warn: ctx.warn });
   }
-  const main = `<div class="layout-main-section report-wrapper" data-ui="report" data-report-type="${esc(rep.report_type)}">${filtersHtml}${pr.banner}${messageHtml}${chartHtml}${summaryHtml}<div class="report-body" data-ui="report.body">${body}</div></div>`;
+  const main = `<style data-ui="report.table-fill">.report-body .datatable .dt-header,.report-body .datatable .dt-body,.report-body .datatable .dt-footer{min-width:100%;width:max-content;box-sizing:border-box}.report-body .datatable .dt-header .dt-cell,.report-body .datatable .dt-header .dt-cell__content{background:transparent}</style><div class="layout-main-section report-wrapper" data-ui="report" data-report-type="${esc(rep.report_type)}">${filtersHtml}${pr.banner}${messageHtml}${chartHtml}${summaryHtml}<div class="report-body" data-ui="report.body">${body}</div></div>`;
   return { head: head(rep, view, ctx, { prepared: !!prep }), main, title: `${reportName(rep)} report`, columns, rows, ref_doctype: rep.ref_doctype };
 }
 
 export default async function render(spec, ctx) {
   const page = await buildQueryReportPage({ spec, ctx });
+  // report dialogs (Pick Columns, Export, Save As, Create Chart) over the report's own columns: same overlay path as the report view
+  const dlgMeta = { name: spec.meta?.report?.report_name || '', fields: (page.columns || []).map((c) => ({ fieldname: c.fieldname, label: c.label, fieldtype: c.fieldtype || 'Data' })) };
+  ctx.preDialogs = [...(ctx.preDialogs || []), ...renderReportDialogs({ spec, meta: dlgMeta, ctx, columns: page.columns || [] }).dialogs];
   const workspace = ctx.workspace || spec.ctx?.workspace || '';
   const chrome = { dock: true, sidebar: 'expanded', navbar: false, ...(ctx.chrome || {}) };
   const sctx = spec.ctx || {};

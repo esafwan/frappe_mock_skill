@@ -1,20 +1,25 @@
 // Axis charts (line, bar, axis-mixed, stacked) plus helpers shared by the chart modules.
 // Deterministic, no deps, generic. data = { labels, datasets: [{ name, values, chartType? }] }
 import { esc } from '../util.mjs';
+import { decimalSep } from '../format.mjs';
 
 export const PALETTE = ['#7cd6fd', '#5e64ff', '#743ee2', '#ff5858', '#ffa00a', '#feef72', '#28a745', '#98d85b', '#b554ff', '#ffa3ef', '#eceff1', '#b8c2cc'];
 export const MAX_SLICES = 6;
-export const MAX_POINTS = 9;
+export const MAX_POINTS = 60; // cap only for unreadable volumes; every row is shown below it
 export const GRANULARITIES = ['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly'];
 
 export const r2 = (n) => Math.round(n * 100) / 100;
-export const fmt = (n) => {
+// Decimal separator of ctx.system.number_format for the chart being drawn (set by chart() for the duration of a synchronous draw).
+let DEC = '.';
+export const setChartSystem = (system) => { const prev = DEC; DEC = system ? decimalSep(system) : '.'; return prev; };
+const raw = (n) => {
   const a = Math.abs(n);
   if (a >= 1e9) return r2(n / 1e9) + 'B';
   if (a >= 1e6) return r2(n / 1e6) + 'M';
   if (a >= 1e4) return r2(n / 1e3) + 'K';
   return String(r2(n));
 };
+export const fmt = (n) => (DEC === '.' ? raw(n) : raw(n).replace('.', DEC));
 export const color = (opts, i) => (opts.colors || PALETTE)[i % (opts.colors || PALETTE).length];
 export const tip = (label, name, v) => `<title>${esc(label)}${name ? ' · ' + esc(name) : ''}: ${esc(fmt(v))}</title>`;
 
@@ -70,11 +75,13 @@ export function axisChart(type, data, opts = {}) {
   const lo = ticks[0], hi = ticks[ticks.length - 1];
   const y = (v) => r2(T + ph - ((v - lo) / (hi - lo)) * ph);
   const y0 = y(0), n = labels.length, slot = pw / Math.max(n, 1);
-  const cx = (i) => r2(L + slot * i + slot / 2);
+  const rtl = !!opts.rtl; // mirrored: first label at the right, value axis on the right
+  const X0 = rtl ? R : L, X1 = rtl ? W - L : W - R;
+  const cx = (i) => r2(rtl ? X1 - slot * i - slot / 2 : L + slot * i + slot / 2);
   const nb = stacked ? 1 : Math.max(bars.length, 1);
   const bw = Math.min(28, (slot * 0.7) / nb);
   let s = `<svg class="frappe-chart-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">`;
-  s += `<g class="y-axis">${ticks.map((t) => `<g class="tick"><line class="${t === 0 ? 'zero-line' : 'grid-line'}" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="#ebeef0" stroke-dasharray="${t === 0 ? '' : '2,2'}"/><text x="${L - 6}" y="${y(t) + 3}" text-anchor="end" font-size="10" fill="#6c7680">${fmt(t)}</text></g>`).join('')}</g>`;
+  s += `<g class="y-axis">${ticks.map((t) => `<g class="tick"><line class="${t === 0 ? 'zero-line' : 'grid-line'}" x1="${X0}" x2="${X1}" y1="${y(t)}" y2="${y(t)}" stroke="#ebeef0" stroke-dasharray="${t === 0 ? '' : '2,2'}"/><text x="${rtl ? X1 + 6 : L - 6}" y="${y(t) + 3}" text-anchor="${rtl ? 'start' : 'end'}" font-size="10" fill="#6c7680">${fmt(t)}</text></g>`).join('')}</g>`;
   s += `<g class="x-axis">${labels.map((l, i) => `<text x="${cx(i)}" y="${H - 12}" text-anchor="middle" font-size="10" fill="#6c7680">${esc(l)}</text>`).join('')}</g>`;
   ds.forEach((d, di) => {
     const c = color(opts, di);

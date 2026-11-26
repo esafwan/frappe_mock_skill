@@ -29,7 +29,7 @@ function chartCell(row, ctx, spec, dash) {
   else {
     const t = TYPE[d.type] || String(d.type || 'line').toLowerCase();
     if (!CHART_TYPES.includes(t)) throw new Error(`dashboard: chart "${name}" has unknown type ${d.type}`);
-    body = drawChart(t, d, { title: label, colors: d.colors, width: half ? 520 : 1060, height: 240 });
+    body = drawChart(t, d, { title: label, colors: d.colors, width: half ? 520 : 1060, height: 240, system: ctx.formatSystem, rtl: ctx.rtl });
   }
   const open = overlaysOf(ctx, (o) => o.target === `dashboard.chart-filter:${name}` || (o.target === 'dashboard.chart-filter' && o.name === name)).length > 0;
   const controls = `<div class="widget-control" data-ui="dashboard.chart-controls:${esc(name)}"><span class="chart-filter-btn" data-ui="dashboard.chart-filter-btn:${esc(name)}">${icon('filter', 'sm')}</span><span class="chart-menu-btn">${icon('ellipsis', 'sm')}</span></div>`;
@@ -46,7 +46,7 @@ function cardCell(row, ctx, spec, dash) {
   const previous = d?.previous ?? (d?.delta !== undefined && d.delta !== -100 ? v / (1 + d.delta / 100) : undefined);
   const colour = d?.color || meta.color;
   const label = meta.label || name;
-  const html = numberCard({ label, value: v, previous, currency: d?.currency || meta.currency, colour: colour ? String(colour).toLowerCase() : undefined, compact: d?.compact, locale: ctx.locale, subtitle: d?.subtitle, deltaLabel: d?.deltaLabel })
+  const html = numberCard({ label, value: v, previous, currency: d?.currency || meta.currency, colour: colour ? String(colour).toLowerCase() : undefined, compact: d?.compact, locale: ctx.locale, system: ctx.formatSystem, subtitle: d?.subtitle, deltaLabel: d?.deltaLabel })
     .replace(/^<([a-zA-Z][\w-]*)/, (m, t) => `<${t} data-ui="card:${esc(label)}"`);
   return `<div class="dashboard-cell w-card" data-ui="dashboard.card-cell">${html}</div>`;
 }

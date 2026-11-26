@@ -1,0 +1,30 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [],
+    "total": 0
+  },
+  "view": {
+    "state": "empty"
+  },
+  "x-recipe": "list-empty",
+  "x-what-you-see": "The empty state illustration with \"You haven't created a Customer yet\" and a primary Create button."
+}

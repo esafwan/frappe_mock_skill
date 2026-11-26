@@ -1,0 +1,1093 @@
+<!doctype html>
+<html data-theme-mode="light" lang="en-IN" dir="ltr" class="chrome" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Everything</title>
+<link rel="stylesheet" href="../../tokens/css/frappe-desk.css">
+
+<style>html,body{margin:0}body{background:rgb(248, 248, 248);min-height:0px}#ui-kit-stage{display:contents}*{animation:none!important;transition:none!important;caret-color:transparent!important}</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style>@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+
+@keyframes bounceIn { 
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+:root { --charts-label-color: #313b44; --charts-axis-line-color: #f4f5f6; --charts-tooltip-title: var(--charts-label-color); --charts-tooltip-label: var(--charts-label-color); --charts-tooltip-value: #192734; --charts-tooltip-bg: #ffffff; --charts-stroke-width: 2px; --charts-dataset-circle-stroke: #ffffff; --charts-dataset-circle-stroke-width: var(--charts-stroke-width); --charts-legend-label: var(--charts-label-color); --charts-legend-value: var(--charts-label-color); }
+@keyframes system-trace { 
+  100% { transform: translateX(-13px); }
+}
+@keyframes geo-land { 
+  100% { transform: translateX(-25px); }
+}
+@keyframes automation-cycle { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes website-scroll { 
+  100% { transform: translateY(-28.3px); }
+}
+@keyframes factory-smoke { 
+  0% { transform: translate(0px, 0px) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(2.6px, -6.5px) scale(1.9); opacity: 0; }
+}
+@keyframes calculator-digit { 
+  0%, 5% { opacity: 0; }
+  10%, 75% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+@keyframes gantt-bar { 
+  0% { transform: scaleX(0); }
+  25%, 85% { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+@keyframes cart-roll { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(1.5px); }
+}
+@keyframes cart-load { 
+  0%, 45%, 100% { transform: translateY(0px); }
+  55% { transform: translateY(-1px); }
+  65% { transform: translateY(0px); }
+}
+@keyframes shelf-stock { 
+  0% { transform: translateX(7px); opacity: 0; animation-timing-function: ease-out; }
+  15% { opacity: 1; }
+  40% { transform: translateX(-0.6px); animation-timing-function: ease-in-out; }
+  50%, 85% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 0; }
+}
+@keyframes asset-hand-drop { 
+  0% { transform: translateY(-5px); opacity: 0; animation-timing-function: ease-out; }
+  20% { transform: translateY(0px); opacity: 1; animation-timing-function: ease-out; }
+  26% { transform: translateY(-0.8px); animation-timing-function: ease-in; }
+  32%, 85% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0; }
+}
+@keyframes plug-cord { 
+  0% { transform: translateY(0px); opacity: 0; }
+  5% { opacity: 1; }
+  28% { transform: translateY(-2.7px); opacity: 1; }
+  32%, 100% { transform: translateY(-2.7px); opacity: 0; }
+}
+@keyframes plug-prong { 
+  0%, 30% { transform: translateY(0px); opacity: 0; }
+  34% { opacity: 1; }
+  55% { transform: translateY(-3.4px); opacity: 1; }
+  60%, 100% { transform: translateY(-3.4px); opacity: 0; }
+}
+@keyframes plug-spark { 
+  0%, 55% { transform: scale(0); opacity: 0; }
+  65% { transform: scale(1.3); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  92%, 100% { transform: scale(0); opacity: 0; }
+}
+@keyframes briefcase-carry { 
+  0%, 100% { transform: translateY(-1px) rotate(0deg); }
+  25% { transform: translateY(-1.4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(0deg); }
+  75% { transform: translateY(-1.4px) rotate(-5deg); }
+}
+@keyframes tenure-sweep { 
+  100% { transform: rotate(360deg); }
+}
+@keyframes recruitment-scan { 
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(1.4px, -0.8px); }
+  50% { transform: translate(0px, -1.4px); }
+  75% { transform: translate(-1.4px, -0.8px); }
+}
+@keyframes tax-flip { 
+  0%, 15% { transform: scaleX(1); }
+  32.5% { transform: scaleX(0); }
+  50%, 100% { transform: scaleX(1); }
+}
+@keyframes attendance-punch { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(3.2px); }
+}
+@keyframes leaves-swing { 
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(9deg); }
+  75% { transform: rotate(-9deg); }
+}
+@keyframes performance-hop { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes payroll-rise { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.8px); }
+}
+@keyframes expenses-swipe { 
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-1.8px); }
+}
+</style>
+<style data-ui="shell.kit-css">/* Kit-only rules for markup the captured desk CSS does not style. Inlined into every page by shell.mjs (data-ui="shell.kit-css").
+   Source: not in captured CSS (tokens/css/frappe-desk.css has no static air-datepicker popup layout; the real one is positioned by JS). */
+.datepicker.active{position:absolute;left:0;top:100%;display:block;opacity:1;z-index:1060;background:var(--fg-color,#fff);border:1px solid var(--border-color,#e5e7eb);border-radius:8px;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.12));margin-top:2px;width:260px;padding:8px}
+.datepicker.active.-only-timepicker-{width:auto;display:flex}
+.datepicker--nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.datepicker--days-names,.datepicker--cells-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
+.datepicker--cell-day{width:auto}
+.datepicker--cell.-selected-{background:var(--ink-gray-9,#171717);color:var(--surface-white,#fff)}
+.timepicker-col{max-height:160px;overflow:auto;padding:0 6px;text-align:center}
+/* Nested row form: each level stacks lower and narrower than its parent (data-depth is 1, 2, ...). */
+.form-in-grid[data-depth]:not([data-depth="0"]){background:var(--modal-bg,var(--surface-white,#fff));box-shadow:var(--shadow-xl,0 12px 32px rgba(0,0,0,.25));border:1px solid var(--border-color,#ededed)}
+.form-in-grid[data-depth="1"]{top:64px;width:calc(100% - 56px);z-index:1040}
+.form-in-grid[data-depth="2"]{top:128px;width:calc(100% - 112px);z-index:1041}
+.form-in-grid[data-depth="3"]{top:192px;width:calc(100% - 168px);z-index:1042}</style>
+<style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}</style><style data-ui="kit.base">/* Kit base: the only place raw colours live (tests/rtl-dark.mjs enforces this). Generic; no doctype/app/brand names.
+   1. --kit-* colour tokens (light = :root, dark = [data-theme="dark"]). Renderers use var(--kit-*) instead of hex.
+   2. Dark fixes for kit-drawn surfaces whose inline styles carry fallbacks.
+   3. RTL: logical overrides for physical left/right in kit-drawn CSS. Add as [dir="rtl"] rules, never in renderers. */
+:root{
+  --kit-green:#28a745;--kit-red:#e24c4c;--kit-blue:#318ad8;--kit-orange:#ff8c0a;--kit-grey:#6c7680;
+  --kit-axis-text:#6c7680;--kit-axis-line:#d1d8dd;--kit-skeleton:#ededed;--kit-skeleton-hi:#f7f7f7;
+  --kit-heat-0:#ebedf0;--kit-heat-1:#c6e48b;--kit-heat-2:#7bc96f;--kit-heat-3:#239a3b;--kit-heat-4:#196127;
+  --kit-surface:#fff;--kit-surface-sunken:#f7fafc;--kit-border:#ededed;--kit-ink:#171717;--kit-scrim:rgba(0,0,0,.4);
+  --kit-shadow:rgba(0,0,0,.12);--kit-primary:#5e64ff;
+  /* status fills for the tool pages (coverage matrix, contact sheet) */
+  --kit-ok-bg:#c9f0d4;--kit-bad-bg:#f7c5c5;--kit-bad-ink:#a11;--kit-warn-ink:#a60;
+  /* map tile palette (renderers/map): drawn tiles are not part of the app theme, so they have their own tokens, with a dim set for dark */
+  --kit-map-water:#cfe0ea;--kit-map-land-a:#e9ece6;--kit-map-land-b:#eef0ea;--kit-map-edge:#dfe2db;--kit-map-road:#fff;--kit-map-road-edge:#d9dcd2;--kit-map-park:#dde8d3;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --kit-green:#3fbd62;--kit-red:#f06a6a;--kit-blue:#5aa5ea;--kit-orange:#ffa23a;--kit-grey:#9aa3ad;
+  --kit-axis-text:#9aa3ad;--kit-axis-line:#3a3a3a;--kit-skeleton:#2e2e2e;--kit-skeleton-hi:#383838;
+  --kit-heat-0:#2d333b;--kit-heat-1:#0e4429;--kit-heat-2:#006d32;--kit-heat-3:#26a641;--kit-heat-4:#39d353;
+  --kit-surface:#171717;--kit-surface-sunken:#1f1f1f;--kit-border:#2e2e2e;--kit-ink:#f3f3f3;--kit-scrim:rgba(0,0,0,.65);
+  --kit-shadow:rgba(0,0,0,.5);--kit-primary:#8b90ff;
+  --kit-ok-bg:#1f4a2c;--kit-bad-bg:#5a2626;--kit-bad-ink:#f28b8b;--kit-warn-ink:#e0a458;
+  --kit-map-water:#2a3f4d;--kit-map-land-a:#2b2f2a;--kit-map-land-b:#262a25;--kit-map-edge:#343830;--kit-map-road:#3d4239;--kit-map-road-edge:#444a3f;--kit-map-park:#2c3a2a;
+}
+/* 2. dark surfaces that renderers draw with light fallbacks */
+[data-theme="dark"] .datatable .dt-row,[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .datatable .dt-header .dt-row,[data-theme="dark"] .datatable .dt-row-totals{background:var(--kit-surface-sunken)}
+[data-theme="dark"] .skeleton-box{background:var(--kit-skeleton)!important}
+[data-theme="dark"] .datepicker.active,[data-theme="dark"] .form-in-grid[data-depth]:not([data-depth="0"]){background:var(--kit-surface);border-color:var(--kit-border);color:var(--kit-ink)}
+[data-theme="dark"] .y-axis text,[data-theme="dark"] .x-axis text{fill:var(--kit-axis-text)}
+[data-theme="dark"] .grid-line{stroke:var(--kit-axis-line)}
+/* 3. RTL logical overrides */
+[dir="rtl"] body{direction:rtl;text-align:start}
+[dir="rtl"] .menu-btn-group>.dropdown-menu,[dir="rtl"] .dropdown-menu-right{right:auto;left:0}
+[dir="rtl"] .datepicker.active{left:auto;right:0}
+[dir="rtl"] .dock-item-unread{right:auto;left:8px}
+[dir="rtl"] .datatable .dt-cell__resize-handle{right:auto;left:0}
+[dir="rtl"] .text-right{text-align:left}
+[dir="rtl"] .text-left{text-align:right}
+[dir="rtl"] .datatable .dt-cell--align-right,[dir="rtl"] .dt-cell--col-type-currency .dt-cell__content{text-align:left}
+[dir="rtl"] svg,[dir="rtl"] .chart-container{direction:ltr}
+[dir="rtl"] input[type="number"],[dir="rtl"] .ltr-isolate{unicode-bidi:plaintext}
+[data-theme="dark"] body{background-color:var(--bg-color,var(--kit-surface));color:var(--text-color,var(--kit-ink))}
+</style></head>
+<body data-ajax-state="complete" class="desktop-page dock-active dock-pinned dock-open" data-route="workspace" data-sidebar="1">
+<div id="ui-kit-stage" class="ui-kit-page">
+<svg class="icon-sprite" id="frappe-symbols" aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="icon-arrow-right">
+      <path d="M5 12h14"></path>
+      <path d="m12 5 7 7-7 7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-arrow-up-right">
+      <path d="M7 7h10v10"></path>
+      <path d="M7 17 17 7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-calculator-duotone" stroke="none">
+		<path fill-rule="evenodd" d="M7 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H7A2 2 0 0 1 5 20V4A2 2 0 0 1 7 2Z M7.8 4H16.2A0.8 0.8 0 0 1 17 4.8V8.2A0.8 0.8 0 0 1 16.2 9H7.8A0.8 0.8 0 0 1 7 8.2V4.8A0.8 0.8 0 0 1 7.8 4Z M8 11H9.4A0.5 0.5 0 0 1 9.9 11.5V12.9A0.5 0.5 0 0 1 9.4 13.4H8A0.5 0.5 0 0 1 7.5 12.9V11.5A0.5 0.5 0 0 1 8 11Z M11.3 11H12.7A0.5 0.5 0 0 1 13.2 11.5V12.9A0.5 0.5 0 0 1 12.7 13.4H11.3A0.5 0.5 0 0 1 10.8 12.9V11.5A0.5 0.5 0 0 1 11.3 11Z M14.6 11H16A0.5 0.5 0 0 1 16.5 11.5V12.9A0.5 0.5 0 0 1 16 13.4H14.6A0.5 0.5 0 0 1 14.1 12.9V11.5A0.5 0.5 0 0 1 14.6 11Z M8 14.3H9.4A0.5 0.5 0 0 1 9.9 14.8V16.2A0.5 0.5 0 0 1 9.4 16.7H8A0.5 0.5 0 0 1 7.5 16.2V14.8A0.5 0.5 0 0 1 8 14.3Z M11.3 14.3H12.7A0.5 0.5 0 0 1 13.2 14.8V16.2A0.5 0.5 0 0 1 12.7 16.7H11.3A0.5 0.5 0 0 1 10.8 16.2V14.8A0.5 0.5 0 0 1 11.3 14.3Z M14.6 14.3H16A0.5 0.5 0 0 1 16.5 14.8V16.2A0.5 0.5 0 0 1 16 16.7H14.6A0.5 0.5 0 0 1 14.1 16.2V14.8A0.5 0.5 0 0 1 14.6 14.3Z M8 17.6H9.4A0.5 0.5 0 0 1 9.9 18.1V19.5A0.5 0.5 0 0 1 9.4 20H8A0.5 0.5 0 0 1 7.5 19.5V18.1A0.5 0.5 0 0 1 8 17.6Z M11.3 17.6H12.7A0.5 0.5 0 0 1 13.2 18.1V19.5A0.5 0.5 0 0 1 12.7 20H11.3A0.5 0.5 0 0 1 10.8 19.5V18.1A0.5 0.5 0 0 1 11.3 17.6Z" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></path>
+		<rect x="7.6" y="4.6" width="8.8" height="3.8" rx="0.4" style="fill: light-dark(var(--duotone-light, var(--ink-gray-3)), transparent)"></rect>
+		<g class="calculator-digits">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6)))"></rect>
+		</g>
+		<g class="calculator-typing">
+			<rect x="14.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0s"></rect>
+			<rect x="12.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.25s"></rect>
+			<rect x="10.4" y="5.6" width="1.3" height="1.8" style="fill: var(--duotone-dark, light-dark(var(--ink-gray-5), var(--ink-gray-6))); animation-delay: 0.5s"></rect>
+		</g>
+		<rect x="14.1" y="17.6" width="2.4" height="2.4" rx="0.5" style="fill: var(--duotone-light, var(--ink-gray-3))"></rect>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-calendar">
+      <path d="M8 2v3"></path>
+      <path d="M16 2v3"></path>
+      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+      <path d="M3 9h18"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-column">
+      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+      <path d="M18 17V9"></path>
+      <path d="M13 17V5"></path>
+      <path d="M8 17v-3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-gantt">
+      <path d="M10 6h8"></path>
+      <path d="M12 16h6"></path>
+      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+      <path d="M8 11h7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-chart-no-axes-column">
+      <path d="M5 21v-6"></path>
+      <path d="M12 21V3"></path>
+      <path d="M19 21V9"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-circle">
+      <circle cx="12" cy="12" r="10"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-circle-check">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="m16 9-5.5 5.5L8 12"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-circle-dashed">
+      <path d="M10.1 2.182a10 10 0 0 1 3.8 0"></path>
+      <path d="M13.9 21.818a10 10 0 0 1-3.8 0"></path>
+      <path d="M17.609 3.721a10 10 0 0 1 2.69 2.7"></path>
+      <path d="M2.182 13.9a10 10 0 0 1 0-3.8"></path>
+      <path d="M20.279 17.609a10 10 0 0 1-2.7 2.69"></path>
+      <path d="M21.818 10.1a10 10 0 0 1 0 3.8"></path>
+      <path d="M3.721 6.391a10 10 0 0 1 2.7-2.69"></path>
+      <path d="M6.391 20.279a10 10 0 0 1-2.69-2.7"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-columns-3">
+      <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+      <path d="M9 3v18"></path>
+      <path d="M15 3v18"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-computer">
+      <path d="M12 18h6"></path>
+      <path d="M6 18h.01"></path>
+      <path d="M8 6h1"></path>
+      <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+      <rect x="4" y="2" width="16" height="12" rx="2"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-ellipsis">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="19" cy="12" r="1"></circle>
+      <circle cx="5" cy="12" r="1"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-expenses">
+		<rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-file-text">
+      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+      <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+      <path d="M10 9H8"></path>
+      <path d="M16 13H8"></path>
+      <path d="M16 17H8"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-git-fork">
+      <circle cx="12" cy="18" r="3"></circle>
+      <circle cx="6" cy="6" r="3"></circle>
+      <circle cx="18" cy="6" r="3"></circle>
+      <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path>
+      <path d="M12 12v3"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-house">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-image">
+      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+      <circle cx="9" cy="9" r="2"></circle>
+      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-inbox">
+      <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+      <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-dashboard">
+      <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+      <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-layout-grid">
+      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-map">
+      <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path>
+      <path d="M15 5.764v15"></path>
+      <path d="M9 3.236v15"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-move-up-right">
+      <path d="M13 5H19V11"></path>
+      <path d="M19 5L5 19"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-package">
+      <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
+      <path d="M12 22V12"></path>
+      <polyline points="3.29 7 12 12 20.71 7"></polyline>
+      <path d="m7.5 4.27 9 5.15"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-plus">
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt">
+      <path d="M12 17V7"></path>
+      <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-receipt-text">
+      <path d="M13 16H8"></path>
+      <path d="M14 8H8"></path>
+      <path d="M16 12H8"></path>
+      <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-sell">
+		<path d="M3 8h18M3 6v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke-miterlimit="10" stroke-linecap="square"></path>
+		<path d="M6.273 15.136h4.09" stroke-miterlimit="10" stroke-linecap="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-settings">
+      <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-stock">
+		<path d="M7.5 4.84l9.818 4.91M21 7.91L12.818 12 3 7.09M12.818 12v9" stroke-miterlimit="10"></path>
+		<path d="M19.894 7.356A2 2 0 0 1 21 9.146v5.813a2 2 0 0 1-.971 1.715l-6.27 3.761a2 2 0 0 1-1.923.074l-7.73-3.865A2 2 0 0 1 3 14.854V8.328a2 2 0 0 1 1.106-1.789l6.181-3.09a2 2 0 0 1 1.79 0l7.817 3.908z" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+	</symbol><symbol viewBox="0 0 24 24" id="icon-store">
+      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
+      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-truck">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+      <path d="M15 18H9"></path>
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+      <circle cx="17" cy="18" r="2"></circle>
+      <circle cx="7" cy="18" r="2"></circle>
+    </symbol><symbol viewBox="0 0 24 24" id="icon-users">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+    </symbol></svg>
+<div class="dock" id="desk-dock" role="navigation" aria-label="Apps" aria-hidden="false" data-ui="dock">
+<div class="dock-logo"><a class="shell-header" href="#" aria-label="All apps" data-ui="dock.link-1"><div class="header-logo"><span class="dock-logo-glyph" role="img" aria-label=""><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span></div><div class="title-container"><div class="header-title"></div></div></a></div>
+<div class="dock-items"><button class="dock-item  " aria-label="Accounts" data-ui="dock.button-2"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-calculator-duotone"></use></svg></span><span class="dock-item-label">Accounts</span></button><button class="dock-item  " aria-label="GST India" data-ui="dock.button-3"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-expenses"></use></svg></span><span class="dock-item-label">GST India</span></button><button class="dock-item active " aria-label="Selling" aria-current="page" data-ui="dock.button-4"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-sell"></use></svg></span><span class="dock-item-label">Selling</span></button><button class="dock-item  " aria-label="Setup" data-ui="dock.button-5"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-layout-grid"></use></svg></span><span class="dock-item-label">Setup</span></button><button class="dock-item  " aria-label="Stock" data-ui="dock.button-6"><span class="dock-item-icon"><svg class="icon icon-rail" aria-hidden="true"><use href="#icon-stock"></use></svg></span><span class="dock-item-label">Stock</span></button></div>
+<div class="dock-user" aria-haspopup="menu" aria-expanded="false"><button class="dock-item dock-user-button" aria-label="User Menu" data-ui="dock.button-7"><span class="avatar avatar-medium"><div class="avatar-frame standard-image" style="background-color: var(--dark-green-avatar-bg); color: var(--dark-green-avatar-color)">J</div></span></button></div>
+</div>
+<div class="body-sidebar-container expanded" data-ui="sidebar"><div class="body-sidebar" data-title="Selling"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1"><div class="header-logo"><svg class="icon icon-md"><use href="#icon-sell"></use></svg></div><div class="title-container"><div class="sidebar-item-label header-title">Selling</div></div></a><div class="body-sidebar-top"><div class="sidebar-items"><div class="sidebar-item-container" item-name="Home" data-id="Home"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-0"><span class="sidebar-item-icon" item-icon="house"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-house"></use></svg></span><span class="sidebar-item-label">Home</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Dashboard" data-id="Dashboard"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Dashboard" data-ui="sidebar.link-1"><span class="sidebar-item-icon" item-icon="chart-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-column"></use></svg></span><span class="sidebar-item-label">Dashboard</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Customer" data-id="Customer"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-2"><span class="sidebar-item-icon" item-icon="users"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-users"></use></svg></span><span class="sidebar-item-label">Customer</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Quotation" data-id="Quotation"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-3"><span class="sidebar-item-icon" item-icon="receipt-text"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt-text"></use></svg></span><span class="sidebar-item-label">Quotation</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Order" data-id="Sales Order"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-4"><span class="sidebar-item-icon" item-icon="store"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-store"></use></svg></span><span class="sidebar-item-label">Sales Order</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Delivery Note" data-id="Delivery Note"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-5"><span class="sidebar-item-icon" item-icon="truck"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-truck"></use></svg></span><span class="sidebar-item-label">Delivery Note</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Sales Invoice" data-id="Sales Invoice"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="DocType" data-ui="sidebar.link-6"><span class="sidebar-item-icon" item-icon="receipt"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-receipt"></use></svg></span><span class="sidebar-item-label">Sales Invoice</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Reports" data-id="Reports"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-7"><span class="sidebar-item-icon" item-icon="chart-no-axes-column"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-no-axes-column"></use></svg></span><span class="sidebar-item-label">Reports</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Items" data-id="Items"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-8"><span class="sidebar-item-icon" item-icon="package"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-package"></use></svg></span><span class="sidebar-item-label">Items</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="POS" data-id="POS"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Page" data-ui="sidebar.link-9"><span class="sidebar-item-icon" item-icon="computer"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-computer"></use></svg></span><span class="sidebar-item-label">POS</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div><div class="sidebar-item-container" item-name="Setup" data-id="Setup"><div class="standard-sidebar-item"><a href="#" target="" class="item-anchor" data-link-type="Workspace" data-ui="sidebar.link-10"><span class="sidebar-item-icon" item-icon="settings"><svg class="icon icon-sm current-color" stroke="currentColor" aria-hidden="true"><use href="#icon-settings"></use></svg></span><span class="sidebar-item-label">Setup</span><div class="sidebar-item-control"></div></a></div><div class="sidebar-child-item nested-container"></div></div></div></div></div></div>
+<div class="main-section"><div id="body"><div id="page-workspace" class="content page-container" data-ui="page">
+<div data-ui="shell.head"><div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between"><div class="page-title"><div class="flex title-area ellipsis"><nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item" aria-current="page"><span class="es-breadcrumbs__label">Everything</span></span></li></ol></nav><span class="indicator-pill green no-indicator-dot" data-ui="workspace.badge" data-visibility="public">Public</span></div></div><div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex"><div class="menu-btn-group" data-ui="workspace.menu"><button class="btn btn-default icon-btn" data-ui="page.menu-button" aria-label="Menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></button></div></div></div></div></div></div></div></div>
+<div class="container page-body"><div class="page-wrapper"><div class="page-content"><div class="layout-main"><div class="layout-main-section-wrapper"><div class="layout-main-section" data-ui="shell.main"><style data-ui="workspace.layout">.workspace-page{padding:0 16px;box-sizing:border-box}.workspace-grid{display:flex;flex-wrap:wrap;gap:0;margin:0 -8px;align-items:stretch}.workspace-grid>.ce-block{box-sizing:border-box;padding:0 8px 16px;min-width:0}.workspace-grid>.grid-col-1{width:8.3333%;flex:0 0 8.3333%;max-width:8.3333%}.workspace-grid>.grid-col-2{width:16.6667%;flex:0 0 16.6667%;max-width:16.6667%}.workspace-grid>.grid-col-3{width:25.0000%;flex:0 0 25.0000%;max-width:25.0000%}.workspace-grid>.grid-col-4{width:33.3333%;flex:0 0 33.3333%;max-width:33.3333%}.workspace-grid>.grid-col-5{width:41.6667%;flex:0 0 41.6667%;max-width:41.6667%}.workspace-grid>.grid-col-6{width:50.0000%;flex:0 0 50.0000%;max-width:50.0000%}.workspace-grid>.grid-col-7{width:58.3333%;flex:0 0 58.3333%;max-width:58.3333%}.workspace-grid>.grid-col-8{width:66.6667%;flex:0 0 66.6667%;max-width:66.6667%}.workspace-grid>.grid-col-9{width:75.0000%;flex:0 0 75.0000%;max-width:75.0000%}.workspace-grid>.grid-col-10{width:83.3333%;flex:0 0 83.3333%;max-width:83.3333%}.workspace-grid>.grid-col-11{width:91.6667%;flex:0 0 91.6667%;max-width:91.6667%}.workspace-grid>.grid-col-12{width:100.0000%;flex:0 0 100.0000%;max-width:100.0000%}@media(max-width:767px){.workspace-grid>.ce-block{width:100%;flex-basis:100%;max-width:100%}}.workspace-grid .ce-block__content{height:100%}.workspace-grid .widget{height:100%;box-sizing:border-box}.widget-group-title{margin:8px 0}.link-items .link-item{display:flex;align-items:center;gap:6px;padding:4px 0}.ce-spacer{width:100%}.chart-widget{display:flex;flex-direction:column;width:100%;min-height:300px}.chart-widget .widget-body{flex:1 1 auto;min-height:240px;width:100%}.chart-widget .widget-body svg{display:block;width:100%;height:auto;max-height:300px;margin:0 auto}.chart-widget .chart-empty{display:flex;align-items:center;justify-content:center;min-height:240px}.number-widget-box .stat,.number-widget-box [class*=-stat]{display:inline-flex;gap:4px;align-items:center}.onboarding-widget-box{display:flex;flex-direction:column;gap:8px}.onboarding-widget-box .onboarding-progress{height:4px;margin:0 0 4px;border-radius:2px;overflow:hidden}.onboarding-widget-box .onboarding-progress .progress-bar{height:100%}.onboarding-steps{display:flex;flex-direction:column}.onboarding-step{display:block!important;padding:8px 0;border-top:1px solid var(--border-color,#ededed)}.onboarding-step:first-child{border-top:0}.onboarding-step .step-title{display:flex;align-items:center;gap:8px}.onboarding-step .step-check{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;flex:none}.onboarding-step .step-body{padding:4px 0 0 28px;padding-inline:28px 0;padding-block:4px 0;text-align:start;display:block}.onboarding-step .step-body .btn{margin-top:8px}.shortcut-widget-box .widget-title,.shortcut-widget-box .widget-title .ellipsis{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;unicode-bidi:plaintext}.shortcut-widget-box .widget-control{display:flex;align-items:center;gap:6px;flex:none}.indicator-pill,.number-widget-box .stat{unicode-bidi:isolate}.indicator-pill{flex-direction:row}[dir=rtl] .workspace-grid>.ce-block{direction:rtl}</style><div class="desk-page workspace-page" data-ui="workspace.page"><div class="workspace-grid editor-js-container" data-ui="workspace.grid"><div class="ce-block grid-col-12" data-ui="block:header" data-block-id="b0" data-col="12"><div class="ce-block__content"><div class="widget widget-group-head" data-ui="block.header"><div class="widget-group-title h4"><span class="h4"><b>Workspace overview</b></span></div></div></div></div><div class="ce-block grid-col-12" data-ui="block:paragraph" data-block-id="b1" data-col="12"><div class="ce-block__content"><div class="ce-paragraph" data-ui="block.paragraph">Every block type, column width and shortcut view in one place.</div></div></div><div class="ce-block grid-col-12" data-ui="block:onboarding" data-block-id="b2" data-col="12"><div class="ce-block__content"><div class="widget onboarding-widget-box" data-ui="card:Setup" data-widget-name="Setup"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">Setup</span></div><div class="widget-subtitle" data-ui="onboarding.progress" dir="auto"><bdi>1</bdi> of <bdi>3</bdi> steps done</div></div></div><div class="widget-body"><div class="progress onboarding-progress" data-ui="onboarding.bar" role="progressbar" aria-valuenow="33" style="display:flex;gap:2px;height:6px;margin-bottom:8px"><span class="progress-interval filled" style="flex:1;height:100%;border-radius:2px;background:var(--ink-green-7, #28a745)"></span><span class="progress-interval " style="flex:1;height:100%;border-radius:2px;background:var(--bg-gray, #ededed)"></span><span class="progress-interval " style="flex:1;height:100%;border-radius:2px;background:var(--bg-gray, #ededed)"></span></div><div class="onboarding-steps flex flex-col gap-0.5"><div class="onboarding-step rounded-md px-2 complete" data-ui="onboarding.step" data-status="Complete"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="false"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle-check"></use></svg></span><span class="step-title text-base truncate">Create a record</span></button></div><div class="onboarding-step rounded-md px-2 is-open" data-ui="onboarding.step" data-status="Pending"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="true"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle"></use></svg></span><span class="step-title text-base truncate">Review the setup</span></button><div class="onboarding-step-collapse"><div class="onboarding-step-body"><div class="onboarding-step-content flex flex-col gap-3"><div class="onboarding-step-description text-p-sm text-ink-gray-6">Check the defaults</div><div class="flex items-center gap-2" data-ui="onboarding.actions"><button class="es-button" type="button" data-variant="solid" data-ui="onboarding.action"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Go</span></button><button class="es-button" type="button" data-variant="subtle"><span class="es-spinner" aria-hidden="true"></span><span class="es-button__label">Skip</span></button></div></div></div></div></div><div class="onboarding-step rounded-md px-2 skipped" data-ui="onboarding.step" data-status="Skipped"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="false"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle-dashed"></use></svg></span><span class="step-title text-base truncate">Optional extra</span><span class="es-badge" data-theme="gray"><span>Optional</span></span><span class="step-skipped text-p-sm text-ink-gray-4 ms-auto">Skipped</span></button></div><div class="onboarding-step rounded-md px-2" data-ui="onboarding.step" data-status="Pending"><button type="button" class="onboarding-step-head flex items-center gap-2 w-full" aria-expanded="false"><span class="step-icon shrink-0 flex"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-circle"></use></svg></span><span class="step-title text-base truncate">Add details</span></button></div></div></div></div></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b3" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a" data-ui="card:List view" data-widget-name="List view" data-shortcut-type="DocType" data-doc-view="List"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="List view">List view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="3" style="color:#6c7680">3 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b4" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/report" data-ui="card:Report Builder view" data-widget-name="Report Builder view" data-shortcut-type="DocType" data-doc-view="Report Builder"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-file-text"></use></svg> <span class="ellipsis" title="Report Builder view">Report Builder view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="10" style="color:#28a745">10 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b5" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/dashboard" data-ui="card:Dashboard view" data-widget-name="Dashboard view" data-shortcut-type="DocType" data-doc-view="Dashboard"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-layout-dashboard"></use></svg> <span class="ellipsis" title="Dashboard view">Dashboard view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="17" style="color:#318ad8">17 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b6" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/tree" data-ui="card:Tree view" data-widget-name="Tree view" data-shortcut-type="DocType" data-doc-view="Tree"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-git-fork"></use></svg> <span class="ellipsis" title="Tree view">Tree view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="24" style="color:#e24c4c">24 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b7" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/new" data-ui="card:New view" data-widget-name="New view" data-shortcut-type="DocType" data-doc-view="New"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-plus"></use></svg> <span class="ellipsis" title="New view">New view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="31" style="color:#ff8c0a">31 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b8" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/calendar" data-ui="card:Calendar view" data-widget-name="Calendar view" data-shortcut-type="DocType" data-doc-view="Calendar"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-calendar"></use></svg> <span class="ellipsis" title="Calendar view">Calendar view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="38" style="color:#00b8d9">38 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b9" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/kanban/Order%20Board" data-ui="card:Kanban view" data-widget-name="Kanban view" data-shortcut-type="DocType" data-doc-view="Kanban"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-columns-3"></use></svg> <span class="ellipsis" title="Kanban view">Kanban view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="45" style="color:#6c7680">45 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b10" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/image" data-ui="card:Image view" data-widget-name="Image view" data-shortcut-type="DocType" data-doc-view="Image"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-image"></use></svg> <span class="ellipsis" title="Image view">Image view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="52" style="color:#28a745">52 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b11" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/gantt" data-ui="card:Gantt view" data-widget-name="Gantt view" data-shortcut-type="DocType" data-doc-view="Gantt"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-chart-gantt"></use></svg> <span class="ellipsis" title="Gantt view">Gantt view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="59" style="color:#318ad8">59 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b12" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/map" data-ui="card:Map view" data-widget-name="Map view" data-shortcut-type="DocType" data-doc-view="Map"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-map"></use></svg> <span class="ellipsis" title="Map view">Map view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="66" style="color:#e24c4c">66 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b13" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/odd-a/view/inbox" data-ui="card:Inbox view" data-widget-name="Inbox view" data-shortcut-type="DocType" data-doc-view="Inbox"><div class="widget-head"><div class="widget-title ellipsis"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-inbox"></use></svg> <span class="ellipsis" title="Inbox view">Inbox view</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis shortcut-count" data-ui="shortcut.count" data-count="73" style="color:#ff8c0a">73 Open</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b14" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/query-report/Stock%20Movement" data-ui="card:A Report" data-widget-name="A Report" data-shortcut-type="Report"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="A Report">A Report</span></div><div class="widget-control"><div dir="auto" class="indicator-pill ellipsis grey" data-ui="shortcut.count" data-count="80">80</div><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b15" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/setup-wizard" data-ui="card:A Page" data-widget-name="A Page" data-shortcut-type="Page"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="A Page">A Page</span></div><div class="widget-control"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b16" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/dashboard-view/Overview" data-ui="card:A Dashboard" data-widget-name="A Dashboard" data-shortcut-type="Dashboard"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="A Dashboard">A Dashboard</span></div><div class="widget-control"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b17" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="/desk/home" data-ui="card:A Workspace" data-widget-name="A Workspace" data-shortcut-type="Workspace"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="A Workspace">A Workspace</span></div><div class="widget-control"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-3" data-ui="block:shortcut" data-block-id="b18" data-col="3"><div class="ce-block__content"><a class="widget shortcut-widget-box" href="https://example.com/docs" data-ui="card:External" data-widget-name="External" data-shortcut-type="URL"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="External">External</span></div><div class="widget-control"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-move-up-right"></use></svg></div></div></a></div></div><div class="ce-block grid-col-12" data-ui="block:spacer" data-block-id="b19" data-col="12"><div class="ce-block__content"><div class="ce-spacer" data-ui="block.spacer" style="height:24px"></div></div></div><div class="ce-block grid-col-12" data-ui="block:header" data-block-id="b20" data-col="12"><div class="ce-block__content"><div class="widget widget-group-head" data-ui="block.header"><div class="widget-group-title h4"><span class="h5">Numbers</span></div></div></div></div><div class="ce-block grid-col-3" data-ui="block:number_card" data-block-id="b21" data-col="3"><div class="ce-block__content"><div data-ui="card:Open Orders" class="widget number-widget-box" data-ui="number-card" data-widget-name="Open Orders"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Open Orders">Open Orders</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="14">14</div><div class="card-stats green-stat" data-delta="up" data-percent="5"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-up-right"></use></svg> 5 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:number_card" data-block-id="b22" data-col="4"><div class="ce-block__content"><div data-ui="card:Open Orders" class="widget number-widget-box" data-ui="number-card" data-widget-name="Open Orders"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Open Orders">Open Orders</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="14">14</div><div class="card-stats green-stat" data-delta="up" data-percent="5"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-up-right"></use></svg> 5 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-6" data-ui="block:number_card" data-block-id="b23" data-col="6"><div class="ce-block__content"><div data-ui="card:Open Orders" class="widget number-widget-box" data-ui="number-card" data-widget-name="Open Orders"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Open Orders">Open Orders</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="14">14</div><div class="card-stats green-stat" data-delta="up" data-percent="5"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-up-right"></use></svg> 5 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-12" data-ui="block:number_card" data-block-id="b24" data-col="12"><div class="ce-block__content"><div data-ui="card:Open Orders" class="widget number-widget-box" data-ui="number-card" data-widget-name="Open Orders"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Open Orders">Open Orders</span></div><div class="widget-subtitle"></div></div></div><div class="widget-body"><div class="widget-content"><div class="number" data-value="14">14</div><div class="card-stats green-stat" data-delta="up" data-percent="5"><span class="percentage-stat-area"><svg class="icon icon-xs"><use href="#icon-arrow-up-right"></use></svg> 5 %</span> <span class="stat-period text-muted" style="margin-inline-start:4px">since last month</span></div></div></div><div class="widget-footer"></div></div></div></div><div class="ce-block grid-col-12" data-ui="block:header" data-block-id="b25" data-col="12"><div class="ce-block__content"><div class="widget widget-group-head" data-ui="block.header"><div class="widget-group-title h4"><span class="h5">Charts</span></div></div></div></div><div class="ce-block grid-col-6" data-ui="block:chart" data-block-id="b26" data-col="6"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Revenue Trend" data-widget-name="Revenue Trend"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Revenue Trend">Revenue Trend</span></div><div class="widget-subtitle">Monthly</div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="line" data-ui="chart.line" aria-label="Revenue Trend"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 528 240" width="528" height="240" role="img"><g class="y-axis"><g class="tick"><line class="zero-line" x1="44" x2="516" y1="208" y2="208" stroke="#ebeef0" stroke-dasharray=""/><text x="38" y="211" text-anchor="end" font-size="10" fill="#6c7680">0</text></g><g class="tick"><line class="grid-line" x1="44" x2="516" y1="168.8" y2="168.8" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="171.8" text-anchor="end" font-size="10" fill="#6c7680">5</text></g><g class="tick"><line class="grid-line" x1="44" x2="516" y1="129.6" y2="129.6" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="132.6" text-anchor="end" font-size="10" fill="#6c7680">10</text></g><g class="tick"><line class="grid-line" x1="44" x2="516" y1="90.4" y2="90.4" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="93.4" text-anchor="end" font-size="10" fill="#6c7680">15</text></g><g class="tick"><line class="grid-line" x1="44" x2="516" y1="51.2" y2="51.2" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="54.2" text-anchor="end" font-size="10" fill="#6c7680">20</text></g><g class="tick"><line class="grid-line" x1="44" x2="516" y1="12" y2="12" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="15" text-anchor="end" font-size="10" fill="#6c7680">25</text></g></g><g class="x-axis"><text x="83.33" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Jun</text><text x="162" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Jul</text><text x="240.67" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Aug</text><text x="319.33" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Sep</text><text x="398" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Oct</text><text x="476.67" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Nov</text></g><g class="dataset line-dataset" data-series="Revenue"><polyline class="line-graph-path" fill="none" stroke="#7cd6fd" stroke-width="2" points="83.33,113.92 162,66.88 240.67,137.44 319.33,35.52 398,74.72 476.67,12"/><circle class="data-point" data-value="12" data-label="Jun" cx="83.33" cy="113.92" r="3" fill="#7cd6fd"><title>Jun · Revenue: 12</title></circle><circle class="data-point" data-value="18" data-label="Jul" cx="162" cy="66.88" r="3" fill="#7cd6fd"><title>Jul · Revenue: 18</title></circle><circle class="data-point" data-value="9" data-label="Aug" cx="240.67" cy="137.44" r="3" fill="#7cd6fd"><title>Aug · Revenue: 9</title></circle><circle class="data-point" data-value="22" data-label="Sep" cx="319.33" cy="35.52" r="3" fill="#7cd6fd"><title>Sep · Revenue: 22</title></circle><circle class="data-point" data-value="17" data-label="Oct" cx="398" cy="74.72" r="3" fill="#7cd6fd"><title>Oct · Revenue: 17</title></circle><circle class="data-point" data-value="25" data-label="Nov" cx="476.67" cy="12" r="3" fill="#7cd6fd"><title>Nov · Revenue: 25</title></circle></g></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Revenue</span></span></div></div></div></div></div></div><div class="ce-block grid-col-6" data-ui="block:chart" data-block-id="b27" data-col="6"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Orders by Status" data-widget-name="Orders by Status"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Orders by Status">Orders by Status</span></div><div class="widget-subtitle"></div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="pie" data-ui="chart.pie" aria-label="Orders by Status"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 240 240" width="240" height="240" role="img"><path class="slice" data-value="30" data-label="A" data-percent="30" data-angle="108" fill="#7cd6fd" stroke="#fff" d="M120 120L120 8A112 112 0 0 1 226.52 154.61Z"><title>A: 30</title></path><path class="slice" data-value="22" data-label="B" data-percent="22" data-angle="79.2" fill="#5e64ff" stroke="#fff" d="M120 120L226.52 154.61A112 112 0 0 1 105.96 231.12Z"><title>B: 22</title></path><path class="slice" data-value="18" data-label="C" data-percent="18" data-angle="64.8" fill="#743ee2" stroke="#fff" d="M120 120L105.96 231.12A112 112 0 0 1 13.48 154.61Z"><title>C: 18</title></path><path class="slice" data-value="12" data-label="D" data-percent="12" data-angle="43.2" fill="#ff5858" stroke="#fff" d="M120 120L13.48 154.61A112 112 0 0 1 18.66 72.31Z"><title>D: 12</title></path><path class="slice" data-value="9" data-label="E" data-percent="9" data-angle="32.4" fill="#ffa00a" stroke="#fff" d="M120 120L18.66 72.31A112 112 0 0 1 59.99 25.44Z"><title>E: 9</title></path><path class="slice" data-value="9" data-label="Others" data-percent="9" data-angle="32.4" fill="#feef72" stroke="#fff" d="M120 120L59.99 25.44A112 112 0 0 1 120 8Z"><title>Others: 9</title></path></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">A</span><span class="legend-value" style="color:var(--text-muted,#777)">30</span></span><span class="legend-item" data-legend="1" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5e64ff"></span><span class="legend-label">B</span><span class="legend-value" style="color:var(--text-muted,#777)">22</span></span><span class="legend-item" data-legend="2" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#743ee2"></span><span class="legend-label">C</span><span class="legend-value" style="color:var(--text-muted,#777)">18</span></span><span class="legend-item" data-legend="3" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff5858"></span><span class="legend-label">D</span><span class="legend-value" style="color:var(--text-muted,#777)">12</span></span><span class="legend-item" data-legend="4" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ffa00a"></span><span class="legend-label">E</span><span class="legend-value" style="color:var(--text-muted,#777)">9</span></span><span class="legend-item" data-legend="5" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#feef72"></span><span class="legend-label">Others</span><span class="legend-value" style="color:var(--text-muted,#777)">9</span></span></div></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:chart" data-block-id="b28" data-col="4"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Pipeline" data-widget-name="Pipeline"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Pipeline">Pipeline</span></div><div class="widget-subtitle"></div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="donut" data-ui="chart.donut" aria-label="Pipeline"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 240 240" width="240" height="240" role="img"><path class="slice" data-value="40" data-label="Open" data-percent="40" data-angle="144" fill="#7cd6fd" stroke="#fff" d="M120 8A112 112 0 0 1 185.83 210.61L159.5 174.37A67.2 67.2 0 0 0 120 52.8Z"><title>Open: 40</title></path><path class="slice" data-value="35" data-label="Won" data-percent="35" data-angle="126" fill="#5e64ff" stroke="#fff" d="M185.83 210.61A112 112 0 0 1 8 120L52.8 120A67.2 67.2 0 0 0 159.5 174.37Z"><title>Won: 35</title></path><path class="slice" data-value="25" data-label="Lost" data-percent="25" data-angle="90" fill="#743ee2" stroke="#fff" d="M8 120A112 112 0 0 1 120 8L120 52.8A67.2 67.2 0 0 0 52.8 120Z"><title>Lost: 25</title></path></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Open</span><span class="legend-value" style="color:var(--text-muted,#777)">40</span></span><span class="legend-item" data-legend="1" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5e64ff"></span><span class="legend-label">Won</span><span class="legend-value" style="color:var(--text-muted,#777)">35</span></span><span class="legend-item" data-legend="2" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#743ee2"></span><span class="legend-label">Lost</span><span class="legend-value" style="color:var(--text-muted,#777)">25</span></span></div></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:chart" data-block-id="b29" data-col="4"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Mix" data-widget-name="Mix"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Mix">Mix</span></div><div class="widget-subtitle"></div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="axis-mixed" data-ui="chart.axis-mixed" aria-label="Mix"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 352 240" width="352" height="240" role="img"><g class="y-axis"><g class="tick"><line class="zero-line" x1="44" x2="340" y1="208" y2="208" stroke="#ebeef0" stroke-dasharray=""/><text x="38" y="211" text-anchor="end" font-size="10" fill="#6c7680">0</text></g><g class="tick"><line class="grid-line" x1="44" x2="340" y1="168.8" y2="168.8" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="171.8" text-anchor="end" font-size="10" fill="#6c7680">10</text></g><g class="tick"><line class="grid-line" x1="44" x2="340" y1="129.6" y2="129.6" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="132.6" text-anchor="end" font-size="10" fill="#6c7680">20</text></g><g class="tick"><line class="grid-line" x1="44" x2="340" y1="90.4" y2="90.4" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="93.4" text-anchor="end" font-size="10" fill="#6c7680">30</text></g><g class="tick"><line class="grid-line" x1="44" x2="340" y1="51.2" y2="51.2" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="54.2" text-anchor="end" font-size="10" fill="#6c7680">40</text></g><g class="tick"><line class="grid-line" x1="44" x2="340" y1="12" y2="12" stroke="#ebeef0" stroke-dasharray="2,2"/><text x="38" y="15" text-anchor="end" font-size="10" fill="#6c7680">50</text></g></g><g class="x-axis"><text x="81" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Q1</text><text x="155" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Q2</text><text x="229" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Q3</text><text x="303" y="228" text-anchor="middle" font-size="10" fill="#6c7680">Q4</text></g><g class="dataset bar-dataset" data-series="Sales"><rect class="bar" data-value="20" data-label="Q1" x="67" y="129.6" width="28" height="78.4" rx="1" fill="#7cd6fd"><title>Q1 · Sales: 20</title></rect><rect class="bar" data-value="35" data-label="Q2" x="141" y="70.8" width="28" height="137.2" rx="1" fill="#7cd6fd"><title>Q2 · Sales: 35</title></rect><rect class="bar" data-value="30" data-label="Q3" x="215" y="90.4" width="28" height="117.6" rx="1" fill="#7cd6fd"><title>Q3 · Sales: 30</title></rect><rect class="bar" data-value="45" data-label="Q4" x="289" y="31.6" width="28" height="176.4" rx="1" fill="#7cd6fd"><title>Q4 · Sales: 45</title></rect></g><g class="dataset line-dataset" data-series="Target"><polyline class="line-graph-path" fill="none" stroke="#5e64ff" stroke-width="2" points="81,110 155,90.4 229,70.8 303,51.2"/><circle class="data-point" data-value="25" data-label="Q1" cx="81" cy="110" r="3" fill="#5e64ff"><title>Q1 · Target: 25</title></circle><circle class="data-point" data-value="30" data-label="Q2" cx="155" cy="90.4" r="3" fill="#5e64ff"><title>Q2 · Target: 30</title></circle><circle class="data-point" data-value="35" data-label="Q3" cx="229" cy="70.8" r="3" fill="#5e64ff"><title>Q3 · Target: 35</title></circle><circle class="data-point" data-value="40" data-label="Q4" cx="303" cy="51.2" r="3" fill="#5e64ff"><title>Q4 · Target: 40</title></circle></g></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Sales</span></span><span class="legend-item" data-legend="1" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5e64ff"></span><span class="legend-label">Target</span></span></div></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:chart" data-block-id="b30" data-col="4"><div class="ce-block__content"><div class="widget dashboard-widget-box chart-widget" style="width:100%;min-height:300px" data-ui="card:Share" data-widget-name="Share"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis" title="Share">Share</span></div><div class="widget-subtitle"></div></div><div class="widget-control" data-ui="chart.menu"><svg class="icon icon-sm" stroke="currentColor" aria-hidden="true"><use href="#icon-ellipsis"></use></svg></div></div><div class="widget-body" style="min-height:240px"><div class="chart-container frappe-chart" data-chart-type="percentage" data-ui="chart.percentage" aria-label="Share"><div class="chart-toolbar" data-ui="chart.toolbar"><button class="btn btn-xs btn-secondary" data-action="action-export" type="button">Export</button></div><svg class="frappe-chart-svg" viewBox="0 0 352 20" width="352" height="20" role="img"><rect class="percentage-bar" data-value="50" data-label="Cash" data-percent="50" x="0" y="0" width="176" height="20" fill="#7cd6fd"><title>Cash: 50</title></rect><rect class="percentage-bar" data-value="30" data-label="Card" data-percent="30" x="176" y="0" width="105.6" height="20" fill="#5e64ff"><title>Card: 30</title></rect><rect class="percentage-bar" data-value="20" data-label="Online" data-percent="20" x="281.6" y="0" width="70.4" height="20" fill="#743ee2"><title>Online: 20</title></rect></svg><div class="chart-legend" data-ui="chart.legend" style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px"><span class="legend-item" data-legend="0" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7cd6fd"></span><span class="legend-label">Cash</span><span class="legend-value" style="color:var(--text-muted,#777)">50</span></span><span class="legend-item" data-legend="1" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5e64ff"></span><span class="legend-label">Card</span><span class="legend-value" style="color:var(--text-muted,#777)">30</span></span><span class="legend-item" data-legend="2" style="display:inline-flex;align-items:center;gap:4px"><span class="legend-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#743ee2"></span><span class="legend-label">Online</span><span class="legend-value" style="color:var(--text-muted,#777)">20</span></span></div></div></div></div></div></div><div class="ce-block grid-col-6" data-ui="block:quick_list" data-block-id="b31" data-col="6"><div class="ce-block__content"><div class="widget quick-list-widget-box" data-ui="card:Recent Orders" data-widget-name="Recent Orders"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">Recent Orders</span></div></div><div class="widget-control"><a class="btn btn-xs btn-secondary" data-ui="quick-list.add" href="/desk/odd-a/new"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-plus"></use></svg> Add New</a></div></div><div class="widget-body"><div class="quick-list-item" data-ui="quick-list.row"><span class="ellipsis title">Order 1</span><span class="text-muted modified">2026-11-20 09:00:00</span></div><div class="quick-list-item" data-ui="quick-list.row"><span class="ellipsis title">Order 2</span><span class="text-muted modified">2026-11-21 09:00:00</span></div></div></div></div></div><div class="ce-block grid-col-6" data-ui="block:quick_list" data-block-id="b32" data-col="6"><div class="ce-block__content"><div class="widget quick-list-widget-box" data-ui="card:Empty List" data-widget-name="Empty List"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">Empty List</span></div></div><div class="widget-control"><a class="btn btn-xs btn-secondary" data-ui="quick-list.add" href="/desk/odd-child/new"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-plus"></use></svg> Add New</a></div></div><div class="widget-body"><div class="quick-list-empty text-muted" data-ui="quick-list.empty">No data to show</div></div></div></div></div><div class="ce-block grid-col-12" data-ui="block:custom_block" data-block-id="b33" data-col="12"><div class="ce-block__content"><div class="widget custom-block" data-ui="custom-block:Notice" data-block-id="b33"><style>
+[data-block-id="b33"] .n b{color:#334}
+[data-block-id="b33"] .n{padding:12px;border-radius:8px;background:#eef}</style><div class="custom-block-body"><div class="n"><b>Heads up</b><p>Scheduled maintenance tonight.</p></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="b34" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Transactions" data-widget-name="Transactions"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Transactions">Transactions</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis onboard-spotlight" href="/desk/odd-a" data-ui="link:Order" data-link-type="DocType" data-description="Create and track orders"><span class="onboard-dot indicator-pill-dot" data-ui="link.onboard" title="Onboarding" style="display:inline-block;flex:0 0 6px;width:6px;height:6px;margin-inline-end:6px;border-radius:50%;background:var(--blue-500,#318ad8)"></span><span class="link-text ellipsis" title="Order">Order</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span><span class="link-description-popover" data-ui="link.description" role="tooltip">Create and track orders</span></a><a class="link-item ellipsis  disabled-link" href="/desk/odd-child" data-ui="link:Needs Setup First" data-link-type="DocType" data-dependencies="Odd A" data-description="Depends on orders"><span class="link-text ellipsis" title="Needs Setup First">Needs Setup First</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span><span class="link-description-popover" data-ui="link.description" role="tooltip">Depends on orders</span><span class="link-dependency-hint" data-ui="link.deps" role="tooltip">You need to create these first: Odd A</span></a><a class="link-item ellipsis " href="https://example.com/docs" data-ui="link:Docs" data-link-type="URL"><span class="link-text ellipsis" title="Docs">Docs</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="b35" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Reports" data-widget-name="Reports"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Reports">Reports</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/query-report/Stock%20Movement" data-ui="link:Movement" data-link-type="Report"><span class="link-text ellipsis" title="Movement">Movement</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a><a class="link-item ellipsis " href="/desk/odd-a/view/report" data-ui="link:Order Report" data-link-type="Report"><span class="link-text ellipsis" title="Order Report">Order Report</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div><div class="ce-block grid-col-4" data-ui="block:card" data-block-id="b36" data-col="4"><div class="ce-block__content"><div class="widget links-widget-box" data-ui="card:Setup" data-widget-name="Setup"><div class="widget-head"><div class="widget-title ellipsis"><span class="ellipsis" title="Setup">Setup</span></div></div><div class="widget-body"><div class="link-items"><a class="link-item ellipsis " href="/desk/odd-child" data-ui="link:Child Setup" data-link-type="DocType"><span class="link-text ellipsis" title="Child Setup">Child Setup</span><span class="link-arrow"><svg class="icon icon-xs" stroke="currentColor" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span></a></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</div></div></div>
+</div>
+</body></html>

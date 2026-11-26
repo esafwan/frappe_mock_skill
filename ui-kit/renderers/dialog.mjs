@@ -47,12 +47,12 @@ export function dialogBody(fields = [], values = {}, kit = {}) {
   const doc = { ...values };
   for (const f of flds) if (doc[f.fieldname] === undefined && f.default !== undefined && f.default !== '') doc[f.fieldname] = f.default;
   const renderField = (df, c0 = {}) => {
-    const ctx = { value: doc[df.fieldname], doc, doctype: '', meta, locale: kit.locale || 'en-IN', loadMeta, renderField, dialog: true, ...c0 };
+    const ctx = { value: doc[df.fieldname], doc, doctype: '', meta, locale: kit.locale || 'en', loadMeta, renderField, dialog: true, ...c0 };
     const fn = renderers[df.fieldtype];
     return fn ? fn(df, ctx) : fallback(df);
   };
   const layout = buildLayout(meta, doc);
-  const sec = (s) => {
+  const sec = (s, i = 0) => {
     const head = s.label ? `<div class="section-head">${esc(s.label)}</div>` : '';
     const desc = s.description ? `<div class="section-description text-muted small">${esc(s.description)}</div>` : '';
     const n = s.columns.length || 1;
@@ -62,10 +62,10 @@ export function dialogBody(fields = [], values = {}, kit = {}) {
       const st = equal ? '' : ` style="flex:0 0 ${c.pct}%;max-width:${c.pct}%"`;
       return `<div class="form-column${w}"${st} data-fieldname="__column_${i}"><form>${c.fields.map((f) => renderField(f)).join('')}</form></div>`;
     }).join('');
-    return `<div class="form-section card-section visible-section${s.hide_border ? ' hide-border' : ''}"${s.fieldname ? ` data-fieldname="${esc(s.fieldname)}"` : ''}>${head}${desc}<div class="section-body">${cols}</div></div>`;
+    return `<div class="form-section card-section visible-section${s.hide_border || i === 0 ? ' hide-border' : ''}"${s.fieldname ? ` data-fieldname="${esc(s.fieldname)}"` : ''}>${head}${desc}<div class="section-body">${cols}</div></div>`;
   };
   // Dialogs have no tab strip: tab breaks just contribute their sections in order.
-  const secs = layout.tabs.flatMap((t) => t.sections).map(sec).join('');
+  const secs = layout.tabs.flatMap((t) => t.sections).map((s, i) => sec(s, i)).join('');
   return `<div class="form-layout"><div class="form-page">${secs}</div></div>`;
 }
 

@@ -39,7 +39,7 @@ export function renderBody(o = {}) {
       const ci = c + off;
       const val = row[col.fieldname];
       const f = col.fieldname === 'idx' ? { html: esc(val ?? ''), align: 'right', title: String(val ?? '') }
-        : formatCell(col, val, { doc: row, currency: row.currency ?? o.currency, dateFormat: o.dateFormat, filterable: false });
+        : formatCell(col, val, { doc: row, currency: row.currency ?? o.currency, dateFormat: o.dateFormat, system: o.system, filterable: false });
       const align = col.align || f.align;
       const isEdit = editing && editing.row === r && (editing.col === c || editing.col === col.fieldname);
       let inner = f.html;

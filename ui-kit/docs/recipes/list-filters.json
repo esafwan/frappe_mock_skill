@@ -1,0 +1,52 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": {
+      "$gen": {
+        "count": 10,
+        "seed": 11
+      }
+    },
+    "total": 1284
+  },
+  "overlays": [
+    {
+      "type": "filter_chips",
+      "items": [
+        [
+          "customer_group",
+          "=",
+          "Commercial"
+        ],
+        [
+          "territory",
+          "in",
+          [
+            "India",
+            "UAE"
+          ]
+        ]
+      ]
+    }
+  ],
+  "x-recipe": "list-filters",
+  "x-what-you-see": "Two filter chips (status = Paid, territory in two values) under the standard filters and a reduced count."
+}

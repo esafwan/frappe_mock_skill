@@ -1,0 +1,74 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "gantt",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Fleet",
+    "workspace": "Fleet",
+    "user": {
+      "name": "sam@example.com",
+      "full_name": "Sam Lee",
+      "roles": [
+        "System Manager"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": {
+      "name": "Maintenance Job",
+      "module": "Fleet",
+      "doctype": "DocType",
+      "fields": [
+        {
+          "fieldname": "title",
+          "fieldtype": "Data",
+          "label": "Title",
+          "in_list_view": 1
+        },
+        {
+          "fieldname": "status",
+          "fieldtype": "Select",
+          "label": "Status",
+          "options": "Queued\nActive\nClosed"
+        },
+        {
+          "fieldname": "start",
+          "fieldtype": "Date",
+          "label": "Start"
+        },
+        {
+          "fieldname": "end",
+          "fieldtype": "Date",
+          "label": "End"
+        }
+      ],
+      "title_field": "title"
+    }
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "MJ-1",
+        "title": "Inspect",
+        "start": "2026-11-20",
+        "end": "2026-11-24"
+      },
+      {
+        "name": "MJ-2",
+        "title": "Repair",
+        "start": "2026-11-24",
+        "end": "2026-12-05"
+      }
+    ]
+  },
+  "x-recipe": "gantt",
+  "x-what-you-see": "Task bars along a day axis with a today line at 27 Nov.",
+  "view": {
+    "field_map": {
+      "start": "start",
+      "end": "end",
+      "title": "title",
+      "id": "name"
+    }
+  }
+}

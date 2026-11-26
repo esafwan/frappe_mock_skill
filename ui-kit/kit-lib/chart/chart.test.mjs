@@ -30,7 +30,9 @@ const mx = axisChart('axis-mixed', { labels: ['a', 'b'], datasets: [{ name: 'b',
 assert(mx.includes('class="bar"') && mx.includes('line-graph-path') && mx.includes('chart-legend'));
 // 9-point cap
 const many = Array.from({ length: 15 }, (_, i) => i + 1);
-assert.equal((axisChart('bar', { labels: many.map(String), datasets: [{ values: many }] }).match(/class="bar"/g) || []).length, 9);
+assert.equal((axisChart('bar', { labels: many.map(String), datasets: [{ values: many }] }).match(/class="bar"/g) || []).length, 15); // every row is drawn (slice 4: the x-axis shows all rows) ...
+const huge = Array.from({ length: 75 }, (_, i) => i + 1);
+assert.equal((axisChart('bar', { labels: huge.map(String), datasets: [{ values: huge }] }).match(/class="bar"/g) || []).length, 60); // ... up to MAX_POINTS
 
 // pie angles proportional, sum 360, donut percent
 const ang = [...pieChart('pie', { labels: ['a', 'b', 'c'], datasets: [{ values: [1, 1, 2] }] }).matchAll(/data-angle="([\d.]+)"/g)].map((m) => +m[1]);

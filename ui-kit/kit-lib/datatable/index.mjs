@@ -42,7 +42,7 @@ export function renderDatatable(columns = [], rows = [], opts = {}) {
   const body = renderBody({ ...opts, columns: cols, rows, checkbox, index: true });
   const lead = (checkbox ? 32 : 0) + 40;
   const totals = renderTotals(cols, rows, { ...opts, checkbox: false, lead});
-  return `${DATATABLE_CSS}<div class="datatable" data-ui="${opts.ui || 'datatable'}" data-rows="${rows.length}" data-cols="${columns.length}"><div class="dt-scrollable">${head}${body}${totals}</div></div>`;
+  return `${DATATABLE_CSS}<div class="datatable"${opts.rtl ? ' dir="rtl"' : ''} data-ui="${opts.ui || 'datatable'}" data-rows="${rows.length}" data-cols="${columns.length}"><div class="dt-scrollable">${head}${body}${totals}</div></div>`;
 }
 
 export { renderHead, renderBody, renderTotals, computeTotals, totalsEnabled, totalsToggle, columnLabel };

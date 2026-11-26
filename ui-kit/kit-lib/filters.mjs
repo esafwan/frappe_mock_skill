@@ -95,9 +95,9 @@ export function filterCount(filters = []) { return (filters || []).length; }
 
 /** Filter button + clear button (`.filter-selector`). */
 export function renderFilterButton({ count = 0, open = false } = {}) {
-  const lab = count ? `${count} filter${count > 1 ? 's' : ''}` : 'Filter';
+  const lab = count ? `<bdi>${count}</bdi> <span>${count > 1 ? 'filters' : 'filter'}</span>` : 'Filter'; // number isolated so RTL reads "2 filters"; words go through the locale vocabulary
   return `<div class="filter-selector" data-ui="list.filter"><div class="btn-group${open ? ' show' : ''}">`
-    + `<button class="btn btn-default btn-sm filter-button${count ? ' btn-filter-applied' : ''}" aria-expanded="${open}" data-ui="page.filter"><span class="filter-icon button-icon">${icon('funnel')}</span><span class="button-label hidden-xs">${lab}</span></button>`
+    + `<button class="btn btn-default btn-sm filter-button${count ? ' btn-filter-applied' : ''}" aria-expanded="${open}" data-ui="page.filter"><span class="filter-icon button-icon">${icon('funnel')}</span><span class="button-label hidden-xs"${count ? ' style="gap:4px"' : ''}>${lab}</span></button>`
     + (count ? `<button class="btn btn-default btn-sm filter-x-button" title="Clear all filters" data-ui="list.filter.clear"><span class="filter-icon button-icon">${icon('x')}</span></button>` : '')
     + `</div></div>`;
 }
@@ -120,5 +120,5 @@ export function renderFilterChips({ meta = {}, filters = [] } = {}) {
   const list = normalizeFilters(filters, meta);
   if (!list.length) return '';
   return `<div class="filter-chips flex" data-ui="list.filter-chips">${list.map((f, i) =>
-    `<span class="es-badge filter-chip" data-theme="grey" data-ui="list.filter-chip.${i}"><span class="es-badge__label">${esc(f.label)} ${esc(OP_LABELS[f.op]?.toLowerCase() || f.op)} ${esc(formatFilterValue(f.value))}</span>${icon('x')}</span>`).join('')}</div>`;
+    `<span class="es-badge filter-chip" data-theme="grey" data-ui="list.filter-chip.${i}"><span class="es-badge__label"><bdi>${esc(f.label)}</bdi> <span>${esc(OP_LABELS[f.op]?.toLowerCase() || f.op)}</span> <bdi>${esc(formatFilterValue(f.value))}</bdi></span>${icon('x')}</span>`).join('')}</div>`;
 }

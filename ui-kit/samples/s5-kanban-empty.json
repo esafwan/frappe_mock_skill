@@ -1,0 +1,43 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "kanban",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling",
+    "kanban_board": {
+      "name": "Pipeline",
+      "field_name": "status",
+      "columns": [
+        {
+          "column_name": "Open",
+          "indicator": "blue"
+        },
+        {
+          "column_name": "In Progress",
+          "indicator": "orange"
+        },
+        {
+          "column_name": "Done",
+          "indicator": "green"
+        }
+      ]
+    }
+  },
+  "view": {
+    "state": "empty",
+    "state_title": "No cards yet"
+  }
+}

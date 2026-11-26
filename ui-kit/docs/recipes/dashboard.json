@@ -1,0 +1,90 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "dashboard",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "dashboard": {
+      "name": "Sales",
+      "dashboard_name": "Sales",
+      "charts": [
+        {
+          "chart": "Revenue Trend",
+          "width": "Full"
+        },
+        {
+          "chart": "Pipeline",
+          "width": "Half"
+        }
+      ],
+      "cards": [
+        {
+          "card": "Open Orders"
+        }
+      ]
+    }
+  },
+  "data": {
+    "charts": {
+      "Revenue Trend": {
+        "type": "Line",
+        "labels": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ],
+        "datasets": [
+          {
+            "name": "Revenue",
+            "values": [
+              12,
+              18,
+              9,
+              22,
+              17
+            ]
+          }
+        ]
+      },
+      "Pipeline": {
+        "type": "Donut",
+        "labels": [
+          "Open",
+          "Won",
+          "Lost"
+        ],
+        "datasets": [
+          {
+            "name": "Deals",
+            "values": [
+              40,
+              35,
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "number_cards": {
+      "Open Orders": {
+        "value": 42,
+        "label": "Open Orders"
+      }
+    }
+  },
+  "x-recipe": "dashboard",
+  "x-what-you-see": "A dashboard grid with number cards on top and Line, Donut and Axis-Mixed charts below."
+}

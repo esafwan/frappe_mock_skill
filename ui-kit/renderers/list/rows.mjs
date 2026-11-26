@@ -3,9 +3,11 @@
 import { esc, enc } from '../../kit-lib/util.mjs';
 import { icon } from '../../kit-lib/icons.mjs';
 import { button } from '../../kit-lib/buttons.mjs';
+import { permsOn, fieldReadable } from '../../kit-lib/perms.mjs';
 import { avatarGroup } from '../../kit-lib/avatars.mjs';
 import { get_indicator } from '../../kit-lib/indicators.mjs';
 import { formatCell, formatDate } from '../../kit-lib/cells.mjs';
+import { formatDate as formatSysDate } from '../../kit-lib/format.mjs';
 import { expandGen, hash, mulberry32 } from '../../data/gen.mjs';
 import { menuList, takeMenu, dtName, listPerm, isSystemManager } from './head.mjs';
 import { renderEmpty, renderNoResults, renderSkeleton, renderMobileCards } from './states.mjs';
@@ -44,7 +46,7 @@ export function listColumns(spec = {}, meta = {}, ctx = {}) {
   const byName = new Map(fields.map((f) => [f.fieldname, f]));
   const title = meta.title_field && byName.get(meta.title_field) ? byName.get(meta.title_field) : null;
   const indicator = hasIndicator(meta, spec);
-  const readable = (f) => !(Number(f.permlevel) > 0) || ctx.perms?.permlevels?.includes?.(f.permlevel);
+  const readable = (f) => !(Number(f.permlevel) > 0) || ctx.perms?.permlevels?.includes?.(f.permlevel) || (permsOn(ctx) && fieldReadable(ctx, meta, f, meta.name));
   const isVal = (f) => f.fieldname && !NO_VALUE.has(f.fieldtype) && !f.hidden && !t(f.is_virtual) && readable(f);
   const subject = { kind: 'subject', fieldname: title ? title.fieldname : 'name', label: title ? (title.label || title.fieldname) : 'ID', df: title || { fieldtype: 'Data', fieldname: 'name' } };
   const tag = t(lvs.show_tags) || spec.view?.show_tags === true ? { kind: 'tag', fieldname: '_user_tags', label: 'Tag' } : null;
@@ -133,7 +135,7 @@ function subjectText(doc, col) {
 function cellFor(col, doc, meta, ctx) {
   const df = col.df || {};
   const cur = (df.fieldtype === 'Currency' && df.options && !String(df.options).includes(':') && doc[df.options]) || (col.fieldname !== 'currency' && typeof doc.currency === 'string' && doc.currency) || ctx.system?.currency || '';
-  return formatCell(df, doc[col.fieldname], { doc, currency: cur, dateFormat: sysFmt(ctx), filterable: true });
+  return formatCell(df, doc[col.fieldname], { doc, currency: cur, dateFormat: sysFmt(ctx), system: ctx.formatSystem, filterable: true });
 }
 
 import { fitColumns } from './fit.mjs';
@@ -181,7 +183,7 @@ function renderRow(doc, n, cols, o) {
   const checked = selected.has(n);
   const subject = `<div class="list-row-col ellipsis list-subject level" data-fieldname="${esc(sub.fieldname)}" data-ui="list.cell.${n}.${esc(sub.fieldname)}">`
     + (showCheck ? `<span class="level-item select-like"><input class="list-row-checkbox" type="checkbox" data-doctype="${esc(doctype)}" data-name="${esc(name)}"${checked ? ' checked' : ''} data-ui="list.row.${n}.check"></span>` : '')
-    + `<span class="level-item${unseen ? ' bold' : ''} ellipsis"><a class="ellipsis" data-doctype="${esc(doctype)}" data-name="${esc(name)}" href="/app/${esc(slug)}/${enc(name)}" title="${esc(txt)}" data-ui="list.row.${n}.link">${esc(txt)}</a></span></div>`;
+    + `<span class="level-item${unseen ? ' bold' : ''} ellipsis"><a class="ellipsis" dir="auto" style="unicode-bidi:plaintext" data-doctype="${esc(doctype)}" data-name="${esc(name)}" href="/app/${esc(slug)}/${enc(name)}" title="${esc(txt)}" data-ui="list.row.${n}.link">${esc(txt)}</a></span></div>`;
   const rest = cols.slice(1).map((c) => {
     if (c.kind === 'tag') {
       const tags = parseJson(doc._user_tags, []); const tg = Array.isArray(tags) ? tags : String(tags).split(',').filter(Boolean);
@@ -190,12 +192,12 @@ function renderRow(doc, n, cols, o) {
     if (c.kind === 'status') return `<div class="list-row-col hidden-xs ellipsis"${c.width ? ` style="width:${Math.max(50, Math.min(400, Number(c.width)))}px;flex:none"` : ''} data-fieldname="status_field" data-ui="list.cell.${n}.status_field">${statusBadge(doc, meta, spec)}</div>`;
     const cell = cellFor(c, doc, meta, ctx);
     const w = c.width ? ` style="width:${Math.max(50, Math.min(400, Number(c.width)))}px;flex:none"` : '';
-    return `<div class="list-row-col ellipsis hidden-xs${cell.align === 'right' ? ' text-right' : ''}"${w} data-fieldname="${esc(c.fieldname)}" data-ui="list.cell.${n}.${esc(c.fieldname)}"><span class="ellipsis" title="${esc(cell.title)}">${cell.html}</span></div>`;
+    return `<div class="list-row-col ellipsis hidden-xs${cell.align === 'right' ? ' text-right' : ''}"${w} data-fieldname="${esc(c.fieldname)}" data-ui="list.cell.${n}.${esc(c.fieldname)}"><span class="ellipsis" dir="auto" title="${esc(cell.title)}">${cell.html}</span></div>`;
   }).join('');
   const ra = anyRowAction ? `<div class="list-row-col ellipsis hidden-xs list-row-action-col" style="flex:0 0 auto">${rowActions(ctx, n)}</div>` : '';
 
   const ago = doc.modified ? miniAgo(doc.modified, ctx.now) : '';
-  const modTitle = doc.modified ? `${formatDate(doc.modified, sysFmt(ctx))} ${String(doc.modified).slice(11, 19)}` : '';
+  const modTitle = doc.modified ? `${ctx.formatSystem ? formatSysDate(doc.modified, ctx.formatSystem) : formatDate(doc.modified, sysFmt(ctx))} ${String(doc.modified).slice(11, 19)}` : '';
   const meta2 = renderMeta(doc, ctx, { doctype, ago, modTitle, showComments: !t(spec.meta?.list_view_settings?.disable_comment_count), statusHtml: cols.some((c) => c.kind === 'status') ? statusBadge(doc, meta, spec) : '' });
   return `<div class="list-row-container" tabindex="1" data-ui="list.row.${n}" data-name="${esc(name)}"${checked ? ' data-selected="true"' : ''}><div class="level list-row"><div class="level-left ellipsis">${subject}${rest}${ra}</div><div class="level-right text-muted ellipsis border-0">${meta2}</div></div></div>`;
 }
@@ -230,7 +232,7 @@ export function renderListBody(spec = {}, meta = {}, ctx = {}, st = {}) {
 
   const hc = headerCols(cols, { selectAll: selected.size > 0 && selected.size === rows.length, resize, rowAction: anyRowAction, showCheck });
   const n = selected.size;
-  const count = t(lvs.disable_count) ? '' : `<span class="list-count" style="white-space: nowrap;"><span>${esc(countLabel(rows.length, total, { upper: Number(view.count_upper_bound) || 1001 }))}</span></span>`;
+  const count = t(lvs.disable_count) ? '' : `<span class="list-count" dir="auto" style="white-space: nowrap;"><span dir="auto" style="unicode-bidi:isolate">${esc(countLabel(rows.length, total, { upper: Number(view.count_upper_bound) || 1001 }))}</span></span>`;
   const header = `<header class="level list-row-head text-muted">`
     + `<div class="level-left list-header-subject"${n ? ' style="display:none"' : ''}>${hc.sub}${hc.other}</div>`
     + renderBulkBar(n, { showCheck })
@@ -254,7 +256,7 @@ export function renderListBody(spec = {}, meta = {}, ctx = {}, st = {}) {
   const maxAssign = Math.min(3, Math.max(0, ...rows.map((d) => { const a = parseJson(d._assign, []); return Array.isArray(a) ? a.filter(Boolean).length : 0; })));
   const assignCls = maxAssign ? `has-assign-to assign-to-length-${maxAssign}` : 'no-assign-to';
   const subW = Math.max(180, Math.min(420, Math.round(listAvailable(ctx) - COL_GAP * cols.length - cols.slice(1).reduce((a, c) => a + (c.width ? Math.max(50, Math.min(400, Number(c.width))) : c.kind === 'tag' ? 110 : 110), 0))));
-  const layoutCss = `<style data-ui="list.layout">.frappe-list{--list-subject-w:${subW}px}.frappe-list .list-subject{flex:0 0 var(--list-subject-w);width:var(--list-subject-w);box-sizing:border-box;padding-right:0}.frappe-list .level.list-row{min-height:46px;align-items:center}.frappe-list .list-row-col{box-sizing:border-box}.frappe-list .list-row-col>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frappe-list .list-row-col .progress{margin:0}.frappe-list .list-row-col .es-badge{display:inline-flex;align-items:center}${mobile ? '.frappe-list,.frappe-list .result,.frappe-list .list-row-container,.frappe-list .list-row-head{max-width:100%;min-width:0;box-sizing:border-box}.frappe-list .list-row-head .level-left{min-width:0;flex:1 1 0}.frappe-list .list-row-head .list-subject{flex:1 1 auto;width:auto}.frappe-list .list-card .card-field{gap:12px;min-width:0}' : ''}</style>`;
+  const layoutCss = `<style data-ui="list.layout">.frappe-list{--list-subject-w:${subW}px}.frappe-list .list-subject{flex:0 0 var(--list-subject-w);width:var(--list-subject-w);box-sizing:border-box;padding-right:0}.frappe-list .level.list-row{min-height:46px;align-items:center}.frappe-list .list-row-col{box-sizing:border-box}.frappe-list .list-row-col>span{display:block;unicode-bidi:plaintext;text-align:start;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frappe-list .list-row-col .progress{margin:0}.frappe-list .list-row-col .es-badge{display:inline-flex;align-items:center}${mobile ? '.frappe-list,.frappe-list .result,.frappe-list .list-row-container,.frappe-list .list-row-head{max-width:100%;min-width:0;box-sizing:border-box}.frappe-list .list-row-head .level-left{min-width:0;flex:1 1 0}.frappe-list .list-row-head .list-subject{flex:1 1 auto;width:auto}.frappe-list .list-card .card-field{gap:12px;min-width:0}' : ''}</style>`;
   const result = `${layoutCss}<div class="frappe-list"><div class="result-container"><div class="result ${assignCls}" data-ui="list.result"><div class="list-row-container">${header}</div>${inner}</div></div>`;
 
   const hasRows = state === 'normal' && rows.length > 0;

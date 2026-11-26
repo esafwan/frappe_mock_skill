@@ -1,0 +1,47 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "gantt",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "T1",
+        "title": "Design",
+        "start": "2026-11-20",
+        "end": "2026-11-25"
+      },
+      {
+        "name": "T2",
+        "title": "Build",
+        "start": "2026-11-25",
+        "end": "2026-12-08"
+      }
+    ]
+  },
+  "x-recipe": "gantt",
+  "x-what-you-see": "Task bars along a day axis with a today line at 27 Nov.",
+  "view": {
+    "field_map": {
+      "start": "start",
+      "end": "end",
+      "title": "title",
+      "id": "name"
+    }
+  }
+}

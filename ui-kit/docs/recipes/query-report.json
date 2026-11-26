@@ -1,0 +1,83 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "query_report",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager"
+      ]
+    }
+  },
+  "meta": {
+    "report": {
+      "report_name": "Stock Movement",
+      "name": "Stock Movement",
+      "ref_doctype": "Odd A",
+      "report_type": "Script Report",
+      "add_total_row": 1,
+      "filters": [
+        {
+          "fieldname": "company",
+          "label": "Company",
+          "fieldtype": "Data",
+          "default": "Example Co",
+          "reqd": 1
+        },
+        {
+          "fieldname": "from_date",
+          "label": "From Date",
+          "fieldtype": "Date",
+          "default": "Today",
+          "reqd": 1
+        },
+        {
+          "fieldname": "status",
+          "label": "Status",
+          "fieldtype": "Select",
+          "options": "\nDraft\nSubmitted"
+        }
+      ],
+      "columns": [
+        {
+          "fieldname": "item",
+          "label": "Item",
+          "fieldtype": "Data",
+          "width": 200
+        },
+        {
+          "fieldname": "qty",
+          "label": "Qty",
+          "fieldtype": "Float",
+          "width": 100
+        },
+        {
+          "fieldname": "amount",
+          "label": "Amount",
+          "fieldtype": "Currency",
+          "width": 140
+        }
+      ]
+    }
+  },
+  "data": {
+    "rows": [
+      {
+        "item": "ITEM-001",
+        "qty": 10,
+        "amount": 15000
+      },
+      {
+        "item": "ITEM-002",
+        "qty": 4,
+        "amount": 1000
+      }
+    ]
+  },
+  "x-recipe": "query-report",
+  "x-what-you-see": "A report with Company, From Date, To Date and Status filters, a datatable and a Total row."
+}

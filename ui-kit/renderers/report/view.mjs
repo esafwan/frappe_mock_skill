@@ -88,13 +88,13 @@ function sortRows(rows, sort, cols) {
 function tableHtml({ cols, rows, ctx, totals, sort, meta, state, view = {} }) {
   const columns = cols.map((c) => ({ ...c.df, fieldname: c.key, label: c.df.label || c.label, fieldtype: c.df.fieldtype, child_label: c.child ? c.doctype : undefined, width: c.width ? Math.max(50, Math.min(600, Number(c.width))) : undefined }));
   const data = rows.map((r) => Object.fromEntries(cols.map((c) => [c.key, cellValue(r, c)])));
-  const dtOpts = { sort, checkbox: true, showTotals: !!totals, currency: ctx.system?.currency, dateFormat: ctx.system?.date_format, rtl: ctx.rtl, ui: 'report.table', menu: view.column_menu, resizing: view.resizing, editing: view.editing };
+  const dtOpts = { sort, checkbox: true, showTotals: !!totals, currency: ctx.system?.currency, dateFormat: ctx.system?.date_format, system: ctx.formatSystem, rtl: ctx.rtl, ui: 'report.table', menu: view.column_menu, resizing: view.resizing, editing: view.editing };
   const empty = !rows.length ? `<div class="datatable-empty text-muted" data-ui="report.empty">${state === 'no_results' ? 'No Data' : 'Nothing to show'}</div>` : '';
   const dt = renderDatatable(columns, data, dtOpts);
   return empty ? dt.replace(/<\/div><\/div>$/, `</div>${empty}</div>`) : dt;
 }
 
-function chartBlock({ spec, view, json, rows, cols, groupField, groups, hidden }) {
+function chartBlock({ spec, view, json, rows, cols, groupField, groups, hidden, ctx = {} }) {
   const ca = view.chart || json.chart_args;
   if (!ca) return '';
   const type = ca.type || ca.chart_type || 'bar';
@@ -108,8 +108,8 @@ function chartBlock({ spec, view, json, rows, cols, groupField, groups, hidden }
     const get = (r, c) => (c ? (r[c.key] !== undefined ? r[c.key] : r[c.fieldname]) : undefined);
     labels = rows.map((r) => String(get(r, xc) ?? '')); values = rows.map((r) => Number(yc ? get(r, yc) : 1) || 0); name = yc?.df.label || yc?.fieldname || 'Count';
   }
-  const body = hidden ? '' : drawChart(['line', 'bar', 'pie', 'donut', 'percentage', 'heatmap', 'axis-mixed'].includes(ctype) ? ctype : 'bar', { labels, datasets: [{ name, values }] }, { title: ca.title || '', width: 1080, height: 260 });
-  return { toggle: button(hidden ? 'Show Chart' : 'Hide Chart', { cls: 'toggle-chart-btn', ui: 'report.chart-toggle' }), html: `<div class="chart-wrapper${hidden ? ' hide' : ''}" data-ui="report.chart">${body}</div>` };
+  const body = hidden ? '' : drawChart(['line', 'bar', 'pie', 'donut', 'percentage', 'heatmap', 'axis-mixed'].includes(ctype) ? ctype : 'bar', { labels, datasets: [{ name, values }] }, { title: ca.title || '', width: 1080, height: 260, system: ctx.formatSystem, rtl: ctx.rtl });
+  return { toggle: button(hidden ? 'Show Chart' : 'Hide Chart', { cls: 'toggle-chart-btn btn-sm', ui: 'report.chart-toggle' }), html: `<div class="chart-wrapper${hidden ? ' hide' : ''}" data-ui="report.chart"${ctx.rtl ? ' dir="rtl"' : ''}>${body}</div>` };
 }
 
 /** Group-by selector: button + popover. Returns html. */
@@ -183,7 +183,7 @@ export async function buildReportPage({ spec, meta, ctx }) {
     trows = groups.map((g) => ({ [groupField]: g.value, count: g.count }));
   }
   const totals = showTotals && trows.length ? Object.fromEntries(tcols.filter((c) => SUMMABLE.has(c.df.fieldtype)).map((c) => [c.key, trows.reduce((a, r) => a + (Number(cellValue(r, c)) || 0), 0)])) : null;
-  const cb = chartBlock({ spec, view, json, rows, cols, groupField, groups, hidden: !!view.chart_hidden });
+  const cb = chartBlock({ spec, view, json, rows, cols, groupField, groups, hidden: !!view.chart_hidden, ctx });
 
   // head
   const views = enabledViews(meta, { ...view, views: view.views ?? ['report'] }, ctx);
@@ -219,7 +219,7 @@ export async function buildReportPage({ spec, meta, ctx }) {
     : tableHtml({ cols: tcols, rows: state === 'normal' ? trows : [], ctx, totals, sort: groupField ? null : sortSpec, meta, state, view });
   const lens = PAGE_LENGTHS.map((p) => `<button type="button" class="es-pill" role="radio" data-state="${p === pl ? 'active' : 'inactive'}" aria-checked="${p === pl}" data-ui="report.page-length.${p}">${p}</button>`).join('');
   const count = groupField ? `${groups.length} group${groups.length === 1 ? '' : 's'}` : countLabel(rows.length, total);
-  const footer = `<div class="list-paging-area level" data-ui="report.paging"><div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page length">${lens}</div></div><div class="level-right"><span class="list-count" data-ui="report.count">${esc(count)}</span></div></div>`;
-  const main = `<div class="layout-main-report report-view" style="width:100%;max-width:none;box-sizing:border-box" data-ui="report-view"${saved ? ` data-saved-report="${esc(title)}"` : ''}>${filterBar}${cb ? cb.html : ''}<div class="report-wrapper">${table}</div>${footer}</div>`;
+  const footer = `<div class="list-paging-area level" data-ui="report.paging"><div class="level-left"><div class="es-tab-buttons" role="radiogroup" aria-label="Page length">${lens}</div></div><div class="level-right"><span class="list-count" dir="auto" data-ui="report.count">${esc(count)}</span></div></div>`;
+  const main = `<style data-ui="report.toolbar-fix">.report-page-form .filter-section{align-items:center;gap:var(--margin-sm,6px)}.report-page-form .filter-section .btn,.report-page-form .filter-section .btn-group>.btn{height:28px;min-height:28px;box-sizing:border-box;display:inline-flex;align-items:center}.report-wrapper .datatable .dt-scrollable{overflow-x:auto}</style><div class="layout-main-report report-view" style="width:100%;max-width:none;box-sizing:border-box" data-ui="report-view"${saved ? ` data-saved-report="${esc(title)}"` : ''}>${filterBar}${cb ? cb.html : ''}<div class="report-wrapper">${table}</div>${footer}</div>`;
   return { head, main, title: saved ? title : `${dt} report`, doctype: dt, columns: tcols, rows: trows };
 }

@@ -1,0 +1,66 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "list",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "de",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#.###,##",
+      "date_format": "dd.mm.yyyy",
+      "time_format": "HH:mm",
+      "currency": "EUR",
+      "float_precision": 2
+    }
+  },
+  "meta": {
+    "doctype": "Sales Invoice",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "SINV-0001",
+        "customer": "Müller GmbH",
+        "posting_date": "2026-11-03",
+        "grand_total": 12345.5,
+        "outstanding_amount": 4521.07,
+        "docstatus": 1,
+        "status": "Paid",
+        "currency": "EUR",
+        "due_date": "2026-12-03"
+      },
+      {
+        "name": "SINV-0002",
+        "customer": "Schmidt AG",
+        "posting_date": "2026-11-14",
+        "grand_total": 98765.4,
+        "outstanding_amount": 0,
+        "docstatus": 1,
+        "status": "Unpaid",
+        "currency": "EUR",
+        "due_date": "2026-11-28"
+      },
+      {
+        "name": "SINV-0003",
+        "customer": "Weber KG",
+        "posting_date": "2026-11-25",
+        "grand_total": 1250,
+        "outstanding_amount": 1250,
+        "docstatus": 0,
+        "status": "Draft",
+        "currency": "EUR",
+        "due_date": "2026-12-25"
+      }
+    ],
+    "total": 3
+  }
+}

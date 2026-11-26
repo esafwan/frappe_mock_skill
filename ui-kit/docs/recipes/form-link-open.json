@@ -1,0 +1,51 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "form",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": "doctype/fixtures/erpnext/sales_invoice.json",
+    "sidebar": "Selling"
+  },
+  "data": {
+    "doc": {
+      "name": "ACC-SINV-0001",
+      "customer": "Acme Traders",
+      "docstatus": 0,
+      "owner": "jane@example.com",
+      "creation": "2026-11-20 09:14:00",
+      "modified": "2026-11-26 17:40:00"
+    }
+  },
+  "overlays": [
+    {
+      "type": "field_open",
+      "field": "customer",
+      "query": "ac",
+      "results": [
+        {
+          "value": "Acme Traders",
+          "description": "Commercial"
+        },
+        "Acme Exports",
+        "Acorn Retail"
+      ],
+      "create": true,
+      "advanced": true,
+      "highlight": 1
+    }
+  ],
+  "x-recipe": "form-link-open",
+  "x-what-you-see": "The Customer link on a Sales Invoice open for query \"ac\" with three results, \"Create a new Customer\" and \"Advanced Search\"."
+}

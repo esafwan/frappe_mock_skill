@@ -1,0 +1,70 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "calendar",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Fleet",
+    "workspace": "Fleet",
+    "user": {
+      "name": "sam@example.com",
+      "full_name": "Sam Lee",
+      "roles": [
+        "System Manager"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": {
+      "name": "Maintenance Job",
+      "module": "Fleet",
+      "doctype": "DocType",
+      "fields": [
+        {
+          "fieldname": "title",
+          "fieldtype": "Data",
+          "label": "Title",
+          "in_list_view": 1
+        },
+        {
+          "fieldname": "status",
+          "fieldtype": "Select",
+          "label": "Status",
+          "options": "Queued\nActive\nClosed"
+        },
+        {
+          "fieldname": "start",
+          "fieldtype": "Date",
+          "label": "Start"
+        },
+        {
+          "fieldname": "end",
+          "fieldtype": "Date",
+          "label": "End"
+        }
+      ],
+      "title_field": "title"
+    },
+    "calendar_view": {
+      "name": "Jobs",
+      "start_date_field": "start",
+      "end_date_field": "end",
+      "subject_field": "title"
+    }
+  },
+  "data": {
+    "events": [
+      {
+        "title": "Brake service",
+        "start": "2026-11-10",
+        "end": "2026-11-10"
+      },
+      {
+        "title": "Fleet audit",
+        "start": "2026-11-18",
+        "end": "2026-11-20"
+      }
+    ]
+  },
+  "x-recipe": "calendar",
+  "x-what-you-see": "A month grid for the ctx.today month with coloured event bars from data.events."
+}

@@ -71,7 +71,7 @@ ${sidebar}
 <html data-theme-mode="${theme}" lang="${esc(ctx.locale || 'en')}" dir="${ctx.rtl ? 'rtl' : 'ltr'}" class="chrome" data-theme="${theme}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(ctx.title || 'Desk')}</title>
 <link rel="stylesheet" href="${esc(rel)}/css/frappe-desk.css">
-<link rel="stylesheet" href="${esc(rel)}/css/erpnext-erpnext.css">
+${appCssLinks(ctx, rel)}
 ${headStyles()}
 <style data-ui="shell.kit-css">${kitCss()}</style>
 <style data-ui="shell.extra">.form-sidebar .es-button,.menu-btn-group .es-button,.form-sidebar-items button{gap:6px}.form-sidebar-label{gap:8px}.page-head .title-area{display:flex;align-items:center;gap:8px}.page-head .title-sub{font-size:var(--text-sm,12px)}.page-head .es-breadcrumbs__item{display:inline-flex;align-items:center;gap:6px}[data-ui="shell.head"]:empty{min-height:48px;border-bottom:1px solid var(--outline-gray-1,#ededed)}[data-ui="shell.main"]:empty{min-height:calc(100vh - 96px)}</style></head>
@@ -79,6 +79,13 @@ ${headStyles()}
 ${full}
 </body></html>
 `;
+}
+
+// App CSS is loaded only for installed apps (ctx.apps / ctx.installed_apps); default is Frappe only.
+function appCssLinks(ctx, rel) {
+  const apps = ctx.apps || ctx.installed_apps || [];
+  const list = (Array.isArray(apps) ? apps : [apps]).map((a) => String(a?.name || a).toLowerCase());
+  return list.includes('erpnext') ? `<link rel="stylesheet" href="${esc(rel)}/css/erpnext-erpnext.css">` : '';
 }
 
 export { renderDock, railIcon };
@@ -92,12 +99,12 @@ export default async function shellForSlots(slots, spec, ctx) {
   const sj = sidebarMeta || loadWorkspaceSidebar(workspace);
   const chrome = { dock: true, sidebar: 'expanded', navbar: false, ...(ctx.chrome || {}) };
   const sidebarHtml = !sj || chrome.sidebar === 'hidden' ? ''
-    : sidebarContainer(sj, { active: spec.page === 'workspace' && spec.meta?.workspace ? activeFor(spec) : { workspace }, collapsed: chrome.sidebar === 'collapsed', title: workspace });
+    : sidebarContainer(sj, { active: spec.page === 'workspace' && spec.meta?.workspace ? activeFor(spec) : { workspace }, collapsed: chrome.sidebar === 'collapsed', title: workspace, ctx });
   const sctx = spec.ctx || {};
   const vp = ctx.viewport && typeof ctx.viewport === 'object' ? `${ctx.viewport.width}x${ctx.viewport.height}` : (ctx.viewport || '1440x900');
   return renderShell({
     ctx: {
-      theme: ctx.theme, locale: ctx.locale, rtl: ctx.rtl, viewport: vp, app: ctx.app || workspace, workspace, user: ctx.user, chrome,
+      theme: ctx.theme, locale: ctx.locale, rtl: ctx.rtl, viewport: vp, apps: ctx.apps || sctx.apps || sctx.installed_apps, app: ctx.app || workspace, workspace, user: ctx.user, chrome,
       dock: { ...(sctx.dock || {}), items: sctx.dock?.items || dockFromWorkspaces() },
       title: slots.title || spec.title || workspace, route: spec.page, pageName: spec.page, page: spec.page,
       tokensPath: ctx.href ? ctx.href('tokens').replace(/\/$/, '') : '../tokens', notifications: sctx.notifications,

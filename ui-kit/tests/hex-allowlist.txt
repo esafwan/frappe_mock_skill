@@ -1,0 +1,9 @@
+# Known colour debt: files allowed to keep hard-coded hex colours. FROZEN (docs/SLICE5.md, follow-up ticket "ui-kit: move allowlisted hex colours to --kit-* tokens").
+# Format: <kit-relative path> | <max hex count> | <reason>. tests/rtl-dark.mjs fails when an entry is added, when a count is exceeded (a new hex appeared in the file),
+# or when a reason is missing. Lower the count (and delete the line at 0) as colours move to kit-lib/base.css tokens. New code never goes in here.
+kit-lib/chart/axis.mjs | 15 | chart series palette and axis colours are passed into SVG attributes and JS arrays (PALETTE); needs a token-resolving pass
+kit-lib/chart/heatmap.mjs | 5 | heatmap ramp (HEAT array) is exported and used by tests; tokens --kit-heat-0..4 exist, switch the array to var() and fix chart tests
+kit-lib/chart/pie.mjs | 1 | slice separator stroke; replace with var(--kit-surface)
+kit-lib/numbercard.mjs | 5 | COLOURS map (green, red, blue, orange, grey) exported to workspace blocks; tokens --kit-green etc. exist, switch map to var()
+renderers/workspace/blocks/common.mjs | 12 | COLOUR_MAP of shortcut/card colours (includes colours with no kit token yet); needs new tokens
+shell/navbar.mjs | 1 | navbar badge text colour inside NAVBAR_CSS; replace with a token

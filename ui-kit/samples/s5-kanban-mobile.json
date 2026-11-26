@@ -1,0 +1,137 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "kanban",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "viewport": "mobile"
+  },
+  "meta": {
+    "doctype": "Customer",
+    "sidebar": "Selling",
+    "kanban_board": {
+      "name": "Pipeline",
+      "field_name": "status",
+      "columns": [
+        {
+          "column_name": "Open",
+          "indicator": "blue"
+        },
+        {
+          "column_name": "In Progress",
+          "indicator": "orange"
+        },
+        {
+          "column_name": "Done",
+          "indicator": "green"
+        }
+      ]
+    }
+  },
+  "data": {
+    "cards": [
+      {
+        "name": "C-0001",
+        "title": "Onboard Northwind Traders",
+        "column": "Open",
+        "fields": [
+          {
+            "label": "Territory",
+            "value": "Gulf"
+          }
+        ],
+        "assignees": [
+          "jane@example.com"
+        ],
+        "indicator": {
+          "label": "High",
+          "colour": "red"
+        },
+        "tags": [
+          "renewal"
+        ],
+        "comments": 3
+      },
+      {
+        "name": "C-0002",
+        "title": "Quote for Harbor Foods",
+        "column": "Open",
+        "fields": [
+          {
+            "label": "Territory",
+            "value": "India"
+          }
+        ],
+        "assignees": [
+          "sam@example.com",
+          "jane@example.com"
+        ],
+        "comments": 0
+      },
+      {
+        "name": "C-0003",
+        "title": "Credit review: Atlas Retail",
+        "column": "In Progress",
+        "fields": [
+          {
+            "label": "Territory",
+            "value": "Europe"
+          }
+        ],
+        "assignees": [
+          "sam@example.com"
+        ],
+        "indicator": {
+          "label": "Medium",
+          "colour": "orange"
+        },
+        "tags": [
+          "credit",
+          "q4"
+        ],
+        "comments": 7
+      },
+      {
+        "name": "C-0004",
+        "title": "Contract signed: Meridian",
+        "column": "Done",
+        "fields": [
+          {
+            "label": "Territory",
+            "value": "India"
+          }
+        ],
+        "assignees": [
+          "jane@example.com"
+        ],
+        "indicator": {
+          "label": "Low",
+          "colour": "green"
+        },
+        "comments": 1
+      },
+      {
+        "name": "C-0005",
+        "title": "Follow up: Bluewave Cafe",
+        "column": "In Progress",
+        "fields": [
+          {
+            "label": "Territory",
+            "value": "Gulf"
+          }
+        ],
+        "assignees": [],
+        "comments": 2
+      }
+    ]
+  }
+}

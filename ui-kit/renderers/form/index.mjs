@@ -13,6 +13,7 @@ import { renderSidebar } from '../../shell/sidebar.mjs';
 import { adaptFlatSidebar } from '../../adapters/sidebar.mjs';
 import { renderFormHead } from './head.mjs';
 import { applyReadOnly, readOnlyBanners } from './readonly.mjs';
+import { permsOn, fieldsFor } from '../../kit-lib/perms.mjs';
 import { formTitle } from './title.mjs';
 import { formSidebarHtml as sidebarPanel } from './sidebar.mjs';
 import { renderTimeline } from './timeline.mjs';
@@ -106,7 +107,7 @@ export function formSidebarHtml(meta = {}, doc = {}, opts = {}) { return sidebar
 export async function buildFormPage(opts = {}) {
   const spec = opts.spec || {};
   const renderers = await loadFieldRenderers();
-  const locale = opts.locale || spec.ctx?.locale || 'en-IN';
+  const locale = opts.locale || opts.ctx?.locale || spec.ctx?.locale || 'en';
   let custom = opts.custom || [];
   let meta = opts.meta;
   if (!Array.isArray(custom)) {
@@ -116,6 +117,7 @@ export async function buildFormPage(opts = {}) {
   meta = applyCustomizations(meta, custom, []);
   const doc = { ...(opts.doc || {}) };
   meta = applyReadOnly(meta, doc);
+  { const pctx = { ...(opts.ctx || spec.ctx || {}), locale }; meta = { ...meta, fields: fieldsFor(pctx, meta, meta.fields, meta.name) }; } // locale vocabulary for labels/descriptions; role perms: read-only without write, hidden above the granted permlevel
   const doctype = meta.name;
   const isNew = doc.__islocal !== undefined ? !!doc.__islocal : !doc.name;
   if (isNew) doc.__islocal = 1;
@@ -125,7 +127,7 @@ export async function buildFormPage(opts = {}) {
   const fieldOpen = spec_overlays.filter((o) => o?.type === 'field_open');
   const drawn = new Set();
   const renderField = (df, ctx0 = {}) => {
-    const ctx = { value: doc[df.fieldname], doc, doctype, meta, locale, loadMeta, renderField, ...ctx0 };
+    const ctx = { value: doc[df.fieldname], doc, doctype, meta, locale, system: opts.ctx?.formatSystem, loadMeta, renderField, ...ctx0 };
     const fn = (df.fieldtype === 'Data' && df.options && renderers['Data:' + df.options]) || renderers[df.fieldtype];
     let html = fn ? fn(df, ctx) : fallbackField(df);
     for (const ov of fieldOpen.filter((o) => o.field === df.fieldname)) {
@@ -190,8 +192,8 @@ export function dockFromWorkspaces() {
   }).filter((i) => i.label);
 }
 
-export function sidebarContainer(sidebarJson, { active, collapsed, title, icon } = {}) {
-  const items = renderSidebar(sidebarJson, { active, collapsed });
+export function sidebarContainer(sidebarJson, { active, collapsed, title, icon, ctx } = {}) {
+  const items = renderSidebar(sidebarJson, { active, collapsed, ctx });
   const t = esc(title || sidebarJson?.title || '');
   const hi = icon || sidebarJson?.header_icon;
   return `<div class="body-sidebar-container${collapsed ? '' : ' expanded'}" data-ui="sidebar"><div class="body-sidebar" data-title="${t}"><a class="sidebar-header shell-header" style="text-decoration: none;" aria-haspopup="menu" aria-expanded="false" data-ui="sidebar.link-1">${hi ? `<div class="header-logo"><svg class="icon icon-md"><use href="#icon-${esc(hi)}"></use></svg></div>` : ''}<div class="title-container"><div class="sidebar-item-label header-title">${t}</div></div></a><div class="body-sidebar-top">${items}</div></div></div>`;
@@ -212,7 +214,7 @@ export async function renderFormDocument(opts = {}) {
   const tokensPath = path.relative(path.dirname(outFile), path.join(KIT, 'tokens')).split(path.sep).join('/');
   const collapsed = chrome.sidebar === 'collapsed';
   const sidebarHtml = chrome.sidebar === 'hidden' || !sidebarJson ? ''
-    : sidebarContainer(sidebarJson, { active: { doctype: page.doctype }, collapsed, title: workspace });
+    : sidebarContainer(sidebarJson, { active: { doctype: page.doctype }, collapsed, title: workspace, ctx: opts.ctx || spec.ctx });
   const letterUser = opts.user || sctx.user || { name: page.docName };
   const ctx = {
     theme: opts.theme || sctx.theme || 'light', locale: opts.locale || sctx.locale || 'en', rtl: !!(opts.rtl ?? sctx.rtl),
@@ -242,7 +244,7 @@ export default async function render(spec, ctx) {
   const sj = sidebarMeta || loadWorkspaceSidebar(workspace);
   const chrome = { dock: true, sidebar: 'expanded', navbar: false, ...(ctx?.chrome || {}) };
   const sidebarHtml = !sj || chrome.sidebar === 'hidden' ? ''
-    : sidebarContainer(sj, { active: { doctype: page.doctype }, collapsed: chrome.sidebar === 'collapsed', title: workspace });
+    : sidebarContainer(sj, { active: { doctype: page.doctype }, collapsed: chrome.sidebar === 'collapsed', title: workspace, ctx });
   const vp = ctx?.viewport && typeof ctx.viewport === 'object' ? `${ctx.viewport.width}x${ctx.viewport.height}` : (ctx?.viewport || '1440x900');
   const sctx = spec.ctx || {};
   // Own the document until shell/shell.mjs has the engine's default-export wrapper (slots, spec, ctx).

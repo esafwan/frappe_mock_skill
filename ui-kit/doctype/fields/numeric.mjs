@@ -1,5 +1,6 @@
 import { esc, wrapControl, formatValue } from '../lib/control.mjs';
 import { wrapFrappe } from './base.mjs';
+import { formatNumber as formatSystemNumber } from '../../kit-lib/format.mjs';
 
 const attrs = (df, ctx) => `data-fieldtype="${esc(df.fieldtype)}" data-fieldname="${esc(df.fieldname)}" data-doctype="${esc(ctx.doctype || '')}"`;
 const ro = (df) => (df.read_only ? ' disabled' : '');
@@ -72,7 +73,7 @@ function currency(df, ctx) {
   const { locale, code } = curInfo(df, ctx);
   const raw = cur(df, ctx);
   const n = raw === undefined || raw === null || raw === '' ? 0 : Number(raw);
-  const num = new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(Number.isNaN(n) ? 0 : n);
+  const num = ctx.system ? formatSystemNumber(Number.isNaN(n) ? 0 : n, ctx.system, ctx.system.currency_precision) : new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(Number.isNaN(n) ? 0 : n);
   const shown = `${SYM[code] || code} ${num}`;
   // ERPNext set_df_currency: fields with a currency "options" get " (<currency>)" appended to the label.
   const label = df.options ? `${df.label ?? df.fieldname} (${code})` : df.label;

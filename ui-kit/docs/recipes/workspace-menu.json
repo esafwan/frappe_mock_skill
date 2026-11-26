@@ -1,0 +1,52 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "workspace",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "Accounts User",
+        "Sales User"
+      ]
+    }
+  },
+  "meta": {
+    "workspace": {
+      "name": "Demo",
+      "title": "Demo",
+      "label": "Demo",
+      "public": 1,
+      "module": "Selling",
+      "content": [
+        {
+          "id": "h",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h4\"><b>Selling</b></span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "p",
+          "type": "paragraph",
+          "data": {
+            "text": "Welcome to the Selling workspace.",
+            "col": 12
+          }
+        }
+      ]
+    }
+  },
+  "overlays": [
+    {
+      "type": "menu_open",
+      "target": "workspace.menu"
+    }
+  ],
+  "x-recipe": "workspace-menu",
+  "x-what-you-see": "The workspace \"...\" menu open under the page head."
+}

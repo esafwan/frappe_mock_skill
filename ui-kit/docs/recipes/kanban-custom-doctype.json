@@ -1,0 +1,105 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "kanban",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Fleet",
+    "workspace": "Fleet",
+    "user": {
+      "name": "sam@example.com",
+      "full_name": "Sam Lee",
+      "roles": [
+        "System Manager"
+      ]
+    }
+  },
+  "meta": {
+    "doctype": {
+      "name": "Maintenance Job",
+      "module": "Fleet",
+      "doctype": "DocType",
+      "fields": [
+        {
+          "fieldname": "title",
+          "fieldtype": "Data",
+          "label": "Title",
+          "in_list_view": 1
+        },
+        {
+          "fieldname": "status",
+          "fieldtype": "Select",
+          "label": "Status",
+          "options": "Queued\nActive\nClosed"
+        },
+        {
+          "fieldname": "start",
+          "fieldtype": "Date",
+          "label": "Start"
+        },
+        {
+          "fieldname": "end",
+          "fieldtype": "Date",
+          "label": "End"
+        }
+      ],
+      "title_field": "title"
+    },
+    "kanban_board": {
+      "name": "Jobs",
+      "field_name": "status",
+      "columns": [
+        {
+          "column_name": "Queued",
+          "indicator": "blue"
+        },
+        {
+          "column_name": "Active",
+          "indicator": "orange"
+        },
+        {
+          "column_name": "Closed",
+          "indicator": "green"
+        }
+      ]
+    }
+  },
+  "data": {
+    "cards": [
+      {
+        "name": "MJ-1",
+        "title": "Replace brake pads",
+        "column": "Queued",
+        "fields": [
+          {
+            "label": "Bay",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "name": "MJ-2",
+        "title": "Engine service",
+        "column": "Active",
+        "fields": [
+          {
+            "label": "Bay",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "name": "MJ-3",
+        "title": "Tyre rotation",
+        "column": "Closed",
+        "fields": [
+          {
+            "label": "Bay",
+            "value": "2"
+          }
+        ]
+      }
+    ]
+  },
+  "x-recipe": "kanban",
+  "x-what-you-see": "Columns Open, In Progress, Done with cards carrying a title, a Territory field, assignee avatars, tags, a comment count and an indicator pill (data.cards; meta.kanban_board names the board, the column field and the columns)."
+}

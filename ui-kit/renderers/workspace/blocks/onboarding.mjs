@@ -15,7 +15,7 @@ export default function onboarding(data, ctx, spec) {
   const completed = req.filter((s) => s._st === 'complete').length;
   const skipped = req.filter((s) => s._st === 'skipped').length;
   const total = req.length;
-  const progressText = skipped ? `${completed} of ${total} done · ${skipped} skipped` : `${completed} of ${total} steps done`;
+  const progressText = skipped ? `<bdi>${completed}</bdi> of <bdi>${total}</bdi> done · <bdi>${skipped}</bdi> skipped` : `<bdi>${completed}</bdi> of <bdi>${total}</bdi> steps done`;
   const segs = req.map((s) => `<span class="progress-interval ${s._st === 'pending' ? '' : 'filled'}" style="flex:1;height:100%;border-radius:2px;background:${s._st === 'pending' ? 'var(--bg-gray, #ededed)' : 'var(--ink-green-7, #28a745)'}"></span>`).join('');
   const nextIdx = steps.findIndex((s) => s._st === 'pending');
   const openIdx = Number.isInteger(d?.open) ? d.open : nextIdx;
@@ -40,5 +40,5 @@ export default function onboarding(data, ctx, spec) {
   }).join('');
   const done = total > 0 && completed + skipped === total;
   const success = done ? `<div class="onboarding-success text-p-sm text-ink-gray-6" data-ui="onboarding.success">${icon('circle-check', 'sm')} All steps are done</div>` : '';
-  return `<div class="widget onboarding-widget-box" data-ui="card:${esc(name)}" data-widget-name="${esc(name)}"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">${esc(d?.title || name)}</span></div><div class="widget-subtitle" data-ui="onboarding.progress">${esc(progressText)}</div></div></div><div class="widget-body"><div class="progress onboarding-progress" data-ui="onboarding.bar" role="progressbar" aria-valuenow="${total ? Math.round(((completed + skipped) / total) * 100) : 0}" style="display:flex;gap:2px;height:6px;margin-bottom:8px">${segs}</div><div class="onboarding-steps flex flex-col gap-0.5">${list}</div>${success}</div></div>`;
+  return `<div class="widget onboarding-widget-box" data-ui="card:${esc(name)}" data-widget-name="${esc(name)}"><div class="widget-head"><div class="widget-label"><div class="widget-title"><span class="ellipsis">${esc(d?.title || name)}</span></div><div class="widget-subtitle" data-ui="onboarding.progress" dir="auto">${progressText}</div></div></div><div class="widget-body"><div class="progress onboarding-progress" data-ui="onboarding.bar" role="progressbar" aria-valuenow="${total ? Math.round(((completed + skipped) / total) * 100) : 0}" style="display:flex;gap:2px;height:6px;margin-bottom:8px">${segs}</div><div class="onboarding-steps flex flex-col gap-0.5">${list}</div>${success}</div></div>`;
 }

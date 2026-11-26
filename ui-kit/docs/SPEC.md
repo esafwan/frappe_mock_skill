@@ -302,3 +302,10 @@ The engine wraps slots with `shell/shell.mjs` (default export `(slots, spec, ctx
 - Named dialogs are built by `renderDialog` (`body`, `fields`, `custom_actions`, `attrs`); hooks are `dialog.N`, with `data-ui="dialog:<id>"` as an alias on `.modal-content`.
 - Form Connections render as their own tab (synthesised "Connections" tab when the layout has none and `data.connections` is non-empty); `view.tab` selects the active tab by label, fieldname or index.
 - Legacy samples are fixed or deleted in slice 4 (duplicates of `[st]N-*` deleted; sole cover renamed into the gated scheme), after which geometry and determinism run on `samples/*.json`.
+
+## View page keys (kanban, calendar, inbox)
+
+- **kanban** (`meta.kanban`): `columns` (`column_name`, `indicator`), `column_field` (default `status`), `card_fields` (field names or `{fieldname,label}`), `title_field`, `fallback_column` (column name, or `true` for the first; without it a card whose column is unknown is dropped and `validate` warns). `data.cards` or `data.rows` (rows with an empty column field cycle through the columns). `data.counts` overrides header counts: above the cards drawn adds a "+N more" footer, below warns.
+- **calendar**: week and day grids span 8:00 to 18:00 and widen to cover every event in range; month view draws one bar per event per week. Month and weekday names come from `ctx.locale` (Intl); templates "+{0} more" and "Week {0}" live in `data/universals/i18n/<lang>.json`.
+- **inbox** (`view`): `email_account` (page title, default "Inbox"), `accounts` (account switcher), `unread_only`. `ctx.today` drives relative dates; when absent a fixed default date is used with a warning.
+- **i18n**: for a non-`en` locale, `translateHtmlReport` translates exact text nodes (also with leading/trailing punctuation), wraps code-like tokens (naming series, IDs) in `<bdi dir="ltr">`, and returns the text left untranslated; `render` prints it on stderr as `i18n ...` (never in `warnings`). Form field labels, descriptions and section/tab labels go through the same vocabulary in `fieldsFor`.

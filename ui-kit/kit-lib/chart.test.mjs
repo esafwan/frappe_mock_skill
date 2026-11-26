@@ -24,7 +24,9 @@ const cap = capSlices(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], [8, 7, 6, 5, 4, 
 assert.equal(cap.length, 6); assert.deepEqual(cap.at(-1), { label: 'Others', value: 3 + 2 + 1 });
 assert.equal((chart('pie', { labels: 'abcdefgh'.split(''), datasets: [{ values: [8, 7, 6, 5, 4, 3, 2, 1] }] }).match(/class="slice"/g) || []).length, 6);
 const many = Array.from({ length: 15 }, (_, i) => i + 1);
-assert.equal((chart('bar', { labels: many.map(String), datasets: [{ values: many }] }).match(/class="bar"/g) || []).length, 9);
+assert.equal((chart('bar', { labels: many.map(String), datasets: [{ values: many }] }).match(/class="bar"/g) || []).length, 15); // every row is drawn (slice 4: the x-axis shows all rows) ...
+const huge = Array.from({ length: 75 }, (_, i) => i + 1);
+assert.equal((chart('bar', { labels: huge.map(String), datasets: [{ values: huge }] }).match(/class="bar"/g) || []).length, 60); // ... up to MAX_POINTS
 assert.equal(chart('percentage', { labels: ['a', 'b'], datasets: [{ values: [1, 3] }] }).includes('data-percent="75"'), true);
 const hm = chart('heatmap', { start: '2024-01-07', weeks: 4, points: { '2024-01-08': 3, '2024-01-09': 9 } });
 assert.equal((hm.match(/class="day"/g) || []).length, 28); assert(hm.includes('data-date="2024-01-09" data-value="9" data-level="4"'));

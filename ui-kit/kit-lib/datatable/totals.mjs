@@ -1,6 +1,7 @@
 // Datatable totals row (generic, deterministic, pure). Sums numeric columns.
 import { esc } from '../util.mjs';
 import { formatNumber } from '../cells.mjs';
+import { formatNumber as formatSys } from '../format.mjs';
 
 export const SUMMABLE = ['Currency', 'Float', 'Int'];
 
@@ -35,10 +36,10 @@ export function renderTotals(columns = [], rows = [], opts = {}) {
   const cells = columns.map((c, i) => {
     const t = totals[i];
     const numeric = !!t;
-    const align = numeric || c.align === 'right' ? 'text-align:right;' : c.align === 'center' ? 'text-align:center;' : '';
+    const align = numeric || c.align === 'right' ? 'text-align:right;justify-content:flex-end;' : c.align === 'center' ? 'text-align:center;justify-content:center;' : 'justify-content:flex-start;';
     const style = `${align}${opts.gridStyle ? opts.gridStyle(c, i) : ''}`;
     let inner = '';
-    if (t) inner = esc(formatNumber(t.sum, c.precision ?? (c.fieldtype === 'Int' ? 0 : 2)));
+    if (t) inner = esc(opts.system ? formatSys(t.sum, opts.system, c.precision ?? (c.fieldtype === 'Int' ? 0 : 2)) : formatNumber(t.sum, c.precision ?? (c.fieldtype === 'Int' ? 0 : 2)));
     else if (i === 0) inner = esc(label);
     return `<div class="dt-cell dt-cell--col-${i}" style="${c.width ? `width:${c.width}px;flex:0 0 ${c.width}px` : ''}" data-ui="datatable.totals.cell" data-col-index="${i}"${c.fieldname ? ` data-fieldname="${esc(c.fieldname)}"` : ''}><div class="dt-cell__content dt-cell__content--col-${i}" style="${style}"><b>${inner}</b></div></div>`;
   }).join('');
