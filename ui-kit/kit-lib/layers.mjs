@@ -41,7 +41,7 @@ export function wrapModals(items = []) {
     const dimmed = i < top;
     return `<div data-layer="modal" data-z="${z}" data-modal-index="${i}"${dimmed ? ' data-dimmed="true"' : ''} style="z-index:${z - 10}">`
       + `<div class="layer-backdrop" data-ui="backdrop" data-dimmed="${dimmed}" style="z-index:${z - 10}"></div>`
-      + `<div class="layer-modal" role="dialog" aria-modal="true"${dimmed ? ' aria-hidden="true"' : ''} style="z-index:${z};padding-top:calc(5vh + ${i * 28}px)">${h}</div></div>`;
+      + `<div class="layer-modal" role="dialog" aria-modal="true"${dimmed ? ' aria-hidden="true"' : ''} style="z-index:${z};padding-top:calc(5vh + ${i * 28}px);padding-left:${i * 28}px">${h}</div></div>`;
   }).join('');
 }
 

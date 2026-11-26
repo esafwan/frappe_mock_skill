@@ -13,6 +13,7 @@ import { renderListHead, bulkItems, takeMenu, toMenuItems, dtName } from './head
 import { renderListBody, resolveRows, listColumns } from './rows.mjs';
 import { bulkActionItems } from './bulk.mjs';
 import { renderListDialogs } from './dialogs.mjs';
+import { openFieldFor, groupCounts, renderGroupByDropdown } from './groupby.mjs';
 
 const STATE_RE = /^(row:\d+|cell:\d+:.+|column:.+|button:.+|ui:.+)$/;
 const STATE_CLASS = { disabled: 'disabled', loading: 'loading', active: 'active' };
@@ -91,6 +92,14 @@ export async function buildListPage({ spec, meta, ctx }) {
   const ld = renderListDialogs({ spec, meta, ctx });
   ctx.preDialogs = [...(ctx.preDialogs || []), ...ld.dialogs];
   if (ld.viewsMenu && viewsOv) ctx.preMenus = [...(ctx.preMenus || []), { overlay: viewsOv, html: ld.viewsMenu }];
+
+  // group-by dropdowns (assigned_to, owner, tags) with counts from the loaded rows, v16 rules
+  for (const o of ctx.overlays.filter((x) => x.type === 'menu_open' && openFieldFor(x.target))) {
+    const field = openFieldFor(o.target);
+    ctx.useOverlays('menu_open', (x) => x === o);
+    const items = o.items ? o.items : groupCounts(rowsAll, field, { user: ctx.user?.name || '' });
+    ctx.preMenus = [...(ctx.preMenus || []), { overlay: o, html: renderGroupByDropdown({ field, items, applied: o.applied, search: o.search || '', open: true }) }];
+  }
 
   // pinned interaction states
   for (const o of ctx.overlays.filter((x) => x.type === 'state' && STATE_RE.test(x.target || ''))) {

@@ -11,11 +11,13 @@ export function renderHead(spec, ctx, { empty = false } = {}) {
   const badge = workspaceBadge(ws);
   const open = (ctx.useOverlays ? ctx.useOverlays('menu_open', (o) => o.target === 'workspace.menu') : (ctx.overlays || []).filter((o) => o.type === 'menu_open' && o.target === 'workspace.menu')).length > 0;
   const menu = `<div class="menu-btn-group" data-ui="workspace.menu"><button class="btn btn-default icon-btn" data-ui="page.menu-button" aria-label="Menu">${icon('ellipsis', 'sm')}</button>${open ? renderMenu({ target: 'workspace.menu' }) : ''}</div>`;
-  const crumbs = `<nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item" aria-current="page">${ws.icon ? `<span class="title-icon" data-ui="workspace.icon">${icon(ws.icon, 'md')}</span>` : ''}<span class="es-breadcrumbs__label">${esc(title)}</span></span></li></ol></nav>`;
-  const pill = `<span class="indicator-pill ${badge.color} no-indicator-dot" data-ui="workspace.badge" data-visibility="${esc(badge.text.toLowerCase())}">${esc(badge.text)}</span>`;
+  const lock = badge.text === 'Private' ? `<span class="visibility-icon" data-ui="workspace.visibility-icon">${icon('lock', 'sm')}</span>` : '';
+  const crumbs = `<nav class="es-breadcrumbs navbar-breadcrumbs" aria-label="Breadcrumbs"><ol><li><span class="es-breadcrumbs__item" aria-current="page">${ws.icon ? `<span class="title-icon" data-ui="workspace.icon">${icon(ws.icon, 'md')}</span>` : ''}<span class="es-breadcrumbs__label">${esc(title)}</span>${lock}</span></li></ol></nav>`;
+  const vis = badge.color === 'orange' ? 'private' : badge.color === 'blue' ? 'role' : 'public';
+  const pill = `<span class="indicator-pill ${badge.color} no-indicator-dot" data-ui="workspace.badge" data-visibility="${vis}">${esc(badge.text)}</span>`;
   return `<div class="page-head flex" data-ui="page-head"><div class="container"><div class="row flex-nowrap align-center page-head-content justify-between">`
     + `<div class="page-title"><div class="flex title-area ellipsis">${crumbs}${pill}</div></div>`
     + `<div class="align-center flex standard-items-section"><div class="flex col page-actions justify-content-end"><div class="standard-actions flex">${menu}</div></div></div>`
     + `</div></div></div>`;
 }
-export const emptyState = `<div class="workspace-empty text-muted" data-ui="workspace.empty"><p>This workspace has no content yet.</p></div>`;
+export const emptyState = `<div class="workspace-empty text-muted" data-ui="workspace.empty" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:240px;text-align:center"><p>This workspace has no content yet.</p></div>`;

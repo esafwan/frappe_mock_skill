@@ -1,0 +1,170 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "report",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "doctype": "../doctype/fixtures/test/odd_a.json",
+    "children": {
+      "Odd Child": "../doctype/fixtures/test/odd_child.json"
+    },
+    "sidebar": "Selling",
+    "report": {
+      "report_name": "Order lines",
+      "name": "Order lines",
+      "ref_doctype": "Odd A",
+      "report_type": "Report Builder",
+      "json": "{\"filters\":[],\"fields\":[[\"name\",\"Odd A\"],[\"title\",\"Odd A\"],[\"status\",\"Odd A\"],[\"idx\",\"Odd Child\"],[\"item\",\"Odd Child\"],[\"qty\",\"Odd Child\"],[\"rate\",\"Odd Child\"],[\"amount\",\"Odd Child\"]],\"order_by\":\"`tabOdd A`.`modified` desc\",\"add_totals_row\":1,\"page_length\":20,\"column_widths\":{\"title\":160},\"chart_args\":{\"type\":\"bar\",\"x_field\":\"title\",\"y_fields\":[\"amount\"],\"title\":\"Amount by order\"}}"
+    }
+  },
+  "data": {
+    "rows": [
+      {
+        "name": "ODD-0001",
+        "title": "Order 1",
+        "status": "Draft",
+        "Odd Child:idx": 1,
+        "Odd Child:item": "ITEM-001",
+        "Odd Child:qty": 2,
+        "Odd Child:rate": 150,
+        "Odd Child:amount": 300
+      },
+      {
+        "name": "ODD-0002",
+        "title": "Order 2",
+        "status": "Submitted",
+        "Odd Child:idx": 2,
+        "Odd Child:item": "ITEM-002",
+        "Odd Child:qty": 3,
+        "Odd Child:rate": 175,
+        "Odd Child:amount": 525
+      },
+      {
+        "name": "ODD-0003",
+        "title": "Order 3",
+        "status": "Draft",
+        "Odd Child:idx": 3,
+        "Odd Child:item": "ITEM-003",
+        "Odd Child:qty": 4,
+        "Odd Child:rate": 200,
+        "Odd Child:amount": 800
+      },
+      {
+        "name": "ODD-0004",
+        "title": "Order 4",
+        "status": "Submitted",
+        "Odd Child:idx": 1,
+        "Odd Child:item": "ITEM-004",
+        "Odd Child:qty": 5,
+        "Odd Child:rate": 225,
+        "Odd Child:amount": 1125
+      },
+      {
+        "name": "ODD-0005",
+        "title": "Order 5",
+        "status": "Draft",
+        "Odd Child:idx": 2,
+        "Odd Child:item": "ITEM-001",
+        "Odd Child:qty": 6,
+        "Odd Child:rate": 250,
+        "Odd Child:amount": 1500
+      },
+      {
+        "name": "ODD-0006",
+        "title": "Order 6",
+        "status": "Submitted",
+        "Odd Child:idx": 3,
+        "Odd Child:item": "ITEM-002",
+        "Odd Child:qty": 2,
+        "Odd Child:rate": 275,
+        "Odd Child:amount": 550
+      },
+      {
+        "name": "ODD-0007",
+        "title": "Order 7",
+        "status": "Draft",
+        "Odd Child:idx": 1,
+        "Odd Child:item": "ITEM-003",
+        "Odd Child:qty": 3,
+        "Odd Child:rate": 300,
+        "Odd Child:amount": 900
+      },
+      {
+        "name": "ODD-0008",
+        "title": "Order 8",
+        "status": "Submitted",
+        "Odd Child:idx": 2,
+        "Odd Child:item": "ITEM-004",
+        "Odd Child:qty": 4,
+        "Odd Child:rate": 325,
+        "Odd Child:amount": 1300
+      },
+      {
+        "name": "ODD-0009",
+        "title": "Order 9",
+        "status": "Draft",
+        "Odd Child:idx": 3,
+        "Odd Child:item": "ITEM-001",
+        "Odd Child:qty": 5,
+        "Odd Child:rate": 350,
+        "Odd Child:amount": 1750
+      },
+      {
+        "name": "ODD-0010",
+        "title": "Order 10",
+        "status": "Submitted",
+        "Odd Child:idx": 1,
+        "Odd Child:item": "ITEM-002",
+        "Odd Child:qty": 6,
+        "Odd Child:rate": 375,
+        "Odd Child:amount": 2250
+      },
+      {
+        "name": "ODD-0011",
+        "title": "Order 11",
+        "status": "Draft",
+        "Odd Child:idx": 2,
+        "Odd Child:item": "ITEM-003",
+        "Odd Child:qty": 2,
+        "Odd Child:rate": 400,
+        "Odd Child:amount": 800
+      },
+      {
+        "name": "ODD-0012",
+        "title": "Order 12",
+        "status": "Submitted",
+        "Odd Child:idx": 3,
+        "Odd Child:item": "ITEM-004",
+        "Odd Child:qty": 3,
+        "Odd Child:rate": 425,
+        "Odd Child:amount": 1275
+      }
+    ]
+  },
+  "view": {
+    "chart_hidden": true,
+    "sort": {
+      "field": "title",
+      "order": "asc"
+    }
+  },
+  "overlays": []
+}

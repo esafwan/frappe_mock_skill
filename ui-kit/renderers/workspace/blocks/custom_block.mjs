@@ -7,15 +7,21 @@ export function scopeCss(css, scope) {
 }
 export function sanitizeHtml(html) {
   return String(html ?? '')
-    .replace(/<\s*(script|iframe|object|embed|link|meta|base)\b[\s\S]*?(<\s*\/\s*\1\s*>|>)/gi, '')
+    .replace(/<\s*(script|iframe|object|embed)\b[\s\S]*?<\s*\/\s*\1\s*>/gi, '')
+    .replace(/<\s*\/?\s*(script|iframe|object|embed|link|meta|base)\b[^>]*>/gi, '')
     .replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
-    .replace(/(href|src)\s*=\s*("|')\s*javascript:[^"']*\2/gi, '$1="#"');
+    .replace(/\s(srcdoc|formaction)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+    .replace(/(href|src|action)\s*=\s*("|')\s*(javascript|vbscript|data):[^"']*\2/gi, '$1="#"')
+    .replace(/(href|src|action)\s*=\s*(javascript|vbscript|data):[^\s>]*/gi, '$1="#"');
 }
 export default function customBlock(data, ctx, spec, id) {
   const name = data.custom_block_name;
   const rec = findIn(spec.meta.workspace.custom_blocks, ['custom_block_name', 'name', 'label'], name) || spec.data?.custom_blocks?.[name];
   if (!rec) { ctx.warn(`workspace: custom block "${name}" has no html`); }
   const scope = `[data-block-id="${String(id).replace(/[^\w-]/g, '')}"]`;
-  const css = scopeCss(rec?.style || rec?.css, scope);
-  return `<div class="widget custom-block" data-ui="custom-block:${esc(name)}" data-block-id="${esc(String(id).replace(/[^\w-]/g, ''))}">${css ? `<style>${css.replace(/<\/style/gi, '')}</style>` : ''}<div class="custom-block-body">${sanitizeHtml(rec?.html)}</div></div>`;
+  let html = String(rec?.html ?? '');
+  const inline = [];
+  html = html.replace(/<style\b[^>]*>([\s\S]*?)<\/style>/gi, (m, c) => { inline.push(c); return ''; });
+  const css = scopeCss([rec?.style || rec?.css || '', ...inline].join('\n'), scope).replace(/@import[^;]*;?/gi, '').replace(/expression\s*\(|javascript:/gi, '');
+  return `<div class="widget custom-block" data-ui="custom-block:${esc(name)}" data-block-id="${esc(String(id).replace(/[^\w-]/g, ''))}">${css ? `<style>${css.replace(/<\/style/gi, '')}</style>` : ''}<div class="custom-block-body">${sanitizeHtml(html)}</div></div>`;
 }

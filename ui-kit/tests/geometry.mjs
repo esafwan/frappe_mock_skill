@@ -1,9 +1,20 @@
 // Geometry gate: every visible [data-ui] slot has nonzero area; no horizontal overflow. Usage: node tests/geometry.mjs [files...]  (default out/**.html at 1440x900; mobile documents at 375x812)
 import fs from 'node:fs'; import path from 'node:path'; import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { loadSpec, renderSpec } from '../bin/mock.mjs';
+const KIT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// default run: render every samples/*.json first so no sample is left ungated
+if (!process.argv.slice(2).length) {
+  fs.mkdirSync(path.join(KIT, 'out', 'slice4'), { recursive: true });
+  for (const f of fs.readdirSync(path.join(KIT, 'samples')).filter((n) => n.endsWith('.json')).sort()) {
+    const outFile = path.join(KIT, 'out', 'slice4', path.basename(f, '.json') + '.html');
+    fs.writeFileSync(outFile, (await renderSpec(loadSpec(path.join(KIT, 'samples', f)), { outFile })).html);
+  }
+}
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'out');
+const DEFAULT_DIR = path.join(root, 'slice4'); // default run gates the freshly rendered set only (older out/slice* folders are frozen history)
 const walk = (d) => fs.existsSync(d) ? fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? (e.name === 'node_modules' ? [] : walk(path.join(d, e.name))) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []) : [];
-const files = (process.argv.slice(2).length ? process.argv.slice(2).map((f) => path.resolve(f)) : walk(root)).sort();
+const files = (process.argv.slice(2).length ? process.argv.slice(2).map((f) => path.resolve(f)) : walk(DEFAULT_DIR)).sort();
 let b; try { b = await chromium.launch(); } catch { b = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' }); }
 const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
 const p = await ctx.newPage();
@@ -23,6 +34,8 @@ for (const f of files) {
     }
     const de = document.documentElement;
     if (de.scrollWidth > de.clientWidth + 1) out.over.push(`document ${de.scrollWidth}>${de.clientWidth}`);
+    const rv = document.querySelector('[data-ui="report-view"]'), area = document.querySelector('.layout-main-section');
+    if (rv && area && rv.getBoundingClientRect().width < area.getBoundingClientRect().width * 0.95) out.over.push(`report width ${Math.round(rv.getBoundingClientRect().width)} < 95% of content area ${Math.round(area.getBoundingClientRect().width)}`);
     return out;
   });
   const rel = path.relative(root, f);

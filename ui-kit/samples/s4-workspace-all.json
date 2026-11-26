@@ -1,0 +1,739 @@
+{
+  "$schema": "mock-spec/1",
+  "page": "workspace",
+  "ctx": {
+    "today": "2026-11-27",
+    "app": "Selling",
+    "workspace": "Selling",
+    "locale": "en-IN",
+    "user": {
+      "name": "jane@example.com",
+      "full_name": "Jane Doe",
+      "roles": [
+        "System Manager",
+        "Accounts User",
+        "Sales User"
+      ]
+    },
+    "system": {
+      "number_format": "#,##,###.##",
+      "date_format": "dd-mm-yyyy",
+      "currency": "INR"
+    }
+  },
+  "meta": {
+    "workspace": {
+      "name": "Everything",
+      "title": "Everything",
+      "label": "Everything",
+      "public": 1,
+      "module": "Selling",
+      "content": [
+        {
+          "id": "b0",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h4\"><b>Workspace overview</b></span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "b1",
+          "type": "paragraph",
+          "data": {
+            "text": "Every block type, column width and shortcut view in one place.",
+            "col": 12
+          }
+        },
+        {
+          "id": "b2",
+          "type": "onboarding",
+          "data": {
+            "onboarding_name": "Setup",
+            "col": 12
+          }
+        },
+        {
+          "id": "b3",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "List view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b4",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Report Builder view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b5",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Dashboard view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b6",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Tree view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b7",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "New view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b8",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Calendar view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b9",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Kanban view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b10",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Image view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b11",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Gantt view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b12",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Map view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b13",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "Inbox view",
+            "col": 3
+          }
+        },
+        {
+          "id": "b14",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "A Report",
+            "col": 3
+          }
+        },
+        {
+          "id": "b15",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "A Page",
+            "col": 3
+          }
+        },
+        {
+          "id": "b16",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "A Dashboard",
+            "col": 3
+          }
+        },
+        {
+          "id": "b17",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "A Workspace",
+            "col": 3
+          }
+        },
+        {
+          "id": "b18",
+          "type": "shortcut",
+          "data": {
+            "shortcut_name": "External",
+            "col": 3
+          }
+        },
+        {
+          "id": "b19",
+          "type": "spacer",
+          "data": {
+            "col": 12
+          }
+        },
+        {
+          "id": "b20",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h5\">Numbers</span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "b21",
+          "type": "number_card",
+          "data": {
+            "number_card_name": "Open Orders",
+            "col": 3
+          }
+        },
+        {
+          "id": "b22",
+          "type": "number_card",
+          "data": {
+            "number_card_name": "Open Orders",
+            "col": 4
+          }
+        },
+        {
+          "id": "b23",
+          "type": "number_card",
+          "data": {
+            "number_card_name": "Open Orders",
+            "col": 6
+          }
+        },
+        {
+          "id": "b24",
+          "type": "number_card",
+          "data": {
+            "number_card_name": "Open Orders",
+            "col": 12
+          }
+        },
+        {
+          "id": "b25",
+          "type": "header",
+          "data": {
+            "text": "<span class=\"h5\">Charts</span>",
+            "col": 12
+          }
+        },
+        {
+          "id": "b26",
+          "type": "chart",
+          "data": {
+            "chart_name": "Revenue Trend",
+            "col": 6
+          }
+        },
+        {
+          "id": "b27",
+          "type": "chart",
+          "data": {
+            "chart_name": "Orders by Status",
+            "col": 6
+          }
+        },
+        {
+          "id": "b28",
+          "type": "chart",
+          "data": {
+            "chart_name": "Pipeline",
+            "col": 4
+          }
+        },
+        {
+          "id": "b29",
+          "type": "chart",
+          "data": {
+            "chart_name": "Mix",
+            "col": 4
+          }
+        },
+        {
+          "id": "b30",
+          "type": "chart",
+          "data": {
+            "chart_name": "Share",
+            "col": 4
+          }
+        },
+        {
+          "id": "b31",
+          "type": "quick_list",
+          "data": {
+            "quick_list_name": "Recent Orders",
+            "col": 6
+          }
+        },
+        {
+          "id": "b32",
+          "type": "quick_list",
+          "data": {
+            "quick_list_name": "Empty List",
+            "col": 6
+          }
+        },
+        {
+          "id": "b33",
+          "type": "custom_block",
+          "data": {
+            "custom_block_name": "Notice",
+            "col": 12
+          }
+        },
+        {
+          "id": "b34",
+          "type": "card",
+          "data": {
+            "card_name": "Transactions",
+            "col": 4
+          }
+        },
+        {
+          "id": "b35",
+          "type": "card",
+          "data": {
+            "card_name": "Reports",
+            "col": 4
+          }
+        },
+        {
+          "id": "b36",
+          "type": "card",
+          "data": {
+            "card_name": "Setup",
+            "col": 4
+          }
+        }
+      ],
+      "shortcuts": [
+        {
+          "label": "List view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "List",
+          "color": "Grey",
+          "format": "{} Open"
+        },
+        {
+          "label": "Report Builder view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Report Builder",
+          "color": "Green",
+          "format": "{} Open"
+        },
+        {
+          "label": "Dashboard view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Dashboard",
+          "color": "Blue",
+          "format": "{} Open"
+        },
+        {
+          "label": "Tree view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Tree",
+          "color": "Red",
+          "format": "{} Open"
+        },
+        {
+          "label": "New view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "New",
+          "color": "Orange",
+          "format": "{} Open"
+        },
+        {
+          "label": "Calendar view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Calendar",
+          "color": "Cyan",
+          "format": "{} Open"
+        },
+        {
+          "label": "Kanban view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Kanban",
+          "color": "Grey",
+          "format": "{} Open",
+          "kanban_board": "Order Board"
+        },
+        {
+          "label": "Image view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Image",
+          "color": "Green",
+          "format": "{} Open"
+        },
+        {
+          "label": "Gantt view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Gantt",
+          "color": "Blue",
+          "format": "{} Open"
+        },
+        {
+          "label": "Map view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Map",
+          "color": "Red",
+          "format": "{} Open"
+        },
+        {
+          "label": "Inbox view",
+          "type": "DocType",
+          "link_to": "Odd A",
+          "doc_view": "Inbox",
+          "color": "Orange",
+          "format": "{} Open"
+        },
+        {
+          "label": "A Report",
+          "type": "Report",
+          "link_to": "Stock Movement",
+          "is_query_report": 1
+        },
+        {
+          "label": "A Page",
+          "type": "Page",
+          "link_to": "setup-wizard"
+        },
+        {
+          "label": "A Dashboard",
+          "type": "Dashboard",
+          "link_to": "Overview"
+        },
+        {
+          "label": "A Workspace",
+          "type": "Workspace",
+          "link_to": "Home"
+        },
+        {
+          "label": "External",
+          "type": "URL",
+          "url": "https://example.com/docs"
+        }
+      ],
+      "links": [
+        {
+          "type": "Card Break",
+          "label": "Transactions"
+        },
+        {
+          "type": "Link",
+          "label": "Order",
+          "link_type": "DocType",
+          "link_to": "Odd A",
+          "onboard": 1,
+          "description": "Create and track orders"
+        },
+        {
+          "type": "Link",
+          "label": "Needs Setup First",
+          "link_type": "DocType",
+          "link_to": "Odd Child",
+          "dependencies": "Odd A",
+          "description": "Depends on orders"
+        },
+        {
+          "type": "Link",
+          "label": "Docs",
+          "link_type": "URL",
+          "url": "https://example.com/docs"
+        },
+        {
+          "type": "Card Break",
+          "label": "Reports"
+        },
+        {
+          "type": "Link",
+          "label": "Movement",
+          "link_type": "Report",
+          "link_to": "Stock Movement",
+          "is_query_report": 1
+        },
+        {
+          "type": "Link",
+          "label": "Order Report",
+          "link_type": "Report",
+          "link_to": "Odd A"
+        },
+        {
+          "type": "Card Break",
+          "label": "Setup"
+        },
+        {
+          "type": "Link",
+          "label": "Child Setup",
+          "link_type": "DocType",
+          "link_to": "Odd Child"
+        }
+      ],
+      "number_cards": [
+        {
+          "label": "Open Orders",
+          "number_card_name": "Open Orders"
+        }
+      ],
+      "charts": [
+        {
+          "chart_name": "Revenue Trend",
+          "label": "Revenue Trend"
+        },
+        {
+          "chart_name": "Orders by Status",
+          "label": "Orders by Status"
+        },
+        {
+          "chart_name": "Pipeline",
+          "label": "Pipeline"
+        },
+        {
+          "chart_name": "Mix",
+          "label": "Mix"
+        },
+        {
+          "chart_name": "Share",
+          "label": "Share"
+        }
+      ],
+      "quick_lists": [
+        {
+          "label": "Recent Orders",
+          "document_type": "Odd A"
+        },
+        {
+          "label": "Empty List",
+          "document_type": "Odd Child"
+        }
+      ],
+      "custom_blocks": [
+        {
+          "custom_block_name": "Notice",
+          "html": "<style>.n{padding:12px;border-radius:8px;background:#eef}</style><div class=\"n\"><b>Heads up</b><p onclick=\"x()\">Scheduled maintenance tonight.</p></div><script>1</script>",
+          "style": ".n b{color:#334}"
+        }
+      ]
+    },
+    "sidebar": "Selling"
+  },
+  "data": {
+    "counts": {
+      "List view": 3,
+      "Report Builder view": 10,
+      "Dashboard view": 17,
+      "Tree view": 24,
+      "New view": 31,
+      "Calendar view": 38,
+      "Kanban view": 45,
+      "Image view": 52,
+      "Gantt view": 59,
+      "Map view": 66,
+      "Inbox view": 73,
+      "A Report": 80,
+      "A Page": 87,
+      "A Dashboard": 94,
+      "A Workspace": 101,
+      "External": 108
+    },
+    "number_cards": {
+      "Open Orders": {
+        "value": 14,
+        "delta": 5
+      }
+    },
+    "charts": {
+      "Revenue Trend": {
+        "type": "Line",
+        "subtitle": "Monthly",
+        "labels": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov"
+        ],
+        "datasets": [
+          {
+            "name": "Revenue",
+            "values": [
+              12,
+              18,
+              9,
+              22,
+              17,
+              25
+            ]
+          }
+        ],
+        "filters": {
+          "company": "Example Co"
+        }
+      },
+      "Orders by Status": {
+        "type": "Pie",
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "datasets": [
+          {
+            "name": "Orders",
+            "values": [
+              30,
+              22,
+              18,
+              12,
+              9,
+              5,
+              3,
+              1
+            ]
+          }
+        ]
+      },
+      "Pipeline": {
+        "type": "Donut",
+        "labels": [
+          "Open",
+          "Won",
+          "Lost"
+        ],
+        "datasets": [
+          {
+            "name": "Deals",
+            "values": [
+              40,
+              35,
+              25
+            ]
+          }
+        ]
+      },
+      "Mix": {
+        "type": "Axis-Mixed",
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "datasets": [
+          {
+            "name": "Sales",
+            "chartType": "bar",
+            "values": [
+              20,
+              35,
+              30,
+              45
+            ]
+          },
+          {
+            "name": "Target",
+            "chartType": "line",
+            "values": [
+              25,
+              30,
+              35,
+              40
+            ]
+          }
+        ]
+      },
+      "Share": {
+        "type": "Percentage",
+        "labels": [
+          "Cash",
+          "Card",
+          "Online"
+        ],
+        "datasets": [
+          {
+            "name": "Share",
+            "values": [
+              50,
+              30,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    "onboarding": {
+      "Setup": {
+        "steps": [
+          {
+            "title": "Create a record",
+            "status": "Complete"
+          },
+          {
+            "title": "Review the setup",
+            "description": "Check the defaults",
+            "action_label": "Go"
+          },
+          {
+            "title": "Optional extra",
+            "is_optional": 1,
+            "status": "Skipped"
+          },
+          {
+            "title": "Add details",
+            "action_label": "Go"
+          }
+        ]
+      }
+    },
+    "quick_lists": {
+      "Recent Orders": [
+        {
+          "name": "ODD-0001",
+          "title": "Order 1",
+          "modified": "2026-11-20 09:00:00"
+        },
+        {
+          "name": "ODD-0002",
+          "title": "Order 2",
+          "modified": "2026-11-21 09:00:00"
+        }
+      ],
+      "Empty List": []
+    }
+  },
+  "overlays": []
+}

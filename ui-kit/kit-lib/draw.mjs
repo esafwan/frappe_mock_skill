@@ -97,6 +97,10 @@ function dialogFor(o, n, ctx) {
   return renderDialog(o, n, kit);
 }
 
+/** Renderer-owned overlay targets: the page renderer draws these in place (via ctx.useOverlays), so drawOverlays must never draw or fail on them. */
+export const OWNED_TARGETS = [/^dashboard\.(menu|chart-filter:.+)$/];
+export const isOwnedTarget = (t) => OWNED_TARGETS.some((re) => re.test(String(t)));
+
 /** Add `show` / aria-expanded to the element a `ui:<id>` menu target names. Returns [html, found]. */
 function openUi(html, target) {
   const h = locate(html, target);
@@ -148,8 +152,9 @@ export function drawOverlays(html, ctx, layerMap = {}) {
       if (ok) { html = h; ctx.useOverlays('menu_open', (x) => x === o); drawn.menus++; }
       continue;
     }
+    if (isOwnedTarget(o.target)) continue; // drawn in place by its page renderer; not ours
     const body = renderMenu(o);
-    if (!body) continue;
+    if (!body) throw new Error(`menu_open target "${o.target}" is not in the menu registry and no renderer drew it`);
     ctx.useOverlays('menu_open', (x) => x === o);
     items.push({ type: 'menu_open', html: `<div data-anchor='${JSON.stringify(anchorsFor(o.target)).replace(/'/g, '&#39;')}' data-popover-target="${esc(o.target)}">${body}</div>` });
     drawn.menus++;
